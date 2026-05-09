@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "radar": "node scripts/fetch-github-trending.mjs"
+    "radar": "node scripts/fetch-github-trending.mjs",
+    "rank": "node scripts/rank-with-openrouter.mjs"
   },
   "engines": {
     "node": ">=20"
