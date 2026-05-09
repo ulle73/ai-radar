@@ -1,0 +1,12 @@
+{
+  "name": "ai-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "radar": "node scripts/fetch-github-trending.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
