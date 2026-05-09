@@ -1,6 +1,6 @@
 # GitHub Radar – 2026-05-09
 
-Generated at: 2026-05-09T22:07:40.366Z
+Generated at: 2026-05-09T22:58:13.375Z
 Repos saved: 30
 Trending developers saved: 10
 
@@ -25,16 +25,16 @@ Repos scraped directly from https://github.com/trending. These should be treated
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 1211.99 | 17275 | Python | GitHub Trending – daily, GitHub Trending – weekly | - |  |
-| 2 | [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 1000.33 | 45639 | Python | GitHub Trending – daily | agent, llm, rag, tutorial | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 |
-| 3 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 872.01 | 38779 | TypeScript | GitHub Trending – daily | browser, chrome, chrome-devtools, debugging, devtools, mcp | Chrome DevTools for coding agents |
-| 4 | [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop) | 391.5 | 31347 | TypeScript | GitHub Trending – daily | agent, agent-tars, browser-use, computer-use, cowork, gui-agent | The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra |
-| 5 | [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) | 377.76 | 8483 | JavaScript | GitHub Trending – daily | agent, ai, coding, course, deepseek, gemini | 💻 vibe coding 2026 \| Your first modern programming course for beginners to master step by step. |
-| 6 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | 296.04 | 36465 | Jupyter Notebook | GitHub Trending – daily | - | 《动手学大模型Dive into LLMs》系列编程实践教程 |
-| 7 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 281.79 | 3375 | TypeScript | GitHub Trending – daily | agentmemory, agents, ai, claude, claudecode, codex | #1 Persistent memory for AI coding agents based on real-world benchmarks |
-| 8 | [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) | 203.15 | 13742 | TypeScript | GitHub Trending – daily | agents, agents-sdk, ai, ai-agents, ai-agents-automation, chatgpt | Open-source AI coworker, with memory |
-| 9 | [masterking32/MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN) | 162.06 | 2473 | Go | GitHub Trending – daily | dns-client, dns-proxy, dns-server, dns-tunnel, dns-tunneling, dnstt | Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed. |
-| 10 | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 89.53 | 6241 | TypeScript | GitHub Trending – daily | 3d-gaussian-splatting, 3dgs, gaussian-splatting, pcui, playcanvas, typescript | 3D Gaussian Splat Editor |
+| 1 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 1214.13 | 17315 | Python | GitHub Trending – daily, GitHub Trending – weekly | - |  |
+| 2 | [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 1000.37 | 45648 | Python | GitHub Trending – daily | agent, llm, rag, tutorial | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 |
+| 3 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 872.25 | 38796 | TypeScript | GitHub Trending – daily | browser, chrome, chrome-devtools, debugging, devtools, mcp | Chrome DevTools for coding agents |
+| 4 | [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop) | 391.56 | 31356 | TypeScript | GitHub Trending – daily | agent, agent-tars, browser-use, computer-use, cowork, gui-agent | The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra |
+| 5 | [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) | 378.12 | 8495 | JavaScript | GitHub Trending – daily | agent, ai, coding, course, deepseek, gemini | 💻 vibe coding 2026 \| Your first modern programming course for beginners to master step by step. |
+| 6 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | 296.05 | 36467 | Jupyter Notebook | GitHub Trending – daily | - | 《动手学大模型Dive into LLMs》系列编程实践教程 |
+| 7 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 283.07 | 3395 | TypeScript | GitHub Trending – daily | agentmemory, agents, ai, claude, claudecode, codex | #1 Persistent memory for AI coding agents based on real-world benchmarks |
+| 8 | [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) | 203.26 | 13754 | TypeScript | GitHub Trending – daily | agents, agents-sdk, ai, ai-agents, ai-agents-automation, chatgpt | Open-source AI coworker, with memory |
+| 9 | [masterking32/MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN) | 162.78 | 2489 | Go | GitHub Trending – daily | dns-client, dns-proxy, dns-server, dns-tunnel, dns-tunneling, dnstt | Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed. |
+| 10 | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 89.63 | 6259 | TypeScript | GitHub Trending – daily | 3d-gaussian-splatting, 3dgs, gaussian-splatting, pcui, playcanvas, typescript | 3D Gaussian Splat Editor |
 
 ### GitHub Trending – weekly
 
@@ -42,15 +42,15 @@ Repos scraped directly from https://github.com/trending?since=weekly that were n
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 3628.99 | 67967 | Shell | GitHub Trending – weekly | - | Skills for Real Engineers. Straight from my .claude directory. |
-| 2 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 796.21 | 72463 | Python | GitHub Trending – weekly | agent, finance, llm, multiagent, trading | TradingAgents: Multi-Agents LLM Financial Trading Framework |
-| 3 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 767.57 | 47740 | TypeScript | GitHub Trending – weekly | agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agent | 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration |
-| 4 | [virattt/dexter](https://github.com/virattt/dexter) | 668.46 | 25026 | TypeScript | GitHub Trending – weekly | - | An autonomous agent for deep financial research |
-| 5 | [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) | 445.65 | 14157 | Python | GitHub Trending – weekly | aigc, comfyui, image-generation, tts, video-generation | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine |
-| 6 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 268.32 | 5316 | Rust | GitHub Trending – weekly | ai, claude, cli, coding-agent, llm, mcp | Coding Agent Harness |
-| 7 | [cocoindex-io/cocoindex](https://github.com/cocoindex-io/cocoindex) | 165.82 | 9323 | Python | GitHub Trending – weekly | agentic-data-framework, ai, ai-agents, change-data-capture, codebase-intelligence, context-engineering | Incremental engine for long horizon agents 🌟 Star if you like it! |
-| 8 | [docusealco/docuseal](https://github.com/docusealco/docuseal) | 138.28 | 16077 | Ruby | GitHub Trending – weekly | document-signing, documents, e-signature, hotwired-turbo, open-source, pdf | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ |
-| 9 | [soxoj/maigret](https://github.com/soxoj/maigret) | 126.91 | 27033 | Python | GitHub Trending – weekly, GitHub Search API | blueteam, cli, cybersecurity, identification, infosec, investigation | 🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites |
+| 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 3629.19 | 67996 | Shell | GitHub Trending – weekly | - | Skills for Real Engineers. Straight from my .claude directory. |
+| 2 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 796.32 | 72480 | Python | GitHub Trending – weekly | agent, finance, llm, multiagent, trading | TradingAgents: Multi-Agents LLM Financial Trading Framework |
+| 3 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 767.77 | 47759 | TypeScript | GitHub Trending – weekly | agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agent | 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration |
+| 4 | [virattt/dexter](https://github.com/virattt/dexter) | 668.53 | 25033 | TypeScript | GitHub Trending – weekly | - | An autonomous agent for deep financial research |
+| 5 | [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) | 445.65 | 14160 | Python | GitHub Trending – weekly | aigc, comfyui, image-generation, tts, video-generation | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine |
+| 6 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 268.45 | 5321 | Rust | GitHub Trending – weekly | ai, claude, cli, coding-agent, llm, mcp | Coding Agent Harness |
+| 7 | [cocoindex-io/cocoindex](https://github.com/cocoindex-io/cocoindex) | 165.82 | 9324 | Python | GitHub Trending – weekly | agentic-data-framework, ai, ai-agents, change-data-capture, codebase-intelligence, context-engineering | Incremental engine for long horizon agents 🌟 Star if you like it! |
+| 8 | [docusealco/docuseal](https://github.com/docusealco/docuseal) | 138.28 | 16081 | Ruby | GitHub Trending – weekly | document-signing, documents, e-signature, hotwired-turbo, open-source, pdf | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ |
+| 9 | [soxoj/maigret](https://github.com/soxoj/maigret) | 126.93 | 27039 | Python | GitHub Trending – weekly, GitHub Search API | blueteam, cli, cybersecurity, identification, infosec, investigation | 🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites |
 
 ### Extra Search API finds
 
@@ -58,17 +58,17 @@ Additional repos found through GitHub Search API using Jonas-focused keywords. U
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 11197.93 | 370213 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞  |
-| 2 | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | 8341.39 | 3579 | C | GitHub Search API | - |  |
-| 3 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 7971.93 | 176701 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
-| 4 | [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native) | 7105.28 | 1543 | Zig | GitHub Search API | - | Build desktop + mobile apps with Zig and web UI |
-| 5 | [antirez/ds4](https://github.com/antirez/ds4) | 6684.01 | 4246 | C | GitHub Search API | - | DeepSeek 4 Flash local inference engine for Metal |
-| 6 | [obra/superpowers](https://github.com/obra/superpowers) | 4419.6 | 184310 | Shell | GitHub Search API | - | An agentic skills framework & software development methodology that works. |
-| 7 | [anthropics/skills](https://github.com/anthropics/skills) | 2932.94 | 131115 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
-| 8 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 2566.94 | 1619 | TypeScript | GitHub Search API | agent-sandbox, agent-tools, ai-agents, bash, claude-code, fuse | A Unified Virtual Filesystem For AI Agents |
-| 9 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2494.86 | 140879 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
-| 10 | [yaojingang/yao-open-prompts](https://github.com/yaojingang/yao-open-prompts) | 2240.59 | 1481 | Python | GitHub Search API | ai, chinese-prompts, geo, prompt-engineering, prompts | Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景 |
-| 11 | [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | 2189.95 | 11288 | Rust | GitHub Search API | - | The headless browser for AI agents and web scraping |
+| 1 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 11195.83 | 370221 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞  |
+| 2 | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | 8236.16 | 3591 | C | GitHub Search API | - |  |
+| 3 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 7970.7 | 176729 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| 4 | [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native) | 7032.01 | 1576 | Zig | GitHub Search API | - | Build desktop + mobile apps with Zig and web UI |
+| 5 | [antirez/ds4](https://github.com/antirez/ds4) | 6694.05 | 4299 | C | GitHub Search API | - | DeepSeek 4 Flash local inference engine for Metal |
+| 6 | [obra/superpowers](https://github.com/obra/superpowers) | 4419.06 | 184318 | Shell | GitHub Search API | - | An agentic skills framework & software development methodology that works. |
+| 7 | [anthropics/skills](https://github.com/anthropics/skills) | 2932.7 | 131124 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
+| 8 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 2547.41 | 1624 | TypeScript | GitHub Search API | agent-sandbox, agent-tools, ai-agents, bash, claude-code, fuse | A Unified Virtual Filesystem For AI Agents |
+| 9 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2495.05 | 140907 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
+| 10 | [yaojingang/yao-open-prompts](https://github.com/yaojingang/yao-open-prompts) | 2218.02 | 1481 | Python | GitHub Search API | ai, chinese-prompts, geo, prompt-engineering, prompts | Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景 |
+| 11 | [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | 2187.12 | 11288 | Rust | GitHub Search API | - | The headless browser for AI agents and web scraping |
 
 ## Overall top repos by score
 
@@ -76,36 +76,36 @@ This is a secondary view. Use the source sections above as the primary reading o
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 1211.99 | 17275 | Python | GitHub Trending – daily, GitHub Trending – weekly | - |  |
-| 2 | [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 1000.33 | 45639 | Python | GitHub Trending – daily | agent, llm, rag, tutorial | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 |
-| 3 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 872.01 | 38779 | TypeScript | GitHub Trending – daily | browser, chrome, chrome-devtools, debugging, devtools, mcp | Chrome DevTools for coding agents |
-| 4 | [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop) | 391.5 | 31347 | TypeScript | GitHub Trending – daily | agent, agent-tars, browser-use, computer-use, cowork, gui-agent | The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra |
-| 5 | [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) | 377.76 | 8483 | JavaScript | GitHub Trending – daily | agent, ai, coding, course, deepseek, gemini | 💻 vibe coding 2026 \| Your first modern programming course for beginners to master step by step. |
-| 6 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | 296.04 | 36465 | Jupyter Notebook | GitHub Trending – daily | - | 《动手学大模型Dive into LLMs》系列编程实践教程 |
-| 7 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 281.79 | 3375 | TypeScript | GitHub Trending – daily | agentmemory, agents, ai, claude, claudecode, codex | #1 Persistent memory for AI coding agents based on real-world benchmarks |
-| 8 | [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) | 203.15 | 13742 | TypeScript | GitHub Trending – daily | agents, agents-sdk, ai, ai-agents, ai-agents-automation, chatgpt | Open-source AI coworker, with memory |
-| 9 | [masterking32/MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN) | 162.06 | 2473 | Go | GitHub Trending – daily | dns-client, dns-proxy, dns-server, dns-tunnel, dns-tunneling, dnstt | Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed. |
-| 10 | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 89.53 | 6241 | TypeScript | GitHub Trending – daily | 3d-gaussian-splatting, 3dgs, gaussian-splatting, pcui, playcanvas, typescript | 3D Gaussian Splat Editor |
-| 11 | [mattpocock/skills](https://github.com/mattpocock/skills) | 3628.99 | 67967 | Shell | GitHub Trending – weekly | - | Skills for Real Engineers. Straight from my .claude directory. |
-| 12 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 796.21 | 72463 | Python | GitHub Trending – weekly | agent, finance, llm, multiagent, trading | TradingAgents: Multi-Agents LLM Financial Trading Framework |
-| 13 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 767.57 | 47740 | TypeScript | GitHub Trending – weekly | agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agent | 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration |
-| 14 | [virattt/dexter](https://github.com/virattt/dexter) | 668.46 | 25026 | TypeScript | GitHub Trending – weekly | - | An autonomous agent for deep financial research |
-| 15 | [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) | 445.65 | 14157 | Python | GitHub Trending – weekly | aigc, comfyui, image-generation, tts, video-generation | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine |
-| 16 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 268.32 | 5316 | Rust | GitHub Trending – weekly | ai, claude, cli, coding-agent, llm, mcp | Coding Agent Harness |
-| 17 | [cocoindex-io/cocoindex](https://github.com/cocoindex-io/cocoindex) | 165.82 | 9323 | Python | GitHub Trending – weekly | agentic-data-framework, ai, ai-agents, change-data-capture, codebase-intelligence, context-engineering | Incremental engine for long horizon agents 🌟 Star if you like it! |
-| 18 | [docusealco/docuseal](https://github.com/docusealco/docuseal) | 138.28 | 16077 | Ruby | GitHub Trending – weekly | document-signing, documents, e-signature, hotwired-turbo, open-source, pdf | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ |
-| 19 | [soxoj/maigret](https://github.com/soxoj/maigret) | 126.91 | 27033 | Python | GitHub Trending – weekly, GitHub Search API | blueteam, cli, cybersecurity, identification, infosec, investigation | 🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites |
-| 20 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 11197.93 | 370213 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞  |
-| 21 | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | 8341.39 | 3579 | C | GitHub Search API | - |  |
-| 22 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 7971.93 | 176701 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
-| 23 | [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native) | 7105.28 | 1543 | Zig | GitHub Search API | - | Build desktop + mobile apps with Zig and web UI |
-| 24 | [antirez/ds4](https://github.com/antirez/ds4) | 6684.01 | 4246 | C | GitHub Search API | - | DeepSeek 4 Flash local inference engine for Metal |
-| 25 | [obra/superpowers](https://github.com/obra/superpowers) | 4419.6 | 184310 | Shell | GitHub Search API | - | An agentic skills framework & software development methodology that works. |
-| 26 | [anthropics/skills](https://github.com/anthropics/skills) | 2932.94 | 131115 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
-| 27 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 2566.94 | 1619 | TypeScript | GitHub Search API | agent-sandbox, agent-tools, ai-agents, bash, claude-code, fuse | A Unified Virtual Filesystem For AI Agents |
-| 28 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2494.86 | 140879 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
-| 29 | [yaojingang/yao-open-prompts](https://github.com/yaojingang/yao-open-prompts) | 2240.59 | 1481 | Python | GitHub Search API | ai, chinese-prompts, geo, prompt-engineering, prompts | Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景 |
-| 30 | [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | 2189.95 | 11288 | Rust | GitHub Search API | - | The headless browser for AI agents and web scraping |
+| 1 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | 1214.13 | 17315 | Python | GitHub Trending – daily, GitHub Trending – weekly | - |  |
+| 2 | [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 1000.37 | 45648 | Python | GitHub Trending – daily | agent, llm, rag, tutorial | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 |
+| 3 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 872.25 | 38796 | TypeScript | GitHub Trending – daily | browser, chrome, chrome-devtools, debugging, devtools, mcp | Chrome DevTools for coding agents |
+| 4 | [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop) | 391.56 | 31356 | TypeScript | GitHub Trending – daily | agent, agent-tars, browser-use, computer-use, cowork, gui-agent | The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra |
+| 5 | [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) | 378.12 | 8495 | JavaScript | GitHub Trending – daily | agent, ai, coding, course, deepseek, gemini | 💻 vibe coding 2026 \| Your first modern programming course for beginners to master step by step. |
+| 6 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | 296.05 | 36467 | Jupyter Notebook | GitHub Trending – daily | - | 《动手学大模型Dive into LLMs》系列编程实践教程 |
+| 7 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 283.07 | 3395 | TypeScript | GitHub Trending – daily | agentmemory, agents, ai, claude, claudecode, codex | #1 Persistent memory for AI coding agents based on real-world benchmarks |
+| 8 | [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) | 203.26 | 13754 | TypeScript | GitHub Trending – daily | agents, agents-sdk, ai, ai-agents, ai-agents-automation, chatgpt | Open-source AI coworker, with memory |
+| 9 | [masterking32/MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN) | 162.78 | 2489 | Go | GitHub Trending – daily | dns-client, dns-proxy, dns-server, dns-tunnel, dns-tunneling, dnstt | Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed. |
+| 10 | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 89.63 | 6259 | TypeScript | GitHub Trending – daily | 3d-gaussian-splatting, 3dgs, gaussian-splatting, pcui, playcanvas, typescript | 3D Gaussian Splat Editor |
+| 11 | [mattpocock/skills](https://github.com/mattpocock/skills) | 3629.19 | 67996 | Shell | GitHub Trending – weekly | - | Skills for Real Engineers. Straight from my .claude directory. |
+| 12 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 796.32 | 72480 | Python | GitHub Trending – weekly | agent, finance, llm, multiagent, trading | TradingAgents: Multi-Agents LLM Financial Trading Framework |
+| 13 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 767.77 | 47759 | TypeScript | GitHub Trending – weekly | agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agent | 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration |
+| 14 | [virattt/dexter](https://github.com/virattt/dexter) | 668.53 | 25033 | TypeScript | GitHub Trending – weekly | - | An autonomous agent for deep financial research |
+| 15 | [AIDC-AI/Pixelle-Video](https://github.com/AIDC-AI/Pixelle-Video) | 445.65 | 14160 | Python | GitHub Trending – weekly | aigc, comfyui, image-generation, tts, video-generation | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine |
+| 16 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 268.45 | 5321 | Rust | GitHub Trending – weekly | ai, claude, cli, coding-agent, llm, mcp | Coding Agent Harness |
+| 17 | [cocoindex-io/cocoindex](https://github.com/cocoindex-io/cocoindex) | 165.82 | 9324 | Python | GitHub Trending – weekly | agentic-data-framework, ai, ai-agents, change-data-capture, codebase-intelligence, context-engineering | Incremental engine for long horizon agents 🌟 Star if you like it! |
+| 18 | [docusealco/docuseal](https://github.com/docusealco/docuseal) | 138.28 | 16081 | Ruby | GitHub Trending – weekly | document-signing, documents, e-signature, hotwired-turbo, open-source, pdf | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ |
+| 19 | [soxoj/maigret](https://github.com/soxoj/maigret) | 126.93 | 27039 | Python | GitHub Trending – weekly, GitHub Search API | blueteam, cli, cybersecurity, identification, infosec, investigation | 🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites |
+| 20 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 11195.83 | 370221 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞  |
+| 21 | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | 8236.16 | 3591 | C | GitHub Search API | - |  |
+| 22 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 7970.7 | 176729 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| 23 | [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native) | 7032.01 | 1576 | Zig | GitHub Search API | - | Build desktop + mobile apps with Zig and web UI |
+| 24 | [antirez/ds4](https://github.com/antirez/ds4) | 6694.05 | 4299 | C | GitHub Search API | - | DeepSeek 4 Flash local inference engine for Metal |
+| 25 | [obra/superpowers](https://github.com/obra/superpowers) | 4419.06 | 184318 | Shell | GitHub Search API | - | An agentic skills framework & software development methodology that works. |
+| 26 | [anthropics/skills](https://github.com/anthropics/skills) | 2932.7 | 131124 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
+| 27 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 2547.41 | 1624 | TypeScript | GitHub Search API | agent-sandbox, agent-tools, ai-agents, bash, claude-code, fuse | A Unified Virtual Filesystem For AI Agents |
+| 28 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2495.05 | 140907 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
+| 29 | [yaojingang/yao-open-prompts](https://github.com/yaojingang/yao-open-prompts) | 2218.02 | 1481 | Python | GitHub Search API | ai, chinese-prompts, geo, prompt-engineering, prompts | Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景 |
+| 30 | [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | 2187.12 | 11288 | Rust | GitHub Search API | - | The headless browser for AI agents and web scraping |
 
 ## Trending developers – weekly
 
@@ -116,8 +116,8 @@ These are stored separately from repos. Use them as people/projects to watch, no
 - **Name:** rUv
 - **Featured repo:** https://github.com/ruvnet/ruflo
 - **Top recent repos:**
-  - [ruvnet/RuView](https://github.com/ruvnet/RuView) — 52266 stars — π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.
-  - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — 47740 stars — 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration
+  - [ruvnet/RuView](https://github.com/ruvnet/RuView) — 52269 stars — π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.
+  - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — 47759 stars — 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration
   - [ruvnet/RuVector](https://github.com/ruvnet/RuVector) — 3998 stars — RuVector is a High Performance, Real-Time, Self-Learning Ai, Vector GNN, Memory DB built in Rust.
 
 ### 2. [Q00](https://github.com/Q00)
@@ -125,7 +125,7 @@ These are stored separately from repos. Use them as people/projects to watch, no
 - **Name:** Q00
 - **Featured repo:** https://github.com/Q00/ouroboros
 - **Top recent repos:**
-  - [Q00/ouroboros](https://github.com/Q00/ouroboros) — 3826 stars — Agent OS: Stop prompting. Start specifying.
+  - [Q00/ouroboros](https://github.com/Q00/ouroboros) — 3829 stars — Agent OS: Stop prompting. Start specifying.
   - [Q00/rlm-forge](https://github.com/Q00/rlm-forge) — 80 stars — Runtime-lifted Recursive Language Model primitive for Hermes Agent and Ouroboros, with TraceGuard evidence gating
   - [Q00/agent-project](https://github.com/Q00/agent-project) — 30 stars — Two Agent built their own collaboration protocol overnight without me
 
@@ -134,7 +134,7 @@ These are stored separately from repos. Use them as people/projects to watch, no
 - **Name:** Raullen Chai
 - **Featured repo:** https://github.com/raullenchai/Rapid-MLX
 - **Top recent repos:**
-  - [raullenchai/Rapid-MLX](https://github.com/raullenchai/Rapid-MLX) — 2038 stars — The fastest local AI engine for Apple Silicon. 4.2x faster than Ollama, 0.08s cached TTFT, 100% tool calling. 17 tool parsers, prompt cache, reasoning separation, cloud routing. Drop-in OpenAI replacement. Works with Claude Code, Cursor, Aider.
+  - [raullenchai/Rapid-MLX](https://github.com/raullenchai/Rapid-MLX) — 2039 stars — The fastest local AI engine for Apple Silicon. 4.2x faster than Ollama, 0.08s cached TTFT, 100% tool calling. 17 tool parsers, prompt cache, reasoning separation, cloud routing. Drop-in OpenAI replacement. Works with Claude Code, Cursor, Aider.
   - [raullenchai/vnsh](https://github.com/raullenchai/vnsh) — 152 stars — The Ephemeral Dropbox for AI. Host-blind, client-side encrypted sharing for logs, diffs, and images. Vaporizes in 24h.
   - [raullenchai/homebrew-rapid-mlx](https://github.com/raullenchai/homebrew-rapid-mlx) — 123 stars — Homebrew tap for Rapid-MLX — AI inference for Apple Silicon
 
@@ -161,7 +161,7 @@ These are stored separately from repos. Use them as people/projects to watch, no
 - **Name:** Hunter Bown
 - **Featured repo:** https://github.com/Hmbown/DeepSeek-TUI
 - **Top recent repos:**
-  - [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) — 23251 stars — Coding agent for DeepSeek models that runs in your terminal
+  - [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) — 23260 stars — Coding agent for DeepSeek models that runs in your terminal
   - [Hmbown/aleph](https://github.com/Hmbown/aleph) — 199 stars — Skill + MCP server to turn your agent into an RLM. Load context, iterate with search/code/think tools, converge on answers.
   - [Hmbown/Hegelion](https://github.com/Hmbown/Hegelion) — 155 stars — Dialectical reasoning architecture for LLMs (Thesis → Antithesis → Synthesis)
 
@@ -179,16 +179,16 @@ These are stored separately from repos. Use them as people/projects to watch, no
 - **Name:** Addy Osmani
 - **Featured repo:** https://github.com/addyosmani/agent-skills
 - **Top recent repos:**
-  - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 37313 stars — Production-grade engineering skills for AI coding agents.
+  - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 37334 stars — Production-grade engineering skills for AI coding agents.
   - [addyosmani/backbone-fundamentals](https://github.com/addyosmani/backbone-fundamentals) — 9184 stars — :book: A creative-commons book on Backbone.js for beginners and advanced users alike
-  - [addyosmani/web-quality-skills](https://github.com/addyosmani/web-quality-skills) — 1896 stars — Agent Skills for optimizing web quality based on Lighthouse and Core Web Vitals.
+  - [addyosmani/gemini-cli-tips](https://github.com/addyosmani/gemini-cli-tips) — 2358 stars — Gemini CLI Tips and Tricks
 
 ### 9. [amir20](https://github.com/amir20)
 
 - **Name:** Amir Raminfar
 - **Featured repo:** https://github.com/amir20/dozzle
 - **Top recent repos:**
-  - [amir20/dozzle](https://github.com/amir20/dozzle) — 12851 stars — Realtime log viewer for containers.  Supports Docker, Swarm and K8s. 
+  - [amir20/dozzle](https://github.com/amir20/dozzle) — 12852 stars — Realtime log viewer for containers.  Supports Docker, Swarm and K8s. 
   - [amir20/dtop](https://github.com/amir20/dtop) — 1077 stars — Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration.
   - [amir20/gruper](https://github.com/amir20/gruper) — 5 stars — A browser extension that automatically groups your open tabs using AI.
 
@@ -206,14 +206,14 @@ These are stored separately from repos. Use them as people/projects to watch, no
 
 ### 1. [anthropics/financial-services](https://github.com/anthropics/financial-services)
 
-- **Score:** 1211.99
+- **Score:** 1214.13
 - **Sources:** GitHub Trending – daily, GitHub Trending – weekly
-- **Stars:** 17275
-- **Forks:** 2186
+- **Stars:** 17315
+- **Forks:** 2191
 - **Language:** Python
 - **Topics:** -
 - **Created:** 2026-02-23T19:24:50Z
-- **Updated:** 2026-05-09T22:06:43Z
+- **Updated:** 2026-05-09T22:56:26Z
 - **Pushed:** 2026-05-09T11:28:47Z
 
 **Description:** -
@@ -242,14 +242,14 @@ Each agent is named for the wor
 
 ### 2. [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents)
 
-- **Score:** 1000.33
+- **Score:** 1000.37
 - **Sources:** GitHub Trending – daily
-- **Stars:** 45639
-- **Forks:** 5524
+- **Stars:** 45648
+- **Forks:** 5525
 - **Language:** Python
 - **Topics:** agent, llm, rag, tutorial
 - **Created:** 2025-09-07T09:50:24Z
-- **Updated:** 2026-05-09T22:05:26Z
+- **Updated:** 2026-05-09T22:57:15Z
 - **Pushed:** 2026-05-07T15:42:40Z
 - **Homepage:** https://hello-agents.datawhale.cc
 
@@ -290,14 +290,14 @@ Each agent is named for the wor
 
 ### 3. [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 
-- **Score:** 872.01
+- **Score:** 872.25
 - **Sources:** GitHub Trending – daily
-- **Stars:** 38779
-- **Forks:** 2450
+- **Stars:** 38796
+- **Forks:** 2453
 - **Language:** TypeScript
 - **Topics:** browser, chrome, chrome-devtools, debugging, devtools, mcp, mcp-server, puppeteer
 - **Created:** 2025-09-11T10:39:55Z
-- **Updated:** 2026-05-09T21:54:07Z
+- **Updated:** 2026-05-09T22:57:19Z
 - **Pushed:** 2026-05-09T03:13:36Z
 - **Homepage:** https://npmjs.org/package/chrome-devtools-mcp
 
@@ -341,14 +341,14 @@ MCP clients.
 
 ### 4. [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop)
 
-- **Score:** 391.5
+- **Score:** 391.56
 - **Sources:** GitHub Trending – daily
-- **Stars:** 31347
-- **Forks:** 3116
+- **Stars:** 31356
+- **Forks:** 3118
 - **Language:** TypeScript
 - **Topics:** agent, agent-tars, browser-use, computer-use, cowork, gui-agent, gui-operator, mcp, mcp-server, multimodal, tars, ui-tars, vision, vlm
 - **Created:** 2025-01-19T09:04:43Z
-- **Updated:** 2026-05-09T22:03:53Z
+- **Updated:** 2026-05-09T22:56:09Z
 - **Pushed:** 2026-04-29T07:27:48Z
 - **Homepage:** https://agent-tars.com
 
@@ -398,14 +398,14 @@ English | [简体中文](./README.zh-CN.md)
 
 ### 5. [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe)
 
-- **Score:** 377.76
+- **Score:** 378.12
 - **Sources:** GitHub Trending – daily
-- **Stars:** 8483
+- **Stars:** 8495
 - **Forks:** 857
 - **Language:** JavaScript
 - **Topics:** agent, ai, coding, course, deepseek, gemini, genai, gpt, llm, low-code, mcp, nextjs, no-code, openai, programming, tutorial, vibe-coding, vibecoding, vscode, workflow
 - **Created:** 2025-12-28T16:45:28Z
-- **Updated:** 2026-05-09T22:03:58Z
+- **Updated:** 2026-05-09T22:55:53Z
 - **Pushed:** 2026-05-06T14:13:03Z
 - **Homepage:** https://datawhalechina.github.io/easy-vibe/
 
@@ -446,14 +446,14 @@ English | [简体中文](./README.zh-CN.md)
 
 ### 6. [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms)
 
-- **Score:** 296.04
+- **Score:** 296.05
 - **Sources:** GitHub Trending – daily
-- **Stars:** 36465
+- **Stars:** 36467
 - **Forks:** 4483
 - **Language:** Jupyter Notebook
 - **Topics:** -
 - **Created:** 2024-04-08T13:11:40Z
-- **Updated:** 2026-05-09T22:02:02Z
+- **Updated:** 2026-05-09T22:52:12Z
 - **Pushed:** 2025-10-10T06:25:48Z
 
 **Description:** 《动手学大模型Dive into LLMs》系列编程实践教程
@@ -513,14 +513,14 @@ English | [简体中文](./README.zh-CN.md)
 
 ### 7. [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory)
 
-- **Score:** 281.79
+- **Score:** 283.07
 - **Sources:** GitHub Trending – daily
-- **Stars:** 3375
-- **Forks:** 337
+- **Stars:** 3395
+- **Forks:** 338
 - **Language:** TypeScript
 - **Topics:** agentmemory, agents, ai, claude, claudecode, codex, copilot, cursor, genai, harness, hermes, memory, openclaw
 - **Created:** 2026-02-25T07:32:52Z
-- **Updated:** 2026-05-09T22:06:15Z
+- **Updated:** 2026-05-09T22:52:58Z
 - **Pushed:** 2026-05-09T16:45:14Z
 - **Homepage:** https://agent-memory.dev
 
@@ -558,14 +558,14 @@ English | [简体中文](./README.zh-CN.md)
 
 ### 8. [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat)
 
-- **Score:** 203.15
+- **Score:** 203.26
 - **Sources:** GitHub Trending – daily
-- **Stars:** 13742
-- **Forks:** 1364
+- **Stars:** 13754
+- **Forks:** 1365
 - **Language:** TypeScript
 - **Topics:** agents, agents-sdk, ai, ai-agents, ai-agents-automation, chatgpt, claude-code, claude-cowork, generative-ai, llm, multiagent, opeani, open-source, orchestration, productivity
 - **Created:** 2025-01-13T09:30:40Z
-- **Updated:** 2026-05-09T21:53:32Z
+- **Updated:** 2026-05-09T22:55:00Z
 - **Pushed:** 2026-05-09T06:36:57Z
 - **Homepage:** https://www.rowboatlabs.com
 
@@ -611,14 +611,14 @@ Rowboat connects to your email and meeting notes, builds a long-lived knowledge 
 
 ### 9. [masterking32/MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN)
 
-- **Score:** 162.06
+- **Score:** 162.78
 - **Sources:** GitHub Trending – daily
-- **Stars:** 2473
-- **Forks:** 261
+- **Stars:** 2489
+- **Forks:** 262
 - **Language:** Go
 - **Topics:** dns-client, dns-proxy, dns-server, dns-tunnel, dns-tunneling, dnstt, masterdns, masterdnsvpn, slipstream, tunnel, vpn
 - **Created:** 2026-01-18T17:34:54Z
-- **Updated:** 2026-05-09T22:07:14Z
+- **Updated:** 2026-05-09T22:51:21Z
 - **Pushed:** 2026-05-08T23:02:44Z
 - **Homepage:** https://t.me/masterdnsvpn
 
@@ -650,14 +650,14 @@ This system is designed around compatibility with many resolver behaviors and ha
 
 ### 10. [playcanvas/supersplat](https://github.com/playcanvas/supersplat)
 
-- **Score:** 89.53
+- **Score:** 89.63
 - **Sources:** GitHub Trending – daily
-- **Stars:** 6241
-- **Forks:** 725
+- **Stars:** 6259
+- **Forks:** 727
 - **Language:** TypeScript
 - **Topics:** 3d-gaussian-splatting, 3dgs, gaussian-splatting, pcui, playcanvas, typescript, webgl, webgpu
 - **Created:** 2023-10-19T14:45:07Z
-- **Updated:** 2026-05-09T22:07:24Z
+- **Updated:** 2026-05-09T22:55:15Z
 - **Pushed:** 2026-05-08T14:12:36Z
 - **Homepage:** https://superspl.at/editor
 
@@ -691,14 +691,14 @@ To initialize a local development environment for SuperSplat, ensure you have [N
 
 ### 11. [mattpocock/skills](https://github.com/mattpocock/skills)
 
-- **Score:** 3628.99
+- **Score:** 3629.19
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 67967
-- **Forks:** 5858
+- **Stars:** 67996
+- **Forks:** 5860
 - **Language:** Shell
 - **Topics:** -
 - **Created:** 2026-02-03T11:15:53Z
-- **Updated:** 2026-05-09T22:06:26Z
+- **Updated:** 2026-05-09T22:53:20Z
 - **Pushed:** 2026-05-07T06:34:14Z
 
 **Description:** Skills for Real Engineers. Straight from my .claude directory.
@@ -743,14 +743,14 @@ npx skills@latest add mattpocock/skills
 
 ### 12. [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
 
-- **Score:** 796.21
+- **Score:** 796.32
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 72463
-- **Forks:** 14081
+- **Stars:** 72480
+- **Forks:** 14083
 - **Language:** Python
 - **Topics:** agent, finance, llm, multiagent, trading
 - **Created:** 2024-12-28T03:31:08Z
-- **Updated:** 2026-05-09T22:06:24Z
+- **Updated:** 2026-05-09T22:56:00Z
 - **Pushed:** 2026-05-01T19:23:24Z
 - **Homepage:** https://arxiv.org/pdf/2412.20138
 
@@ -784,15 +784,15 @@ npx skills@latest add mattpocock/skills
 
 ### 13. [ruvnet/ruflo](https://github.com/ruvnet/ruflo)
 
-- **Score:** 767.57
+- **Score:** 767.77
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 47740
-- **Forks:** 5293
+- **Stars:** 47759
+- **Forks:** 5295
 - **Language:** TypeScript
 - **Topics:** agentic-ai, agentic-framework, agentic-rag, agentic-workflow, agents, ai-agent, ai-assistant, ai-coding, ai-skills, anthropic-claude, autonomous-agents, claude-code, claude-code-skills, codex, mcp-server, model-context-protocol, multi-agent, multi-agent-systems, swarm, swarm-intelligence
 - **Created:** 2025-06-02T21:24:20Z
-- **Updated:** 2026-05-09T22:06:43Z
-- **Pushed:** 2026-05-09T21:03:39Z
+- **Updated:** 2026-05-09T22:55:46Z
+- **Pushed:** 2026-05-09T22:32:51Z
 - **Homepage:** https://Cognitum.One
 
 **Description:** 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration
@@ -816,14 +816,14 @@ npx skills@latest add mattpocock/skills
 
 ### 14. [virattt/dexter](https://github.com/virattt/dexter)
 
-- **Score:** 668.46
+- **Score:** 668.53
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 25026
+- **Stars:** 25033
 - **Forks:** 3047
 - **Language:** TypeScript
 - **Topics:** -
 - **Created:** 2025-10-14T21:02:00Z
-- **Updated:** 2026-05-09T22:02:21Z
+- **Updated:** 2026-05-09T22:57:02Z
 - **Pushed:** 2026-05-09T14:16:47Z
 
 **Description:** An autonomous agent for deep financial research
@@ -868,12 +868,12 @@ Dexter takes complex financial questions and turns them into clear, step-by-step
 
 - **Score:** 445.65
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 14157
+- **Stars:** 14160
 - **Forks:** 2088
 - **Language:** Python
 - **Topics:** aigc, comfyui, image-generation, tts, video-generation
 - **Created:** 2025-11-07T06:34:27Z
-- **Updated:** 2026-05-09T21:48:36Z
+- **Updated:** 2026-05-09T22:43:55Z
 - **Pushed:** 2026-05-06T03:40:39Z
 - **Homepage:** https://aidc-ai.github.io/Pixelle-Video/zh
 
@@ -922,14 +922,14 @@ https://github.com/user-attachments/assets/a42e7457-fcc8-40da-83fc-784c45a8b95d
 
 ### 16. [1jehuang/jcode](https://github.com/1jehuang/jcode)
 
-- **Score:** 268.32
+- **Score:** 268.45
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 5316
-- **Forks:** 530
+- **Stars:** 5321
+- **Forks:** 531
 - **Language:** Rust
 - **Topics:** ai, claude, cli, coding-agent, llm, mcp, openai, rust, terminal, tui
 - **Created:** 2026-01-05T09:43:36Z
-- **Updated:** 2026-05-09T22:02:22Z
+- **Updated:** 2026-05-09T22:57:59Z
 - **Pushed:** 2026-05-08T04:20:19Z
 
 **Description:** Coding Agent Harness
@@ -983,12 +983,12 @@ Need Windows, Homebrew, source builds, provider setup, or tell your agent to set
 
 - **Score:** 165.82
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 9323
-- **Forks:** 701
+- **Stars:** 9324
+- **Forks:** 703
 - **Language:** Python
 - **Topics:** agentic-data-framework, ai, ai-agents, change-data-capture, codebase-intelligence, context-engineering, data-engineering, data-indexing, data-processing, etl, help-wanted, indexing, knowledge-graph, llm, long-horizon-agent, python, rag, real-time, rust, semantic-search
 - **Created:** 2025-03-03T23:03:09Z
-- **Updated:** 2026-05-09T22:01:55Z
+- **Updated:** 2026-05-09T22:30:23Z
 - **Pushed:** 2026-05-09T04:53:37Z
 - **Homepage:** https://cocoindex.io
 
@@ -1014,12 +1014,12 @@ Need Windows, Homebrew, source builds, provider setup, or tell your agent to set
 
 - **Score:** 138.28
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 16077
+- **Stars:** 16081
 - **Forks:** 1456
 - **Language:** Ruby
 - **Topics:** document-signing, documents, e-signature, hotwired-turbo, open-source, pdf, pdf-sign, pdf-signature, ruby-on-rails, self-hosted, tailwindcss, vue, webpack
 - **Created:** 2023-07-03T19:54:54Z
-- **Updated:** 2026-05-09T21:53:06Z
+- **Updated:** 2026-05-09T22:56:57Z
 - **Pushed:** 2026-05-08T11:02:33Z
 - **Homepage:** https://www.docuseal.com
 
@@ -1073,14 +1073,14 @@ DocuSeal is an open source platform that provides secure and efficient digital d
 
 ### 19. [soxoj/maigret](https://github.com/soxoj/maigret)
 
-- **Score:** 126.91
+- **Score:** 126.93
 - **Sources:** GitHub Trending – weekly, GitHub Search API
-- **Stars:** 27033
+- **Stars:** 27039
 - **Forks:** 1896
 - **Language:** Python
 - **Topics:** blueteam, cli, cybersecurity, identification, infosec, investigation, namechecker, open-source, osint, osint-framework, osint-python, pentesting, python, python3, reconnaissance, redteam, scraping, sherlock, social-network, socmint
 - **Created:** 2020-06-27T14:16:42Z
-- **Updated:** 2026-05-09T22:02:20Z
+- **Updated:** 2026-05-09T22:49:40Z
 - **Pushed:** 2026-05-09T13:11:09Z
 - **Homepage:** https://maigret.readthedocs.io
 
@@ -1134,15 +1134,15 @@ DocuSeal is an open source platform that provides secure and efficient digital d
 
 ### 20. [openclaw/openclaw](https://github.com/openclaw/openclaw)
 
-- **Score:** 11197.93
+- **Score:** 11195.83
 - **Sources:** GitHub Search API
-- **Stars:** 370213
-- **Forks:** 76465
+- **Stars:** 370221
+- **Forks:** 76468
 - **Language:** TypeScript
 - **Topics:** ai, assistant, crustacean, molty, openclaw, own-your-data, personal
 - **Created:** 2025-11-24T10:16:47Z
-- **Updated:** 2026-05-09T22:07:09Z
-- **Pushed:** 2026-05-09T22:06:57Z
+- **Updated:** 2026-05-09T22:57:35Z
+- **Pushed:** 2026-05-09T22:57:22Z
 - **Homepage:** https://openclaw.ai
 
 **Description:** Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 
@@ -1180,14 +1180,14 @@ If you want a personal, single-user assistant that feels local, fast, and always
 
 ### 21. [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag)
 
-- **Score:** 8341.39
+- **Score:** 8236.16
 - **Sources:** GitHub Search API
-- **Stars:** 3579
+- **Stars:** 3591
 - **Forks:** 550
 - **Language:** C
 - **Topics:** -
 - **Created:** 2026-05-07T18:18:28Z
-- **Updated:** 2026-05-09T22:07:09Z
+- **Updated:** 2026-05-09T22:54:45Z
 - **Pushed:** 2026-05-09T20:57:40Z
 
 **Description:** -
@@ -1225,14 +1225,14 @@ Because the embargo has currently been broken, no patch or CVE exists. After con
 
 ### 22. [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 
-- **Score:** 7971.93
+- **Score:** 7970.7
 - **Sources:** GitHub Search API
-- **Stars:** 176701
-- **Forks:** 27316
+- **Stars:** 176729
+- **Forks:** 27323
 - **Language:** JavaScript
 - **Topics:** ai-agents, anthropic, claude, claude-code, developer-tools, llm, mcp, productivity
 - **Created:** 2026-01-18T00:51:51Z
-- **Updated:** 2026-05-09T22:07:25Z
+- **Updated:** 2026-05-09T22:55:46Z
 - **Pushed:** 2026-05-09T02:14:27Z
 - **Homepage:** https://ecc.tools
 
@@ -1261,14 +1261,14 @@ Because the embargo has currently been broken, no patch or CVE exists. After con
 
 ### 23. [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native)
 
-- **Score:** 7105.28
+- **Score:** 7032.01
 - **Sources:** GitHub Search API
-- **Stars:** 1543
-- **Forks:** 62
+- **Stars:** 1576
+- **Forks:** 63
 - **Language:** Zig
 - **Topics:** -
 - **Created:** 2026-05-08T19:53:41Z
-- **Updated:** 2026-05-09T22:05:31Z
+- **Updated:** 2026-05-09T22:57:20Z
 - **Pushed:** 2026-05-09T16:03:03Z
 - **Homepage:** https://zero-native.dev
 
@@ -1328,14 +1328,14 @@ The WebView is treated as untrusted by defau
 
 ### 24. [antirez/ds4](https://github.com/antirez/ds4)
 
-- **Score:** 6684.01
+- **Score:** 6694.05
 - **Sources:** GitHub Search API
-- **Stars:** 4246
-- **Forks:** 290
+- **Stars:** 4299
+- **Forks:** 295
 - **Language:** C
 - **Topics:** -
 - **Created:** 2026-05-06T17:17:05Z
-- **Updated:** 2026-05-09T22:03:29Z
+- **Updated:** 2026-05-09T22:57:08Z
 - **Pushed:** 2026-05-09T20:48:47Z
 
 **Description:** DeepSeek 4 Flash local inference engine for Metal
@@ -1369,14 +1369,14 @@ dense models, we can report that:
 
 ### 25. [obra/superpowers](https://github.com/obra/superpowers)
 
-- **Score:** 4419.6
+- **Score:** 4419.06
 - **Sources:** GitHub Search API
-- **Stars:** 184310
-- **Forks:** 16367
+- **Stars:** 184318
+- **Forks:** 16369
 - **Language:** Shell
 - **Topics:** -
 - **Created:** 2025-10-09T19:45:18Z
-- **Updated:** 2026-05-09T22:06:58Z
+- **Updated:** 2026-05-09T22:51:29Z
 - **Pushed:** 2026-05-08T02:47:44Z
 
 **Description:** An agentic skills framework & software development methodology that works.
@@ -1407,14 +1407,14 @@ There's a bunch more to it, but that's the core of the system. And because the s
 
 ### 26. [anthropics/skills](https://github.com/anthropics/skills)
 
-- **Score:** 2932.94
+- **Score:** 2932.7
 - **Sources:** GitHub Search API
-- **Stars:** 131115
-- **Forks:** 15427
+- **Stars:** 131124
+- **Forks:** 15430
 - **Language:** Python
 - **Topics:** agent-skills
 - **Created:** 2025-09-22T15:53:31Z
-- **Updated:** 2026-05-09T22:05:48Z
+- **Updated:** 2026-05-09T22:50:33Z
 - **Pushed:** 2026-05-09T00:34:37Z
 
 **Description:** Public repository for Agent Skills
@@ -1444,14 +1444,14 @@ Each skill is self-contained in its own folder with a `SKILL.md` file containing
 
 ### 27. [strukto-ai/mirage](https://github.com/strukto-ai/mirage)
 
-- **Score:** 2566.94
+- **Score:** 2547.41
 - **Sources:** GitHub Search API
-- **Stars:** 1619
+- **Stars:** 1624
 - **Forks:** 95
 - **Language:** TypeScript
 - **Topics:** agent-sandbox, agent-tools, ai-agents, bash, claude-code, fuse, langchain, llm-agents, openai-agents, python, typescript, vfs, virtual-filesystem
 - **Created:** 2026-05-06T17:00:48Z
-- **Updated:** 2026-05-09T21:29:37Z
+- **Updated:** 2026-05-09T22:50:57Z
 - **Pushed:** 2026-05-08T11:35:37Z
 - **Homepage:** https://www.strukto.ai/mirage
 
@@ -1487,14 +1487,14 @@ Each skill is self-contained in its own folder with a `SKILL.md` file containing
 
 ### 28. [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
-- **Score:** 2494.86
+- **Score:** 2495.05
 - **Sources:** GitHub Search API
-- **Stars:** 140879
-- **Forks:** 21856
+- **Stars:** 140907
+- **Forks:** 21867
 - **Language:** Python
 - **Topics:** ai, ai-agent, ai-agents, anthropic, chatgpt, claude, claude-code, clawdbot, codex, hermes, hermes-agent, llm, moltbot, nous-research, openai, openclaw
 - **Created:** 2025-07-22T22:22:28Z
-- **Updated:** 2026-05-09T22:07:00Z
+- **Updated:** 2026-05-09T22:57:39Z
 - **Pushed:** 2026-05-09T22:00:26Z
 - **Homepage:** https://hermes-agent.nousresearch.com
 
@@ -1524,7 +1524,7 @@ Use any model you want — [Nous Portal](https://portal.nousresearch.com), [Open
 
 ### 29. [yaojingang/yao-open-prompts](https://github.com/yaojingang/yao-open-prompts)
 
-- **Score:** 2240.59
+- **Score:** 2218.02
 - **Sources:** GitHub Search API
 - **Stars:** 1481
 - **Forks:** 233
@@ -1579,7 +1579,7 @@ README.en.md
 
 ### 30. [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura)
 
-- **Score:** 2189.95
+- **Score:** 2187.12
 - **Sources:** GitHub Search API
 - **Stars:** 11288
 - **Forks:** 735
