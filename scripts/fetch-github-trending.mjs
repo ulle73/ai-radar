@@ -12,13 +12,17 @@ const PUSHED_DAYS = Number(process.env.RADAR_PUSHED_DAYS || 7);
 const MIN_STARS_NEW = Number(process.env.RADAR_MIN_STARS_NEW || 20);
 const MIN_STARS_ACTIVE = Number(process.env.RADAR_MIN_STARS_ACTIVE || 500);
 
+const SOURCE_TRENDING_DAILY = "GitHub Trending – daily";
+const SOURCE_TRENDING_WEEKLY = "GitHub Trending – weekly";
+const SOURCE_SEARCH_API = "GitHub Search API";
+
 const TRENDING_REPO_SOURCES = [
   {
-    name: "GitHub Trending – daily",
+    name: SOURCE_TRENDING_DAILY,
     url: "https://github.com/trending"
   },
   {
-    name: "GitHub Trending – weekly",
+    name: SOURCE_TRENDING_WEEKLY,
     url: "https://github.com/trending?since=weekly"
   }
 ];
@@ -245,6 +249,14 @@ function repoScore(repo) {
   return Number((starsPerDay * 5 + Math.log10(stars + 1) * 10 + Math.log10(forks + 1) * 3 + recencyBoost * 10).toFixed(2));
 }
 
+function entrySourceRank(entry) {
+  const sources = [...entry.sourceNames];
+  if (sources.includes(SOURCE_TRENDING_DAILY)) return 3;
+  if (sources.includes(SOURCE_TRENDING_WEEKLY)) return 2;
+  if (sources.includes(SOURCE_SEARCH_API)) return 1;
+  return 0;
+}
+
 function compactRepo(repo, readme, sourceNames = []) {
   return {
     full_name: repo.full_name,
@@ -272,8 +284,63 @@ function markdownEscape(text) {
   return String(text || "").replace(/\|/g, "\\|");
 }
 
+function hasSource(repo, sourceName) {
+  return (repo.source_names || []).includes(sourceName);
+}
+
+function getRepoGroups(repos) {
+  const used = new Set();
+
+  function take(predicate) {
+    const matched = repos
+      .filter((repo) => !used.has(repo.full_name) && predicate(repo))
+      .sort((a, b) => b.trend_score - a.trend_score);
+
+    for (const repo of matched) used.add(repo.full_name);
+    return matched;
+  }
+
+  const groups = [
+    {
+      title: "GitHub Trending – daily",
+      description: "Repos scraped directly from https://github.com/trending. These should be treated as the cleanest daily trending signal.",
+      repos: take((repo) => hasSource(repo, SOURCE_TRENDING_DAILY))
+    },
+    {
+      title: "GitHub Trending – weekly",
+      description: "Repos scraped directly from https://github.com/trending?since=weekly that were not already shown in daily trending.",
+      repos: take((repo) => hasSource(repo, SOURCE_TRENDING_WEEKLY))
+    },
+    {
+      title: "Extra Search API finds",
+      description: "Additional repos found through GitHub Search API using Jonas-focused keywords. Useful, but noisier than GitHub Trending.",
+      repos: take((repo) => hasSource(repo, SOURCE_SEARCH_API))
+    },
+    {
+      title: "Other captured repos",
+      description: "Fallback bucket for repos without a known source label.",
+      repos: take(() => true)
+    }
+  ];
+
+  return groups.filter((group) => group.repos.length > 0);
+}
+
+function renderRepoTable(lines, repos) {
+  lines.push("| # | Repo | Score | Stars | Lang | Sources | Topics | Description |");
+  lines.push("|---:|---|---:|---:|---|---|---|---|");
+
+  repos.forEach((repo, index) => {
+    lines.push(
+      `| ${index + 1} | [${repo.full_name}](${repo.html_url}) | ${repo.trend_score} | ${repo.stargazers_count} | ${repo.language || "-"} | ${markdownEscape((repo.source_names || []).join(", ")) || "-"} | ${markdownEscape((repo.topics || []).slice(0, 6).join(", ")) || "-"} | ${markdownEscape(repo.description || "")} |`
+    );
+  });
+}
+
 function makeSummary(repos, developers, meta) {
   const lines = [];
+  const repoGroups = getRepoGroups(repos);
+
   lines.push(`# GitHub Radar – ${meta.date}`);
   lines.push("");
   lines.push(`Generated at: ${meta.generated_at}`);
@@ -288,17 +355,28 @@ function makeSummary(repos, developers, meta) {
   lines.push("");
   for (const source of meta.trending_repo_sources) lines.push(`- ${source.name}: ${source.url}`);
   for (const source of meta.trending_developer_sources) lines.push(`- ${source.name}: ${source.url}`);
+  lines.push("- Extra Search API finds: GitHub Search API queries based on keywords in this script");
   lines.push("");
-  lines.push("## Top repos");
-  lines.push("");
-  lines.push("| # | Repo | Score | Stars | Lang | Sources | Topics | Description |");
-  lines.push("|---:|---|---:|---:|---|---|---|---|");
 
-  repos.forEach((repo, index) => {
-    lines.push(
-      `| ${index + 1} | [${repo.full_name}](${repo.html_url}) | ${repo.trend_score} | ${repo.stargazers_count} | ${repo.language || "-"} | ${markdownEscape((repo.source_names || []).join(", ")) || "-"} | ${markdownEscape((repo.topics || []).slice(0, 6).join(", ")) || "-"} | ${markdownEscape(repo.description || "")} |`
-    );
-  });
+  lines.push("## Repo sections by source");
+  lines.push("");
+  lines.push("Repos are grouped by source so true GitHub Trending results do not get buried under high-scoring Search API results.");
+  lines.push("");
+
+  for (const group of repoGroups) {
+    lines.push(`### ${group.title}`);
+    lines.push("");
+    lines.push(group.description);
+    lines.push("");
+    renderRepoTable(lines, group.repos);
+    lines.push("");
+  }
+
+  lines.push("## Overall top repos by score");
+  lines.push("");
+  lines.push("This is a secondary view. Use the source sections above as the primary reading order.");
+  lines.push("");
+  renderRepoTable(lines, repos);
 
   if (developers.length) {
     lines.push("");
@@ -446,9 +524,9 @@ async function collectSearchRepos(found) {
         if (!repo.archived && !repo.disabled && repo.full_name) {
           const existing = found.get(repo.full_name);
           if (existing) {
-            existing.sourceNames.add("GitHub Search API");
+            existing.sourceNames.add(SOURCE_SEARCH_API);
           } else {
-            found.set(repo.full_name, { repo, sourceNames: new Set(["GitHub Search API"]) });
+            found.set(repo.full_name, { repo, sourceNames: new Set([SOURCE_SEARCH_API]) });
           }
         }
       }
@@ -466,7 +544,11 @@ async function collectRepos() {
   await collectSearchRepos(found);
 
   return [...found.values()]
-    .sort((a, b) => repoScore(b.repo) - repoScore(a.repo))
+    .sort((a, b) => {
+      const sourceDelta = entrySourceRank(b) - entrySourceRank(a);
+      if (sourceDelta !== 0) return sourceDelta;
+      return repoScore(b.repo) - repoScore(a.repo);
+    })
     .slice(0, MAX_REPOS);
 }
 
@@ -483,7 +565,13 @@ async function main() {
     enriched.push(compactRepo(entry.repo, readme, [...entry.sourceNames]));
   }
 
-  enriched.sort((a, b) => b.trend_score - a.trend_score);
+  enriched.sort((a, b) => {
+    const aRank = hasSource(a, SOURCE_TRENDING_DAILY) ? 3 : hasSource(a, SOURCE_TRENDING_WEEKLY) ? 2 : hasSource(a, SOURCE_SEARCH_API) ? 1 : 0;
+    const bRank = hasSource(b, SOURCE_TRENDING_DAILY) ? 3 : hasSource(b, SOURCE_TRENDING_WEEKLY) ? 2 : hasSource(b, SOURCE_SEARCH_API) ? 1 : 0;
+    const sourceDelta = bRank - aRank;
+    if (sourceDelta !== 0) return sourceDelta;
+    return b.trend_score - a.trend_score;
+  });
 
   const meta = {
     date: today,
