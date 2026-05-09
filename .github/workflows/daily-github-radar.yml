@@ -43,14 +43,23 @@ jobs:
           RADAR_MIN_STARS_ACTIVE: 500
         run: npm run radar
 
-      - name: Commit radar results
+      - name: Run OpenRouter ranking
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          OPENROUTER_SITE_URL: https://github.com/ulle73/ai-radar
+          OPENROUTER_APP_NAME: Jonas AI Radar
+          RANKING_MAX_INPUT_CHARS: 120000
+        run: npm run rank
+
+      - name: Commit radar and ranking results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data rankings
           if git diff --cached --quiet; then
-            echo "No radar changes to commit."
+            echo "No radar or ranking changes to commit."
           else
-            git commit -m "data: update github radar $(date -u +'%Y-%m-%d')"
+            git commit -m "data: update ai radar $(date -u +'%Y-%m-%d')"
             git push
           fi
