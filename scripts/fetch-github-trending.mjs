@@ -175,27 +175,56 @@ function stripTags(text) {
   return decodeHtml(String(text || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
 }
 
+function isValidRepoFullName(fullName) {
+  if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(fullName)) return false;
+
+  const [owner, repo] = fullName.split("/");
+  const blockedOwners = new Set([
+    "about",
+    "apps",
+    "collections",
+    "customer-stories",
+    "enterprise",
+    "events",
+    "explore",
+    "features",
+    "github",
+    "login",
+    "marketplace",
+    "new",
+    "notifications",
+    "organizations",
+    "orgs",
+    "pricing",
+    "search",
+    "settings",
+    "signup",
+    "sponsors",
+    "topics",
+    "trending",
+    "users"
+  ]);
+
+  if (blockedOwners.has(owner.toLowerCase())) return false;
+  if (["developers", "stars", "followers", "following", "repositories"].includes(repo.toLowerCase())) return false;
+
+  return true;
+}
+
 function parseTrendingRepos(html, limit) {
   const found = [];
   const seen = new Set();
-  const regex = /href="\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)"/g;
-  let match;
+  const articles = html.match(/<article[\s\S]*?<\/article>/g) || [];
 
-  while ((match = regex.exec(html)) !== null) {
-    const owner = match[1];
-    const repo = match[2];
-    const fullName = `${owner}/${repo}`;
+  for (const article of articles) {
+    // GitHub Trending repo rows put the owner/repo link inside the article heading.
+    // Restricting parsing to article h2 prevents nav links like /trending/developers and /apps/dependabot.
+    const heading = article.match(/<h2[\s\S]*?<\/h2>/)?.[0] || article;
+    const match = heading.match(/href="\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)"/);
+    if (!match) continue;
 
-    if (
-      owner === "features" ||
-      owner === "topics" ||
-      owner === "collections" ||
-      owner === "marketplace" ||
-      owner === "sponsors" ||
-      seen.has(fullName)
-    ) {
-      continue;
-    }
+    const fullName = `${match[1]}/${match[2]}`;
+    if (!isValidRepoFullName(fullName) || seen.has(fullName)) continue;
 
     seen.add(fullName);
     found.push(fullName);
@@ -225,7 +254,7 @@ function parseTrendingDevelopers(html, limit) {
       username,
       profile_url: `https://github.com/${username}`,
       display_name: nameMatch ? stripTags(nameMatch[0]) : username,
-      featured_repo: repoMatch ? `https://github.com/${repoMatch[1]}` : null
+      featured_repo: repoMatch && isValidRepoFullName(repoMatch[1]) ? `https://github.com/${repoMatch[1]}` : null
     });
 
     if (developers.length >= limit) break;
@@ -457,6 +486,8 @@ async function collectTrendingRepos(found) {
       const html = await fetchHtml(source.url);
       const fullNames = parseTrendingRepos(html, TRENDING_REPOS_PER_SOURCE);
       for (const fullName of fullNames) {
+        if (!isValidRepoFullName(fullName)) continue;
+
         const existing = found.get(fullName);
         if (existing) {
           existing.sourceNames.add(source.name);
