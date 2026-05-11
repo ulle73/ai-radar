@@ -12,6 +12,8 @@ const APP_NAME = process.env.OPENROUTER_APP_NAME || "Jonas AI Radar";
 const MAX_INPUT_CHARS = Number(process.env.RANKING_MAX_INPUT_CHARS || 60000);
 const SUMMARY_README_CHARS = Number(process.env.RANKING_README_CHARS || 450);
 
+const ACTIONS = new Set(["Testa nu", "Spara för senare", "Bevaka", "Ignorera"]);
+
 async function readText(filePath, fallback = "") {
   try {
     return await readFile(path.join(root, filePath), "utf8");
@@ -48,7 +50,11 @@ function truncate(text, maxChars) {
 }
 
 function markdownEscape(text) {
-  return String(text || "").replace(/\|/g, "\\|").replace(/\n/g, " ").trim();
+  return String(text || "")
+    .replace(/\|/g, "\\|")
+    .replace(/\n/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function parseRadarJson(rawJson) {
@@ -62,6 +68,32 @@ function parseRadarJson(rawJson) {
   } catch {
     return { meta: {}, repos: [], developers: [] };
   }
+}
+
+function dedupeRepos(repos) {
+  const seen = new Map();
+
+  for (const repo of repos || []) {
+    if (!repo?.full_name) continue;
+    const key = String(repo.full_name).toLowerCase();
+
+    if (!seen.has(key)) {
+      seen.set(key, { ...repo, source_names: [...(repo.source_names || [])] });
+      continue;
+    }
+
+    const existing = seen.get(key);
+    const sourceNames = new Set([...(existing.source_names || []), ...(repo.source_names || [])]);
+    seen.set(key, {
+      ...existing,
+      ...repo,
+      source_names: [...sourceNames],
+      readme_excerpt: existing.readme_excerpt || repo.readme_excerpt || "",
+      description: existing.description || repo.description || ""
+    });
+  }
+
+  return [...seen.values()];
 }
 
 function compactReposForPrompt(repos) {
@@ -88,7 +120,7 @@ function localHeuristicScore(repo) {
 
   const buckets = [
     { label: "AI agent / workflow", weight: 250, terms: ["agent", "agents", "ai-agent", "mcp", "claude", "codex", "workflow", "skills", "memory", "rag"] },
-    { label: "Web / e-commerce / FAIV", weight: 190, terms: ["wordpress", "woocommerce", "ecommerce", "commerce", "devtools", "browser", "chrome", "frontend", "web", "ui"] },
+    { label: "Web / e-commerce / FAIV", weight: 190, terms: ["wordpress", "woocommerce", "ecommerce", "commerce", "devtools", "browser", "chrome", "frontend", "web", "ui", "react"] },
     { label: "Data / scraping / företagslistor", weight: 170, terms: ["scrap", "crawler", "browser automation", "headless", "etl", "data", "pipeline", "index"] },
     { label: "Trading / finance / stock-signals", weight: 160, terms: ["trading", "finance", "financial", "market", "stock", "equity", "indicator", "research"] },
     { label: "Content / Socials / marketing", weight: 110, terms: ["video", "content", "social", "marketing", "publish", "calendar"] },
@@ -121,19 +153,21 @@ function localHeuristicScore(repo) {
   };
 }
 
+function actionForScore(score) {
+  if (score >= 720) return "Testa nu";
+  if (score >= 500) return "Spara för senare";
+  if (score >= 300) return "Bevaka";
+  return "Ignorera";
+}
+
 function makeFallbackRanking({ repos, meta, reason }) {
-  const ranked = repos
+  const ranked = dedupeRepos(repos)
     .map((repo) => {
       const heuristic = localHeuristicScore(repo);
-      let action = "Bevaka";
-      if (heuristic.score >= 650) action = "Testa nu";
-      else if (heuristic.score >= 430) action = "Spara för senare";
-      else if (heuristic.score < 220) action = "Ignorera";
-
       return {
         repo,
         ...heuristic,
-        action
+        action: actionForScore(heuristic.score)
       };
     })
     .sort((a, b) => b.score - a.score);
@@ -143,7 +177,7 @@ function makeFallbackRanking({ repos, meta, reason }) {
   lines.push("");
   lines.push("## Sammanfattning");
   lines.push("");
-  lines.push("Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en användbar textrespons. Den här rankingen är heuristisk och bör ses som en stabil backup, inte som den slutliga LLM-analysen.");
+  lines.push("Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en validerad ranking. Den här rankingen är heuristisk och ska ses som stabil backup.");
   lines.push("");
   lines.push(`- Radar datum: ${meta.date || today}`);
   lines.push(`- Repos rankade: ${ranked.length}`);
@@ -194,9 +228,13 @@ function makeFallbackRanking({ repos, meta, reason }) {
 }
 
 function buildPrompt({ radar, goals, projects, ideas, candidates, repos }) {
+  const repoNames = repos.map((repo) => repo.full_name).join("\n");
   const input = `
 # Goals
 ${goals || "No GOALS.md found."}
+
+# Allowed repos - rank exactly these, once each
+${repoNames}
 
 # Latest radar compact JSONL
 ${compactReposForPrompt(repos)}
@@ -218,7 +256,9 @@ ${candidates || "No candidates found."}
 
 Uppgift: analysera dagens GitHub Radar och skapa en permanent totalranking som kan sparas i repo och läsas om ett år.
 
-Du ska ranka ALLA repon från dagens radar, inte bara topp 3. Använd GOALS.md, Jonas projektbank, idébank och befintliga kandidater som bedömningsgrund.
+Du ska ranka EXAKT alla repos i listan "Allowed repos". Varje repo får förekomma exakt en gång i Totalranking. Du får inte lägga till repos som inte finns i Allowed repos.
+
+Använd GOALS.md, Jonas projektbank, idébank och befintliga kandidater som bedömningsgrund.
 
 VIKTIGT:
 - Svara ENDAST med markdown.
@@ -230,6 +270,15 @@ VIKTIGT:
 - Var hård med brus.
 - Om ett repo passar FAIV/design/UI: nämn att relevant DESIGN.md från https://github.com/voltagent/awesome-design-md bör användas innan UI/design ändras.
 - Föreslå inte att implementera trading-agenter som beslutsmotor i stock-signals; de får bara vara researchinspiration om de är relevanta.
+- Action ska hänga ihop med score:
+  - 720–1000: Testa nu eller Spara för senare. Aldrig Ignorera.
+  - 500–719: Spara för senare eller Bevaka. Aldrig Ignorera.
+  - 300–499: Bevaka eller Ignorera.
+  - 0–299: Ignorera.
+- Max 5 repos får Action = Testa nu.
+- Max 10 repos får Action = Spara för senare.
+- Om du är osäker, välj Bevaka hellre än Testa nu.
+- Hitta inte på påståenden som exakta kostnadsbesparingar om README inte stödjer det. Skriv då "kan minska" eller "kan hjälpa".
 
 Rankingmodell:
 - Projektmatchning: 0–300
@@ -254,7 +303,7 @@ Beskriv modellen kort.
 | Rank | JonasFitScore | Repo | Primär match | Sekundär match | Action | Motivering |
 |---:|---:|---|---|---|---|---|
 
-Här ska ALLA repos från dagens radar listas i sorterad ordning.
+Här ska EXAKT ${repos.length} unika repos från Allowed repos listas i sorterad ordning.
 
 Action ska vara en av:
 - Testa nu
@@ -301,8 +350,8 @@ async function callOpenRouter(prompt) {
           content: prompt
         }
       ],
-      temperature: 0.15,
-      top_p: 0.85,
+      temperature: 0.1,
+      top_p: 0.8,
       max_tokens: 12000
     })
   });
@@ -332,17 +381,95 @@ async function callOpenRouter(prompt) {
   return String(content).trim() + "\n";
 }
 
-function isBadModelOutput(markdown) {
+function extractRepoFromMarkdownRow(row) {
+  const match = row.match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/);
+  if (!match) return "";
+  return `${match[1]}/${match[2]}`.toLowerCase();
+}
+
+function extractScoreFromMarkdownRow(row) {
+  const cells = row.split("|").map((cell) => cell.trim()).filter(Boolean);
+  const scoreCell = cells[1] || "";
+  const match = scoreCell.match(/\d+(?:\.\d+)?/);
+  return match ? Number(match[0]) : NaN;
+}
+
+function extractActionFromMarkdownRow(row) {
+  for (const action of ACTIONS) {
+    if (row.includes(`| ${action} |`) || row.includes(`| **${action}** |`)) return action;
+  }
+  return "";
+}
+
+function extractRankingRows(markdown) {
+  const lines = String(markdown || "").split("\n");
+  const start = lines.findIndex((line) => /^##\s+Totalranking/i.test(line.trim()));
+  if (start === -1) return [];
+
+  const rows = [];
+  for (const line of lines.slice(start + 1)) {
+    if (/^##\s+/.test(line.trim())) break;
+    const trimmed = line.trim();
+    if (!trimmed.startsWith("|")) continue;
+    if (trimmed.includes("---")) continue;
+    if (/Rank\s*\|\s*JonasFitScore/i.test(trimmed)) continue;
+    if (trimmed.includes("github.com/")) rows.push(trimmed);
+  }
+  return rows;
+}
+
+function validateModelOutput(markdown, repos) {
+  const errors = [];
   const text = String(markdown || "");
-  if (!text.includes("## Totalranking")) return true;
-  if (!text.includes("| Rank | JonasFitScore | Repo |")) return true;
-  if (text.includes("The question:") || text.includes("So we need to") || text.includes("Let's assign")) return true;
-  return false;
+
+  if (!text.includes("## Totalranking")) errors.push("Missing ## Totalranking section");
+  if (!text.includes("| Rank | JonasFitScore | Repo |")) errors.push("Missing ranking table header");
+  if (text.includes("The question:") || text.includes("So we need to") || text.includes("Let's assign")) errors.push("Contains reasoning/prompt leakage");
+
+  const allowed = new Set(repos.map((repo) => String(repo.full_name).toLowerCase()));
+  const rows = extractRankingRows(text);
+  const seen = new Set();
+
+  if (rows.length !== allowed.size) errors.push(`Expected ${allowed.size} ranking rows, got ${rows.length}`);
+
+  let testaNuCount = 0;
+  let sparaCount = 0;
+
+  rows.forEach((row, index) => {
+    const repoName = extractRepoFromMarkdownRow(row);
+    const score = extractScoreFromMarkdownRow(row);
+    const action = extractActionFromMarkdownRow(row);
+
+    if (!repoName) errors.push(`Row ${index + 1}: could not parse GitHub repo URL`);
+    else if (!allowed.has(repoName)) errors.push(`Row ${index + 1}: repo not allowed: ${repoName}`);
+    else if (seen.has(repoName)) errors.push(`Duplicate repo in ranking: ${repoName}`);
+    else seen.add(repoName);
+
+    if (!Number.isFinite(score) || score < 0 || score > 1000) errors.push(`Row ${index + 1}: invalid score: ${score}`);
+    if (!ACTIONS.has(action)) errors.push(`Row ${index + 1}: invalid or missing action`);
+
+    if (action === "Testa nu") testaNuCount += 1;
+    if (action === "Spara för senare") sparaCount += 1;
+
+    if (score >= 720 && action === "Ignorera") errors.push(`Row ${index + 1}: high score cannot be Ignorera`);
+    if (score >= 500 && action === "Ignorera") errors.push(`Row ${index + 1}: medium/high score cannot be Ignorera`);
+    if (score < 300 && action === "Testa nu") errors.push(`Row ${index + 1}: low score cannot be Testa nu`);
+  });
+
+  for (const repoName of allowed) {
+    if (!seen.has(repoName)) errors.push(`Missing repo from ranking: ${repoName}`);
+  }
+
+  if (testaNuCount > 5) errors.push(`Too many Testa nu actions: ${testaNuCount}`);
+  if (sparaCount > 10) errors.push(`Too many Spara för senare actions: ${sparaCount}`);
+
+  return errors;
 }
 
 async function main() {
   const rawJson = await readText("data/latest.json");
-  const { meta, repos } = parseRadarJson(rawJson);
+  const { meta, repos: rawRepos } = parseRadarJson(rawJson);
+  const repos = dedupeRepos(rawRepos);
 
   const radar = await readText("data/latest.md");
   if (!radar.trim() && !repos.length) {
@@ -360,9 +487,12 @@ async function main() {
   } else {
     const prompt = buildPrompt({ radar, goals, projects, ideas, candidates, repos });
     try {
-      ranking = await callOpenRouter(prompt);
-      if (isBadModelOutput(ranking)) {
-        ranking = makeFallbackRanking({ repos, meta, reason: "OpenRouter output failed validation" });
+      const modelOutput = await callOpenRouter(prompt);
+      const validationErrors = validateModelOutput(modelOutput, repos);
+      if (validationErrors.length) {
+        ranking = makeFallbackRanking({ repos, meta, reason: `OpenRouter output failed validation: ${validationErrors.slice(0, 8).join("; ")}` });
+      } else {
+        ranking = modelOutput;
       }
     } catch (error) {
       console.warn(error.message);
