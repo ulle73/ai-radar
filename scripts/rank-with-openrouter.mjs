@@ -13,6 +13,9 @@ const MAX_INPUT_CHARS = Number(process.env.RANKING_MAX_INPUT_CHARS || 60000);
 const SUMMARY_README_CHARS = Number(process.env.RANKING_README_CHARS || 450);
 
 const ACTIONS = new Set(["Testa nu", "Spara för senare", "Bevaka", "Ignorera"]);
+const DAILY = "GitHub Trending – daily";
+const WEEKLY = "GitHub Trending – weekly";
+const SEARCH = "GitHub Search API";
 
 async function readText(filePath, fallback = "") {
   try {
@@ -23,8 +26,8 @@ async function readText(filePath, fallback = "") {
 }
 
 async function readMarkdownFiles(dir) {
-  const absDir = path.join(root, dir);
   try {
+    const absDir = path.join(root, dir);
     const entries = await readdir(absDir, { withFileTypes: true });
     const files = entries
       .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
@@ -34,8 +37,7 @@ async function readMarkdownFiles(dir) {
     const chunks = [];
     for (const file of files) {
       const rel = path.join(dir, file).replaceAll("\\", "/");
-      const content = await readText(rel);
-      chunks.push(`\n\n--- FILE: ${rel} ---\n${content}`);
+      chunks.push(`\n\n--- FILE: ${rel} ---\n${await readText(rel)}`);
     }
     return chunks.join("\n");
   } catch {
@@ -70,6 +72,26 @@ function parseRadarJson(rawJson) {
   }
 }
 
+function sourcePriority(repo) {
+  const sources = repo.source_names || [];
+  if (sources.includes(DAILY)) return 3;
+  if (sources.includes(WEEKLY)) return 2;
+  if (sources.includes(SEARCH)) return 1;
+  return 0;
+}
+
+function sourceLabel(repo) {
+  const priority = sourcePriority(repo);
+  if (priority === 3) return "TRUE_TRENDING_DAILY";
+  if (priority === 2) return "TRUE_TRENDING_WEEKLY";
+  if (priority === 1) return "EXTRA_SEARCH_API";
+  return "UNKNOWN";
+}
+
+function isTrueTrending(repo) {
+  return sourcePriority(repo) >= 2;
+}
+
 function dedupeRepos(repos) {
   const seen = new Map();
 
@@ -93,7 +115,11 @@ function dedupeRepos(repos) {
     });
   }
 
-  return [...seen.values()];
+  return [...seen.values()].sort((a, b) => {
+    const sourceDelta = sourcePriority(b) - sourcePriority(a);
+    if (sourceDelta !== 0) return sourceDelta;
+    return (b.trend_score || 0) - (a.trend_score || 0);
+  });
 }
 
 function compactReposForPrompt(repos) {
@@ -102,6 +128,7 @@ function compactReposForPrompt(repos) {
       index: index + 1,
       full_name: repo.full_name,
       url: repo.html_url,
+      source_class: sourceLabel(repo),
       sources: repo.source_names || [],
       description: repo.description || "",
       language: repo.language || "",
@@ -138,18 +165,25 @@ function localHeuristicScore(repo) {
     }
   }
 
+  // True GitHub Trending should be the primary source signal.
+  if (sourcePriority(repo) === 3) score += 150;
+  else if (sourcePriority(repo) === 2) score += 110;
+  else if (sourcePriority(repo) === 1) score += 10;
+
   const stars = repo.stargazers_count || 0;
-  score += Math.min(90, Math.log10(stars + 1) * 18);
+  score += Math.min(70, Math.log10(stars + 1) * 14);
 
-  if ((repo.source_names || []).some((source) => source.includes("Trending"))) score += 35;
   if (text.includes("exploit") || text.includes("vulnerability") || text.includes("vpn") || text.includes("censorship")) score -= 160;
-  if (text.includes("gaussian") || text.includes("3d")) score -= 90;
+  if (text.includes("gaussian") || text.includes("3d")) score -= 70;
 
-  score = Math.max(20, Math.min(920, score));
+  // Search API-only repos should not dominate unless they are extremely well matched.
+  if (sourcePriority(repo) === 1 && score > 760) score = 760;
+
+  score = Math.max(20, Math.min(940, score));
   return {
     score: Number(score.toFixed(1)),
     primaryMatch: matched[0] || "Svag/oklar match",
-    secondaryMatch: matched[1] || "-"
+    secondaryMatch: matched[1] || sourceLabel(repo)
   };
 }
 
@@ -164,11 +198,7 @@ function makeFallbackRanking({ repos, meta, reason }) {
   const ranked = dedupeRepos(repos)
     .map((repo) => {
       const heuristic = localHeuristicScore(repo);
-      return {
-        repo,
-        ...heuristic,
-        action: actionForScore(heuristic.score)
-      };
+      return { repo, ...heuristic, action: actionForScore(heuristic.score) };
     })
     .sort((a, b) => b.score - a.score);
 
@@ -177,7 +207,7 @@ function makeFallbackRanking({ repos, meta, reason }) {
   lines.push("");
   lines.push("## Sammanfattning");
   lines.push("");
-  lines.push("Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en validerad ranking. Den här rankingen är heuristisk och ska ses som stabil backup.");
+  lines.push("Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en validerad ranking. Fallbacken prioriterar riktig GitHub Trending före Extra Search API.");
   lines.push("");
   lines.push(`- Radar datum: ${meta.date || today}`);
   lines.push(`- Repos rankade: ${ranked.length}`);
@@ -185,7 +215,7 @@ function makeFallbackRanking({ repos, meta, reason }) {
   lines.push("");
   lines.push("## Rankingmodell");
   lines.push("");
-  lines.push("Fallbackmodellen söker efter matchningar mot Jonas mål: AI-agent workflows, FAIV/web/e-commerce, data/scraping, stock-signals/finance, content/social och dokument/planning. Den justerar även för stars, trending-källa och brus/risk.");
+  lines.push("Fallbackmodellen premierar TRUE_TRENDING_DAILY och TRUE_TRENDING_WEEKLY som primär signal. Extra Search API är sekundärt och får inte dominera toppositionerna om det inte är extremt relevant.");
   lines.push("");
   lines.push("## Totalranking");
   lines.push("");
@@ -194,7 +224,7 @@ function makeFallbackRanking({ repos, meta, reason }) {
 
   ranked.forEach((item, index) => {
     const repo = item.repo;
-    const reasonText = repo.description || `Topics: ${(repo.topics || []).join(", ") || "-"}`;
+    const reasonText = `${sourceLabel(repo)} — ${repo.description || `Topics: ${(repo.topics || []).join(", ") || "-"}`}`;
     lines.push(`| ${index + 1} | ${item.score} | [${repo.full_name}](${repo.html_url}) | ${markdownEscape(item.primaryMatch)} | ${markdownEscape(item.secondaryMatch)} | ${item.action} | ${markdownEscape(reasonText)} |`);
   });
 
@@ -228,7 +258,8 @@ function makeFallbackRanking({ repos, meta, reason }) {
 }
 
 function buildPrompt({ radar, goals, projects, ideas, candidates, repos }) {
-  const repoNames = repos.map((repo) => repo.full_name).join("\n");
+  const repoNames = repos.map((repo) => `${repo.full_name} | ${sourceLabel(repo)}`).join("\n");
+  const trueTrendingCount = repos.filter(isTrueTrending).length;
   const input = `
 # Goals
 ${goals || "No GOALS.md found."}
@@ -256,16 +287,29 @@ ${candidates || "No candidates found."}
 
 Uppgift: analysera dagens GitHub Radar och skapa en permanent totalranking som kan sparas i repo och läsas om ett år.
 
+VIKTIGASTE REGELN:
+Jonas vill främst fånga upp repon från de riktiga GitHub Trending-url:erna:
+- TRUE_TRENDING_DAILY = https://github.com/trending
+- TRUE_TRENDING_WEEKLY = https://github.com/trending?since=weekly
+
+Extra Search API är bara en kompletterande källa. Search API-repon får vara med i rankingen, men de ska inte dominera topp 5/topp 10 om de inte har extremt tydlig direkt nytta för Jonas projekt.
+
 Du ska ranka EXAKT alla repos i listan "Allowed repos". Varje repo får förekomma exakt en gång i Totalranking. Du får inte lägga till repos som inte finns i Allowed repos.
 
 Använd GOALS.md, Jonas projektbank, idébank och befintliga kandidater som bedömningsgrund.
 
+Källprioritet i score:
+- TRUE_TRENDING_DAILY ska få stark timing/nyhetsvärde-premie.
+- TRUE_TRENDING_WEEKLY ska också få tydlig premie.
+- EXTRA_SEARCH_API ska bedömas hårdare och främst ses som sidofynd.
+- Om ett Search API-repo rankas före ett true-trending repo måste motiveringen vara mycket konkret.
+- Minst 7 av topp 10 bör komma från TRUE_TRENDING_DAILY/TRUE_TRENDING_WEEKLY om det finns tillräckligt många relevanta true-trending repos. Dagens true-trending count är ${trueTrendingCount}.
+
 VIKTIGT:
 - Svara ENDAST med markdown.
 - Skapa en långsiktig rankingfil, inte en chattig rapport.
-- Använd JonasFitScore 0–1000 med decimaler, t.ex. 842.5.
+- Använd JonasFitScore 0–1000 med decimaler.
 - Undvik att många får samma score. Var granulär.
-- Rankingen ska spegla hur mycket repot faktiskt kan hjälpa Jonas projekt, idéer eller strategiska edge.
 - Prioritera praktisk nytta framför hype.
 - Var hård med brus.
 - Om ett repo passar FAIV/design/UI: nämn att relevant DESIGN.md från https://github.com/voltagent/awesome-design-md bör användas innan UI/design ändras.
@@ -278,14 +322,14 @@ VIKTIGT:
 - Max 5 repos får Action = Testa nu.
 - Max 10 repos får Action = Spara för senare.
 - Om du är osäker, välj Bevaka hellre än Testa nu.
-- Hitta inte på påståenden som exakta kostnadsbesparingar om README inte stödjer det. Skriv då "kan minska" eller "kan hjälpa".
+- Hitta inte på exakta kostnadsbesparingar eller prestandalöften om README inte stödjer det.
 
 Rankingmodell:
 - Projektmatchning: 0–300
 - Idébanksmatchning: 0–200
 - Praktisk implementering: 0–200
 - Affärs-/intäktsnytta: 0–150
-- Timing/nyhetsvärde: 0–100
+- Timing/nyhetsvärde och källprioritet: 0–100
 - Strategisk edge: 0–50
 - Total: 0–1000
 
@@ -294,7 +338,7 @@ Obligatoriskt output-format:
 # AI Radar Totalranking – ${today}
 
 ## Sammanfattning
-Kort slutsats om dagens viktigaste fynd.
+Kort slutsats om dagens viktigaste fynd. Nämn tydligt att TRUE_TRENDING_DAILY och TRUE_TRENDING_WEEKLY prioriteras över Extra Search API.
 
 ## Rankingmodell
 Beskriv modellen kort.
@@ -345,10 +389,7 @@ async function callOpenRouter(prompt) {
           role: "system",
           content: "You write durable markdown ranking reports. Return only the final markdown report. Do not restate the prompt. Do not include reasoning scratchpad."
         },
-        {
-          role: "user",
-          content: prompt
-        }
+        { role: "user", content: prompt }
       ],
       temperature: 0.1,
       top_p: 0.8,
@@ -357,10 +398,7 @@ async function callOpenRouter(prompt) {
   });
 
   const bodyText = await response.text();
-
-  if (!response.ok) {
-    throw new Error(`OpenRouter error ${response.status}: ${bodyText}`);
-  }
+  if (!response.ok) throw new Error(`OpenRouter error ${response.status}: ${bodyText}`);
 
   let data;
   try {
@@ -371,7 +409,6 @@ async function callOpenRouter(prompt) {
 
   const choice = data?.choices?.[0];
   const content = choice?.message?.content || choice?.text || data?.output || "";
-
   if (!String(content).trim()) {
     const finishReason = choice?.finish_reason || "unknown";
     const errorHint = data?.error?.message || "no error message";
@@ -383,8 +420,7 @@ async function callOpenRouter(prompt) {
 
 function extractRepoFromMarkdownRow(row) {
   const match = row.match(/github\.com\/([A-Za-z0-9_.-]+)\/([A-Za-z0-9_.-]+)/);
-  if (!match) return "";
-  return `${match[1]}/${match[2]}`.toLowerCase();
+  return match ? `${match[1]}/${match[2]}`.toLowerCase() : "";
 }
 
 function extractScoreFromMarkdownRow(row) {
@@ -427,6 +463,7 @@ function validateModelOutput(markdown, repos) {
   if (text.includes("The question:") || text.includes("So we need to") || text.includes("Let's assign")) errors.push("Contains reasoning/prompt leakage");
 
   const allowed = new Set(repos.map((repo) => String(repo.full_name).toLowerCase()));
+  const trueTrending = new Set(repos.filter(isTrueTrending).map((repo) => String(repo.full_name).toLowerCase()));
   const rows = extractRankingRows(text);
   const seen = new Set();
 
@@ -434,11 +471,14 @@ function validateModelOutput(markdown, repos) {
 
   let testaNuCount = 0;
   let sparaCount = 0;
+  let trueTrendingTop10 = 0;
 
   rows.forEach((row, index) => {
     const repoName = extractRepoFromMarkdownRow(row);
     const score = extractScoreFromMarkdownRow(row);
     const action = extractActionFromMarkdownRow(row);
+
+    if (index < 10 && trueTrending.has(repoName)) trueTrendingTop10 += 1;
 
     if (!repoName) errors.push(`Row ${index + 1}: could not parse GitHub repo URL`);
     else if (!allowed.has(repoName)) errors.push(`Row ${index + 1}: repo not allowed: ${repoName}`);
@@ -462,6 +502,7 @@ function validateModelOutput(markdown, repos) {
 
   if (testaNuCount > 5) errors.push(`Too many Testa nu actions: ${testaNuCount}`);
   if (sparaCount > 10) errors.push(`Too many Spara för senare actions: ${sparaCount}`);
+  if (trueTrending.size >= 7 && trueTrendingTop10 < 7) errors.push(`Too few true GitHub Trending repos in top 10: ${trueTrendingTop10}`);
 
   return errors;
 }
@@ -489,11 +530,9 @@ async function main() {
     try {
       const modelOutput = await callOpenRouter(prompt);
       const validationErrors = validateModelOutput(modelOutput, repos);
-      if (validationErrors.length) {
-        ranking = makeFallbackRanking({ repos, meta, reason: `OpenRouter output failed validation: ${validationErrors.slice(0, 8).join("; ")}` });
-      } else {
-        ranking = modelOutput;
-      }
+      ranking = validationErrors.length
+        ? makeFallbackRanking({ repos, meta, reason: `OpenRouter output failed validation: ${validationErrors.slice(0, 8).join("; ")}` })
+        : modelOutput;
     } catch (error) {
       console.warn(error.message);
       ranking = makeFallbackRanking({ repos, meta, reason: error.message });
