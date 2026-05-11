@@ -9,7 +9,8 @@ const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || "";
 const OPENROUTER_BASE_URL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
 const SITE_URL = process.env.OPENROUTER_SITE_URL || "https://github.com/ulle73/ai-radar";
 const APP_NAME = process.env.OPENROUTER_APP_NAME || "Jonas AI Radar";
-const MAX_INPUT_CHARS = Number(process.env.RANKING_MAX_INPUT_CHARS || 120000);
+const MAX_INPUT_CHARS = Number(process.env.RANKING_MAX_INPUT_CHARS || 60000);
+const SUMMARY_README_CHARS = Number(process.env.RANKING_README_CHARS || 450);
 
 async function readText(filePath, fallback = "") {
   try {
@@ -46,9 +47,161 @@ function truncate(text, maxChars) {
   return `${value.slice(0, maxChars)}\n\n[TRUNCATED TO ${maxChars} CHARS]`;
 }
 
-function buildPrompt({ radar, projects, ideas, candidates }) {
+function markdownEscape(text) {
+  return String(text || "").replace(/\|/g, "\\|").replace(/\n/g, " ").trim();
+}
+
+function parseRadarJson(rawJson) {
+  try {
+    const parsed = JSON.parse(rawJson);
+    return {
+      meta: parsed.meta || {},
+      repos: Array.isArray(parsed.repos) ? parsed.repos : [],
+      developers: Array.isArray(parsed.developers) ? parsed.developers : []
+    };
+  } catch {
+    return { meta: {}, repos: [], developers: [] };
+  }
+}
+
+function compactReposForPrompt(repos) {
+  return repos
+    .map((repo, index) => ({
+      index: index + 1,
+      full_name: repo.full_name,
+      url: repo.html_url,
+      sources: repo.source_names || [],
+      description: repo.description || "",
+      language: repo.language || "",
+      topics: repo.topics || [],
+      stars: repo.stargazers_count || 0,
+      forks: repo.forks_count || 0,
+      trend_score: repo.trend_score || 0,
+      readme_excerpt: truncate(repo.readme_excerpt || "", SUMMARY_README_CHARS)
+    }))
+    .map((repo) => JSON.stringify(repo))
+    .join("\n");
+}
+
+function localHeuristicScore(repo) {
+  const text = `${repo.full_name || ""} ${repo.description || ""} ${(repo.topics || []).join(" ")} ${repo.readme_excerpt || ""}`.toLowerCase();
+
+  const buckets = [
+    { label: "AI agent / workflow", weight: 250, terms: ["agent", "agents", "ai-agent", "mcp", "claude", "codex", "workflow", "skills", "memory", "rag"] },
+    { label: "Web / e-commerce / FAIV", weight: 190, terms: ["wordpress", "woocommerce", "ecommerce", "commerce", "devtools", "browser", "chrome", "frontend", "web", "ui"] },
+    { label: "Data / scraping / företagslistor", weight: 170, terms: ["scrap", "crawler", "browser automation", "headless", "etl", "data", "pipeline", "index"] },
+    { label: "Trading / finance / stock-signals", weight: 160, terms: ["trading", "finance", "financial", "market", "stock", "equity", "indicator", "research"] },
+    { label: "Content / Socials / marketing", weight: 110, terms: ["video", "content", "social", "marketing", "publish", "calendar"] },
+    { label: "Documents / wedding planner", weight: 90, terms: ["document", "pdf", "signature", "planner", "template"] }
+  ];
+
+  let score = 80;
+  const matched = [];
+
+  for (const bucket of buckets) {
+    const hits = bucket.terms.filter((term) => text.includes(term));
+    if (hits.length) {
+      score += Math.min(bucket.weight, hits.length * 42);
+      matched.push(bucket.label);
+    }
+  }
+
+  const stars = repo.stargazers_count || 0;
+  score += Math.min(90, Math.log10(stars + 1) * 18);
+
+  if ((repo.source_names || []).some((source) => source.includes("Trending"))) score += 35;
+  if (text.includes("exploit") || text.includes("vulnerability") || text.includes("vpn") || text.includes("censorship")) score -= 160;
+  if (text.includes("gaussian") || text.includes("3d")) score -= 90;
+
+  score = Math.max(20, Math.min(920, score));
+  return {
+    score: Number(score.toFixed(1)),
+    primaryMatch: matched[0] || "Svag/oklar match",
+    secondaryMatch: matched[1] || "-"
+  };
+}
+
+function makeFallbackRanking({ repos, meta, reason }) {
+  const ranked = repos
+    .map((repo) => {
+      const heuristic = localHeuristicScore(repo);
+      let action = "Bevaka";
+      if (heuristic.score >= 650) action = "Testa nu";
+      else if (heuristic.score >= 430) action = "Spara för senare";
+      else if (heuristic.score < 220) action = "Ignorera";
+
+      return {
+        repo,
+        ...heuristic,
+        action
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  const lines = [];
+  lines.push(`# AI Radar Totalranking – ${today}`);
+  lines.push("");
+  lines.push("## Sammanfattning");
+  lines.push("");
+  lines.push("Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en användbar textrespons. Den här rankingen är heuristisk och bör ses som en stabil backup, inte som den slutliga LLM-analysen.");
+  lines.push("");
+  lines.push(`- Radar datum: ${meta.date || today}`);
+  lines.push(`- Repos rankade: ${ranked.length}`);
+  if (reason) lines.push(`- Fallback-orsak: ${reason}`);
+  lines.push("");
+  lines.push("## Rankingmodell");
+  lines.push("");
+  lines.push("Fallbackmodellen söker efter matchningar mot Jonas mål: AI-agent workflows, FAIV/web/e-commerce, data/scraping, stock-signals/finance, content/social och dokument/planning. Den justerar även för stars, trending-källa och brus/risk.");
+  lines.push("");
+  lines.push("## Totalranking");
+  lines.push("");
+  lines.push("| Rank | JonasFitScore | Repo | Primär match | Sekundär match | Action | Motivering |");
+  lines.push("|---:|---:|---|---|---|---|---|");
+
+  ranked.forEach((item, index) => {
+    const repo = item.repo;
+    const reasonText = repo.description || `Topics: ${(repo.topics || []).join(", ") || "-"}`;
+    lines.push(`| ${index + 1} | ${item.score} | [${repo.full_name}](${repo.html_url}) | ${markdownEscape(item.primaryMatch)} | ${markdownEscape(item.secondaryMatch)} | ${item.action} | ${markdownEscape(reasonText)} |`);
+  });
+
+  lines.push("");
+  lines.push("## Toppkandidater att agera på");
+  lines.push("");
+  ranked.filter((item) => item.action === "Testa nu").slice(0, 5).forEach((item) => {
+    lines.push(`- [${item.repo.full_name}](${item.repo.html_url}) — ${item.score}: ${item.primaryMatch}`);
+  });
+
+  lines.push("");
+  lines.push("## Bra att spara för senare");
+  lines.push("");
+  ranked.filter((item) => item.action === "Spara för senare").slice(0, 10).forEach((item) => {
+    lines.push(`- [${item.repo.full_name}](${item.repo.html_url}) — ${item.score}: ${item.primaryMatch}`);
+  });
+
+  lines.push("");
+  lines.push("## Brus / ignorera");
+  lines.push("");
+  ranked.filter((item) => item.action === "Ignorera").forEach((item) => {
+    lines.push(`- [${item.repo.full_name}](${item.repo.html_url}) — ${item.score}`);
+  });
+
+  lines.push("");
+  lines.push("## Nya idékandidater");
+  lines.push("");
+  lines.push("Inga nya idékandidater skapades automatiskt i fallbackläget. Kör OpenRouter-ranking med fungerande modell för bättre idégenerering.");
+
+  return `${lines.join("\n")}\n`;
+}
+
+function buildPrompt({ radar, goals, projects, ideas, candidates, repos }) {
   const input = `
-# Latest radar
+# Goals
+${goals || "No GOALS.md found."}
+
+# Latest radar compact JSONL
+${compactReposForPrompt(repos)}
+
+# Latest radar markdown
 ${radar}
 
 # Projects memory bank
@@ -65,7 +218,7 @@ ${candidates || "No candidates found."}
 
 Uppgift: analysera dagens GitHub Radar och skapa en permanent totalranking som kan sparas i repo och läsas om ett år.
 
-Du ska ranka ALLA repon från dagens radar, inte bara topp 3. Använd Jonas projektbank, idébank och befintliga kandidater som bedömningsgrund.
+Du ska ranka ALLA repon från dagens radar, inte bara topp 3. Använd GOALS.md, Jonas projektbank, idébank och befintliga kandidater som bedömningsgrund.
 
 VIKTIGT:
 - Svara ENDAST med markdown.
@@ -141,46 +294,81 @@ async function callOpenRouter(prompt) {
       messages: [
         {
           role: "system",
-          content: "You are a precise analyst that writes durable markdown ranking reports. Return only markdown."
+          content: "You write durable markdown ranking reports. Return only the final markdown report. Do not restate the prompt. Do not include reasoning scratchpad."
         },
         {
           role: "user",
           content: prompt
         }
       ],
-      temperature: 0.2,
-      top_p: 0.9
+      temperature: 0.15,
+      top_p: 0.85,
+      max_tokens: 12000
     })
   });
 
+  const bodyText = await response.text();
+
   if (!response.ok) {
-    const body = await response.text().catch(() => "");
-    throw new Error(`OpenRouter error ${response.status}: ${body}`);
+    throw new Error(`OpenRouter error ${response.status}: ${bodyText}`);
   }
 
-  const data = await response.json();
-  const content = data?.choices?.[0]?.message?.content;
-  if (!content) throw new Error("OpenRouter returned no message content.");
-  return content.trim() + "\n";
+  let data;
+  try {
+    data = JSON.parse(bodyText);
+  } catch {
+    throw new Error(`OpenRouter returned non-JSON response: ${bodyText.slice(0, 500)}`);
+  }
+
+  const choice = data?.choices?.[0];
+  const content = choice?.message?.content || choice?.text || data?.output || "";
+
+  if (!String(content).trim()) {
+    const finishReason = choice?.finish_reason || "unknown";
+    const errorHint = data?.error?.message || "no error message";
+    throw new Error(`OpenRouter returned no message content. finish_reason=${finishReason}; hint=${errorHint}; raw=${JSON.stringify(data).slice(0, 1000)}`);
+  }
+
+  return String(content).trim() + "\n";
+}
+
+function isBadModelOutput(markdown) {
+  const text = String(markdown || "");
+  if (!text.includes("## Totalranking")) return true;
+  if (!text.includes("| Rank | JonasFitScore | Repo |")) return true;
+  if (text.includes("The question:") || text.includes("So we need to") || text.includes("Let's assign")) return true;
+  return false;
 }
 
 async function main() {
-  if (!OPENROUTER_API_KEY || !OPENROUTER_MODEL) {
-    console.log("Skipping ranking: OPENROUTER_API_KEY and OPENROUTER_MODEL must be set.");
-    return;
-  }
+  const rawJson = await readText("data/latest.json");
+  const { meta, repos } = parseRadarJson(rawJson);
 
   const radar = await readText("data/latest.md");
-  if (!radar.trim()) {
-    throw new Error("data/latest.md is missing or empty. Run npm run radar first.");
+  if (!radar.trim() && !repos.length) {
+    throw new Error("data/latest.md and data/latest.json are missing or empty. Run npm run radar first.");
   }
 
+  const goals = await readText("GOALS.md");
   const projects = await readMarkdownFiles("projects");
   const ideas = await readMarkdownFiles("ideas");
   const candidates = await readMarkdownFiles("chatgpt-genererade-ideer/candidates");
 
-  const prompt = buildPrompt({ radar, projects, ideas, candidates });
-  const ranking = await callOpenRouter(prompt);
+  let ranking;
+  if (!OPENROUTER_API_KEY || !OPENROUTER_MODEL) {
+    ranking = makeFallbackRanking({ repos, meta, reason: "OPENROUTER_API_KEY or OPENROUTER_MODEL missing" });
+  } else {
+    const prompt = buildPrompt({ radar, goals, projects, ideas, candidates, repos });
+    try {
+      ranking = await callOpenRouter(prompt);
+      if (isBadModelOutput(ranking)) {
+        ranking = makeFallbackRanking({ repos, meta, reason: "OpenRouter output failed validation" });
+      }
+    } catch (error) {
+      console.warn(error.message);
+      ranking = makeFallbackRanking({ repos, meta, reason: error.message });
+    }
+  }
 
   await mkdir(path.join(root, "rankings", "daily"), { recursive: true });
   await writeFile(path.join(root, "rankings", "daily", `${today}.md`), ranking, "utf8");
