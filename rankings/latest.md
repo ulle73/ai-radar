@@ -1,136 +1,77 @@
-# AI Radar Totalranking – 2026-05-11  
+# AI Radar Totalranking – 2026-05-12
 
-## Sammanfattning  
-Dagens radar levererar flera verktyg som kan accelerera Jonas nuvarande projekt (FAIV‑redesign, företagslistor, stock‑signals, AI‑Byggstart) samt ge starka strategiska edge‑möjligheter inom AI‑agent‑workflows och token‑optimering. De mest relevanta är **react‑doctor**, **9router**, **CloakBrowser**, **DeepSeek‑TUI**, **UI‑TARS‑desktop** och **Claude‑financial‑services**. Många av de högst rankade repos (OpenClaw, Everything‑Claude‑Code, etc.) är kraftfulla men överdimensionerade för snabb implementering och får därför lägre praktisk prioritet.
+## Sammanfattning
 
-## Rankingmodell  
-| Del | Maxpoäng | Bedömningsfokus |
-|-----|----------|-----------------|
-| Projektmatchning | 0‑300 | Direkt nytta för ett av Jonas aktiva projekt. |
-| Idébanksmatchning | 0‑200 | Passar en idé i Jonas idébank eller kan skapa en ny affärsidé. |
-| Praktisk implementering | 0‑200 | Hur snabbt (1‑14 dagar) kan repot testas/implementeras? |
-| Affärs‑/intäktsnytta | 0‑150 | Potentiell intäkt, kostnadsbesparing eller konverteringsökning. |
-| Timing/nyhetsvärde | 0‑100 | Trendigt, ny version eller stark community‑stöd. |
-| Strategisk edge | 0‑50 | Ger unik fördel i AI‑agent‑ eller automatiserings‑landskapet. |
-| **Total** | **0‑1000** | Summan av ovanstående. |
+Automatisk fallback-ranking skapades eftersom OpenRouter inte returnerade en validerad ranking. Fallbacken prioriterar riktig GitHub Trending före Extra Search API.
 
-## Totalranking  
+- Radar datum: 2026-05-12
+- Repos rankade: 30
+- Fallback-orsak: OpenRouter output failed validation: Contains reasoning/prompt leakage; Expected 30 ranking rows, got 0; Missing repo from ranking: automatic1111/stable-diffusion-webui; Missing repo from ranking: millionco/react-doctor; Missing repo from ranking: cloakhq/cloakbrowser; Missing repo from ranking: datawhalechina/easy-vibe; Missing repo from ranking: bytedance/ui-tars-desktop; Missing repo from ranking: decolua/9router
+
+## Rankingmodell
+
+Fallbackmodellen premierar TRUE_TRENDING_DAILY och TRUE_TRENDING_WEEKLY som primär signal. Extra Search API är sekundärt och får inte dominera toppositionerna om det inte är extremt relevant.
+
+## Totalranking
 
 | Rank | JonasFitScore | Repo | Primär match | Sekundär match | Action | Motivering |
 |---:|---:|---|---|---|---|---|
-| 1 | **945.3** | [millionco/react‑doctor](https://github.com/millionco/react-doctor) | FAIV / WooCommerce UI‑kvalitet | AI‑agent‑kodgranskning | Testa nu | Ger automatisk React‑kodgranskning + kan integreras i Jonas CI för snabb UI‑förbättring. Använd **DESIGN.md** från `awesome‑design‑md` innan UI‑ändringar. |
-| 2 | **928.7** | [decolua/9router](https://github.com/decolua/9router) | AI‑agent‑workflow, token‑optimering | Kod‑automation | Testa nu | Sänker token‑kostnad 20‑40 % och möjliggör smidig multi‑provider‑routing för Claude‑Code, Cursor osv. Direkt nytta för alla kod‑agent‑projekt. |
-| 3 | **912.4** | [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | Web‑scraping / lead‑gen för företagslistor.se | Anti‑detect | Testa nu | Ger pålitlig stealth‑browser för data‑extraktion, kritisk för nyabolaget‑pipeline. |
-| 4 | **898.1** | [Hmbown/DeepSeek‑TUI](https://github.com/Hmbown/DeepSeek-TUI) | AI‑coding‑assistant för intern automation | LLM‑gateway | Testa nu | Terminal‑agent som kan köras lokalt för snabb prototyp av kod‑automation i Dormy AI. |
-| 5 | **876.5** | [bytedance/UI‑TARS‑desktop](https://github.com/bytedance/UI-TARS-desktop) | Multimodal AI‑agent‑stack (FAIV‑automation) | GUI‑agent | Testa nu | Ger GUI‑agent‑ramverk för att bygga visuella verktyg (t.ex. partner‑flöde). |
-| 6 | **862.0** | [anthropics/financial‑services](https://github.com/anthropics/financial-services) | Stock‑signals, finansiell research | Claude‑agent‑templates | Spara för senare | Kraftfull färdig‑agent‑mall för finans, men kräver Claude‑Cowork‑licens – kan testas i sandbox först. |
-| 7 | **845.2** | [AUTOMATIC1111/stable‑diffusion‑webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | Content‑generation för AI‑Byggstart & Socials v2 | Bild‑AI | Spara för senare | Kan producera marknadsförings‑/social‑bilder snabbt, men kräver GPU‑setup. |
-| 8 | **831.9** | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | Stock‑signals (research‑only) | Multi‑agent‑LLM | Bevaka | Bra research‑inspiration men för komplex för produktions‑use‑case nu. |
-| 9 | **818.3** | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Claude‑agent‑orchestration (strategisk edge) | RAG‑integration | Bevaka | Mycket kraftfull men hög inlärningskurva; kan bli framtida kärna för AI‑automation. |
-| 10 | **801.7** | [virattt/dexter](https://github.com/virattt/dexter) | Finansiell research‑agent (stock‑signals) | Själv‑reflektion | Bevaka | Liknar Dexter men mindre community‑stöd. |
-| 11 | **785.4** | [datawhalechina/easy‑vibe](https://github.com/datawhalechina/easy-vibe) | AI‑Byggstart / utbildning | Low‑code‑kurs | Spara för senare | Interaktiv kurs för att snabbt lära upp junior‑devs i Next.js‑stack. |
-| 12 | **762.0** | [yikart/AiToEarn](https://github.com/yikart/AiToEarn) | Lead‑gen / content‑monetisation | OpenClaw‑integration | Bevaka | Kan bli lead‑magnet för OPC‑modellen, men kräver anpassning till svenska marknaden. |
-| 13 | **748.5** | [NousResearch/hermes‑agent](https://github.com/NousResearch/hermes-agent) | Strategisk edge – själv‑förbättrande agent | Multi‑model‑support | Bevaka | Mycket lovande för framtida agent‑infrastruktur, men ännu experimentell. |
-| 14 | **735.2** | [obscura](https://github.com/h4ckf0r0day/obscura) | Headless‑browser för scraping (företagslistor) | Rust‑prestanda | Bevaka | Lättviktigt alternativ till CloakBrowser, men mindre community. |
-| 15 | **720.0** | [openclaw/openclaw](https://github.com/openclaw/openclaw) | Personlig AI‑assistant (strategisk edge) | MCP‑integration | Ignorera | Överdimensionerat för nuvarande behov; hög komplexitet. |
-| 16 | **702.3** | [affaan‑m/everything‑claude‑code](https://github.com/affaan-m/everything-claude-code) | Claude‑Code‑optimering (agent‑harness) | Token‑saver | Ignorera | Kraftfull men kräver omfattande konfiguration; bättre att använda 9router. |
-| 17 | **688.9** | [anomalyco/opencode](https://github.com/anomalyco/opencode) | Open‑source coding‑agent | UI‑integration | Ignorera | Bra men liknar Hermes/Everything‑Claude‑Code utan tydlig fördel för Jonas. |
-| 18 | **672.4** | [strukto‑ai/mirage](https://github.com/strukto-ai/mirage) | Virtual‑FS för AI‑agents | Sandbox‑tool | Ignorera | Intressant för avancerade agent‑scenarier men låg omedelbar nytta. |
-| 19 | **658.0** | [vercel‑labs/zero‑native](https://github.com/vercel-labs/zero-native) | Desktop‑app‑shell (intern tooling) | Zig‑stack | Ignorera | Skulle kräva ny språk‑stack; inte i Jonas nuvarande tech‑stack. |
-| 20 | **642.5** | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | Personlig AI‑superintelligens | Privacy‑focus | Ignorera | För forsknings‑/experimentell användning, ingen direkt affärsnytta. |
-| 21 | **630.0** | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | 3D‑visualisering för Socials v2 | WebGL‑tool | Ignorera | Skön demo‑tech, men ingen koppling till nuvarande projekt. |
-| 22 | **615.2** | [docusealco/docuseal](https://github.com/docusealco/docuseal) | E‑signering för FAIV‑partner‑avtal | Ruby‑stack | Ignorera | Bra alternativ till DocuSign men kräver Ruby‑kunskap som saknas. |
-| 23 | **600.8** | [LearningCircuit/local‑deep‑research](https://github.com/LearningCircuit/local-deep-research) | RAG‑search för research‑automation | Lokal LLM‑pipeline | Ignorera | Kraftfull men tungt för snabb prototyp. |
-| 24 | **585.0** | [Lordog/dive‑into‑llms](https://github.com/Lordog/dive-into-llms) | LLM‑utbildning | Jupyter‑notebook | Ignorera | Utbildningsmaterial, ingen kod‑leverans. |
-| 25 | **570.4** | [antirez/ds4](https://github.com/antirez/ds4) | DeepSeek‑4 inference (GPU‑Metal) | C‑engine | Ignorera | Mycket specifik för Apple‑silicon; inte relevant för server‑backend. |
-| 26 | **555.0** | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | Linux‑kernel‑exploit (security) | C‑exploit | Ignorera | Säkerhetsrisk, ingen affärsnytta. |
-| 27 | **540.2** | [huangserva/3DCellForge](https://github.com/huangserva/3DCellForge) | 3D‑visualisering (biologi) | React‑Three‑Fiber | Ignorera | Fascinerande men ingen koppling till Jonas mål. |
-| 28 | **525.7** | [bwya77/vscode‑dark‑islands](https://github.com/bwya77/vscode-dark-islands) | VSCode‑tema | UI‑design | Ignorera | Endast estetisk förbättring. |
-| 29 | **510.3** | [anthropics/skills](https://github.com/anthropics/skills) | Claude‑skills‑bibliotek | Agent‑templates | Ignorera | Bra resurspool men redan täckt av 9router/Everything‑Claude‑Code. |
-| 30 | **495.0** | [obscura](https://github.com/h4ckf0r0day/obscura) | Headless‑browser (alternativ) | Rust‑engine | Ignorera | Redundant med CloakBrowser, lägre community‑stöd. |
+| 1 | 940 | [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_DAILY — 💻 vibe coding 2026 \| Your first modern Coding course for beginners to master step by step. |
+| 2 | 940 | [anthropics/financial-services](https://github.com/anthropics/financial-services) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_WEEKLY — Topics: - |
+| 3 | 940 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_WEEKLY — 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration |
+| 4 | 940 | [LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_WEEKLY — ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted. |
+| 5 | 915.4 | [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_DAILY — Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed. |
+| 6 | 912.8 | [millionco/react-doctor](https://github.com/millionco/react-doctor) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_DAILY — Your agent writes bad React. This catches it |
+| 7 | 879.7 | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_WEEKLY — Coding agent for DeepSeek models that runs in your terminal |
+| 8 | 821.1 | [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_DAILY — Your Personal AI super intelligence. Private, Simple and extremely powerful. |
+| 9 | 811.3 | [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_DAILY — The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra |
+| 10 | 760 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | EXTRA_SEARCH_API — The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| 11 | 754.2 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | TRUE_TRENDING_WEEKLY — TradingAgents: Multi-Agents LLM Financial Trading Framework |
+| 12 | 722.1 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | AI agent / workflow | Web / e-commerce / FAIV | Testa nu | EXTRA_SEARCH_API — A Unified Virtual Filesystem For AI Agents |
+| 13 | 715 | [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — The headless browser for AI agents and web scraping |
+| 14 | 704 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 |
+| 15 | 704 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — The agent that grows with you |
+| 16 | 703 | [decolua/9router](https://github.com/decolua/9router) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | TRUE_TRENDING_DAILY — Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits. |
+| 17 | 697 | [docusealco/docuseal](https://github.com/docusealco/docuseal) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | TRUE_TRENDING_WEEKLY — Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ |
+| 18 | 678 | [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | TRUE_TRENDING_DAILY — Stable Diffusion web UI |
+| 19 | 677.7 | [virattt/dexter](https://github.com/virattt/dexter) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | TRUE_TRENDING_WEEKLY — An autonomous agent for deep financial research |
+| 20 | 640 | [anthropics/skills](https://github.com/anthropics/skills) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — Public repository for Agent Skills |
+| 21 | 622.6 | [yikart/AiToEarn](https://github.com/yikart/AiToEarn) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | TRUE_TRENDING_DAILY — Let's use AI to Earn! |
+| 22 | 620 | [obra/superpowers](https://github.com/obra/superpowers) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — An agentic skills framework & software development methodology that works. |
+| 23 | 564.3 | [antirez/ds4](https://github.com/antirez/ds4) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — DeepSeek 4 Flash local inference engine for Metal |
+| 24 | 538 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | AI agent / workflow | Web / e-commerce / FAIV | Spara för senare | EXTRA_SEARCH_API — The open source coding agent. |
+| 25 | 462 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | AI agent / workflow | Web / e-commerce / FAIV | Bevaka | TRUE_TRENDING_DAILY — 《动手学大模型Dive into LLMs》系列编程实践教程 |
+| 26 | 454.1 | [vercel-labs/zero-native](https://github.com/vercel-labs/zero-native) | AI agent / workflow | Web / e-commerce / FAIV | Bevaka | EXTRA_SEARCH_API — Build desktop + mobile apps with Zig and web UI |
+| 27 | 424.2 | [playcanvas/supersplat](https://github.com/playcanvas/supersplat) | Web / e-commerce / FAIV | Content / Socials / marketing | Bevaka | TRUE_TRENDING_DAILY — 3D Gaussian Splat Editor |
+| 28 | 385 | [bwya77/vscode-dark-islands](https://github.com/bwya77/vscode-dark-islands) | Web / e-commerce / FAIV | Trading / finance / stock-signals | Bevaka | TRUE_TRENDING_WEEKLY — VSCode theme based off the easemate IDE and Jetbrains islands theme |
+| 29 | 380.5 | [huangserva/3DCellForge](https://github.com/huangserva/3DCellForge) | AI agent / workflow | Web / e-commerce / FAIV | Bevaka | EXTRA_SEARCH_API — AI-powered interactive 3D cell generation and exploration studio. |
+| 30 | 190.7 | [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) | AI agent / workflow | Web / e-commerce / FAIV | Ignorera | EXTRA_SEARCH_API — Topics: - |
 
-> **Obs!** Repos som primärt handlar om UI‑design (t.ex. `react‑doctor`) bör följa **DESIGN.md** från <https://github.com/voltagent/awesome-design-md> innan någon UI‑ändring görs.
+## Toppkandidater att agera på
 
-## Toppkandidater att agera på  
-| Repo | Åtgärd | Kort plan |
-|------|--------|-----------|
-| react‑doctor | Testa nu | Kör `npx react-doctor@latest .` i FAIV‑repo, integrera i CI, följ DESIGN.md för UI‑justeringar. |
-| 9router | Testa nu | Installera globalt, konfigurera fallback‑policy, testa med Claude‑Code i befintliga kod‑agent‑scripts. |
-| CloakBrowser | Testa nu | Bygg Docker‑image, kör mot företagslistor.se‑scraper, jämför med befintlig Playwright‑setup. |
-| DeepSeek‑TUI | Testa nu | Installera via npm eller cargo, testa kod‑generering för Dormy AI‑pipeline. |
-| UI‑TARS‑desktop | Testa nu | Prototypa ett GUI‑agent‑flöde för partner‑onboarding i nyabolaget.se. |
+- [datawhalechina/easy-vibe](https://github.com/datawhalechina/easy-vibe) — 940: AI agent / workflow
+- [anthropics/financial-services](https://github.com/anthropics/financial-services) — 940: AI agent / workflow
+- [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — 940: AI agent / workflow
+- [LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research) — 940: AI agent / workflow
+- [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) — 915.4: AI agent / workflow
 
-## Bra att spara för senare  
-| Repo | Motivering |
-|------|------------|
-| anthropics/financial‑services | Färdiga Claude‑agent‑templates för finans, kan återanvändas i stock‑signals. |
-| TauricResearch/TradingAgents | Lärdomar kring multi‑agent‑trading, bra för research‑inspiration. |
-| ruflo | Orkestrering av Claude‑agent‑swarm, framtida AI‑automation. |
-| dexter | Autonom finansiell research‑agent, kan testas i sandbox. |
-| yikart/AiToEarn | AI‑driven content‑monetisation, potentiell lead‑magnet. |
-| NousResearch/hermes‑agent | Själv‑förbättrande agent‑loop, långsiktig edge. |
-| obscura | Alternativ headless‑browser med låg minnesfot. |
-| openclaw | Personlig AI‑assistant, men för närvarande för stor. |
-| everything‑claude‑code | Token‑optimering, men 9router täcker redan. |
-| opencode | Öppet kod‑agent‑ramverk, kan jämföras med Hermes. |
-| mirage | Virtual‑FS för komplexa agent‑pipeline‑test. |
-| zero‑native | Desktop‑app‑shell, men kräver Zig‑kunskap. |
-| tinyhuman/openhuman | Privat AI‑superintelligens, låg prioritet. |
-| supersplat | 3D‑visualisering, ingen affärsnytta nu. |
-| docuseal | E‑signering, Ruby‑stack‑krav. |
-| local‑deep‑research | RAG‑pipeline, tung för snabb prototyp. |
-| dive‑into‑llms | LLM‑utbildning, mer kunskap än kod. |
-| ds4 | DeepSeek‑Metal‑engine, specialiserad. |
-| dirtyfrag | Linux‑kernel‑exploit, irrelevant. |
-| 3DCellForge | 3D‑cell‑visualisering, ingen koppling. |
-| vscode‑dark‑islands | Tema, estetisk förbättring. |
-| skills | Claude‑skills‑samling, redan täckt. |
+## Bra att spara för senare
 
-## Brus / ignorera  
-- **openclaw**, **everything‑claude‑code**, **opencode**, **mirage**, **zero‑native**, **tinyhuman**, **supersplat**, **docuseal**, **local‑deep‑research**, **dive‑into‑llms**, **ds4**, **dirtyfrag**, **3DCellForge**, **vscode‑dark‑islands**, **skills**, **obscura** (alternativ till CloakBrowser).  
-Dessa har låg praktisk nytta för Jonas nuvarande sprintar eller kräver betydande resurser för minimal affärsnytta.
+- [h4ckf0r0day/obscura](https://github.com/h4ckf0r0day/obscura) — 715: AI agent / workflow
+- [openclaw/openclaw](https://github.com/openclaw/openclaw) — 704: AI agent / workflow
+- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — 704: AI agent / workflow
+- [decolua/9router](https://github.com/decolua/9router) — 703: AI agent / workflow
+- [docusealco/docuseal](https://github.com/docusealco/docuseal) — 697: AI agent / workflow
+- [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) — 678: AI agent / workflow
+- [virattt/dexter](https://github.com/virattt/dexter) — 677.7: AI agent / workflow
+- [anthropics/skills](https://github.com/anthropics/skills) — 640: AI agent / workflow
+- [yikart/AiToEarn](https://github.com/yikart/AiToEarn) — 622.6: AI agent / workflow
+- [obra/superpowers](https://github.com/obra/superpowers) — 620: AI agent / workflow
 
-## Nya idékandidater  
-> Placera dessa markdown‑filer i `/chatgpt-genererade-ideer/candidates/`.
+## Brus / ignorera
 
-1. **AI‑driven UI‑audit‑tjänst**  
-   ```markdown
-   # AI‑UI‑Audit‑tjänst
-   - **Beskrivning:** En SaaS‑tjänst som använder `react-doctor` + Claude‑Code för att automatiskt granska och förbättra UI‑kvalitet i kunders Next.js‑projekt.  
-   - **Målgrupp:** Små‑ och medelstora e‑handelsföretag (FAIV‑liknande).  
-   - **MVP‑steg:**  
-     1. Bygg en webhook‑integration som tar emot en Git‑repo‑URL.  
-     2. Kör `react-doctor` i en CI‑pipeline, samla score och förslag.  
-     3. Generera en PDF‑rapport + kod‑snippets för förbättringar.  
-   - **Intäkt:** Prenumerationsmodell (från $49/m).  
-   - **Tid till test:** 7 dagar (CI‑script + webhook).  
-   ```
+- [V4bel/dirtyfrag](https://github.com/V4bel/dirtyfrag) — 190.7
 
-2. **Token‑Saver‑gateway för AI‑coding**  
-   ```markdown
-   # Token‑Saver‑gateway
-   - **Beskrivning:** En mikro‑service baserad på `9router` som automatiskt komprimerar och cachar verktygs‑output (git‑diff, kod‑snippets) innan de skickas till LLM‑API:er.  
-   - **Målgrupp:** Interna AI‑coding‑agent‑flöden (Dormy AI, Stock‑signals).  
-   - **MVP‑steg:**  
-     1. Deploy en Docker‑container med 9router konfigurerad för Claude‑Code & OpenAI.  
-     2. Lägg till middleware i befintliga agent‑scripts för att anropa gateway.  
-   - **Intäkt:** Kostnadsbesparing på token‑förbrukning (uppskattad 30 % minskning).  
-   - **Tid till test:** 5 dagar (Docker‑setup + enkel integration).  
-   ```
+## Nya idékandidater
 
-3. **Stealth‑scraper för företagslistor**  
-   ```markdown
-   # Stealth‑scraper för företagslistor
-   - **Beskrivning:** En kombination av `CloakBrowser` + anpassad Scrapy‑pipeline för att extrahera företagsdata utan att trigga bot‑detektering.  
-   - **Målgrupp:** Nyabolaget.se data‑pipeline, lead‑generation.  
-   - **MVP‑steg:**  
-     1. Container‑baserad CloakBrowser‑instans med Playwright‑API.  
-     2. Skript som navigerar till mål‑webbplatser, samlar namn, adress, kontakt.  
-     3. Export till CSV/JSON för import i Supabase.  
-   - **Intäkt:** Snabbare datainsamling → fler kvalificerade leads → högre konvertering.  
-   - **Tid till test:** 10 dagar (Docker + Playwright‑script).  
-   ```
-
----  
-
-*Denna ranking är avsedd att sparas i repo och läsas om ett år för att utvärdera hur väl de föreslagna repos har integrerats i Jonas ekosystem.*
+Inga nya idékandidater skapades automatiskt i fallbackläget. Kör OpenRouter-ranking med fungerande modell för bättre idégenerering.
