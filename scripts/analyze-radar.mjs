@@ -292,9 +292,12 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   });
   const catalog = upsertCatalog(previousCatalog, dailyAssessments, date);
   applyNotificationState(catalog, notificationResult.newNotifications, date);
-  const eligibleBeforeCap = eligibleRankingEntries(catalog, date, feedback);
+  const dailyCatalog = {
+    repos: Object.fromEntries(dailyAssessments.map((assessment) => [String(assessment.repo).toLowerCase(), assessment]))
+  };
+  const eligibleTodayBeforeCap = eligibleRankingEntries(dailyCatalog, date, feedback);
   const ranking = buildAllTimeRanking(catalog, date, feedback);
-  const quality = buildQualityMetrics(dailyAssessments, eligibleBeforeCap, ranking);
+  const quality = buildQualityMetrics(dailyAssessments, eligibleTodayBeforeCap, ranking);
   const status = {
     date,
     generated_at: now.toISOString(),
