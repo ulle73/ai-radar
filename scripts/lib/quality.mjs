@@ -177,7 +177,7 @@ export function buildQualityMetrics(assessments, eligibleBeforeCap, finalRanking
 
   const warningReasons = [];
   if (recommendationRate > 0.2) warningReasons.push('recommendation_rate_above_20_percent');
-  if (categoryConcentration > 0.5) warningReasons.push('category_concentration_above_50_percent');
+  if (eligible.length >= 4 && categoryConcentration > 0.5) warningReasons.push('category_concentration_above_50_percent');
   if (rankedAverageConfidence != null && rankedAverageConfidence < 0.78) warningReasons.push('ranked_confidence_below_0_78');
 
   return {
