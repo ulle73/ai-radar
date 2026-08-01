@@ -1,11 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 import {
   deliverPendingNotifications,
   formatTelegramMessage,
   notificationId,
   sendSmokeTest
 } from '../scripts/lib/telegram.mjs';
+import { runTelegramDelivery } from '../scripts/send-telegram.mjs';
 
 function item(overrides = {}) {
   return {
@@ -38,6 +42,11 @@ function telegramResponse({ ok = true, status = 200, messageId = 123, descriptio
         : { ok: false, description });
     }
   };
+}
+
+async function writeJson(filePath, value) {
+  await mkdir(path.dirname(filePath), { recursive: true });
+  await writeFile(filePath, JSON.stringify(value, null, 2));
 }
 
 test('notification IDs are deterministic and distinguish score-change events', () => {
@@ -167,4 +176,34 @@ test('smoke test sends a standalone connection message', async () => {
   assert.match(body.text, /AI Radar Telegram är ansluten/);
   assert.equal(result.status, 'healthy');
   assert.equal(result.telegram_message_id, 999);
+});
+
+test('runner persists successful and failed delivery state for retry', async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'ai-radar-telegram-'));
+  const first = item({ repo: 'acme/first', url: 'https://github.com/acme/first' });
+  const second = item({ repo: 'acme/second', url: 'https://github.com/acme/second' });
+  await writeJson(path.join(root, 'notifications/pending.json'), [first, second]);
+  await writeJson(path.join(root, 'notifications/sent.json'), []);
+  let calls = 0;
+
+  const result = await runTelegramDelivery({
+    root,
+    env: { TELEGRAM_BOT_TOKEN: 'secret-token', TELEGRAM_CHAT_ID: '1437275871' },
+    now: new Date('2026-08-02T00:00:00Z'),
+    fetchImpl: async () => {
+      calls += 1;
+      return calls === 1
+        ? telegramResponse({ messageId: 101 })
+        : telegramResponse({ ok: false, status: 500, description: 'Temporary failure' });
+    }
+  });
+
+  const pending = JSON.parse(await readFile(path.join(root, 'notifications/pending.json'), 'utf8'));
+  const sent = JSON.parse(await readFile(path.join(root, 'notifications/sent.json'), 'utf8'));
+  const status = JSON.parse(await readFile(path.join(root, 'status/telegram.json'), 'utf8'));
+  assert.equal(result.status.status, 'degraded');
+  assert.deepEqual(pending.map((entry) => entry.repo), ['acme/second']);
+  assert.equal(sent[0].repo, 'acme/first');
+  assert.equal(status.delivery.failed, 1);
+  assert.doesNotMatch(JSON.stringify(status), /secret-token|1437275871/);
 });
