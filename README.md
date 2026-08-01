@@ -5,7 +5,7 @@ AI Radar är Jonas personliga GitHub-bevakare. Systemet söker varje dag efter n
 Det bygger tre separata lager:
 
 1. **Permanent kvalitetsranking** – endast exakta, evidensbaserade och starka projektmatchningar.
-2. **Notifieringskö** – endast nya exceptionella fynd som senare kan skickas till Telegram.
+2. **Telegram-notiser** – endast nya exceptionella fynd som klarar den hårdaste notifieringsgränsen.
 3. **Katalog och dagshistorik** – alla analyserade repos, även sådant som arkiverats.
 
 En tom eller mycket kort ranking är ett korrekt resultat. Systemet ska hellre missa ett halvbra repo än att rekommendera generiska AI-verktyg.
@@ -20,8 +20,9 @@ GitHub Actions kör varje natt:
 4. Analyserar kandidater via OpenRouter i små JSON-batchar.
 5. Validerar modellsvaret och kräver konkret evidens.
 6. Tillämpar deterministiska kvalitetsgrindar, freshness och diversifiering.
-7. Uppdaterar historik, kvalitetsranking, notifieringskö och statusfiler.
-8. Commitar resultatet till repot.
+7. Uppdaterar historik, kvalitetsranking och notifieringskö.
+8. Skickar pending-kön till Telegram.
+9. Commitar radar-, leverans- och statusfiler till repot.
 
 Modellen får beskriva och bedöma kandidaterna. Node-koden bestämmer alltid om ett repo faktiskt får rankas eller notifieras.
 
@@ -68,7 +69,7 @@ Generiska agent-, Codex-, MCP- eller AI-repos kommer därför inte in bara för 
 
 ## Notifieringsregler
 
-Ett repo läggs i den framtida Telegram-kön endast när:
+Ett repo får skickas till Telegram endast när:
 
 - nivån är **Exceptionell**,
 - score är minst 88,
@@ -76,9 +77,29 @@ Ett repo läggs i den framtida Telegram-kön endast när:
 - project fit är minst 25/30,
 - concrete value är minst 15/20,
 - repot är nytt eller har förbättrats minst 10 poäng sedan tidigare notifiering,
-- samma repo inte redan ligger i pending-kön.
+- samma repo inte redan ligger i pending-kön eller leveranshistoriken.
 
 Notisen innehåller projekt, konkret användning, unik skillnad, evidens och ett tydligt nästa test.
+
+## Telegram-leverans
+
+Telegram körs efter en lyckad analys och använder repository secrets:
+
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+
+Leveransen är retry-säker:
+
+- `notifications/pending.json` innehåller oskickade notiser.
+- Endast lyckade notiser tas bort ur pending.
+- Lyckade leveranser sparas i `notifications/sent.json` med ett deterministiskt notification-ID och Telegram message-ID.
+- Misslyckade notiser ligger kvar och försöks igen nästa körning.
+- Ett redan skickat notification-ID skickas aldrig en gång till.
+- Token och chat-ID skrivs aldrig till statusfiler eller loggar av applikationskoden.
+
+Om Telegram delvis misslyckas blir workflowen röd, men commit-steget sparar ändå pending-kön och `status/telegram.json`. Därmed tappas ingen notis.
+
+En manuell workflow-körning kan markera `telegram_smoke_test` för att skicka ett separat anslutningstest utan att skapa en falsk repo-notis.
 
 ## Diversifiering
 
@@ -141,13 +162,15 @@ rankings/
   daily/YYYY-MM-DD.json|md        # Alla dagens bedömningar och arkivorsaker
 
 notifications/
-  pending.json                    # Kö för framtida Telegram-transport
+  pending.json                    # Oskickade exceptionella notiser
+  sent.json                       # Leveranshistorik och deduplicering
   latest.md                       # Dagens nya exceptionella fynd
   daily/YYYY-MM-DD.md             # Notishistorik
 
 status/
-  latest.json                     # Teknisk status och sammanfattning
+  latest.json                     # Teknisk radarstatus och sammanfattning
   quality.json                    # Kvalitetsdrift och gate-statistik
+  telegram.json                   # Senaste Telegram-leveransstatus
 ```
 
 ## Secrets och variables
@@ -157,13 +180,10 @@ Kärnan behöver:
 - `GITHUB_TOKEN` – tillhandahålls automatiskt av GitHub Actions.
 - `OPENROUTER_API_KEY` – GitHub Actions secret.
 - `OPENROUTER_MODEL` – GitHub repository variable.
+- `TELEGRAM_BOT_TOKEN` – GitHub Actions secret.
+- `TELEGRAM_CHAT_ID` – GitHub Actions secret.
 
-För Telegram senare behövs även:
-
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
-
-Ingen ny secret krävs för kvalitetslagret.
+Ingen `.env` behövs för GitHub Actions. En lokal `.env` får endast användas lokalt och måste vara git-ignorerad.
 
 ## Status
 
@@ -171,6 +191,10 @@ Ingen ny secret krävs för kvalitetslagret.
 - Teknisk `degraded` – minst en kandidat använde konservativ fallback.
 - `quality_status: healthy` – rekommendationsmönstret ligger inom precisionströsklarna.
 - `quality_status: warning` – systemet verkar bli för generöst, koncentrerat eller osäkert.
+- Telegram `healthy` – samtliga pending-notiser skickades.
+- Telegram `degraded` – minst en notis skickades och minst en ligger kvar för retry.
+- Telegram `failed` – konfiguration eller samtliga leveranser misslyckades.
+- Telegram `idle` – ingen pending-notis och inget smoke test fanns.
 
 Fallbackanalyser sparas i historiken men kan aldrig rankas eller notifieras.
 
@@ -180,6 +204,7 @@ Fallbackanalyser sparas i historiken men kan aldrig rankas eller notifieras.
 npm test
 npm run radar
 OPENROUTER_API_KEY=... OPENROUTER_MODEL=... npm run analyze
+TELEGRAM_BOT_TOKEN=... TELEGRAM_CHAT_ID=... npm run notify
 ```
 
 Node.js 20 eller senare krävs.
