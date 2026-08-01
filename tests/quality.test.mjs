@@ -101,6 +101,15 @@ test('quality metrics warn when recommendation rate exceeds twenty percent', () 
   assert.equal(metrics.recommendation_rate, 0.3);
 });
 
+test('a single strong match does not trigger a false category concentration warning', () => {
+  const assessments = Array.from({ length: 10 }, (_, index) => index === 0
+    ? entry('acme/only-strong', { score: 90, confidence: 0.9, category: 'product-video' })
+    : entry(`acme/archive-${index}`, { score: 40, confidence: 0.4, match_type: 'generic', category: 'other' }));
+  const metrics = buildQualityMetrics(assessments, [assessments[0]], [assessments[0]]);
+  assert.equal(metrics.quality_status, 'healthy');
+  assert.ok(!metrics.warning_reasons.includes('category_concentration_above_50_percent'));
+});
+
 test('quality metrics report gate exclusions and average confidence', () => {
   const assessments = [
     entry('acme/exact'),
