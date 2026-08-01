@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - chore/manual-radar-run
+      - main
     paths:
       - .github/manual-radar-trigger
 
