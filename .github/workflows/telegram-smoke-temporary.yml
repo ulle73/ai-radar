@@ -8,7 +8,7 @@ on:
       - .github/telegram-smoke-trigger
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   smoke:
@@ -24,8 +24,22 @@ jobs:
           node-version: 20
 
       - name: Send Telegram smoke test
+        id: smoke
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_SMOKE_TEST: true
         run: npm run notify
+
+      - name: Persist smoke status
+        if: ${{ always() && !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status/telegram.json notifications/pending.json notifications/sent.json
+          if git diff --cached --quiet; then
+            echo "No Telegram smoke status changes to commit."
+          else
+            git commit -m "chore: record Telegram smoke test"
+            git push
+          fi
