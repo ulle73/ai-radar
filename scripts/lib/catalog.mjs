@@ -16,10 +16,10 @@ export function upsertCatalog(existingCatalog, assessments, date) {
       ...previous,
       ...assessment,
       repo: assessment.repo,
-      first_seen: previous.first_seen || date,
+      first_seen: previous.first_seen || assessment.first_seen || date,
       last_seen: date,
       first_recommended: previous.first_recommended || (assessment.score >= 55 ? date : null),
-      last_analyzed: date,
+      last_analyzed: assessment.last_analyzed || date,
       notified_at: previous.notified_at || null,
       notified_score: previous.notified_score ?? null
     };
