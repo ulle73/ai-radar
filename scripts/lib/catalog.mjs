@@ -1,3 +1,5 @@
+import { buildStrictRanking, notificationEligible } from './quality.mjs';
+
 function keyOf(repo) {
   return String(repo || '').toLowerCase();
 }
@@ -5,8 +7,8 @@ function keyOf(repo) {
 export function upsertCatalog(existingCatalog, assessments, date) {
   const catalog = existingCatalog && typeof existingCatalog === 'object'
     ? structuredClone(existingCatalog)
-    : { version: 1, updated_at: date, repos: {} };
-  catalog.version = 1;
+    : { version: 2, updated_at: date, repos: {} };
+  catalog.version = 2;
   catalog.updated_at = date;
   catalog.repos ||= {};
   for (const assessment of assessments) {
@@ -46,9 +48,8 @@ export function capRankingActions(entries, limits = { testaNu: 5, spara: 10 }) {
   });
 }
 
-export function buildAllTimeRanking(catalog) {
-  const entries = Object.values(catalog?.repos || {}).filter((entry) => Number(entry.score) >= 55 && entry.status !== 'rejected');
-  return capRankingActions(entries);
+export function buildAllTimeRanking(catalog, date = new Date().toISOString().slice(0, 10), feedback = {}) {
+  return buildStrictRanking(catalog, date, feedback);
 }
 
 function makeNotification(assessment, date, kind) {
@@ -57,30 +58,44 @@ function makeNotification(assessment, date, kind) {
     repo: assessment.repo,
     url: assessment.url,
     score: assessment.score,
-    action: assessment.action,
+    confidence: assessment.confidence,
+    action: 'Testa nu',
+    quality_tier: 'exceptional',
     summary_sv: assessment.summary_sv,
     project: primary?.project || 'Okänd match',
     fit_reason: primary?.reason || '',
+    concrete_use_case: assessment.concrete_use_case,
+    next_step: assessment.next_step,
+    differentiator: assessment.differentiator,
+    evidence: assessment.evidence || [],
     created_at: date,
     kind
   };
 }
 
-export function buildNotifications({ assessments, previousCatalog, historicalSeen, existingPending = [], date, minScore = 82 }) {
+export function buildNotifications({ assessments, previousCatalog, historicalSeen, existingPending = [], date }) {
   const pendingByRepo = new Map(existingPending.map((item) => [keyOf(item.repo), item]));
   const newNotifications = [];
   for (const assessment of assessments) {
     const key = keyOf(assessment.repo);
     const previous = previousCatalog?.repos?.[key];
-    const hasProjectMatch = Array.isArray(assessment.project_matches) && assessment.project_matches.length > 0;
-    const strongAction = assessment.action === 'Testa nu' || assessment.action === 'Spara för senare';
     const newToHistory = !historicalSeen.has(key);
     const improvedEnough = previous?.notified_score != null && assessment.score >= previous.notified_score + 10;
-    const eligible = assessment.analysis_mode === 'model' && assessment.score >= minScore && strongAction && hasProjectMatch && (newToHistory || improvedEnough);
+    const eligible = notificationEligible(assessment) && (newToHistory || improvedEnough);
     if (!eligible || pendingByRepo.has(key)) continue;
     const notification = makeNotification(assessment, date, improvedEnough ? 'score_increase' : 'new_repo');
     pendingByRepo.set(key, notification);
     newNotifications.push(notification);
   }
   return { pending: [...pendingByRepo.values()].sort((a, b) => b.score - a.score), newNotifications };
+}
+
+export function applyNotificationState(catalog, notifications, date) {
+  for (const notification of notifications || []) {
+    const key = keyOf(notification.repo);
+    if (!catalog?.repos?.[key]) continue;
+    catalog.repos[key].notified_at = date;
+    catalog.repos[key].notified_score = notification.score;
+  }
+  return catalog;
 }
