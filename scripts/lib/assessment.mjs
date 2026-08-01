@@ -7,10 +7,17 @@ const DIMENSION_LIMITS = {
   timing: 10
 };
 
+const ASSESSMENT_VERSION = 2;
+const MATCH_TYPES = new Set(['exact', 'adjacent', 'generic']);
+
 function clamp(value, min, max) {
   const number = Number(value);
   if (!Number.isFinite(number)) return min;
   return Math.max(min, Math.min(max, number));
+}
+
+function text(value) {
+  return String(value || '').trim();
 }
 
 export function scoreAssessment(assessment) {
@@ -27,8 +34,8 @@ export function actionForScore(score) {
   return 'Ignorera';
 }
 
-export function parseModelJson(text) {
-  const raw = String(text || '').trim();
+export function parseModelJson(value) {
+  const raw = String(value || '').trim();
   if (!raw) throw new Error('Model returned empty content');
   const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]?.trim();
   const candidates = [raw, fenced].filter(Boolean);
@@ -47,12 +54,14 @@ export function parseModelJson(text) {
   throw new Error('Could not parse JSON from model response');
 }
 
-export function validateAssessment(raw, expectedRepo) {
+export function validateAssessment(raw, expectedRepo, analysisMode = 'model') {
   const errors = [];
   if (!raw || typeof raw !== 'object') return ['assessment must be an object'];
-  if (String(raw.repo || '').toLowerCase() !== String(expectedRepo || '').toLowerCase()) errors.push(`repo must equal ${expectedRepo}`);
-  if (!String(raw.summary_sv || '').trim()) errors.push('summary_sv is required');
+  if (text(raw.repo).toLowerCase() !== text(expectedRepo).toLowerCase()) errors.push(`repo must equal ${expectedRepo}`);
+  if (!text(raw.summary_sv)) errors.push('summary_sv is required');
   if (!Array.isArray(raw.project_matches)) errors.push('project_matches must be an array');
+  if (!MATCH_TYPES.has(raw.match_type)) errors.push('match_type must be exact, adjacent or generic');
+  if (!text(raw.category)) errors.push('category is required');
   if (!raw.dimensions || typeof raw.dimensions !== 'object') errors.push('dimensions must be an object');
   else {
     for (const [key, max] of Object.entries(DIMENSION_LIMITS)) {
@@ -63,23 +72,42 @@ export function validateAssessment(raw, expectedRepo) {
   if (raw.risks != null && !Array.isArray(raw.risks)) errors.push('risks must be an array');
   const confidence = Number(raw.confidence);
   if (!Number.isFinite(confidence) || confidence < 0 || confidence > 1) errors.push('confidence must be between 0 and 1');
+
+  if (analysisMode === 'model') {
+    if (!text(raw.concrete_use_case)) errors.push('concrete_use_case is required');
+    if (!text(raw.next_step)) errors.push('next_step is required');
+    if (!text(raw.differentiator)) errors.push('differentiator is required');
+    if (!Array.isArray(raw.evidence) || !raw.evidence.some((item) => text(item))) errors.push('evidence must contain at least one item');
+  } else if (raw.evidence != null && !Array.isArray(raw.evidence)) {
+    errors.push('evidence must be an array');
+  }
   return errors;
 }
 
 export function normalizeAssessment(raw, repo, analysisMode = 'model') {
-  const errors = validateAssessment(raw, repo.full_name);
+  const errors = validateAssessment(raw, repo.full_name, analysisMode);
   if (errors.length) throw new Error(`${repo.full_name}: ${errors.join('; ')}`);
   const dimensions = {};
   for (const [key, max] of Object.entries(DIMENSION_LIMITS)) dimensions[key] = clamp(raw.dimensions[key], 0, max);
   const base = {
     repo: repo.full_name,
     url: repo.html_url || `https://github.com/${repo.full_name}`,
-    summary_sv: String(raw.summary_sv).trim(),
-    project_matches: raw.project_matches.filter((match) => match && String(match.project || '').trim() && String(match.reason || '').trim()).slice(0, 3).map((match) => ({ project: String(match.project).trim(), reason: String(match.reason).trim() })),
+    summary_sv: text(raw.summary_sv),
+    project_matches: raw.project_matches
+      .filter((match) => match && text(match.project) && text(match.reason))
+      .slice(0, 3)
+      .map((match) => ({ project: text(match.project), reason: text(match.reason) })),
     dimensions,
-    risks: Array.isArray(raw.risks) ? raw.risks.map(String).slice(0, 3) : [],
+    risks: Array.isArray(raw.risks) ? raw.risks.map(text).filter(Boolean).slice(0, 3) : [],
     confidence: clamp(raw.confidence, 0, 1),
     analysis_mode: analysisMode,
+    assessment_version: ASSESSMENT_VERSION,
+    match_type: raw.match_type,
+    category: text(raw.category).toLowerCase().replace(/[^a-z0-9åäö-]+/gi, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'uncategorized',
+    concrete_use_case: text(raw.concrete_use_case),
+    next_step: text(raw.next_step),
+    differentiator: text(raw.differentiator),
+    evidence: Array.isArray(raw.evidence) ? raw.evidence.map(text).filter(Boolean).slice(0, 3) : [],
     source_names: Array.isArray(repo.source_names) ? repo.source_names : [],
     stars: Number(repo.stargazers_count || 0),
     language: repo.language || null
@@ -89,34 +117,39 @@ export function normalizeAssessment(raw, repo, analysisMode = 'model') {
   return base;
 }
 
-function includesAny(text, terms) {
-  return terms.some((term) => text.includes(term));
+function includesAny(value, terms) {
+  return terms.some((term) => value.includes(term));
 }
 
 export function fallbackAssessment(repo, reason = 'fallback') {
-  const text = `${repo.full_name || ''} ${repo.description || ''} ${(repo.topics || []).join(' ')} ${repo.readme_excerpt || ''}`.toLowerCase();
+  const searchable = `${repo.full_name || ''} ${repo.description || ''} ${(repo.topics || []).join(' ')} ${repo.readme_excerpt || ''}`.toLowerCase();
   const matches = [];
   let projectFit = 2;
   let concreteValue = 2;
-  if (includesAny(text, ['woocommerce', 'wordpress', 'ecommerce', 'e-commerce', 'product image', 'product video', 'video from image', 'marketing creative'])) {
+  let category = 'uncategorized';
+  if (includesAny(searchable, ['woocommerce', 'wordpress', 'ecommerce', 'e-commerce', 'product image', 'product video', 'video from image', 'marketing creative'])) {
     matches.push({ project: 'FAIV', reason: 'Kan stödja e-handel, produktinnehåll eller kampanjproduktion.' });
     projectFit = Math.max(projectFit, 20);
     concreteValue = Math.max(concreteValue, 11);
+    category = 'ecommerce-content';
   }
-  if (includesAny(text, ['agent', 'codex', 'claude', 'mcp', 'memory', 'workflow', 'developer productivity'])) {
+  if (includesAny(searchable, ['agent', 'codex', 'claude', 'mcp', 'memory', 'workflow', 'developer productivity'])) {
     matches.push({ project: 'AI-agent/Codex-workflow', reason: 'Kan förbättra agent- eller utvecklarflöden.' });
     projectFit = Math.max(projectFit, 18);
     concreteValue = Math.max(concreteValue, 9);
+    if (category === 'uncategorized') category = 'agent-workflow';
   }
-  if (includesAny(text, ['scraping', 'crawler', 'lead generation', 'data pipeline', 'etl', 'browser automation'])) {
+  if (includesAny(searchable, ['scraping', 'crawler', 'lead generation', 'data pipeline', 'etl', 'browser automation'])) {
     matches.push({ project: 'företagslistor/nyabolaget', reason: 'Kan stödja datainsamling eller automatisering.' });
     projectFit = Math.max(projectFit, 18);
     concreteValue = Math.max(concreteValue, 10);
+    if (category === 'uncategorized') category = 'data-automation';
   }
-  if (includesAny(text, ['trading', 'market data', 'stock', 'equity', 'indicator'])) {
+  if (includesAny(searchable, ['trading', 'market data', 'stock', 'equity', 'indicator'])) {
     matches.push({ project: 'stock-signals', reason: 'Kan vara researchinspiration, inte beslutsmotor.' });
     projectFit = Math.max(projectFit, 12);
     concreteValue = Math.max(concreteValue, 5);
+    if (category === 'uncategorized') category = 'market-research';
   }
   const technicalFit = ['TypeScript', 'JavaScript'].includes(repo.language) ? 10 : repo.language === 'Python' ? 7 : 3;
   const testability = matches.length ? 8 : 3;
@@ -128,6 +161,12 @@ export function fallbackAssessment(repo, reason = 'fallback') {
     repo: repo.full_name,
     summary_sv: repo.description || `Repo ${repo.full_name} saknar tydlig beskrivning.`,
     project_matches: matches.slice(0, 3),
+    match_type: 'generic',
+    category,
+    concrete_use_case: '',
+    next_step: '',
+    differentiator: '',
+    evidence: [],
     dimensions: { project_fit: projectFit, concrete_value: concreteValue, testability, technical_fit: technicalFit, repo_quality: repoQuality, timing },
     risks: [`Fallbackbedömning användes: ${reason}`],
     confidence: 0.35
@@ -140,4 +179,4 @@ export function fallbackAssessment(repo, reason = 'fallback') {
   return normalized;
 }
 
-export { DIMENSION_LIMITS };
+export { ASSESSMENT_VERSION, DIMENSION_LIMITS };

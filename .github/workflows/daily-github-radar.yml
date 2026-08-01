@@ -6,6 +6,12 @@ on:
     # 02:15 Swedish time during CET.
     - cron: "15 1 * * *"
   workflow_dispatch:
+    inputs:
+      telegram_smoke_test:
+        description: Send a Telegram connection test in addition to the radar run
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -47,22 +53,31 @@ jobs:
         run: npm run radar
 
       - name: Analyze, rank and create notification candidates
+        id: analyze
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
           OPENROUTER_SITE_URL: https://github.com/ulle73/ai-radar
           OPENROUTER_APP_NAME: Jonas AI Radar
           ANALYSIS_BATCH_SIZE: 5
-          NOTIFY_MIN_SCORE: 82
         run: npm run analyze
 
-      - name: Commit radar outputs
+      - name: Send Telegram notifications
+        id: telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_SMOKE_TEST: ${{ github.event_name == 'workflow_dispatch' && inputs.telegram_smoke_test || false }}
+        run: npm run notify
+
+      - name: Commit radar and delivery outputs
+        if: ${{ always() && !cancelled() && steps.analyze.outcome == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data rankings state notifications status
           if git diff --cached --quiet; then
-            echo "No radar changes to commit."
+            echo "No radar or delivery changes to commit."
           else
             git commit -m "data: update ai radar $(date -u +'%Y-%m-%d')"
             git push

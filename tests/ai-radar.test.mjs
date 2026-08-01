@@ -3,7 +3,14 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { actionForScore, fallbackAssessment, parseModelJson, scoreAssessment, validateAssessment } from '../scripts/lib/assessment.mjs';
+import {
+  actionForScore,
+  fallbackAssessment,
+  normalizeAssessment,
+  parseModelJson,
+  scoreAssessment,
+  validateAssessment
+} from '../scripts/lib/assessment.mjs';
 import { buildAllTimeRanking, buildNotifications, capRankingActions, upsertCatalog } from '../scripts/lib/catalog.mjs';
 import { renderAllTimeMarkdown, renderDailyMarkdown, renderNotificationsMarkdown } from '../scripts/lib/render.mjs';
 import { runAnalyzer } from '../scripts/analyze-radar.mjs';
@@ -20,10 +27,36 @@ function assessment(name, score, overrides = {}) {
     score,
     action: score >= 85 ? 'Testa nu' : score >= 70 ? 'Spara för senare' : score >= 55 ? 'Bevaka' : 'Ignorera',
     analysis_mode: 'model',
+    assessment_version: 2,
+    match_type: 'exact',
+    category: 'product-video',
+    concrete_use_case: 'Create FAIV campaign videos from existing product images.',
+    next_step: 'Run five product images through the example pipeline.',
+    differentiator: 'Provides a ready image-to-video workflow instead of a generic agent shell.',
+    evidence: ['README documents an image-to-video pipeline.'],
     risks: [],
-    confidence: 0.8,
+    confidence: 0.9,
     source_names: ['GitHub Trending – daily'],
     stars: 1000,
+    last_seen: '2026-08-02',
+    ...overrides
+  };
+}
+
+function rawModelAssessment(name, overrides = {}) {
+  return {
+    repo: name,
+    summary_sv: 'Konkret svensk summering.',
+    project_matches: [{ project: 'FAIV', reason: 'Kan skapa kampanjmaterial från produktbilder.' }],
+    match_type: 'exact',
+    category: 'product-video',
+    concrete_use_case: 'Skapa fem korta kampanjvideor från befintliga produktbilder.',
+    next_step: 'Testa fem bilder och jämför tidsåtgång och kvalitet.',
+    differentiator: 'Har ett färdigt bild-till-video-flöde.',
+    evidence: ['README beskriver bild-till-video-pipelinen.'],
+    dimensions,
+    risks: ['Kräver lokal GPU för bästa hastighet.'],
+    confidence: 0.88,
     ...overrides
   };
 }
@@ -45,7 +78,7 @@ test('extracts JSON from fenced model output', () => {
   assert.deepEqual(parseModelJson('```json\n[{"repo":"acme/tool"}]\n```'), [{ repo: 'acme/tool' }]);
 });
 
-test('rejects wrong repo and invalid dimensions', () => {
+test('rejects wrong repo, invalid dimensions and missing evidence fields', () => {
   const errors = validateAssessment({
     repo: 'wrong/repo',
     summary_sv: 'Kort summering',
@@ -56,9 +89,25 @@ test('rejects wrong repo and invalid dimensions', () => {
   }, 'acme/tool');
   assert.ok(errors.some((error) => error.includes('repo')));
   assert.ok(errors.some((error) => error.includes('project_fit')));
+  assert.ok(errors.some((error) => error.includes('match_type')));
+  assert.ok(errors.some((error) => error.includes('evidence')));
 });
 
-test('fallback is conservative and finds a concrete FAIV match', () => {
+test('normalization stores assessment version and evidence-rich match data', () => {
+  const result = normalizeAssessment(rawModelAssessment('acme/tool'), {
+    full_name: 'acme/tool',
+    html_url: 'https://github.com/acme/tool',
+    source_names: ['GitHub Trending – daily'],
+    stargazers_count: 500,
+    language: 'TypeScript'
+  });
+  assert.equal(result.assessment_version, 2);
+  assert.equal(result.match_type, 'exact');
+  assert.equal(result.category, 'product-video');
+  assert.equal(result.evidence.length, 1);
+});
+
+test('fallback is conservative and can never become a strict recommendation', () => {
   const result = fallbackAssessment({
     full_name: 'acme/product-video',
     html_url: 'https://github.com/acme/product-video',
@@ -69,6 +118,8 @@ test('fallback is conservative and finds a concrete FAIV match', () => {
     source_names: ['GitHub Trending – daily']
   }, 'model unavailable');
   assert.equal(result.analysis_mode, 'fallback');
+  assert.equal(result.assessment_version, 2);
+  assert.equal(result.match_type, 'generic');
   assert.ok(result.project_matches.some((match) => match.project === 'FAIV'));
   assert.ok(result.score < 82);
 });
@@ -81,7 +132,7 @@ test('catalog preserves first_seen while updating score', () => {
   assert.equal(second.repos['acme/tool'].score, 88);
 });
 
-test('ranking caps actions at five Testa nu and ten Spara för senare', () => {
+test('legacy action cap remains available for daily compatibility', () => {
   const capped = capRankingActions(Array.from({ length: 20 }, (_, index) => assessment(`acme/tool-${index}`, 100 - index)));
   assert.equal(capped.filter((entry) => entry.action === 'Testa nu').length, 5);
   assert.equal(capped.filter((entry) => entry.action === 'Spara för senare').length, 10);
@@ -99,7 +150,18 @@ test('notifications deduplicate pending entries', () => {
   assert.equal(result.pending.length, 1);
 });
 
-test('notifications allow a ten-point score improvement', () => {
+test('notifications reject generic high-score repos', () => {
+  const result = buildNotifications({
+    assessments: [assessment('acme/generic', 97, { match_type: 'generic', confidence: 0.99 })],
+    previousCatalog: { version: 1, repos: {} },
+    historicalSeen: new Set(),
+    existingPending: [],
+    date: '2026-08-02'
+  });
+  assert.equal(result.newNotifications.length, 0);
+});
+
+test('notifications allow an exceptional ten-point score improvement', () => {
   const result = buildNotifications({
     assessments: [assessment('acme/tool', 91)],
     previousCatalog: { version: 1, repos: { 'acme/tool': { repo: 'acme/tool', notified_at: '2026-07-01', notified_score: 80, score: 80 } } },
@@ -108,21 +170,27 @@ test('notifications allow a ten-point score improvement', () => {
     date: '2026-08-02'
   });
   assert.equal(result.newNotifications.length, 1);
+  assert.match(result.newNotifications[0].next_step, /five product images/i);
 });
 
-test('all-time ranking excludes ignored repos and sorts descending', () => {
-  const catalog = upsertCatalog(null, [assessment('acme/a', 75), assessment('acme/b', 90), assessment('acme/c', 40)], '2026-08-01');
-  assert.deepEqual(buildAllTimeRanking(catalog).map((entry) => entry.repo), ['acme/b', 'acme/a']);
+test('all-time ranking includes only strict matches and sorts by ranking score', () => {
+  const catalog = upsertCatalog(null, [
+    assessment('acme/a', 80),
+    assessment('acme/b', 90),
+    assessment('acme/c', 99, { match_type: 'generic' }),
+    assessment('acme/d', 40)
+  ], '2026-08-01');
+  assert.deepEqual(buildAllTimeRanking(catalog, '2026-08-02', {}).map((entry) => entry.repo), ['acme/b', 'acme/a']);
 });
 
-test('renderers expose ranking, degraded status and empty notification days', () => {
-  const entry = assessment('acme/tool', 91, { first_seen: '2026-08-01', last_seen: '2026-08-01' });
-  assert.match(renderAllTimeMarkdown([entry], '2026-08-01'), /Permanent totalranking/);
-  assert.match(renderDailyMarkdown([entry], { date: '2026-08-01', status: 'degraded', reasons: ['fallback used'] }), /fallback used/);
+test('renderers expose strict tier, degraded status and empty notification days', () => {
+  const entry = assessment('acme/tool', 91, { first_seen: '2026-08-01', last_seen: '2026-08-01', quality_tier: 'exceptional', ranking_score: 91 });
+  assert.match(renderAllTimeMarkdown([entry], '2026-08-01'), /Exceptionell|exceptional/);
+  assert.match(renderDailyMarkdown([entry], { date: '2026-08-01', status: 'degraded', quality_status: 'warning', reasons: ['fallback used'] }), /fallback used/);
   assert.match(renderNotificationsMarkdown([], '2026-08-01'), /Inga nya notifieringsvärda repos/);
 });
 
-test('analyzer creates degraded outputs and suppresses bootstrap notifications without OpenRouter', async () => {
+test('analyzer keeps fallback results in history but out of the permanent ranking', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'ai-radar-test-'));
   const repo = {
     full_name: 'acme/product-video',
@@ -141,7 +209,9 @@ test('analyzer creates degraded outputs and suppresses bootstrap notifications w
   assert.equal(result.status.status, 'degraded');
   assert.equal(result.notifications.length, 0);
   const ranking = JSON.parse(await readFile(path.join(root, 'rankings/all-time.json'), 'utf8'));
+  const daily = JSON.parse(await readFile(path.join(root, 'rankings/daily/2026-08-01.json'), 'utf8'));
   const pending = JSON.parse(await readFile(path.join(root, 'notifications/pending.json'), 'utf8'));
-  assert.equal(ranking[0].repo, 'acme/product-video');
+  assert.deepEqual(ranking, []);
+  assert.equal(daily[0].repo, 'acme/product-video');
   assert.deepEqual(pending, []);
 });

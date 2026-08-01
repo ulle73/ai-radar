@@ -1,11 +1,12 @@
 {
   "name": "ai-radar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
     "radar": "node scripts/fetch-github-trending.mjs",
     "analyze": "node scripts/analyze-radar.mjs",
+    "notify": "node scripts/send-telegram.mjs",
     "rank": "npm run analyze",
     "test": "node --test"
   },
