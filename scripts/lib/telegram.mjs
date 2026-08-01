@@ -28,7 +28,7 @@ export function notificationId(item) {
   ].join(':');
 }
 
-export function formatTelegramMessage(item) {
+function buildFullMessage(item) {
   const repo = escapeHtml(text(item?.repo, 120));
   const url = escapeHtml(text(item?.url, 500));
   const summary = escapeHtml(text(item?.summary_sv, 500));
@@ -41,7 +41,7 @@ export function formatTelegramMessage(item) {
   const score = Number(item?.score || 0);
   const confidence = Math.round(Number(item?.confidence || 0) * 100);
 
-  const lines = [
+  return [
     '🚨 <b>Nytt repo upptäckt</b>',
     '',
     url ? `<b>Repo:</b> <a href="${url}">${repo}</a>` : `<b>Repo:</b> ${repo}`,
@@ -53,9 +53,32 @@ export function formatTelegramMessage(item) {
     nextStep ? `<b>Nästa steg:</b> ${nextStep}` : '',
     evidence ? `<b>Evidens:</b> ${evidence}` : '',
     `<b>Bedömning:</b> ${score}/100 · ${confidence}% säkerhet · Testa nu`
-  ];
+  ].filter(Boolean).join('\n');
+}
 
-  return lines.filter(Boolean).join('\n').slice(0, 4000);
+function buildCompactMessage(item) {
+  const repo = escapeHtml(text(item?.repo, 50));
+  const url = escapeHtml(text(item?.url, 120));
+  const project = escapeHtml(text(item?.project, 60));
+  const useCase = escapeHtml(text(item?.concrete_use_case, 100));
+  const nextStep = escapeHtml(text(item?.next_step, 120));
+  const score = Number(item?.score || 0);
+  const confidence = Math.round(Number(item?.confidence || 0) * 100);
+
+  return [
+    '🚨 <b>Nytt repo upptäckt</b>',
+    '',
+    url ? `<b>Repo:</b> <a href="${url}">${repo}</a>` : `<b>Repo:</b> ${repo}`,
+    project ? `<b>Passar:</b> ${project}` : '',
+    useCase ? `<b>Användning:</b> ${useCase}` : '',
+    nextStep ? `<b>Nästa steg:</b> ${nextStep}` : '',
+    `<b>Bedömning:</b> ${score}/100 · ${confidence}% säkerhet · Testa nu`
+  ].filter(Boolean).join('\n');
+}
+
+export function formatTelegramMessage(item) {
+  const full = buildFullMessage(item);
+  return full.length <= 4000 ? full : buildCompactMessage(item);
 }
 
 async function sendMessage({ token, chatId, message, fetchImpl }) {
