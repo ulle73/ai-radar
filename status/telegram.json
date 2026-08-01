@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-01T23:47:24.925Z",
+  "status": "healthy",
+  "configured": true,
+  "smoke_test": {
+    "status": "healthy",
+    "generated_at": "2026-08-01T23:47:24.925Z",
+    "telegram_message_id": 4
+  },
+  "delivery": {
+    "generated_at": "2026-08-01T23:47:24.925Z",
+    "status": "idle",
+    "configured": true,
+    "pending_before": 0,
+    "attempted": 0,
+    "sent": 0,
+    "failed": 0,
+    "deduplicated": 0,
+    "pending_after": 0
+  },
+  "failures": []
+}
