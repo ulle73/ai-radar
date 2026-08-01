@@ -6,11 +6,6 @@ on:
     # 02:15 Swedish time during CET.
     - cron: "15 1 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/manual-radar-trigger
 
 permissions:
   contents: write
