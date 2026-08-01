@@ -1,8 +1,24 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { fallbackAssessment, normalizeAssessment, parseModelJson, validateAssessment } from './lib/assessment.mjs';
-import { buildAllTimeRanking, buildNotifications, upsertCatalog } from './lib/catalog.mjs';
+import {
+  ASSESSMENT_VERSION,
+  fallbackAssessment,
+  normalizeAssessment,
+  parseModelJson,
+  validateAssessment
+} from './lib/assessment.mjs';
+import {
+  applyNotificationState,
+  buildAllTimeRanking,
+  buildNotifications,
+  upsertCatalog
+} from './lib/catalog.mjs';
+import {
+  buildQualityMetrics,
+  classifyQuality,
+  eligibleRankingEntries
+} from './lib/quality.mjs';
 import { renderAllTimeMarkdown, renderDailyMarkdown, renderNotificationsMarkdown } from './lib/render.mjs';
 
 async function readText(root, relativePath, fallback = '') {
@@ -10,9 +26,9 @@ async function readText(root, relativePath, fallback = '') {
 }
 
 async function readJson(root, relativePath, fallback) {
-  const text = await readText(root, relativePath, '');
-  if (!text.trim()) return fallback;
-  try { return JSON.parse(text); } catch { return fallback; }
+  const value = await readText(root, relativePath, '');
+  if (!value.trim()) return fallback;
+  try { return JSON.parse(value); } catch { return fallback; }
 }
 
 async function writeJson(root, relativePath, value) {
@@ -74,20 +90,26 @@ function repoPromptShape(repo) {
     source_names: repo.source_names || [],
     created_at: repo.created_at || null,
     pushed_at: repo.pushed_at || null,
-    readme_excerpt: String(repo.readme_excerpt || '').slice(0, 1400)
+    readme_excerpt: String(repo.readme_excerpt || '').slice(0, 1800)
   };
 }
 
 function buildPrompt(context, repos) {
-  return `Du är Jonas personliga GitHub-radar. Bedöm ENDAST de bifogade repona mot Jonas mål och aktiva projekt.
+  return `Du är Jonas extremt selektiva GitHub-radar. Bedöm ENDAST de bifogade repona mot Jonas namngivna mål och aktiva projekt.
 
 Returnera ENDAST ett JSON-array med exakt ett objekt per repo och exakt samma repo-namn.
 
 Schema per objekt:
 {
   "repo": "owner/name",
-  "summary_sv": "en konkret svensk mening om vad repot gör",
-  "project_matches": [{"project":"projektnamn","reason":"konkret varför det passar"}],
+  "summary_sv": "en konkret svensk mening om vad repot faktiskt gör",
+  "project_matches": [{"project":"exakt projektnamn från kontexten","reason":"konkret orsak-verkan för projektet"}],
+  "match_type": "exact | adjacent | generic",
+  "category": "kort-stabil-kategori",
+  "concrete_use_case": "exakt vad Jonas kan göra i det namngivna projektet",
+  "next_step": "ett litet praktiskt test som kan genomföras",
+  "differentiator": "vad repot tillför utöver vanliga alternativ eller befintlig stack",
+  "evidence": ["1–3 korta fakta från README eller metadata som stöder bedömningen"],
   "dimensions": {
     "project_fit": 0-30,
     "concrete_value": 0-20,
@@ -96,17 +118,26 @@ Schema per objekt:
     "repo_quality": 0-10,
     "timing": 0-10
   },
-  "risks": ["kort risk"],
+  "risks": ["kort konkret risk"],
   "confidence": 0-1
 }
 
-Regler:
-- Var skeptisk. De flesta repos ska inte rekommenderas starkt.
-- Ge hög project_fit endast vid en tydlig koppling till ett namngivet projekt.
-- Hype, många stars eller ordet AI räcker inte.
+MATCH_TYPE:
+- exact: repot löser ett konkret problem eller möjliggör ett konkret arbetsflöde i ett NAMNGIVET aktivt projekt.
+- adjacent: det är relevant för området men nyttan kräver flera antaganden, större ombyggnad eller saknar tydligt aktuellt behov.
+- generic: generell AI/agent/devtool-nytta, inspiration eller hype utan unik direkt projektnytta.
+
+HÅRDA REGLER:
+- Var mycket skeptisk. De flesta repos ska vara adjacent eller generic.
+- Använd exact endast när concrete_use_case, next_step och differentiator är specifika och stöds av evidence.
+- Ord som AI, agent, Codex, automation, memory eller MCP räcker aldrig för exact.
+- Många stars påverkar repo_quality men får inte höja project_fit eller concrete_value.
+- Om ett repo liknar verktyg Jonas redan använder måste differentiator beskriva en verklig fördel; annars adjacent/generic.
+- Ett repo som endast kan vara "bra att känna till" är generic.
 - Tradingverktyg får bara vara researchinspiration, inte beslutsmotor.
-- Max tre project_matches.
-- Inga markdownstaket, ingen förklaring utanför JSON.
+- Max tre project_matches. Använd tom array när ingen konkret match finns.
+- Hitta inte på funktioner som inte stöds av README/metadata.
+- Inga markdownstaket och ingen förklaring utanför JSON.
 
 JONAS KONTEXT:
 ${context || 'Ingen extra kontext hittades.'}
@@ -127,12 +158,12 @@ async function callOpenRouter({ fetchImpl, apiKey, model, prompt, baseUrl, siteU
     body: JSON.stringify({
       model,
       messages: [
-        { role: 'system', content: 'Return only valid JSON. Do not include chain of thought or markdown.' },
+        { role: 'system', content: 'Return only valid JSON. Do not include chain of thought or markdown. Be conservative: generic relevance is not an exact project match.' },
         { role: 'user', content: prompt }
       ],
-      temperature: 0.1,
-      top_p: 0.8,
-      max_tokens: 4500
+      temperature: 0.05,
+      top_p: 0.75,
+      max_tokens: 6500
     })
   });
   const bodyText = await response.text();
@@ -158,8 +189,9 @@ function daysBetween(dateA, dateB) {
   return Math.floor(Math.abs(b - a) / 86400000);
 }
 
-function shouldAnalyze(repo, previous, date) {
+export function shouldAnalyze(repo, previous, date) {
   if (!previous) return true;
+  if (Number(previous.assessment_version) !== ASSESSMENT_VERSION) return true;
   if (!previous.last_analyzed || daysBetween(previous.last_analyzed, date) >= 14) return true;
   const previousStars = Number(previous.stars || 0);
   const currentStars = Number(repo.stargazers_count || 0);
@@ -211,12 +243,27 @@ async function analyzeRepos({ repos, context, env, fetchImpl, batchSize }) {
   return { assessments, reasons, fallbackCount, modelCount };
 }
 
+function enrichQuality(assessment) {
+  const quality = classifyQuality(assessment);
+  return {
+    ...assessment,
+    quality_tier: quality.tier,
+    failed_quality_gates: quality.failed_gates,
+    action: quality.tier === 'exceptional'
+      ? 'Testa nu'
+      : quality.tier === 'strong'
+        ? 'Spara för senare'
+        : 'Arkiv'
+  };
+}
+
 export async function runAnalyzer({ root = process.cwd(), env = process.env, fetchImpl = globalThis.fetch, now = new Date() } = {}) {
   const date = now.toISOString().slice(0, 10);
   const latest = await readJson(root, 'data/latest.json', null);
   if (!latest || !Array.isArray(latest.repos) || latest.repos.length === 0) throw new Error('data/latest.json saknas eller innehåller inga repos. Kör npm run radar först.');
   const currentRepos = latest.repos.filter((repo) => repo?.full_name);
-  const previousCatalog = await readJson(root, 'state/repo-catalog.json', { version: 1, repos: {} });
+  const previousCatalog = await readJson(root, 'state/repo-catalog.json', { version: 2, repos: {} });
+  const feedback = await readJson(root, 'state/feedback.json', {});
   const existingPending = await readJson(root, 'notifications/pending.json', []);
   const historicalSeen = await loadHistoricalSeen(root, date);
   const context = await loadContext(root);
@@ -225,32 +272,45 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   for (const repo of currentRepos) {
     const previous = previousCatalog.repos?.[String(repo.full_name).toLowerCase()];
     if (shouldAnalyze(repo, previous, date)) toAnalyze.push(repo);
-    else reused.push({ ...previous, source_names: repo.source_names || previous.source_names || [], stars: Number(repo.stargazers_count || previous.stars || 0), language: repo.language || previous.language || null });
+    else reused.push({
+      ...previous,
+      source_names: repo.source_names || previous.source_names || [],
+      stars: Number(repo.stargazers_count || previous.stars || 0),
+      language: repo.language || previous.language || null
+    });
   }
   const batchSize = Math.max(1, Math.min(10, Number(env.ANALYSIS_BATCH_SIZE || 5)));
   const analyzed = await analyzeRepos({ repos: toAnalyze, context, env, fetchImpl, batchSize });
-  const dailyAssessments = [...analyzed.assessments, ...reused];
+  const dailyAssessments = [...analyzed.assessments, ...reused].map(enrichQuality);
+  const newlyAnalyzed = analyzed.assessments.map(enrichQuality);
   const notificationResult = buildNotifications({
-    assessments: analyzed.assessments,
+    assessments: newlyAnalyzed,
     previousCatalog,
     historicalSeen,
     existingPending: Array.isArray(existingPending) ? existingPending : [],
-    date,
-    minScore: Number(env.NOTIFY_MIN_SCORE || 82)
+    date
   });
   const catalog = upsertCatalog(previousCatalog, dailyAssessments, date);
-  const ranking = buildAllTimeRanking(catalog);
+  applyNotificationState(catalog, notificationResult.newNotifications, date);
+  const eligibleBeforeCap = eligibleRankingEntries(catalog, date, feedback);
+  const ranking = buildAllTimeRanking(catalog, date, feedback);
+  const quality = buildQualityMetrics(dailyAssessments, eligibleBeforeCap, ranking);
   const status = {
     date,
     generated_at: now.toISOString(),
     status: analyzed.fallbackCount > 0 ? 'degraded' : 'healthy',
+    quality_status: quality.quality_status,
     reasons: analyzed.reasons,
+    quality_warning_reasons: quality.warning_reasons,
     candidates_today: currentRepos.length,
     analyzed_today: toAnalyze.length,
     reused_today: reused.length,
     model_assessments: analyzed.modelCount,
     fallback_assessments: analyzed.fallbackCount,
+    exact_matches_today: quality.match_types.exact,
+    eligible_before_diversity_cap: quality.eligible_before_diversity_cap,
     ranking_size: ranking.length,
+    archive_size_today: dailyAssessments.filter((item) => item.quality_tier === 'archive').length,
     new_notifications: notificationResult.newNotifications.length,
     required_configuration: {
       github_token: 'provided automatically by GitHub Actions',
@@ -270,13 +330,14 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   await writeText(root, 'notifications/latest.md', renderNotificationsMarkdown(notificationResult.newNotifications, date));
   await writeText(root, `notifications/daily/${date}.md`, renderNotificationsMarkdown(notificationResult.newNotifications, date));
   await writeJson(root, 'status/latest.json', status);
-  return { status, ranking, notifications: notificationResult.newNotifications, catalog };
+  await writeJson(root, 'status/quality.json', quality);
+  return { status, quality, ranking, notifications: notificationResult.newNotifications, catalog };
 }
 
 const executedDirectly = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (executedDirectly) {
   runAnalyzer().then(({ status }) => {
-    console.log(`AI Radar analysis complete: ${status.status}; ${status.ranking_size} ranked repos; ${status.new_notifications} new notifications.`);
+    console.log(`AI Radar analysis complete: ${status.status}/${status.quality_status}; ${status.ranking_size} strict matches; ${status.new_notifications} new notifications.`);
   }).catch((error) => {
     console.error(error);
     process.exit(1);
