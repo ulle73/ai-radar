@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import {
   EXPECTED_PROJECT_IDS,
   loadAnalysisContext,
@@ -10,7 +11,7 @@ import {
   validateProjectCatalog
 } from '../scripts/lib/project-context.mjs';
 
-const repositoryRoot = path.resolve(new URL('..', import.meta.url).pathname);
+const repositoryRoot = path.dirname(fileURLToPath(new URL('../package.json', import.meta.url)));
 
 async function readCatalog(root = repositoryRoot) {
   const value = await readFile(path.join(root, 'projects/catalog.json'), 'utf8');
@@ -54,6 +55,16 @@ test('rendered project context includes every display name and exact-match rules
   }
   assert.match(rendered, /gemensam teknik eller ämnesord räcker inte/i);
   assert.match(rendered, /namngivet problem|befintligt arbetsflöde|tillväxtmotor/i);
+});
+
+test('real production context fits the default budget and includes every project', async () => {
+  const catalog = await readCatalog();
+  const context = await loadAnalysisContext({ root: repositoryRoot, maxChars: 70000 });
+
+  assert.ok(context.length <= 70000);
+  for (const project of catalog.projects) {
+    assert.match(context, new RegExp(project.display_name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  }
 });
 
 test('analysis context keeps mandatory project context and truncates optional idea context first', async () => {
