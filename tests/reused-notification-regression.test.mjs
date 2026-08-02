@@ -31,6 +31,7 @@ function exceptionalCatalogEntry() {
     quality_tier: 'exceptional',
     analysis_mode: 'model',
     assessment_version: 2,
+    project_context_version: 1,
     match_type: 'exact',
     category: 'agent-harness',
     concrete_use_case: 'Testa separata arbetsmiljöer för två användare i samma agentinstans.',
