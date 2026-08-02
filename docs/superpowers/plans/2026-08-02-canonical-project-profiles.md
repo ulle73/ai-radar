@@ -30,10 +30,10 @@
 - Catalog root: `{ version, updated_at, matching_policy, projects }`.
 - Each project exposes stable identity, business context, technical context, matching targets and exclusions.
 
-- [ ] Write failing tests that load `projects/catalog.json` and require the exact nine project IDs.
-- [ ] Add assertions for Golfkuponger Shopify/intäktsfokus, Apify Scraper SaaS and Sankdig data-topic scope.
-- [ ] Create the complete catalog with all nine profiles.
-- [ ] Run `npm test` and keep loader-related tests failing until Task 2.
+- [x] Write failing tests that load `projects/catalog.json` and require the exact nine project IDs.
+- [x] Add assertions for Golfkuponger Shopify/intäktsfokus, Apify Scraper SaaS and Sankdig data-topic scope.
+- [x] Create the complete catalog with all nine profiles.
+- [x] Run `npm test` and keep loader-related tests failing until Task 2.
 
 ### Task 2: Deterministic context loader
 
@@ -48,39 +48,44 @@
 - `renderProjectCatalog(catalog): string`
 - `loadAnalysisContext({ root, maxChars }): Promise<string>`
 
-- [ ] Add failing tests proving all project display names survive a small optional-context budget.
-- [ ] Add a failing test for duplicate or missing project IDs.
-- [ ] Implement catalog validation and deterministic priority sorting.
-- [ ] Render concise JSON-derived model context with explicit exact-match rules.
-- [ ] Load `GOALS.md` and the full catalog before optional ideas/candidates.
-- [ ] Throw when mandatory context exceeds `maxChars`; truncate only optional context.
-- [ ] Replace the old local `loadContext` implementation in `scripts/analyze-radar.mjs`.
-- [ ] Run `npm test`.
+- [x] Add failing tests proving all project display names survive a small optional-context budget.
+- [x] Add a failing test for duplicate or missing project IDs.
+- [x] Implement catalog validation and deterministic priority sorting.
+- [x] Render JSON-derived model context with explicit exact-match rules.
+- [x] Load `GOALS.md` and the full catalog before optional ideas/candidates.
+- [x] Throw when mandatory context exceeds `maxChars`; truncate only optional context.
+- [x] Replace the old local `loadContext` implementation in `scripts/analyze-radar.mjs`.
+- [x] Store `project_context_version` and force reanalysis when the catalog version changes.
+- [x] Run `npm test`.
 
 ### Task 3: Matching instructions and documentation
 
 **Files:**
 - Modify: `GOALS.md`
 - Modify: `README.md`
+- Modify: `projects/README.md`
 - Modify: `scripts/analyze-radar.mjs`
 - Test: `tests/project-context.test.mjs`
+- Test: `tests/project-name-validation.test.mjs`
 
 **Interfaces:**
 - Model prompt must use exact catalog display names and tie `exact` matches to explicit profile needs.
 
-- [ ] Update prompt rules so shared technology alone cannot create an exact match.
-- [ ] Replace outdated project priorities in `GOALS.md` with the nine canonical profiles.
-- [ ] Document `projects/catalog.json` as the source of truth in `README.md`.
-- [ ] Add tests for the canonical project instruction text.
-- [ ] Run `npm test`.
+- [x] Update prompt rules so shared technology alone cannot create an exact match.
+- [x] Replace outdated project priorities in `GOALS.md` with the nine canonical profiles.
+- [x] Document `projects/catalog.json` as the source of truth in `README.md`.
+- [x] Document catalog versioning and automatic reanalysis in `projects/README.md`.
+- [x] Reject aliases and invented project names deterministically.
+- [x] Add tests for the canonical project instruction text.
+- [x] Run `npm test`.
 
 ### Task 4: Remote verification
 
 **Files:**
 - No additional product files.
 
-- [ ] Review every profile for unsupported claims and conflicting aliases.
-- [ ] Open a pull request to `main`.
-- [ ] Verify GitHub Actions tests pass on the pull request.
-- [ ] Inspect the complete diff for accidental secret, workflow or output-state changes.
-- [ ] Merge only after verification.
+- [x] Review every profile for unsupported claims and conflicting aliases.
+- [x] Open a pull request to `main`.
+- [x] Verify GitHub Actions tests pass on the pull request.
+- [x] Inspect the complete diff for accidental secret, workflow or output-state changes.
+- [ ] Merge only after explicit user approval.
