@@ -1,336 +1,62 @@
 [
   {
-    "repo": "citrolabs/ego-lite",
-    "url": "https://github.com/citrolabs/ego-lite",
-    "summary_sv": "En browser för AI-ager som möjliggör delning av loggade-in browserstater med AI-agenter som Codex eller Claude Code utan att störa användaren.",
+    "repo": "yc-software/qm",
+    "url": "https://github.com/yc-software/qm",
+    "summary_sv": "En multiplayer agent-harness för arbete där flera användare kan arbeta separat men samarbeta i kanaler och projekt.",
     "project_matches": [
       {
-        "project": "Dormy AI och automation",
-        "reason": "Browser automation är kritiskt för intern AI-bot och automatisering av rutiner"
+        "project": "AI Byggstart / Bygg med AI",
+        "reason": "Kan användas för att bygga en agent som guiderar användare genom byggprocessen med separat arbetsmiljö per användare."
       },
       {
-        "project": "AI Byggstart / Bygg med AI",
-        "reason": "Browser automation kan automatisera repetitive tasks i byggprocessen och felsökning"
+        "project": "Dormy AI och automation",
+        "reason": "Låter bygga interna AI-assistenter med separat minne och arbetsflöden för olika butiksavdelningar."
+      },
+      {
+        "project": "FAIV.se redesign",
+        "reason": "Möjlighet att skapa en agent som hjälper med produktrekommendationer och kundsupport i e-handeln."
       }
     ],
     "dimensions": {
       "project_fit": 25,
       "concrete_value": 18,
-      "testability": 14,
-      "technical_fit": 14,
+      "testability": 12,
+      "technical_fit": 15,
       "repo_quality": 9,
-      "timing": 9
+      "timing": 10
     },
     "risks": [
-      "Kräver förståelse för browser state delning",
-      "Kan vara överdrivet komplext för MVP-nivå"
+      "Komplex konfiguration krävs för att ställa in flera arbetsmiljöer"
     ],
     "confidence": 0.85,
     "analysis_mode": "model",
     "source_names": [
-      "GitHub Trending – weekly"
+      "GitHub Search API"
     ],
-    "stars": 7314,
-    "language": "JavaScript",
+    "stars": 5244,
+    "language": "TypeScript",
     "score": 89,
     "action": "Testa nu",
     "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
     "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
+    "last_analyzed": "2026-08-02",
     "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "affaan-m/ECC",
-    "url": "https://github.com/affaan-m/ECC",
-    "summary_sv": "Ett agent-harness prestanda-optimiseringssystem som ger AI-agenter förbättrade färdigheter, minne, säkerhet och research-förstad utveckling för Claude Code, Codex, OpenCode och Cursor.",
-    "project_matches": [
-      {
-        "project": "AI Byggstart / Bygg med AI",
-        "reason": "ECC förbättrar AI-agent-arbetsflöden och kan direkt hjälpa Jonas att bygga och testa AI-byggflöden snabbare, vilket är högsta prioritet just nu."
-      },
-      {
-        "project": "github-trending-radar",
-        "reason": "ECC är ett verktyg för AI-agent produktivitet som kan förbättra AI Radars egen workflow och analyskapacitet."
-      },
-      {
-        "project": "Dormy AI",
-        "reason": "Agent-förbättringar som minne och säkerhet kan användas för att bygga en mer robust intern AI-assistent för butiksanvändning."
-      }
+    "notified_score": null,
+    "assessment_version": 2,
+    "match_type": "exact",
+    "category": "kort-stabil-kategori",
+    "concrete_use_case": "Skapa en agent som hjälper FAIV:s kundsupport med produktfrågor samtidigt som butiksmedarbetare har egna arbetsflöden.",
+    "next_step": "Testa QM med en demo där två användare samtidigt hanterar olika uppgifter i samma agentinstans.",
+    "differentiator": "Isolerade arbetsmiljöer per användare med delad minne och färdigheter, vilket vanliga agents inte erbjuder.",
+    "evidence": [
+      "Isolerade arbetsmiljöer per användare med separat minne",
+      "Stöd för flera modeller (Codex, Claude etc) i samma system",
+      "Slack och webbgränssnitt med samma identitet"
     ],
-    "dimensions": {
-      "project_fit": 22,
-      "concrete_value": 16,
-      "testability": 12,
-      "technical_fit": 14,
-      "repo_quality": 8,
-      "timing": 8
-    },
-    "risks": [
-      "Mycket populärt projekt med hög hype som kan överdriva förväntningar",
-      "Komplext system som kräver tid att förstå och anpassa",
-      "Beroende av flera AI-verktyg (Claude Code, Codex, Cursor)"
-    ],
-    "confidence": 0.75,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 236792,
-    "language": "JavaScript",
-    "score": 80,
-    "action": "Spara för senare",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "anomalyco/opencode",
-    "url": "https://github.com/anomalyco/opencode",
-    "summary_sv": "Open source AI-kodagent i TypeScript, körbar lokalt och integrerbar i egen stack, med fokus på transparens och kontroll.",
-    "project_matches": [
-      {
-        "project": "AI-agent/Codex/ChatGPT-workflow",
-        "reason": "Lokal, TypeScript-baserad agent som kan komplettera eller ersätta del av Jonas nuvarande Codex/Claude Code-användning utan vendor lock-in"
-      },
-      {
-        "project": "AI Radar",
-        "reason": "Kan användas programmässigt i radarpipelinen för att automatisera kodgranskning, sammanfattning och analys av funna repos"
-      }
-    ],
-    "dimensions": {
-      "project_fit": 20,
-      "concrete_value": 15,
-      "testability": 12,
-      "technical_fit": 12,
-      "repo_quality": 8,
-      "timing": 8
-    },
-    "risks": [
-      "En ytterligare kodagent – kan duplicera funktionalitet Jonas redan har via Codex/Claude Code; under aktiv utveckling"
-    ],
-    "confidence": 0.7,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 191974,
-    "language": "TypeScript",
-    "score": 75,
-    "action": "Spara för senare",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "obra/superpowers",
-    "url": "https://github.com/obra/superpowers",
-    "summary_sv": "Agentic skills framework och utvecklingsmetodik med quickstart för Codex, Claude Code, Cursor och fler – fokuserar på spec-driven, subagent-driven development med TDD.",
-    "project_matches": [
-      {
-        "project": "AI-agent/Codex/ChatGPT-workflow",
-        "reason": "Ger en helhetsmetodik (spec → plan → subagent-exekvering) som kan göra Jonas agent-flöden mer disciplinerade och testbara"
-      },
-      {
-        "project": "AI Radar",
-        "reason": "Ramverkets krav på tydlig spec och red/green TDD kan översättas till bättre kvalitetskrav i radarens analyspipeline"
-      }
-    ],
-    "dimensions": {
-      "project_fit": 20,
-      "concrete_value": 15,
-      "testability": 12,
-      "technical_fit": 12,
-      "repo_quality": 8,
-      "timing": 8
-    },
-    "risks": [
-      "Opinionerad metodologi som kan krocka med Jonas nuvarande arbetsstil; stor yta att lära sig"
-    ],
-    "confidence": 0.7,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 264741,
-    "language": "Shell",
-    "score": 75,
-    "action": "Spara för senare",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "1jehuang/jcode",
-    "url": "https://github.com/1jehuang/jcode",
-    "summary_sv": "En RAM-effektiv AI-coding agent byggd i Rust som stödjer Claude, OpenAI och andra LLM:er för terminal- och TUI-baserad kodgenerering.",
-    "project_matches": [
-      {
-        "project": "AI Byggstart / Bygg med AI",
-        "reason": "AI-coding agent kan automatisera kodgenerering och felsökning i byggprocessen"
-      }
-    ],
-    "dimensions": {
-      "project_fit": 15,
-      "concrete_value": 12,
-      "testability": 12,
-      "technical_fit": 13,
-      "repo_quality": 9,
-      "timing": 8
-    },
-    "risks": [
-      "Rust-beroende kan vara svårt att integrera i befintliga Node.js/Next.js stack",
-      "TUI/CLI fokus kan vara ovanligt för webbaserade projekt"
-    ],
-    "confidence": 0.6,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 14885,
-    "language": "Rust",
-    "score": 69,
-    "action": "Bevaka",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "yc-software/qm",
-    "url": "https://github.com/yc-software/qm",
-    "summary_sv": "Ett fleranvändar-agent-harness för arbetsmiljöer som stödjer Slack och webb, med isolerade workspaces, minne, nyckelkedja, schemalagda uppgifter och webbappar per användare.",
-    "project_matches": [
-      {
-        "project": "Dormy AI",
-        "reason": "QM stödjer flera isolerade agent-workspaces och Slack-integration, vilket direkt passar för en intern kunskapsbot eller produktfråge-bot i butiksmiljö."
-      },
-      {
-        "project": "Socials v2",
-        "reason": "Workspace-baserad hantering och godkännandeflöden för publicering kan inspirera eller underlätta Socials v2:s godkännandearbete."
-      },
-      {
-        "project": "AI Byggstart / Bygg med AI",
-        "reason": "Agent-harness med minne och skick kan användas som inspiration för hur Jonas bygger steg-för-steg guider i byggplattformen."
-      }
-    ],
-    "dimensions": {
-      "project_fit": 18,
-      "concrete_value": 14,
-      "testability": 10,
-      "technical_fit": 12,
-      "repo_quality": 7,
-      "timing": 7
-    },
-    "risks": [
-      "Relativt nytt projekt med begränsad dokumentation",
-      "Kan vara komplext att sätta upp och anpassa",
-      "Slack-baserad arkitektur kan kräva viss konfiguration"
-    ],
-    "confidence": 0.65,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 4449,
-    "language": "TypeScript",
-    "score": 68,
-    "action": "Bevaka",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "alibaba/open-code-review",
-    "url": "https://github.com/alibaba/open-code-review",
-    "summary_sv": "En öppen källkods‑code‑review‑tool som använder deterministiska pipelines och LLM‑agenter för att ge precisa kommentarer på kod.",
-    "project_matches": [
-      {
-        "project": "AI Radar improvement",
-        "reason": "förbättrar kodgranskning i AI Radar‑systemet"
-      }
-    ],
-    "dimensions": {
-      "project_fit": 12,
-      "concrete_value": 9,
-      "testability": 11,
-      "technical_fit": 14,
-      "repo_quality": 8,
-      "timing": 5
-    },
-    "risks": [
-      "hype‑driven adoption"
-    ],
-    "confidence": 0.6,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 17413,
-    "language": "Go",
-    "score": 59,
-    "action": "Bevaka",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
-  },
-  {
-    "repo": "mattpocock/skills",
-    "url": "https://github.com/mattpocock/skills",
-    "summary_sv": "Personlig samling av komposerbara agent-skills för ingenjörer, designade för att ge kontroll över AI-kodprocesser snarare än att överlåta processen till ramverk.",
-    "project_matches": [
-      {
-        "project": "AI-agent/Codex/ChatGPT-workflow",
-        "reason": "Små, anpassningsbara skills kan inspirera Jonas att strukturera egna Codex/ChatGPT-flöden med bättre kontroll"
-      },
-      {
-        "project": "AI Radar",
-        "reason": "Skill-designprinciper (GSD, BMAD-kritik) kan förbättra radarens analys- och bedömningsprompts"
-      }
-    ],
-    "dimensions": {
-      "project_fit": 15,
-      "concrete_value": 10,
-      "testability": 10,
-      "technical_fit": 5,
-      "repo_quality": 8,
-      "timing": 8
-    },
-    "risks": [
-      "Personlig samling, inte ett underhållet bibliotek; Shell-baserat, långt från Jonas TypeScript/Next.js-stack"
-    ],
-    "confidence": 0.6,
-    "analysis_mode": "model",
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 198740,
-    "language": "Shell",
-    "score": 56,
-    "action": "Bevaka",
-    "first_seen": "2026-08-01",
-    "last_seen": "2026-08-01",
-    "first_recommended": "2026-08-01",
-    "last_analyzed": "2026-08-01",
-    "notified_at": null,
-    "notified_score": null
+    "quality_tier": "exceptional",
+    "failed_quality_gates": [],
+    "ranking_score": 89,
+    "feedback_status": "unreviewed"
   }
 ]

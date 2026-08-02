@@ -1,0 +1,31 @@
+{
+  "quality_status": "healthy",
+  "warning_reasons": [],
+  "candidates": 30,
+  "eligible_before_diversity_cap": 0,
+  "final_ranking_size": 1,
+  "recommendation_rate": 0,
+  "category_concentration": 0,
+  "average_confidence": 0.53,
+  "ranked_average_confidence": 0.85,
+  "match_types": {
+    "exact": 2,
+    "adjacent": 10,
+    "generic": 18,
+    "unknown": 0
+  },
+  "excluded_by_gate": {
+    "exact_match": 28,
+    "project_match": 13,
+    "confidence": 22,
+    "score": 27,
+    "project_fit": 29,
+    "concrete_value": 26,
+    "testability": 6,
+    "model_analysis": 10,
+    "concrete_use_case": 10,
+    "next_step": 10,
+    "differentiator": 10,
+    "evidence": 10
+  }
+}

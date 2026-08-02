@@ -1,14 +1,10 @@
 {
-  "generated_at": "2026-08-01T23:47:24.925Z",
-  "status": "healthy",
+  "generated_at": "2026-08-02T04:45:31.145Z",
+  "status": "idle",
   "configured": true,
-  "smoke_test": {
-    "status": "healthy",
-    "generated_at": "2026-08-01T23:47:24.925Z",
-    "telegram_message_id": 4
-  },
+  "smoke_test": null,
   "delivery": {
-    "generated_at": "2026-08-01T23:47:24.925Z",
+    "generated_at": "2026-08-02T04:45:31.145Z",
     "status": "idle",
     "configured": true,
     "pending_before": 0,
