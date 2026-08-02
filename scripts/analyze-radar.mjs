@@ -180,7 +180,7 @@ export function shouldAnalyze(repo, previous, date, projectContextVersion = null
   return currentStars - previousStars >= Math.max(100, Math.ceil(previousStars * 0.25));
 }
 
-async function analyzeRepos({ repos, context, env, fetchImpl, batchSize }) {
+async function analyzeRepos({ repos, context, env, fetchImpl, batchSize, allowedProjectNames }) {
   const apiKey = env.OPENROUTER_API_KEY || '';
   const model = env.OPENROUTER_MODEL || '';
   const reasons = [];
@@ -206,14 +206,14 @@ async function analyzeRepos({ repos, context, env, fetchImpl, batchSize }) {
       const byRepo = new Map(parsed.map((item) => [String(item?.repo || '').toLowerCase(), item]));
       for (const repo of batch) {
         const raw = byRepo.get(String(repo.full_name).toLowerCase());
-        const errors = raw ? validateAssessment(raw, repo.full_name) : ['missing assessment'];
+        const errors = raw ? validateAssessment(raw, repo.full_name, 'model', allowedProjectNames) : ['missing assessment'];
         if (errors.length) {
           fallbackCount += 1;
           reasons.push(`${repo.full_name}: modellsvaret kunde inte valideras (${errors.join(', ')}).`);
           assessments.push(fallbackAssessment(repo, errors.join(', ')));
         } else {
           modelCount += 1;
-          assessments.push(normalizeAssessment(raw, repo, 'model'));
+          assessments.push(normalizeAssessment(raw, repo, 'model', allowedProjectNames));
         }
       }
     } catch (error) {
@@ -250,6 +250,7 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   const historicalSeen = await loadHistoricalSeen(root, date);
   const configuredContextLimit = Number(env.PROJECT_CONTEXT_MAX_CHARS || 70000);
   const projectCatalog = await loadProjectCatalog(root);
+  const allowedProjectNames = projectCatalog.projects.map((project) => project.display_name);
   const context = await loadAnalysisContext({
     root,
     maxChars: Number.isInteger(configuredContextLimit) ? configuredContextLimit : 70000,
@@ -268,7 +269,14 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
     });
   }
   const batchSize = Math.max(1, Math.min(10, Number(env.ANALYSIS_BATCH_SIZE || 5)));
-  const analyzed = await analyzeRepos({ repos: toAnalyze, context, env, fetchImpl, batchSize });
+  const analyzed = await analyzeRepos({
+    repos: toAnalyze,
+    context,
+    env,
+    fetchImpl,
+    batchSize,
+    allowedProjectNames
+  });
   const analyzedWithProjectContext = analyzed.assessments.map((assessment) => ({
     ...assessment,
     project_context_version: projectCatalog.version
