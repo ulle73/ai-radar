@@ -1,11 +1,6 @@
 name: Daily GitHub Radar
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/manual-radar-trigger
   schedule:
     # 03:15 Swedish time during CEST (01:15 UTC).
     # 02:15 Swedish time during CET.
