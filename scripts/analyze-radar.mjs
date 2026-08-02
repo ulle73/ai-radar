@@ -19,7 +19,7 @@ import {
   classifyQuality,
   eligibleRankingEntries
 } from './lib/quality.mjs';
-import { loadAnalysisContext } from './lib/project-context.mjs';
+import { loadAnalysisContext, loadProjectCatalog } from './lib/project-context.mjs';
 import { renderAllTimeMarkdown, renderDailyMarkdown, renderNotificationsMarkdown } from './lib/render.mjs';
 
 async function readText(root, relativePath, fallback = '') {
@@ -170,9 +170,10 @@ function daysBetween(dateA, dateB) {
   return Math.floor(Math.abs(b - a) / 86400000);
 }
 
-export function shouldAnalyze(repo, previous, date) {
+export function shouldAnalyze(repo, previous, date, projectContextVersion = null) {
   if (!previous) return true;
   if (Number(previous.assessment_version) !== ASSESSMENT_VERSION) return true;
+  if (Number.isInteger(projectContextVersion) && Number(previous.project_context_version) !== projectContextVersion) return true;
   if (!previous.last_analyzed || daysBetween(previous.last_analyzed, date) >= 14) return true;
   const previousStars = Number(previous.stars || 0);
   const currentStars = Number(repo.stargazers_count || 0);
@@ -248,15 +249,17 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   const existingPending = await readJson(root, 'notifications/pending.json', []);
   const historicalSeen = await loadHistoricalSeen(root, date);
   const configuredContextLimit = Number(env.PROJECT_CONTEXT_MAX_CHARS || 70000);
+  const projectCatalog = await loadProjectCatalog(root);
   const context = await loadAnalysisContext({
     root,
-    maxChars: Number.isInteger(configuredContextLimit) ? configuredContextLimit : 70000
+    maxChars: Number.isInteger(configuredContextLimit) ? configuredContextLimit : 70000,
+    catalog: projectCatalog
   });
   const toAnalyze = [];
   const reused = [];
   for (const repo of currentRepos) {
     const previous = previousCatalog.repos?.[String(repo.full_name).toLowerCase()];
-    if (shouldAnalyze(repo, previous, date)) toAnalyze.push(repo);
+    if (shouldAnalyze(repo, previous, date, projectCatalog.version)) toAnalyze.push(repo);
     else reused.push({
       ...previous,
       source_names: repo.source_names || previous.source_names || [],
@@ -266,7 +269,11 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   }
   const batchSize = Math.max(1, Math.min(10, Number(env.ANALYSIS_BATCH_SIZE || 5)));
   const analyzed = await analyzeRepos({ repos: toAnalyze, context, env, fetchImpl, batchSize });
-  const dailyAssessments = [...analyzed.assessments, ...reused].map(enrichQuality);
+  const analyzedWithProjectContext = analyzed.assessments.map((assessment) => ({
+    ...assessment,
+    project_context_version: projectCatalog.version
+  }));
+  const dailyAssessments = [...analyzedWithProjectContext, ...reused].map(enrichQuality);
   const notificationResult = buildNotifications({
     assessments: dailyAssessments,
     previousCatalog,
@@ -289,6 +296,7 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
     quality_status: quality.quality_status,
     reasons: analyzed.reasons,
     quality_warning_reasons: quality.warning_reasons,
+    project_context_version: projectCatalog.version,
     candidates_today: currentRepos.length,
     analyzed_today: toAnalyze.length,
     reused_today: reused.length,
