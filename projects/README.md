@@ -1,44 +1,48 @@
-# Projects
+# AI Radar project catalog
 
-Lägg aktiva projekt här, en markdown-fil per projekt.
+`catalog.json` är den kanoniska källan för vilka av Jonas projekt AI Radar får matcha externa GitHub-repos mot.
 
-Exempel:
+Äldre fristående markdownfiler i denna katalog får ligga kvar som historisk dokumentation, men de laddas inte längre in i modellens matchningskontext.
 
-```txt
-projects/faiv.md
-projects/foretagslistor.md
-projects/stock-signals.md
-projects/socials-v2.md
-projects/byggmedai.md
-projects/dormy-ai.md
-```
+## Viktig underhållsregel
 
-## Rekommenderat format
+Höj rotfältet `version` med ett heltal när en ändring kan påverka hur externa repos bör bedömas. Exempel:
 
-```md
-# Projekt: Projektnamn
+- ett nytt projekt läggs till eller ett projekt tas bort,
+- prioritet eller `notification_tier` ändras,
+- en norrstjärna, affärsmodell eller målgrupp ändras väsentligt,
+- nya aktuella behov eller tillväxtmotorer läggs till,
+- `exact_match_requirements` eller `negative_matches` ändras,
+- ett projekt byter central teknisk plattform.
 
-## Status
-Aktivt / pausat / idé / kundprojekt
+Varje bedömt externt repo sparar `project_context_version`. När katalogens `version` inte matchar den sparade versionen kör AI Radar om bedömningen vid nästa analys, även om repot annars är tillräckligt färskt för att återanvändas.
 
-## Kort beskrivning
-Vad projektet gör och varför det finns.
+Små stavningsrättningar som inte ändrar betydelsen kräver normalt ingen versionshöjning.
 
-## Mål
-Vad projektet ska uppnå.
+## Projektnamn
 
-## Stack
-Teknik, tjänster, hosting, datakällor.
+Modellsvar måste använda exakt `display_name` från katalogen. Alias används endast för förståelse och discovery; de är inte giltiga värden i `project_matches`.
 
-## Viktiga constraints
-Saker AI-radarn måste förstå innan den rekommenderar verktyg.
+## Exact-match
 
-## Relevanta GitHub-kategorier
-Exempel: Next.js, Supabase, WordPress, WooCommerce, Stripe, scraping, trading indicators.
+Gemensam teknik, bransch eller ämnesord räcker aldrig. En exact-match måste kunna kopplas till minst ett konkret:
 
-## Vad som vore värdefullt att hitta
-Exempel: bättre admin-UI, bättre scraping, bättre produkttext-agent, bättre charting-bibliotek.
+- `current_need`,
+- `core_workflow`,
+- `growth_lever`,
+- `exact_match_requirement`,
+- utvecklingsarbete eller databehov som uttryckligen beskrivs i profilen.
 
-## Vad som inte är relevant
-Saker radarn ska ignorera.
-```
+## Obligatoriska profilområden
+
+Varje projektprofil ska beskriva:
+
+- identitet, prioritet, repoalias och notifieringsnivå,
+- produkt, norrstjärna, affärsmodell och målgrupper,
+- befintliga funktioner och arbetsflöden,
+- aktuella behov och tillväxtmotorer,
+- teknisk stack,
+- värdefulla matchningsområden och discovery-termer,
+- negativa matchningar,
+- kraven för exact-match,
+- vad Telegram-notisen ska fokusera på.
