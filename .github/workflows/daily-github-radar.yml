@@ -12,6 +12,11 @@ on:
         required: false
         default: false
         type: boolean
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/manual-radar-trigger"
 
 permissions:
   contents: write
