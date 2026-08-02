@@ -282,9 +282,8 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   const batchSize = Math.max(1, Math.min(10, Number(env.ANALYSIS_BATCH_SIZE || 5)));
   const analyzed = await analyzeRepos({ repos: toAnalyze, context, env, fetchImpl, batchSize });
   const dailyAssessments = [...analyzed.assessments, ...reused].map(enrichQuality);
-  const newlyAnalyzed = analyzed.assessments.map(enrichQuality);
   const notificationResult = buildNotifications({
-    assessments: newlyAnalyzed,
+    assessments: dailyAssessments,
     previousCatalog,
     historicalSeen,
     existingPending: Array.isArray(existingPending) ? existingPending : [],
