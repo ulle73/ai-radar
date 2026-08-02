@@ -22,7 +22,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 12039,
+      "stars": 12095,
       "language": "PowerShell",
       "score": 39,
       "action": "Arkiv",
@@ -74,7 +74,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 114314,
+      "stars": 114335,
       "language": "Jupyter Notebook",
       "score": 35,
       "action": "Arkiv",
@@ -126,7 +126,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 9973,
+      "stars": 9986,
       "language": "Python",
       "score": 32,
       "action": "Arkiv",
@@ -179,7 +179,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 57595,
+      "stars": 57719,
       "language": "Jupyter Notebook",
       "score": 35,
       "action": "Arkiv",
@@ -236,7 +236,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 70125,
+      "stars": 70135,
       "language": "Python",
       "score": 56,
       "action": "Arkiv",
@@ -287,7 +287,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 11823,
+      "stars": 11842,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
@@ -342,7 +342,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 10258,
+      "stars": 10274,
       "language": "Python",
       "score": 60,
       "action": "Arkiv",
@@ -397,7 +397,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 5748,
+      "stars": 5769,
       "language": "TypeScript",
       "score": 44,
       "action": "Arkiv",
@@ -446,7 +446,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 21657,
+      "stars": 21669,
       "language": "Crystal",
       "score": 17,
       "action": "Arkiv",
@@ -502,7 +502,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 12327,
+      "stars": 12350,
       "language": "Python",
       "score": 54,
       "action": "Arkiv",
@@ -557,7 +557,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17547,
+      "stars": 17574,
       "language": "Go",
       "score": 51,
       "action": "Arkiv",
@@ -614,7 +614,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 15309,
+      "stars": 15324,
       "language": "Python",
       "score": 55,
       "action": "Arkiv",
@@ -671,7 +671,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 14926,
+      "stars": 14964,
       "language": "Python",
       "score": 55,
       "action": "Arkiv",
@@ -728,7 +728,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 20557,
+      "stars": 20585,
       "language": "Rust",
       "score": 51,
       "action": "Arkiv",
@@ -780,7 +780,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 33992,
+      "stars": 34004,
       "language": "Swift",
       "score": 23,
       "action": "Arkiv",
@@ -839,7 +839,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 46413,
+      "stars": 46423,
       "language": "TypeScript",
       "score": 58,
       "action": "Arkiv",
@@ -900,7 +900,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 4867,
+      "stars": 4871,
       "language": "TypeScript",
       "score": 57.374701139116056,
       "action": "Arkiv",
@@ -952,7 +952,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 20625,
+      "stars": 20630,
       "language": "TypeScript",
       "score": 30,
       "action": "Arkiv",
@@ -1011,7 +1011,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 14989,
+      "stars": 15000,
       "language": "Rust",
       "score": 51,
       "action": "Arkiv",
@@ -1072,7 +1072,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7429,
+      "stars": 7439,
       "language": "JavaScript",
       "score": 58.74197762752115,
       "action": "Arkiv",
@@ -1133,7 +1133,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 384859,
+      "stars": 384863,
       "language": "TypeScript",
       "score": 74,
       "action": "Arkiv",
@@ -1195,7 +1195,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 5244,
+      "stars": 5318,
       "language": "TypeScript",
       "score": 89,
       "action": "Testa nu",
@@ -1203,8 +1203,8 @@
       "last_seen": "2026-08-02",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
-      "notified_at": null,
-      "notified_score": null,
+      "notified_at": "2026-08-02",
+      "notified_score": 89,
       "assessment_version": 2,
       "match_type": "exact",
       "category": "kort-stabil-kategori",
@@ -1240,7 +1240,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3135,
+      "stars": 3150,
       "language": "TypeScript",
       "score": 27,
       "action": "Arkiv",
@@ -1298,7 +1298,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 7832,
+      "stars": 7834,
       "language": null,
       "score": 64,
       "action": "Arkiv",
@@ -1358,7 +1358,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 236858,
+      "stars": 236864,
       "language": "JavaScript",
       "score": 83,
       "action": "Arkiv",
@@ -1406,7 +1406,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 199119,
+      "stars": 199161,
       "language": "Shell",
       "score": 52,
       "action": "Arkiv",
@@ -1457,7 +1457,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 264839,
+      "stars": 264853,
       "language": "Shell",
       "score": 50,
       "action": "Arkiv",
@@ -1508,7 +1508,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 223908,
+      "stars": 223924,
       "language": "Python",
       "score": 50,
       "action": "Arkiv",
@@ -1564,7 +1564,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 138074,
+      "stars": 138079,
       "language": "Shell",
       "score": 79,
       "action": "Arkiv",
@@ -1661,7 +1661,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 848,
+      "stars": 905,
       "language": "TypeScript",
       "score": 59,
       "action": "Arkiv",

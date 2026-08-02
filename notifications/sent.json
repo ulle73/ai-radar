@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "notification_id": "yc-software/qm:first_exceptional_match:2026-08-02:89",
+    "repo": "yc-software/qm",
+    "score": 89,
+    "sent_at": "2026-08-02T05:47:51.371Z",
+    "telegram_message_id": 5
+  }
+]

@@ -2,10 +2,10 @@
   "quality_status": "healthy",
   "warning_reasons": [],
   "candidates": 30,
-  "eligible_before_diversity_cap": 0,
+  "eligible_before_diversity_cap": 1,
   "final_ranking_size": 1,
-  "recommendation_rate": 0,
-  "category_concentration": 0,
+  "recommendation_rate": 0.033,
+  "category_concentration": 1,
   "average_confidence": 0.53,
   "ranked_average_confidence": 0.85,
   "match_types": {

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-02T04:45:31.145Z",
-  "status": "idle",
+  "generated_at": "2026-08-02T05:47:51.371Z",
+  "status": "healthy",
   "configured": true,
   "smoke_test": null,
   "delivery": {
-    "generated_at": "2026-08-02T04:45:31.145Z",
-    "status": "idle",
+    "generated_at": "2026-08-02T05:47:51.371Z",
+    "status": "healthy",
     "configured": true,
-    "pending_before": 0,
-    "attempted": 0,
-    "sent": 0,
+    "pending_before": 1,
+    "attempted": 1,
+    "sent": 1,
     "failed": 0,
     "deduplicated": 0,
     "pending_after": 0

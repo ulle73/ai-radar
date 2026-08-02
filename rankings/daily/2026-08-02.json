@@ -17,6 +17,19 @@
     ],
     "confidence": 0.3,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 12095,
+    "language": "PowerShell",
+    "score": 39,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "cybersecurity-ai-tool",
@@ -28,13 +41,6 @@
       "Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients",
       "Stars: 12039"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 12039,
-    "language": "PowerShell",
-    "score": 39,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -63,6 +69,19 @@
     ],
     "confidence": 0.25,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 114335,
+    "language": "Jupyter Notebook",
+    "score": 35,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "ai-learning-resource",
@@ -74,13 +93,6 @@
       "Stars: 114314",
       "Forks: 61234"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 114314,
-    "language": "Jupyter Notebook",
-    "score": 35,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -109,6 +121,19 @@
     ],
     "confidence": 0.2,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 9986,
+    "language": "Python",
+    "score": 32,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "3d-generativ-ai-modell",
@@ -120,13 +145,6 @@
       "Stars: 9973",
       "Forks: 1202"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 9973,
-    "language": "Python",
-    "score": 32,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -156,6 +174,19 @@
     ],
     "confidence": 0.25,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 57719,
+    "language": "Jupyter Notebook",
+    "score": 35,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "ai-utbildningskurs",
@@ -167,13 +198,6 @@
       "Stars: 57595",
       "Forks: 11393"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 57595,
-    "language": "Jupyter Notebook",
-    "score": 35,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -207,6 +231,19 @@
     ],
     "confidence": 0.5,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 70135,
+    "language": "Python",
+    "score": 56,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "it-automation-tool",
@@ -218,13 +255,6 @@
       "Stars: 70125",
       "Forks: 24271"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 70125,
-    "language": "Python",
-    "score": 56,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -252,6 +282,19 @@
     ],
     "confidence": 0.8,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 11842,
+    "language": "Python",
+    "score": 33,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "multimedia-ai",
@@ -262,13 +305,6 @@
       "Features key TTS and zero-shot Voice Cloning",
       "Includes Whisper audio processing and YouTube download"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 11823,
-    "language": "Python",
-    "score": 33,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -301,6 +337,19 @@
     ],
     "confidence": 0.7,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 10274,
+    "language": "Python",
+    "score": 60,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "ai-agent-infrastructure",
@@ -311,13 +360,6 @@
       "Low-latency, fully modular voice-agent pipeline",
       "OpenAI Realtime-compatible WebSocket API"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 10258,
-    "language": "Python",
-    "score": 60,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -350,6 +392,19 @@
     ],
     "confidence": 0.9,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 5769,
+    "language": "TypeScript",
+    "score": 44,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "productivity-tools",
@@ -360,13 +415,6 @@
       "Open source project management that works for you, not against you",
       "Built on principle that less is more"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 5748,
-    "language": "TypeScript",
-    "score": 44,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -393,6 +441,19 @@
     ],
     "confidence": 1,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 21669,
+    "language": "Crystal",
+    "score": 17,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "media-tools",
@@ -403,13 +464,6 @@
       "An alternative front-end to YouTube",
       "Open source"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 21657,
-    "language": "Crystal",
-    "score": 17,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -443,6 +497,19 @@
     ],
     "confidence": 0.9,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 12350,
+    "language": "Python",
+    "score": 54,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "trading-research",
@@ -453,13 +520,6 @@
       "Curated list of awesome libraries, packages, strategies, books, blogs, tutorials",
       "Covers research and live trading"
     ],
-    "source_names": [
-      "GitHub Trending – daily"
-    ],
-    "stars": 12327,
-    "language": "Python",
-    "score": 54,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -492,6 +552,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 17574,
+    "language": "Go",
+    "score": 51,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -499,13 +572,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 17547,
-    "language": "Go",
-    "score": 51,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -543,6 +609,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 15324,
+    "language": "Python",
+    "score": 55,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -550,13 +629,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 15309,
-    "language": "Python",
-    "score": 55,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -594,6 +666,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 14964,
+    "language": "Python",
+    "score": 55,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -601,13 +686,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 14926,
-    "language": "Python",
-    "score": 55,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -645,6 +723,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 20585,
+    "language": "Rust",
+    "score": 51,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -652,13 +743,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 20557,
-    "language": "Rust",
-    "score": 51,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -691,6 +775,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 34004,
+    "language": "Swift",
+    "score": 23,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "uncategorized",
@@ -698,13 +795,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 33992,
-    "language": "Swift",
-    "score": 23,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -744,6 +834,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 46423,
+    "language": "TypeScript",
+    "score": 58,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -751,13 +854,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 46413,
-    "language": "TypeScript",
-    "score": 58,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -799,6 +895,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 4871,
+    "language": "TypeScript",
+    "score": 57.374701139116056,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -806,13 +915,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 4867,
-    "language": "TypeScript",
-    "score": 57.374701139116056,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -850,6 +952,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 15000,
+    "language": "Rust",
+    "score": 51,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -857,13 +972,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 14989,
-    "language": "Rust",
-    "score": 51,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -896,6 +1004,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 20630,
+    "language": "TypeScript",
+    "score": 30,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "uncategorized",
@@ -903,13 +1024,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 20625,
-    "language": "TypeScript",
-    "score": 30,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -953,6 +1067,19 @@
     ],
     "confidence": 0.35,
     "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 7439,
+    "language": "JavaScript",
+    "score": 58.74197762752115,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "agent-workflow",
@@ -960,13 +1087,6 @@
     "next_step": "",
     "differentiator": "",
     "evidence": [],
-    "source_names": [
-      "GitHub Trending – weekly"
-    ],
-    "stars": 7429,
-    "language": "JavaScript",
-    "score": 58.74197762752115,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "model_analysis",
@@ -1012,6 +1132,19 @@
     ],
     "confidence": 0.85,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 5318,
+    "language": "TypeScript",
+    "score": 89,
+    "action": "Testa nu",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "exact",
     "category": "kort-stabil-kategori",
@@ -1023,13 +1156,6 @@
       "Stöd för flera modeller (Codex, Claude etc) i samma system",
       "Slack och webbgränssnitt med samma identitet"
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 5244,
-    "language": "TypeScript",
-    "score": 89,
-    "action": "Testa nu",
     "quality_tier": "exceptional",
     "failed_quality_gates": []
   },
@@ -1060,6 +1186,19 @@
     ],
     "confidence": 0.75,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 384863,
+    "language": "TypeScript",
+    "score": 74,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "kort-stabil-kategori",
@@ -1071,13 +1210,6 @@
       "Stöd för röst och textkanaler",
       "Open-source med MIT-licens"
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 384859,
-    "language": "TypeScript",
-    "score": 74,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1108,6 +1240,19 @@
     ],
     "confidence": 0.7,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 7834,
+    "language": null,
+    "score": 64,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "kort-stabil-kategori",
@@ -1119,13 +1264,6 @@
       "Stöd för API-anrop",
       "Multimodal förmåga (text, bild etc)"
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 7832,
-    "language": null,
-    "score": 64,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1153,6 +1291,19 @@
     ],
     "confidence": 0.6,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 3150,
+    "language": "TypeScript",
+    "score": 27,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "generic",
     "category": "kort-stabil-kategori",
@@ -1164,13 +1315,6 @@
       "Stöd för filer upp till 64 MB",
       "SHA-256-verifiering"
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 3135,
-    "language": "TypeScript",
-    "score": 27,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1209,6 +1353,19 @@
     ],
     "confidence": 0.8,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 236864,
+    "language": "JavaScript",
+    "score": 83,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "kort-stabil-kategori",
@@ -1220,13 +1377,6 @@
       "Säkerhetsfunktioner och minneshantering",
       "Stark community och stjärnor"
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 236858,
-    "language": "JavaScript",
-    "score": 83,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1251,6 +1401,19 @@
     ],
     "confidence": 0.55,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 199161,
+    "language": "Shell",
+    "score": 52,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "agent-skills",
@@ -1261,13 +1424,6 @@
       "My agent skills that I use every day to do real engineering - not vibe coding.",
       "skills.sh copies editable skill files into your project, so you can hack on them and make them your own."
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 199119,
-    "language": "Shell",
-    "score": 52,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1296,6 +1452,19 @@
     ],
     "confidence": 0.55,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 264853,
+    "language": "Shell",
+    "score": 50,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "agent-framework",
@@ -1306,13 +1475,6 @@
       "Superpowers is a complete software development methodology for your coding agents.",
       "After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer..."
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 264839,
-    "language": "Shell",
-    "score": 50,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1354,7 +1516,7 @@
     "source_names": [
       "GitHub Search API"
     ],
-    "stars": 848,
+    "stars": 905,
     "language": "TypeScript",
     "score": 59,
     "action": "Arkiv",
@@ -1366,7 +1528,13 @@
       "score",
       "project_fit",
       "concrete_value"
-    ]
+    ],
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null
   },
   {
     "repo": "NousResearch/hermes-agent",
@@ -1386,6 +1554,19 @@
     ],
     "confidence": 0.5,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 223924,
+    "language": "Python",
+    "score": 50,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "adjacent",
     "category": "self-improving-ai-agent",
@@ -1396,13 +1577,6 @@
       "It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use.",
       "Nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions."
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 223908,
-    "language": "Python",
-    "score": 50,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "exact_match",
@@ -1436,6 +1610,19 @@
     ],
     "confidence": 0.8,
     "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 138079,
+    "language": "Shell",
+    "score": 79,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-02",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-02",
+    "notified_at": null,
+    "notified_score": null,
     "assessment_version": 2,
     "match_type": "exact",
     "category": "ai-agency",
@@ -1446,13 +1633,6 @@
       "Agency Agents app is a native app for macOS, Linux & Windows that browses the entire roster and installs it into Claude Code, Cursor, Codex, Gemini, Osaurus, and more — with a click.",
       "Each agent is a specialized expert with personality, processes, and proven deliverables."
     ],
-    "source_names": [
-      "GitHub Search API"
-    ],
-    "stars": 138074,
-    "language": "Shell",
-    "score": 79,
-    "action": "Arkiv",
     "quality_tier": "archive",
     "failed_quality_gates": [
       "project_fit"

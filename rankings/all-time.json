@@ -33,7 +33,7 @@
     "source_names": [
       "GitHub Search API"
     ],
-    "stars": 5244,
+    "stars": 5318,
     "language": "TypeScript",
     "score": 89,
     "action": "Testa nu",
@@ -41,8 +41,8 @@
     "last_seen": "2026-08-02",
     "first_recommended": "2026-08-01",
     "last_analyzed": "2026-08-02",
-    "notified_at": null,
-    "notified_score": null,
+    "notified_at": "2026-08-02",
+    "notified_score": 89,
     "assessment_version": 2,
     "match_type": "exact",
     "category": "kort-stabil-kategori",
