@@ -14,6 +14,7 @@ import {
 import { buildAllTimeRanking, buildNotifications, capRankingActions, upsertCatalog } from '../scripts/lib/catalog.mjs';
 import { renderAllTimeMarkdown, renderDailyMarkdown, renderNotificationsMarkdown } from '../scripts/lib/render.mjs';
 import { runAnalyzer } from '../scripts/analyze-radar.mjs';
+import { writeCanonicalProjectCatalog } from './helpers/project-context-fixture.mjs';
 
 const dimensions = { project_fit: 26, concrete_value: 17, testability: 12, technical_fit: 13, repo_quality: 8, timing: 9 };
 
@@ -205,6 +206,7 @@ test('analyzer keeps fallback results in history but out of the permanent rankin
   await writeJson(path.join(root, 'data/latest.json'), { meta: { date: '2026-08-01' }, repos: [repo] });
   await writeJson(path.join(root, 'data/raw/2026-07-31.json'), { repos: [repo] });
   await writeFile(path.join(root, 'GOALS.md'), '# Goals\nPrioritera FAIV och konkreta verktyg.');
+  await writeCanonicalProjectCatalog(root);
   const result = await runAnalyzer({ root, env: {}, now: new Date('2026-08-01T08:00:00Z'), fetchImpl: async () => { throw new Error('fetch should not be called'); } });
   assert.equal(result.status.status, 'degraded');
   assert.equal(result.notifications.length, 0);

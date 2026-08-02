@@ -19,6 +19,7 @@ import {
   classifyQuality,
   eligibleRankingEntries
 } from './lib/quality.mjs';
+import { loadAnalysisContext, loadProjectCatalog } from './lib/project-context.mjs';
 import { renderAllTimeMarkdown, renderDailyMarkdown, renderNotificationsMarkdown } from './lib/render.mjs';
 
 async function readText(root, relativePath, fallback = '') {
@@ -41,29 +42,6 @@ async function writeText(root, relativePath, value) {
   const filePath = path.join(root, relativePath);
   await mkdir(path.dirname(filePath), { recursive: true });
   await writeFile(filePath, value, 'utf8');
-}
-
-async function readMarkdownFiles(root, relativeDir) {
-  try {
-    const absoluteDir = path.join(root, relativeDir);
-    const entries = await readdir(absoluteDir, { withFileTypes: true });
-    const chunks = [];
-    for (const entry of entries.filter((item) => item.isFile() && item.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name))) {
-      const relativePath = path.posix.join(relativeDir.replaceAll('\\', '/'), entry.name);
-      chunks.push(`\n--- ${relativePath} ---\n${await readText(root, relativePath)}`);
-    }
-    return chunks.join('\n');
-  } catch { return ''; }
-}
-
-async function loadContext(root) {
-  const parts = [
-    await readText(root, 'GOALS.md'),
-    await readMarkdownFiles(root, 'projects'),
-    await readMarkdownFiles(root, 'ideas'),
-    await readMarkdownFiles(root, 'chatgpt-genererade-ideer/candidates')
-  ].filter(Boolean);
-  return parts.join('\n').slice(0, 32000);
 }
 
 async function loadHistoricalSeen(root, currentDate) {
@@ -103,7 +81,7 @@ Schema per objekt:
 {
   "repo": "owner/name",
   "summary_sv": "en konkret svensk mening om vad repot faktiskt gör",
-  "project_matches": [{"project":"exakt projektnamn från kontexten","reason":"konkret orsak-verkan för projektet"}],
+  "project_matches": [{"project":"exakt display_name från projects/catalog.json","reason":"konkret orsak-verkan för projektet"}],
   "match_type": "exact | adjacent | generic",
   "category": "kort-stabil-kategori",
   "concrete_use_case": "exakt vad Jonas kan göra i det namngivna projektet",
@@ -123,18 +101,21 @@ Schema per objekt:
 }
 
 MATCH_TYPE:
-- exact: repot löser ett konkret problem eller möjliggör ett konkret arbetsflöde i ett NAMNGIVET aktivt projekt.
+- exact: repot löser ett konkret problem, förbättrar ett befintligt arbetsflöde, möjliggör en definierad tillväxtmotor eller ersätter konkret utvecklingsarbete i ett NAMNGIVET aktivt projekt.
 - adjacent: det är relevant för området men nyttan kräver flera antaganden, större ombyggnad eller saknar tydligt aktuellt behov.
 - generic: generell AI/agent/devtool-nytta, inspiration eller hype utan unik direkt projektnytta.
 
 HÅRDA REGLER:
 - Var mycket skeptisk. De flesta repos ska vara adjacent eller generic.
-- Använd exact endast när concrete_use_case, next_step och differentiator är specifika och stöds av evidence.
+- project_matches.project måste vara exakt ett display_name som finns i projects/catalog.json. Hitta inte på projektnamn och använd inte repoalias som projektnamn.
+- Använd exact endast när concrete_use_case, next_step och differentiator är specifika, stöds av evidence och kan knytas till current_needs, core_workflows, growth_levers eller exact_match_requirements i projektprofilen.
+- Gemensam teknik, stack, bransch eller ämnesord räcker aldrig för exact.
+- För projekt med notification_tier=strict krävs direkt koppling till ett aktuellt produkt-, publik- eller intäktsmål; allmän framtida potential är adjacent.
 - Ord som AI, agent, Codex, automation, memory eller MCP räcker aldrig för exact.
 - Många stars påverkar repo_quality men får inte höja project_fit eller concrete_value.
 - Om ett repo liknar verktyg Jonas redan använder måste differentiator beskriva en verklig fördel; annars adjacent/generic.
 - Ett repo som endast kan vara "bra att känna till" är generic.
-- Tradingverktyg får bara vara researchinspiration, inte beslutsmotor.
+- Trading- och bettingverktyg får bara vara transparent och testbar researchinspiration, aldrig obevisad beslutsmotor.
 - Max tre project_matches. Använd tom array när ingen konkret match finns.
 - Hitta inte på funktioner som inte stöds av README/metadata.
 - Inga markdownstaket och ingen förklaring utanför JSON.
@@ -158,7 +139,7 @@ async function callOpenRouter({ fetchImpl, apiKey, model, prompt, baseUrl, siteU
     body: JSON.stringify({
       model,
       messages: [
-        { role: 'system', content: 'Return only valid JSON. Do not include chain of thought or markdown. Be conservative: generic relevance is not an exact project match.' },
+        { role: 'system', content: 'Return only valid JSON. Do not include chain of thought or markdown. Be conservative: shared technology is not an exact project match.' },
         { role: 'user', content: prompt }
       ],
       temperature: 0.05,
@@ -189,16 +170,17 @@ function daysBetween(dateA, dateB) {
   return Math.floor(Math.abs(b - a) / 86400000);
 }
 
-export function shouldAnalyze(repo, previous, date) {
+export function shouldAnalyze(repo, previous, date, projectContextVersion = null) {
   if (!previous) return true;
   if (Number(previous.assessment_version) !== ASSESSMENT_VERSION) return true;
+  if (Number.isInteger(projectContextVersion) && Number(previous.project_context_version) !== projectContextVersion) return true;
   if (!previous.last_analyzed || daysBetween(previous.last_analyzed, date) >= 14) return true;
   const previousStars = Number(previous.stars || 0);
   const currentStars = Number(repo.stargazers_count || 0);
   return currentStars - previousStars >= Math.max(100, Math.ceil(previousStars * 0.25));
 }
 
-async function analyzeRepos({ repos, context, env, fetchImpl, batchSize }) {
+async function analyzeRepos({ repos, context, env, fetchImpl, batchSize, allowedProjectNames }) {
   const apiKey = env.OPENROUTER_API_KEY || '';
   const model = env.OPENROUTER_MODEL || '';
   const reasons = [];
@@ -224,14 +206,14 @@ async function analyzeRepos({ repos, context, env, fetchImpl, batchSize }) {
       const byRepo = new Map(parsed.map((item) => [String(item?.repo || '').toLowerCase(), item]));
       for (const repo of batch) {
         const raw = byRepo.get(String(repo.full_name).toLowerCase());
-        const errors = raw ? validateAssessment(raw, repo.full_name) : ['missing assessment'];
+        const errors = raw ? validateAssessment(raw, repo.full_name, 'model', allowedProjectNames) : ['missing assessment'];
         if (errors.length) {
           fallbackCount += 1;
           reasons.push(`${repo.full_name}: modellsvaret kunde inte valideras (${errors.join(', ')}).`);
           assessments.push(fallbackAssessment(repo, errors.join(', ')));
         } else {
           modelCount += 1;
-          assessments.push(normalizeAssessment(raw, repo, 'model'));
+          assessments.push(normalizeAssessment(raw, repo, 'model', allowedProjectNames));
         }
       }
     } catch (error) {
@@ -266,12 +248,19 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
   const feedback = await readJson(root, 'state/feedback.json', {});
   const existingPending = await readJson(root, 'notifications/pending.json', []);
   const historicalSeen = await loadHistoricalSeen(root, date);
-  const context = await loadContext(root);
+  const configuredContextLimit = Number(env.PROJECT_CONTEXT_MAX_CHARS || 70000);
+  const projectCatalog = await loadProjectCatalog(root);
+  const allowedProjectNames = projectCatalog.projects.map((project) => project.display_name);
+  const context = await loadAnalysisContext({
+    root,
+    maxChars: Number.isInteger(configuredContextLimit) ? configuredContextLimit : 70000,
+    catalog: projectCatalog
+  });
   const toAnalyze = [];
   const reused = [];
   for (const repo of currentRepos) {
     const previous = previousCatalog.repos?.[String(repo.full_name).toLowerCase()];
-    if (shouldAnalyze(repo, previous, date)) toAnalyze.push(repo);
+    if (shouldAnalyze(repo, previous, date, projectCatalog.version)) toAnalyze.push(repo);
     else reused.push({
       ...previous,
       source_names: repo.source_names || previous.source_names || [],
@@ -280,8 +269,19 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
     });
   }
   const batchSize = Math.max(1, Math.min(10, Number(env.ANALYSIS_BATCH_SIZE || 5)));
-  const analyzed = await analyzeRepos({ repos: toAnalyze, context, env, fetchImpl, batchSize });
-  const dailyAssessments = [...analyzed.assessments, ...reused].map(enrichQuality);
+  const analyzed = await analyzeRepos({
+    repos: toAnalyze,
+    context,
+    env,
+    fetchImpl,
+    batchSize,
+    allowedProjectNames
+  });
+  const analyzedWithProjectContext = analyzed.assessments.map((assessment) => ({
+    ...assessment,
+    project_context_version: projectCatalog.version
+  }));
+  const dailyAssessments = [...analyzedWithProjectContext, ...reused].map(enrichQuality);
   const notificationResult = buildNotifications({
     assessments: dailyAssessments,
     previousCatalog,
@@ -304,6 +304,7 @@ export async function runAnalyzer({ root = process.cwd(), env = process.env, fet
     quality_status: quality.quality_status,
     reasons: analyzed.reasons,
     quality_warning_reasons: quality.warning_reasons,
+    project_context_version: projectCatalog.version,
     candidates_today: currentRepos.length,
     analyzed_today: toAnalyze.length,
     reused_today: reused.length,

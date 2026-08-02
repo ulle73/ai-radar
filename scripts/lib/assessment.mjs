@@ -20,6 +20,11 @@ function text(value) {
   return String(value || '').trim();
 }
 
+function canonicalProjectNames(values) {
+  if (!Array.isArray(values)) return null;
+  return new Set(values.map(text).filter(Boolean));
+}
+
 export function scoreAssessment(assessment) {
   const dimensions = assessment?.dimensions || {};
   return Object.entries(DIMENSION_LIMITS).reduce((sum, [key, max]) => {
@@ -54,12 +59,24 @@ export function parseModelJson(value) {
   throw new Error('Could not parse JSON from model response');
 }
 
-export function validateAssessment(raw, expectedRepo, analysisMode = 'model') {
+export function validateAssessment(raw, expectedRepo, analysisMode = 'model', allowedProjectNames = null) {
   const errors = [];
   if (!raw || typeof raw !== 'object') return ['assessment must be an object'];
   if (text(raw.repo).toLowerCase() !== text(expectedRepo).toLowerCase()) errors.push(`repo must equal ${expectedRepo}`);
   if (!text(raw.summary_sv)) errors.push('summary_sv is required');
-  if (!Array.isArray(raw.project_matches)) errors.push('project_matches must be an array');
+  if (!Array.isArray(raw.project_matches)) {
+    errors.push('project_matches must be an array');
+  } else {
+    const allowed = canonicalProjectNames(allowedProjectNames);
+    if (allowed) {
+      for (const match of raw.project_matches) {
+        const projectName = text(match?.project);
+        if (projectName && !allowed.has(projectName)) {
+          errors.push(`project_matches project must use a canonical display_name: ${projectName}`);
+        }
+      }
+    }
+  }
   if (!MATCH_TYPES.has(raw.match_type)) errors.push('match_type must be exact, adjacent or generic');
   if (!text(raw.category)) errors.push('category is required');
   if (!raw.dimensions || typeof raw.dimensions !== 'object') errors.push('dimensions must be an object');
@@ -84,8 +101,8 @@ export function validateAssessment(raw, expectedRepo, analysisMode = 'model') {
   return errors;
 }
 
-export function normalizeAssessment(raw, repo, analysisMode = 'model') {
-  const errors = validateAssessment(raw, repo.full_name, analysisMode);
+export function normalizeAssessment(raw, repo, analysisMode = 'model', allowedProjectNames = null) {
+  const errors = validateAssessment(raw, repo.full_name, analysisMode, allowedProjectNames);
   if (errors.length) throw new Error(`${repo.full_name}: ${errors.join('; ')}`);
   const dimensions = {};
   for (const [key, max] of Object.entries(DIMENSION_LIMITS)) dimensions[key] = clamp(raw.dimensions[key], 0, max);
@@ -134,19 +151,19 @@ export function fallbackAssessment(repo, reason = 'fallback') {
     category = 'ecommerce-content';
   }
   if (includesAny(searchable, ['agent', 'codex', 'claude', 'mcp', 'memory', 'workflow', 'developer productivity'])) {
-    matches.push({ project: 'AI-agent/Codex-workflow', reason: 'Kan förbättra agent- eller utvecklarflöden.' });
+    matches.push({ project: 'AI Radar', reason: 'Kan förbättra agent-, analys- eller utvecklarflöden i radarn.' });
     projectFit = Math.max(projectFit, 18);
     concreteValue = Math.max(concreteValue, 9);
     if (category === 'uncategorized') category = 'agent-workflow';
   }
   if (includesAny(searchable, ['scraping', 'crawler', 'lead generation', 'data pipeline', 'etl', 'browser automation'])) {
-    matches.push({ project: 'företagslistor/nyabolaget', reason: 'Kan stödja datainsamling eller automatisering.' });
+    matches.push({ project: 'Nyabolaget-ekosystemet', reason: 'Kan stödja datainsamling, företagsdata eller automatisering.' });
     projectFit = Math.max(projectFit, 18);
     concreteValue = Math.max(concreteValue, 10);
     if (category === 'uncategorized') category = 'data-automation';
   }
   if (includesAny(searchable, ['trading', 'market data', 'stock', 'equity', 'indicator'])) {
-    matches.push({ project: 'stock-signals', reason: 'Kan vara researchinspiration, inte beslutsmotor.' });
+    matches.push({ project: 'Stock Signals', reason: 'Kan vara transparent researchinspiration, inte beslutsmotor.' });
     projectFit = Math.max(projectFit, 12);
     concreteValue = Math.max(concreteValue, 5);
     if (category === 'uncategorized') category = 'market-research';

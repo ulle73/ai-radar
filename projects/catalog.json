@@ -1,0 +1,1095 @@
+{
+  "version": 1,
+  "updated_at": "2026-08-02",
+  "matching_policy": {
+    "purpose": "Matcha externa GitHub-repos mot Jonas faktiska aktiva projekt, affärsmål, befintliga system och nuvarande behov.",
+    "exact_match_rule": "En exact-match måste lösa ett namngivet problem, förbättra ett befintligt arbetsflöde, möjliggöra en definierad tillväxtmotor eller ersätta konkret utvecklingsarbete. Gemensam teknik eller ämnesord räcker inte.",
+    "avoid_rule": "Rekommendera inte generiska agent-, AI-, dashboard-, scraper- eller SaaS-repos enbart för att de använder samma stack eller verkar tekniskt imponerande.",
+    "project_name_rule": "Använd alltid exakt display_name från denna katalog i project_matches.",
+    "notification_rule": "Primära projekt får notifiera vid exceptionell exact-match. Projekt med notification_tier=strict kräver dessutom att nyttan är direkt kopplad till ett aktuellt produkt- eller intäktsmål."
+  },
+  "projects": [
+    {
+      "id": "golfkuponger",
+      "display_name": "Golfkuponger",
+      "priority": 1,
+      "notification_tier": "primary",
+      "status": "Aktiv verksamhet och Jonas nya arbete",
+      "main_repos": [],
+      "support_repos": [],
+      "aliases": [
+        "golfkuponger.se",
+        "Svenska Golfkuponger AB",
+        "Golfkuponger Shopify",
+        "Golfkuponger app",
+        "Golfkuponger partnerportal"
+      ],
+      "description": "Shopify-baserad golfvärdesplattform för privatpersoner och företag. Kunder köper digitala värdebevis som kan användas för golf hos 300+ svenska golfklubbar; företag kan även köpa fysiska kuponger och större företagspaket. Försäljningen sker direkt, via friskvårds- och förmånsportaler samt genom företagsaffärer. App och partnerflöden används redan för att hitta klubbar och hantera användning/inlösen.",
+      "north_star": "Öka intäkterna genom fler kunder, högre Shopify-konvertering, större företagsaffärer, mer friskvårdsförsäljning, fler återköp, bredare distribution och ett starkare klubb- och partnernätverk.",
+      "business_model": "Direktförsäljning av golfvärde i Shopify, friskvårdsdistribution via förmånsportaler, B2B-försäljning av företagspaket och värde genom ett brett nätverk av anslutna golfklubbar och partners.",
+      "target_users": [
+        "Golfare som vill använda friskvårdsbidrag till greenfee, range, träning, lektioner eller andra godkända golfaktiviteter",
+        "Privatpersoner som köper en flexibel golfpresent",
+        "Företag som köper personalförmåner, kundgåvor, representation, event eller incitament",
+        "Förmånsportaler och andra distributionspartners",
+        "Golfklubbar som tar emot Golfkuponger och vill nå fler golfare"
+      ],
+      "current_capabilities": [
+        "Shopify-baserad webbshop",
+        "Digital försäljning till privatpersoner",
+        "Digitala och fysiska företagspaket",
+        "Friskvårdsprodukter och distribution via förmånsportaler",
+        "Mobilapp för att se anslutna klubbar och använda digitala Golfkuponger",
+        "Partner- och klubbflöden finns redan",
+        "300+ anslutna golfklubbar i Sverige",
+        "Utvalda möjligheter utomlands via partners",
+        "Blogg och contentytor för friskvård, företag, golfbanor och användning"
+      ],
+      "core_workflows": [
+        "Shopify-köp och orderhantering",
+        "Digital leverans av värdebevis",
+        "Appbaserad användning och inlösen",
+        "Företagsbeställningar och fakturering",
+        "Distribution via friskvårds- och förmånsportaler",
+        "Klubb- och partneradministration",
+        "Content, SEO, kampanjer och sociala medier",
+        "Analys av försäljning, kanal, produkt, klubb och kundsegment",
+        "Jonas ska arbeta med content, kod, Shopify-utveckling, AI, automation, kampanjer och generell verksamhetsutveckling"
+      ],
+      "current_needs": [
+        "Förstå vilka produkter, kanaler, klubbar och kundsegment som ger högst intäkt och marginal",
+        "Öka konverteringen från landningssida och produktsida till genomfört Shopify-köp",
+        "Öka återköp och kundlivstidsvärde utan att skapa rabattberoende",
+        "Skala företagsförsäljning och större specialbeställningar",
+        "Skapa bättre lead- och uppföljningsflöden för företag, klubbar och partners",
+        "Koppla content och kampanjer till mätbar trafik, köp och intäkt",
+        "Minska manuella administrativa moment som begränsar försäljning eller skapar fel",
+        "Förbättra rapportering kring order, utestående värde, inlösen och klubbavräkning",
+        "Identifiera nya intäktskanaler som kan valideras billigt innan större produktutveckling"
+      ],
+      "growth_levers": [
+        "Fler och större företagspaket och B2B-affärer",
+        "Ökad friskvårdsförsäljning och fler förmånsportaler",
+        "Bättre Shopify-konvertering",
+        "Presentköp och säsongsdrivna kampanjer",
+        "Återköp, retention och segmenterad kommunikation",
+        "Mer organisk trafik genom golf-, friskvårds- och företagscontent",
+        "Fler attraktiva klubbar och bättre geografisk täckning",
+        "Nya distributionspartners och utvalda internationella möjligheter",
+        "Högre ordervärde genom smart paketering och merförsäljning",
+        "Mindre administration per såld och inlöst kupong"
+      ],
+      "technical_stack": [
+        "Shopify",
+        "Shopify Admin API",
+        "Shopify Storefront och theme-utveckling där relevant",
+        "Shopify webhooks",
+        "Shopify Flow eller motsvarande automation",
+        "Mobilapp",
+        "Partner- och klubbflöden",
+        "E-post, CRM, analytics och externa integrationsflöden"
+      ],
+      "high_value_matches": [
+        "Shopify-konvertering, personalisering och experiment som kan mätas mot intäkt",
+        "B2B commerce, offert, faktura, bulkbeställning och företagsportal",
+        "Friskvårds- och employee-benefit-integrationer",
+        "Digitala värdebevis, voucher ledger, partial redemption, saldo, giltighet och revisionsspår",
+        "Klubbportal, partneronboarding, inlösen och ekonomisk avräkning",
+        "CRM, lifecycle marketing, retention och återköpsautomation",
+        "Attribution, kohortanalys, marginalanalys och intäktsdashboards",
+        "Programmatisk SEO och content intelligence för golf, friskvård, presenter och företagsförmåner",
+        "Lead generation och outreach till företag, klubbar och distributionspartners",
+        "Supportautomation kopplad till Shopify-order, kupongstatus och inlösen",
+        "Integrationer som gör att Jonas kan skapa content, kampanjer eller kod snabbare med hög kvalitet"
+      ],
+      "discovery_keywords": [
+        "shopify b2b",
+        "shopify gift card api",
+        "voucher ledger",
+        "partial redemption",
+        "shopify flow",
+        "employee benefits platform",
+        "partner portal",
+        "merchant redemption",
+        "settlement reconciliation",
+        "shopify retention",
+        "shopify analytics",
+        "programmatic seo shopify",
+        "golf data",
+        "golf content automation"
+      ],
+      "negative_matches": [
+        "WooCommerce-plugins eller lösningar som kräver migration från Shopify",
+        "Grundläggande app, enkel kupongkod eller partnerportal som föreslås byggas från noll trots att motsvarande flöden redan finns",
+        "Generiska Shopify-teman utan tydlig påverkan på intäkt eller arbetsflöde",
+        "Rabattkodssystem som saknar stöd för verkligt golfvärde, saldo eller extern inlösen",
+        "Stora lojalitetsprogram innan återköpsbehov och ekonomi är validerade",
+        "Kompletta golfbokningsplattformar som skapar en ny verksamhet utan bevisad efterfrågan",
+        "Generiska golfappar utan konkret koppling till försäljning, partnernytta eller effektivisering",
+        "Enterpriseverktyg vars kostnad och införande sannolikt överstiger nyttan"
+      ],
+      "exact_match_requirements": [
+        "Repot ska tydligt kunna öka intäkt, konvertering, ordervärde, återköp, B2B-försäljning eller distribution",
+        "Alternativt ska det minska ett konkret manuellt flöde som idag begränsar försäljning eller skapar ekonomisk risk",
+        "Det ska passa Shopify eller kunna integreras med befintlig app, partnerflöde eller data utan total ombyggnad",
+        "Nästa test ska kunna beskrivas med en verklig Golfkuponger-produkt, kundgrupp, klubb eller partnerkanal",
+        "Generell e-handel, golf eller AI-relevans utan tydlig orsak-verkan får inte bli exact"
+      ],
+      "telegram_focus": "Börja med vilket intäkts- eller tillväxtproblem i Golfkuponger som löses. Beskriv därefter exakt var i Shopify-, B2B-, friskvårds-, app-, klubb- eller partnerflödet repot kan användas, vilken ekonomisk effekt som är möjlig och vilket litet test Jonas ska göra."
+    },
+    {
+      "id": "stock-signals",
+      "display_name": "Stock Signals",
+      "priority": 2,
+      "notification_tier": "primary",
+      "status": "Aktivt tekniskt och researchdrivet produktprojekt",
+      "main_repos": [
+        "ulle73/stock-signals"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "stock-signals",
+        "Stock Signals",
+        "market signal engine",
+        "Jonas TradingView-liknande signalsystem"
+      ],
+      "description": "Personligt TradingView-liknande signalsystem för S&P 500 som hämtar och lagrar marknadsdata, beräknar egna tekniska indikatorer, breadth, makro, relativ styrka, sektorrotation, volym- och optionskontext och omvandlar detta till tydliga signalhändelser och notifieringar.",
+      "north_star": "Många modulära och verifierbara indikatorer ska bli kategoriserade, tydliga signaler som snabbt visar vad som förändrats och vad Jonas bör fokusera på, utan öppna eller generiska marknadstolkningar.",
+      "business_model": "Primärt ett personligt analys- och beslutsverktyg. Strategiskt värde kommer från bättre beslut, tidsbesparing, egen research-edge och eventuell framtida produktisering, inte från att sälja automatiska tradingbeslut idag.",
+      "target_users": [
+        "Jonas som aktiv användare och systembyggare",
+        "Eventuellt framtida användare som vill ha transparenta marknads- och aktiesignaler",
+        "Researchflöden som behöver reproducerbara indikatorer och historisk validering"
+      ],
+      "current_capabilities": [
+        "Daglig och intraday marknadsdata",
+        "S&P 500-komponenter och benchmarkdata",
+        "Tekniska indikatorer och egna OBV-varianter",
+        "Market breadth och sector breadth",
+        "Marknadsregim och sektorsignaler",
+        "Relativ styrka, position- och swingsignaler",
+        "Makro-, kredit-, volatilitets- och riskkontext",
+        "GEX/DEX och optionsrelaterad kontext",
+        "Signal events och notifieringsgrund",
+        "Strategidefinitioner, backtester och studier",
+        "Data quality gates",
+        "Alpaca paper trading som verifieringslager, inte livehandel"
+      ],
+      "core_workflows": [
+        "Hämta marknads- och makrodata",
+        "Beräkna indikatorvärden",
+        "Lagra råa signalfält",
+        "Skapa signal events",
+        "Kategorisera signaler efter momentum, lång sikt, swing, makro, breadth, risk och sektorrotation",
+        "Visa förändring och beslut i en kompakt dashboard",
+        "Skicka rätt signal till rätt Telegram-kanal",
+        "Validera indikatorer och strategier historiskt och i paper trading"
+      ],
+      "current_needs": [
+        "Stabila och kostnadseffektiva datakällor med tydlig licens och historik",
+        "Modulär översättning av egna TradingView/Pine Script-indikatorer till JavaScript",
+        "Bättre empirisk validering, calibration och walk-forward-testning",
+        "Tydliga signalregler som skiljer fakta, prior och beslut",
+        "Robust optionsdata och förståelig GEX/DEX-visualisering",
+        "Snabb beslutsyta där användaren förstår läget inom cirka tio sekunder",
+        "Notifieringsrouting utan brus och dubbelsändning",
+        "Datakvalitet, observability och tydliga degraded states",
+        "Undvika överanpassning och falsk precision"
+      ],
+      "growth_levers": [
+        "Fler egna högkvalitativa indikatorer",
+        "Bättre data och längre historik",
+        "Högre signalprecision och färre falska signaler",
+        "Snabbare tolkning genom bättre UI och rate-of-change-fokus",
+        "Automatiserad notifiering och bevakning",
+        "Verifiering i paper trading",
+        "Möjlig framtida paketering av transparenta signaler eller research"
+      ],
+      "technical_stack": [
+        "Next.js App Router",
+        "JavaScript och Node.js",
+        "PostgreSQL via Neon/Cockroach-kompatibla anslutningar",
+        "GitHub Actions och schemalagda pipelines",
+        "Yahoo Finance, FRED och andra externa datakällor",
+        "Alpaca paper trading",
+        "Telegram",
+        "Charting och server-renderade dashboards"
+      ],
+      "high_value_matches": [
+        "Finansiella datakällor för breadth, options, makro, volym, short interest och sentiment",
+        "Modulära tekniska indikatorbibliotek i JavaScript",
+        "Pine Script-parsing eller verifierbar översättning till JavaScript",
+        "Walk-forward, event studies, calibration och probabilistisk utvärdering",
+        "Backtesting med leakage-skydd och reproducerbara experiment",
+        "GEX/DEX, call/put walls, volatility trigger och optionsstruktur",
+        "Datakvalitet, lineage, freshness och pipeline-observability",
+        "Telegram-routing och notifieringsprioritering",
+        "Kompakta finansdiagram och beslutsorienterad visualisering",
+        "Markov/regime-modeller endast när de är transparenta, empiriskt testbara och inte black-box"
+      ],
+      "discovery_keywords": [
+        "market breadth",
+        "technical indicators javascript",
+        "pine script parser",
+        "options gamma exposure",
+        "gex dex",
+        "financial data pipeline",
+        "walk forward backtest",
+        "signal calibration",
+        "market regime",
+        "sector rotation",
+        "telegram trading alerts",
+        "data quality finance"
+      ],
+      "negative_matches": [
+        "Black-box tradingbots eller automatiska köp/säljbeslut utan transparent logik",
+        "Crypto-only-system utan generell indikator- eller datanytta",
+        "Högfrekvenshandel och orderexecution som inte passar projektets horisont",
+        "Historisk avkastning utan leakage-säkra och reproducerbara tester",
+        "Komplex ML som inte tydligt förbättrar en definierad signal",
+        "Generiska finansdashboards som duplicerar befintlig UI utan ny data eller metod",
+        "Dyra datakällor utan tydlig nytta och rimlig kostnad",
+        "Autohandel eller brokerintegration som flyttar fokus från signalmotorn"
+      ],
+      "exact_match_requirements": [
+        "Repot ska förbättra en namngiven indikator, datakälla, valideringsmetod, visualisering eller notifieringsdel som finns eller planeras i Stock Signals",
+        "Metoden måste vara transparent och möjlig att testa mot lagrad historik",
+        "Nästa test ska kunna genomföras på en konkret ticker, signal eller datatabell",
+        "Tradinghype, många stars eller hög historisk ROI räcker inte",
+        "Repot får inte kräva att hela befintliga data- eller signalarkitekturen ersätts"
+      ],
+      "telegram_focus": "Nämn den exakta signalen, datakällan eller pipeline-delen som förbättras, vad Stock Signals redan har, vad repot tillför, hur det ska valideras och varför det kan ge bättre precision eller snabbare beslut."
+    },
+    {
+      "id": "ullebets",
+      "display_name": "Ullebets",
+      "priority": 3,
+      "notification_tier": "primary",
+      "status": "Aktiv V2-produktionsutveckling och modellvalidering",
+      "main_repos": [
+        "ulle73/ullebets-prod"
+      ],
+      "support_repos": [
+        "ulle73/ullebets-vecel",
+        "ulle73/ullebets-unibet"
+      ],
+      "aliases": [
+        "ullebets-prod",
+        "ullebets-vecel",
+        "ullebets-unibet",
+        "Ullebets V2",
+        "Ullebets backend",
+        "Ullebets frontend"
+      ],
+      "description": "Fotbollsanalysplattform som samlar fixtures, lag- och ligadata, detaljerad matchstatistik, odds och historiska utfall. V2-backenden är raw-first och auditbar med canonical mapping, odds-snapshots, modellscoring, settlement, ROI, CLV, parity och schemalagda produktionsjobb. En ny stabil frontend och read-API återstår som central produktdel.",
+      "north_star": "Skapa ett pålitligt och lättförståeligt beslutsunderlag där statistik, matchup, sannolikhet, odds, EV, resultat, ROI och CLV kan granskas utan leakage, efterhandskonstruktion eller överdriven säkerhet.",
+      "business_model": "Potentiell betting- och analysprodukt vars värde beror på trovärdig data, begriplig statistik och verifierad edge. Modeller är research och shadow-testing tills strikta forward- och CLV-krav är uppfyllda.",
+      "target_users": [
+        "Jonas som utvecklar och granskar modellerna",
+        "Fotbolls- och bettingintresserade användare som vill förstå matchupdata",
+        "Användare som vill se transparenta modellprediktioner och verifierade resultat"
+      ],
+      "current_capabilities": [
+        "Raw lagring och canonical mapping av fixtures, lag, ligor, statistik och resultat",
+        "Detaljerad statistik för skott, skott på mål, hörnor, kort, period och hemma/borta-scope",
+        "Kambi/Unibet-odds och tidsstämplade snapshots",
+        "Matchup scores och ligajämförelser",
+        "Model-ready snapshots och frysta predictioner",
+        "Settlement, PnL, ROI och CLV-logik",
+        "Leakage-, timing-, duplicate- och datakvalitetsaudits",
+        "V3-V6 modell- och policyexperiment med hårda score-only- och promotionregler",
+        "Matchmedvetna GitHub Actions-schedulers",
+        "Separat V2-databas och skyddade write paths"
+      ],
+      "core_workflows": [
+        "Upptäcka och normalisera matcher",
+        "Hämta och lagra statistik, incidenter, shotmaps och resultat",
+        "Fånga prematchodds vid definierade tidsfönster",
+        "Bygga immutable model snapshots och predictioner",
+        "Settla utfall och beräkna ROI och CLV",
+        "Jämföra modeller och policies utan data leakage",
+        "Visa kommande matcher, lagstatistik, matchup scores och modellstatus",
+        "Övervaka missade jobb, källfel, mappingproblem och odds-fönster"
+      ],
+      "current_needs": [
+        "Bevisa riktig T-30M- och T-10M-capture och bygga giltiga closing lines",
+        "Få in-domain forward-predictioner och settlements i tillräcklig mängd",
+        "Slutföra V2-paritet och ta bort kvarvarande beroende på legacy-oracle",
+        "Bygga stabilt read-API och ny frontend",
+        "Visualisera unika league rankings och matchup scores tydligt",
+        "Produktionsmonitorering och alerting för stale jobs, källfel, mappingfel och missade closing windows",
+        "Bättre entity resolution för lag, ligor och matcher",
+        "Behålla strikta promotion gates och undvika modellöveranpassning"
+      ],
+      "growth_levers": [
+        "Bättre och mer unik matchupvisualisering",
+        "Högre datatäckning och färre mappingfel",
+        "Verifierad forward-edge och positiv CLV",
+        "Snabbare och tydligare frontend",
+        "Fler användbara ligor utan att tumma på kvalitet",
+        "Stabil automation och drift",
+        "Transparent resultatuppföljning som skapar förtroende"
+      ],
+      "technical_stack": [
+        "Python backend och CLI-jobs",
+        "MongoDB med separat ullebets_v2-databas",
+        "Next.js/React-frontend i relaterat repo",
+        "GitHub Actions och matchmedvetna schedules",
+        "Kambi/Unibet och andra sportdatakällor",
+        "Audit-, parity- och model artifact-filer",
+        "Logistiska och regulariserade modeller",
+        "Immutable snapshots och forward score archives"
+      ],
+      "high_value_matches": [
+        "Fotbollsdata- och odds-API:er med tydliga tidsstämplar",
+        "Entity resolution och canonical identity för lag, ligor och matcher",
+        "Leakage-safe sports backtesting och probabilistisk calibration",
+        "Odds-snapshot scheduling och closing-line capture",
+        "CLV, settlement och model governance",
+        "Data lineage, parity, observability och operational alerting",
+        "Sports analytics-komponenter för league rankings och matchup views",
+        "Kompakta och tydliga matchkort och detaljvyer",
+        "Forward-testing och experimentregister som motverkar multiple testing"
+      ],
+      "discovery_keywords": [
+        "football analytics",
+        "soccer data pipeline",
+        "odds snapshot",
+        "closing line value",
+        "sports entity resolution",
+        "leakage safe backtest",
+        "probability calibration sports",
+        "football matchup dashboard",
+        "sports data observability",
+        "betting model governance"
+      ],
+      "negative_matches": [
+        "Tipsterplattformar och färdiga spelförslag utan auditbar metod",
+        "Martingale, stakingstrategier eller bankrollhype",
+        "Black-box bettingmodeller",
+        "Historisk ROI utan timing- och leakage-skydd",
+        "Generiska oddsjämförelsesidor utan ny data eller metod",
+        "Modeller som inte kan frysas före kickoff",
+        "Repos som föreslår live betting eller riktiga insatser innan forward-gates är uppfyllda",
+        "Total omskrivning av V2 utan konkret bevisad fördel"
+      ],
+      "exact_match_requirements": [
+        "Repot ska lösa ett explicit blockerande område i data, odds capture, identity, modellvalidering, frontend eller drift",
+        "Det ska kunna integreras med raw-first, immutable och auditbar arkitektur",
+        "Nästa test ska gå att utföra på en definierad match, liga, odds-horisont eller modellpolicy",
+        "Historisk ROI ensam får aldrig motivera exact-match",
+        "För UI-repos måste kopplingen vara till Ullebets unika league rankings, matchup scores eller statistik, inte generell sportdesign"
+      ],
+      "telegram_focus": "Säg vilket konkret Ullebets-blockerare eller produktområde som påverkas, hur repot passar den raw-first och leakage-säkra arkitekturen och vilket match-, odds- eller frontendtest som ska göras först."
+    },
+    {
+      "id": "nyabolaget-ekosystemet",
+      "display_name": "Nyabolaget-ekosystemet",
+      "priority": 4,
+      "notification_tier": "primary",
+      "status": "Aktiva konsument-, B2B- och dataprodukter",
+      "main_repos": [
+        "ulle73/nyabolaget.se",
+        "ulle73/foretagslistor-se"
+      ],
+      "support_repos": [
+        "ulle73/bolagsverket-nyabolaget-v2"
+      ],
+      "aliases": [
+        "nyabolaget.se",
+        "företagslistor.se",
+        "foretagslistor-se",
+        "bolagsverket-nyabolaget-v2",
+        "Nyabolaget",
+        "Företagslistor",
+        "företagsdata-pipelinen"
+      ],
+      "description": "Ett sammanhängande ekosystem med två produkter och ett datalager. Nyabolaget.se hjälper nya företagare genom personlig onboarding, guider, chatbot och partnererbjudanden. Företagslistor.se säljer filtrerade svenska företagslistor via självbetjäning, Stripe och direkt digital leverans. Bolagsverket/SCB-pipelinen skapar canonical snapshots och publicerar data till Supabase.",
+      "north_star": "Skapa intäkter och kundnytta genom att hjälpa rätt nyföretagare till rätt nästa steg och partnererbjudande, samtidigt som företagsdata kan säljas automatiskt, lagligt, snabbt och med minimal administration.",
+      "business_model": "Partner- och affiliateintäkter från nyföretagare samt direktförsäljning av filtrerade företagslistor. Data pipeline och SEO är gemensamma strategiska tillgångar.",
+      "target_users": [
+        "Personer som planerar eller nyligen har startat företag",
+        "Konsulter, hantverkare, salonger, e-handlare och byråer i uppstartsfas",
+        "Marknadsförare, säljteam, grundare och byråer som köper företagslistor",
+        "Partners som one.com, bokföringsaktörer, banker och andra tjänster för nya företag"
+      ],
+      "current_capabilities": [
+        "Fyrafrågors onboarding som skapar personlig handlingsplan",
+        "Kunskapsbank och guidebibliotek efter företagstyp, fas och problem",
+        "Chatbot och partnererbjudanden",
+        "Programmatisk SEO och välkomsttrafik",
+        "Självbetjänad filtrering, estimate, Stripe checkout och orderstatus för företagslistor",
+        "Automatisk export, storage och download tokens",
+        "SCB-baserad daglig data pipeline med canonical snapshots",
+        "Supabase-publicering och separata aktiva/arkivdatabaser",
+        "Adminförfrågningar för daglig och historisk import"
+      ],
+      "core_workflows": [
+        "Nyföretagare svarar på frågor och får personlig plan",
+        "Guide- och chatbotrouting mot relevant innehåll",
+        "Partnererbjudanden och attribution",
+        "SEO-sidor och content för svenska företagare",
+        "Kund bygger urval av svenska företag och får antal och pris",
+        "Stripe-betalning och automatisk filgenerering",
+        "Daglig SCB-import, normalisering och Supabase-publicering",
+        "Cold outreach och partneruppföljning baserat på relevant data"
+      ],
+      "current_needs": [
+        "Bättre mätning av vilka onboardingbehov, guider och partnererbjudanden som konverterar",
+        "Mer personaliserad lifecycle-kommunikation efter bolagsstart",
+        "Starkare SEO, internlänkning och skalbar innehållskvalitet",
+        "Högre intäkt per besökare och bättre partnerattribution",
+        "Databerikning som har tydligt ekonomiskt värde och juridisk grund",
+        "Hög datakvalitet, deduplicering och reproducerbara urval",
+        "Bättre lead scoring och segmentering utan spam",
+        "Stabil order-, export- och leveransautomation",
+        "Tydlig separation mellan konsumentguiden och B2B-listprodukten"
+      ],
+      "growth_levers": [
+        "SEO och programmatisk SEO för nyföretagare och företagsdata",
+        "Bättre partnerkonvertering och nya relevanta partners",
+        "Personlig onboarding och rekommendationer",
+        "Välkomstmail och lifecycle-flöden efter registrering",
+        "Mer självbetjänad försäljning av företagslistor",
+        "Nya listsegment och kolumner med verifierad betalningsvilja",
+        "Bättre outbound-segmentering och kampanjer",
+        "Högre datatäckning och färre manuella leveranser"
+      ],
+      "technical_stack": [
+        "React, TypeScript och Vite för nyabolaget.se",
+        "Next.js, TypeScript och Tailwind för företagslistor.se",
+        "Supabase Postgres och Storage",
+        "Stripe Checkout och webhooks",
+        "Node.js data pipelines",
+        "SCB-data och certifikatbaserad hämtning",
+        "GitHub Actions",
+        "Gemini/LLM-funktioner där relevant",
+        "SEO-generering, analytics och e-postintegrationer"
+      ],
+      "high_value_matches": [
+        "Personaliserad onboarding och rekommendationslogik",
+        "Programmatisk SEO med kvalitetskontroll och internlänkning",
+        "Partner- och affiliateattribution",
+        "Lifecycle email för nyregistrerade företag",
+        "Svensk företagsdata, enrichment, canonical records och deduplicering",
+        "Lead scoring och segmentering med tydlig compliance",
+        "Stripe-baserad digital leverans och idempotenta orderflöden",
+        "CSV/Excel-export, stora datamängder och adminflöden",
+        "GDPR, marknadsföringsskydd och auditbar dataanvändning",
+        "Konverteringsanalys för guider, wizard, partnerpopup och listbyggare"
+      ],
+      "discovery_keywords": [
+        "programmatic seo",
+        "affiliate attribution",
+        "personalized onboarding",
+        "startup guide engine",
+        "company data enrichment",
+        "entity deduplication",
+        "lead scoring compliance",
+        "stripe digital delivery",
+        "supabase export",
+        "lifecycle email",
+        "swedish company data"
+      ],
+      "negative_matches": [
+        "Aggressiva cold-email- eller spamverktyg",
+        "Stora CRM-plattformar utan tydligt behov",
+        "Generiska startupguider utan svensk eller segmentspecifik nytta",
+        "Osäkra datakällor eller enrichment utan juridisk klarhet",
+        "Dyra enrichmenttjänster utan bevisad marginal",
+        "Repos som blandar ihop nyföretagarens guideprodukt med B2B-listförsäljningen",
+        "Komplexa kundkonton eller abonnemang innan efterfrågan är validerad",
+        "Generiska AI-chatbots som inte använder befintlig kunskapsbas och routing"
+      ],
+      "exact_match_requirements": [
+        "Repot ska kopplas till en tydlig delprodukt: Nyabolaget.se, Företagslistor.se eller datapipelinen",
+        "Det ska förbättra konvertering, partnerintäkt, SEO, datakvalitet, listförsäljning eller leveransautomation",
+        "För datarepos krävs tydlig källa, rättslig användbarhet och reproducerbarhet",
+        "För outreach krävs relevans och segmentering; massutskick i sig är inte värde",
+        "Nästa test ska kunna utföras på ett verkligt onboardingflöde, partnererbjudande, dataurval eller order"
+      ],
+      "telegram_focus": "Ange först vilken av de tre delarna fyndet gäller. Förklara sedan vilket kund-, partner-, SEO-, data- eller orderflöde som förbättras och hur effekten kan mätas i konvertering, intäkt, datakvalitet eller minskat manuellt arbete."
+    },
+    {
+      "id": "faiv",
+      "display_name": "FAIV",
+      "priority": 5,
+      "notification_tier": "primary",
+      "status": "Aktivt kundprojekt inom e-handel, content och automation",
+      "main_repos": [
+        "ulle73/faiv-socials"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "FAIV.se",
+        "faiv-socials",
+        "FAIV webshop",
+        "FAIV WooCommerce",
+        "FAIV sociala medier"
+      ],
+      "description": "Fordonsrelaterad verksamhet och e-handel för bland annat grillkit, extrabelysning, arbetsljus, bilinredning, servicebilar och husbil/offgrid. Webbshoppen drivs i WordPress/WooCommerce. faiv-socials bevakar inspirationskonton, arkiverar källdata, bedömer idéer och producerar redigerbara contentpaket i Google Drive med originalitets- och kvalitetskontroll.",
+      "north_star": "Öka webbshopens och verkstadens intäkter genom bättre produktpresentation, konvertering, kampanjer, SEO och kontinuerligt högkvalitativt content som leder till köp eller offert.",
+      "business_model": "Försäljning av fordonsprodukter i WooCommerce och tjänste-/installationsintäkter från verkstad och specialbyggen.",
+      "target_users": [
+        "Privata fordonsägare",
+        "Företag med servicebilar och arbetsfordon",
+        "Kunder som behöver extrabelysning, arbetsljus, bilinredning eller specialanpassning",
+        "Husbil- och offgrid-kunder"
+      ],
+      "current_capabilities": [
+        "WordPress, WooCommerce, Divi och child theme",
+        "Produktkatalog med 370+ artiklar och lagerimport",
+        "SEO-optimering och kategorisidor",
+        "Checkout och DHL-relaterade flöden",
+        "Daglig content pipeline via GitHub Actions",
+        "Apify-insamling av inspirationsinnehåll",
+        "Cloudflare R2 för råarkiv och D1 för live metadata",
+        "Google Sheets, Docs och Drive som redaktörsyta",
+        "Poängsättning av FAIV-fit, leadpotential, hook, visuell överförbarhet och nyhetsvärde",
+        "Separata innehållskategorier och serviceområden",
+        "Originalitets- och forbidden-copy-kontroller"
+      ],
+      "core_workflows": [
+        "Produkt- och lagerdata in i WooCommerce",
+        "SEO, produkttexter och internlänkning",
+        "Kampanj- och bannerhantering",
+        "Insamling och analys av inspirationsinlägg",
+        "Skapande av hook, caption, CTA, bildbrief och AI-bildprompt",
+        "Redaktionellt godkännande innan publicering",
+        "Mätning av webbshop, offert och contentresultat"
+      ],
+      "current_needs": [
+        "Öka WooCommerce-konvertering och onlineförsäljning",
+        "Förbättra produktkort, kategorisidor, trust och checkout",
+        "Göra kampanjer enklare att styra i admin",
+        "Koppla socialt innehåll till produkter, tjänster, leads och försäljning",
+        "Automatisera produktdata, texter och SEO utan sänkt kvalitet",
+        "Förbättra Core Web Vitals och WordPress-prestanda",
+        "Mäta vilka contentkategorier och serviceområden som genererar offert eller köp",
+        "Behålla originalitet och mänsklig kvalitetskontroll"
+      ],
+      "growth_levers": [
+        "Högre WooCommerce-konvertering",
+        "Bättre SEO och organisk produkttrafik",
+        "Mer offertdrivande socialt content",
+        "Kampanjer, bundles och säsongsförsäljning",
+        "Recensioner, UGC och social proof",
+        "Bättre produktdata och lagerprecision",
+        "Tydligare koppling mellan webshop och verkstad",
+        "Snabbare contentproduktion utan generisk AI-känsla"
+      ],
+      "technical_stack": [
+        "WordPress",
+        "WooCommerce",
+        "Divi och Divi Child theme",
+        "PHP, CSS och JavaScript",
+        "ACF och adminvänliga toggles",
+        "Python content pipeline",
+        "Apify",
+        "Cloudflare R2 och D1",
+        "Google Drive, Sheets och Docs",
+        "OpenRouter/LLM",
+        "GitHub Actions"
+      ],
+      "high_value_matches": [
+        "WooCommerce-konvertering, checkout och produktkort",
+        "WordPress performance och Core Web Vitals",
+        "Produktfeed, lager, recensioner och katalogautomation",
+        "AI-assisterad produkttext, kategoritext, översättning och SEO med kvalitetsskydd",
+        "Social listening, content intelligence och originalitetskontroll",
+        "Carousel-, bild- och kampanjproduktion",
+        "Approval workflows och redaktionell status",
+        "Analytics, heatmaps och event tracking",
+        "UGC, reviews och social proof",
+        "Koppling mellan content, produkt, tjänst, lead och order"
+      ],
+      "discovery_keywords": [
+        "woocommerce conversion",
+        "wordpress product feed",
+        "woocommerce reviews",
+        "wordpress core web vitals",
+        "content intelligence",
+        "social listening",
+        "approval workflow",
+        "product seo automation",
+        "woocommerce analytics",
+        "ugc ecommerce",
+        "automotive ecommerce"
+      ],
+      "negative_matches": [
+        "Headless e-commerce eller total rebuild utan tydlig ekonomisk vinst",
+        "Generiska SaaS-dashboards",
+        "Automatisk publicering utan redaktionell kontroll",
+        "System som kopierar konkurrenters innehåll för nära",
+        "Generisk AI-content utan FAIV:s produkter, målgrupp eller tonalitet",
+        "Tunga enterprise-CMS",
+        "Komplexa designsystem som kräver total omskrivning",
+        "Shopify-specifika lösningar som inte har WordPress/WooCommerce-väg"
+      ],
+      "exact_match_requirements": [
+        "Repot ska påverka WooCommerce-intäkt, offert, produktdata, SEO, contentkvalitet eller ett konkret manuellt arbetsflöde",
+        "Det ska kunna införas stegvis i WordPress/WooCommerce eller faiv-socials-pipelinen",
+        "Nästa test ska kunna göras på en verklig produkt, kategori, kampanj eller contentbatch",
+        "Generell AI- eller social media-relevans utan FAIV-specifikt arbetsflöde är inte exact",
+        "Designförslag måste stödja premium automotive/e-commerce och inte bara generisk dashboardestetik"
+      ],
+      "telegram_focus": "Koppla fyndet till en verklig FAIV-produkt, kategori, kampanj eller contentbatch. Beskriv om nyttan är mer försäljning, fler offerter, bättre SEO, snabbare content eller mindre manuellt arbete och hur den ska testas."
+    },
+    {
+      "id": "ai-radar",
+      "display_name": "AI Radar",
+      "priority": 6,
+      "notification_tier": "primary",
+      "status": "Aktiv intern produkt i daglig drift",
+      "main_repos": [
+        "ulle73/ai-radar"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "ai-radar",
+        "Jonas AI Radar",
+        "GitHub-radarn",
+        "repo-radarn"
+      ],
+      "description": "Personlig GitHub-radar som dagligen samlar nya och trendande repos, analyserar dem via OpenRouter, använder deterministiska kvalitetsgrindar, bygger permanent ranking och skickar endast exceptionella och konkreta fynd till Telegram.",
+      "north_star": "Hitta få men verkligt användbara open source-verktyg som Jonas kan testa i ett namngivet projekt och filtrera bort allt som bara är populärt, generiskt eller tekniskt intressant.",
+      "business_model": "Internt produktivitets- och discoveryverktyg. Värdet är snabbare implementation, bättre projektbeslut, färre missade verktyg och mindre tid på manuell research.",
+      "target_users": [
+        "Jonas som utvecklare, produktbyggare och beslutsfattare"
+      ],
+      "current_capabilities": [
+        "Daglig insamling från GitHub Trending och Search",
+        "README- och metadatahämtning",
+        "Batchad OpenRouter-analys",
+        "Deterministisk poängmodell och evidence gates",
+        "Exact, adjacent och generic matchning",
+        "Permanent repo-katalog och strict ranking",
+        "Freshness och manuell feedback",
+        "Telegram-kö, leverans, retry och deduplicering",
+        "Teknisk status och quality telemetry",
+        "Tester och GitHub Actions"
+      ],
+      "core_workflows": [
+        "Samla kandidatrepos",
+        "Jämföra dem mot aktiv projektkontext",
+        "Kräva evidens och konkret use case",
+        "Arkivera generiska och osäkra träffar",
+        "Ranka starka exakta matchningar",
+        "Skicka exceptionella fynd till Telegram",
+        "Spara feedback för saved, testing, adopted och rejected"
+      ],
+      "current_needs": [
+        "Mer komplett och maskinläsbar projektkontext",
+        "Tydligare personlig Telegram-formatering",
+        "Robustare modellrespons och återförsök vid schemafel",
+        "Bättre koppling mellan kandidatens README och ett namngivet projektproblem",
+        "Mindre påverkan från stars, hype och generiska agenttermer",
+        "Bättre discovery utan fler irrelevanta kandidater",
+        "Tydlig driftstatus när schemalagda körningar är sena eller degraderade",
+        "Kontinuerlig feedbackloop från testade och adopterade repos"
+      ],
+      "growth_levers": [
+        "Högre precision i projektmatchning",
+        "Bättre projektprofiler",
+        "Färre falska Telegram-notiser",
+        "Bättre retry av trasiga modellbatchar",
+        "Automatisk inlärning från saved, testing, adopted och rejected",
+        "Bättre discovery queries från verkliga behov",
+        "Tydligare nästa test i varje rekommendation"
+      ],
+      "technical_stack": [
+        "Node.js 20 ESM",
+        "GitHub Actions",
+        "GitHub API och Trending",
+        "OpenRouter",
+        "JSON och Markdown",
+        "Telegram Bot API",
+        "node:test"
+      ],
+      "high_value_matches": [
+        "Repo- och kodbasprofilering",
+        "Semantic retrieval och project-to-repo matching",
+        "Strukturerad LLM-output och schema repair",
+        "Prompt- och context compression utan informationsförlust",
+        "GitHub discovery, deduplicering och trend detection",
+        "Ranking, calibration och evidence-based recommendations",
+        "Observability för scheduled workflows",
+        "Telegram UX och handlingsorienterade notifieringar",
+        "Memory och feedbacksystem som förbättrar framtida rekommendationer"
+      ],
+      "discovery_keywords": [
+        "github discovery",
+        "repository recommendation",
+        "semantic code search",
+        "structured llm output",
+        "json schema repair",
+        "context compression",
+        "recommendation calibration",
+        "workflow observability",
+        "telegram notification ux",
+        "agent memory feedback"
+      ],
+      "negative_matches": [
+        "Generiska top trending-listor",
+        "Repo-aggregatorer utan personlig matchning",
+        "Agentframeworks som inte löser ett explicit AI Radar-problem",
+        "Verktyg som ökar mängden notifieringar men inte precisionen",
+        "Tunga vector database-system utan visad nytta för nio projektprofiler",
+        "Generell developer productivity som saknar koppling till discovery, scoring, context eller delivery"
+      ],
+      "exact_match_requirements": [
+        "Repot ska förbättra en namngiven del av collection, context, model analysis, validation, ranking, feedback, rendering, delivery eller observability",
+        "Det ska minska falska positiva, öka evidens, förbättra robusthet eller spara tydlig researchtid",
+        "Nästa test ska kunna göras på AI Radars befintliga kandidater eller statusfiler",
+        "Ett generiskt agent- eller memoryrepo är inte exact utan en tydlig integration och mätbar förbättring"
+      ],
+      "telegram_focus": "Förklara vilket steg i AI Radar som blir bättre, vilket nuvarande fel eller begränsning som löses, vilken mätbar kvalitetsförbättring som förväntas och hur den testas utan att öka brus."
+    },
+    {
+      "id": "sankdig",
+      "display_name": "Sankdig",
+      "priority": 7,
+      "notification_tier": "strict",
+      "status": "Aktiv automatiserad golfcontentprodukt",
+      "main_repos": [
+        "ulle73/sankdig"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "sankdig",
+        "Sänk Dig",
+        "Sankdig Instagram",
+        "golfkaruseller"
+      ],
+      "description": "Svensk datadriven golfcontentprodukt som automatiskt producerar sexbilders Instagram-karuseller. Positioneringen är att hitta verifierbar golfdata och översätta den till konkret, begriplig nytta för vanliga amatörgolfare, främst ungefär 15–30 i handicap.",
+      "north_star": "Bygga en trovärdig svensk golfprofil som konsekvent publicerar datadrivet innehåll som målgruppen sparar, delar, kommenterar och faktiskt kan använda för att spela bättre golf.",
+      "business_model": "I första hand publik- och varumärkesbyggande. Framtida värde kan komma från partnerskap, affiliate, sponsring, egna produkter eller leads, men innehållets trovärdighet och publiknytta kommer först.",
+      "target_users": [
+        "Svenska amatörgolfare",
+        "Främst golfare omkring 15–30 i handicap",
+        "Golfare som uppskattar konkreta dataförklaringar snarare än generiska svingtips"
+      ],
+      "current_capabilities": [
+        "Automatisk produktion av sex bilder per karusell",
+        "Återkommande publiceringspipeline och versionshistorik i GitHub",
+        "Struktur med hook, datapunkt, betydelse, feltolkning, konkret plan och CTA",
+        "Datadriven tonalitet och svensk målgrupp",
+        "Bildbaserad contentoutput som kan granskas före publicering"
+      ],
+      "core_workflows": [
+        "Hitta ett starkt golfämne eller dataset",
+        "Verifiera källa och avgränsning",
+        "Översätta statistik till svensk amatörnytta",
+        "Skapa sexbilders narrativ",
+        "Rendera konsekvent design och typografi",
+        "Kontrollera fakta, läsbarhet och duplicering",
+        "Publicera och analysera swipes, saves, kommentarer och följartillväxt"
+      ],
+      "current_needs": [
+        "Fler unika och verifierbara golfämnen",
+        "Bättre svenska, nordiska och internationella golfdatakällor",
+        "Automatisk källkontroll och citation tracking",
+        "Topic clustering och skydd mot att upprepa tidigare innehåll",
+        "Bättre diagram och visualisering anpassad till mobil karusell",
+        "Analys av vilka hooks och ämnen som driver saves och kommentarer",
+        "Stabil rendering och typografisk kvalitetskontroll",
+        "Möjlig publicering och analytics via Instagram API"
+      ],
+      "growth_levers": [
+        "Nya datadrivna golfämnen",
+        "Starkare hooks och tydligare praktisk nytta",
+        "Högre publiceringskvalitet och konsekvens",
+        "Bättre ämnesmix och mindre repetition",
+        "Verifierbara källor som bygger förtroende",
+        "Instagram analytics och content learning loop",
+        "Partnerskap och affiliate först när publiken och relevansen är tydlig"
+      ],
+      "technical_stack": [
+        "Automatiserad bildgenerering och rendering",
+        "GitHub-baserad outputhistorik",
+        "Schemalagda contentjobb",
+        "Bild-, text- och datakällor",
+        "Eventuell Instagram Graph API-integration"
+      ],
+      "high_value_matches": [
+        "Nya golfämnen som bygger på verifierbar statistik eller forskning",
+        "Nya golfdatakällor för amatörspel, handicap, strokes gained, dispersion, scoring, putting, GIR, driving, course management, utrustning eller fitting",
+        "Svenska och nordiska golftrender och marknadsdata",
+        "Golfstudier och större öppna dataset",
+        "Automatisk källkontroll, citations och fact verification",
+        "Topic discovery, clustering och semantic deduplication",
+        "Carousel rendering, charts, typography och mobile readability",
+        "Hook- och CTA-analys",
+        "Instagram scheduling, Graph API och analytics"
+      ],
+      "discovery_keywords": [
+        "golf statistics dataset",
+        "amateur golf data",
+        "golf handicap statistics",
+        "strokes gained amateur",
+        "golf dispersion data",
+        "golf research",
+        "golf content automation",
+        "instagram carousel generator",
+        "citation verification",
+        "topic deduplication",
+        "instagram analytics"
+      ],
+      "negative_matches": [
+        "Generiska social media schedulers utan Sankdigs arbetsflöde",
+        "Generella golftips utan data eller verifierbar källa",
+        "Elit- eller tourinnehåll som inte kan översättas till målgruppens problem",
+        "Video-first-plattformar som inte förbättrar karusellprodukten",
+        "Copyrightmässigt riskfylld kopiering",
+        "AI-genererade siffror eller påståenden utan källa",
+        "Vanliga carousel templates utan tydlig förbättring av dataförklaring eller produktion"
+      ],
+      "exact_match_requirements": [
+        "För content/data ska repot eller datasetet kunna ge ett konkret nytt golfämne för Sankdigs målgrupp",
+        "För teknik ska det förbättra sourcing, verifiering, rendering, deduplicering, publicering eller analytics",
+        "Ett exempel på minst en möjlig sexbilders karusell ska kunna beskrivas",
+        "Generell golf- eller social media-relevans räcker inte",
+        "Källans kvalitet, rättigheter och målgruppspassning måste vara tydliga"
+      ],
+      "telegram_focus": "Visa antingen exakt vilket nytt golfämne och vilken datakälla som kan bli en Sankdig-karusell, eller exakt vilken del av sourcing-, rendering-, publicerings- eller analyticsflödet som förbättras."
+    },
+    {
+      "id": "res-kungen",
+      "display_name": "Res-kungen",
+      "priority": 8,
+      "notification_tier": "strict",
+      "status": "Välutvecklad AI-reseprototyp som kan återaktiveras",
+      "main_repos": [
+        "ulle73/res-kungen"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "res-kungen",
+        "Resvän",
+        "intent-first flygsökning",
+        "AI-reseagent"
+      ],
+      "description": "Intent-first reseagent där användaren beskriver en önskad resa i en vanlig mening och får 3–5 genuint relevanta alternativ i stället för hundratals träffar. Systemet hanterar flexibla avreseflygplatser, datumfönster, restid, destinationstema och serendipity och skyddar användaren från onödiga logistikfrågor.",
+      "north_star": "Göra reseupptäckt enklare, mer förtroendeingivande och mer handlingsbar än traditionell flygsökning, samtidigt som rekommendationerna bygger på verkliga priser och rimlig logistik.",
+      "business_model": "Affiliate-djuplänkar till flyg och framför allt boende. Flyg fungerar som ingång medan boende-attach förväntas ge bättre marginal, utan att Res-kungen tar boknings- eller paketreseansvar.",
+      "target_users": [
+        "Resenärer med flexibel destination, flygplats eller datum",
+        "Personer som vet vilken känsla eller typ av resa de vill ha men inte exakt vart",
+        "Användare som vill ha ett litet antal redaktionellt motiverade alternativ"
+      ],
+      "current_capabilities": [
+        "Naturligt språk och intenttolkning",
+        "Deterministisk geo-resolver",
+        "Flexibla flygplatsregioner och datumfönster",
+        "Ranking som dödar absurda resvägar",
+        "Serendipity och billigare liknande destinationer",
+        "Simulerad data utan API-kostnad",
+        "Redaktionella resekort och Wikimedia-bilder",
+        "Affiliate-djuplänk som grund"
+      ],
+      "core_workflows": [
+        "Tolka användarens reseintention",
+        "Härleda flexibla flygplatser och datum",
+        "Söka och rangordna ett begränsat antal alternativ",
+        "Förklara varför varje resa passar",
+        "Föreslå wildcard med liknande känsla och bättre pris",
+        "Länka vidare till flyg och boende utan att bli researrangör"
+      ],
+      "current_needs": [
+        "Riktiga och ekonomiskt rimliga flyg- och hotelldata",
+        "Stabila affiliate-djuplänkar och attribution",
+        "Destination similarity och upplevelsedata",
+        "Kartor, sista-milen-information och boende-attach",
+        "Prisbevakning och flex-date-sökning",
+        "Tydliga juridiska gränser mot paketreseansvar",
+        "Validering av faktisk användarefterfrågan och affiliateekonomi"
+      ],
+      "growth_levers": [
+        "Bättre verklig prisdata",
+        "Högre kvalitet i 3–5 rekommendationer",
+        "Boende-attach och bättre affiliatekonvertering",
+        "Unika wildcard och destination similarity",
+        "Delbara reseprospekt",
+        "Prisbevakning och återkommande trafik",
+        "Nischade användningsfall där traditionell sökning är särskilt dålig"
+      ],
+      "technical_stack": [
+        "Vite och React-klient",
+        "Fastify-server",
+        "JavaScript",
+        "OpenRouter/Gemini för intenttolkning",
+        "Deterministisk geo- och rankinglogik",
+        "Utbytbara travel providers",
+        "Wikimedia Commons-bilder",
+        "Vercel-kompatibel deployment"
+      ],
+      "high_value_matches": [
+        "Flyg- och hotelldata med gratis eller affiliatevänlig modell",
+        "Flex-date och multi-airport search",
+        "Airport catchment areas och geospatial resolution",
+        "Travel intent extraction och constrained recommendation",
+        "Destination similarity och experience knowledge graphs",
+        "Affiliate deep links och attribution",
+        "Prisbevakning",
+        "Kartor, sista milen och redaktionella resekort",
+        "Juridiskt säkra referralflöden som inte skapar paketreseansvar"
+      ],
+      "discovery_keywords": [
+        "flight search api",
+        "hotel affiliate api",
+        "flexible date travel search",
+        "multi airport search",
+        "destination similarity",
+        "travel intent extraction",
+        "travel affiliate deep link",
+        "airport catchment",
+        "travel price alert",
+        "geospatial travel recommendation"
+      ],
+      "negative_matches": [
+        "Generiska itinerary-chatbots",
+        "Kompletta booking engines som gör Res-kungen till säljare eller researrangör",
+        "Dyra API:er utan rimlig affiliateekonomi",
+        "System som visar hundratals alternativ",
+        "AI-rekommendationer utan verkliga priser",
+        "Paketresebyggare med juridiskt ansvar",
+        "Generiska travel UI kits utan koppling till intent-first-flödet"
+      ],
+      "exact_match_requirements": [
+        "Repot ska förbättra intenttolkning, geo, riktig sökdata, ranking, serendipity, affiliate eller reseprospekt",
+        "Det ska bevara principen om 3–5 bra val och inte återinföra listbrus",
+        "Nästa test ska kunna göras med ett verkligt reseönskemål och mätas mot relevans, pris eller konvertering",
+        "Affärs- och API-kostnaden måste vara rimlig för en affiliateprodukt",
+        "Generisk rese-AI är inte exact"
+      ],
+      "telegram_focus": "Koppla fyndet till ett konkret steg från reseintention till 3–5 alternativ eller affiliatekonvertering. Visa hur det förbättrar verklig data, relevans, pris, logistik eller boende-attach utan att skapa bokningsansvar."
+    },
+    {
+      "id": "apify-scraper",
+      "display_name": "Apify Scraper",
+      "priority": 9,
+      "notification_tier": "strict",
+      "status": "SaaS-produktprototyp",
+      "main_repos": [
+        "ulle73/apify-scraper"
+      ],
+      "support_repos": [],
+      "aliases": [
+        "apify-scraper",
+        "Apify Scrapers",
+        "scraper SaaS",
+        "scraper marketplace",
+        "credits-baserad scraperplattform"
+      ],
+      "description": "Självbetjänad scraper-SaaS där kunder väljer en scraper i en katalog, fyller i dynamiska fält, ser uppskattad creditkostnad, betalar och får normaliserad data. Adapterlagret standardiserar inputvalidering, Apify-input, kostnad, normalisering och export för många typer av lead-, social-, search-, content- och e-handelsscrapers.",
+      "north_star": "Bygga en lönsam och enkel SaaS där kunder betalar för konkreta datainsamlingsjobb och får användbar, normaliserad output utan att behöva förstå Apify eller scraperteknik.",
+      "business_model": "Extern kundbetald SaaS med credits, usage-baserad prissättning och möjlig abonnemangsintäkt.",
+      "target_users": [
+        "Småföretag och byråer som behöver leads eller marknadsdata",
+        "Marknadsförare och säljteam",
+        "E-handlare och analytiker",
+        "Användare som vill köra färdiga scrapers utan teknisk setup"
+      ],
+      "current_capabilities": [
+        "Next.js-baserad SaaS-yta",
+        "Scraperkatalog och kategorifilter",
+        "Dynamiska formulär från adapterkonfiguration",
+        "Inputvalidering och creditestimat",
+        "Apify actor-integration",
+        "Normalisering och standardiserade exportkolumner",
+        "Scrapers för leads, sociala medier, search, content och e-handel",
+        "Neon/Drizzle-databas",
+        "NextAuth",
+        "Stripe",
+        "Inngest för asynkrona jobb",
+        "Credits och saldo"
+      ],
+      "core_workflows": [
+        "Kund väljer scraper",
+        "Kund konfigurerar input och ser kostnad",
+        "Credits eller betalning kontrolleras",
+        "Jobb körs asynkront hos Apify",
+        "Resultat normaliseras",
+        "Kund får export eller integration",
+        "Plattformen följer kostnad, marginal, fel och användning per scraper"
+      ],
+      "current_needs": [
+        "Validera vilka scraperkategorier kunder faktiskt betalar för",
+        "Säker usage-billing, credits och abonnemang",
+        "Marginalkontroll mellan kundpris, Apifykostnad, proxy och support",
+        "Robust job queue, retries, cancellation och webhookhantering",
+        "Monitorering när actors, selectors eller datakällor går sönder",
+        "Bra preview, datakvalitet och tydliga exportformat",
+        "Multi-tenant-säkerhet och usage limits",
+        "Enkel onboarding och tydlig value proposition per scraper",
+        "Juridisk, avtalsmässig och etisk kontroll av datakällor"
+      ],
+      "growth_levers": [
+        "Fokusera på scrapers med tydlig betalningsvilja",
+        "Högre återköp och abonnemang",
+        "Bättre marginal per körning",
+        "CRM-, webhook- och exportintegrationer",
+        "White-label och resellerflöden",
+        "Bättre templates och saved runs",
+        "Stabilitet och transparens kring datakvalitet",
+        "Vertikala scraperpaket för specifika kundproblem"
+      ],
+      "technical_stack": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Apify Client och actors",
+        "Neon Serverless Postgres",
+        "Drizzle ORM",
+        "Inngest",
+        "NextAuth",
+        "Stripe",
+        "Zod",
+        "CSV-export via PapaParse"
+      ],
+      "high_value_matches": [
+        "Multi-tenant SaaS patterns",
+        "Usage-based billing, credits, metering och Stripe",
+        "Apify actor orchestration och cost controls",
+        "Durable jobs, queues, retries, cancellation och webhook handling",
+        "Scraper health monitoring och automated regression tests",
+        "Schema mapping och normalisering av heterogen data",
+        "CSV, Excel, CRM, webhook och API-export",
+        "Dataset previews och datakvalitetsmätning",
+        "White-label och resellerfunktioner",
+        "Metoder för demand validation och lönsamhetsanalys per scraper"
+      ],
+      "discovery_keywords": [
+        "usage based billing",
+        "credits saas",
+        "stripe metering",
+        "apify orchestration",
+        "durable job queue",
+        "scraper monitoring",
+        "schema normalization",
+        "multi tenant nextjs",
+        "data export saas",
+        "white label scraper",
+        "scraper marketplace"
+      ],
+      "negative_matches": [
+        "Nya scrapers enbart för att katalogen ska bli större",
+        "Scrapers utan tydlig betalande målgrupp",
+        "Instabila gratisscrapers utan monitorering",
+        "Datakällor med uppenbar juridisk eller avtalsmässig risk",
+        "Duplicerade actors som inte förbättrar kvalitet eller marginal",
+        "Avancerad enterprisefunktionalitet innan grundläggande betalningsvilja är bevisad",
+        "Interna scrapingbibliotek som saknar kund-, billing- eller SaaS-nytta",
+        "Generiska SaaS boilerplates som inte löser usage, jobs, data eller margin"
+      ],
+      "exact_match_requirements": [
+        "Repot ska hjälpa en betalande kundresa eller förbättra lönsamhet, billing, job reliability, data quality eller integration",
+        "För en ny scraper måste en tydlig betalande målgrupp och konkret use case kunna namnges",
+        "Nästa test ska kunna mätas i betalningsvilja, job success rate, kostnad, marginal, retention eller leveranstid",
+        "Generell scrapingteknik utan SaaS- och kundnytta är inte exact",
+        "Lösningen ska passa befintligt adapterlager och asynkrona arkitektur eller ha en tydlig migrationsvinst"
+      ],
+      "telegram_focus": "Förklara vilket betalande kundproblem eller SaaS-flöde som förbättras. Beskriv hur repot påverkar betalningsvilja, marginal, jobbstabilitet, datakvalitet eller återköp och vilket litet kommersiellt eller tekniskt test som ska göras."
+    }
+  ]
+}

@@ -17,14 +17,61 @@ GitHub Actions kör varje natt:
 1. Kör hela testsviten.
 2. Samlar kandidater från GitHub Trending och Search API.
 3. Hämtar metadata och README-utdrag.
-4. Analyserar kandidater via OpenRouter i små JSON-batchar.
-5. Validerar modellsvaret och kräver konkret evidens.
-6. Tillämpar deterministiska kvalitetsgrindar, freshness och diversifiering.
-7. Uppdaterar historik, kvalitetsranking och notifieringskö.
-8. Skickar pending-kön till Telegram.
-9. Commitar radar-, leverans- och statusfiler till repot.
+4. Laddar den kanoniska katalogen över Jonas nio aktiva projekt.
+5. Analyserar kandidater via OpenRouter i små JSON-batchar.
+6. Validerar modellsvaret och kräver konkret evidens.
+7. Tillämpar deterministiska kvalitetsgrindar, freshness och diversifiering.
+8. Uppdaterar historik, kvalitetsranking och notifieringskö.
+9. Skickar pending-kön till Telegram.
+10. Commitar radar-, leverans- och statusfiler till repot.
 
 Modellen får beskriva och bedöma kandidaterna. Node-koden bestämmer alltid om ett repo faktiskt får rankas eller notifieras.
+
+## Kanonisk projektkatalog
+
+`projects/catalog.json` är enda source of truth för projektmatchning. Den innehåller exakt nio projektprofiler:
+
+1. Golfkuponger
+2. Stock Signals
+3. Ullebets
+4. Nyabolaget-ekosystemet
+5. FAIV
+6. AI Radar
+7. Sankdig
+8. Res-kungen
+9. Apify Scraper
+
+Varje profil beskriver bland annat:
+
+- affärsmodell och norrstjärna,
+- målgrupper,
+- vad som redan finns,
+- centrala arbetsflöden,
+- aktuella behov och begränsningar,
+- tillväxt- och intäktsmotorer,
+- teknisk stack,
+- värdefulla matchningsområden,
+- discovery-termer,
+- negativa matchningar,
+- krav för att ett externt repo ska få klassas som `exact`,
+- hur Telegram-nyttan ska formuleras.
+
+AI Radar följer alltså inte alla repos på Jonas GitHub-konto. Gamla versioner, kopior, skolprojekt, mallar och presentationsrepos ska inte påverka matchningen.
+
+Äldre fristående `projects/*.md` får ligga kvar som dokumentation men laddas inte längre in i modellkontexten.
+
+## Kontextprioritering
+
+Analysen laddar kontext i följande ordning:
+
+1. hela `GOALS.md`,
+2. hela och validerade `projects/catalog.json`,
+3. frivillig idékontext från `ideas/*.md`,
+4. frivilliga kandidater från `chatgpt-genererade-ideer/candidates/*.md`.
+
+Kärnkontexten får aldrig kapas. Om `GOALS.md` eller projektkatalogen är ogiltig eller större än den tillåtna budgeten stoppar analysen tydligt. Endast den frivilliga idékontexten får trunkeras.
+
+Standardbudgeten är 70 000 tecken och kan ändras med `PROJECT_CONTEXT_MAX_CHARS`.
 
 ## Grundpoäng
 
@@ -49,6 +96,7 @@ Ett repo får visas i huvudrankingen endast när allt detta stämmer:
 - `assessment_version` är aktuell,
 - `match_type` är `exact`, inte `adjacent` eller `generic`,
 - minst ett namngivet aktivt projekt matchas konkret,
+- projektnamnet är ett exakt `display_name` från `projects/catalog.json`,
 - score är minst 78,
 - confidence är minst 0,72,
 - project fit är minst 23/30,
@@ -58,6 +106,8 @@ Ett repo får visas i huvudrankingen endast när allt detta stämmer:
 - ett praktiskt nästa test finns,
 - en verklig differentiator finns,
 - minst ett README-/metadata-baserat evidensobjekt finns.
+
+En exact-match måste kunna knytas till minst ett namngivet behov, arbetsflöde, tillväxtmål eller konkret utvecklingsarbete i projektprofilen. Gemensam stack, bransch eller ämnesord räcker inte.
 
 Kvalitetsnivåer:
 
@@ -76,8 +126,10 @@ Ett repo får skickas till Telegram endast när:
 - confidence är minst 0,85,
 - project fit är minst 25/30,
 - concrete value är minst 15/20,
-- repot är nytt eller har förbättrats minst 10 poäng sedan tidigare notifiering,
+- repot är nytt, aldrig tidigare notifierat eller har förbättrats minst 10 poäng sedan tidigare notifiering,
 - samma repo inte redan ligger i pending-kön eller leveranshistoriken.
+
+Projekt med `notification_tier: strict` kräver dessutom direkt koppling till ett aktuellt produkt-, publik- eller intäktsmål. Allmän framtida potential ska klassas som `adjacent`.
 
 Notisen innehåller projekt, konkret användning, unik skillnad, evidens och ett tydligt nästa test.
 
@@ -147,12 +199,16 @@ Varje körning skriver `status/quality.json` med bland annat:
 ## Viktiga filer
 
 ```txt
+GOALS.md                         # Övergripande mål och matchningsregler
+projects/catalog.json             # Kanoniska profiler för de nio aktiva projekten
+scripts/lib/project-context.mjs   # Validering och prioriterad kontextladdning
+
 data/
   latest.json                     # Dagens råa kandidater
   raw/YYYY-MM-DD.json             # Historisk rådata
 
 state/
-  repo-catalog.json               # Permanent minne över alla bedömda repos
+  repo-catalog.json               # Permanent minne över alla bedömda externa repos
   feedback.json                   # Manuell saved/testing/adopted/rejected-status
 
 rankings/
@@ -182,6 +238,7 @@ Kärnan behöver:
 - `OPENROUTER_MODEL` – GitHub repository variable.
 - `TELEGRAM_BOT_TOKEN` – GitHub Actions secret.
 - `TELEGRAM_CHAT_ID` – GitHub Actions secret.
+- `PROJECT_CONTEXT_MAX_CHARS` – valfri gräns, default 70 000.
 
 Ingen `.env` behövs för GitHub Actions. En lokal `.env` får endast användas lokalt och måste vara git-ignorerad.
 
@@ -208,14 +265,3 @@ TELEGRAM_BOT_TOKEN=... TELEGRAM_CHAT_ID=... npm run notify
 ```
 
 Node.js 20 eller senare krävs.
-
-## Projektkontext
-
-Analysen läser automatiskt:
-
-- `GOALS.md`
-- `projects/*.md`
-- `ideas/*.md`
-- `chatgpt-genererade-ideer/candidates/*.md`
-
-Uppdatera kontextfilerna när projekt eller prioriteringar ändras. Det är de konkreta projekten i dessa filer som avgör om en match kan klassas som `exact`.

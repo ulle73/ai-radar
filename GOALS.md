@@ -2,144 +2,196 @@
 
 Det här dokumentet är AI Radars norrstjärna.
 
-Alla GitHub-fynd, repo-rankningar, idékandidater och förslag ska bedömas mot dessa mål innan de rekommenderas till Jonas.
+Alla GitHub-fynd, repo-rankningar och Telegram-notiser ska bedömas mot de aktiva projekten i `projects/catalog.json`. Den filen är den kanoniska källan för projektnamn, affärsmål, befintliga funktioner, teknik, aktuella behov, tillväxtmotorer och negativa matchningar.
+
+Äldre projektfiler i `projects/*.md` är historisk dokumentation och ska inte användas som modellens source of truth.
 
 ## Övergripande mål
 
-Jonas vill hitta praktiska open source-verktyg, agents, workflows, templates och tekniska idéer som kan hjälpa honom bygga, sälja, automatisera eller förbättra sina egna projekt snabbare.
+AI Radar ska hitta praktiska open source-verktyg, tekniska metoder, dataresurser, workflows och komponenter som hjälper Jonas att:
 
-AI Radar ska inte bara hitta “coola repos”. Den ska hitta saker som kan skapa konkret nytta, intäkter, bättre workflows eller strategisk edge.
+1. dra in mer pengar,
+2. bygga och validera snabbare,
+3. förbättra befintliga produkter,
+4. minska manuellt och felkänsligt arbete,
+5. skapa bättre content och kampanjer,
+6. få starkare data, analys och beslutsunderlag,
+7. hitta nya möjligheter som kan testas billigt.
 
-## Primära mål
+Radarn ska inte hitta “coola repos”. Den ska hitta något som har en tydlig plats i ett namngivet projekt och som går att testa praktiskt.
 
-### 1. Hitta verktyg som förbättrar aktiva projekt
+## Kanoniska projekt
 
-Högst prioritet ges till repos som direkt kan hjälpa:
+AI Radar följer exakt dessa nio projektprofiler, i prioriterad ordning:
 
-- FAIV.se redesign och WooCommerce/webshop
-- företagslistor.se / nyabolaget data- och listplattform
-- nyabolaget.se partnerflöden och cold email
-- stock-signals
-- Socials v2
-- AI Byggstart / Bygg med AI
-- Dormy AI och automation
+1. **Golfkuponger**
+2. **Stock Signals**
+3. **Ullebets**
+4. **Nyabolaget-ekosystemet**
+5. **FAIV**
+6. **AI Radar**
+7. **Sankdig**
+8. **Res-kungen**
+9. **Apify Scraper**
 
-Ett repo är extra värdefullt om det kan användas praktiskt inom 1–14 dagar.
+Den följer inte alla Jonas GitHub-repos. Kopior, skolprojekt, mallar, presentationer, gamla versioner och inaktiva experiment ska inte påverka matchningen.
 
-### 2. Hitta affärsmöjligheter och nya idéer
+## Prioritering
 
-AI Radar ska identifiera om ett repo pekar mot en möjlig produkt, tjänst, lead magnet, automation, SaaS, e-commerce-spår eller researchidé.
+### Primära Telegram-projekt
 
-Nya idéer ska bara föreslås om de har tydlig koppling till Jonas kompetens, projekt eller marknadsmöjlighet.
+Följande projekt får utlösa Telegram när matchningen är exceptionell och exact:
 
-### 3. Ge Jonas strategisk edge
+1. Golfkuponger
+2. Stock Signals
+3. Ullebets
+4. Nyabolaget-ekosystemet
+5. FAIV
+6. AI Radar
 
-Radar ska prioritera repos som hjälper Jonas bli snabbare på:
+### Striktare sekundära projekt
 
-- AI-agent workflows
-- automatisering
-- webbutveckling
-- e-commerce
-- lead generation
-- data pipelines
-- scraping
-- trading/market signals
-- internal business AI
-- developer productivity
+Följande projekt finns i ranking och discovery men ska bara notifiera när nyttan är direkt kopplad till ett aktuellt produkt-, publik- eller intäktsmål:
 
-### 4. Filtrera bort brus
+7. Sankdig
+8. Res-kungen
+9. Apify Scraper
 
-AI Radar ska vara hård. Det är bättre att ignorera 80% av fynden än att fylla idébanken med halvdana spår.
+## Exakt matchning
 
-Repos ska få låg ranking om de är:
+Ett externt repo får klassas som `exact` endast när det gör minst en av följande saker i en projektprofil:
 
-- hype utan praktisk nytta
-- för enterprise/tunga för Jonas kontext
-- svåra att implementera
-- långt från aktiva projekt
-- black-box trading
-- spammy cold email/leadgen
-- osäkra/risky utan tydlig uppsida
+- löser ett namngivet `current_need`,
+- förbättrar ett befintligt `core_workflow`,
+- möjliggör en definierad `growth_lever`,
+- ersätter konkret utvecklingsarbete som annars behöver byggas,
+- tillför en datakälla eller metod som kan testas i projektets verkliga flöde.
 
-## Viktigaste affärsmål
+Gemensam teknik, bransch eller ämnesord räcker inte.
 
-AI Radar ska hjälpa Jonas att hitta saker som kan leda till:
+Exempel som **inte** räcker:
 
-1. Mer intäkter
-2. Snabbare implementation
-3. Bättre kundprojekt
-4. Starkare AI-/automationserbjudande
-5. Nya produktidéer som kan valideras billigt
-6. Bättre intern arbetsprocess med Codex/ChatGPT/agents
+- båda använder Next.js,
+- båda handlar om AI,
+- båda har Telegram,
+- båda handlar om golf,
+- båda använder scraping,
+- repot har många stars,
+- repot är populärt på GitHub Trending.
 
-## Viktigaste tekniska mål
+## Vad varje stark rekommendation måste svara på
 
-Prioritera repos som passar Jonas föredragna stack och arbetssätt:
+En stark eller exceptionell match ska tydligt ange:
 
-- Next.js
-- React
-- Tailwind
-- shadcn/ui
-- Supabase
-- Stripe
-- Vercel
-- WordPress/WooCommerce när det gäller FAIV
-- Node.js scripts
-- GitHub Actions
-- OpenAI/OpenRouter/LLM workflows
-- Markdown-baserade memory banks
-- Cronjobs och pipelines
+1. Vilket exakt projekt gäller det?
+2. Vilket befintligt problem, arbetsflöde eller tillväxtmål påverkas?
+3. Vad finns redan i projektet?
+4. Vad tillför repot som inte redan finns?
+5. Vilken konkret ekonomisk, produktmässig eller teknisk nytta kan uppstå?
+6. Vad är viktigaste risken eller antagandet?
+7. Vilket litet test ska Jonas göra först?
 
-## Projektprioritering just nu
+Om detta inte kan besvaras ska matchningen vara `adjacent` eller `generic`.
 
-När allt annat är lika, prioritera i denna ordning:
+## Affärsprioritet
 
-1. Verktyg som förbättrar Jonas AI-agent/Codex/ChatGPT-workflow
-2. Verktyg som hjälper AI Radar bli bättre
-3. FAIV / WooCommerce / e-commerce conversion
-4. företagslistor.se / nyabolaget / data pipeline / lead generation
-5. stock-signals / finansiell data / indikatorer
-6. AI Byggstart / Bygg med AI
-7. Dormy AI / intern AI-automation
-8. Socials v2 / social publishing
-9. Nya idéer som är starka men ännu oprövade
+När två repos är tekniskt lika bra ska AI Radar prioritera det som har tydligast väg till:
 
-## Hur nya idéer ska bedömas
+1. mer intäkt,
+2. högre konvertering,
+3. större ordervärde eller återköp,
+4. fler B2B-kunder eller partners,
+5. lägre kostnad eller mindre manuellt arbete,
+6. bättre datakvalitet eller beslut,
+7. snabbare validering av en produktidé.
 
-En ny idé ska bara föreslås om den uppfyller flera av dessa:
+Teknisk elegans utan tydlig effekt ska väga lågt.
 
-- Jonas kan testa den billigt
-- Den ligger nära befintlig kompetens eller projekt
-- Den har tydlig kund/målgrupp
-- Den kan bli MVP snabbt
-- Den kan skapa intäkt eller strategiskt värde
-- Den går att förklara enkelt
-- Den kräver inte tung enterpriseförsäljning från dag ett
+## Projektprinciper
 
-## Vad AI Radar inte ska göra
+### Golfkuponger
 
-AI Radar ska inte:
+Golfkuponger är högst prioriterat. Norrstjärnan är ökade intäkter genom Shopify-konvertering, friskvård, B2B/företagspaket, presentköp, återköp, content, nya klubbar och distributionspartners. App, digitala kuponger och partnerflöden finns redan. Radarn ska förbättra det befintliga systemet, inte föreslå att grunden byggs om från noll.
 
-- rekommendera allt som trendar
-- fylla idébanken med brus
-- föreslå stora sidoprojekt utan tydlig nytta
-- rekommendera black-box tradingbeslut
-- föreslå spammy cold email-flöden
-- freebasa generisk UI/design utan relevant DESIGN.md när design är central
-- ge förslag som kräver mycket tid men har oklar payoff
+### Stock Signals
+
+Prioritera transparenta datakällor, indikatorer, signalvalidering, optionskontext, walk-forward-testning, charting, datakvalitet och notifieringar. Black-box trading och obevisad historisk avkastning ska filtreras bort.
+
+### Ullebets
+
+Prioritera odds capture, canonical identity, data coverage, leakage-safe modelltestning, CLV, settlement, observability, read-API och frontend för league rankings och matchup scores. Tipsterrepos och stakinghype är inte relevanta.
+
+### Nyabolaget-ekosystemet
+
+Skilj alltid mellan Nyabolaget.se, Företagslistor.se och datapipelinen. Prioritera partnerkonvertering, onboarding, programmatisk SEO, lifecycle-flöden, företagsdata, deduplicering, listförsäljning, Stripe och automatisk leverans. Spamverktyg är inte relevant.
+
+### FAIV
+
+Prioritera WooCommerce-intäkt, SEO, produktdata, recensioner, content intelligence, kampanjer, WordPress-prestanda och koppling mellan content, produkt, lead och order. Generisk AI-content och automatiserad kopiering ska filtreras bort.
+
+### AI Radar
+
+Prioritera bättre project context, repo discovery, strukturerad LLM-output, evidens, calibration, feedback, observability och Telegram UX. Ett generiskt agent- eller memoryrepo är inte relevant utan en konkret förbättring av radarns pipeline.
+
+### Sankdig
+
+Radarn får hitta både tekniska förbättringar och nya verifierbara golfämnen/datamöjligheter. En stark match ska kunna bli ett konkret nytt ämne för målgruppen eller förbättra sourcing, källkontroll, rendering, publicering eller analytics.
+
+### Res-kungen
+
+Prioritera riktig rese- och prisdata, flexible dates, multi-airport, geo, destination similarity, affiliate och boende-attach. Produkten ska fortsätta ge 3–5 bra val och inte bli ännu en generell itinerary-chatbot.
+
+### Apify Scraper
+
+Bedöm projektet som extern kundbetald SaaS. Prioritera billing, credits, margins, job reliability, data quality, multi-tenancy, export och scrapers med tydlig betalningsvilja. Fler scrapers är inte värde i sig.
+
+## Föredragen teknik och arbetssätt
+
+Teknisk passform är positiv när den ligger nära ett projekts verkliga stack, bland annat:
+
+- Next.js, React, TypeScript och Node.js,
+- Shopify för Golfkuponger,
+- WordPress och WooCommerce för FAIV,
+- Python där Ullebets och contentpipelines använder det,
+- PostgreSQL, Supabase, Neon och MongoDB där de redan finns,
+- Stripe,
+- GitHub Actions,
+- Apify,
+- OpenAI/OpenRouter och strukturerade LLM-flöden,
+- Telegram,
+- robusta cronjobs, queues och data pipelines.
+
+Stackmatchning får dock aldrig ensam skapa en exact-match.
+
+## Filtrera bort brus
+
+Repos ska få låg relevans om de är:
+
+- hype utan praktisk nytta,
+- generiska agent- eller MCP-ramverk,
+- för enterprise eller dyra att införa,
+- långt från ett aktuellt behov,
+- svåra att testa,
+- black-box inom trading eller betting,
+- spammy inom lead generation,
+- osäkra juridiskt eller datamässigt,
+- ersättningar för något som redan finns,
+- stora sidoprojekt med oklar payoff.
 
 ## Rankingprincip
 
-Alla repos i totalrankingen ska bedömas utifrån:
+Bedöm varje repo utifrån:
 
-- Hur väl de matchar Jonas aktiva projekt
-- Hur väl de matchar idébanken
-- Hur snabbt de kan testas
-- Hur mycket intäkt/affärsnytta de kan skapa
-- Hur mycket de förbättrar Jonas workflow
-- Hur unik edge de kan ge
-- Hur mycket brus/risk de innehåller
+- exakt projektmatchning,
+- konkret intäkts-, tids- eller produktnytta,
+- enkelhet att testa,
+- teknisk integrationspassning,
+- kvalitet och aktivitet i repot,
+- timing,
+- evidens från README och metadata,
+- viktigaste risk,
+- om det skapar ny edge eller bara duplicerar befintlig funktion.
 
-Den bästa typen av repo är något som är:
+Den bästa typen av fynd är:
 
-> Praktiskt, nära Jonas projekt, lätt att testa, tydligt affärsvärde, och kan ge edge direkt.
+> Ett välunderhållet repo som löser ett känt problem i ett namngivet projekt, passar befintlig arkitektur, kan testas inom dagar och har tydlig väg till intäkt, högre kvalitet eller betydande tidsbesparing.

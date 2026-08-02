@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { runAnalyzer } from '../scripts/analyze-radar.mjs';
+import { writeCanonicalProjectCatalog } from './helpers/project-context-fixture.mjs';
 
 async function writeJson(filePath, value) {
   await mkdir(path.dirname(filePath), { recursive: true });
@@ -30,6 +31,7 @@ function exceptionalCatalogEntry() {
     quality_tier: 'exceptional',
     analysis_mode: 'model',
     assessment_version: 2,
+    project_context_version: 1,
     match_type: 'exact',
     category: 'agent-harness',
     concrete_use_case: 'Testa separata arbetsmiljöer för två användare i samma agentinstans.',
@@ -72,6 +74,7 @@ test('reused exceptional assessment that was never sent enters the notification 
   await writeJson(path.join(root, 'state/feedback.json'), {});
   await writeJson(path.join(root, 'notifications/pending.json'), []);
   await writeFile(path.join(root, 'GOALS.md'), '# Goals\nPrioritera FAIV.');
+  await writeCanonicalProjectCatalog(root);
 
   const result = await runAnalyzer({
     root,
