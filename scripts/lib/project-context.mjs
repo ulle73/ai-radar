@@ -160,6 +160,13 @@ export function validateProjectCatalog(catalog) {
   return errors;
 }
 
+export async function loadProjectCatalog(root = process.cwd()) {
+  const catalog = await readRequiredJson(root, 'projects/catalog.json');
+  const errors = validateProjectCatalog(catalog);
+  if (errors.length) throw new Error(`Invalid projects/catalog.json: ${errors.join('; ')}`);
+  return catalog;
+}
+
 export function renderProjectCatalog(catalog) {
   const errors = validateProjectCatalog(catalog);
   if (errors.length) throw new Error(`Invalid projects/catalog.json: ${errors.join('; ')}`);
@@ -199,7 +206,7 @@ function appendWithinBudget(base, chunks, maxChars) {
   return result;
 }
 
-export async function loadAnalysisContext({ root = process.cwd(), maxChars = 70000 } = {}) {
+export async function loadAnalysisContext({ root = process.cwd(), maxChars = 70000, catalog = null } = {}) {
   if (!Number.isInteger(maxChars) || maxChars < 1000) {
     throw new Error('maxChars must be an integer of at least 1000');
   }
@@ -207,8 +214,8 @@ export async function loadAnalysisContext({ root = process.cwd(), maxChars = 700
   const goals = (await readText(root, 'GOALS.md')).trim();
   if (!goals) throw new Error('Missing required GOALS.md');
 
-  const catalog = await readRequiredJson(root, 'projects/catalog.json');
-  const renderedCatalog = renderProjectCatalog(catalog);
+  const projectCatalog = catalog || await loadProjectCatalog(root);
+  const renderedCatalog = renderProjectCatalog(projectCatalog);
   const mandatory = [
     '--- GOALS.md ---',
     goals,
