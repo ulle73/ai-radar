@@ -6,4 +6,4 @@ Listan visar endast exakta, evidensbaserade projektmatchningar som passerat samt
 
 | Rank | Ranking | Grund | Nivå | Repo | Bäst för | Kategori | Nästa test | Status |
 |---:|---:|---:|---|---|---|---|---|---|
-| 1 | 89 | 89 | Exceptionell | [yc-software/qm](https://github.com/yc-software/qm) | AI Byggstart / Bygg med AI, Dormy AI och automation, FAIV.se redesign | kort-stabil-kategori | Testa QM med en demo där två användare samtidigt hanterar olika uppgifter i samma agentinstans. | unreviewed |
+| - | - | - | - | - | - | - | Inga tillräckligt starka matchningar ännu. | - |
