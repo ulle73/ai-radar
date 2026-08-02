@@ -80,10 +80,16 @@ export function buildNotifications({ assessments, previousCatalog, historicalSee
     const key = keyOf(assessment.repo);
     const previous = previousCatalog?.repos?.[key];
     const newToHistory = !historicalSeen.has(key);
+    const neverNotified = previous?.notified_at == null && previous?.notified_score == null;
     const improvedEnough = previous?.notified_score != null && assessment.score >= previous.notified_score + 10;
-    const eligible = notificationEligible(assessment) && (newToHistory || improvedEnough);
+    const eligible = notificationEligible(assessment) && (newToHistory || neverNotified || improvedEnough);
     if (!eligible || pendingByRepo.has(key)) continue;
-    const notification = makeNotification(assessment, date, improvedEnough ? 'score_increase' : 'new_repo');
+    const kind = improvedEnough
+      ? 'score_increase'
+      : newToHistory
+        ? 'new_repo'
+        : 'first_exceptional_match';
+    const notification = makeNotification(assessment, date, kind);
     pendingByRepo.set(key, notification);
     newNotifications.push(notification);
   }
