@@ -23,12 +23,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 19235,
+      "stars": 19972,
       "language": "PowerShell",
       "score": 13,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -185,12 +185,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 62183,
+      "stars": 62792,
       "language": "Jupyter Notebook",
       "score": 12,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -625,12 +625,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17343,
+      "stars": 17820,
       "language": "Python",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -683,12 +683,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17071,
+      "stars": 17731,
       "language": "Python",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -741,12 +741,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 23324,
+      "stars": 24377,
       "language": "Rust",
       "score": 51,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1144,12 +1144,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 385285,
+      "stars": 385400,
       "language": "TypeScript",
       "score": 41,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1357,12 +1357,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 238067,
+      "stars": 238347,
       "language": "JavaScript",
       "score": 40,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1408,14 +1408,15 @@
       "confidence": 0.05,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 205300,
+      "stars": 207367,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1462,15 +1463,14 @@
       "confidence": 0.05,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 267447,
+      "stars": 268212,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1519,12 +1519,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 226166,
+      "stars": 226679,
       "language": "Python",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1573,12 +1573,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 138608,
+      "stars": 138973,
       "language": "Shell",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-05",
+      "last_seen": "2026-08-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1858,7 +1858,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 21134,
+      "stars": 21324,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -1874,7 +1874,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -1913,7 +1913,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 15251,
+      "stars": 16616,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -1929,7 +1929,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -1967,7 +1967,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 29209,
+      "stars": 29671,
       "language": "Jupyter Notebook",
       "score": 14,
       "action": "Arkiv",
@@ -1983,7 +1983,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -2186,10 +2186,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 31785,
+      "stars": 32551,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
@@ -2208,7 +2207,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-04",
       "notified_at": null,
@@ -2537,7 +2536,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2618,
+      "stars": 2891,
       "language": "C",
       "score": 16,
       "action": "Arkiv",
@@ -2553,7 +2552,7 @@
         "testability"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-05",
       "notified_at": null,
@@ -2788,53 +2787,58 @@
     "firecrawl/anydoc": {
       "repo": "firecrawl/anydoc",
       "url": "https://github.com/firecrawl/anydoc",
-      "summary_sv": "Ett Rust-bibliotek som konverterar dokument (Word, PowerPoint, Excel, PDF osv.) till rent Markdown med bindningar för Node.js och Python.",
-      "project_matches": [],
+      "summary_sv": "Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF to clean Markdown. Built in Rust, with Node.js and Python bindings.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 1,
-        "concrete_value": 1,
+        "project_fit": 18,
+        "concrete_value": 9,
         "testability": 8,
-        "technical_fit": 5,
-        "repo_quality": 9,
+        "technical_fit": 3,
+        "repo_quality": 7.896336723454263,
         "timing": 2
       },
       "risks": [
-        "Tekniskt imponerande men inte direkt användbart för aktuella projekt."
+        "Fallbackbedömning användes: Could not parse JSON from model response"
       ],
-      "confidence": 0.1,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "document-conversion",
-      "concrete_use_case": "Ingen direkt användning för aktuella projekt.",
-      "next_step": "Köra anydocs testkonvertering på en sample PDF för att verifiera output.",
-      "differentiator": "Högpresterande Rust-bibliotek med multipla språk-bindningar och stöd för många dokumentformat.",
-      "evidence": [
-        "Konverterar Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, PDF till Markdown",
-        "Bindningar för Node.js, Python och WebAssembly",
-        "Firecrawl driver Parse API med samma bibliotek"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 5480,
+      "stars": 8874,
       "language": "Rust",
-      "score": 26,
+      "score": 47.89633672345426,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
-      "last_analyzed": "2026-08-06",
+      "last_analyzed": "2026-08-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -2871,7 +2875,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2110,
+      "stars": 2319,
       "language": "HTML",
       "score": 10,
       "action": "Arkiv",
@@ -2887,7 +2891,7 @@
         "testability"
       ],
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-05",
       "notified_at": null,
@@ -2930,7 +2934,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 82077,
+      "stars": 83070,
       "language": "JavaScript",
       "score": 49,
       "action": "Arkiv",
@@ -2944,7 +2948,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-06",
       "notified_at": null,
@@ -2953,54 +2957,58 @@
     "cloudflare/computer": {
       "repo": "cloudflare/computer",
       "url": "https://github.com/cloudflare/computer",
-      "summary_sv": "Virtuellt filsystem i Cloudflare Durable Objects som ger AI-agenter en beständig körningsmiljö med container-, isolate-shell- och isolate-JS-backends.",
-      "project_matches": [],
+      "summary_sv": "Give your agent a computer 👾",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 2,
-        "testability": 3,
-        "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 2
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 10,
+        "repo_quality": 7.386398290307435,
+        "timing": 7
       },
       "risks": [
-        "Preview-status, Cloudflare-låsning, ingen väg till intäkt eller effektivisering i nuvarande projekt"
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
-      "confidence": 0.15,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-infrastructure",
-      "concrete_use_case": "Ingen direkt användning i Jonas nuvarande projekt; kan teoretiskt servera som sandbox för scraper-körningar i Apify Scraper men kräver stor ombyggnad.",
-      "next_step": "Ingen rekommenderat test – repot är i preview-läge och saknar koppling till Jonas befintliga stack (Next.js, Node, GitHub Actions).",
-      "differentiator": "Durable Object-baserad persistens med flera körningsbackends; men Jonas projekt använder redan Apify för scraper-körningar och GitHub Actions för schemalagda jobb.",
-      "evidence": [
-        "README varnar explicit: 'PREVIEW ONLY ... NOT suitable for production use'",
-        "Bygger på Cloudflare Workers-ekosystem som inte används i någon av Jonas projekt idag",
-        "Ingen mention av data-pipeline, billing, multi-tenancy eller SaaS-mönster som Apify Scraper behöver"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 3442,
+      "stars": 4933,
       "language": "TypeScript",
-      "score": 18,
+      "score": 59.38639829030743,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "testability"
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-06",
-      "first_recommended": null,
-      "last_analyzed": "2026-08-06",
+      "last_seen": "2026-08-07",
+      "first_recommended": "2026-08-07",
+      "last_analyzed": "2026-08-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -3127,57 +3135,58 @@
     "huangruiteng/loopx": {
       "repo": "huangruiteng/loopx",
       "url": "https://github.com/huangruiteng/loopx",
-      "summary_sv": "Lättviktigt state-kernel och lokal control plane för långvariga AI-agentteam med hållbara mål, kvot-baserad auto-wake, körbara todos, evidensloggar och verifierbara handövers.",
+      "summary_sv": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
       "project_matches": [
         {
           "project": "AI Radar",
-          "reason": "Adresserar AI Radars behov av 'Memory och feedbacksystem som förbättrar framtida rekommendationer' och 'Bättre koppling mellan kandidatens README och ett namngivet projektproblem', men är ett generiskt agent-ramverk utan inbyggd projektkontext."
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
         }
       ],
       "dimensions": {
-        "project_fit": 10,
-        "concrete_value": 8,
-        "testability": 12,
-        "technical_fit": 10,
-        "repo_quality": 7,
-        "timing": 6
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 6.9498886709307754,
+        "timing": 7
       },
       "risks": [
-        "Generisk control plane som kräver anpassning för AI Radars specifika pipeline (collection→context→analysis→validation→ranking→delivery); kan bli en extra abstraktionslager utan mätbar förbättring"
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
-      "confidence": 0.4,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
-      "match_type": "adjacent",
-      "category": "agent-control-plane",
-      "concrete_use_case": "Testa om LoopX kan ersätta AI Radars nuvarande enkla JSON-baserade feedbackloop (saved/testing/adopted/rejected) med en mer strukturerad evidenslogg och handover-mekanism mellan dagliga körningar.",
-      "next_step": "Installera LoopX lokalt, definiera ett 'radar-run' mål med evidenskrav, kör en daglig samling och utvärdera om handover till nästa dagens analys blir bättre än nuvarande markdown/JSON-filer.",
-      "differentiator": "Fokus på loop-engineering: hållbara mål, kvot-hantering, evidensloggar och verifierbara handövers – närmare AI Radars behov än generiska agent-framework men saknar inbyggd GitHub-discovery, ranking och Telegram-delivery.",
-      "evidence": [
-        "README: 'Keep objectives, gates, todos, evidence, quota, and handoffs stable across turns'",
-        "Agent-agnostisk (Codex, Claude Code, Cursor) – passar Jonas användning av OpenRouter/Claude",
-        "Tidig status ('loop agents early'), 2.3k stjärnor, ingen produktionsbevisad integration med GitHub API eller Telegram"
-      ],
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 2321,
+      "stars": 2984,
       "language": "Python",
-      "score": 53,
+      "score": 55.949888670930775,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-06",
-      "first_recommended": null,
-      "last_analyzed": "2026-08-06",
+      "last_seen": "2026-08-07",
+      "first_recommended": "2026-08-07",
+      "last_analyzed": "2026-08-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -3238,38 +3247,38 @@
     "kkkkhazix/human-writing": {
       "repo": "KKKKhazix/human-writing",
       "url": "https://github.com/KKKKhazix/human-writing",
-      "summary_sv": "Ett AI-writing-skill som gör att på kinesiska skriven text låter som om en person skriver, med fokus på naturlig ton och struktur.",
+      "summary_sv": "En färdighet som gör att AI-genererad kinesisk text låter som om den skrevs av en specifik person, med kontroll för upprepningar och AI-typiska uttryck.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 1,
-        "concrete_value": 1,
-        "testability": 5,
-        "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 2
+        "project_fit": 5,
+        "concrete_value": 5,
+        "testability": 10,
+        "technical_fit": 5,
+        "repo_quality": 10,
+        "timing": 5
       },
       "risks": [
-        "Kinesiskt fokuserat verktyg utan tydlig nytta för svenska FAIV-innehåll."
+        "Färdigheten är språkberoende (kinesiska) och kanske inte fungerar lika bra för svenska eller engelska innehåll."
       ],
-      "confidence": 0.1,
+      "confidence": 0.3,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "writing-ai",
-      "concrete_use_case": "Ingen direkt användning för aktuella projekt.",
-      "next_step": "Installera skillen i en agentmiljö och testa med ett kort svenskt produktutdrag.",
-      "differentiator": "Specialiserat för att ge AI-text en 'levande person'-kvalitet, med faktakontroller och stiljustering.",
+      "category": "ai-writing-style-skill",
+      "concrete_use_case": "Jonas kan använda färdigheten för att förbättra tonen i AI-genererat innehåll för sina projekt, exempelvis blogginlägg eller nyhetsbrev.",
+      "next_step": "Installera färdigheten i en agent och låt den skriva ett kort stycke om friskvårdsförsäljning, sedan jämför med vanlig AI-utdata.",
+      "differentiator": "Fokuserar på att efterlikna en individuell skrivstil och filtrerar bort vanliga AI-mönster, snarare än att bara korrigera grammatik.",
       "evidence": [
-        "Gör AI-skriven kinesisk text mer naturlig",
-        "Inkluderar faktakontroll, stiljustering och AI-blackboxreduktion",
-        "Tillhandahålls som en Agent Skill för Claude Code, Codex, Cursor"
+        "Gör AI-text att låta som en specifik person med personliga omdömen och naturliga avbrott.",
+        "Inkluderar ett skript som tar bort upprepade förklaringar, justerar meningstakt och filtrerar bort AI-språk som 'inte … utan …'.",
+        "Enkel installation via npx till agentens skills-katalog."
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1234,
+      "stars": 1666,
       "language": "Python",
-      "score": 18,
+      "score": 40,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -3279,16 +3288,471 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "testability"
+        "concrete_value"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-07",
       "first_recommended": null,
-      "last_analyzed": "2026-08-06",
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tirth8205/code-review-graph": {
+      "repo": "tirth8205/code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "summary_sv": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 29108,
+      "language": "Python",
+      "score": 57,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": "2026-08-07",
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "significant-gravitas/autogpt": {
+      "repo": "Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "summary_sv": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 186079,
+      "language": "Python",
+      "score": 57,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": "2026-08-07",
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tapxworld/chinatextbook": {
+      "repo": "TapXWorld/ChinaTextbook",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "summary_sv": "所有小初高、大学PDF教材。",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 3,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "uncategorized",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 77253,
+      "language": "Roff",
+      "score": 25,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "google/guava": {
+      "repo": "google/guava",
+      "url": "https://github.com/google/guava",
+      "summary_sv": "Google core libraries for Java",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 51654,
+      "language": "Java",
+      "score": 53,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "goauthentik/authentik": {
+      "repo": "goauthentik/authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "summary_sv": "The authentication glue you need.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 23193,
+      "language": "Python",
+      "score": 57,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": "2026-08-07",
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "agavra/tuicr": {
+      "repo": "agavra/tuicr",
+      "url": "https://github.com/agavra/tuicr",
+      "summary_sv": "a code review TUI with vim keybindings",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.797962133316262,
+        "timing": 5
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 2505,
+      "language": "Rust",
+      "score": 49.79796213331626,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ultraworkers/claw-code": {
+      "repo": "ultraworkers/claw-code",
+      "url": "https://github.com/ultraworkers/claw-code",
+      "summary_sv": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 194999,
+      "language": "Rust",
+      "score": 48,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "binaryify/open-kimi-ppt-skill": {
+      "repo": "Binaryify/open-kimi-ppt-skill",
+      "url": "https://github.com/Binaryify/open-kimi-ppt-skill",
+      "summary_sv": "Ett verktyg som låter AI-agenter generera redigerbara PowerPoint-filer (PPTD/PPTX) med en lokal webbläsarredigerare.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 5,
+        "testability": 10,
+        "technical_fit": 5,
+        "repo_quality": 10,
+        "timing": 5
+      },
+      "risks": [
+        "Färdigheten kan bli föråldrad om Kimi uppdaterar sitt interna format eller API."
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-agent-powerpoint-skill",
+      "concrete_use_case": "Jonas kan använda färdigheten för att snabbt skapa projektpresentationer eller rapporter i sina interna arbetsflöden.",
+      "next_step": "Testa att installera färdigheten i en lokal agent (t.ex. Codex) och be den generera en enkel presentation om Golfkuponger.",
+      "differentiator": "Till skillnad från enkla textexportverktyg producerar den redigerbara PPTD-filer som kan fortsätta redigeras i PowerPoint, samt inkluderar en inbyggd webbläsarredigerare för finjustering.",
+      "evidence": [
+        "Genererar både redigerbara PPTD och färdiga PPTX-filer.",
+        "Inkluderar ett lokalt webbläsarredigeringsgränssnitt för manuell export.",
+        "Kompatibel med alla agenter som följer SKILL.md-specen (Codex, Claude Code, Cursor, WorkBuddy)."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1467,
+      "language": "Python",
+      "score": 40,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-07",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-08-06"
+  "updated_at": "2026-08-07"
 }
