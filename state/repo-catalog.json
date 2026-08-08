@@ -23,12 +23,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 19972,
+      "stars": 20593,
       "language": "PowerShell",
       "score": 13,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -185,12 +185,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 62792,
+      "stars": 63226,
       "language": "Jupyter Notebook",
       "score": 12,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -398,14 +398,14 @@
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 6309,
+      "stars": 7629,
       "language": "TypeScript",
       "score": 17,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -506,14 +506,14 @@
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 12439,
+      "stars": 12961,
       "language": "Python",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -683,12 +683,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17731,
+      "stars": 18370,
       "language": "Python",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -741,12 +741,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 24377,
+      "stars": 25001,
       "language": "Rust",
       "score": 51,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1144,12 +1144,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 385400,
+      "stars": 385502,
       "language": "TypeScript",
       "score": 41,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1357,12 +1357,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 238347,
+      "stars": 238594,
       "language": "JavaScript",
       "score": 40,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1411,12 +1411,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 207367,
+      "stars": 208937,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1463,14 +1463,15 @@
       "confidence": 0.05,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 268212,
+      "stars": 268791,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1519,12 +1520,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 226679,
+      "stars": 227119,
       "language": "Python",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1573,12 +1574,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 138973,
+      "stars": 139113,
       "language": "Shell",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1632,12 +1633,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 193926,
+      "stars": 194801,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-05",
       "notified_at": null,
@@ -1858,7 +1859,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 21324,
+      "stars": 21465,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -1874,7 +1875,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -1910,10 +1911,9 @@
         "Innehåller inget som direkt förbättrar AI Radars pipeline eller ett annat namngivet projekt"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 16616,
+      "stars": 17556,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -1929,7 +1929,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -1967,7 +1967,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 29671,
+      "stars": 29925,
       "language": "Jupyter Notebook",
       "score": 14,
       "action": "Arkiv",
@@ -1983,7 +1983,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -2188,7 +2188,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32551,
+      "stars": 32923,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
@@ -2207,7 +2207,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-04",
       "notified_at": null,
@@ -2787,58 +2787,56 @@
     "firecrawl/anydoc": {
       "repo": "firecrawl/anydoc",
       "url": "https://github.com/firecrawl/anydoc",
-      "summary_sv": "Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF to clean Markdown. Built in Rust, with Node.js and Python bindings.",
+      "summary_sv": "Rust-baserat bibliotek som konverterar Word, PowerPoint, Excel, PDF och andra dokumentformat till ren Markdown med Node.js och Python bindings.",
       "project_matches": [
         {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+          "project": "FAIV",
+          "reason": "Förbättrar FAIV:s dagliga contentpipeline genom att automatiskt konvertera produktdokument, manualer och kampanjmaterial till analyserbart Markdown-format utan manuell processing."
         }
       ],
       "dimensions": {
         "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 7.896336723454263,
-        "timing": 2
+        "concrete_value": 12,
+        "testability": 12,
+        "technical_fit": 13,
+        "repo_quality": 9,
+        "timing": 7
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Kräver integration i befintlig Python-pipeline innan nytta kan utvärderas"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.75,
+      "analysis_mode": "model",
       "assessment_version": 2,
-      "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "match_type": "adjacent",
+      "category": "content-automation",
+      "concrete_use_case": "Använd anydoc för att konvertera leverantörsspecifikationer och teknisk dokumentation till Markdown innan AI-analys i faiv-socials-pipelinen.",
+      "next_step": "Testa anydoc på 3 största leverantörsuppföljningsdokument och mäta tiden sparad vs manuell Markdown-konvertering.",
+      "differentiator": "Rust-baserad prestanda med konsistent output oavsett input-format, åtminstone 10x snabbare än motsvarande Python-lösningar.",
+      "evidence": [
+        "Konverterar Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV och PDF till GitHub-Flavored Markdown",
+        "Rust-baserad med Node.js och Python bindings",
+        "Millisekunderskonvertering enligt README"
+      ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 8874,
+      "stars": 11139,
       "language": "Rust",
-      "score": 47.89633672345426,
+      "score": 71,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
-        "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-07",
-      "first_recommended": null,
-      "last_analyzed": "2026-08-07",
+      "last_seen": "2026-08-08",
+      "first_recommended": "2026-08-08",
+      "last_analyzed": "2026-08-08",
       "notified_at": null,
       "notified_score": null
     },
@@ -2934,7 +2932,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 83070,
+      "stars": 83955,
       "language": "JavaScript",
       "score": 49,
       "action": "Arkiv",
@@ -2948,7 +2946,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-06",
       "notified_at": null,
@@ -2987,7 +2985,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 4933,
+      "stars": 5821,
       "language": "TypeScript",
       "score": 59.38639829030743,
       "action": "Arkiv",
@@ -3006,7 +3004,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-07",
       "last_analyzed": "2026-08-07",
       "notified_at": null,
@@ -3276,7 +3274,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1666,
+      "stars": 1890,
       "language": "Python",
       "score": 40,
       "action": "Arkiv",
@@ -3291,7 +3289,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-07",
       "notified_at": null,
@@ -3559,7 +3557,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 23193,
+      "stars": 23641,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -3578,7 +3576,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": "2026-08-07",
       "last_analyzed": "2026-08-07",
       "notified_at": null,
@@ -3675,7 +3673,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 194999,
+      "stars": 195006,
       "language": "Rust",
       "score": 48,
       "action": "Arkiv",
@@ -3694,7 +3692,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "first_recommended": null,
       "last_analyzed": "2026-08-07",
       "notified_at": null,
@@ -3752,7 +3750,387 @@
       "last_analyzed": "2026-08-07",
       "notified_at": null,
       "notified_score": null
+    },
+    "666ghj/mirofish": {
+      "repo": "666ghj/MiroFish",
+      "url": "https://github.com/666ghj/MiroFish",
+      "summary_sv": "En Python‑motor för svärmintelligens och förutsägelser med kunskapsgraf och fleragentig simulering.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 1,
+        "testability": 1,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Hög komplexitet utan tydlig affärsnytta"
+      ],
+      "confidence": 0.18,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generic",
+      "concrete_use_case": "Ingen konkret användning i något namngivet projekt; fungerar bara som en allmän förutsägelsemotor.",
+      "next_step": "Ingen praktisk test kan utföras i ett aktivt projekt.",
+      "differentiator": "Ingen unik fördel utöver att den är en generisk förutsägelsemotor; ingen tydlig integration med någon av Jonas projekt.",
+      "evidence": [
+        "En Python‑motor för svärmintelligens och förutsägelser",
+        "Använder kunskapsgraf och fleragentig simulering",
+        "70544 stjärnor på GitHub"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 70544,
+      "language": "Python",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "primeintellect-ai/prime-agent": {
+      "repo": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "summary_sv": "En TypeScript‑agent som förbättras själv för kodningsarbetsflöden och långvariga autonoma uppgifter.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 3,
+        "concrete_value": 2,
+        "testability": 1,
+        "technical_fit": 5,
+        "repo_quality": 7,
+        "timing": 2
+      },
+      "risks": [
+        "Komplexitet utan tydlig affärsnytta"
+      ],
+      "confidence": 0.15,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "adjacent",
+      "concrete_use_case": "Ingen direkt lösning på ett specifikt problem i AI Radar eller andra aktiva projekt.",
+      "next_step": "Ingen praktisk test kan utföras i nuvarande pipeline.",
+      "differentiator": "Den erbjuder självförbättrande agens men ingen tydlig integration eller mätbar fördel för Jonas projekt.",
+      "evidence": [
+        "Self‑improving RLM agent for coding workflows",
+        "Long‑running autonomous tasks",
+        "6726 stjärnor på GitHub"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 6726,
+      "language": "TypeScript",
+      "score": 20,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "jdx/mise": {
+      "repo": "jdx/mise",
+      "url": "https://github.com/jdx/mise",
+      "summary_sv": "En Rust‑CLI för att hantera utvecklarverktyg, miljövariabler och uppgifter på ett enhetligt sätt.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 0,
+        "technical_fit": 4,
+        "repo_quality": 9,
+        "timing": 1
+      },
+      "risks": [
+        "Kan bli onödig komplexitet för Jonas stack"
+      ],
+      "confidence": 0.12,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generic",
+      "concrete_use_case": "Ingen specifik nytta för något aktivt projekt; endast en allmän dev‑tool.",
+      "next_step": "Ingen testbar integration möjlig.",
+      "differentiator": "Ingen unik fördel utöver att den är en generisk verktygssamling.",
+      "evidence": [
+        "Dev tools, env vars, and tasks in one CLI",
+        "32088 stjärnor på GitHub",
+        "Implementerad i Rust"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 32088,
+      "language": "Rust",
+      "score": 17,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "chenyme/grok2api": {
+      "repo": "chenyme/grok2api",
+      "url": "https://github.com/chenyme/grok2api",
+      "summary_sv": "En Go‑baserad API‑gateway för flera konton i Grok Build, Grok Web, Grok Console och Grok Imagine.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 1,
+        "technical_fit": 4,
+        "repo_quality": 7,
+        "timing": 1
+      },
+      "risks": [
+        "Juridiska risker kring användning av Grok‑API"
+      ],
+      "confidence": 0.13,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generic",
+      "concrete_use_case": "Ingen tydlig koppling till något av Jonas aktiva projekt eller deras nuvarande behov.",
+      "next_step": "Ingen praktisk test kan genomföras i ett projekt.",
+      "differentiator": "Ingen unik fördel för Jonas stack eller workflow; bara en generisk gateway.",
+      "evidence": [
+        "Multi‑account API gateway for Grok services",
+        "7150 stjärnor på GitHub",
+        "Implementerad i Go"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 7150,
+      "language": "Go",
+      "score": 16,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "semantica-agi/semantica": {
+      "repo": "semantica-agi/semantica",
+      "url": "https://github.com/semantica-agi/semantica",
+      "summary_sv": "En graf‑baserad infrastruktur för kontext och ansvarstagande AI‑system med kunskapsgrafer och förklarbar resonemang.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 3,
+        "concrete_value": 2,
+        "testability": 1,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Stor komplexitet utan tydlig koppling till Jonas behov"
+      ],
+      "confidence": 0.16,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "adjacent",
+      "concrete_use_case": "Ingen direkt lösning på ett specifikt problem i AI Radar eller andra projekt; endast en generisk kontekstinfrastruktur.",
+      "next_step": "Ingen praktisk test kan utföras i nuvarande pipeline.",
+      "differentiator": "Den erbjuder graf‑native kontext men ingen tydlig integration eller mätbar förbättring för Jonas projekt.",
+      "evidence": [
+        "Graph‑Native Infrastructure for Context and Accountable AI Systems",
+        "Uses knowledge graphs and causal reasoning",
+        "2377 stjärnor på GitHub"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 2377,
+      "language": "Python",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "anthropics/skills": {
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "summary_sv": "Offentligt GitHub-repositorium med exempel på Agent Skills för Claude, inklusive kreativa och tekniska tillämpningar.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 3,
+        "testability": 5,
+        "technical_fit": 4,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Hög risk för att endast samla in hype utan praktisk nytta"
+      ],
+      "confidence": 0.9,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-reference",
+      "concrete_use_case": "Ingen specifik användning i något av Jonas aktiva projekt utan generisk AI-inspiration.",
+      "next_step": "Ingen praktisk testning behövs - repo är enkelt referensmaterial.",
+      "differentiator": "Ingen direkt nytta utan fungerar som kodexempel och inspiration.",
+      "evidence": [
+        "166 905 stars - populärt men generiskt AI-agentmaterial",
+        "Innehåller olika typer av skills utan projektspecifik koppling",
+        "Endast demonstrations- och exempelrepos"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 166905,
+      "language": "Python",
+      "score": 30,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "zzzlc0405/photo-abstract-editorial": {
+      "repo": "ZzzLc0405/photo-abstract-editorial",
+      "url": "https://github.com/ZzzLc0405/photo-abstract-editorial",
+      "summary_sv": "Codex Skill som omvandlar en bild till kombination av originalfoto och abstrakt minnespanel med poesi, med stora justeringsmöjligheter.",
+      "project_matches": [
+        {
+          "project": "Sankdig",
+          "reason": "Förbättrar Sankdigs bildgenerering genom att skapa mer kreativa och analytiska Instagram-karuseller med abstraktion som stöder golfdata."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 15,
+        "concrete_value": 10,
+        "testability": 10,
+        "technical_fit": 12,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Kräver manuell justering och kan öka produktionskomplexiteten"
+      ],
+      "confidence": 0.7,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "content-visualization",
+      "concrete_use_case": "Använd skill för att generera abstrakta minnespaneler kopplade till golfstatistik i Sankdigs Instagram-karuseller.",
+      "next_step": "Testa skill på 5 existerande golfstatistik-bilder och jämför engagement vs nuvarande rendering.",
+      "differentiator": "Kombinerar originalbild med strukturerad abstraktion snarare än bara bildbehandling eller AI-generering.",
+      "evidence": [
+        "Omvandlar foto till 'original + abstrakt minnespanel + poetisk titel'",
+        "Stora justeringsmöjligheter för färger, former och layout",
+        "Kunskap om att abstraktionen härstammar från originalbildens faktiska relationer"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1502,
+      "language": null,
+      "score": 60,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "first_recommended": "2026-08-08",
+      "last_analyzed": "2026-08-08",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-08-08"
 }
