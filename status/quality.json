@@ -6,18 +6,18 @@
   "final_ranking_size": 0,
   "recommendation_rate": 0,
   "category_concentration": 0,
-  "average_confidence": 0.32,
+  "average_confidence": 0.38,
   "ranked_average_confidence": null,
   "match_types": {
     "exact": 0,
-    "adjacent": 2,
-    "generic": 28,
+    "adjacent": 1,
+    "generic": 29,
     "unknown": 0
   },
   "excluded_by_gate": {
     "model_analysis": 12,
     "exact_match": 30,
-    "confidence": 26,
+    "confidence": 24,
     "score": 30,
     "project_fit": 30,
     "concrete_value": 30,
@@ -25,7 +25,7 @@
     "next_step": 12,
     "differentiator": 12,
     "evidence": 12,
-    "project_match": 18,
-    "testability": 14
+    "project_match": 19,
+    "testability": 12
   }
 }
