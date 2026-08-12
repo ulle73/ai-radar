@@ -1,19 +1,18 @@
 {
-  "date": "2026-08-11",
-  "generated_at": "2026-08-11T03:11:58.366Z",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T03:30:23.557Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: Could not parse JSON from model response",
-    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)"
+    "OpenRouter-batch misslyckades: Could not parse JSON from model response"
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
   "analyzed_today": 9,
   "reused_today": 21,
-  "model_assessments": 0,
-  "fallback_assessments": 9,
+  "model_assessments": 4,
+  "fallback_assessments": 5,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,

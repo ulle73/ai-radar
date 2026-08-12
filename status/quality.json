@@ -10,22 +10,22 @@
   "ranked_average_confidence": null,
   "match_types": {
     "exact": 0,
-    "adjacent": 1,
-    "generic": 29,
+    "adjacent": 3,
+    "generic": 27,
     "unknown": 0
   },
   "excluded_by_gate": {
-    "model_analysis": 17,
+    "model_analysis": 16,
     "exact_match": 30,
     "confidence": 28,
     "score": 30,
     "project_fit": 30,
     "concrete_value": 30,
-    "concrete_use_case": 17,
-    "next_step": 17,
-    "differentiator": 17,
-    "evidence": 17,
+    "concrete_use_case": 16,
+    "next_step": 16,
+    "differentiator": 16,
+    "evidence": 16,
     "project_match": 14,
-    "testability": 10
+    "testability": 12
   }
 }
