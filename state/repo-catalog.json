@@ -23,12 +23,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 24015,
+      "stars": 24534,
       "language": "PowerShell",
       "score": 13,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1144,12 +1144,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 385987,
+      "stars": 386102,
       "language": "TypeScript",
       "score": 41,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1357,12 +1357,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 239509,
+      "stars": 239778,
       "language": "JavaScript",
       "score": 40,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1410,12 +1410,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 214002,
+      "stars": 215285,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1464,12 +1464,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 270823,
+      "stars": 271317,
       "language": "Shell",
       "score": 16,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1518,12 +1518,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 229099,
+      "stars": 229661,
       "language": "Python",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1570,15 +1570,14 @@
       "confidence": 0.05,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
-        "GitHub Search API"
+        "GitHub Trending – daily"
       ],
-      "stars": 143481,
+      "stars": 144670,
       "language": "Shell",
       "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-02",
       "notified_at": null,
@@ -1632,12 +1631,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 196287,
+      "stars": 196698,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-05",
       "notified_at": null,
@@ -1912,7 +1911,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 19968,
+      "stars": 20700,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -1928,7 +1927,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-03",
       "notified_at": null,
@@ -2187,7 +2186,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 33997,
+      "stars": 34258,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
@@ -2206,7 +2205,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-04",
       "notified_at": null,
@@ -2369,7 +2368,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 35866,
+      "stars": 36972,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -2388,7 +2387,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-04",
       "last_analyzed": "2026-08-04",
       "notified_at": null,
@@ -2422,7 +2421,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 14753,
+      "stars": 15077,
       "language": "Rust",
       "score": 24.870712185891147,
       "action": "Arkiv",
@@ -2443,7 +2442,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-04",
       "notified_at": null,
@@ -2984,7 +2983,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7619,
+      "stars": 7820,
       "language": "TypeScript",
       "score": 57.7639099426792,
       "action": "Arkiv",
@@ -3003,7 +3002,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-07",
       "last_analyzed": "2026-08-12",
       "notified_at": null,
@@ -3162,7 +3161,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 4210,
+      "stars": 4439,
       "language": "Python",
       "score": 54.1999843551682,
       "action": "Arkiv",
@@ -3181,7 +3180,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-07",
       "last_analyzed": "2026-08-11",
       "notified_at": null,
@@ -4004,7 +4003,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 5008,
+      "stars": 5829,
       "language": "Python",
       "score": 56.2539119028709,
       "action": "Arkiv",
@@ -4023,7 +4022,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-08-11",
       "notified_at": null,
@@ -4059,10 +4058,9 @@
         "Endast demonstrations- och exempelrepos"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 168220,
+      "stars": 168578,
       "language": "Python",
       "score": 30,
       "action": "Arkiv",
@@ -4077,7 +4075,7 @@
         "testability"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-08",
       "notified_at": null,
@@ -4230,7 +4228,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17805,
+      "stars": 17931,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -4249,7 +4247,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-09",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-09",
       "last_analyzed": "2026-08-09",
       "notified_at": null,
@@ -4626,10 +4624,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 3876,
+      "stars": 4109,
       "language": "Python",
       "score": 55.98468250650995,
       "action": "Arkiv",
@@ -4648,7 +4645,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-10",
       "last_analyzed": "2026-08-10",
       "notified_at": null,
@@ -4797,7 +4794,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 76592,
+      "stars": 77803,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -4816,7 +4813,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-08-11",
       "notified_at": null,
@@ -4980,7 +4977,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 61199,
+      "stars": 62076,
       "language": "Python",
       "score": 58,
       "action": "Arkiv",
@@ -4999,7 +4996,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-08-11",
       "notified_at": null,
@@ -5095,7 +5092,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1452,
+      "stars": 1577,
       "language": "TypeScript",
       "score": 10,
       "action": "Arkiv",
@@ -5111,7 +5108,7 @@
         "testability"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-12",
       "notified_at": null,
@@ -5150,7 +5147,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 42931,
+      "stars": 44064,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -5169,7 +5166,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": "2026-08-12",
       "last_analyzed": "2026-08-12",
       "notified_at": null,
@@ -5381,7 +5378,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 836,
+      "stars": 851,
       "language": "TypeScript",
       "score": 19,
       "action": "Arkiv",
@@ -5397,7 +5394,7 @@
         "testability"
       ],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-12",
       "notified_at": null,
@@ -5435,7 +5432,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1308,
+      "stars": 1621,
       "language": "C",
       "score": 16,
       "action": "Arkiv",
@@ -5451,7 +5448,7 @@
         "testability"
       ],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "first_recommended": null,
       "last_analyzed": "2026-08-12",
       "notified_at": null,
@@ -5510,7 +5507,335 @@
       "last_analyzed": "2026-08-12",
       "notified_at": null,
       "notified_score": null
+    },
+    "hugohe3/ppt-master": {
+      "repo": "hugohe3/ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "summary_sv": "AI-genererar native PowerPoint-presentationer från dokument med animationer, tal och data-baserade diagram.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan vara överbyggt för nuvarande behov"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-verktyg",
+      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att generera presentationer eller dokumentation.",
+      "next_step": "Kör en demo av PPT Master för att generera en enkel presentation från ett kort dokument och bedöma output-kvaliteten.",
+      "differentiator": "Skapar native PowerPoint-filer med inbyggda former, övergångar, animationer och tal, samt stöder egna .pptx-mallar.",
+      "evidence": [
+        "AI genererar native PowerPoint från valfritt dokument",
+        "Stöder former, övergångar, animationer, data-baserade diagram och tal",
+        "45k+ GitHub-stjärnor indikerar hög popularitet"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 45818,
+      "language": "Python",
+      "score": 18,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "cathrynlavery/diagram-design": {
+      "repo": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "summary_sv": "Tillhandahåller 29 redaktionella diagramtyper för Claude Code, levererade som självförsörjande HTML + SVG.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 7,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan vara för niche för nuvarande arbetsflöden"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "diagramverktyg",
+      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att skapa diagram för dokumentation eller analyser.",
+      "next_step": "Testa diagram-design-verktyget lokalt genom att generera ett exempel på ett arkitekturdiagram och exportera det till SVG.",
+      "differentiator": "Redaktionellt utformade diagramtyper som matchar webbplatsens design, utan beroende av Figma eller generic rundade boxar.",
+      "evidence": [
+        "29 diagramtyper för Claude Code",
+        "Självförsörjande HTML + SVG, inga externa beroenden",
+        "11k+ GitHub-stjärnor"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 11094,
+      "language": "HTML",
+      "score": 17,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "infiniflow/ragflow": {
+      "repo": "infiniflow/ragflow",
+      "url": "https://github.com/infiniflow/ragflow",
+      "summary_sv": "Open-source RAG-motorer som kombinerar Retrieval-Augmented Generation med agentförmågor för att skapa ett överlägset kontextlager för LLM:er.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 4,
+        "technical_fit": 3,
+        "repo_quality": 9,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan vara överbyggt för nuvarande AI-användning"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "rag-motorer",
+      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att förbättra kontextualisering i AI-verktyg.",
+      "next_step": "Installera RAGFlow lokalt och köra en enkel QA-fråga mot en liten dokumentuppsättning för att se retrievalkvaliteten.",
+      "differentiator": "Integrerar RAG med agentiska arbetsflöden, erbjuder kontextlager och stöd för verklig tidsfrågesvar.",
+      "evidence": [
+        "Open-source RAG-motor med agentförmågor",
+        "87k+ GitHub-stjärnor indikerar starkt intresse",
+        "Skapar kontextlager för LLM:er"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 87610,
+      "language": "Go",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "macro-inc/macro": {
+      "repo": "macro-inc/macro",
+      "url": "https://github.com/macro-inc/macro",
+      "summary_sv": "Unified workspace som sammanlänkar email, chat, docs, tasks, agents, calls och CRM med delat AI-minne.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 5,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan vara för brett för nuvarande behov"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "arbetsflödesplattform",
+      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att förbättra interna samarbetsflöden.",
+      "next_step": "Skapa ett demo-konto och testa @-länkad funktionalitet mellan email och anteckningar för att bedöma användbarhet.",
+      "differentiator": "Helhetslösning med @-länkad AI-minne över flera produktivitetsverktyg, ingen behov av Zapier/MCP.",
+      "evidence": [
+        "Unified workspace med email, chat, docs, tasks, agents, CRM",
+        "Delat AI-minne och @-länkning",
+        "1.9k+ GitHub-stjärnor"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 1971,
+      "language": "Rust",
+      "score": 15,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "drawdb-io/drawdb": {
+      "repo": "drawdb-io/drawdb",
+      "url": "https://github.com/drawdb-io/drawdb",
+      "summary_sv": "Gratis, enkel och intuitiv online ER-diagramredigerare och SQL-generator för databaser.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 4,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan vara för generell för nuvarande datapipe-line"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "db-design",
+      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att visualisera databasmodeller.",
+      "next_step": "Öppna DrawDB i webbläsaren, skapa ett enkelt ER-diagram och exportera SQL-skriptet för att verifiera funktionaliteten.",
+      "differentiator": "Ingen inloggning krävs, direkt webbredigerare med SQL-export och import, stöd för många databasplattformar.",
+      "evidence": [
+        "Online ER-diagramredigerare med SQL-generering",
+        "Ingen inloggning, direkt användning",
+        "38k+ GitHub-stjärnor"
+      ],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 38954,
+      "language": "JavaScript",
+      "score": 20,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "guillaumemeyer/watermarks-remover": {
+      "repo": "guillaumemeyer/watermarks-remover",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "summary_sv": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 6.858535332866337,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2686,
+      "language": "Python",
+      "score": 50.85853533286634,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-13",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-08-12"
+  "updated_at": "2026-08-13"
 }
