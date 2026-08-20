@@ -6,7 +6,7 @@
   "final_ranking_size": 0,
   "recommendation_rate": 0,
   "category_concentration": 0,
-  "average_confidence": 0.37,
+  "average_confidence": 0.4,
   "ranked_average_confidence": null,
   "match_types": {
     "exact": 0,
@@ -16,16 +16,16 @@
   },
   "excluded_by_gate": {
     "exact_match": 30,
-    "project_match": 18,
     "confidence": 26,
     "score": 30,
     "project_fit": 30,
-    "concrete_value": 28,
+    "concrete_value": 29,
+    "project_match": 16,
     "testability": 14,
-    "model_analysis": 12,
-    "concrete_use_case": 12,
-    "next_step": 12,
-    "differentiator": 12,
-    "evidence": 12
+    "model_analysis": 15,
+    "concrete_use_case": 15,
+    "next_step": 15,
+    "differentiator": 15,
+    "evidence": 15
   }
 }
