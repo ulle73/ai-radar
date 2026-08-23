@@ -1,10 +1,14 @@
 {
-  "date": "2026-08-22",
-  "generated_at": "2026-08-22T02:29:20.387Z",
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T02:37:46.697Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: Could not parse JSON from model response"
+    "anthropics/claude-code: modellsvaret kunde inte valideras (missing assessment).",
+    "openai/codex: modellsvaret kunde inte valideras (missing assessment).",
+    "Wei-Shaw/sub2api: modellsvaret kunde inte valideras (missing assessment).",
+    "n8n-io/n8n: modellsvaret kunde inte valideras (missing assessment).",
+    "makeplane/plane: modellsvaret kunde inte valideras (missing assessment)."
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
