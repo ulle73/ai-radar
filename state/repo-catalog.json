@@ -718,58 +718,52 @@
     "block/buzz": {
       "repo": "block/buzz",
       "url": "https://github.com/block/buzz",
-      "summary_sv": "A hive mind communication platform",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Nostr-baserad kommunikationsplattform där människor och AI-agenter samarbetar i samma workspace.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 7,
+        "technical_fit": 6,
         "repo_quality": 8,
-        "timing": 5
+        "timing": 6
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 25001,
+      "stars": 30152,
       "language": "Rust",
-      "score": 51,
+      "score": 29,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
-      "last_analyzed": "2026-08-02",
+      "last_analyzed": "2026-08-24",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "generisk",
+      "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+      "next_step": "Klona repot, installera Rust-miljön och starta en lokal relay för att testa samarbetet mellan människor och agenter.",
+      "differentiator": "Nostr-baserad relay som loggar alla interaktioner som signerade händelser, vilket möjliggör spårbarhet för både människor och agenter.",
+      "evidence": [
+        "Rust-baserat verktyg med 30 152 stars och beskrivning: \"A hive mind communication platform\".",
+        "Använder Nostr-relay för att lagra meddelanden, reaktioner och git-händelser som append-only-logg."
+      ],
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "project_context_version": 1
     },
@@ -1146,12 +1140,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 387161,
+      "stars": 387277,
       "language": "TypeScript",
       "score": 29,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1362,12 +1356,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 242199,
+      "stars": 242591,
       "language": "JavaScript",
       "score": 31,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1417,12 +1411,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 232198,
+      "stars": 233987,
       "language": "Shell",
       "score": 34,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1469,15 +1463,14 @@
       "confidence": 0.2,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 276218,
+      "stars": 276709,
       "language": "Shell",
       "score": 30,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1526,12 +1519,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 234418,
+      "stars": 235060,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1639,12 +1632,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 200376,
+      "stars": 200706,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-20",
       "notified_at": null,
@@ -4068,7 +4061,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 171041,
+      "stars": 171208,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -4087,7 +4080,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -6569,7 +6562,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 4681,
+      "stars": 4829,
       "language": "TypeScript",
       "score": 41,
       "action": "Arkiv",
@@ -6583,7 +6576,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-15",
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -6794,7 +6787,7 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 468674,
+      "stars": 469267,
       "language": "Python",
       "score": 70,
       "action": "Arkiv",
@@ -6807,7 +6800,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-16",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -6959,7 +6952,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7117,
+      "stars": 7262,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -6975,7 +6968,7 @@
         "testability"
       ],
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -7181,9 +7174,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 28336,
+      "stars": 29206,
       "language": "Shell",
       "score": 25,
       "action": "Arkiv",
@@ -7204,7 +7198,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-17",
       "notified_at": null,
@@ -7479,7 +7473,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 114684,
+      "stars": 115374,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -7498,7 +7492,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-18",
       "last_analyzed": "2026-08-18",
       "notified_at": null,
@@ -7534,9 +7528,9 @@
         "LLM inference, optimized for your Mac"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 19863,
+      "stars": 20453,
       "language": "Python",
       "score": 68,
       "action": "Arkiv",
@@ -7550,7 +7544,7 @@
         "project_fit"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-18",
       "last_analyzed": "2026-08-18",
       "notified_at": null,
@@ -7817,7 +7811,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32097,
+      "stars": 32532,
       "language": "Python",
       "score": 12,
       "action": "Arkiv",
@@ -7833,7 +7827,7 @@
         "testability"
       ],
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-19",
       "notified_at": null,
@@ -8036,7 +8030,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3788,
+      "stars": 3931,
       "language": null,
       "score": 47.0021185244355,
       "action": "Arkiv",
@@ -8055,7 +8049,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8205,7 +8199,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 13999,
+      "stars": 15036,
       "language": "Rust",
       "score": 40,
       "action": "Arkiv",
@@ -8220,7 +8214,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8257,10 +8251,9 @@
         "Aktiv utveckling"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 28857,
+      "stars": 28989,
       "language": "Mojo",
       "score": 32,
       "action": "Arkiv",
@@ -8276,7 +8269,7 @@
         "testability"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8784,7 +8777,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 95541,
+      "stars": 95986,
       "language": "TypeScript",
       "score": 20,
       "action": "Arkiv",
@@ -8800,7 +8793,7 @@
         "testability"
       ],
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -8837,10 +8830,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 142566,
+      "stars": 142774,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -8859,7 +8851,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -8898,7 +8890,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 113565,
+      "stars": 115507,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -8917,7 +8909,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -9109,39 +9101,40 @@
     "mengto/threeui": {
       "repo": "MengTo/threeui",
       "url": "https://github.com/MengTo/threeui",
-      "summary_sv": "En öppen källkod React UI-bibliotek baserat på Three.js med interaktiva komponenter och teman.",
+      "summary_sv": "Öppen källa för ThreeUI Community-katalog med interaktiva komponenter, routes och variabler, utan autentisering.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 5,
-        "testability": 10,
-        "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 3,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 4,
+        "repo_quality": 7,
+        "timing": 4
       },
       "risks": [
-        "Låg underhållsaktivitet",
-        "Specialiserad på 3D UI"
+        "Ingen relevance",
+        "Kan kräva anpassning",
+        "Endast för Three.js"
       ],
-      "confidence": 0.3,
+      "confidence": 0.2,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
       "category": "ui-bibliotek",
-      "concrete_use_case": "Inget specifikt användningsfall i Jonas projekt",
-      "next_step": "Testa integration i en webbapp som kräver 3D-visualisering",
-      "differentiator": "Använder Three.js för 3D-komponenter, men ingen projekt behöver detta",
+      "concrete_use_case": "Jonas kan använda komponenter i en 3D-webbapp, men ingen av hans projekt behöver 3D.",
+      "next_step": "Testa en komponent i en sidoprojekt men inget affärsvärde.",
+      "differentiator": "Ingen unik fördel; många liknande bibliotek finns.",
       "evidence": [
-        "50+ community-komponenter",
-        "Live-renderare",
-        "Ingen autentisering krävs"
+        "50 Community parent components",
+        "111 Community routes",
+        "Ingen autentisering eller checkout"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1949,
+      "stars": 2979,
       "language": "HTML",
-      "score": 45,
+      "score": 26,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -9151,12 +9144,13 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "testability"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
-      "last_analyzed": "2026-08-23",
+      "last_analyzed": "2026-08-24",
       "notified_at": null,
       "notified_score": null
     },
@@ -9193,7 +9187,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1243,
+      "stars": 1433,
       "language": "Python",
       "score": 36,
       "action": "Arkiv",
@@ -9208,12 +9202,388 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "first_recommended": null,
       "last_analyzed": "2026-08-23",
       "notified_at": null,
       "notified_score": null
+    },
+    "alishahryar1/free-claude-code": {
+      "repo": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "summary_sv": "Ger gratis tillgång till Claude Code och dess modeller via terminalen eller IDE:n med över 1,3 miljarder gratis token per månad.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 9,
+        "timing": 6
+      },
+      "risks": [
+        "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk",
+      "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+      "next_step": "Klona repot, installera beroenden och kör ett enkelt exempel för att verifiera att verktyget fungerar.",
+      "differentiator": "Tillhandahåller gratis, ToS-vänlig tillgång till Claude Code, Codex, Pi och OpenCode med över 1,3 miljarder gratis token per månad.",
+      "evidence": [
+        "Python-baserat verktyg med 48 040 stars och MIT-licens.",
+        "Beskrivning: \"Använd Claude Code, Codex, Pi och OpenCode för gratis (1,3B+ gratis tokens) från din terminal, app, IDE eller telefon.\""
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 48040,
+      "language": "Python",
+      "score": 32,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tinyhumansai/openhuman": {
+      "repo": "tinyhumansai/openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "summary_sv": "Lokalt-first AI som bygger ett personligt minne av ditt liv och samordnar agentflockar och arbetsflöden.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 7,
+        "technical_fit": 6,
+        "repo_quality": 8,
+        "timing": 6
+      },
+      "risks": [
+        "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk",
+      "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+      "next_step": "Klona repot, installera Rust-miljön och kör exempelkoden för att se hur agentfleet-orchesteringen fungerar.",
+      "differentiator": "Lokalt-first personligt AI-minne och orkester av agenter för forskning, arbetsflöden och livshistorik.",
+      "evidence": [
+        "Rust-baserat verktyg med 36 803 stars och beskrivning: \"Your Personal AI super intelligence\".",
+        "Inkluderar minnesbyggande, agentfleet-orchestrering och djup forskning."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 36803,
+      "language": "Rust",
+      "score": 29,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "freestylefly/awesome-gpt-image-2": {
+      "repo": "freestylefly/awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "summary_sv": "Industriell promptmall och Skills-bibliotek för GPT-Image2 med över 470 färdiga exempel.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 3,
+        "testability": 8,
+        "technical_fit": 5,
+        "repo_quality": 7,
+        "timing": 5
+      },
+      "risks": [
+        "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk",
+      "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+      "next_step": "Klona repot, installera Node.js-miljön och testa en promptmall för att generera en bild med GPT-Image2.",
+      "differentiator": "Mångsidiga promptmallar och Skills för GPT-Image2, med över 470 reverse-engineered exempel och kontinuerliga uppdateringar.",
+      "evidence": [
+        "JavaScript-bibliotek med 13 007 stars och beskrivning: \"Prompt as Code | GPT-Image2 Industrial Prompt Engine & Template Library\".",
+        "Inkluderar 20+ industriella mallar, Skills och kontinuerliga uppdateringar."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 13007,
+      "language": "JavaScript",
+      "score": 28,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "apache/maka": {
+      "repo": "apache/maka",
+      "url": "https://github.com/apache/maka",
+      "summary_sv": "Apache Maka är en lokal-first AI-agentarbetsyta som loggar alla interaktioner som en append-only-logg.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 5,
+        "repo_quality": 5,
+        "timing": 5
+      },
+      "risks": [
+        "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk",
+      "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+      "next_step": "Klona repot, installera TypeScript-miljön och starta en lokal Maka-klient för att testa loggningen av agentinteraktioner.",
+      "differentiator": "Apache-inkubatorprojekt som tillhandahåller en append-only-logg för AI-agentinteraktioner, beslutsspårning och verktygsanvändning.",
+      "evidence": [
+        "TypeScript-baserat verktyg med 2 384 stars och beskrivning: \"Apache Maka (Incubating) is a local-first AI agent workspace.\".",
+        "Loggar modellmeddelanden, verktygsanvändning och beslutsspårning som append-only-händelser."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 2384,
+      "language": "TypeScript",
+      "score": 23,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "anthropics/claude-plugins-community": {
+      "repo": "anthropics/claude-plugins-community",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "summary_sv": "En community-marknad för plugins till Claude Cowork och Claude Code med automatisk säkerhetsskanning och godkännande.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 3,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Ingen koppling till Jonas projekt",
+        "Generisk marknad utan specifik nytta",
+        "Beroende på Anthropic plattform"
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-pluginmarknad",
+      "concrete_use_case": "Jonas kan bläddra bland godkända plugins för Claude Code, men ingen direkt koppling till något av hans projekt.",
+      "next_step": "Testa en plugin som automatiserar en uppgift inom AI Radar, men förvänta sig inget omedelbart värde.",
+      "differentiator": "Ingen unik fördel gentemot befintliga verktyg.",
+      "evidence": [
+        "Read-only mirror av community plugin-marknad",
+        "Plugins har genomgått automatiserad säkerhetsskanning",
+        "Synkad nattligt från Anthropic interna pipeline"
+      ],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 998,
+      "language": "Python",
+      "score": 31,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "shadowaqueduct/watermark-remover": {
+      "repo": "ShadowAqueduct/watermark-remover",
+      "url": "https://github.com/ShadowAqueduct/watermark-remover",
+      "summary_sv": "Verktyg som tar bort AI-vattenmärken från text och filer, inklusive osynliga Unicode, statistiska textvattenmärken och C2PA/metadata.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 3,
+        "testability": 7,
+        "technical_fit": 5,
+        "repo_quality": 6,
+        "timing": 4
+      },
+      "risks": [
+        "Kan missbrukas för att dölja ursprung",
+        "Ingen direkt projektnytta",
+        "Juridisk osäkerhet"
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "data-rengöring",
+      "concrete_use_case": "Jonas kan rensa bort vattenmärken från AI-genererat innehåll, men behovet är osäkert.",
+      "next_step": "Testa på ett provexempel av AI-genererad text.",
+      "differentiator": "Täcker flera leverantörers vattenmärken, men ingen koppling till affärsmål.",
+      "evidence": [
+        "Stöd för PNG, JPEG, SVG, PDF, DOCX, HTML, MD",
+        "Täcker Claude, Gemini, OpenAI provenance",
+        "Agent skill + stdlib Python service"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 760,
+      "language": "Python",
+      "score": 29,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "duty1g/x64dbg-mcp-server": {
+      "repo": "duty1g/x64dbg-mcp-server",
+      "url": "https://github.com/duty1g/x64dbg-mcp-server",
+      "summary_sv": "MCP-server som exponerar x64dbg-debuggerfunktioner över HTTP för AI-assisterad reverse engineering.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 5,
+        "technical_fit": 3,
+        "repo_quality": 6,
+        "timing": 3
+      },
+      "risks": [
+        "Irrelevant för alla projekt",
+        "Kräver x64dbg och expertkunskap",
+        "MCP-server kan vara overkill"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "debug-verktyg",
+      "concrete_use_case": "Jonas kan kontrollera x64dbg programmatoriskt, men ingen av hans projekt använder reverse engineering.",
+      "next_step": "Testa i en isolerad miljö om intresse för security.",
+      "differentiator": "Ingen unik fördel för Jonas projekt.",
+      "evidence": [
+        "Byggt med Zig, zero dependencies",
+        "Stöd för breakpoints, step, memory dump",
+        "MCP-kompatibel"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 935,
+      "language": "Zig",
+      "score": 20,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-24",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-08-23"
+  "updated_at": "2026-08-24"
 }
