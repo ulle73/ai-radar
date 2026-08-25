@@ -1140,12 +1140,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 387277,
+      "stars": 387442,
       "language": "TypeScript",
       "score": 29,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1353,15 +1353,14 @@
       "confidence": 0.25,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 242591,
+      "stars": 242947,
       "language": "JavaScript",
       "score": 31,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1408,15 +1407,14 @@
       "confidence": 0.2,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 233987,
+      "stars": 235506,
       "language": "Shell",
       "score": 34,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1465,12 +1463,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 276709,
+      "stars": 277148,
       "language": "Shell",
       "score": 30,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1517,14 +1515,15 @@
       "confidence": 0.2,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 235060,
+      "stars": 235864,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1632,12 +1631,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 200706,
+      "stars": 201061,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-20",
       "notified_at": null,
@@ -4061,7 +4060,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 171208,
+      "stars": 171389,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -4080,7 +4079,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -6787,7 +6786,7 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 469267,
+      "stars": 469914,
       "language": "Python",
       "score": 70,
       "action": "Arkiv",
@@ -6800,7 +6799,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-16",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -6952,7 +6951,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7262,
+      "stars": 7416,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -6968,7 +6967,7 @@
         "testability"
       ],
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -7174,10 +7173,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 29206,
+      "stars": 30239,
       "language": "Shell",
       "score": 25,
       "action": "Arkiv",
@@ -7198,7 +7196,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-17",
       "notified_at": null,
@@ -7473,7 +7471,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 115374,
+      "stars": 116001,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -7492,7 +7490,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-18",
       "last_analyzed": "2026-08-18",
       "notified_at": null,
@@ -7530,7 +7528,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 20453,
+      "stars": 20556,
       "language": "Python",
       "score": 68,
       "action": "Arkiv",
@@ -7544,7 +7542,7 @@
         "project_fit"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-18",
       "last_analyzed": "2026-08-18",
       "notified_at": null,
@@ -7643,7 +7641,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 4099,
+      "stars": 4423,
       "language": "Rust",
       "score": 51,
       "action": "Arkiv",
@@ -7657,7 +7655,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-18",
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -7811,7 +7809,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32532,
+      "stars": 33009,
       "language": "Python",
       "score": 12,
       "action": "Arkiv",
@@ -7827,7 +7825,7 @@
         "testability"
       ],
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-19",
       "notified_at": null,
@@ -8199,7 +8197,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 15036,
+      "stars": 15928,
       "language": "Rust",
       "score": 40,
       "action": "Arkiv",
@@ -8214,7 +8212,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8253,7 +8251,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 28989,
+      "stars": 29077,
       "language": "Mojo",
       "score": 32,
       "action": "Arkiv",
@@ -8269,7 +8267,7 @@
         "testability"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8608,7 +8606,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 38308,
+      "stars": 39020,
       "language": "Python",
       "score": 61,
       "action": "Arkiv",
@@ -8627,7 +8625,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-22",
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -8832,7 +8830,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 142774,
+      "stars": 142894,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -8851,7 +8849,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -8890,7 +8888,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 115507,
+      "stars": 117192,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -8909,7 +8907,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -9073,7 +9071,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 57248,
+      "stars": 57979,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -9092,7 +9090,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-25",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -9132,7 +9130,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2979,
+      "stars": 3549,
       "language": "HTML",
       "score": 26,
       "action": "Arkiv",
@@ -9148,7 +9146,7 @@
         "testability"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-24",
       "notified_at": null,
@@ -9239,7 +9237,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 48040,
+      "stars": 49073,
       "language": "Python",
       "score": 32,
       "action": "Arkiv",
@@ -9254,7 +9252,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-24",
       "notified_at": null,
@@ -9395,7 +9393,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 2384,
+      "stars": 2946,
       "language": "TypeScript",
       "score": 23,
       "action": "Arkiv",
@@ -9411,7 +9409,7 @@
         "testability"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-24",
       "notified_at": null,
@@ -9420,40 +9418,40 @@
     "anthropics/claude-plugins-community": {
       "repo": "anthropics/claude-plugins-community",
       "url": "https://github.com/anthropics/claude-plugins-community",
-      "summary_sv": "En community-marknad för plugins till Claude Cowork och Claude Code med automatisk säkerhetsskanning och godkännande.",
+      "summary_sv": "Marknadsplats för community-plugin för Claude Cowork och Claude Code med verifierade plugin.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 3,
-        "testability": 5,
+        "project_fit": 4,
+        "concrete_value": 5,
+        "testability": 6,
         "technical_fit": 5,
-        "repo_quality": 8,
-        "timing": 5
+        "repo_quality": 7,
+        "timing": 2
       },
       "risks": [
-        "Ingen koppling till Jonas projekt",
-        "Generisk marknad utan specifik nytta",
-        "Beroende på Anthropic plattform"
+        "Beroende av Anthropics granskningsprocess.",
+        "Plugins kan bli inaktuella."
       ],
       "confidence": 0.3,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-pluginmarknad",
-      "concrete_use_case": "Jonas kan bläddra bland godkända plugins för Claude Code, men ingen direkt koppling till något av hans projekt.",
-      "next_step": "Testa en plugin som automatiserar en uppgift inom AI Radar, men förvänta sig inget omedelbart värde.",
-      "differentiator": "Ingen unik fördel gentemot befintliga verktyg.",
+      "category": "plugin-marketplace",
+      "concrete_use_case": "Installera ett plugin från marknadsplatsen och testa dess funktion.",
+      "next_step": "Lägg till marknadsplatsen med 'claude plugin marketplace add' och installera ett plugin.",
+      "differentiator": "Verifierade community-plugins utan att behöva källkodssökning.",
       "evidence": [
-        "Read-only mirror av community plugin-marknad",
-        "Plugins har genomgått automatiserad säkerhetsskanning",
-        "Synkad nattligt från Anthropic interna pipeline"
+        "Readme beskriver som read-only mirror av community plugin marketplace.",
+        "Plugins skickas via clau.de/plugin-directory-submission.",
+        "Stöd för både Claude Cowork och Claude Code."
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 998,
+      "stars": 1388,
       "language": "Python",
-      "score": 31,
+      "score": 29,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -9467,9 +9465,9 @@
         "testability"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
-      "last_analyzed": "2026-08-24",
+      "last_analyzed": "2026-08-25",
       "notified_at": null,
       "notified_score": null
     },
@@ -9507,7 +9505,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 760,
+      "stars": 773,
       "language": "Python",
       "score": 29,
       "action": "Arkiv",
@@ -9522,7 +9520,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
       "last_analyzed": "2026-08-24",
       "notified_at": null,
@@ -9531,40 +9529,93 @@
     "duty1g/x64dbg-mcp-server": {
       "repo": "duty1g/x64dbg-mcp-server",
       "url": "https://github.com/duty1g/x64dbg-mcp-server",
-      "summary_sv": "MCP-server som exponerar x64dbg-debuggerfunktioner över HTTP för AI-assisterad reverse engineering.",
+      "summary_sv": "Ett MCP-server-plugg för x64dbg som exponerar debuggarens funktionality via HTTP för AI-agenter, möjliggör programmatisk kontroll av breakpoints, minnesläsning och registerdump i reverse engineering-sammanhang.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 1,
-        "testability": 5,
-        "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 3
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 7,
+        "timing": 4
       },
       "risks": [
-        "Irrelevant för alla projekt",
-        "Kräver x64dbg och expertkunskap",
-        "MCP-server kan vara overkill"
+        "Ingen relevance för något av Jonas nio aktiva projekt",
+        "Specialiserat för Windows-debugging och reverse engineering, inte för affärsmål"
       ],
-      "confidence": 0.1,
+      "confidence": 0.95,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "debug-verktyg",
-      "concrete_use_case": "Jonas kan kontrollera x64dbg programmatoriskt, men ingen av hans projekt använder reverse engineering.",
-      "next_step": "Testa i en isolerad miljö om intresse för security.",
-      "differentiator": "Ingen unik fördel för Jonas projekt.",
+      "category": "ai-verktyg",
+      "concrete_use_case": "Ingen konkret use case för något av Jonas projekt — repot är specialiserat för Windows-reverse engineering och malwareanalys, områden som inte ingår i någon av de nio projekten.",
+      "next_step": "Inget praktiskt nästa steg. Repot är inte relevant för Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
+      "differentiator": "Erbjuder en enkel single-binary distribution av x64dbg via MCP, men bara för reverse engineering och security research — ingen koppling till affärsmål eller befintlig stack.",
       "evidence": [
-        "Byggt med Zig, zero dependencies",
-        "Stöd för breakpoints, step, memory dump",
-        "MCP-kompatibel"
+        "MCP plugin for x64dbg exposing debugger functionality over HTTP for AI agents",
+        "Built with Zig, zero dependencies, single-binary output",
+        "Topics limited to malware analysis, reverse engineering, and AI debugging"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 935,
+      "stars": 1243,
       "language": "Zig",
-      "score": 20,
+      "score": 16,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-25",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "multica-ai/andrej-karpathy-skills": {
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "summary_sv": "Enkla riktlinjer för Claude Code baserade på Karpathys observationer om LLM-fällor.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 5,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 6,
+        "timing": 4
+      },
+      "risks": [
+        "Risk för föråldrad eller outdaterad riktlinje.",
+        "Ingen aktiv underhåll."
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-guidelines",
+      "concrete_use_case": "Granska CLAUDE.md och tillämpa en princip på en Claude Code-uppgift.",
+      "next_step": "Läs filen och tillämpa 'Tänk innan du kodar'-principen på ett litet kodprojekt.",
+      "differentiator": "Karpathy-inspirerade principer för att undvika vanliga LLM-fel.",
+      "evidence": [
+        "CLAUDE.md med fyra principer: Tänk innan du kodar, Enkelhet först, Kirurgiska ändringar, Måldriven execution.",
+        "Hämtat från Karpathys tweet om LLM-fällor.",
+        "Stödjer flera språk (engelska, kinesiska)."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 206591,
+      "language": null,
+      "score": 35,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -9574,16 +9625,182 @@
         "confidence",
         "score",
         "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-25",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "madslorentzen/ai-job-search": {
+      "repo": "MadsLorentzen/ai-job-search",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "summary_sv": "AI-drivet jobbansökningsframework som utvärderar annonser, anpassar CV, skriver täckbrev och förbereder intervjuer lokalt.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 6,
+        "testability": 7,
+        "technical_fit": 6,
+        "repo_quality": 5,
+        "timing": 3
+      },
+      "risks": [
+        "Kan bli föråldrat när jobbportaler ändras.",
+        "Beroende av Claude Code som kan förändras."
+      ],
+      "confidence": 0.4,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "job-search-automation",
+      "concrete_use_case": "Kör frameworket med en profil för att simulera en jobbansökan.",
+      "next_step": "Initiera repo, fyll i din profil och kör '/apply'-arbetsflödet för en testannons.",
+      "differentiator": "Helhetssolution för hela jobbansökningsprocessen på en enda maskin.",
+      "evidence": [
+        "README visar Pip-mascot och CI-badge.",
+        "Stöd för CV, täckbrev, intervjuförberedelse.",
+        "Använder Claude Code för automation."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 34143,
+      "language": "Python",
+      "score": 32,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-25",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "b-nnett/grok-bot-0.18-reconstructed": {
+      "repo": "b-nnett/grok-bot-0.18-reconstructed",
+      "url": "https://github.com/b-nnett/grok-bot-0.18-reconstructed",
+      "summary_sv": "Rekonstruerad och utbyggd version av Grok Bot 0.18.0 med lokal inferensrouter och MCP-verktyg.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Ger lokal inferensrouter och MCP-verktyg som kan utöka AI Radars leverantörsutbud och usage-tracking."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 8,
+        "concrete_value": 5,
+        "testability": 6,
+        "technical_fit": 9,
+        "repo_quality": 7,
+        "timing": 5
+      },
+      "risks": [
+        "Unofficiell rekonstruktion kan brytas med Anyspheres uppdateringar.",
+        "Kräver macOS/Windows installer och extra konfiguration."
+      ],
+      "confidence": 0.5,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "inference-router",
+      "concrete_use_case": "Konfigurera Grok Bot-routern för att dirigera förfrågningar till lokala modeller och testa usage-tracking.",
+      "next_step": "Köra den rekonstruerade appen, konfigurera en router och skicka en testförfrågan via MCP-verktyg.",
+      "differentiator": "Lokal inferensrouter med usage-tracking, sandbox och stöd för flera leverantörer.",
+      "evidence": [
+        "Readme beskriver rekonstruktion av Grok Bot 0.18.0 med inference router för Cursor, Claude Code, Codex, OpenRouter.",
+        "Inkluderar MCP-verktyg och lokal Docker-sandbox.",
+        "Stöder usage-tracking och reconstructed settings UI."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1859,
+      "language": "TypeScript",
+      "score": 40,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
         "concrete_value",
         "testability"
       ],
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
       "first_recommended": null,
-      "last_analyzed": "2026-08-24",
+      "last_analyzed": "2026-08-25",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tobi/walgit": {
+      "repo": "tobi/walgit",
+      "url": "https://github.com/tobi/walgit",
+      "summary_sv": "walgit är en git-serverbinär som ligger framför en object store (S3/GCS) utan databas eller lokal status.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 5,
+        "testability": 7,
+        "technical_fit": 8,
+        "repo_quality": 6,
+        "timing": 3
+      },
+      "risks": [
+        "Kräver S3-kompatibel lagring och korrekt IAM-konfiguration.",
+        "Latens beroende av external object store."
+      ],
+      "confidence": 0.4,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "git-infrastructure",
+      "concrete_use_case": "Distribuera walgit med en bucket och pusha en ny repo för att testa statisk serving.",
+      "next_step": "Skapa walgit.toml-konfiguration, starta binären och pusha en testrepo.",
+      "differentiator": "Skalar utöver den lokala maskinen, ingen databas, enkel skalbarhet.",
+      "evidence": [
+        "Readme visar snabbstart med S3-konfiguration och push till ny repo.",
+        "Stöder Git LFS, web UI, JSON API, per-repo push-policy.",
+        "Rust-implementation av Cursor's Continuity-arkitektur."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1085,
+      "language": "Rust",
+      "score": 33,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-25",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-08-24"
+  "updated_at": "2026-08-25"
 }
