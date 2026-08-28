@@ -1140,12 +1140,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 387778,
+      "stars": 387900,
       "language": "TypeScript",
       "score": 29,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 243617,
+      "stars": 243868,
       "language": "JavaScript",
       "score": 31,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1409,12 +1409,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 238504,
+      "stars": 239772,
       "language": "Shell",
       "score": 34,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1517,12 +1517,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 237129,
+      "stars": 237572,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-16",
       "notified_at": null,
@@ -1571,12 +1571,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 148367,
+      "stars": 148580,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1629,12 +1629,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 201854,
+      "stars": 202096,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-20",
       "notified_at": null,
@@ -6557,9 +6557,10 @@
         "Aktiv utveckling"
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 4829,
+      "stars": 5827,
       "language": "TypeScript",
       "score": 41,
       "action": "Arkiv",
@@ -6573,7 +6574,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-15",
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -7173,7 +7174,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32341,
+      "stars": 32922,
       "language": "Shell",
       "score": 25,
       "action": "Arkiv",
@@ -7194,7 +7195,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-17",
       "notified_at": null,
@@ -8194,7 +8195,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17008,
+      "stars": 17284,
       "language": "Rust",
       "score": 40,
       "action": "Arkiv",
@@ -8209,7 +8210,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8248,7 +8249,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 29236,
+      "stars": 29281,
       "language": "Mojo",
       "score": 32,
       "action": "Arkiv",
@@ -8264,7 +8265,7 @@
         "testability"
       ],
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-21",
       "notified_at": null,
@@ -8772,7 +8773,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 95986,
+      "stars": 98616,
       "language": "TypeScript",
       "score": 20,
       "action": "Arkiv",
@@ -8788,7 +8789,7 @@
         "testability"
       ],
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -8827,7 +8828,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 143017,
+      "stars": 143260,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -8846,7 +8847,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -8885,7 +8886,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 119072,
+      "stars": 119454,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -8904,7 +8905,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -9345,7 +9346,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 22427,
+      "stars": 23973,
       "language": "JavaScript",
       "score": 64,
       "action": "Arkiv",
@@ -9364,7 +9365,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-26",
       "last_analyzed": "2026-08-26",
       "notified_at": null,
@@ -9401,7 +9402,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 3700,
+      "stars": 3841,
       "language": "TypeScript",
       "score": 23,
       "action": "Arkiv",
@@ -9417,7 +9418,7 @@
         "testability"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-24",
       "notified_at": null,
@@ -9456,7 +9457,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 2347,
+      "stars": 2487,
       "language": "Python",
       "score": 53.74139618515115,
       "action": "Arkiv",
@@ -9475,7 +9476,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -9569,7 +9570,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1488,
+      "stars": 1628,
       "language": "Zig",
       "score": 16,
       "action": "Arkiv",
@@ -9584,7 +9585,7 @@
         "testability"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-25",
       "notified_at": null,
@@ -9783,7 +9784,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2207,
+      "stars": 2278,
       "language": "Rust",
       "score": 13,
       "action": "Arkiv",
@@ -9798,7 +9799,7 @@
         "testability"
       ],
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10198,7 +10199,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 51781,
+      "stars": 52926,
       "language": "Python",
       "score": 58,
       "action": "Arkiv",
@@ -10217,7 +10218,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10254,9 +10255,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 20767,
+      "stars": 25555,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10275,7 +10277,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10314,7 +10316,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 34493,
+      "stars": 34854,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -10333,7 +10335,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10372,7 +10374,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 34986,
+      "stars": 35788,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -10391,7 +10393,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10466,58 +10468,53 @@
     "jetbrains/go-modern-guidelines": {
       "repo": "JetBrains/go-modern-guidelines",
       "url": "https://github.com/JetBrains/go-modern-guidelines",
-      "summary_sv": "Help AI coding agents write modern Go",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Riktlinjer som hjälper AI-kodagenter att skriva modern Go genom att föredra nya idiom och stdlib-funktioner.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
+        "project_fit": 4,
+        "concrete_value": 4,
         "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 6.526324929924433,
-        "timing": 7
+        "technical_fit": 8,
+        "repo_quality": 6,
+        "timing": 4
       },
       "risks": [
-        "Fallbackbedömning användes: risks must be an array"
+        "Riktlinjerna är endast användbara om Jonas skriver Go-kod; annars ger de lite värde."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "developer-guidelines",
+      "concrete_use_case": "Jonas kan använda riktlinjerna för att förbättra kvaliteten på eventuella Go-baserade verktyg han bygger för sina projekt, t.ex. ett scraper-verktyg för Apify.",
+      "next_step": "Jämför ett befintligt Go-skript i Jonas repo med riktlinjerna och notera tre förbättringar som kan göras.",
+      "differentiator": "Ger konkreta kod-exempel och automatiserbara regler som tar hänsyn till Go 1.0‑1.27, inklusive nya funktioner som errors.AsType.",
+      "evidence": [
+        "guidelines for code agents that help them write modern Go code",
+        "Use language features and stdlib additions available up to and including that version",
+        "Prefer modern idioms over older patterns"
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 1832,
+      "stars": 2437,
       "language": "Go",
-      "score": 51.526324929924435,
+      "score": 34,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
-      "last_analyzed": "2026-08-27",
+      "last_analyzed": "2026-08-28",
       "notified_at": null,
       "notified_score": null
     },
@@ -10554,7 +10551,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 20865,
+      "stars": 21326,
       "language": "TypeScript",
       "score": 58,
       "action": "Arkiv",
@@ -10573,7 +10570,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10640,38 +10637,317 @@
     "wide-trace/open-higgsfield": {
       "repo": "wide-trace/open-higgsfield",
       "url": "https://github.com/wide-trace/open-higgsfield",
-      "summary_sv": "En öppen studio för bild- och videogenerering med 40 modeller (12 bild, 28 video) i en enda prompt-rad, byggd med Next.js 16 och Vercel.",
-      "project_matches": [],
+      "summary_sv": "Webbaserad studio som samlar 40 bild- och videomodeller bakom en enda promptbar med delad galleri.",
+      "project_matches": [
+        {
+          "project": "Sankdig",
+          "reason": "Kunde potentiellt generera bakgrunds- eller hero-bilder till karuseller, men Sankdig efterfrågar datadrivet content med verifierbar källa, inte modellgalleri."
+        }
+      ],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 5,
+        "project_fit": 1,
+        "concrete_value": 2,
+        "testability": 4,
         "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 2
+        "repo_quality": 5,
+        "timing": 1
       },
       "risks": [
-        "Generativ video/bild är inte en prioriterad behovsarea; kan distrahera från FAIV:s content-pipeline som kräver redaktionell kontroll"
+        "API-kostnad per generation äter snabbt marginal i content- eller e-handelsflöden",
+        "Generativ media utan datakoppling bryter mot Sankdigs verifierbarhetskrav"
       ],
-      "confidence": 0.9,
+      "confidence": 0.8,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "generative-ai",
-      "concrete_use_case": "Ingen direkt användning; FAIV behöver content intelligence och approval-flöden, inte en generativ videostudio.",
-      "next_step": "Ingen test rekommenderas.",
-      "differentiator": "Enhetligt gränssnitt för 40 modeller med per-modell-inställningar, media inputs per roll och asset-picker; gratis och self-hosted.",
+      "category": "ai-media-studio",
+      "concrete_use_case": "Inget direkt användningsfall: Sankdig producerar datadrivna karuseller från verifierad statistik, inte generativ bildvideo, och FAIV/WooCommerce har inte heller behov av multi-modell mediastudio.",
+      "next_step": "Skippa; karusell- och produktbildflödena är redan specifikt styrda av Sankdigs hook→datapunkt→plan-struktur och FAIVs bildbriefar.",
+      "differentiator": "40 modeller i en promptbar med per-modell-settings, men differentieraren är inte knuten till något av Jonas nio projekts aktuella behov.",
       "evidence": [
-        "README: '40 models — 12 image, 28 video' med sökbar picker",
-        "Per-modell settings: aspect ratio, resolution, duration, audio, batch size",
-        "Media inputs by role: start frame, end frame, references, video, audio"
+        "README listar 12 bild- och 28 videomodeller i en katalog",
+        "Next.js 16 App Router, React 19, Vercel Blob för uppladdning",
+        "Hosted version finns på openhiggsfield.ai utan installation"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 670,
+      "stars": 918,
       "language": "TypeScript",
       "score": 16,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-28",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "bilawalsidhu/gods-eye-view": {
+      "repo": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "summary_sv": "Ett webbaserat 3D-globe som visar live flyg-, fartygs-, satellit- och jordbävningsdata från offentliga källor.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 10,
+        "technical_fit": 10,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Data kan vara fördröjd eller sakna täckning över Sverige."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "geospatial-visualization",
+      "concrete_use_case": "Ingen direkt koppling till Jonas projekt; kan endast användas som inspiration för framtida datavisualisering.",
+      "next_step": "Öppna globen och kontrollera att flygdata uppdateras i realtid.",
+      "differentiator": "Kombinerar flera offentliga realtidsströmmar i ett fotorealistiskt gränssnitt utan att kräva API-nycklar för grundläggande data.",
+      "evidence": [
+        "Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras",
+        "Live open source spatial intelligence",
+        "No classified clearance required"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 10045,
+      "language": "JavaScript",
+      "score": 37,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-28",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "abhigyanpatwari/gitnexus": {
+      "repo": "abhigyanpatwari/GitNexus",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "summary_sv": "Klient-sidig kunskapsgraf som bygger ett interaktivt beroende- och anropsdiagram från en Git-lagringsplats eller ZIP-fil och inkluderar en Graph RAG-agent för kodutforskning.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Ger snabb kodförståelse för kandidatrepos, vilket kan minska forskningstid i AI Radars pipeline."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 12,
+        "concrete_value": 12,
+        "testability": 12,
+        "technical_fit": 12,
+        "repo_quality": 9,
+        "timing": 6
+      },
+      "risks": [
+        "Stora repos kan bli långsamma i webbläsaren."
+      ],
+      "confidence": 0.4,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "code-intelligence",
+      "concrete_use_case": "Jonas kan använda GitNexus för att snabbt förstå strukturen i ett kandidatrepo innan han läser README, vilket minskar forskningstid i AI Radar-pipelinen.",
+      "next_step": "Kör GitNexus på ett av AI Radars egna repos (t.ex. ulle73/ai-radar) och kontrollera att kunskapsgrafen visar viktiga filer och beroenden.",
+      "differentiator": "Körs helt i webbläsaren utan server, ger omedelbar interaktiv graf med inbyggd Graph RAG-agent.",
+      "evidence": [
+        "Indexes any codebase into a knowledge graph — every dependency, call chain, cluster, and execution flow",
+        "exposes a built in Graph RAG Agent",
+        "client-side knowledge graph creator"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 46028,
+      "language": "TypeScript",
+      "score": 63,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "first_recommended": "2026-08-28",
+      "last_analyzed": "2026-08-28",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "abi/screenshot-to-code": {
+      "repo": "abi/screenshot-to-code",
+      "url": "https://github.com/abi/screenshot-to-code",
+      "summary_sv": "Konverterar skärmdumpar eller mockups till ren kod (HTML/Tailwind/React/Vue) med hjälp av AI-modeller.",
+      "project_matches": [
+        {
+          "project": "FAIV",
+          "reason": "Tillåter snabb omvandling av designskisser till fungerande HTML/Tailwind för att testa produktändringar i WooCommerce-butiken."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 10,
+        "concrete_value": 12,
+        "testability": 12,
+        "technical_fit": 12,
+        "repo_quality": 9,
+        "timing": 5
+      },
+      "risks": [
+        "Genererad kod kan behöva manuell justering för att passa WooCommerce-krokar och åtkomstkontroller."
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "ai-driven-code-generation",
+      "concrete_use_case": "Jonas kan snabbt omvandla en skiss av en ny produktdetaljsida för FAIV till fungerande WooCommerce-kompatibel HTML/Tailwind för att testa designändringar utan att skriva kod manuellt.",
+      "next_step": "Ta en skärmdump av FAIVs produktkatalog och kör verktyget; jämför output med befintlig tema för att se om krävda WooCommerce-klasser bevaras.",
+      "differentiator": "Stöder flera frontend-stackar och använder framstående multimodala modeller (Gemini, GPT-5, Claude) för hög trohet.",
+      "evidence": [
+        "Convert screenshots, mockups, Figma designs, and screen recordings into clean, functional code using AI",
+        "Supported stacks: HTML + Tailwind, React + Tailwind, Vue + Tailwind",
+        "Default AI models: Gemini 3 Flash Preview and Gemini 3.1 Pro Preview"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 75284,
+      "language": "Python",
+      "score": 60,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "first_recommended": "2026-08-28",
+      "last_analyzed": "2026-08-28",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "hejustinsun/my-girlfriend-jingtian-latex": {
+      "repo": "HEJustinSun/my-girlfriend-jingtian-latex",
+      "url": "https://github.com/HEJustinSun/my-girlfriend-jingtian-latex",
+      "summary_sv": "En LaTeX-bok som sätter upp ett 5x8 tum dokument om skådespelerskan Jing Tian, med kompilationsinstruktioner för XeLaTeX.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 4,
+        "repo_quality": 5,
+        "timing": 3
+      },
+      "risks": [
+        "LaTeX-kunskap krävs för att anpassa mallen till Jonas behov."
+      ],
+      "confidence": 0.15,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "document-typesetting",
+      "concrete_use_case": "Jonas kan använda LaTeX-mallen som utgångspunkt för att skapa PDF-rapporter om golfstatistik för Sankdig eller försäljningsrapporter för Golfkuponger.",
+      "next_step": "Kompilera huvudfilen med XeLaTeX och kontrollera att PDF:en genereras utan fel.",
+      "differentiator": "Tillhandahåller ett färdigt sidformat och preamble som är optimerat för tryck och läsbarhet på 5x8 tum.",
+      "evidence": [
+        "Detta är ett 5 x 8 tums XeLaTeX-sättningsprojekt.",
+        "Kompilera ... XeLaTeX"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 3401,
+      "language": "TeX",
+      "score": 22,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "first_recommended": null,
+      "last_analyzed": "2026-08-28",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "sapientinc/praxist": {
+      "repo": "sapientinc/PRAXIST",
+      "url": "https://github.com/sapientinc/PRAXIST",
+      "summary_sv": "Autonomt forskningssystem som koordinerar parallella forskningsagenter med mätbara, dator-exekverbara mål och persistent evidens.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 2,
+        "technical_fit": 3,
+        "repo_quality": 6,
+        "timing": 1
+      },
+      "risks": [
+        "Fair Source-licens kan begränsa kommersiell användning",
+        "Stort overhead för projekt som behöver enstaka indikatorer, scrapers eller contentbatch"
+      ],
+      "confidence": 0.85,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-research-framework",
+      "concrete_use_case": "Inget konkret användningsfall i något namngivet projekt; systemet är en tung forskningsorkestrerare utan koppling till Jonas nio projekt.",
+      "next_step": "Skippa; inget litet test som ger värde inom dagar i Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
+      "differentiator": "Persistent, mätbar forskningsprocess med generation-to-generation-syntes, men differentieraren är inte relevant för Jonas befintliga pipelines.",
+      "evidence": [
+        "README beskriver 'autonomous research system for measurable, computer-executable research'",
+        "Koordinerar 'parallel research peers, task-owned evaluation, durable evidence'",
+        "Python 3.11+ med egen setup-wizard och Fair Source License"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1184,
+      "language": "Python",
+      "score": 14,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -10683,13 +10959,13 @@
         "concrete_value",
         "testability"
       ],
-      "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
       "first_recommended": null,
-      "last_analyzed": "2026-08-27",
+      "last_analyzed": "2026-08-28",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-08-27"
+  "updated_at": "2026-08-28"
 }
