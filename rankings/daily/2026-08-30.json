@@ -1,0 +1,1586 @@
+[
+  {
+    "repo": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "summary_sv": "Kurerad länklista över Claude Skills, MCP-plugins och AI-agentresurser för olika kodningsagenter.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 2,
+      "concrete_value": 1,
+      "testability": 2,
+      "technical_fit": 3,
+      "repo_quality": 6,
+      "timing": 2
+    },
+    "risks": [
+      "Risk att Jonas lägger tid på att utforska en hype-lista utan konkret projektutfall"
+    ],
+    "confidence": 0.85,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "ai-resource-lista",
+    "concrete_use_case": "Ingen konkret koppling till något namngivet projekt; repot är en inspirationslista, inte en lösning.",
+    "next_step": "Skippa – ingen praktisk integration att testa i Jonas aktiva projekt.",
+    "differentiator": "Inga unika komponenter som saknas i Jonas befintliga OpenRouter/Claude-flöden; bara en kuraterad länkbank.",
+    "evidence": [
+      "README beskriver 'curated list of 1000+ Claude Skills and Plugins'",
+      "Fokus på kodningsagenter som Codex, Cursor, Gemini CLI",
+      "Inget SDK, ingen körbar komponent som kan integreras"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 73983,
+    "language": "Python",
+    "score": 16,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "THU-MAIC/OpenMAIC",
+    "url": "https://github.com/THU-MAIC/OpenMAIC",
+    "summary_sv": "Multi-agentbaserad klassrumsplattform för interaktivt lärande där flera LLM-agenter samarbetar i realtid.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 1,
+      "concrete_value": 1,
+      "testability": 2,
+      "technical_fit": 3,
+      "repo_quality": 5,
+      "timing": 1
+    },
+    "risks": [
+      "Tid slösas på att utvärdera en utbildningsprodukt utan affärs- eller projektkoppling"
+    ],
+    "confidence": 0.9,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "edtech-multi-agent",
+    "concrete_use_case": "Ingen koppling till Jonas nio aktiva projekt; produkten är en utbildningsplattform, inte lead/conversion/data/SaaS-flöde.",
+    "next_step": "Skippa – inte relevant för Jonas projektkatalog.",
+    "differentiator": "Inget som saknas i Jonas stack; ingen affiliate-, handels-, signal- eller contentmotor som passar.",
+    "evidence": [
+      "README beskriver 'Multi-Agent Interactive Classroom'",
+      "Demo-URL pekar på open.maic.chat som utbildningsgränssnitt",
+      "Topics saknas; kodbasen är en Next.js/Vite LLM-lekplats"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 22576,
+    "language": "TypeScript",
+    "score": 13,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "p-e-w/heretic",
+    "url": "https://github.com/p-e-w/heretic",
+    "summary_sv": "Python-verktyg som automatiskt tar bort safety alignment från transformerbaserade språkmodeller via abliteration.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 1,
+      "technical_fit": 1,
+      "repo_quality": 6,
+      "timing": 1
+    },
+    "risks": [
+      "Juridisk risk och risk att skada varumärke om Jonas publicerar innehåll från avsäkrade modeller",
+      "Bryter mot AI Radars instruktion att inte rekommendera black-box eller riskabla AI-repos"
+    ],
+    "confidence": 0.95,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "llm-decensorship",
+    "concrete_use_case": "Ingen av Jonas projekt behöver eller bör vilja avlägsna säkerhetslager från LLM:er; tvärtemot alla riktlinjer.",
+    "next_step": "Skippa – juridiskt och varumärkesmässigt olämpligt för alla nio projekt.",
+    "differentiator": "Ingen relevant nytta; OpenRouter-API:er Jonas redan använder hanterar redan detta via providerval.",
+    "evidence": [
+      "README: 'Fully automatic censorship removal for language models'",
+      "Bygger på 'directional ablation' / 'abliteration'-teknik",
+      "Mål: avsäkra modeller – inte användbart för Jonas något projekt"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 28800,
+    "language": "Python",
+    "score": 9,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "bigskysoftware/htmx",
+    "url": "https://github.com/bigskysoftware/htmx",
+    "summary_sv": "Lättvikts-JavaScript-bibliotek som utökar HTML med AJAX, SSE och WebSockets via attribut.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 2,
+      "concrete_value": 1,
+      "testability": 3,
+      "technical_fit": 2,
+      "repo_quality": 9,
+      "timing": 1
+    },
+    "risks": [
+      "Introduktion av en andra frontend-paradigm i projekt som redan är React-baserade skapar mer komplexitet än nytta"
+    ],
+    "confidence": 0.9,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "frontend-bibliotek",
+    "concrete_use_case": "Inget av Jonas projekt saknar just detta; alla nio bygger på React/Next.js, WooCommerce/Divi eller Python, och inget current_need nämner hypermedia-attrribut.",
+    "next_step": "Skippa – ingen namngiven komponent eller sida i Jonas projekt efterfrågar htmx.",
+    "differentiator": "Inte relevant differentiator; Next.js App Router med Server Actions täcker samma behov i Jonas stack.",
+    "evidence": [
+      "README: 'high power tools for HTML' via attribut som hx-get, hx-post",
+      "Dependency-free, ~14k min.gz",
+      "Stackprofiler i katalogen nämner Next.js/React för alla webbprojekt, inte hypermedia"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 49173,
+    "language": "JavaScript",
+    "score": 18,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "tailscale/tailcat",
+    "url": "https://github.com/tailscale/tailcat",
+    "summary_sv": "Go-CLI och bibliotek som ger netcat-liknande punkt-till-punkt-tunnlar över Tailscales dataplansprotokoll utan kontrollplanet.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 2,
+      "technical_fit": 1,
+      "repo_quality": 7,
+      "timing": 1
+    },
+    "risks": [
+      "Ingen konkret nytta; risk att lägga tid på infra som inte löser ett namngivet behov"
+    ],
+    "confidence": 0.92,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "nätverk-devtools",
+    "concrete_use_case": "Ingen av Jonas projekt kräver mesh-tunnlar eller WireGuard-kanaler; all datakommunikation går via etablerade API:er och GitHub Actions.",
+    "next_step": "Skippa – inte ett projektproblem.",
+    "differentiator": "Inget som Jonas nuvarande hosting/Tailscale-uppsättning (om någon) saknar.",
+    "evidence": [
+      "README: 'netcat but over Tailscale data plane, without control plane'",
+      "Använder magicsock + DERP för NAT-traversal",
+      "Inget API-, data-, konverterings- eller innehållsproblem adresseras"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 3720,
+    "language": "Go",
+    "score": 11,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "omacom/omarchy",
+    "url": "https://github.com/omacom/omarchy",
+    "summary_sv": "Omarchy är ett operativsystem för Linux byggt av DHH, med manual, CLI-verktyg, terminal, Neovim-konfiguration och en omfattande applikationsguide.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 0,
+      "technical_fit": 0,
+      "repo_quality": 8,
+      "timing": 0
+    },
+    "risks": [
+      "Ingen som helst koppling till Jonas projekt, stack eller affärsmål"
+    ],
+    "confidence": 1,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "linux-distribution",
+    "concrete_use_case": "Ingen konkret användning i Jonas nio namngivna projekt.",
+    "next_step": "Inget test planerat.",
+    "differentiator": "Ett komplett skrivbordsoperativsystem, inte ett verktyg som kan integreras i befintliga webb-, mobil- eller SaaS-projekt.",
+    "evidence": [
+      "DHH:s nya Linux-distribution med manual och CLI",
+      "35 000 stjärnor, hög aktivitet",
+      "Inga ämnen eller koppling till e-handel, finans, betting, content eller scraping"
+    ],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 34977,
+    "language": "Shell",
+    "score": 8,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "openclaw/openclaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "summary_sv": "OpenClaw är ett open source-ramverk för att bygga personliga AI-assistenter som körs lokalt och integreras med messaging-kanaler, modeller och verktyg via en gateway.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 0,
+      "technical_fit": 0,
+      "repo_quality": 9,
+      "timing": 0
+    },
+    "risks": [
+      "Generisk AI-agent utan specifik nytta för något namngivet projekt"
+    ],
+    "confidence": 1,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "ai-agent-framework",
+    "concrete_use_case": "Ingen konkret användning. AI Radar behöver inte en ny generisk agent-plattform; det behöver specifika förbättringar av context, discovery eller scoring.",
+    "next_step": "Ingen.",
+    "differentiator": "OpenClaw är en arkitektur för att bygga egna assistenter, inte ett verktyg som förbättrar Jonas befintliga produkters arbetsflöden eller intäkter.",
+    "evidence": [
+      "388 000 stjärnor, 81 000 forks – extremt populärt",
+      "Stöder 'any OS, any platform' – maximalt generiskt",
+      "Topics: ai, assistant, personal, own-your-data"
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 388032,
+    "language": "TypeScript",
+    "score": 9,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "sapientinc/PRAXIST",
+    "url": "https://github.com/sapientinc/PRAXIST",
+    "summary_sv": "Praxist är ett autonomt forskningssystem som koordinerar parallella research-peers, uppgiftsbaserad utvärdering och synthes för mätbar, datorutförbar forskning.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 0,
+      "technical_fit": 0,
+      "repo_quality": 6,
+      "timing": 0
+    },
+    "risks": [
+      "Forskningsramverk utan konkret produkt-, data- eller valideringsnytta för Jonas projekt"
+    ],
+    "confidence": 1,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "autonomous-research",
+    "concrete_use_case": "Ingen. Stock Signals är ett personligt signalsystem med tydliga regler och datakällor – inte ett okänt forskningsproblem.",
+    "next_step": "Ingen.",
+    "differentiator": "Praxist är designat för att utforska okända forskningsområden. Stock Signals har definierade indikatorer, datakällor och signalregler – inget okänt att utforska.",
+    "evidence": [
+      "Koordinerar parallella research-peers och task-owned evaluation",
+      "ArXiv-paper och Discord-community",
+      "Python-baserat, nytt repo från augusti 2026"
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 3220,
+    "language": "Python",
+    "score": 6,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "summary_sv": "Matt Pockets agent skills för Claude Code, Codex och andra AI-kodningsverktyg – små, sammansättbara skript för verkligt ingenjörsarbete.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 0,
+      "technical_fit": 0,
+      "repo_quality": 8,
+      "timing": 0
+    },
+    "risks": [
+      "Personliga skriptsamlingar utan specifik integration i Jonas nio projekt"
+    ],
+    "confidence": 1,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-skills-bibliotek",
+    "concrete_use_case": "Ingen. Jonas använder redan OpenRouter och strukturerade LLM-flöden. Detta är Matt Pockets personliga .agents-katalog, inte ett verktyg för Jonas produkt- eller innehållspipeliner.",
+    "next_step": "Ingen.",
+    "differentiator": "Skills är Matt Pockets personliga arbetsflöden för att utveckla applikationer – inte en produkt som förbättrar Jonas befintliga system.",
+    "evidence": [
+      "241 000 stjärnor, 20 000 forks",
+      "Baserat på Matt Pockets .agents-katalog",
+      "Fungerar med alla modeller och är 'small, easy to adapt'"
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 241206,
+    "language": "Shell",
+    "score": 8,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "summary_sv": "ECC (Agent Harness) är ett prestandaoptimeringssystem för Claude Code, Codex, Opencode och Cursor – med skills, instincts, memory, säkerhet och research-första utveckling.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 0,
+      "technical_fit": 0,
+      "repo_quality": 9,
+      "timing": 0
+    },
+    "risks": [
+      "Generiskt agentramverk utan koppling till Jonas specifika produkt-, data- eller innehållsbehov"
+    ],
+    "confidence": 1,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-harness-os",
+    "concrete_use_case": "Ingen. AI Radar behöver specifika förbättringar av context-matching, repo discovery och structured output – inte ett nytt agent-harness-system.",
+    "next_step": "Ingen.",
+    "differentiator": "ECC är ett omfattande agent-harnesk-OS med topics som MCP, Claude Code, developer-tools. AI Radar är en specifik discovery- och ranking-pipeline, inte ett agentprojekt som behöver ett harnesk.",
+    "evidence": [
+      "244 000 stjärnor, 37 000 forks",
+      "Topics: ai-agents, anthropic, claude-code, mcp, llm, developer-tools",
+      "Stödjer flera agenter: Claude Code, Codex, Opencode, Cursor"
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 244356,
+    "language": "JavaScript",
+    "score": 9,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "summary_sv": "Ett agentiskt ramverk för mjukvaruutveckling som styr codex-agenten genom spec, TDD och subagent-driven development.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra hur AI Radar strukturerar spec, evidence och testning av repo-rekommendationer genom deterministisk TDD- och subagent-metodik."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 12,
+      "testability": 10,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 6
+    },
+    "risks": [
+      "Kräver omstrukturering av befintlig AI Radar-pipeline som kan vara kostsamt.",
+      "Metodiken är generisk för mjukvaruutveckling och kräver anpassning till repo-discovery."
+    ],
+    "confidence": 0.65,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "adjacent",
+    "category": "agentic-sdlc",
+    "concrete_use_case": "Använd Superpowers-metodiken för att strukturerat testa och validera AI Radars befintliga kandidatrepos med tydlig spec, evidence-gates och red/green TDD innan de marknadsätts.",
+    "next_step": "Skapa en Superpowers-skill som kör en specad review-cykel över 5 befintliga AI Radar-kandidater och jämför resultatet mot manuell bedömning.",
+    "differentiator": "Fokuserar på spec-driven, test-driven agentutveckling snarare än generisk prompt-iteration, vilket minskar subjektivitet i ökar reproducibilitet.",
+    "evidence": [
+      "Repot definierar en komplett SDLC-metodik med spec, TDD och subagent-driven development.",
+      "Stöder Claude Code, Codex CLI, Gemini CLI och andra agenter som AI Radar kan använda.",
+      "279k+ stjärnor visar stark community- och metodadoption."
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 279447,
+    "language": "Shell",
+    "score": 64,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ]
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "summary_sv": "En självlärande AI-agent med inbyggd kunskapslogik, färdigheter från erfarenhet och session-övergripande minne.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra AI Radars minne, feedbackloop och projekt-context genom att lära sig av tidigare repo-bedömningar och användarinteraktioner."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 15,
+      "concrete_value": 10,
+      "testability": 8,
+      "technical_fit": 8,
+      "repo_quality": 7,
+      "timing": 5
+    },
+    "risks": [
+      "Hermes-agent är ett generiskt agentramverk som kräver anpassning för AI Radar-specifik användning.",
+      "Självlärande system kan introducera oförutsäeglighet i rekommendationslogiken."
+    ],
+    "confidence": 0.55,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "adjacent",
+    "category": "agent-memory",
+    "concrete_use_case": "Integrera Hermes-agents minne i AI Radar för att spara tidigare repo-bedömningar, användarfeedback och projektpreferenser för mer kontextuella framtida rekommendationer.",
+    "next_step": "Testa Hermes-agent i en begränsad AI Radar-session för att se om den kan reducera antalet falska positiva genom att lära sig av tidigare 'rejected'-beslut.",
+    "differentiator": "Självlärande agent med inbyggd kunskapslogik som kan minnas och förbättra sig över sessioner utan extern minnesdatabas.",
+    "evidence": [
+      "Hermes-agent har en inbyggd learning loop som skapar och förbättrar färdigheter från erfarenhet.",
+      "Den kan köras på en $5 VPS eller servereless med nära noll kostnad vid inaktivitet.",
+      "Projektet är byggt av Nous Research med stöd för Claude, OpenAI och andra LLM:ar."
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 238218,
+    "language": "Python",
+    "score": 53,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ]
+  },
+  {
+    "repo": "XiaoDuoYa/codex-with-chatgpt",
+    "url": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+    "summary_sv": "En MCP-baserad bridge som låter ChatGPT webbplanera medan Codex CLI exekverar kod, utan att ladda upp repot.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra AI Radars modellanalys genom att använda ChatGPT Plus-kvot för planering medan Codex exekverar, vilket minskar API-kostnader."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 14,
+      "concrete_value": 11,
+      "testability": 12,
+      "technical_fit": 10,
+      "repo_quality": 6,
+      "timing": 7
+    },
+    "risks": [
+      "Kräver att Jonas har en ChatGPT Plus/Prenumeration som inte alla användare har.",
+      "MCP-bron är ny teknologi med potentiella säkerhets- och prestanderisker."
+    ],
+    "confidence": 0.6,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "adjacent",
+    "category": "agent-bridge",
+    "concrete_use_case": "Använd Codex-with-ChatGPT för att effektivt köra AI Radar-modellbatcher där ChatGPT planerar analysen medan Codex exekverar koden mot lokala repo-filer.",
+    "next_step": "Installera Codex-with-ChatGPT och köra en test-session mot AI Radars befintliga kandidatrepos för att jämföra API-kostnad och analyskvalitet mot direkt OpenRouter-anrop.",
+    "differentiator": "Separerar planering (ChatGPT Plus) från exektion (Codex) via en säker, OAuth-skyddad read-only MCP-anslutning utan API-nyckel.",
+    "evidence": [
+      "Repot använder en read-only MCP-anslutning för att ChatGPT ska läsa endast de rader den behöver.",
+      "Stöder Codex CLI som redan är en del av AI Radars teknikstack.",
+      "Kräver ingen API-nyckel — fungerar via officiell ChatGPT-webbgränssnitt."
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 1019,
+    "language": "TypeScript",
+    "score": 60,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ]
+  },
+  {
+    "repo": "MetaMask-AI/metamask-desktop",
+    "url": "https://github.com/MetaMask-AI/metamask-desktop",
+    "summary_sv": "En desktop-app för att hantera Ethereum-plånbok, interagera med Web3-appar och komma åt DeFi/NFT-ekosystem.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 2,
+      "concrete_value": 2,
+      "testability": 3,
+      "technical_fit": 2,
+      "repo_quality": 5,
+      "timing": 2
+    },
+    "risks": [
+      "Ingen koppling till Jonas aktiva projekt eller affärsmål.",
+      "Web3- och crypto-området är inte en kärnkompetens i något projekt."
+    ],
+    "confidence": 0.2,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "web3-wallet",
+    "concrete_use_case": "Ingen direkt användning i Jonas aktiva projekt — endast relevant om framtida Web3- eller crypto-integration behövs.",
+    "next_step": "Ingen — ingen konkret koppling till befintliga projekt.",
+    "differentiator": "Desktop-first MetaMask med förbättrad prestanda och systemintegration jämfört med webbextension.",
+    "evidence": [
+      "Stöder Ethereum, ERC-20/ERC-721, Polygon, BSC och andra EVM-nätverk.",
+      "Inbyggd Web3-provider för anslutning till DApps.",
+      "Lokal krypterad nyckellagring och seed-fråmsimport/export."
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 825,
+    "language": "CSS",
+    "score": 16,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ]
+  },
+  {
+    "repo": "calesthio/OpenMontage",
+    "url": "https://github.com/calesthio/OpenMontage",
+    "summary_sv": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      },
+      {
+        "project": "Nyabolaget-ekosystemet",
+        "reason": "Kan stödja datainsamling, företagsdata eller automatisering."
+      },
+      {
+        "project": "Stock Signals",
+        "reason": "Kan vara transparent researchinspiration, inte beslutsmotor."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 10,
+      "testability": 8,
+      "technical_fit": 7,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: Could not parse JSON from model response"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 54231,
+    "language": "Python",
+    "score": 58,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-27",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify",
+    "summary_sv": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: Could not parse JSON from model response"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – daily",
+      "GitHub Trending – weekly"
+    ],
+    "stars": 31869,
+    "language": "JavaScript",
+    "score": 60,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-27",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "bilawalsidhu/gods-eye-view",
+    "url": "https://github.com/bilawalsidhu/gods-eye-view",
+    "summary_sv": "Ett webbaserat 3D-globe som visar live flyg-, fartygs-, satellit- och jordbävningsdata från offentliga källor.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 2,
+      "concrete_value": 2,
+      "testability": 10,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 5
+    },
+    "risks": [
+      "Data kan vara fördröjd eller sakna täckning över Sverige."
+    ],
+    "confidence": 0.2,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "geospatial-visualization",
+    "concrete_use_case": "Ingen direkt koppling till Jonas projekt; kan endast användas som inspiration för framtida datavisualisering.",
+    "next_step": "Öppna globen och kontrollera att flygdata uppdateras i realtid.",
+    "differentiator": "Kombinerar flera offentliga realtidsströmmar i ett fotorealistiskt gränssnitt utan att kräva API-nycklar för grundläggande data.",
+    "evidence": [
+      "Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras",
+      "Live open source spatial intelligence",
+      "No classified clearance required"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 12922,
+    "language": "JavaScript",
+    "score": 37,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ],
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-28",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "summary_sv": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 7,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: Could not parse JSON from model response"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 38133,
+    "language": "Python",
+    "score": 57,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-27",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "JetBrains/go-modern-guidelines",
+    "url": "https://github.com/JetBrains/go-modern-guidelines",
+    "summary_sv": "Riktlinjer som hjälper AI-kodagenter att skriva modern Go genom att föredra nya idiom och stdlib-funktioner.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 4,
+      "concrete_value": 4,
+      "testability": 8,
+      "technical_fit": 8,
+      "repo_quality": 6,
+      "timing": 4
+    },
+    "risks": [
+      "Riktlinjerna är endast användbara om Jonas skriver Go-kod; annars ger de lite värde."
+    ],
+    "confidence": 0.2,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "developer-guidelines",
+    "concrete_use_case": "Jonas kan använda riktlinjerna för att förbättra kvaliteten på eventuella Go-baserade verktyg han bygger för sina projekt, t.ex. ett scraper-verktyg för Apify.",
+    "next_step": "Jämför ett befintligt Go-skript i Jonas repo med riktlinjerna och notera tre förbättringar som kan göras.",
+    "differentiator": "Ger konkreta kod-exempel och automatiserbara regler som tar hänsyn till Go 1.0‑1.27, inklusive nya funktioner som errors.AsType.",
+    "evidence": [
+      "guidelines for code agents that help them write modern Go code",
+      "Use language features and stdlib additions available up to and including that version",
+      "Prefer modern idioms over older patterns"
+    ],
+    "source_names": [
+      "GitHub Trending – daily"
+    ],
+    "stars": 2916,
+    "language": "Go",
+    "score": 34,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-28",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "summary_sv": "Lightweight coding agent that runs in your terminal",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 3,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: missing assessment"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 119891,
+    "language": "Rust",
+    "score": 53,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-23",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-23",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "MadsLorentzen/ai-job-search",
+    "url": "https://github.com/MadsLorentzen/ai-job-search",
+    "summary_sv": "AI-drivet jobbansökningsframework som utvärderar annonser, anpassar CV, skriver täckbrev och förbereder intervjuer lokalt.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 5,
+      "concrete_value": 6,
+      "testability": 7,
+      "technical_fit": 6,
+      "repo_quality": 5,
+      "timing": 3
+    },
+    "risks": [
+      "Kan bli föråldrat när jobbportaler ändras.",
+      "Beroende av Claude Code som kan förändras."
+    ],
+    "confidence": 0.4,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "job-search-automation",
+    "concrete_use_case": "Kör frameworket med en profil för att simulera en jobbansökan.",
+    "next_step": "Initiera repo, fyll i din profil och kör '/apply'-arbetsflödet för en testannons.",
+    "differentiator": "Helhetssolution för hela jobbansökningsprocessen på en enda maskin.",
+    "evidence": [
+      "README visar Pip-mascot och CI-badge.",
+      "Stöd för CV, täckbrev, intervjuförberedelse.",
+      "Använder Claude Code för automation."
+    ],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 38189,
+    "language": "Python",
+    "score": 32,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ],
+    "first_seen": "2026-08-25",
+    "last_seen": "2026-08-26",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-25",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "freestylefly/awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "summary_sv": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+    "project_matches": [
+      {
+        "project": "FAIV",
+        "reason": "Kan stödja e-handel, produktinnehåll eller kampanjproduktion."
+      },
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 20,
+      "concrete_value": 11,
+      "testability": 8,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "ecommerce-content",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 25242,
+    "language": "JavaScript",
+    "score": 64,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-26",
+    "last_analyzed": "2026-08-26",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "AprilNEA/OpenLogi",
+    "url": "https://github.com/AprilNEA/OpenLogi",
+    "summary_sv": "En lokal-först alternativ till Logitech Options+ för musknappar och DPI-justering, skriven i Rust.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 5,
+      "concrete_value": 0,
+      "testability": 10,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Inte stabilt ännu",
+      "Begränsad projektintegration"
+    ],
+    "confidence": 0.3,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "teknik",
+    "concrete_use_case": "Inget direkt kopplat till Jonas aktiva projekt.",
+    "next_step": "Testa om det kan integreras i en befintlig arbetsflöde för manuell justering av enhet.",
+    "differentiator": "Lokal-först och inga telemetri, men inget direkt projektmässigt värde.",
+    "evidence": [
+      "Skriven i Rust",
+      "Ingen konto eller telemetri",
+      "Aktiv utveckling"
+    ],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 17708,
+    "language": "Rust",
+    "score": 40,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value"
+    ],
+    "first_seen": "2026-08-21",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-21",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "tashfeenahmed/freellmapi",
+    "url": "https://github.com/tashfeenahmed/freellmapi",
+    "summary_sv": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 5
+    },
+    "risks": [
+      "Fallbackbedömning användes: risks must be an array"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 22300,
+    "language": "TypeScript",
+    "score": 58,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-27",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "summary_sv": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 7,
+      "repo_quality": 8,
+      "timing": 7
+    },
+    "risks": [
+      "Fallbackbedömning användes: Could not parse JSON from model response"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 35504,
+    "language": "Python",
+    "score": 57,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-27",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "apache/maka",
+    "url": "https://github.com/apache/maka",
+    "summary_sv": "Apache Maka är en lokal-first AI-agentarbetsyta som loggar alla interaktioner som en append-only-logg.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 2,
+      "testability": 6,
+      "technical_fit": 5,
+      "repo_quality": 5,
+      "timing": 5
+    },
+    "risks": [
+      "Risk för att vara för generiskt för att vara användbart i aktuella projekt."
+    ],
+    "confidence": 0.2,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "generisk",
+    "concrete_use_case": "Ingen konkret användning i aktuella projekt.",
+    "next_step": "Klona repot, installera TypeScript-miljön och starta en lokal Maka-klient för att testa loggningen av agentinteraktioner.",
+    "differentiator": "Apache-inkubatorprojekt som tillhandahåller en append-only-logg för AI-agentinteraktioner, beslutsspårning och verktygsanvändning.",
+    "evidence": [
+      "TypeScript-baserat verktyg med 2 384 stars och beskrivning: \"Apache Maka (Incubating) is a local-first AI agent workspace.\".",
+      "Loggar modellmeddelanden, verktygsanvändning och beslutsspårning som append-only-händelser."
+    ],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 4082,
+    "language": "TypeScript",
+    "score": 23,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ],
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-24",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "anthropics/claude-plugins-community",
+    "url": "https://github.com/anthropics/claude-plugins-community",
+    "summary_sv": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 7,
+      "repo_quality": 6.741396185151154,
+      "timing": 5
+    },
+    "risks": [
+      "Fallbackbedömning användes: risks must be an array"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "source_names": [
+      "GitHub Trending – weekly"
+    ],
+    "stars": 2768,
+    "language": "Python",
+    "score": 53.74139618515115,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ],
+    "first_seen": "2026-08-24",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "HEJustinSun/my-girlfriend-jingtian-latex",
+    "url": "https://github.com/HEJustinSun/my-girlfriend-jingtian-latex",
+    "summary_sv": "En LaTeX-bok som sätter upp ett 5x8 tum dokument om skådespelerskan Jing Tian, med kompilationsinstruktioner för XeLaTeX.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 2,
+      "concrete_value": 2,
+      "testability": 6,
+      "technical_fit": 4,
+      "repo_quality": 5,
+      "timing": 3
+    },
+    "risks": [
+      "LaTeX-kunskap krävs för att anpassa mallen till Jonas behov."
+    ],
+    "confidence": 0.15,
+    "analysis_mode": "model",
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "document-typesetting",
+    "concrete_use_case": "Jonas kan använda LaTeX-mallen som utgångspunkt för att skapa PDF-rapporter om golfstatistik för Sankdig eller försäljningsrapporter för Golfkuponger.",
+    "next_step": "Kompilera huvudfilen med XeLaTeX och kontrollera att PDF:en genereras utan fel.",
+    "differentiator": "Tillhandahåller ett färdigt sidformat och preamble som är optimerat för tryck och läsbarhet på 5x8 tum.",
+    "evidence": [
+      "Detta är ett 5 x 8 tums XeLaTeX-sättningsprojekt.",
+      "Kompilera ... XeLaTeX"
+    ],
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 4026,
+    "language": "TeX",
+    "score": 22,
+    "action": "Arkiv",
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ],
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-29",
+    "first_recommended": null,
+    "last_analyzed": "2026-08-28",
+    "notified_at": null,
+    "notified_score": null
+  },
+  {
+    "repo": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "summary_sv": "Ett stort bibliotek med specialiserade AI-agent-personligheter (frontend, Reddit, code review mm) att installera i Claude Code, Cursor, Codex osv.",
+    "project_matches": [],
+    "dimensions": {
+      "project_fit": 0,
+      "concrete_value": 0,
+      "testability": 5,
+      "technical_fit": 3,
+      "repo_quality": 9,
+      "timing": 2
+    },
+    "risks": [
+      "Hög hype och stjärnor men ingen match mot Jonas specifika behov (repo discovery, scoring, feedback-loop); risk för tidssläckage"
+    ],
+    "confidence": 0.95,
+    "analysis_mode": "model",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 148891,
+    "language": "Shell",
+    "score": 19,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-02",
+    "last_analyzed": "2026-08-27",
+    "notified_at": null,
+    "notified_score": null,
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "ai-agents",
+    "concrete_use_case": "Ingen konkret användning; AI Radar behöver strukturerad repo-analys och evidensbaserad ranking, inte generiska agent-prompts.",
+    "next_step": "Ingen test rekommenderas.",
+    "differentiator": "148k stjärnor; levereras som native app för enkel installation i flera AI-kodverktyg; fokuserar på levererbara specialist-promptar.",
+    "evidence": [
+      "README: 'Each agent is specialized, personality-driven, deliverable-focused'",
+      "Native app för macOS/Linux/Windows som installerar agenter i Claude Code, Cursor, Codex, Gemini",
+      "Auto-uppdateringar via appen"
+    ],
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "exact_match",
+      "project_match",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "testability"
+    ],
+    "project_context_version": 1
+  },
+  {
+    "repo": "anomalyco/opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "summary_sv": "The open source coding agent.",
+    "project_matches": [
+      {
+        "project": "AI Radar",
+        "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+      }
+    ],
+    "dimensions": {
+      "project_fit": 18,
+      "concrete_value": 9,
+      "testability": 8,
+      "technical_fit": 10,
+      "repo_quality": 8,
+      "timing": 2
+    },
+    "risks": [
+      "Fallbackbedömning användes: technical_fit must be between 0 and 15"
+    ],
+    "confidence": 0.35,
+    "analysis_mode": "fallback",
+    "source_names": [
+      "GitHub Search API"
+    ],
+    "stars": 202438,
+    "language": "TypeScript",
+    "score": 55,
+    "action": "Arkiv",
+    "first_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
+    "first_recommended": "2026-08-01",
+    "last_analyzed": "2026-08-20",
+    "notified_at": null,
+    "notified_score": null,
+    "assessment_version": 2,
+    "match_type": "generic",
+    "category": "agent-workflow",
+    "concrete_use_case": "",
+    "next_step": "",
+    "differentiator": "",
+    "evidence": [],
+    "project_context_version": 1,
+    "quality_tier": "archive",
+    "failed_quality_gates": [
+      "model_analysis",
+      "exact_match",
+      "confidence",
+      "score",
+      "project_fit",
+      "concrete_value",
+      "concrete_use_case",
+      "next_step",
+      "differentiator",
+      "evidence"
+    ]
+  }
+]
