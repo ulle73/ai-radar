@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31T07:03:27.472Z",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T06:15:56.741Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
@@ -9,10 +9,10 @@
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 10,
-  "reused_today": 20,
+  "analyzed_today": 8,
+  "reused_today": 22,
   "model_assessments": 5,
-  "fallback_assessments": 5,
+  "fallback_assessments": 3,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,
