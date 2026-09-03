@@ -1138,12 +1138,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 388549,
+      "stars": 388667,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1351,12 +1351,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 245853,
+      "stars": 246496,
       "language": "JavaScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1463,12 +1463,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 280536,
+      "stars": 280917,
       "language": "Shell",
       "score": 64,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1519,14 +1519,15 @@
       "confidence": 0.55,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 239614,
+      "stars": 240276,
       "language": "Python",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1573,12 +1574,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 149350,
+      "stars": 149781,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1608,59 +1609,54 @@
     "anomalyco/opencode": {
       "repo": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
-      "summary_sv": "The open source coding agent.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "En öppen källkodskodningsagent med IDE-integration som hjälper utvecklare att skriva och redigera kod med hjälp av AI.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 2
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 9,
+        "timing": 0
       },
       "risks": [
-        "Fallbackbedömning användes: technical_fit must be between 0 and 15"
+        "Ingen relevans för aktuella projekt."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.1,
+      "analysis_mode": "model",
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 203112,
+      "stars": 203329,
       "language": "TypeScript",
-      "score": 55,
+      "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-01",
-      "last_analyzed": "2026-08-20",
+      "last_analyzed": "2026-09-03",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för de aktuella projekten.",
+      "next_step": "Ingen konkret testbar användning inom ramen för de aktuella projekten.",
+      "differentiator": "Generiskt verktyg utan unik nytta för de aktuella projekten.",
+      "evidence": [
+        "200k+ stars, AI-kodningsagent",
+        "Stöder flera språk och editorer"
+      ],
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ]
     },
     "trycompai/crm": {
@@ -4060,7 +4056,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 173060,
+      "stars": 173314,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -4079,7 +4075,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-08-22",
       "notified_at": null,
@@ -8826,7 +8822,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 143605,
+      "stars": 143847,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -8845,7 +8841,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-08-23",
       "notified_at": null,
@@ -9343,7 +9339,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 27080,
+      "stars": 27501,
       "language": "JavaScript",
       "score": 64,
       "action": "Arkiv",
@@ -9362,7 +9358,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-26",
       "last_analyzed": "2026-08-26",
       "notified_at": null,
@@ -9454,7 +9450,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 3196,
+      "stars": 3307,
       "language": "Python",
       "score": 53.74139618515115,
       "action": "Arkiv",
@@ -9473,7 +9469,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10130,7 +10126,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 113359,
+      "stars": 122106,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10149,7 +10145,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10254,7 +10250,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 42432,
+      "stars": 44319,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10273,7 +10269,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10368,10 +10364,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 41723,
+      "stars": 42168,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -10390,7 +10385,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10692,38 +10687,37 @@
     "bilawalsidhu/gods-eye-view": {
       "repo": "bilawalsidhu/gods-eye-view",
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "summary_sv": "Ett webbaserat 3D-globe som visar live flyg-, fartygs-, satellit- och jordbävningsdata från offentliga källor.",
+      "summary_sv": "En fotorealistisk 3D-globe i webbläsaren som visar live-data över flygplan, fartyg, satelliter och kameror.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 2,
-        "testability": 10,
-        "technical_fit": 10,
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
         "repo_quality": 8,
-        "timing": 5
+        "timing": 0
       },
       "risks": [
-        "Data kan vara fördröjd eller sakna täckning över Sverige."
+        "Ingen relevans för aktuella projekt."
       ],
-      "confidence": 0.2,
+      "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "geospatial-visualization",
-      "concrete_use_case": "Ingen direkt koppling till Jonas projekt; kan endast användas som inspiration för framtida datavisualisering.",
-      "next_step": "Öppna globen och kontrollera att flygdata uppdateras i realtid.",
-      "differentiator": "Kombinerar flera offentliga realtidsströmmar i ett fotorealistiskt gränssnitt utan att kräva API-nycklar för grundläggande data.",
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för de aktuella projekten.",
+      "next_step": "Ingen konkret testbar användning inom ramen för de aktuella projekten.",
+      "differentiator": "Generiskt verktyg utan unik nytta för de aktuella projekten.",
       "evidence": [
-        "Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras",
-        "Live open source spatial intelligence",
-        "No classified clearance required"
+        "16k+ stars, photorealistic 3D globe",
+        "Live tracking av flyg, fartyg, satelliter och offentliga kameror"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 12922,
+      "stars": 16339,
       "language": "JavaScript",
-      "score": 37,
+      "score": 8,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -10733,12 +10727,13 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "testability"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
-      "last_analyzed": "2026-08-28",
+      "last_analyzed": "2026-09-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -11051,10 +11046,9 @@
         "Topics saknas; kodbasen är en Next.js/Vite LLM-lekplats"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 29809,
+      "stars": 30685,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -11069,7 +11063,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -11267,7 +11261,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 36966,
+      "stars": 37421,
       "language": "Shell",
       "score": 8,
       "action": "Arkiv",
@@ -11282,7 +11276,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -11319,7 +11313,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2173,
+      "stars": 2296,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -11334,7 +11328,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": "2026-08-30",
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -11785,7 +11779,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1375,
+      "stars": 1673,
       "language": "Python",
       "score": 46.210338855998664,
       "action": "Arkiv",
@@ -11804,7 +11798,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -11839,9 +11833,9 @@
         "Täcker MoE, data cleaning, pretrain, SFT, LoRA, RLHF, RLAIF, Tool Use, Agentic RL"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 57312,
+      "stars": 57940,
       "language": "Python",
       "score": 14,
       "action": "Arkiv",
@@ -11856,7 +11850,7 @@
         "testability"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12364,7 +12358,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 16192,
+      "stars": 16454,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -12380,7 +12374,7 @@
         "testability"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
       "first_recommended": null,
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12495,7 +12489,568 @@
       "last_analyzed": "2026-09-02",
       "notified_at": null,
       "notified_score": null
+    },
+    "chromedevtools/chrome-devtools-mcp": {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "summary_sv": "Chrome DevTools for coding agents",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 10,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 50722,
+      "language": "TypeScript",
+      "score": 60,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": "2026-09-03",
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "debpalash/voicestudio": {
+      "repo": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "summary_sv": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 15177,
+      "language": "Python",
+      "score": 57,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": "2026-09-03",
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "google-research/timesfm": {
+      "repo": "google-research/timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "summary_sv": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        },
+        {
+          "project": "Stock Signals",
+          "reason": "Kan vara transparent researchinspiration, inte beslutsmotor."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 30145,
+      "language": "Python",
+      "score": 57,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": "2026-09-03",
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "pacifio/atlas": {
+      "repo": "pacifio/atlas",
+      "url": "https://github.com/pacifio/atlas",
+      "summary_sv": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.957709935057326,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 3011,
+      "language": "Rust",
+      "score": 51.95770993505732,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "zyronon/typewords": {
+      "repo": "zyronon/TypeWords",
+      "url": "https://github.com/zyronon/TypeWords",
+      "summary_sv": "Practice English, one strike, one step forward; 练习英语，一次敲击，一点进步；",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 7.948931271474485,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 9428,
+      "language": "Vue",
+      "score": 52.948931271474486,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "fmtlib/fmt": {
+      "repo": "fmtlib/fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "summary_sv": "Ett modernt C++-bibliotek för snabb och säker stringformatering, alternativ till stdio och iostreams.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 8,
+        "timing": 0
+      },
+      "risks": [
+        "Ingen relevans för aktuella projekt."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för de aktuella projekten.",
+      "next_step": "Ingen konkret testbar användning inom ramen för de aktuella projekten.",
+      "differentiator": "Generiskt verktyg utan unik nytta för de aktuella projekten.",
+      "evidence": [
+        "24k+ stars, modern cross-platform formatting library",
+        "Stöder Unicode, prestandaoptimerad, används brett i C++-projekt"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 24448,
+      "language": "C++",
+      "score": 8,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "superlinked/sie": {
+      "repo": "superlinked/sie",
+      "url": "https://github.com/superlinked/sie",
+      "summary_sv": "En öppen källkodsinferensserver som kör agentmodeller via ett OpenAI-kompatibelt API, med stöd för sökning, dokument-till-markdown och strukturerad output.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 6,
+        "timing": 0
+      },
+      "risks": [
+        "Ingen relevans för aktuella projekt."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för de aktuella projekten.",
+      "next_step": "Ingen konkret testbar användning inom ramen för de aktuella projekten.",
+      "differentiator": "Generiskt verktyg utan unik nytta för de aktuella projekten.",
+      "evidence": [
+        "3k+ stars, OpenAI-kompatibelt API",
+        "Stöder över 100 modeller, avlastar flera agentuppgifter"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 3122,
+      "language": "Python",
+      "score": 6,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "sngyai/sequoia-x": {
+      "repo": "sngyai/Sequoia-X",
+      "url": "https://github.com/sngyai/Sequoia-X",
+      "summary_sv": "Kvantitativ aktiescreeningssystem för A-aktier i Kina, med dagliga strategier som skickar signaler till Feishu.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 6,
+        "timing": 0
+      },
+      "risks": [
+        "Ingen relevans för aktuella projekt."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för de aktuella projekten.",
+      "next_step": "Ingen konkret testbar användning inom ramen för de aktuella projekten.",
+      "differentiator": "Generiskt verktyg utan unik nytta för de aktuella projekten.",
+      "evidence": [
+        "6k+ stars, A-share screening med baostock",
+        "Inkluderar TurtleTrade, MaVolume och andra strategier"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 6261,
+      "language": "Python",
+      "score": 6,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "anthropics/commerce-agents": {
+      "repo": "anthropics/commerce-agents",
+      "url": "https://github.com/anthropics/commerce-agents",
+      "summary_sv": "En referensmall för att skapa handels- och affärsagenter med Claude, med exempel inom detaljhandel, resor, telekommunikation och underhållning.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 5,
+        "concrete_value": 5,
+        "testability": 10,
+        "technical_fit": 10,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Kräver anpassning för att passa specifik affärslogik och integrationsbehov",
+        "Ingen direkt integration med Shopify, WooCommerce eller annan befintlig stack"
+      ],
+      "confidence": 0.6,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-agent-blueprint",
+      "concrete_use_case": "Kan potentiellt användas för att bygga en anpassad shoppingagent för Golfkupongers Shopify-men det kräver omfattande utveckling och är ingen färdig lösning.",
+      "next_step": "Kör en av de färdiga demovertikalerna (t.ex. retail) för att utforska hur agenten hanterar köp- och beställningsflöden.",
+      "differentiator": "Ingen unik fördel gent mot andra agentramverk; det är en generisk mall för commerce-agenter.",
+      "evidence": [
+        "README visar två agenter: en shoppingagent för kunder och en merchant-agent för personal",
+        "Innehåller fyra vertikaler: retail, travel, telecom, entertainment",
+        "Använder Claude Agent SDK och Messages API"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 688,
+      "language": "Python",
+      "score": 43,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "gangtailorupgrade/undress-service": {
+      "repo": "GangTailorUpgrade/undress-service",
+      "url": "https://github.com/GangTailorUpgrade/undress-service",
+      "summary_sv": "Ett självhostat AI-verktyg för att generera outfitförslag och visualisera kläder, med explicit och olämpligt innehåll.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 5,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 5
+      },
+      "risks": [
+        "Explicit innehåll gör repot olämpligt för affärsprojekt",
+        "Ingen koppling till något av de nio projekten"
+      ],
+      "confidence": 0.9,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-modeverktyg",
+      "concrete_use_case": "Ingen konkret use case inom Jonas aktiva projekt; verktyget riktar sig mot modeintresse och innehåller explicit content.",
+      "next_step": "Ingen nästa steg, eftersom repot inte är relevant för något projekt.",
+      "differentiator": "Ingen unik fördel för projekten; innehåller explicit och olämpligt innehåll som gör repot olämpligt.",
+      "evidence": [
+        "README beskriver digitalisering av garderob och AI outfit recommendations",
+        "Ämneslistor inkluderar explicit content, nudity, sex",
+        "945 stjärnar men låg antal forks"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 945,
+      "language": "Python",
+      "score": 15,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-03",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-02"
+  "updated_at": "2026-09-03"
 }
