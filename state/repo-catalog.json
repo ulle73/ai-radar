@@ -1138,12 +1138,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 388798,
+      "stars": 388897,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1352,12 +1352,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 247422,
+      "stars": 248708,
       "language": "JavaScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1406,12 +1406,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 247964,
+      "stars": 250763,
       "language": "Shell",
       "score": 8,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1465,12 +1465,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 281452,
+      "stars": 281850,
       "language": "Shell",
       "score": 64,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1524,12 +1524,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 241011,
+      "stars": 241608,
       "language": "Python",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1576,12 +1576,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 149943,
+      "stars": 150112,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1629,12 +1629,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 203621,
+      "stars": 204249,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -4028,59 +4028,53 @@
     "anthropics/skills": {
       "repo": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
-      "summary_sv": "Public repository for Agent Skills",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Repot innehåller färdiga färdigheter (skills) som Claude kan ladda dynamiskt för att utföra specialiserade uppgifter som dokumentgenerering, dataanalys eller automation.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 7,
-        "repo_quality": 8,
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 10,
+        "technical_fit": 10,
+        "repo_quality": 10,
         "timing": 2
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Risk för överberoende på externa färdigheter som kanske inte underhålls."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "agentfärdighetsbibliotek",
+      "concrete_use_case": "Jonas kan använda färdigheterna för att utöka Claude:s kapabilitet i AI Radars analyspipeline, t.ex. för att generera strukturerade sammanfattningar av repo-README.",
+      "next_step": "Testa att installera en skill för dokumentgenerering och låt Claude skapa en sammanfattning av ett README från ett kandidatrepo.",
+      "differentiator": "Till skillnad från enkla prompts erbjuder skills återanvändbara, versionerade instruktioner som kan delas och förbättras gemensamt.",
+      "evidence": [
+        "Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks.",
+        "Many skills in this repo are open source (Apache 2.0)."
+      ],
       "source_names": [
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 173773,
+      "stars": 174216,
       "language": "Python",
-      "score": 52,
+      "score": 37,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
-      "last_analyzed": "2026-08-22",
+      "last_analyzed": "2026-09-05",
       "notified_at": null,
       "notified_score": null
     },
@@ -10127,9 +10121,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Search API"
       ],
-      "stars": 123811,
+      "stars": 126508,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10148,7 +10143,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10253,7 +10248,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 46398,
+      "stars": 48384,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10272,7 +10267,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10369,7 +10364,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 42449,
+      "stars": 42691,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -10388,7 +10383,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10718,7 +10713,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17065,
+      "stars": 17621,
       "language": "JavaScript",
       "score": 8,
       "action": "Arkiv",
@@ -10734,7 +10729,7 @@
         "testability"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -11051,7 +11046,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 31169,
+      "stars": 31597,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -11066,7 +11061,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -11615,9 +11610,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 9827,
+      "stars": 10565,
       "language": "Swift",
       "score": 52.98493029561609,
       "action": "Arkiv",
@@ -11636,7 +11631,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-08-31",
       "notified_at": null,
@@ -11838,7 +11833,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 58318,
+      "stars": 58585,
       "language": "Python",
       "score": 14,
       "action": "Arkiv",
@@ -11853,7 +11848,7 @@
         "testability"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12062,7 +12057,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 47702,
+      "stars": 47719,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -12081,7 +12076,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12186,7 +12181,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32412,
+      "stars": 32605,
       "language": "TypeScript",
       "score": 61,
       "action": "Arkiv",
@@ -12205,7 +12200,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12361,7 +12356,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 16738,
+      "stars": 17073,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -12377,7 +12372,7 @@
         "testability"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12644,10 +12639,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 30781,
+      "stars": 31117,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12666,7 +12660,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12817,9 +12811,10 @@
         "Stöder Unicode, prestandaoptimerad, används brett i C++-projekt"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 25220,
+      "stars": 25496,
       "language": "C++",
       "score": 8,
       "action": "Arkiv",
@@ -12835,7 +12830,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12979,7 +12974,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1679,
+      "stars": 1953,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -12995,7 +12990,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13087,7 +13082,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 103205,
+      "stars": 103641,
       "language": "Go",
       "score": 35,
       "action": "Arkiv",
@@ -13102,7 +13097,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13140,7 +13135,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 41758,
+      "stars": 42883,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -13155,7 +13150,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13246,7 +13241,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 438,
+      "stars": 507,
       "language": "C",
       "score": 12,
       "action": "Arkiv",
@@ -13262,7 +13257,7 @@
         "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13271,38 +13266,37 @@
     "lnkiai/m3e-canvas": {
       "repo": "lnkiai/m3e-canvas",
       "url": "https://github.com/lnkiai/m3e-canvas",
-      "summary_sv": "Ett webbaserat verktyg för att skissa Material 3 Expressive-gränssnitt och exportera dem som prompts för AI-kodningsassistenter.",
+      "summary_sv": "Repot låter användare rita Material 3 Expressive-gränssnitt i webbläsaren och generera prompts för AI-kodverktyg.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 3,
-        "concrete_value": 4,
-        "testability": 10,
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 12,
         "technical_fit": 10,
-        "repo_quality": 7,
-        "timing": 5
+        "repo_quality": 6,
+        "timing": 3
       },
       "risks": [
-        "Verktyget är fokuserat på Material 3 Expressive och kanske inte passar Jonas befintliga designsystem."
+        "Risk för att genererade prompts inte alltid är optimala för målverktyget."
       ],
-      "confidence": 0.2,
+      "confidence": 0.15,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ui-designverktyg",
-      "concrete_use_case": "Ingen specifik projektmatchning",
-      "next_step": "Öppna verktygets live-demo och skapa en enkel skärm för att se om prompten kan användas i ett AI-kodningsflöde.",
-      "differentiator": "Kombinerar visuell skissning med direkt promptgenerering för AI-kodning, något som vanliga designverktyg inte erbjuder.",
+      "category": "ui-skiss-och-promptgenerator",
+      "concrete_use_case": "Jonas kan skapa skisser av tänkta verktyg och snabbt få prompts som matar ett AI-kodverktyg för prototyputveckling.",
+      "next_step": "Öppna m3e-canvas i webbläsaren, rita en enkel skärm och kopiera den genererade prompten till ett kodverktyg.",
+      "differentiator": "Till skillnad från rena designverktyg kombinerar m3e-canvas visuell skissning med direkt promptgenerering för AI-kodning.",
       "evidence": [
-        "Sketch Material 3 Expressive screens in the browser",
-        "copy a prompt for your AI coding tool",
-        "Live demo available"
+        "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+        "Live demo available at https://lnkiai.github.io/m3e-canvas/"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 656,
+      "stars": 2294,
       "language": "TypeScript",
-      "score": 39,
+      "score": 33,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -13315,9 +13309,9 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
-      "last_analyzed": "2026-09-04",
+      "last_analyzed": "2026-09-05",
       "notified_at": null,
       "notified_score": null
     },
@@ -13353,7 +13347,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 996,
+      "stars": 1116,
       "language": "TypeScript",
       "score": 43,
       "action": "Arkiv",
@@ -13368,7 +13362,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13426,7 +13420,218 @@
       "last_analyzed": "2026-09-04",
       "notified_at": null,
       "notified_score": null
+    },
+    "bikini/exploitarium": {
+      "repo": "bikini/exploitarium",
+      "url": "https://github.com/bikini/exploitarium",
+      "summary_sv": "Repot samlar offentliga exploit proof-of-concept och sårbarhetsrapporter som ännu inte rapporterats som CVE.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 8,
+        "technical_fit": 5,
+        "repo_quality": 6,
+        "timing": 0
+      },
+      "risks": [
+        "Risk för att använda kända exploiter i produktionsmiljö utan tillräcklig isolering."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "säkerhetsforskningsexploit",
+      "concrete_use_case": "Jonas kan använda exploitkoden för att testa säkerheten i egna projekt eller för att lära sig om vanliga sårbarheter.",
+      "next_step": "Välj ett enkelt exploit och kör det i en isolerad miljö för att förstå dess verkan.",
+      "differentiator": "Till skillnad från många sårbarhetsdatabaser fokuserar detta repo på att dela PoC-kod som ännu inte är officiellt registrerad.",
+      "evidence": [
+        "A single archive of public exploit PoCs and vulnerability research writeups.",
+        "At the time I post these, none have been reported."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 4557,
+      "language": "Python",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-05",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "magnitudedev/magnitude": {
+      "repo": "magnitudedev/magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "summary_sv": "Repot erbjuder en öppen källkod-inferensserver som kör lokala språkmodeller optimerade för hårdvaran och kan kopplas till befintliga agenter.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 4,
+        "testability": 10,
+        "technical_fit": 12,
+        "repo_quality": 7,
+        "timing": 4
+      },
+      "risks": [
+        "Risk för att lokala modeller inte når samma prestanda som kommersiella API:er."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "lokal-inferensserver-för-språkmodeller",
+      "concrete_use_case": "Jonas kan köra lokala LLM-modeller för att minska kostnad och öka sekretess i AI Radars analyspipeline.",
+      "next_step": "Installera Magnitude på en lokal maskin och koppla det till en enkel agent för att köra en modell och generera text.",
+      "differentiator": "Till skillnad från många molnbaserade LLM-API:er kör Magnitude modellerna helt lokalt och optimerar efter hårdvaran.",
+      "evidence": [
+        "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use.",
+        "Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 2632,
+      "language": "TypeScript",
+      "score": 41,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-05",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "nahrek/polyledger": {
+      "repo": "nahrek/polyledger",
+      "url": "https://github.com/nahrek/polyledger",
+      "summary_sv": "Repot erbjuder en resumable indexer för Polymarkets CLOB-data och on-chain trades från Polygon, lagrad i en DuckDB-fil som kan frågas med SQL.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 10,
+        "technical_fit": 10,
+        "repo_quality": 4,
+        "timing": 2
+      },
+      "risks": [
+        "Risk för att Polymarkets data inte är relevant för Jonas projekt."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "prediction-market-data-indexer",
+      "concrete_use_case": "Jonas kan använda indexern för att hämta och analysera Polymarkets marknadsdata i egna forskningsprojekt.",
+      "next_step": "Kör indexern för att ladda ner senaste Polymarkets data och fråga den med SQL för att få insikter om marknadsrörelser.",
+      "differentiator": "Till skillnad från enkla API-anrop ger PolyLedger en resumable, DuckDB-baserad lösning som möjliggör effektiv lokal analys.",
+      "evidence": [
+        "Resumable Polymarket indexer: CLOB market metadata plus on-chain trades from Polygon, in one DuckDB file you can query with SQL.",
+        "Resumable by construction. Rows and the block cursor are committed in a single transaction."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 614,
+      "language": "Python",
+      "score": 28,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-05",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "danielblnc/dlss-nr-on-amd": {
+      "repo": "danielblnc/DLSS-NR-on-AMD",
+      "url": "https://github.com/danielblnc/DLSS-NR-on-AMD",
+      "summary_sv": "Ett Windows-modverktyg som låter AMD RX 9000/7000-grafikkort köra NVIDIA DLSS 5 Neural Rendering i DX12-spel som stödjer FSR, via ett DLL-byte och overlay.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 1,
+        "technical_fit": 0,
+        "repo_quality": 4,
+        "timing": 1
+      },
+      "risks": [
+        "Kräver egen DLSS 5-DLL från ett köpt spel, oklart juridiskt och stödstatus",
+        "Prestanda är uttryckligen WIP och begränsad till RDNA3/4",
+        "Ingen som helst koppling till Jonas nio aktiva projekt eller idéer"
+      ],
+      "confidence": 0.95,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "gaming-gpu-modding",
+      "concrete_use_case": "Ingen koppling till något av Jonas namngivna projekt; verktyget kräver Windows, DX12-spel, specifik AMD-hårdvara och en DLL från ett DLSS 5-stödjande spel, vilket inte passar Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
+      "next_step": "Inget meningsfullt litet test att utföra i något av projekten; det enda realistiska testet vore att installera på en spel-PC, vilket ligger utanför projektens scope.",
+      "differentiator": "Specifikt för GPU-neuronal uppskalning på AMD; inget som motsvarar något i Jonas stack (Shopify, Next.js, WooCommerce, Python, Supabase, Apify, Telegram, etc.).",
+      "evidence": [
+        "README beskriver en Windows-mod för AMD RDNA3/RDNA4 som kräver DLSS 5 DLL från ett stödjande spel",
+        "Readme nämner prestanda som 'work in progress' (31 FPS 1080p på RX 9070 XT)",
+        "Ingen API, inga datakällor, ingen integration mot e-handel, scraping, betting, golf, SEO eller LLM-flöden"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 505,
+      "language": null,
+      "score": 6,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-05",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-04"
+  "updated_at": "2026-09-05"
 }
