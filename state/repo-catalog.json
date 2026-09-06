@@ -1138,12 +1138,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 388897,
+      "stars": 388979,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1352,12 +1352,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 248708,
+      "stars": 250159,
       "language": "JavaScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1406,12 +1406,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 250763,
+      "stars": 253025,
       "language": "Shell",
       "score": 8,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1465,12 +1465,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 281850,
+      "stars": 282151,
       "language": "Shell",
       "score": 64,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1524,12 +1524,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 241608,
+      "stars": 242099,
       "language": "Python",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1576,12 +1576,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 150112,
+      "stars": 150280,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1627,14 +1627,15 @@
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 204249,
+      "stars": 204778,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -4057,7 +4058,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 174216,
+      "stars": 174641,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -4072,7 +4073,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-05",
       "notified_at": null,
@@ -4877,63 +4878,67 @@
     "firecrawl/firecrawl": {
       "repo": "firecrawl/firecrawl",
       "url": "https://github.com/firecrawl/firecrawl",
-      "summary_sv": "The context API to search, scrape, and interact with the web at scale. 🔥",
+      "summary_sv": "Öppen källkod webb-API för sök, scraping och strukturad datautvinning i skala, byggt för AI-agenter och LLM-flöden.",
       "project_matches": [
         {
           "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+          "reason": "Kan förbättra discovery-skedet genom att komplettera GitHub API med webbsökning efter projektkontext, blogginlägg, changelogs och tekniska artiklar som GitHub Trending missar."
         },
         {
-          "project": "Nyabolaget-ekosystemet",
-          "reason": "Kan stödja datainsamling, företagsdata eller automatisering."
+          "project": "Apify Scraper",
+          "reason": "Alternativ scraping-motor som kan erbjuda enklare HTML→Markdown/strukturerad data för vissa scraper-kategorier, potentiellt lägre Apify-kostnad per jobb."
+        },
+        {
+          "project": "FAIV",
+          "reason": "Kan ersätta eller komplettera Apify i faiv-socials-pipelinen för insamling av inspirationsinnehåll från webben med renare markdown-utdata."
         }
       ],
       "dimensions": {
-        "project_fit": 18,
+        "project_fit": 12,
         "concrete_value": 10,
-        "testability": 8,
+        "testability": 12,
         "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 7
+        "repo_quality": 9,
+        "timing": 8
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "AI Radar använder idag GitHub API – webbsökning kan addera brus och kostnad utan bättre precision",
+        "Apify Scraper har redan adapterlager och billing; bytte kräver migrationsarbete",
+        "FAIV:s nuvarande Apify-actors är specialiserade för sociala medier – Firecrawl kan sakna plattformsspecifika fält"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.65,
+      "analysis_mode": "model",
       "assessment_version": 2,
-      "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "match_type": "adjacent",
+      "category": "web-scraping-api",
+      "concrete_use_case": "Testa Firecrawl som datakälla i AI Radars discovery-pipeline för att hitta repos som inte trendar på GitHub men diskuteras i tekniska bloggar; utvärdera om det minskar irrelevanta kandidater.",
+      "next_step": "Kör en batch Firecrawl-sökning på 5–10 kända tekniska bloggar (t.ex. Vercel, Supabase, Shopify engineering) och jämför funna repos mot nuvarande GitHub Trending-baslinje.",
+      "differentiator": "Fokus på LLM-vänlig markdown/strukturerad data, hanterar JavaScript-rendering, autentisering och rate-limiting inbyggt – enklare än att underhålla egna Apify-actors för enkla webbsidor.",
+      "evidence": [
+        "176k stjärnor, aktiv utveckling (senast push 2026-09-06), TypeScript/Node.js",
+        "Erbjuder hosted service + self-hosted, API för search, scrape, crawl, extract",
+        "Exporterar ren markdown eller JSON-schema, stödjer autentiserade sidor"
+      ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 165182,
+      "stars": 176991,
       "language": "TypeScript",
       "score": 61,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-11",
-      "last_analyzed": "2026-08-11",
+      "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -5559,58 +5564,55 @@
     "cathrynlavery/diagram-design": {
       "repo": "cathrynlavery/diagram-design",
       "url": "https://github.com/cathrynlavery/diagram-design",
-      "summary_sv": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Samling av 38 redaktionella diagramtyper (Sankey, Wardley map, kanban, UML, m.m.) i ren HTML+SVG för AI-kodverktyg som Claude Code och Codex, med valfri animering.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 5,
         "technical_fit": 3,
         "repo_quality": 8,
-        "timing": 7
+        "timing": 3
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Kräver omfattande integration för att passa något projekt",
+        "Claude Code-specifik skill utan bevisad produktnytta"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
-      "source_names": [
-        "GitHub Trending – weekly"
+      "category": "ai-agent-diagram",
+      "concrete_use_case": "Ej kopplad till något namngivet projekt. Kan potentiellt användas för visualisering i Stock Signals eller matchup-kort i Ullebets, men kräver omfattande antaganden om integration och faktiskt behov.",
+      "next_step": "Ingen konkret test planerad. Skulle kräva att Jonas först definierar ett specifikt visualisieringsbehov i ett projekt.",
+      "differentiator": "Renare SVG-utdata än Mermaid, men verktyget i sig är en Claude Code/Codex-skill snarare än en produktkomponent. Ingen unik nytta för Jonas befintliga stack.",
+      "evidence": [
+        "38 diagramtyper med semantic patterns skilda från layout",
+        "Kompatibel med Claude Code, Codex, Factory Droid, Pi och Agent Skills",
+        "Självständig HTML+SVG utan externa beroenden"
       ],
-      "stars": 25506,
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 31834,
       "language": "HTML",
-      "score": 53,
+      "score": 24,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
-      "last_analyzed": "2026-08-14",
+      "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -10124,7 +10126,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 126508,
+      "stars": 128229,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10143,7 +10145,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10248,7 +10250,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 48384,
+      "stars": 49717,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10267,7 +10269,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10364,7 +10366,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 42691,
+      "stars": 43026,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -10383,7 +10385,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -11046,7 +11048,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 31597,
+      "stars": 32043,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -11061,7 +11063,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -11177,53 +11179,55 @@
     "tailscale/tailcat": {
       "repo": "tailscale/tailcat",
       "url": "https://github.com/tailscale/tailcat",
-      "summary_sv": "Go-CLI och bibliotek som ger netcat-liknande punkt-till-punkt-tunnlar över Tailscales dataplansprotokoll utan kontrollplanet.",
+      "summary_sv": "CLI-verktyg och Go-bibliotek som möjliggör WireGuard-krypterade point-to-point-anslutningar mellan två maskiner via Tailscales dataplana utan att kräva Tailscale-konto, root eller kontrollplanet.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 2,
-        "technical_fit": 1,
-        "repo_quality": 7,
-        "timing": 1
+        "project_fit": 1,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 2,
+        "repo_quality": 8,
+        "timing": 3
       },
       "risks": [
-        "Ingen konkret nytta; risk att lägga tid på infra som inte löser ett namngivet behov"
+        "Ingen produktkoppling till Jonas nio projekt",
+        "Verktygsteknik Go saknas i befintlig stack"
       ],
-      "confidence": 0.92,
+      "confidence": 0.15,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "nätverk-devtools",
-      "concrete_use_case": "Ingen av Jonas projekt kräver mesh-tunnlar eller WireGuard-kanaler; all datakommunikation går via etablerade API:er och GitHub Actions.",
-      "next_step": "Skippa – inte ett projektproblem.",
-      "differentiator": "Inget som Jonas nuvarande hosting/Tailscale-uppsättning (om någon) saknar.",
+      "category": "networking-utility",
+      "concrete_use_case": "Ingen direkt nytta för Jonas projekt. Tailscale används redan i stacken och tailcat löser inget specifikt problem i Golfkuponger, Stock Signals, Ullebets eller andra projekt.",
+      "next_step": "Ej relevant för aktiva projekt. Skulle kunna testas för säker filöverföring mellan servrar, men saknar koppling till intäkt, konvertering eller produktbehov.",
+      "differentiator": "Tailscale-kompatibel men utan Jonas behov av det. Ingen Shopify-, WooCommerce-, Supabase-, Stripe- eller Telegram-integration.",
       "evidence": [
-        "README: 'netcat but over Tailscale data plane, without control plane'",
-        "Använder magicsock + DERP för NAT-traversal",
-        "Inget API-, data-, konverterings- eller innehållsproblem adresseras"
+        "Skapad av Tailscale själva",
+        "Ingen Tailscale-account, root/admin krävs",
+        "Userspace WireGuard med DERP och NAT-traversal"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 3720,
+      "stars": 6409,
       "language": "Go",
-      "score": 11,
+      "score": 22,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
-      "last_analyzed": "2026-08-30",
+      "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -11612,7 +11616,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 10565,
+      "stars": 10811,
       "language": "Swift",
       "score": 52.98493029561609,
       "action": "Arkiv",
@@ -11631,7 +11635,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-08-31",
       "notified_at": null,
@@ -11833,7 +11837,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 58585,
+      "stars": 58876,
       "language": "Python",
       "score": 14,
       "action": "Arkiv",
@@ -11848,7 +11852,7 @@
         "testability"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12057,7 +12061,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 47719,
+      "stars": 47737,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -12076,7 +12080,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12181,7 +12185,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32605,
+      "stars": 32735,
       "language": "TypeScript",
       "score": 61,
       "action": "Arkiv",
@@ -12200,7 +12204,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12295,9 +12299,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 6859,
+      "stars": 7497,
       "language": "Python",
       "score": 56.672648231413504,
       "action": "Arkiv",
@@ -12316,7 +12320,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12641,7 +12645,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 31117,
+      "stars": 31351,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12660,7 +12664,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12814,7 +12818,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 25496,
+      "stars": 25583,
       "language": "C++",
       "score": 8,
       "action": "Arkiv",
@@ -12830,7 +12834,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12974,7 +12978,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1953,
+      "stars": 2096,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -12990,7 +12994,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13266,37 +13270,40 @@
     "lnkiai/m3e-canvas": {
       "repo": "lnkiai/m3e-canvas",
       "url": "https://github.com/lnkiai/m3e-canvas",
-      "summary_sv": "Repot låter användare rita Material 3 Expressive-gränssnitt i webbläsaren och generera prompts för AI-kodverktyg.",
+      "summary_sv": "Webbläsarbaserat designverktyg för att skissa Material 3 Expressive-skärmar och generera vibe-coding-prompts för AI-kodningsverktyg, med linking av skärmar och prompt-generering.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 0,
+        "project_fit": 1,
         "concrete_value": 2,
-        "testability": 12,
-        "technical_fit": 10,
-        "repo_quality": 6,
+        "testability": 6,
+        "technical_fit": 3,
+        "repo_quality": 7,
         "timing": 3
       },
       "risks": [
-        "Risk för att genererade prompts inte alltid är optimala för målverktyget."
+        "Ingen bevisad produktkoppling",
+        "Designverktyg utan konkret projektrelevans",
+        "Kräver omfattande antaganden om framtida UI-arbete"
       ],
       "confidence": 0.15,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ui-skiss-och-promptgenerator",
-      "concrete_use_case": "Jonas kan skapa skisser av tänkta verktyg och snabbt få prompts som matar ett AI-kodverktyg för prototyputveckling.",
-      "next_step": "Öppna m3e-canvas i webbläsaren, rita en enkel skärm och kopiera den genererade prompten till ett kodverktyg.",
-      "differentiator": "Till skillnad från rena designverktyg kombinerar m3e-canvas visuell skissning med direkt promptgenerering för AI-kodning.",
+      "category": "design-prototyping",
+      "concrete_use_case": "Ingen koppling till Jonas aktiva projekt. Kan potentiellt användas för att skissa UI-prototyper till Golfkuponger, FAIV eller Res-kungen, men saknar bevisad produkt-, konverterings- eller intäktsnytta.",
+      "next_step": "Ej planerat. Skulle kräva att Jonas först definierar ett specifikt UI-prototyparbete i ett projekt.",
+      "differentiator": "Designverktyg för AI-coding-prompt-generering. Ingen koppling till Jonas befintliga Shopify-, WooCommerce-, Stock Signals- eller Ullebets-arkitektur. Material 3-stilen passar inte automatiskt Jonas produktestetik.",
       "evidence": [
-        "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
-        "Live demo available at https://lnkiai.github.io/m3e-canvas/"
+        "Next.js + React 19 + Material 3 Expressive",
+        "Sketchar och genererar AI-prompts för vibe-coding",
+        "Ingen backend – ren localStorage"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2294,
+      "stars": 3888,
       "language": "TypeScript",
-      "score": 33,
+      "score": 22,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -13306,12 +13313,13 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
-      "last_analyzed": "2026-09-05",
+      "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -13347,7 +13355,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1116,
+      "stars": 1178,
       "language": "TypeScript",
       "score": 43,
       "action": "Arkiv",
@@ -13362,7 +13370,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13580,40 +13588,38 @@
     "danielblnc/dlss-nr-on-amd": {
       "repo": "danielblnc/DLSS-NR-on-AMD",
       "url": "https://github.com/danielblnc/DLSS-NR-on-AMD",
-      "summary_sv": "Ett Windows-modverktyg som låter AMD RX 9000/7000-grafikkort köra NVIDIA DLSS 5 Neural Rendering i DX12-spel som stödjer FSR, via ett DLL-byte och overlay.",
+      "summary_sv": "Mod för att köra Nvidias DLSS 5 Neural Rendering på AMD RDNA3/RDNA4-kort i DirectX 12-spel via FSR-aktivering.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
-        "testability": 1,
-        "technical_fit": 0,
-        "repo_quality": 4,
-        "timing": 1
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 6,
+        "timing": 2
       },
       "risks": [
-        "Kräver egen DLSS 5-DLL från ett köpt spel, oklart juridiskt och stödstatus",
-        "Prestanda är uttryckligen WIP och begränsad till RDNA3/4",
-        "Ingen som helst koppling till Jonas nio aktiva projekt eller idéer"
+        "Noll strategisk relevans, risk för avvikelse om prioriteras"
       ],
-      "confidence": 0.95,
+      "confidence": 0.98,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "gaming-gpu-modding",
-      "concrete_use_case": "Ingen koppling till något av Jonas namngivna projekt; verktyget kräver Windows, DX12-spel, specifik AMD-hårdvara och en DLL från ett DLSS 5-stödjande spel, vilket inte passar Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
-      "next_step": "Inget meningsfullt litet test att utföra i något av projekten; det enda realistiska testet vore att installera på en spel-PC, vilket ligger utanför projektens scope.",
-      "differentiator": "Specifikt för GPU-neuronal uppskalning på AMD; inget som motsvarar något i Jonas stack (Shopify, Next.js, WooCommerce, Python, Supabase, Apify, Telegram, etc.).",
+      "category": "grafikmodding",
+      "concrete_use_case": "Ingen koppling till Jonas projekt – inget projekt involverar spelgrafik, GPU-drivrutiner eller realtidsrendering.",
+      "next_step": "Ingen test – repot riktar sig till spelare/moddare, inte till Jonas verksamheter.",
+      "differentiator": "Unik omvandling av DLSS NR till AMD-hårdvara via DLL-injektion, men helt utanför projektportföljen.",
       "evidence": [
-        "README beskriver en Windows-mod för AMD RDNA3/RDNA4 som kräver DLSS 5 DLL från ett stödjande spel",
-        "Readme nämner prestanda som 'work in progress' (31 FPS 1080p på RX 9070 XT)",
-        "Ingen API, inga datakällor, ingen integration mot e-handel, scraping, betting, golf, SEO eller LLM-flöden"
+        "Fungerar på RX 7000/9000-serier med Adrenalin 26.1.1+, Windows 11, DX12+FSR",
+        "Overlay med End-tangent för inställningar (läge, intensitet, modellval planeras)",
+        "Prestanda ~33 FPS 1080p på RX 9070 XT, optimeras löpande"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 505,
+      "stars": 672,
       "language": null,
-      "score": 6,
+      "score": 13,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -13626,12 +13632,232 @@
         "testability"
       ],
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "first_recommended": null,
-      "last_analyzed": "2026-09-05",
+      "last_analyzed": "2026-09-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ruvnet/ruflo": {
+      "repo": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "summary_sv": "Generisk agent-meta-harness för multi-player swarms, koordinering av autonoma arbetsflöden och konversations-AI med adaptiv minne, RAG och integration mot Claude Code, Codex och Hermes.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 4,
+        "technical_fit": 2,
+        "repo_quality": 6,
+        "timing": 2
+      },
+      "risks": [
+        "Enterprise-nivå komplexitet utan visat projektsamband",
+        "Hype-driven adoption utan konkret arbetsflödesnytta"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-framework",
+      "concrete_use_case": "Ej relevant för något av Jonas nio projekt. Repot är en omfattande agentplattform utan specifik produkt-, intäkts- eller arbetsflödesmatch.",
+      "next_step": "Ingen konkret test planerad. Massive swarm/agent-hype utan konkret problem i Jonas stack.",
+      "differentiator": "Större och mer komplex än något Jonas behöver idag. Ingen specifik integration mot Shopify, WooCommerce, Stock Signals, Ullebets eller någon annan projektarkitektur.",
+      "evidence": [
+        "70 745 stars – populär men generisk agentplattform",
+        "Inkluderar Goal Planner, Live Agents, RuVector Agentic DB",
+        "MIT-licens, TypeScript/npm-paket"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 70745,
+      "language": "TypeScript",
+      "score": 16,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "humanlayer/skills": {
+      "repo": "humanlayer/skills",
+      "url": "https://github.com/humanlayer/skills",
+      "summary_sv": "Samling av Claude Code-fokuserade skills: CLAUDE.md-förbättring med important-if-block, React prop-type-narrowing, itererad agent-loop-byggare, agentic control-loop-designer och show-me-diagramexplainer.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "build-iterated-agentic-loop och design-control-loop kan teoretiskt förbättra AI Radars kodningsarbetsflöden och agentloop-struktur, men detta är spekulativt utan konkret integration eller bevisat behov i radarns nuvarande pipeline."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 5,
+        "testability": 7,
+        "technical_fit": 4,
+        "repo_quality": 7,
+        "timing": 4
+      },
+      "risks": [
+        "Claude Code-specifikt – kräver att Jonas använder Claude Code",
+        "Ingen direkt koppling till blockerande problem i AI Radar",
+        "Teoretisk nytta utan konkret arbetsflödesförbättring"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "claude-code-skills",
+      "concrete_use_case": "Om Jonas vill förbättra hur AI Radar bygger och itererar kodagenter kan build-iterated-agentic-loop användas för att skapa repo-lokala arbetsflöden. show-me kan användas för snabbare kodförklaring. Ingen av dem löser dock ett konkret blockerande problem i AI Radar idag.",
+      "next_step": "Testa /show-me i ett befintligt repo för att se om diagramförklaringar förbättrar förståelsen av kodstrukturer jämfört med ren text.",
+      "differentiator": "Sitter tight mot Claude Code-miljön och kräver ingen installation i projekt – det är en agent-skill snarare än en kodkomponent. Ingen av dem förbättrar specifikt repo-discovery, context, ranking eller Telegram-leverans.",
+      "evidence": [
+        "5 specifika skills: improve-claude-md, narrow-react-prop-types, build-iterated-agentic-loop, design-control-loop, show-me",
+        "Installeras via npx skills add och körs inline i Claude Code",
+        "HumanLayer är ett verkligt företag med produkt"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 2805,
+      "language": "TypeScript",
+      "score": 31,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ashemag/human-atlas": {
+      "repo": "ashemag/human-atlas",
+      "url": "https://github.com/ashemag/human-atlas",
+      "summary_sv": "Interaktiv 3D-anatomisk utforskare byggd med React, Three.js och BodyParts3D-data för 2 234 väljbara kroppsdelar.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 7,
+        "timing": 2
+      },
+      "risks": [
+        "Ingen affärs- eller produktkoppling till något aktivt projekt"
+      ],
+      "confidence": 0.95,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "medicinsk-visualisering",
+      "concrete_use_case": "Ingen direkt användning i något av Jonas nio aktiva projekt; alla är inom golf, trading, fotbollsanalys, företagsdata, bil-e-handel, AI-verktyg, reseplanering eller scraper-SaaS.",
+      "next_step": "Ingen test rekommenderas – repot ligger utanför alla projektområden.",
+      "differentiator": "Högkvalitativ CC BY 4.0-anatomidata med webbaserad 3D-interaktion, men saknar koppling till Jonas verksamheter.",
+      "evidence": [
+        "README beskriver 2 234 mesh-objekt, 15 anatomiska system och 3 432 namngivna begrepp",
+        "Byggd med React, Three.js, shadcn/ui, Node.js 22+",
+        "Licens CC BY 4.0, ingen API-nyckel krävs"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 586,
+      "language": "TypeScript",
+      "score": 19,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "anthropics/fermats-last-theorem": {
+      "repo": "anthropics/fermats-last-theorem",
+      "url": "https://github.com/anthropics/fermats-last-theorem",
+      "summary_sv": "Maskinverifierat Lean 4-bevis för Fermats stora sats, byggt på Mathlib med 60 000+ moduler.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 1,
+        "repo_quality": 8,
+        "timing": 1
+      },
+      "risks": [
+        "Noll relevans för alla nio projekt"
+      ],
+      "confidence": 0.99,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "formell-matematik",
+      "concrete_use_case": "Ingen tillämpning i Jonas projekt – inget av de nio projekten involverar formell verifiering, teorembevis eller Lean-utveckling.",
+      "next_step": "Ingen åtgärd – repot är ett forskningsartefakt utan produktnytta här.",
+      "differentiator": "Fullständigt, axiom-minimalt bevis i Lean 4, men helt avskilt från Jonas teknikstack och affärsdomäner.",
+      "evidence": [
+        "Lean 4.33.1, Mathlib v4.33.0, 60 475 moduler byggda och kernel-checkade",
+        "Endast tre standardaxiom (propext, Classical.choice, Quot.sound)",
+        "Ingen underhållning eller bidrag accepteras"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 723,
+      "language": "Lean",
+      "score": 12,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-09-05"
+  "updated_at": "2026-09-06"
 }
