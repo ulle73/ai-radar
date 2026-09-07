@@ -1138,12 +1138,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 388979,
+      "stars": 389071,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1352,12 +1352,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 250159,
+      "stars": 251793,
       "language": "JavaScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1406,12 +1406,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 253025,
+      "stars": 255087,
       "language": "Shell",
       "score": 8,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1465,12 +1465,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 282151,
+      "stars": 282513,
       "language": "Shell",
       "score": 64,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1524,12 +1524,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 242099,
+      "stars": 242682,
       "language": "Python",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1576,12 +1576,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 150280,
+      "stars": 150544,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1630,12 +1630,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 204778,
+      "stars": 205401,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -4055,10 +4055,9 @@
         "Many skills in this repo are open source (Apache 2.0)."
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 174641,
+      "stars": 174909,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -4073,7 +4072,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-05",
       "notified_at": null,
@@ -5594,7 +5593,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 31834,
+      "stars": 32678,
       "language": "HTML",
       "score": 24,
       "action": "Arkiv",
@@ -5610,7 +5609,7 @@
         "testability"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-06",
       "notified_at": null,
@@ -10126,7 +10125,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 128229,
+      "stars": 129816,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10145,7 +10144,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10250,7 +10249,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 49717,
+      "stars": 51291,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10269,7 +10268,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -11048,7 +11047,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32043,
+      "stars": 32588,
       "language": "TypeScript",
       "score": 13,
       "action": "Arkiv",
@@ -11063,7 +11062,7 @@
         "testability"
       ],
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -11837,7 +11836,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 58876,
+      "stars": 59252,
       "language": "Python",
       "score": 14,
       "action": "Arkiv",
@@ -11852,7 +11851,7 @@
         "testability"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12185,7 +12184,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 32735,
+      "stars": 32863,
       "language": "TypeScript",
       "score": 61,
       "action": "Arkiv",
@@ -12204,7 +12203,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12301,7 +12300,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7497,
+      "stars": 8040,
       "language": "Python",
       "score": 56.672648231413504,
       "action": "Arkiv",
@@ -12320,7 +12319,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12566,10 +12565,10 @@
         "testability": 8,
         "technical_fit": 7,
         "repo_quality": 8,
-        "timing": 7
+        "timing": 5
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Fallbackbedömning användes: missing assessment"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
@@ -12581,11 +12580,11 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 15177,
+      "stars": 20049,
       "language": "Python",
-      "score": 57,
+      "score": 55,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -12602,9 +12601,9 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-09-03",
-      "last_analyzed": "2026-09-03",
+      "last_analyzed": "2026-09-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -12645,7 +12644,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 31351,
+      "stars": 31691,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12664,7 +12663,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12815,10 +12814,9 @@
         "Stöder Unicode, prestandaoptimerad, används brett i C++-projekt"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 25583,
+      "stars": 25630,
       "language": "C++",
       "score": 8,
       "action": "Arkiv",
@@ -12834,7 +12832,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12978,7 +12976,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2096,
+      "stars": 2273,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -12994,7 +12992,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13139,7 +13137,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 42883,
+      "stars": 44515,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -13154,7 +13152,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13301,7 +13299,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3888,
+      "stars": 4395,
       "language": "TypeScript",
       "score": 22,
       "action": "Arkiv",
@@ -13317,7 +13315,7 @@
         "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-06",
       "notified_at": null,
@@ -13484,52 +13482,58 @@
     "magnitudedev/magnitude": {
       "repo": "magnitudedev/magnitude",
       "url": "https://github.com/magnitudedev/magnitude",
-      "summary_sv": "Repot erbjuder en öppen källkod-inferensserver som kör lokala språkmodeller optimerade för hårdvaran och kan kopplas till befintliga agenter.",
-      "project_matches": [],
+      "summary_sv": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 4,
-        "concrete_value": 4,
-        "testability": 10,
-        "technical_fit": 12,
-        "repo_quality": 7,
-        "timing": 4
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 10,
+        "repo_quality": 7.158194653105287,
+        "timing": 5
       },
       "risks": [
-        "Risk för att lokala modeller inte når samma prestanda som kommersiella API:er."
+        "Fallbackbedömning användes: missing assessment"
       ],
-      "confidence": 0.2,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "lokal-inferensserver-för-språkmodeller",
-      "concrete_use_case": "Jonas kan köra lokala LLM-modeller för att minska kostnad och öka sekretess i AI Radars analyspipeline.",
-      "next_step": "Installera Magnitude på en lokal maskin och koppla det till en enkel agent för att köra en modell och generera text.",
-      "differentiator": "Till skillnad från många molnbaserade LLM-API:er kör Magnitude modellerna helt lokalt och optimerar efter hårdvaran.",
-      "evidence": [
-        "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use.",
-        "Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline."
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 2632,
+      "stars": 3793,
       "language": "TypeScript",
-      "score": 41,
+      "score": 57.158194653105284,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
-      "first_recommended": null,
-      "last_analyzed": "2026-09-05",
+      "last_seen": "2026-09-07",
+      "first_recommended": "2026-09-07",
+      "last_analyzed": "2026-09-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -13671,7 +13675,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 70745,
+      "stars": 71095,
       "language": "TypeScript",
       "score": 16,
       "action": "Arkiv",
@@ -13687,7 +13691,7 @@
         "testability"
       ],
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
       "last_analyzed": "2026-09-06",
       "notified_at": null,
@@ -13755,53 +13759,55 @@
     "ashemag/human-atlas": {
       "repo": "ashemag/human-atlas",
       "url": "https://github.com/ashemag/human-atlas",
-      "summary_sv": "Interaktiv 3D-anatomisk utforskare byggd med React, Three.js och BodyParts3D-data för 2 234 väljbara kroppsdelar.",
+      "summary_sv": "Interaktiv 3D-utforskare av mänsklig anatomi med över 2 200 separata mesh-delar och sökbara koncept.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
         "testability": 5,
-        "technical_fit": 5,
-        "repo_quality": 7,
+        "technical_fit": 8,
+        "repo_quality": 6,
         "timing": 2
       },
       "risks": [
-        "Ingen affärs- eller produktkoppling till något aktivt projekt"
+        "Representerar endast en vuxen manlig anatomi",
+        "Kräver ingen API-nyckel men är beroende av extern data"
       ],
-      "confidence": 0.95,
+      "confidence": 0.2,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "medicinsk-visualisering",
-      "concrete_use_case": "Ingen direkt användning i något av Jonas nio aktiva projekt; alla är inom golf, trading, fotbollsanalys, företagsdata, bil-e-handel, AI-verktyg, reseplanering eller scraper-SaaS.",
-      "next_step": "Ingen test rekommenderas – repot ligger utanför alla projektområden.",
-      "differentiator": "Högkvalitativ CC BY 4.0-anatomidata med webbaserad 3D-interaktion, men saknar koppling till Jonas verksamheter.",
+      "category": "3d-anatomy-viewer",
+      "concrete_use_case": "Utforska kroppssystem och enskilda anatomiska strukturer i en interaktiv webbläsare.",
+      "next_step": "Besök live-demo-sidan och rotera runt kroppen för att se mesh-delar.",
+      "differentiator": "Ger en explosionsvy och sökfunktion för 3 432 namngivna anatomiska koncept.",
       "evidence": [
-        "README beskriver 2 234 mesh-objekt, 15 anatomiska system och 3 432 namngivna begrepp",
-        "Byggd med React, Three.js, shadcn/ui, Node.js 22+",
-        "Licens CC BY 4.0, ingen API-nyckel krävs"
+        "2 234 mesh-delar från BodyParts3D 4.0",
+        "React/Three.js-implementation",
+        "Sök efter anatomiska namn"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 586,
+      "stars": 1505,
       "language": "TypeScript",
-      "score": 19,
+      "score": 21,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "first_recommended": null,
-      "last_analyzed": "2026-09-06",
+      "last_analyzed": "2026-09-07",
       "notified_at": null,
       "notified_score": null
     },
@@ -13857,7 +13863,341 @@
       "last_analyzed": "2026-09-06",
       "notified_at": null,
       "notified_score": null
+    },
+    "openai/skills": {
+      "repo": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "summary_sv": "Katalog med agentfärdigheter för Codex, en avskild och föråldrad lista över AI-agentens färdigheter.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 0
+      },
+      "risks": [
+        "Ingen direkt relevans.",
+        "Föråldrad och underhållen."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "utility",
+      "concrete_use_case": "Ingen direkt nytta för något av de nio projekten.",
+      "next_step": "Ingen – repot är en katalog av agentfärdigheter utan tydlig integration.",
+      "differentiator": "Endast en katalog av agentfärdigheter; ingen unik nytta.",
+      "evidence": [
+        "README beskriver föråldrad katalog för Codex-färdigheter.",
+        "Ingen koppling till något projekt."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 25698,
+      "language": "Python",
+      "score": 5,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "llvm/llvm-project": {
+      "repo": "llvm/llvm-project",
+      "url": "https://github.com/llvm/llvm-project",
+      "summary_sv": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: missing assessment"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 40262,
+      "language": "LLVM",
+      "score": 53,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "pollen-robotics/microduck_rl": {
+      "repo": "pollen-robotics/microduck_rl",
+      "url": "https://github.com/pollen-robotics/microduck_rl",
+      "summary_sv": "RL training environments for Microduck (mjlab)",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
+        "repo_quality": 6.530107577008029,
+        "timing": 5
+      },
+      "risks": [
+        "Fallbackbedömning användes: missing assessment"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 1840,
+      "language": "Python",
+      "score": 53.53010757700803,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "pierrenade/short-video-generator-ai": {
+      "repo": "pierrenade/short-video-generator-AI",
+      "url": "https://github.com/pierrenade/short-video-generator-AI",
+      "summary_sv": "Konverterar YouTube-videor till korta 9:16-videor med automatisk upptäck av höjdpunkter, undertexter och röstöverlägg.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 6,
+        "technical_fit": 7,
+        "repo_quality": 5,
+        "timing": 3
+      },
+      "risks": [
+        "Möjliga upphovsrättsfrågor förklaras inte",
+        "Beroende av YouTubes API"
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "video-to-short-generator",
+      "concrete_use_case": "Skapa viral kort video från ett YouTube-klipp utan manuellt klippande.",
+      "next_step": "Klistra in en YouTube-länk och generera en kort video på några sekunder.",
+      "differentiator": "Automatisk upptäck av höjdpunkter, undertexter, översättning och röstöverlägg i en enda pipeline.",
+      "evidence": [
+        "Python-baserad pipeline",
+        "1 039 GitHub-stars",
+        "Stöder 9:16-format och inga vattenmärken"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1039,
+      "language": "Python",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "rion-wu-tech/wechat-intelligence-hub": {
+      "repo": "Rion-Wu-tech/wechat-intelligence-hub",
+      "url": "https://github.com/Rion-Wu-tech/wechat-intelligence-hub",
+      "summary_sv": "Lokalt först system för att indexera och söka i WeChats chattloggar, med dagliga sammanfattningar och spårning av möjligheter.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 4,
+        "technical_fit": 6,
+        "repo_quality": 5,
+        "timing": 2
+      },
+      "risks": [
+        "Kräver lokala WeChat-databaser och tillstånd",
+        "Integritet och datalagringsvårigheter"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "chat-intelligence-system",
+      "concrete_use_case": "Hämta dagliga rapporter från WeChat om väntande svar, löften och affärsmöjligheter.",
+      "next_step": "Installera CLI:n, ge WeChat-tillstånd och kör en snabb datainmatning.",
+      "differentiator": "Ger en deterministisk läsare utan att signera in eller injicera WeChat, plus en agentikraft för att omvandla chatt till insikter.",
+      "evidence": [
+        "Python, 1 376 stars",
+        "Read-only CLI, searchable history",
+        "Stödjer dagliga briefing och opportunity tracking"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1376,
+      "language": "Python",
+      "score": 17,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "vinzdg/codenotch": {
+      "repo": "vinzdg/codenotch",
+      "url": "https://github.com/vinzdg/codenotch",
+      "summary_sv": "macOS-notch som visar förbrukade användningsgränser för kodassistentverktyg som Claude Code, Cursor och Codex.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 7,
+        "technical_fit": 8,
+        "repo_quality": 6,
+        "timing": 4
+      },
+      "risks": [
+        "API-förändringar hos leverantörer kan bryta funktionaliteten",
+        "Kräver macOS och lokala autentiseringsuppgifter"
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "developer-usage-monitor",
+      "concrete_use_case": "Se i realtid hur mycket av varje kodassistenters användningsgräns som har förbrukats.",
+      "next_step": "Installera appen, logga in på valda verktyg och verifiera att notchen visar gränserna.",
+      "differentiator": "Visar gränser per leverantör med hover-verktyg och synkroniserade fönster.",
+      "evidence": [
+        "Swift, 744 stars",
+        "Läser från varje verktygs lokala autentiseringsuppgifter",
+        "Stöder Claude Code, Cursor, Codex, Antigravity med flera"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 744,
+      "language": "Swift",
+      "score": 25,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-07",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-06"
+  "updated_at": "2026-09-07"
 }
