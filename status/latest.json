@@ -1,19 +1,18 @@
 {
-  "date": "2026-09-08",
-  "generated_at": "2026-09-08T05:59:47.756Z",
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T06:00:44.555Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)",
-    "Rion-Wu-tech/wechat-intelligence-hub: modellsvaret kunde inte valideras (dimensions must be an object)."
+    "OpenRouter-batch misslyckades: Could not parse JSON from model response"
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 12,
-  "reused_today": 18,
-  "model_assessments": 6,
-  "fallback_assessments": 6,
+  "analyzed_today": 5,
+  "reused_today": 25,
+  "model_assessments": 0,
+  "fallback_assessments": 5,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,

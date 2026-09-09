@@ -614,7 +614,7 @@
         "testability": 8,
         "technical_fit": 7,
         "repo_quality": 8,
-        "timing": 5
+        "timing": 7
       },
       "risks": [
         "Fallbackbedömning användes: Could not parse JSON from model response"
@@ -622,16 +622,16 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 17820,
+      "stars": 31406,
       "language": "Python",
-      "score": 55,
+      "score": 57,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-02",
-      "last_analyzed": "2026-08-02",
+      "last_analyzed": "2026-09-09",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
@@ -1138,12 +1138,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 389172,
+      "stars": 389264,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1353,12 +1353,12 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 253151,
+      "stars": 254523,
       "language": "JavaScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1404,14 +1404,15 @@
       "confidence": 1,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 256298,
+      "stars": 257156,
       "language": "Shell",
       "score": 8,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1463,14 +1464,15 @@
       "confidence": 0.65,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 282928,
+      "stars": 283504,
       "language": "Shell",
       "score": 64,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1523,12 +1525,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 243140,
+      "stars": 243549,
       "language": "Python",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-08-30",
       "notified_at": null,
@@ -1575,12 +1577,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 150828,
+      "stars": 151080,
       "language": "Shell",
       "score": 19,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -1626,15 +1628,14 @@
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 205401,
+      "stars": 206003,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -4056,7 +4057,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 175084,
+      "stars": 175290,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -4071,7 +4072,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-05",
       "notified_at": null,
@@ -5592,7 +5593,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 32678,
+      "stars": 35361,
       "language": "HTML",
       "score": 24,
       "action": "Arkiv",
@@ -5608,7 +5609,7 @@
         "testability"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-06",
       "notified_at": null,
@@ -9584,54 +9585,58 @@
     "multica-ai/andrej-karpathy-skills": {
       "repo": "multica-ai/andrej-karpathy-skills",
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "summary_sv": "Enkla riktlinjer för Claude Code baserade på Karpathys observationer om LLM-fällor.",
-      "project_matches": [],
+      "summary_sv": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 5,
+        "project_fit": 18,
+        "concrete_value": 9,
         "testability": 8,
-        "technical_fit": 7,
-        "repo_quality": 6,
-        "timing": 4
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
       },
       "risks": [
-        "Risk för föråldrad eller outdaterad riktlinje.",
-        "Ingen aktiv underhåll."
+        "Fallbackbedömning användes: Could not parse JSON from model response"
       ],
-      "confidence": 0.3,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-guidelines",
-      "concrete_use_case": "Granska CLAUDE.md och tillämpa en princip på en Claude Code-uppgift.",
-      "next_step": "Läs filen och tillämpa 'Tänk innan du kodar'-principen på ett litet kodprojekt.",
-      "differentiator": "Karpathy-inspirerade principer för att undvika vanliga LLM-fel.",
-      "evidence": [
-        "CLAUDE.md med fyra principer: Tänk innan du kodar, Enkelhet först, Kirurgiska ändringar, Måldriven execution.",
-        "Hämtat från Karpathys tweet om LLM-fällor.",
-        "Stödjer flera språk (engelska, kinesiska)."
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 206591,
+      "stars": 211607,
       "language": null,
-      "score": 35,
+      "score": 53,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
-      "last_analyzed": "2026-08-25",
+      "last_analyzed": "2026-09-09",
       "notified_at": null,
       "notified_score": null
     },
@@ -10121,9 +10126,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
+        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 131267,
+      "stars": 132493,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10142,7 +10148,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -10247,7 +10253,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 53486,
+      "stars": 55095,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10266,7 +10272,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-08-27",
       "notified_at": null,
@@ -12058,7 +12064,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 47737,
+      "stars": 47914,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
@@ -12077,7 +12083,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-01",
       "notified_at": null,
@@ -12118,9 +12124,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 45113,
+      "stars": 47117,
       "language": "Python",
       "score": 58,
       "action": "Arkiv",
@@ -12139,7 +12145,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-02",
       "last_analyzed": "2026-09-02",
       "notified_at": null,
@@ -12520,9 +12526,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 50722,
+      "stars": 51398,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -12541,7 +12547,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -12814,7 +12820,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 25657,
+      "stars": 25686,
       "language": "C++",
       "score": 8,
       "action": "Arkiv",
@@ -12830,7 +12836,7 @@
         "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -13133,9 +13139,9 @@
         "does not make things up"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 44515,
+      "stars": 45550,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -13150,7 +13156,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-04",
       "notified_at": null,
@@ -13787,7 +13793,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2118,
+      "stars": 2555,
       "language": "TypeScript",
       "score": 7,
       "action": "Arkiv",
@@ -13802,7 +13808,7 @@
         "testability"
       ],
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -13893,7 +13899,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 25698,
+      "stars": 26623,
       "language": "Python",
       "score": 5,
       "action": "Arkiv",
@@ -13909,7 +13915,7 @@
         "testability"
       ],
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-07",
       "notified_at": null,
@@ -13946,9 +13952,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 40262,
+      "stars": 40349,
       "language": "LLVM",
       "score": 53,
       "action": "Arkiv",
@@ -13967,7 +13973,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-07",
       "notified_at": null,
@@ -14119,7 +14125,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1870,
+      "stars": 1956,
       "language": "Python",
       "score": 50.54414757500002,
       "action": "Arkiv",
@@ -14138,7 +14144,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14147,54 +14153,58 @@
     "vinzdg/codenotch": {
       "repo": "vinzdg/codenotch",
       "url": "https://github.com/vinzdg/codenotch",
-      "summary_sv": "macOS-notch som visar förbrukade användningsgränser för kodassistentverktyg som Claude Code, Cursor och Codex.",
-      "project_matches": [],
+      "summary_sv": "A macOS app that pins usage limits from Claude Code, Cursor, Codex, and Antigravity to a screen edge.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 7,
-        "technical_fit": 8,
-        "repo_quality": 6,
-        "timing": 4
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.113809702672945,
+        "timing": 2
       },
       "risks": [
-        "API-förändringar hos leverantörer kan bryta funktionaliteten",
-        "Kräver macOS och lokala autentiseringsuppgifter"
+        "Fallbackbedömning användes: Could not parse JSON from model response"
       ],
-      "confidence": 0.3,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "developer-usage-monitor",
-      "concrete_use_case": "Se i realtid hur mycket av varje kodassistenters användningsgräns som har förbrukats.",
-      "next_step": "Installera appen, logga in på valda verktyg och verifiera att notchen visar gränserna.",
-      "differentiator": "Visar gränser per leverantör med hover-verktyg och synkroniserade fönster.",
-      "evidence": [
-        "Swift, 744 stars",
-        "Läser från varje verktygs lokala autentiseringsuppgifter",
-        "Stöder Claude Code, Cursor, Codex, Antigravity med flera"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 744,
+      "stars": 1139,
       "language": "Swift",
-      "score": 25,
+      "score": 46.113809702672945,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "first_recommended": null,
-      "last_analyzed": "2026-09-07",
+      "last_analyzed": "2026-09-09",
       "notified_at": null,
       "notified_score": null
     },
@@ -14231,7 +14241,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 180755,
+      "stars": 181887,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -14250,7 +14260,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14289,7 +14299,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 46570,
+      "stars": 47968,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14308,7 +14318,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14349,9 +14359,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 48302,
+      "stars": 48965,
       "language": "JavaScript",
       "score": 61,
       "action": "Arkiv",
@@ -14370,7 +14381,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14535,7 +14546,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 9935,
+      "stars": 10659,
       "language": "JavaScript",
       "score": 74,
       "action": "Arkiv",
@@ -14548,7 +14559,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14764,7 +14775,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 940,
+      "stars": 1161,
       "language": "Python",
       "score": 63,
       "action": "Arkiv",
@@ -14778,12 +14789,125 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
       "notified_score": null
+    },
+    "openai/navierstokesandeuler": {
+      "repo": "openai/NavierStokesAndEuler",
+      "url": "https://github.com/openai/NavierStokesAndEuler",
+      "summary_sv": "Lean certificates accompanying Navier-Stokes and Euler results",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 3,
+        "technical_fit": 3,
+        "repo_quality": 6.0929903286694165,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "uncategorized",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1112,
+      "language": "Lean",
+      "score": 18.092990328669416,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-09",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "albert-weasker/niubigeo": {
+      "repo": "Albert-Weasker/niubigeo",
+      "url": "https://github.com/Albert-Weasker/niubigeo",
+      "summary_sv": "Open-source AI brand visibility and competitor reports",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 10,
+        "repo_quality": 6.6785052680654,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: Could not parse JSON from model response"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2183,
+      "language": "TypeScript",
+      "score": 53.6785052680654,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-09",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-08"
+  "updated_at": "2026-09-09"
 }
