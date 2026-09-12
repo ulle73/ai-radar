@@ -1,6 +1,6 @@
 # AI Radar – Permanent kvalitetsranking
 
-Uppdaterad: 2026-09-11
+Uppdaterad: 2026-09-12
 
 Listan visar endast exakta, evidensbaserade projektmatchningar som passerat samtliga kvalitetsgrindar. En kort eller tom lista är ett korrekt resultat.
 
