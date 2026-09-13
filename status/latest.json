@@ -1,17 +1,21 @@
 {
-  "date": "2026-09-12",
-  "generated_at": "2026-09-12T05:50:09.999Z",
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T06:13:17.749Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: Could not parse JSON from model response"
+    "jihe520/MathModelAgent: modellsvaret kunde inte valideras (risks must be an array).",
+    "affaan-m/ECC: modellsvaret kunde inte valideras (risks must be an array).",
+    "openclaw/openclaw: modellsvaret kunde inte valideras (risks must be an array).",
+    "obra/superpowers: modellsvaret kunde inte valideras (risks must be an array).",
+    "NousResearch/hermes-agent: modellsvaret kunde inte valideras (risks must be an array)."
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 8,
-  "reused_today": 22,
-  "model_assessments": 3,
+  "analyzed_today": 11,
+  "reused_today": 19,
+  "model_assessments": 6,
   "fallback_assessments": 5,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
