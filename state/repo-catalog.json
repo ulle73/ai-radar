@@ -564,14 +564,15 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 26373,
+      "stars": 29288,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-15",
       "notified_at": null,
@@ -624,12 +625,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 45640,
+      "stars": 46417,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-09",
       "notified_at": null,
@@ -1142,12 +1143,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 389720,
+      "stars": 389817,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1361,12 +1362,12 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 258532,
+      "stars": 259490,
       "language": "JavaScript",
       "score": 58,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1396,53 +1397,53 @@
     "mattpocock/skills": {
       "repo": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
-      "summary_sv": "Matt Pockets agent skills för Claude Code, Codex och andra AI-kodningsverktyg – små, sammansättbara skript för verkligt ingenjörsarbete.",
+      "summary_sv": "Skills är en samling av små, återanvändbara färdigheter för ingenjörer som kan användas i daglig utveckling.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 0,
-        "technical_fit": 0,
+        "concrete_value": 5,
+        "testability": 10,
+        "technical_fit": 5,
         "repo_quality": 8,
-        "timing": 0
+        "timing": 5
       },
       "risks": [
-        "Personliga skriptsamlingar utan specifik integration i Jonas nio projekt"
+        "Saknar konkret projekt‑nytta, risk för att bli enbart inspiration"
       ],
-      "confidence": 1,
+      "confidence": 0.4,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Search API"
       ],
-      "stars": 259941,
+      "stars": 263018,
       "language": "Shell",
-      "score": 8,
+      "score": 33,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-01",
-      "last_analyzed": "2026-08-30",
+      "last_analyzed": "2026-09-16",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-skills-bibliotek",
-      "concrete_use_case": "Ingen. Jonas använder redan OpenRouter och strukturerade LLM-flöden. Detta är Matt Pockets personliga .agents-katalog, inte ett verktyg för Jonas produkt- eller innehållspipeliner.",
-      "next_step": "Ingen.",
-      "differentiator": "Skills är Matt Pockets personliga arbetsflöden för att utveckla applikationer – inte en produkt som förbättrar Jonas befintliga system.",
+      "category": "resource",
+      "concrete_use_case": "Kan inspirera Jonas till att skapa egna snabba kod‑snuttar eller checklistor i AI Radar‑projektet.",
+      "next_step": "Välj en färdig färdighet och implementera den i en test‑script för AI Radar.",
+      "differentiator": "Fokuserar på kompositionella, anpassningsbara färdigheter snarare än färdiga verktyg.",
       "evidence": [
-        "241 000 stjärnor, 20 000 forks",
-        "Baserat på Matt Pockets .agents-katalog",
-        "Fungerar med alla modeller och är 'small, easy to adapt'"
+        "263018 stjärnor visar omfattande community‑interest",
+        "Beskrivning betonar att färdigheter är små och enkla att anpassa",
+        "Förslag på integration med Claude Code‑plugin"
       ],
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "testability"
+        "concrete_value"
       ],
       "project_context_version": 1
     },
@@ -1470,14 +1471,15 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
+        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 286802,
+      "stars": 287279,
       "language": "Shell",
       "score": 48,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1530,12 +1532,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 245592,
+      "stars": 245946,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1583,12 +1585,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 152384,
+      "stars": 152666,
       "language": "Shell",
       "score": 13,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -1637,12 +1639,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 207458,
+      "stars": 207729,
       "language": "TypeScript",
       "score": 9,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-03",
       "notified_at": null,
@@ -4070,7 +4072,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 176357,
+      "stars": 176575,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -4085,7 +4087,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-05",
       "notified_at": null,
@@ -8772,7 +8774,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 104815,
+      "stars": 105918,
       "language": "TypeScript",
       "score": 27,
       "action": "Arkiv",
@@ -8786,7 +8788,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-22",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -10107,7 +10109,7 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 138678,
+      "stars": 139605,
       "language": "JavaScript",
       "score": 27,
       "action": "Arkiv",
@@ -10121,7 +10123,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -10675,7 +10677,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 33871,
+      "stars": 35074,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10694,7 +10696,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-09-11",
       "last_analyzed": "2026-09-11",
       "notified_at": null,
@@ -11994,58 +11996,54 @@
     "hkuds/nanobot": {
       "repo": "HKUDS/nanobot",
       "url": "https://github.com/HKUDS/nanobot",
-      "summary_sv": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Nanobot är ett självhostat Pythonramverk för personliga AI-agenter med webbgränssnitt, verktyg, minne, MCP, fleragentflöden, automation och chatt-/Telegram-botstöd.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
+        "project_fit": 2,
+        "concrete_value": 1,
         "testability": 8,
-        "technical_fit": 7,
+        "technical_fit": 4,
         "repo_quality": 8,
         "timing": 2
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Generellt agentramverk som riskerar att skapa mer komplexitet utan att lösa AI Radars namngivna behov.",
+        "Python- och agentplattformen passar inte direkt AI Radars befintliga Node.js- och Telegram-pipeline.",
+        "Minne, MCP och fleragentflöden kan öka brus, kostnad och felkällor utan mätbar kvalitetsvinst."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.95,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "ai-agentramverk",
+      "concrete_use_case": "Inget konkret, unikt användningsfall i något namngivet projekt är belagt; ramverket skulle endast kunna provas som en fristående agentexperimentmiljö och ersätter inte någon namngiven AI Radar-funktion.",
+      "next_step": "Installera nanobot-ai lokalt, starta WebUI och kör ett minimalt minnes- och verktygsflöde, men avbryt vidare arbete om det inte mätbart minskar AI Radars researchtid eller falska Telegram-notiser.",
+      "differentiator": "Den självhostade kombinationen av WebUI, minne, MCP, fleragentflöden och Telegram-stöd är bredare än en enskild bot, men README:n visar ingen unik funktion för repo-discovery, projektkontext, evidensrankning eller schemavalidering.",
+      "evidence": [
+        "README:n beskriver nanobot som ett öppet, självhostat och lätt Pythonramverk för personliga AI-agenter.",
+        "README:n listar WebUI, tools, memory, MCP, multi-agent workflows, automation och chat apps.",
+        "Metadata har ämnet telegram-bot-ai-assistant, ett PyPI-paket och en CI-badge, medan 48 199 stars inte i sig visar projektnytta."
+      ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 47962,
+      "stars": 48199,
       "language": "Python",
-      "score": 52,
+      "score": 25,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
-        "confidence",
+        "project_match",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
-      "last_analyzed": "2026-09-01",
+      "last_analyzed": "2026-09-16",
       "notified_at": null,
       "notified_score": null
     },
@@ -12546,7 +12544,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 29731,
+      "stars": 31300,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12565,7 +12563,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-09-15",
       "notified_at": null,
@@ -12636,58 +12634,55 @@
     "pacifio/atlas": {
       "repo": "pacifio/atlas",
       "url": "https://github.com/pacifio/atlas",
-      "summary_sv": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Ett Rust-verktyg för att hantera och spåra flera kodningsagenter (Claude Code, Codex, OpenCode) med MCP-klient.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 6.957709935057326,
-        "timing": 7
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 0
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Generisk AI-agent-hype utan konkret projektnytta.",
+        "Kan bara vara bra att känna till."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.05,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "ai-agent-tooling",
+      "concrete_use_case": "Ingen koppling till ett av Jonas namngivna projekt.",
+      "next_step": "Inget test – avbryt.",
+      "differentiator": "Ger agent-hantering men ingen koppling till Jonas befintliga stack eller projektmål.",
+      "evidence": [
+        "Beskrivning fokuserar på coding agents och MCP, inte på GitHub-radar, projektdiscovery eller något av Jonas projekt.",
+        "Rust-baserat – inte i Jonas verktygsstack för något projekt.",
+        "Inget README-stöd för koppling till Shopify, WooCommerce, trading, betting eller contentproduktion."
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 3011,
+      "stars": 4722,
       "language": "Rust",
-      "score": 51.95770993505732,
+      "score": 5,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
-      "last_analyzed": "2026-09-03",
+      "last_analyzed": "2026-09-16",
       "notified_at": null,
       "notified_score": null
     },
@@ -14256,7 +14251,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 50136,
+      "stars": 50472,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14275,7 +14270,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14435,7 +14430,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 22930,
+      "stars": 23123,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14454,7 +14449,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14949,7 +14944,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 6728,
+      "stars": 6802,
       "language": "JavaScript",
       "score": 37,
       "action": "Arkiv",
@@ -14964,7 +14959,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -15416,43 +15411,46 @@
     "melgarafael/deskcommcrm": {
       "repo": "melgarafael/DeskcommCRM",
       "url": "https://github.com/melgarafael/DeskcommCRM",
-      "summary_sv": "En öppen källkods‑CRM med AI‑agenter för WhatsApp‑försäljning, designad för självvärdning och multi‑tenant‑distribution.",
+      "summary_sv": "Ett open-source AI-försäljnings-CRM med WhatsApp-integration, multi-tenancy och LGPD-egenskaper, byggt på Next.js och Supabase.",
       "project_matches": [
         {
           "project": "Nyabolaget-ekosystemet",
-          "reason": "Ger AI‑driven lead‑scoring, segmentation och WhatsApp‑outreach som stödjer B2B‑försäljning av företagslistor och partnerkonvertering."
+          "reason": "Nyabolaget behöver bättre lead scoring, segmentering och outbound/partneruppföljning. DeskcommCRM erbjuder AI-drivna försäljningsagenter och CRM-funktioner som kan konvertera leads till kunder, men kräver betydande anpassning och är inriktat på WhatsApp och brasiliansk marknad (LGPD)."
         }
       ],
       "dimensions": {
-        "project_fit": 12,
-        "concrete_value": 15,
-        "testability": 10,
-        "technical_fit": 12,
-        "repo_quality": 8,
-        "timing": 8
+        "project_fit": 8,
+        "concrete_value": 6,
+        "testability": 4,
+        "technical_fit": 10,
+        "repo_quality": 7,
+        "timing": 3
       },
       "risks": [
-        "Risk för att CRM‑systemet blir för komplext att integrera med Nyabolagets nuvarande data‑pipeline."
+        "Kräver omfattande anpassning till svensk marknad och befintlig stack.",
+        "WhatsApp-fokus är inte relevant för Nyabolagets nuvarande kanaler.",
+        "Kan vara för tungt och komplext för aktuellt behov av lead scoring och segmentering."
       ],
-      "confidence": 0.6,
+      "confidence": 0.2,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "adjacent",
-      "category": "crm-ai-sales",
-      "concrete_use_case": "Jonas kan använda DeskcommCRM för att hantera och automatisera B2B‑outreach till nystartade företag, vilket stödjer Nyabolagets lead‑generation och partnerkonvertering.",
-      "next_step": "Distribuera en test‑instans av DeskcommCRM på en VPS och skapa en enkel lead‑flöde från en företagslista till ett WhatsApp‑meddelande.",
-      "differentiator": "Open‑source, själv‑värdad CRM med AI‑agenter för WhatsApp, vilket ger möjlighet till skräddarsydd lead‑hantering utan att behöva använda dyra SaaS‑lösningar.",
+      "category": "crm-sales",
+      "concrete_use_case": "Kan potentiellt användas som grund för AI-drivet B2B-säljflöde mot nystartade företag i Nyabolaget-ekosystemet, men kräver omfattande anpassning till svensk marknad och befintlig stack.",
+      "next_step": "Testa om DeskcommCRM kan integreras med Nyabolagets befintliga Supabase/Next.js-infrastruktur och om dess WhatsApp-fokus är relevant för svensk B2B-outreach.",
+      "differentiator": "Ger AI-försäljningsagenter och WhatsApp-kanal, men är brasilianskt fokuserat (LGPD, WAHA) och kräver total ombyggnad för svensk användning.",
       "evidence": [
-        "Open‑source CRM",
-        "AI‑agents for WhatsApp",
-        "Multi‑tenant architecture"
+        "Next.js + Supabase matchar Nyabolagets stack, men WhatsApp/LGPD är inriktat på brasiliansk marknad.",
+        "Nyabolaget behöver lead scoring och segmentering, men DeskcommCRM är ett komplett CRM-system snarare än en specifik förbättring av befintliga flöden.",
+        "Projektet är self-hosted och kräver betydande införandeinsats – risk för att överstiga nyttan."
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Search API"
       ],
-      "stars": 2332,
+      "stars": 2953,
       "language": "TypeScript",
-      "score": 65,
+      "score": 38,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -15460,12 +15458,14 @@
         "exact_match",
         "confidence",
         "score",
-        "project_fit"
+        "project_fit",
+        "concrete_value",
+        "testability"
       ],
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-16",
       "first_recommended": "2026-09-12",
-      "last_analyzed": "2026-09-13",
+      "last_analyzed": "2026-09-16",
       "notified_at": null,
       "notified_score": null
     },
@@ -15943,7 +15943,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 32497,
+      "stars": 34149,
       "language": "C",
       "score": 24,
       "action": "Arkiv",
@@ -15958,7 +15958,7 @@
         "testability"
       ],
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-14",
       "notified_at": null,
@@ -16127,39 +16127,38 @@
     "ever-co/ever-gauzy": {
       "repo": "ever-co/ever-gauzy",
       "url": "https://github.com/ever-co/ever-gauzy",
-      "summary_sv": "Ett open source ERP/CRM/HRM/ATS/PM-verktyg för företagsstyrning, byggt i TypeScript med Next.js.",
+      "summary_sv": "Ever Gauzy är en öppen affärsplattform för ERP, CRM, HRM och projektstyrning.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 2,
-        "testability": 3,
-        "technical_fit": 5,
-        "repo_quality": 6,
-        "timing": 2
+        "project_fit": 5,
+        "concrete_value": 5,
+        "testability": 10,
+        "technical_fit": 10,
+        "repo_quality": 9,
+        "timing": 5
       },
       "risks": [
-        "Stor integrationskostnad för obevisad nytta",
-        "Kan överlappa med befintliga flöden utan tydlig förbättring"
+        "För komplex för snabb integration, risk för att bli för enterprise‑orienterat"
       ],
-      "confidence": 0.1,
+      "confidence": 0.3,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "generisk-entreprise",
-      "concrete_use_case": "Inget namngivet projekt hos Jonas har ett konkret behov av en komplett ERP/CRM-plattform som kräver ombyggnad av befintliga system.",
-      "next_step": "Inget test relevant för något Jonas-projekt utan ytterligare antaganden om vilken del som skulle integreras.",
-      "differentiator": "Ingen tydlig fördel jämfört med befintlig stack; ett komplett ERP löser inte ett specifikt blockerande problem i Golfkuponger, FAIV, Nyabolaget eller andra projekt.",
+      "category": "utility",
+      "concrete_use_case": "Kan potentiellt underlätta B2B‑kundhantering i Nyabolaget‑ekosystemet, men är generisk och kräver omfattande anpassning.",
+      "next_step": "Granska Ever Gauzys dokumentation för att se om den har API‑integrationer som kan användas för att automatisera företagslistor.",
+      "differentiator": "Erbjuder en komplett öppen källkod för affärsprocesser snarare än punktlösningar för specifika behov.",
       "evidence": [
-        "5384 stars, TypeScript, Next.js — men gemensam teknik räcker inte för exact",
-        "Beskrivningen är generisk affärsplattform, inte specifik för något Jonas-behov",
-        "Ingen koppling till Shopify, WooCommerce, betting, golfdata eller AI Radars pipeline"
+        "6857 stjärnor visar stort community‑engagemang",
+        "Licens AGPL v3 anger öppen kod",
+        "Beskrivning nämner ERP/CRM/HRM moduler"
       ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 5384,
+      "stars": 6857,
       "language": "TypeScript",
-      "score": 20,
+      "score": 44,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -16169,13 +16168,12 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "testability"
+        "concrete_value"
       ],
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
-      "last_analyzed": "2026-09-14",
+      "last_analyzed": "2026-09-16",
       "notified_at": null,
       "notified_score": null
     },
@@ -16431,7 +16429,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 870,
+      "stars": 1086,
       "language": "Kotlin",
       "score": 9,
       "action": "Arkiv",
@@ -16447,7 +16445,7 @@
         "testability"
       ],
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-15",
       "notified_at": null,
@@ -16486,7 +16484,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 764,
+      "stars": 839,
       "language": "HTML",
       "score": 45.76732287030723,
       "action": "Arkiv",
@@ -16505,12 +16503,337 @@
         "evidence"
       ],
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "first_recommended": null,
       "last_analyzed": "2026-09-15",
       "notified_at": null,
       "notified_score": null
+    },
+    "danny-avila/librechat": {
+      "repo": "danny-avila/LibreChat",
+      "url": "https://github.com/danny-avila/LibreChat",
+      "summary_sv": "En självhostad multi-model chatbot med agenter, MCP och stöd för ett tiotal LLM-leverantörer.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 6,
+        "timing": 0
+      },
+      "risks": [
+        "Hype utan direkt projektnytta.",
+        "Kan bara vara bra att känna till."
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-chatbot",
+      "concrete_use_case": "Ingen specifik plats i ett av Jonas namngivna projekt.",
+      "next_step": "Inget test – avbryt.",
+      "differentiator": "Generell AI-chatbot utan unik koppling till något av Jonas arbetsflöden.",
+      "evidence": [
+        "Generisk AI/agent/MCP-verktyg – räcker aldrig för exact enligt reglerna.",
+        "Stor community men ingen specifik integration med Jonas projekt (Shopify, WooCommerce, Next.js-radar, trading).",
+        "Kan ersättas av Jonas befintliga OpenRouter-flöden."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 43954,
+      "language": "TypeScript",
+      "score": 6,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "alphaxiv/openresearch": {
+      "repo": "alphaXiv/OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "summary_sv": "Ett Rust-verktyg som omvandlar kodningsagenter till researchagenter för litteraturgenomgång och experiment.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 0
+      },
+      "risks": [
+        "Generisk AI-agent-hype.",
+        "Kan bara vara bra att känna till."
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-agent-tooling",
+      "concrete_use_case": "Ingen koppling till ett av Jonas namngivna projekt.",
+      "next_step": "Inget test – avbryt.",
+      "differentiator": "Riktat mot coding agents, inte mot Jonas research- eller contentbehov.",
+      "evidence": [
+        "Beskrivning nämner Claude Code, Codex, OpenCode, Cursor – inget av Jonas projekt.",
+        "Inget README-stöd för koppling till golfdata, finansdata, företagsdata eller contentpipelines.",
+        "Rust-baserat – inte i Jonas verktygsstack."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 3596,
+      "language": "Rust",
+      "score": 5,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "nationalsecurityagency/ghidra": {
+      "repo": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "summary_sv": "En SRE-ramverk för mjukvarureversering och analys av kompilerat kod från NSA.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 7,
+        "timing": 0
+      },
+      "risks": [
+        "Helt irrelevant för Jonas projekt."
+      ],
+      "confidence": 0.01,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "security-tooling",
+      "concrete_use_case": "Ingen koppling till ett av Jonas namngivna projekt.",
+      "next_step": "Inget test – avbryt.",
+      "differentiator": "Helt fristående säkerhetsverktyg utan någon koppling till Jonas projekt.",
+      "evidence": [
+        "Java-baserat SRE-verktyg från NSA – ingen koppling till e-handel, golf, finans, betting eller content.",
+        "Ingen dokumentation eller integration som påverkar något av Jonas projekt.",
+        "Relevant endast för cybersäkerhetsanalys."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 76959,
+      "language": "Java",
+      "score": 7,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "homebrew/brewui": {
+      "repo": "Homebrew/BrewUI",
+      "url": "https://github.com/Homebrew/BrewUI",
+      "summary_sv": "BrewUI är en grafisk macOS‑gränssnitt för Homebrew som låter användare hantera paket via GUI istället för terminalen.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Ingen tydlig koppling till Jonas projekt, risk för irrelevans"
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "utility",
+      "concrete_use_case": "Kan användas för att hantera paket i AI Radar‑projektets utvecklingsmiljö, men har ingen direkt koppling till något av Jonas namngivna projekt.",
+      "next_step": "Testa att installera BrewUI på en Mac och kör en enkel Homebrew‑installation via GUI.",
+      "differentiator": "Tillhandahåller en grafisk interface för Homebrew som saknas i standard terminal‑baserade verktyg.",
+      "evidence": [
+        "BrewUI är Homebrews officiella macOS GUI",
+        "Svenska beskrivningen anger att den möjliggör pakethantering utan att dölja underliggande operationer",
+        "1540 stjärnor visar popularitet"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 1540,
+      "language": "Swift",
+      "score": 23,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "max-sixty/worktrunk": {
+      "repo": "max-sixty/worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "summary_sv": "Worktrunk är en CLI‑verktyg för att hantera Git worktrees, särskilt för parallella AI‑agent‑workflows.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 10,
+        "concrete_value": 10,
+        "testability": 12,
+        "technical_fit": 12,
+        "repo_quality": 9,
+        "timing": 7
+      },
+      "risks": [
+        "Kräver Git‑kunskaper och kan bli föråldrat om projektets workflow blir centraliserat"
+      ],
+      "confidence": 0.6,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "tool",
+      "concrete_use_case": "Kan underlätta parallella AI‑agent‑processer i AI Radar‑projektet, vilket kan förbättra upptäckt‑ och analysflödet.",
+      "next_step": "Kör worktrunk för att skapa två separata worktrees och kör två AI‑agent‑skript parallellt.",
+      "differentiator": "Ger robust hantering av samtidiga Git‑arbetsmiljöer, vilket standard Git‑kommandon saknar.",
+      "evidence": [
+        "7861 stjärnor",
+        "Rust‑baserat, snabb och pålitlig",
+        "Beskrivning fokuserar på parallella AI‑agent workflows"
+      ],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 7861,
+      "language": "Rust",
+      "score": 60,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": "2026-09-16",
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ai-sucks-butt/ai-sucks-butt": {
+      "repo": "ai-sucks-butt/ai-sucks-butt",
+      "url": "https://github.com/ai-sucks-butt/ai-sucks-butt",
+      "summary_sv": "Repo för att stjärna om man tycker att AI är dåligt.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 5
+      },
+      "risks": [
+        "Ingen verklig nytta, risk för att avleda fokus"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "hype",
+      "concrete_use_case": "Ingen praktisk nytta för Jonas projekt.",
+      "next_step": "Inga praktiska tester; repo är mer en meme.",
+      "differentiator": "Ingen teknisk funktion, bara en humoristisk uppmaning att stjärna.",
+      "evidence": [
+        "1031 stjärnor, ingen fork",
+        "Beskrivning är en enkel uppmaning att stjärna",
+        "Créated 2026‑09‑14"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1031,
+      "language": "Python",
+      "score": 10,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-16",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-15"
+  "updated_at": "2026-09-16"
 }
