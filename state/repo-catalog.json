@@ -567,12 +567,12 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 32670,
+      "stars": 35436,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-15",
       "notified_at": null,
@@ -625,12 +625,12 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 47042,
+      "stars": 47595,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-09",
       "notified_at": null,
@@ -1143,12 +1143,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 389925,
+      "stars": 390029,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1362,12 +1362,12 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 260527,
+      "stars": 261338,
       "language": "JavaScript",
       "score": 58,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1415,12 +1415,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 263778,
+      "stars": 264688,
       "language": "Shell",
       "score": 33,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-16",
       "notified_at": null,
@@ -1471,15 +1471,14 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
-        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 287727,
+      "stars": 288221,
       "language": "Shell",
       "score": 48,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1532,12 +1531,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 246280,
+      "stars": 246633,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -1585,12 +1584,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 152971,
+      "stars": 153214,
       "language": "Shell",
       "score": 13,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -1644,12 +1643,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 207972,
+      "stars": 208256,
       "language": "TypeScript",
       "score": 55,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-09-17",
       "notified_at": null,
@@ -2941,9 +2940,10 @@
         "Orden agent och AI räcker inte för exact-match per hårda regler"
       ],
       "source_names": [
-        "GitHub Search API"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 94115,
+      "stars": 95988,
       "language": "JavaScript",
       "score": 19,
       "action": "Arkiv",
@@ -2959,7 +2959,7 @@
         "testability"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-14",
       "notified_at": null,
@@ -8779,7 +8779,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 106401,
+      "stars": 106720,
       "language": "TypeScript",
       "score": 27,
       "action": "Arkiv",
@@ -8793,7 +8793,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-22",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-13",
       "notified_at": null,
@@ -8829,9 +8829,11 @@
         "Inkluderar plugins och integrationer för IDE:er och GitHub"
       ],
       "source_names": [
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 145648,
+      "stars": 145951,
       "language": "TypeScript",
       "score": 15,
       "action": "Arkiv",
@@ -8847,7 +8849,7 @@
         "testability"
       ],
       "first_seen": "2026-08-23",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-23",
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -10111,10 +10113,9 @@
         "Fokus på 'lazy senior dev'-stil kod"
       ],
       "source_names": [
-        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 140633,
+      "stars": 141505,
       "language": "JavaScript",
       "score": 27,
       "action": "Arkiv",
@@ -10128,7 +10129,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -10682,7 +10683,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 36251,
+      "stars": 37255,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10701,7 +10702,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-09-11",
       "last_analyzed": "2026-09-11",
       "notified_at": null,
@@ -12032,7 +12033,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 48243,
+      "stars": 48303,
       "language": "Python",
       "score": 25,
       "action": "Arkiv",
@@ -12046,7 +12047,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-01",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-16",
       "notified_at": null,
@@ -14435,7 +14436,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 23272,
+      "stars": 23424,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14454,7 +14455,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-08",
       "notified_at": null,
@@ -14949,7 +14950,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 6874,
+      "stars": 6929,
       "language": "JavaScript",
       "score": 37,
       "action": "Arkiv",
@@ -14964,7 +14965,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-10",
       "notified_at": null,
@@ -16434,7 +16435,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1273,
+      "stars": 1325,
       "language": "Kotlin",
       "score": 9,
       "action": "Arkiv",
@@ -16450,7 +16451,7 @@
         "testability"
       ],
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-15",
       "notified_at": null,
@@ -16572,39 +16573,40 @@
     "alphaxiv/openresearch": {
       "repo": "alphaXiv/OpenResearch",
       "url": "https://github.com/alphaXiv/OpenResearch",
-      "summary_sv": "Ett Rust-verktyg som omvandlar kodningsagenter till researchagenter för litteraturgenomgång och experiment.",
+      "summary_sv": "Lokal-first workspace för research-agents som kan granska litteratur, utveckla hypoteser, köra experiment och producera forskningsartefakt.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 0,
-        "technical_fit": 0,
-        "repo_quality": 5,
-        "timing": 0
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 4,
+        "technical_fit": 3,
+        "repo_quality": 7,
+        "timing": 3
       },
       "risks": [
-        "Generisk AI-agent-hype.",
-        "Kan bara vara bra att känna till."
+        "Ingen koppling till något av Jonas nio namngivna projekt",
+        "Generisk research-plattform utan specifik koppling till finansiell signalanalys",
+        "Hög stjärntal påverkar repo_quality men inte project_fit"
       ],
       "confidence": 0.05,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-agent-tooling",
-      "concrete_use_case": "Ingen koppling till ett av Jonas namngivna projekt.",
-      "next_step": "Inget test – avbryt.",
-      "differentiator": "Riktat mot coding agents, inte mot Jonas research- eller contentbehov.",
+      "category": "generellt-ai-verktyg",
+      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av en generell research-agent-plattform. Stock Signals behöver specifika indikatorer och datakällor, inte en generell research-miljö.",
+      "next_step": "Testa om OpenResearch kan användas för att strukturera research kring en specifik aktie eller indikator i Stock Signals, men det saknas tydlig orsak-verkan.",
+      "differentiator": "Lokal-first arkitektur med stöd för flera agent-backends (Claude, Codex, OpenCode, Cursor) och strukturerad artefaktproduktion.",
       "evidence": [
-        "Beskrivning nämner Claude Code, Codex, OpenCode, Cursor – inget av Jonas projekt.",
-        "Inget README-stöd för koppling till golfdata, finansdata, företagsdata eller contentpipelines.",
-        "Rust-baserat – inte i Jonas verktygsstack."
+        "5093 stars, 310 forks",
+        "Lokal-first workspace för research agents",
+        "Stödjer Claude Code, Codex, OpenCode och Cursor"
       ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 3596,
+      "stars": 5093,
       "language": "Rust",
-      "score": 5,
+      "score": 22,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -16618,9 +16620,9 @@
         "testability"
       ],
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-16",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
-      "last_analyzed": "2026-09-16",
+      "last_analyzed": "2026-09-18",
       "notified_at": null,
       "notified_score": null
     },
@@ -16656,7 +16658,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 78006,
+      "stars": 78646,
       "language": "Java",
       "score": 7,
       "action": "Arkiv",
@@ -16672,7 +16674,7 @@
         "testability"
       ],
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-16",
       "notified_at": null,
@@ -16764,7 +16766,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 7944,
+      "stars": 7958,
       "language": "Rust",
       "score": 60,
       "action": "Arkiv",
@@ -16779,7 +16781,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-09-16",
       "last_analyzed": "2026-09-16",
       "notified_at": null,
@@ -16931,7 +16933,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 24359,
+      "stars": 24633,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -16950,7 +16952,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-09-17",
       "last_analyzed": "2026-09-17",
       "notified_at": null,
@@ -16959,58 +16961,56 @@
     "cloudflare/security-audit-skill": {
       "repo": "cloudflare/security-audit-skill",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "summary_sv": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Ett coding-agent-skills för multi-fasiga säkerhetsgranskningar med maskinläsbart resultat. Skannar kodbaser för sårbarheter genom rekognosering, täckningsstyrda jakter och oberoende verifiering.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 7.792721690938633,
-        "timing": 7
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 5,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 3
       },
       "risks": [
-        "Fallbackbedömning användes: repo_quality must be between 0 and 10"
+        "Ingen koppling till något av Jonas nio namngivna projekt",
+        "Säkerhetsauditing är inte ett aktuellt behov i någon projektprofil",
+        "Hög stjärntal påverkar repo_quality men inte project_fit"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.05,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "generellt-ai-verktyg",
+      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av säkerhetsauditing av kodbaser som trigger. Ingen koppling till Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
+      "next_step": "Testa om skilln kan användas för en säkerhetsgranskning av AI Radars egna repos, men detta är inte ett namngivet behov i någon projektprofil.",
+      "differentiator": "Strukturerad, faserad säkerhetsaudit med oberoende verifiering och täckningsredovisning, inte bara en generell kodskanner.",
+      "evidence": [
+        "11124 stars, 601 forks",
+        "Six-phase structured audit: reconnaissance, coverage-led hunting, candidate validation, structured output, independent verification, target-neutral reporting",
+        "Maskinläsbart findings.json och report-schema"
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 7876,
+      "stars": 11124,
       "language": "JavaScript",
-      "score": 59.792721690938635,
+      "score": 24,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": "2026-09-17",
-      "last_analyzed": "2026-09-17",
+      "last_analyzed": "2026-09-18",
       "notified_at": null,
       "notified_score": null
     },
@@ -17046,7 +17046,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 5759,
+      "stars": 6233,
       "language": "Swift",
       "score": 28,
       "action": "Arkiv",
@@ -17061,7 +17061,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-17",
       "notified_at": null,
@@ -17156,9 +17156,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 25635,
+      "stars": 26531,
       "language": "Go",
       "score": 51,
       "action": "Arkiv",
@@ -17177,7 +17178,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "first_recommended": null,
       "last_analyzed": "2026-09-17",
       "notified_at": null,
@@ -17240,7 +17241,299 @@
       "last_analyzed": "2026-09-17",
       "notified_at": null,
       "notified_score": null
+    },
+    "tencent/browserskill": {
+      "repo": "Tencent/BrowserSkill",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "summary_sv": "CLI- och extensionsbaserat verktyg som låter AI-agenter styra en redan inloggad webbläsare utan att avbryta användarens arbete. Stödjer flera agent-frameworks via shell-kommandon.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 4,
+        "technical_fit": 3,
+        "repo_quality": 7,
+        "timing": 3
+      },
+      "risks": [
+        "Ingen koppling till något av Jonas nio namngivna projekt",
+        "Browser-automatisering är inte ett aktuellt behov i någon projektprofil",
+        "Kan skapa säkerhetsrisker om används för inloggade konton"
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generellt-ai-verktyg",
+      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av browser-automatisering. Ullebets använder Python-API-er för datainsamling, inte webbläsarscraping. Ingen koppling till övriga projekt.",
+      "next_step": "Testa om BrowserSkill kan användas för att hämta data från en sida som Ullebets eller Apify Scraper behöver, men inget sådant behov är namngivet i projektprofilerna.",
+      "differentiator": "Återanvänder befintlig inloggningssession och stödjer alla shell-kompatibla agenter utan lock-in till en specifik modell eller ramverk.",
+      "evidence": [
+        "4515 stars, 318 forks",
+        "Stödjer Cursor, Claude Code, Codex, OpenClaw, DeepSeek Harness och andra agenter",
+        "Byggt-in human-in-loop för captcha och bekräftelsedialoger"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 4515,
+      "language": "TypeScript",
+      "score": 22,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-18",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "browser-use/jev-ultrafast": {
+      "repo": "browser-use/jev-ultrafast",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "summary_sv": "En snabb webbläsagent med dynamiskt indexerat åtgärdsutrymme som tar naturliga språkmål och utför webboperationer med minimal LLM-användning.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 3,
+        "testability": 4,
+        "technical_fit": 3,
+        "repo_quality": 6,
+        "timing": 3
+      },
+      "risks": [
+        "Ingen koppling till något av Jonas nio namngivna projekt",
+        "Webbläsautomatisering är inte ett namngivet behov i någon projektprofil",
+        "Kan vara instabilt vid webbplatsändringar"
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generellt-ai-verktyg",
+      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av snabb webbläsautomatisering. Res-kungen har intent-tolkning men inte webbläsarscraping som core workflow.",
+      "next_step": "Testa om Jev Ultrafast kan användas för att hämta resepriser för Res-kungen, men Res-kungen använder redan deterministisk geo-resolvering och externa providers.",
+      "differentiator": "Dynamiskt indexerat action space som begränsar LLM:en till endast textgenerering vid TYPE_TEXT-åtgärder, vilket ger extremt snabb körning.",
+      "evidence": [
+        "2985 stars, 168 forks",
+        "Google Flights-sökning på 7,1 sekunder med ett naturligt språkmål",
+        "Operationer: CLICK, TYPE_TEXT, SELECT, SCROLL, WAIT, DONE, BLOCKED"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2985,
+      "language": "Python",
+      "score": 21,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-18",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tamaratran/fast-jev-compaction": {
+      "repo": "tamaratran/fast-jev-compaction",
+      "url": "https://github.com/tamaratran/fast-jev-compaction",
+      "summary_sv": "Claude Code-plugin som ersätter sammanfattningskomprimering med Jev-baserade beslut: varje verktygsanrop poängsätts, föråldrade droppas och allt behållt behålls ordagrant.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 3,
+        "concrete_value": 3,
+        "testability": 4,
+        "technical_fit": 4,
+        "repo_quality": 5,
+        "timing": 3
+      },
+      "risks": [
+        "Ingen koppling till något av Jonas nio namngivna projekt",
+        "Kontextkomprimering är inte ett blockerande behov i någon projektprofil",
+        "Plugin är specifikt för Claude Code, inte generiskt för AI Radars pipeline"
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generellt-ai-verktyg",
+      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av kontextkomprimering som trigger. AI Radar nämner kontextkomprimering som önskvärt men inte som ett blockerande behov med tydlig orsak-verkan.",
+      "next_step": "Testa om pluginn kan minska token-användningen i AI Radars batchanalys, men det saknas en namngångd problemställning som detta löser.",
+      "differentiator": "Aldrig skriver om eller sammanfattar — bara raderar verktygsanrop och resultat som Jev bedömer som överflödiga, allt annat förblir ordagrant.",
+      "evidence": [
+        "1287 stars, 56 forks",
+        "Claude Code-plugin och npm-bibliotek",
+        "Bevarar användar- och assistant-text verbatim utan summarization"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1287,
+      "language": "TypeScript",
+      "score": 22,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-18",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "theoleecj/openjev": {
+      "repo": "TheoLeeCJ/openjev",
+      "url": "https://github.com/TheoLeeCJ/openjev",
+      "summary_sv": "OpenJev återskapar TypeSafe:s Jev-gränssnitt för strukturerade semantiska beslut (t.ex. 'route this', 'retry that') genom att läsa typade alternativs-sannolikheter direkt från en lokal 4B-modell istället för att generera text som parsas tillbaka.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "AI Radar behöver 'Strukturerad LLM-output och schema repair' samt 'Prompt- och context compression' för att förbättra analyspipelinen; OpenJevs mönster att returnera typade sannolikheter i ett pass kan minska JSON-reparationsbehov och ge deterministiska beslut i ranking/validering."
+        },
+        {
+          "project": "Stock Signals",
+          "reason": "Stock Signals efterfrågar 'Tydliga signalregler som skiljer fakta, prior och beslut'; Jev-mönstret kan kategorisera signaler (momentum, makro, risk) genom att scora fördefinierade alternativ istället för fri textgenerering."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 12,
+        "concrete_value": 10,
+        "testability": 12,
+        "technical_fit": 10,
+        "repo_quality": 7,
+        "timing": 8
+      },
+      "risks": [
+        "Kräver egen finjustering/utvärdering av om 4B-modellen räcker för Jonas-specifika beslut (projektmatchning, signalkategorisering) utan träning på egna data.",
+        "Ingen färdig integration mot OpenRouter/Node.js-stacken; bygger på Python/CUDA-pipeline som måste omslutas eller portas."
+      ],
+      "confidence": 0.55,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "llm-structured-decision",
+      "concrete_use_case": "I AI Radar: ersätt fri textanalys av README med ett Jev-liknande steg som direkt returnerar sannolikheter för fördefinierade match-klasser (exact/adjacent/generic) och evidence-gates. I Stock Signals: låt en liten modell scora om en indikator pekar på 'köp', 'sälj', 'neutral' eller 'bevaka' i ett enda forward-pass.",
+      "next_step": "Kör openjev-score på en liten JSONL med 20 verkliga AI Radar-kandidater (README + projektkontext) och mät om typade sannolikheter ger högre precision på exact-match än nuvarande OpenRouter-batch med JSON-reparation.",
+      "differentiator": "Till skillnad från generiska agent-ramverk eller JSON-mode i API:er returnerar OpenJev raw logits/sannolikheter för en dynamisk lista av textalternativ utan dekoderingsslinga, vilket ger deterministiska, lättkalibrerade beslut med lägre latens på lokal GPU.",
+      "evidence": [
+        "README: 'reads typed option probabilities directly from a model. No answer sentence, JSON repair, or decoding loop'",
+        "Körs på en 3090 med 4B BF16-modell (Qwen3.5-4B), ingen waitlist",
+        "Stöd för 'shared mode' där gemensam kontext prefflas en gång och flera kriterier poängsätts parallellt"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 987,
+      "language": "Python",
+      "score": 59,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "first_recommended": "2026-09-18",
+      "last_analyzed": "2026-09-18",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "vinnylarouge/jevlike": {
+      "repo": "vinnylarouge/jevlike",
+      "url": "https://github.com/vinnylarouge/jevlike",
+      "summary_sv": "Jevlike tränar en liten modell som i ett forward-pass returnerar sannolikheter för en varierande lista av textalternativ – samma in/ut-form som TypeSafe:s Jev – och demonstrerar även styrning av spelkontroller (Doom, schack) via bildpatchar.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Liknande som OpenJev: kan potentiellt ersätta textgenerering + JSON-reparation i analyssteget med direkt sannolikhetsutmatning för match-klasser, men repot fokuserar på träningspipeline snarare än inferens-tjänst."
+        },
+        {
+          "project": "Ullebets",
+          "reason": "Ullebets behöver 'probabilistisk calibration' och 'leakage-safe backtesting'; en modell som outputtar kalibrerade sannolikheter för diskreta alternativ (t.ex. 1X2, över/under) kan passa modellgovernance-kraven bättre än black-box-klassificerare."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 10,
+        "concrete_value": 8,
+        "testability": 10,
+        "technical_fit": 8,
+        "repo_quality": 6,
+        "timing": 7
+      },
+      "risks": [
+        "Repot är i tidigt skede (starter model, ingen produktionsinferens-server), kräver betydande arbete för att bli en robust komponent i Ullebets V2-pipeline eller AI Radar.",
+        "Träningsdata och kalibrering för Jonas-specifika domäner (golf, aktier, fotboll) finns inte; måste byggas från noll."
+      ],
+      "confidence": 0.45,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "adjacent",
+      "category": "llm-structured-decision",
+      "concrete_use_case": "I Ullebets: träna en Jevlike-modell på historiska match-snapshots för att outputta sannolikheter för 'hemmaseger', 'oavgjort', 'bortaseger' (eller fler marknader) med leakage-säker validering. I AI Radar: experimentera med att finjustera en liten modell på Jonas' historiska accept/avvisa-beslut för att få en snabb lokal klassificerare.",
+      "next_step": "Kör examples/doom/play.py för att verifiera att inferensfungerar, sedan skapa en minimal JSONL med 50 Ullebets-matchsnapshots + etiketter och träna en proof-of-concept med jevlike-träningsloopen; utvärdera calibration (Brier score) mot nuvarande logistiska modeller.",
+      "differentiator": "Fokus på träningspipeline för option-attention head (inte bara inferens) och demonstrerad generalisering till visuella beslut (spel), vilket visar att arkitekturen hanterar förändrade alternativuppsättningar – relevant när matchmarknader varierar per liga.",
+      "evidence": [
+        "README: 'takes a piece of text and a list of N text options. It returns one probability for each option. It does this in one pass'",
+        "Innehåller träningskod, checkpoints och spel-exempel (Doom, schack) som visar generalisering",
+        "Använder uv för dependency management och har reproducerbara träningsskript"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 733,
+      "language": "Python",
+      "score": 49,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "first_recommended": null,
+      "last_analyzed": "2026-09-18",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-09-17"
+  "updated_at": "2026-09-18"
 }
