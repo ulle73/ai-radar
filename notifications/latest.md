@@ -1,3 +1,3 @@
-# AI Radar – Notifieringar 2026-09-19
+# AI Radar – Notifieringar 2026-09-20
 
 Inga nya notifieringsvärda repos upptäcktes idag.
