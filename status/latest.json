@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-22",
-  "generated_at": "2026-09-22T06:17:31.403Z",
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T07:12:26.673Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
@@ -9,9 +9,9 @@
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 10,
-  "reused_today": 20,
-  "model_assessments": 5,
+  "analyzed_today": 27,
+  "reused_today": 3,
+  "model_assessments": 22,
   "fallback_assessments": 5,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
