@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391181,
+      "stars": 391199,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 270827,
+      "stars": 271528,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1413,12 +1413,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 274129,
+      "stars": 274854,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1468,12 +1468,12 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 294098,
+      "stars": 294562,
       "language": "Shell",
       "score": 45,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1522,12 +1522,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 250659,
+      "stars": 250817,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1576,12 +1576,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 155680,
+      "stars": 155841,
       "language": "Shell",
       "score": 22,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1630,12 +1630,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 211381,
+      "stars": 211537,
       "language": "TypeScript",
       "score": 23,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1719,58 +1719,55 @@
     "panniantong/agent-reach": {
       "repo": "Panniantong/Agent-Reach",
       "url": "https://github.com/Panniantong/Agent-Reach",
-      "summary_sv": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "CLI-verktyg som ger AI-agenter läsaccess till Twitter, Reddit, YouTube, GitHub, Bilibili, XHS utan API-kostnader.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 7,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 1,
+        "repo_quality": 4,
+        "timing": 1
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Generisk agent-ramverk utan projektkoppling",
+        "Kan bryta mot plattformsvillkor (Twitter/Reddit)"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.05,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "agent-infrastruktur",
+      "concrete_use_case": "Inget konkret use case i något namngivet projekt.",
+      "next_step": "Inget test relevant för Jonas projekt.",
+      "differentiator": "Överlappar inte med Apify-baserad pipeline i FAIV eller AI Radars GitHub-discovery.",
+      "evidence": [
+        "89k stars, Python-baserat",
+        "Ingen koppling till Jonas projekts specifika datakällor eller arbetsflöden",
+        "Generisk agent-infrastruktur, inte skräddarsydd för något projekt"
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 81587,
+      "stars": 88986,
       "language": "Python",
-      "score": 57,
+      "score": 8,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-09-15",
-      "last_analyzed": "2026-09-15",
+      "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -3041,7 +3038,7 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 142999,
+      "stars": 143023,
       "language": "JavaScript",
       "score": 20,
       "action": "Arkiv",
@@ -3056,7 +3053,7 @@
         "testability"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-06",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -4052,7 +4049,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 179356,
+      "stars": 179441,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
@@ -4067,7 +4064,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -4777,7 +4774,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 95952,
+      "stars": 96405,
       "language": "TypeScript",
       "score": 22,
       "action": "Arkiv",
@@ -4792,7 +4789,7 @@
         "testability"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -9794,7 +9791,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 62506,
+      "stars": 62745,
       "language": "Python",
       "score": 6,
       "action": "Arkiv",
@@ -9809,7 +9806,7 @@
         "testability"
       ],
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-26",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10070,9 +10067,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Search API"
       ],
-      "stars": 150867,
+      "stars": 152062,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10091,7 +10089,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -12512,7 +12510,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 51526,
+      "stars": 52063,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12531,7 +12529,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -12982,58 +12980,55 @@
     "juliusbrussee/caveman": {
       "repo": "JuliusBrussee/caveman",
       "url": "https://github.com/JuliusBrussee/caveman",
-      "summary_sv": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Prompt-skills som tvingar AI-codingagenter att använda färre tokens genom att skriva kortare kommandon.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 8,
-        "timing": 2
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 1,
+        "repo_quality": 4,
+        "timing": 1
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Hype utan bevisad nytta",
+        "Bara ett prompt-skikt ovanför befintlig LLM-användning"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.05,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
-      "source_names": [
-        "GitHub Search API"
+      "category": "prompt-optimering",
+      "concrete_use_case": "Inget konkret use case i något namngivet projekt.",
+      "next_step": "Inget test relevant för Jonas projekt.",
+      "differentiator": "Ingen unik fördel för Jonas befintliga stack eller arbetsflöden.",
+      "evidence": [
+        "109k stars, fokus på token-reduktion för Claude/Codex",
+        "Ingen koppling till Jonas nio projekts behov",
+        "Reddit/hype-drivet, ingen evidens för produktnytta"
       ],
-      "stars": 108629,
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 109207,
       "language": "Go",
-      "score": 48,
+      "score": 8,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
-      "last_analyzed": "2026-09-19",
+      "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -14222,9 +14217,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 55488,
+      "stars": 56000,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14243,7 +14239,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14252,63 +14248,60 @@
     "coreyhaines31/marketingskills": {
       "repo": "coreyhaines31/marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills",
-      "summary_sv": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "summary_sv": "Samling AI-agent-skills för marknadsföringsuppgifter: CRO, copywriting, SEO, analytics och growth engineering.",
       "project_matches": [
         {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        },
-        {
-          "project": "Nyabolaget-ekosystemet",
-          "reason": "Kan stödja datainsamling, företagsdata eller automatisering."
+          "project": "FAIV",
+          "reason": "Kan potentiellt stödja FAIV:s behov av bättre produkttexter, SEO och kampanjcontent via AI-agent-skills, men kräver integration med befintlig WordPress/WooCommerce-pipeline och redaktionell godkännandeprocess."
         }
       ],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 10,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 8,
+        "concrete_value": 5,
+        "testability": 6,
+        "technical_fit": 7,
+        "repo_quality": 5,
+        "timing": 4
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Kräver integration med befintlig pipeline",
+        "Risk för generisk AI-känsla i produkttexter",
+        "Ingen garanti för bättre konvertering"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.25,
+      "analysis_mode": "model",
       "assessment_version": 2,
-      "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
-      "source_names": [
-        "GitHub Trending – daily",
-        "GitHub Trending – weekly"
+      "match_type": "adjacent",
+      "category": "marketing-skills",
+      "concrete_use_case": "Hjälpa till med produkttexter, SEO och kampanjcopy i FAIV om det integreras med befintlig contentpipeline.",
+      "next_step": "Testa om skills kan generera SEO-optimerade produkttexter för en befintlig FAIV-kategori utan att sänka kvaliteten.",
+      "differentiator": "Tillför marknadsföringsspecifika prompt-skills, men FAIV redan har LLM-pipeline och originalitetskontroller.",
+      "evidence": [
+        "52k stars, MIT-licens",
+        "CRO, copywriting, SEO, analytics täcker FAIV:s tillväxtbehov",
+        "Fungerar med Claude Code/Codex/Cursor som Jonas redan använder"
       ],
-      "stars": 48965,
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 52496,
       "language": "JavaScript",
-      "score": 61,
+      "score": 35,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-09-08",
-      "last_analyzed": "2026-09-08",
+      "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -14403,7 +14396,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 24855,
+      "stars": 25097,
       "language": "TypeScript",
       "score": 58,
       "action": "Arkiv",
@@ -14422,7 +14415,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-09-22",
       "notified_at": null,
@@ -17563,54 +17556,55 @@
     "tencentcloud/octop": {
       "repo": "TencentCloud/Octop",
       "url": "https://github.com/TencentCloud/Octop",
-      "summary_sv": "Självvärd AI-assistent med multi-user och multi-agent-stöd, byggd i Python.",
+      "summary_sv": "Självhostad AI-assistent med multi-user och multi-agent-stöd, local-first arkitektur.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
-        "testability": 5,
-        "technical_fit": 5,
-        "repo_quality": 7,
-        "timing": 6
+        "testability": 2,
+        "technical_fit": 1,
+        "repo_quality": 3,
+        "timing": 1
       },
       "risks": [
-        "Generisk agent-hype utan projektspecifik nytta",
-        "Python-stack skiljer sig från Jonas Node/TS-miljö"
+        "Generisk plattform, inte skräddarsydd",
+        "Kan bli för tung införandekostnad"
       ],
-      "confidence": 0.9,
+      "confidence": 0.05,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-agent-framework",
-      "concrete_use_case": "Ingen konkret use case; Jonas projekt använder specifika LLM-flöden snarare än generella agent-plattformar.",
-      "next_step": "Ignorera om inte behov av självvärd multi-agent-plattform uppstår.",
-      "differentiator": "Fokus på lokal-first, långtidsminne och multi-user; men konkurrerar med många liknande ramverk.",
+      "category": "ai-assistent",
+      "concrete_use_case": "Inget konkret use case i något namngivet projekt.",
+      "next_step": "Inget test relevant för Jonas projekt.",
+      "differentiator": "Överlappar inte med AI Radars befintliga arkitektur eller något annat projekts behov.",
       "evidence": [
-        "Python 3.12+, MIT-licens",
-        "Multi-user, multi-agent, long-term-memory",
-        "PyPI-paket och Discord-community"
+        "6.4k stars, Python",
+        "Generisk AI-assistent utan specifik projektkoppling",
+        "Inget bevisad mervärde för Jonas arbetsflöden"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 4032,
+      "stars": 6439,
       "language": "Python",
-      "score": 23,
+      "score": 7,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-09-19",
-      "last_seen": "2026-09-19",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
-      "last_analyzed": "2026-09-19",
+      "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -19018,7 +19012,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 14139,
+      "stars": 14513,
       "language": "Rust",
       "score": 16,
       "action": "Arkiv",
@@ -19033,7 +19027,7 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19186,9 +19180,10 @@
         "Inget bevisat samband med FAIV:s WooCommerce-konvertering eller SEO"
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 73853,
+      "stars": 74484,
       "language": "JavaScript",
       "score": 41,
       "action": "Arkiv",
@@ -19202,7 +19197,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19246,7 +19241,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 44421,
+      "stars": 44806,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
@@ -19260,7 +19255,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19417,7 +19412,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 4779,
+      "stars": 5016,
       "language": "TypeScript",
       "score": 54,
       "action": "Arkiv",
@@ -19431,7 +19426,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19479,7 +19474,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2405,
+      "stars": 2555,
       "language": "Python",
       "score": 45,
       "action": "Arkiv",
@@ -19493,7 +19488,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19502,37 +19497,38 @@
     "rehan-remade/universal-modder": {
       "repo": "rehan-remade/universal-modder",
       "url": "https://github.com/rehan-remade/universal-modder",
-      "summary_sv": "Verktyg och skills som låter AI-kodningsagenter modda PC-spel: recon, reverse engineering, fal-genererade assets, in-game testning.",
+      "summary_sv": "Ett ramverk som låter AI-kodagenter modda PC-spel genom recon, reverse engineering, fal-genererade assets och in-game-testning.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
-        "testability": 1,
-        "technical_fit": 1,
-        "repo_quality": 5,
-        "timing": 1
+        "testability": 5,
+        "technical_fit": 2,
+        "repo_quality": 8,
+        "timing": 2
       },
       "risks": [
-        "Fullständigt irrelevanta för alla projektprofiler; tidsspill att utvärdera"
+        "Helt utanför Jonas projektdomäner; ingen affärsnytta"
       ],
-      "confidence": 1,
+      "confidence": 0.95,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "game-modding",
-      "concrete_use_case": "Ingen relevans för något av Jonas nio projekt; helt utanför domänerna golf, trading, betting, företagsdata, e-handel, content, resor eller scraping.",
-      "next_step": "Ingen åtgärd.",
-      "differentiator": "Unikt inom game-modding med fal.ai-integration för assets, men noll överlapp med Jonas verksamhetsområden.",
+      "category": "ai-agent-gaming",
+      "concrete_use_case": "Ingen direkt användning i något av Jonas namngivna projekt; alla projekt är affärs-, data- eller contentfokuserade, inte spelmodding.",
+      "next_step": "Ingen rekommenderas test; repot saknar koppling till aktivt projekt.",
+      "differentiator": "Unikt för spelmodding via AI-agenter, men irrelevant för Jonas nuvarande produktportfolio.",
       "evidence": [
-        "README: 'Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own'",
-        "Stödjer Age of Empires, Terraria, tmodloader m.fl.; kräver fal.ai API-nyckel"
+        "README beskriver modding av Age of Empires, Terraria m.fl. spel",
+        "Fungerar med Claude Code, Codex, Cursor via AGENTS.md",
+        "Använder fal.ai för 3D/ljud/bildgenerering"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1674,
+      "stars": 2246,
       "language": "Python",
-      "score": 8,
+      "score": 17,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -19545,9 +19541,9 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
-      "last_analyzed": "2026-10-02",
+      "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
     },
@@ -19584,7 +19580,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2582,
+      "stars": 3040,
       "language": "Swift",
       "score": 29,
       "action": "Arkiv",
@@ -19599,7 +19595,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -19806,7 +19802,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 27214,
+      "stars": 27359,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -19820,12 +19816,173 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-03",
       "first_recommended": null,
       "last_analyzed": "2026-10-02",
       "notified_at": null,
       "notified_score": null
+    },
+    "flutter/flutter": {
+      "repo": "flutter/flutter",
+      "url": "https://github.com/flutter/flutter",
+      "summary_sv": "Googles cross-platform app-SDK för mobil, web och desktop från en enda codebase.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 1,
+        "technical_fit": 2,
+        "repo_quality": 5,
+        "timing": 1
+      },
+      "risks": [
+        "Stora sidoprojekt med oklar payoff",
+        "Ingen direkt koppling till intäkts- eller tillväxtmål"
+      ],
+      "confidence": 0.05,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "app-framework",
+      "concrete_use_case": "Inget konkret use case i något namngivet projekt.",
+      "next_step": "Inget test relevant för Jonas projekt.",
+      "differentiator": "Jonas befintliga stack är Next.js/React/TypeScript, inte Dart/Flutter.",
+      "evidence": [
+        "179k stars, major framework",
+        "Ingen specifik koppling till Golfkuponger-appen eller andra projekt",
+        "Tekniskt imponerande men inte relevant för Jonas aktuella behov"
+      ],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 179270,
+      "language": "Dart",
+      "score": 9,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "copilotkit/opendots": {
+      "repo": "CopilotKit/OpenDots",
+      "url": "https://github.com/CopilotKit/OpenDots",
+      "summary_sv": "En mall för beständiga AI-agenter (\"coworkers\") som rör sig mellan text, samtal och Slack, byggd på CopilotKit och AG-UI.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 3,
+        "technical_fit": 3,
+        "repo_quality": 6,
+        "timing": 2
+      },
+      "risks": [
+        "Generiskt agent-ramverk; AI Radar kräver konkret pipeline-förbättring"
+      ],
+      "confidence": 0.9,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-agent-framework",
+      "concrete_use_case": "Ingen konkret användning; AI Radar-profilen utesluter generiska agent-ramverk som exact-match om de inte löser ett namngivet pipeline-problem.",
+      "next_step": "Ingen test rekommenderas; repot är en mall, inte en lösning på ett befintligt behov.",
+      "differentiator": "Fokus på multi-modal agent-arbetsyta (webb/mobil), men löser inget specifikt problem i AI Radar eller andra projekt.",
+      "evidence": [
+        "Beskrivs som \"template, not a hosted product\"",
+        "Byggt på CopilotKit och AG-UI",
+        "Alpha-status, self-hosted"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1656,
+      "language": "TypeScript",
+      "score": 14,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-03",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "nanaism/yomiyasu": {
+      "repo": "nanaism/yomiyasu",
+      "url": "https://github.com/nanaism/yomiyasu",
+      "summary_sv": "En Agent Skill som förbättrar AI-genererad japanska text till mer naturlig, informationsdens japanska för tekniska artiklar och dokument.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 1,
+        "repo_quality": 7,
+        "timing": 1
+      },
+      "risks": [
+        "Fel språk och marknad för alla nio projekt"
+      ],
+      "confidence": 0.98,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-writing-japanese",
+      "concrete_use_case": "Ingen användning; alla Jonas projekt riktar sig till svenska marknaden och svenska användare.",
+      "next_step": "Ingen test rekommenderas; språklig fokus (japanska) matchar inget aktivt projekt.",
+      "differentiator": "Specialiserad på japanska syntaktiska mönster och AI-specifika artefakter, men irrelevants för svenska content-pipelines.",
+      "evidence": [
+        "Mål: tekniska artiklar, specifikationer, PR-beskrivningar på japanska",
+        "Fungerar med Codex, Claude Code, Cursor",
+        "Utvecklad av ALGO ARTIS"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1223,
+      "language": "Python",
+      "score": 11,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-03",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-10-02"
+  "updated_at": "2026-10-03"
 }
