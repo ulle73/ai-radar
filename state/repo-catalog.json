@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391199,
+      "stars": 391257,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1353,14 +1353,15 @@
       "confidence": 0.9,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 271528,
+      "stars": 272424,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1410,15 +1411,14 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 274854,
+      "stars": 275517,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1522,12 +1522,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 250817,
+      "stars": 251025,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1576,12 +1576,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 155841,
+      "stars": 156107,
       "language": "Shell",
       "score": 22,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1630,12 +1630,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 211537,
+      "stars": 211662,
       "language": "TypeScript",
       "score": 23,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1749,7 +1749,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 88986,
+      "stars": 90052,
       "language": "Python",
       "score": 8,
       "action": "Arkiv",
@@ -1765,7 +1765,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-09-15",
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -2896,39 +2896,38 @@
     "addyosmani/agent-skills": {
       "repo": "addyosmani/agent-skills",
       "url": "https://github.com/addyosmani/agent-skills",
-      "summary_sv": "Samling av engineering-skills för AI-coding-agents med kommandon för spec, plan, build, test, review och ship.",
+      "summary_sv": "Samling av produktionsklara ingenjörsfärdigheter för AI-kodningsagenter.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 1,
+        "project_fit": 2,
         "concrete_value": 2,
-        "testability": 4,
-        "technical_fit": 3,
-        "repo_quality": 7,
-        "timing": 2
+        "testability": 6,
+        "technical_fit": 7,
+        "repo_quality": 9,
+        "timing": 4
       },
       "risks": [
-        "Hype utan konkret projektnytta",
-        "Löser inget namngivet problem i Jonas aktiva projekt"
+        "Låg direkt nytta för aktuella projekt; främst allmän AI-agentutveckling."
       ],
-      "confidence": 0.05,
+      "confidence": 0.2,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "generisk-agent-ramverk",
-      "concrete_use_case": "Inget namngivet Jonas-projekt behöver ett agent-skills-ramverk; AI Radar bygger redan med deterministisk kvalitetsgrindar och OpenRouter-anrop.",
-      "next_step": "Inget test som kan mätas mot ett specifikt Jonas-projektbehov.",
-      "differentiator": "Generiskt agent-ramverk utan koppling till Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen eller Apify Scraper.",
+      "category": "ai-agent-färdigheter",
+      "concrete_use_case": "Använda färdighetskataloger för att lära AI-agenter att följa utvecklingsmetoder som spec, plan, bygg, test, review, ship.",
+      "next_step": "Klona repot, kör en färdighetsslash-kommando (t.ex. /spec) i en AI-agentmiljö och verifiera att den genererar en spec innan kod.",
+      "differentiator": "Målade utvecklingsfaser med slash-kommandon som kan integreras i befintliga AI-agentflöden.",
       "evidence": [
-        "94115 stars — men popularitet ger inte project_fit",
-        "Är ett coding-agent-verktyg, inte ett verktyg för repo-discovery, betting, e-handel eller content",
-        "Orden agent och AI räcker inte för exact-match per hårda regler"
+        "9 slash-kommandon som kartlägger till utvecklingslivscykeln.",
+        "Production-grade engineering skills for AI coding agents.",
+        "100k+ stars indikerar popularitet."
       ],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 98210,
+      "stars": 100920,
       "language": "JavaScript",
-      "score": 19,
+      "score": 30,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -2942,9 +2941,9 @@
         "testability"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
-      "last_analyzed": "2026-09-14",
+      "last_analyzed": "2026-10-04",
       "notified_at": null,
       "notified_score": null
     },
@@ -3038,7 +3037,7 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 143023,
+      "stars": 143106,
       "language": "JavaScript",
       "score": 20,
       "action": "Arkiv",
@@ -3053,7 +3052,7 @@
         "testability"
       ],
       "first_seen": "2026-08-06",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-06",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -4049,7 +4048,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 179441,
+      "stars": 179557,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
@@ -4064,7 +4063,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -4774,7 +4773,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 96405,
+      "stars": 96846,
       "language": "TypeScript",
       "score": 22,
       "action": "Arkiv",
@@ -4789,7 +4788,7 @@
         "testability"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -9791,7 +9790,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 62745,
+      "stars": 63313,
       "language": "Python",
       "score": 6,
       "action": "Arkiv",
@@ -9806,7 +9805,7 @@
         "testability"
       ],
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-26",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10070,7 +10069,7 @@
         "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 152062,
+      "stars": 153796,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10089,7 +10088,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -12510,7 +12509,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 52063,
+      "stars": 52750,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12529,7 +12528,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -13010,7 +13009,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 109207,
+      "stars": 109627,
       "language": "Go",
       "score": 8,
       "action": "Arkiv",
@@ -13026,7 +13025,7 @@
         "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -14217,10 +14216,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 56000,
+      "stars": 56383,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14239,7 +14237,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19183,7 +19181,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 74484,
+      "stars": 75555,
       "language": "JavaScript",
       "score": 41,
       "action": "Arkiv",
@@ -19197,7 +19195,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19241,7 +19239,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 44806,
+      "stars": 45200,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
@@ -19255,7 +19253,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19412,7 +19410,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 5016,
+      "stars": 5532,
       "language": "TypeScript",
       "score": 54,
       "action": "Arkiv",
@@ -19426,7 +19424,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19474,7 +19472,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2555,
+      "stars": 2581,
       "language": "Python",
       "score": 45,
       "action": "Arkiv",
@@ -19488,7 +19486,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19526,7 +19524,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2246,
+      "stars": 2719,
       "language": "Python",
       "score": 17,
       "action": "Arkiv",
@@ -19541,7 +19539,7 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -19802,7 +19800,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 27359,
+      "stars": 27522,
       "language": "Python",
       "score": 37,
       "action": "Arkiv",
@@ -19816,7 +19814,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -19855,7 +19853,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 179270,
+      "stars": 179320,
       "language": "Dart",
       "score": 9,
       "action": "Arkiv",
@@ -19871,7 +19869,7 @@
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -19880,53 +19878,54 @@
     "copilotkit/opendots": {
       "repo": "CopilotKit/OpenDots",
       "url": "https://github.com/CopilotKit/OpenDots",
-      "summary_sv": "En mall för beständiga AI-agenter (\"coworkers\") som rör sig mellan text, samtal och Slack, byggd på CopilotKit och AG-UI.",
+      "summary_sv": "Open-source-mall för alltid-på AI-kolleger som rör sig mellan text, samtal och Slack, byggd med CopilotKit och AG-UI.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 3,
-        "technical_fit": 3,
-        "repo_quality": 6,
+        "project_fit": 1,
+        "concrete_value": 1,
+        "testability": 5,
+        "technical_fit": 6,
+        "repo_quality": 9,
         "timing": 2
       },
       "risks": [
-        "Generiskt agent-ramverk; AI Radar kräver konkret pipeline-förbättring"
+        "Generisk AI-agentverktyg; osannolikt att direkt påverka aktuella projekt."
       ],
-      "confidence": 0.9,
+      "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
       "category": "ai-agent-framework",
-      "concrete_use_case": "Ingen konkret användning; AI Radar-profilen utesluter generiska agent-ramverk som exact-match om de inte löser ett namngivet pipeline-problem.",
-      "next_step": "Ingen test rekommenderas; repot är en mall, inte en lösning på ett befintligt behov.",
-      "differentiator": "Fokus på multi-modal agent-arbetsyta (webb/mobil), men löser inget specifikt problem i AI Radar eller andra projekt.",
+      "concrete_use_case": "Prototypa en persistent AI-kollegerworkspace för intern verktyg eller automatisering.",
+      "next_step": "Klona OpenDots och anpassa en enkel agentworkspace för att testa AI-kollegerinteraktioner.",
+      "differentiator": "Själv-hostable AI-agentmall med datorvy, mänsklig granskningkort och tvärplattformstöd (Webb/Mobil).",
       "evidence": [
-        "Beskrivs som \"template, not a hosted product\"",
-        "Byggt på CopilotKit och AG-UI",
-        "Alpha-status, self-hosted"
+        "Open-source-mall för persistenta AI-agenter med 2715 stars och 339 forks",
+        "Byggd med CopilotKit och AG-UI, inkluderar datorvy och mänsklig granskningsarbetsflöde",
+        "Själv-hostable, stöder text, samtal och Slack-integrationer"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1656,
+      "stars": 2715,
       "language": "TypeScript",
-      "score": 14,
+      "score": 24,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
-      "last_analyzed": "2026-10-03",
+      "last_analyzed": "2026-10-04",
       "notified_at": null,
       "notified_score": null
     },
@@ -19962,7 +19961,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1223,
+      "stars": 1342,
       "language": "Python",
       "score": 11,
       "action": "Arkiv",
@@ -19977,12 +19976,281 @@
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
       "notified_score": null
+    },
+    "thedotmack/claude-mem": {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "summary_sv": "Persistent minne över AI-agent-sessioner med komprimering och återanvändning av kontext.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 7,
+        "technical_fit": 8,
+        "repo_quality": 9,
+        "timing": 5
+      },
+      "risks": [
+        "Risk för överberoende av AI-minne; kan dölja behov av tydlig dokumentation."
+      ],
+      "confidence": 0.25,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-minne",
+      "concrete_use_case": "Lagra och återanvända projektkontext (t.ex. Golfkupongers produktflöden) i AI-agent-sessioner för att undvika upprepad information.",
+      "next_step": "Installera claude-mem, skapa en kontextfil och verifiera att nästa agent-session hämtar tidigare sessioners data.",
+      "differentiator": "Fånger upprepade sessioner, komprimerar dem och injicerar relevant kontext i framtida sessioner.",
+      "evidence": [
+        "Persistent Context Across Sessions for Every Agent.",
+        "Works with Claude Code, OpenClaw, Codex, Gemini, etc.",
+        "95k+ stars."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 95723,
+      "language": "TypeScript",
+      "score": 33,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-04",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "pingdotgg/t3code": {
+      "repo": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "summary_sv": "Fjärrstyrt kontrollgränssnitt för flera AI-kodningsagenter (Claude, Codex, Cursor, Grok, OpenCode, Antigravity).",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 4
+      },
+      "risks": [
+        "Hög komplexitet; kan vara överkraft för enkla interna behov."
+      ],
+      "confidence": 0.2,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agentkontroll",
+      "concrete_use_case": "Använda T3 Code för att styra olika AI-kodningsagenter från en enhet, vilket kan underlätta testning av olika agentmetoder för projekt som Stock Signals.",
+      "next_step": "Installera T3 Code, autentisera en agent (t.ex. Codex) och kör ett enkelt kodgenereringsjobb via mobilappen för att verifiera styrenheten.",
+      "differentiator": "Stödjer flera agentleverantörer och erbjuder mobil-, webb- och desktopgränssnitt.",
+      "evidence": [
+        "Agent harness control surface.",
+        "Stödjer Codex, Claude, Cursor, Grok Build, OpenCode, Antigravity.",
+        "24k+ stars."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 24815,
+      "language": "TypeScript",
+      "score": 29,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-04",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "cloudflare/cloudflare-os": {
+      "repo": "cloudflare/cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "summary_sv": "Agentarbetsstation på Cloudflare Workers med säkerhetsgrindar, dokument- och appbyggnad.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 5,
+        "technical_fit": 8,
+        "repo_quality": 7,
+        "timing": 3
+      },
+      "risks": [
+        "Kräver Cloudflare Workers-kunskap; kan vara överkomplicerat för mindre projekt."
+      ],
+      "confidence": 0.15,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agentarbetsstation",
+      "concrete_use_case": "Utforska Cloudflare OS som en intern AI-produktivitetsmiljö för att bygga agentdrivna gadgets som kan användas i projekt som Nyabolaget-ekosystemet.",
+      "next_step": "Köra lokalt med pnpm run-local, öppna gränssnittet och testa att skapa en enkel gadget som skriver ut ett välkomnande.",
+      "differentiator": "Inbyggda Gatekeeper-säkerhetskontroller och sandboxed apputveckling för företagsanvändning.",
+      "evidence": [
+        "Agent workspace built on Cloudflare Workers.",
+        "Includes agent chat UI, sandboxed app development, Gatekeepers security framework.",
+        "10k+ stars."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 10647,
+      "language": "TypeScript",
+      "score": 27,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-04",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "effect-ts/effect": {
+      "repo": "Effect-TS/effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "summary_sv": "Effect är ett TypeScript-bibliotek för att bygga produktionsklara, typssäkra applikationer med felhantering och beroendeinjektion.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 3,
+        "concrete_value": 3,
+        "testability": 7,
+        "technical_fit": 9,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Lärkurve; kan kräva omstrukturering av befintlig kod för att anta Effect."
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "typescript-runtime",
+      "concrete_use_case": "Använda Effect för att refactorera interna verktyg (t.ex. AI Radars pipelines) med typssäkra felhanteringsflöden.",
+      "next_step": "Installera effect, skapa ett enkelt Effect-program som loggar ett meddelande och hanterar ett fel.",
+      "differentiator": "Producerar typssäkra, observabilitetsvänliga applikationer med inbyggd schemaläggning och spårning.",
+      "evidence": [
+        "Build production-ready applications in TypeScript.",
+        "Supports typed errors, dependency injection, structured concurrency, scheduling, tracing.",
+        "16k+ stars."
+      ],
+      "source_names": [
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
+      ],
+      "stars": 16881,
+      "language": "TypeScript",
+      "score": 35,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-04",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "facebookincubator/muse-gadget-sdk": {
+      "repo": "facebookincubator/muse-gadget-sdk",
+      "url": "https://github.com/facebookincubator/muse-gadget-sdk",
+      "summary_sv": "Open-source SDK för att bygga Muse-smartdisplay-gadgets, som stöder både ESP32- och Linux-hårdvaruplattformar.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 4,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 3
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt; kan distrahera från prioriterade mål."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "developer-tools",
+      "concrete_use_case": "Använd som referens och prototyp för inbäddade enhetssDK med periferiintegration för hårdvaruprojekt.",
+      "next_step": "Klona repot och bygg en enkel Muse-gadget-demo för att förstå SDK-strukturen och hårdvarusamband.",
+      "differentiator": "Tillhandahåller ett komplett hårdvarusDK för Muse-smartdisplayer, inklusive både ESP32- och Linux-enhetssDK och periferiabstraktion.",
+      "evidence": [
+        "Open source SDK för att bygga Muse-gadgets (952 stars, 160 forks)",
+        "Stöder ESP32 Device SDK och Linux Device SDK för displayer, knappar, sensorer, aktuatorer",
+        "Inkluderar exempel-firmware och dokumentation för att bygga anpassade hårdvaruenheter"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 952,
+      "language": "C",
+      "score": 23,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-04",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-10-03"
+  "updated_at": "2026-10-04"
 }

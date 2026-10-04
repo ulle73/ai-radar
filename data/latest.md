@@ -1,6 +1,6 @@
-# GitHub Radar – 2026-10-03
+# GitHub Radar – 2026-10-04
 
-Generated at: 2026-10-03T06:35:39.945Z
+Generated at: 2026-10-04T06:58:43.705Z
 Repos saved: 30
 Trending developers saved: 10
 
@@ -25,16 +25,16 @@ Repos scraped directly from https://github.com/trending. These should be treated
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 6787.48 | 152062 | JavaScript | GitHub Trending – daily, GitHub Search API | agent-skills, ai-agents, claude, claude-code, claude-code-plugin, cursor-rules | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 5759.6 | 274854 | Shell | GitHub Trending – daily, GitHub Search API | - | Skills for Real Engineers. Straight from my .agents directory. |
-| 3 | [obra/superpowers](https://github.com/obra/superpowers) | 4184.71 | 294562 | Shell | GitHub Trending – daily, GitHub Search API | ai, brainstorming, coding, obra, sdlc, skills | An agentic skills framework & software development methodology that works. |
-| 4 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 3074.02 | 109207 | Go | GitHub Trending – daily | ai, anthropic, caveman, claude, claude-code, llm | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. |
-| 5 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 2076.89 | 88986 | Python | GitHub Trending – daily | agent-infrastructure, ai-agent, ai-search, automation, bilibili, claude-code | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees. |
-| 6 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 1419.62 | 56000 | TypeScript | GitHub Trending – daily, GitHub Trending – weekly | ai, animation, ffmpeg, framework, gsap, html | Write HTML. Render video. Built for agents. |
-| 7 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 1228.82 | 74484 | JavaScript | GitHub Trending – daily, GitHub Trending – weekly | - | The design language that makes your AI harness better at design. |
-| 8 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 1076.35 | 52496 | JavaScript | GitHub Trending – daily | claude, codex, marketing | Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering. |
-| 9 | [mksglu/context-mode](https://github.com/mksglu/context-mode) | 628.61 | 25097 | TypeScript | GitHub Trending – daily | antigravity, claude, claude-code, claude-code-hooks, claude-code-plugins, claude-code-skill | Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks. |
-| 10 | [NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell) | 390.31 | 14513 | Rust | GitHub Trending – daily | - | OpenShell is the safe, private runtime for autonomous AI agents. |
+| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 6803.7 | 153796 | JavaScript | GitHub Trending – daily, GitHub Search API | agent-skills, ai-agents, claude, claude-code, claude-code-plugin, cursor-rules | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
+| 2 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 5331.43 | 272424 | JavaScript | GitHub Trending – daily, GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| 3 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 3068.84 | 109627 | Go | GitHub Trending – daily | ai, anthropic, caveman, claude, claude-code, llm | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. |
+| 4 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 2261.48 | 100920 | JavaScript | GitHub Trending – daily | agent-skills, antigravity, claude-code, codex, cursor, skills | Production-grade engineering skills for AI coding agents. |
+| 5 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 2091.41 | 90052 | Python | GitHub Trending – daily | agent-infrastructure, ai-agent, ai-search, automation, bilibili, claude-code | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees. |
+| 6 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 1272.53 | 95723 | TypeScript | GitHub Trending – daily | ai, ai-agents, ai-memory, anthropic, artificial-intelligence, chromadb | Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More |
+| 7 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 1241.86 | 75555 | JavaScript | GitHub Trending – daily, GitHub Trending – weekly | - | The design language that makes your AI harness better at design. |
+| 8 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | 587.91 | 24815 | TypeScript | GitHub Trending – daily | - |  |
+| 9 | [cloudflare/cloudflare-os](https://github.com/cloudflare/cloudflare-os) | 369.93 | 10647 | TypeScript | GitHub Trending – daily | - | Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems. |
+| 10 | [Effect-TS/effect](https://github.com/Effect-TS/effect) | 94.21 | 16881 | TypeScript | GitHub Trending – daily, GitHub Trending – weekly | cli, clustering, concurrency, dependency-injection, effect, error-handling | Build production-ready applications in TypeScript |
 
 ### GitHub Trending – weekly
 
@@ -42,14 +42,14 @@ Repos scraped directly from https://github.com/trending?since=weekly that were n
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 2317.8 | 96405 | TypeScript | GitHub Trending – weekly | - | The open-source app everyone uses to manage agents at work |
-| 2 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 1650.21 | 62745 | Python | GitHub Trending – weekly | agents, ai, ai-agents, ai-engineering, computer-vision, course | Learn it. Build it. Ship it for others. |
-| 3 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 1544.07 | 52063 | Python | GitHub Trending – weekly | ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface | VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. |
-| 4 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 730.73 | 44806 | Python | GitHub Trending – weekly | agentic-ai, agents, ai-memory, memory | Hindsight: Agent Memory That Learns |
-| 5 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 446.97 | 27359 | Python | GitHub Trending – weekly | agent-plugins, agent-skills, agentic-ai, ai-coding-agent, anthropic-claude, claude-ai | 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills. |
-| 6 | [TencentCloud/Octop](https://github.com/TencentCloud/Octop) | 427.64 | 6439 | Python | GitHub Trending – weekly | agent, agentic-ai, ai, ai-agent, ai-agents, local-first | A smarter, self-hosted AI assistant — multi-user, multi-agent. |
-| 7 | [flutter/flutter](https://github.com/flutter/flutter) | 287.74 | 179270 | Dart | GitHub Trending – weekly | android, app-framework, cross-platform, dart, dart-platform, desktop | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
-| 8 | [vercel/next.js](https://github.com/vercel/next.js) | 270.76 | 143023 | JavaScript | GitHub Trending – weekly, GitHub Search API | blog, browser, compiler, components, hybrid, nextjs | The React Framework |
+| 1 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 2317.47 | 96846 | TypeScript | GitHub Trending – weekly | - | The open-source app everyone uses to manage agents at work |
+| 2 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 1656.11 | 63313 | Python | GitHub Trending – weekly | agents, ai, ai-agents, ai-engineering, computer-vision, course | Learn it. Build it. Ship it for others. |
+| 3 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 1555.05 | 52750 | Python | GitHub Trending – weekly | ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface | VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. |
+| 4 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 1422.26 | 56383 | TypeScript | GitHub Trending – weekly | ai, animation, ffmpeg, framework, gsap, html | Write HTML. Render video. Built for agents. |
+| 5 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 734.41 | 45200 | Python | GitHub Trending – weekly | agentic-ai, agents, ai-memory, memory | Hindsight: Agent Memory That Learns |
+| 6 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 448.2 | 27522 | Python | GitHub Trending – weekly | agent-plugins, agent-skills, agentic-ai, ai-coding-agent, anthropic-claude, claude-ai | 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills. |
+| 7 | [flutter/flutter](https://github.com/flutter/flutter) | 287.75 | 179320 | Dart | GitHub Trending – weekly | android, app-framework, cross-platform, dart, dart-platform, desktop | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
+| 8 | [vercel/next.js](https://github.com/vercel/next.js) | 270.83 | 143106 | JavaScript | GitHub Trending – weekly, GitHub Search API | blog, browser, compiler, components, hybrid, nextjs | The React Framework |
 
 ### Extra Search API finds
 
@@ -57,18 +57,18 @@ Additional repos found through GitHub Search API using Jonas-focused keywords. U
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 6332.59 | 391199 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞  |
-| 2 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5904.17 | 5016 | TypeScript | GitHub Search API | ai, content-curation, llm, mcp, news-aggregator, rss | 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。 |
-| 3 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 5335.07 | 271528 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
-| 4 | [feder-cr/dots](https://github.com/feder-cr/dots) | 3907.79 | 2555 | Python | GitHub Search API | ai-agent, ai-agents, ai-browser, anti-detect-browser, browser-agent, browser-automation | Open-source dots for the web: an AI agent with its own browser, one that does not get blocked. |
-| 5 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3712.23 | 2246 | Python | GitHub Search API | age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos. |
-| 6 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2945.36 | 250817 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
-| 7 | [Louis-CFM/coucou](https://github.com/Louis-CFM/coucou) | 2887.21 | 3040 | Swift | GitHub Search API | ai-agents, anthropic, antigravity, claude, claude-code, codex | A tiny friend that lives in your notch (macOS) or at the top of your screen (Windows, Linux) and keeps an eye on your coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. |
-| 8 | [anthropics/skills](https://github.com/anthropics/skills) | 2462.77 | 179441 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
-| 9 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 2376.75 | 1656 | TypeScript | GitHub Search API | - | Your always-on AI coworkers that move between text, calls, and Slack. |
-| 10 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 2271.03 | 155841 | Shell | GitHub Search API | - | A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. |
-| 11 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 2242.92 | 1223 | Python | GitHub Search API | agent-skills, ai-writing, antigravity, claude-code, codex, cursor | AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese |
-| 12 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 2108.57 | 211537 | TypeScript | GitHub Search API | - | The open source coding agent. |
+| 1 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 6313.27 | 391257 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞  |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 5749.15 | 275517 | Shell | GitHub Search API | - | Skills for Real Engineers. Straight from my .agents directory. |
+| 3 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5270.92 | 5532 | TypeScript | GitHub Search API | ai, content-curation, llm, mcp, news-aggregator, rss | 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。 |
+| 4 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3381.6 | 2719 | Python | GitHub Search API | age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos. |
+| 5 | [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk) | 3165.51 | 952 | C | GitHub Search API | - | Open source SDK to build Muse gadgets |
+| 6 | [feder-cr/dots](https://github.com/feder-cr/dots) | 3033.27 | 2581 | Python | GitHub Search API | ai-agent, ai-agents, ai-browser, anti-detect-browser, browser-agent, browser-automation | Open-source dots for the web: an AI agent with its own browser, one that does not get blocked. |
+| 7 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 3020.14 | 2715 | TypeScript | GitHub Search API | - | Your always-on AI coworkers that move between text, calls, and Slack. |
+| 8 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2941.1 | 251025 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
+| 9 | [anthropics/skills](https://github.com/anthropics/skills) | 2458.93 | 179557 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
+| 10 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 2268.17 | 156107 | Shell | GitHub Search API | - | A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. |
+| 11 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 2105.82 | 211662 | TypeScript | GitHub Search API | - | The open source coding agent. |
+| 12 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 1812.07 | 1342 | Python | GitHub Search API | agent-skills, ai-writing, antigravity, claude-code, codex, cursor | AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese |
 
 ## Overall top repos by score
 
@@ -76,138 +76,140 @@ This is a secondary view. Use the source sections above as the primary reading o
 
 | # | Repo | Score | Stars | Lang | Sources | Topics | Description |
 |---:|---|---:|---:|---|---|---|---|
-| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 6787.48 | 152062 | JavaScript | GitHub Trending – daily, GitHub Search API | agent-skills, ai-agents, claude, claude-code, claude-code-plugin, cursor-rules | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 5759.6 | 274854 | Shell | GitHub Trending – daily, GitHub Search API | - | Skills for Real Engineers. Straight from my .agents directory. |
-| 3 | [obra/superpowers](https://github.com/obra/superpowers) | 4184.71 | 294562 | Shell | GitHub Trending – daily, GitHub Search API | ai, brainstorming, coding, obra, sdlc, skills | An agentic skills framework & software development methodology that works. |
-| 4 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 3074.02 | 109207 | Go | GitHub Trending – daily | ai, anthropic, caveman, claude, claude-code, llm | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. |
-| 5 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 2076.89 | 88986 | Python | GitHub Trending – daily | agent-infrastructure, ai-agent, ai-search, automation, bilibili, claude-code | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees. |
-| 6 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 1419.62 | 56000 | TypeScript | GitHub Trending – daily, GitHub Trending – weekly | ai, animation, ffmpeg, framework, gsap, html | Write HTML. Render video. Built for agents. |
-| 7 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 1228.82 | 74484 | JavaScript | GitHub Trending – daily, GitHub Trending – weekly | - | The design language that makes your AI harness better at design. |
-| 8 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 1076.35 | 52496 | JavaScript | GitHub Trending – daily | claude, codex, marketing | Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering. |
-| 9 | [mksglu/context-mode](https://github.com/mksglu/context-mode) | 628.61 | 25097 | TypeScript | GitHub Trending – daily | antigravity, claude, claude-code, claude-code-hooks, claude-code-plugins, claude-code-skill | Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks. |
-| 10 | [NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell) | 390.31 | 14513 | Rust | GitHub Trending – daily | - | OpenShell is the safe, private runtime for autonomous AI agents. |
-| 11 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 2317.8 | 96405 | TypeScript | GitHub Trending – weekly | - | The open-source app everyone uses to manage agents at work |
-| 12 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 1650.21 | 62745 | Python | GitHub Trending – weekly | agents, ai, ai-agents, ai-engineering, computer-vision, course | Learn it. Build it. Ship it for others. |
-| 13 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 1544.07 | 52063 | Python | GitHub Trending – weekly | ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface | VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. |
-| 14 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 730.73 | 44806 | Python | GitHub Trending – weekly | agentic-ai, agents, ai-memory, memory | Hindsight: Agent Memory That Learns |
-| 15 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 446.97 | 27359 | Python | GitHub Trending – weekly | agent-plugins, agent-skills, agentic-ai, ai-coding-agent, anthropic-claude, claude-ai | 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills. |
-| 16 | [TencentCloud/Octop](https://github.com/TencentCloud/Octop) | 427.64 | 6439 | Python | GitHub Trending – weekly | agent, agentic-ai, ai, ai-agent, ai-agents, local-first | A smarter, self-hosted AI assistant — multi-user, multi-agent. |
-| 17 | [flutter/flutter](https://github.com/flutter/flutter) | 287.74 | 179270 | Dart | GitHub Trending – weekly | android, app-framework, cross-platform, dart, dart-platform, desktop | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
-| 18 | [vercel/next.js](https://github.com/vercel/next.js) | 270.76 | 143023 | JavaScript | GitHub Trending – weekly, GitHub Search API | blog, browser, compiler, components, hybrid, nextjs | The React Framework |
-| 19 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 6332.59 | 391199 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞  |
-| 20 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5904.17 | 5016 | TypeScript | GitHub Search API | ai, content-curation, llm, mcp, news-aggregator, rss | 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。 |
-| 21 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 5335.07 | 271528 | JavaScript | GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
-| 22 | [feder-cr/dots](https://github.com/feder-cr/dots) | 3907.79 | 2555 | Python | GitHub Search API | ai-agent, ai-agents, ai-browser, anti-detect-browser, browser-agent, browser-automation | Open-source dots for the web: an AI agent with its own browser, one that does not get blocked. |
-| 23 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3712.23 | 2246 | Python | GitHub Search API | age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos. |
-| 24 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2945.36 | 250817 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
-| 25 | [Louis-CFM/coucou](https://github.com/Louis-CFM/coucou) | 2887.21 | 3040 | Swift | GitHub Search API | ai-agents, anthropic, antigravity, claude, claude-code, codex | A tiny friend that lives in your notch (macOS) or at the top of your screen (Windows, Linux) and keeps an eye on your coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more. |
-| 26 | [anthropics/skills](https://github.com/anthropics/skills) | 2462.77 | 179441 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
-| 27 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 2376.75 | 1656 | TypeScript | GitHub Search API | - | Your always-on AI coworkers that move between text, calls, and Slack. |
-| 28 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 2271.03 | 155841 | Shell | GitHub Search API | - | A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. |
-| 29 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 2242.92 | 1223 | Python | GitHub Search API | agent-skills, ai-writing, antigravity, claude-code, codex, cursor | AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese |
-| 30 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 2108.57 | 211537 | TypeScript | GitHub Search API | - | The open source coding agent. |
+| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 6803.7 | 153796 | JavaScript | GitHub Trending – daily, GitHub Search API | agent-skills, ai-agents, claude, claude-code, claude-code-plugin, cursor-rules | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
+| 2 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 5331.43 | 272424 | JavaScript | GitHub Trending – daily, GitHub Search API | ai-agents, anthropic, claude, claude-code, developer-tools, llm | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| 3 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 3068.84 | 109627 | Go | GitHub Trending – daily | ai, anthropic, caveman, claude, claude-code, llm | 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman. |
+| 4 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 2261.48 | 100920 | JavaScript | GitHub Trending – daily | agent-skills, antigravity, claude-code, codex, cursor, skills | Production-grade engineering skills for AI coding agents. |
+| 5 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 2091.41 | 90052 | Python | GitHub Trending – daily | agent-infrastructure, ai-agent, ai-search, automation, bilibili, claude-code | Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees. |
+| 6 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 1272.53 | 95723 | TypeScript | GitHub Trending – daily | ai, ai-agents, ai-memory, anthropic, artificial-intelligence, chromadb | Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More |
+| 7 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 1241.86 | 75555 | JavaScript | GitHub Trending – daily, GitHub Trending – weekly | - | The design language that makes your AI harness better at design. |
+| 8 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | 587.91 | 24815 | TypeScript | GitHub Trending – daily | - |  |
+| 9 | [cloudflare/cloudflare-os](https://github.com/cloudflare/cloudflare-os) | 369.93 | 10647 | TypeScript | GitHub Trending – daily | - | Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems. |
+| 10 | [Effect-TS/effect](https://github.com/Effect-TS/effect) | 94.21 | 16881 | TypeScript | GitHub Trending – daily, GitHub Trending – weekly | cli, clustering, concurrency, dependency-injection, effect, error-handling | Build production-ready applications in TypeScript |
+| 11 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 2317.47 | 96846 | TypeScript | GitHub Trending – weekly | - | The open-source app everyone uses to manage agents at work |
+| 12 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 1656.11 | 63313 | Python | GitHub Trending – weekly | agents, ai, ai-agents, ai-engineering, computer-vision, course | Learn it. Build it. Ship it for others. |
+| 13 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 1555.05 | 52750 | Python | GitHub Trending – weekly | ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface | VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages. |
+| 14 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 1422.26 | 56383 | TypeScript | GitHub Trending – weekly | ai, animation, ffmpeg, framework, gsap, html | Write HTML. Render video. Built for agents. |
+| 15 | [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 734.41 | 45200 | Python | GitHub Trending – weekly | agentic-ai, agents, ai-memory, memory | Hindsight: Agent Memory That Learns |
+| 16 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 448.2 | 27522 | Python | GitHub Trending – weekly | agent-plugins, agent-skills, agentic-ai, ai-coding-agent, anthropic-claude, claude-ai | 380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills. |
+| 17 | [flutter/flutter](https://github.com/flutter/flutter) | 287.75 | 179320 | Dart | GitHub Trending – weekly | android, app-framework, cross-platform, dart, dart-platform, desktop | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
+| 18 | [vercel/next.js](https://github.com/vercel/next.js) | 270.83 | 143106 | JavaScript | GitHub Trending – weekly, GitHub Search API | blog, browser, compiler, components, hybrid, nextjs | The React Framework |
+| 19 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 6313.27 | 391257 | TypeScript | GitHub Search API | ai, assistant, crustacean, molty, openclaw, own-your-data | The AI that really does things. Any OS. Any Platform. The lobster way. 🦞  |
+| 20 | [mattpocock/skills](https://github.com/mattpocock/skills) | 5749.15 | 275517 | Shell | GitHub Search API | - | Skills for Real Engineers. Straight from my .agents directory. |
+| 21 | [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) | 5270.92 | 5532 | TypeScript | GitHub Search API | ai, content-curation, llm, mcp, news-aggregator, rss | 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。 |
+| 22 | [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder) | 3381.6 | 2719 | Python | GitHub Search API | age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding | Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos. |
+| 23 | [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk) | 3165.51 | 952 | C | GitHub Search API | - | Open source SDK to build Muse gadgets |
+| 24 | [feder-cr/dots](https://github.com/feder-cr/dots) | 3033.27 | 2581 | Python | GitHub Search API | ai-agent, ai-agents, ai-browser, anti-detect-browser, browser-agent, browser-automation | Open-source dots for the web: an AI agent with its own browser, one that does not get blocked. |
+| 25 | [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots) | 3020.14 | 2715 | TypeScript | GitHub Search API | - | Your always-on AI coworkers that move between text, calls, and Slack. |
+| 26 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2941.1 | 251025 | Python | GitHub Search API | ai, ai-agent, ai-agents, anthropic, chatgpt, claude | The agent that grows with you |
+| 27 | [anthropics/skills](https://github.com/anthropics/skills) | 2458.93 | 179557 | Python | GitHub Search API | agent-skills | Public repository for Agent Skills |
+| 28 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 2268.17 | 156107 | Shell | GitHub Search API | - | A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. |
+| 29 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 2105.82 | 211662 | TypeScript | GitHub Search API | - | The open source coding agent. |
+| 30 | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) | 1812.07 | 1342 | Python | GitHub Search API | agent-skills, ai-writing, antigravity, claude-code, codex, cursor | AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese |
 
 ## Trending developers – weekly
 
 These are stored separately from repos. Use them as people/projects to watch, not as direct implementation candidates.
 
-### 1. [tobi](https://github.com/tobi)
-
-- **Name:** Tobias Lütke
-- **Featured repo:** https://github.com/tobi/disktree
-- **Top recent repos:**
-  - [tobi/qmd](https://github.com/tobi/qmd) — 30165 stars — mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local
-  - [tobi/try](https://github.com/tobi/try) — 4036 stars — fresh directories for every vibe
-  - [tobi/walgit](https://github.com/tobi/walgit) — 2607 stars — -
-
-### 2. [MakazhanAlpamys](https://github.com/MakazhanAlpamys)
-
-- **Name:** Alpamys Makazhan
-- **Featured repo:** https://github.com/MakazhanAlpamys/Soup
-- **Top recent repos:**
-  - [MakazhanAlpamys/Soup](https://github.com/MakazhanAlpamys/Soup) — 8038 stars — Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.
-  - [MakazhanAlpamys/soup-wall](https://github.com/MakazhanAlpamys/soup-wall) — 15 stars — Soup Wall: open-source security for AI agents and model traffic. Local Agent, Gateway, self-hosted Console. Apache-2.0.
-  - [MakazhanAlpamys/MakazhanAlpamys](https://github.com/MakazhanAlpamys/MakazhanAlpamys) — 10 stars — -
-
-### 3. [abrignoni](https://github.com/abrignoni)
-
-- **Name:** Brigs
-- **Featured repo:** https://github.com/abrignoni/iLEAPP
-- **Top recent repos:**
-  - [abrignoni/iLEAPP](https://github.com/abrignoni/iLEAPP) — 1345 stars — iOS Logs, Events, And Plist Parser
-  - [abrignoni/ALEAPP](https://github.com/abrignoni/ALEAPP) — 946 stars — Android Logs Events And Protobuf Parser
-  - [abrignoni/RLEAPP](https://github.com/abrignoni/RLEAPP) — 145 stars — Returns Logs Events And Properties Parser
-
-### 4. [jarrodwatts](https://github.com/jarrodwatts)
-
-- **Name:** Jarrod Watts
-- **Featured repo:** https://github.com/jarrodwatts/jev-trader
-- **Top recent repos:**
-  - [jarrodwatts/claude-hud](https://github.com/jarrodwatts/claude-hud) — 28270 stars — A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress
-  - [jarrodwatts/jev-trader](https://github.com/jarrodwatts/jev-trader) — 2752 stars — One AI trade decision every Monad block. Jev on Kuru MON-USDC.
-  - [jarrodwatts/claude-code-config](https://github.com/jarrodwatts/claude-code-config) — 1062 stars — My personal Claude Code configuration - rules, hooks, agents, skills, and commands
-
-### 5. [mpfaffenberger](https://github.com/mpfaffenberger)
-
-- **Name:** Mike Pfaffenberger
-- **Featured repo:** https://github.com/mpfaffenberger/code_puppy
-- **Top recent repos:**
-  - [mpfaffenberger/code_puppy](https://github.com/mpfaffenberger/code_puppy) — 841 stars — Agentic AI for writing code
-  - [mpfaffenberger/orthorectification](https://github.com/mpfaffenberger/orthorectification) — 45 stars — Orthorectification in Python
-  - [mpfaffenberger/termflow](https://github.com/mpfaffenberger/termflow) — 7 stars — Streaming markdown renderer for Python CLIs
-
-### 6. [weblate](https://github.com/weblate)
-
-- **Name:** Weblate (bot)
-- **Featured repo:** https://github.com/weblate/myna
-
-### 7. [yairm210](https://github.com/yairm210)
-
-- **Name:** Yair Morgenstern
-- **Featured repo:** https://github.com/yairm210/Unciv
-- **Top recent repos:**
-  - [yairm210/Unciv](https://github.com/yairm210/Unciv) — 11388 stars — Open-source Android/Desktop remake of Civ V
-  - [yairm210/Unciv-mod-example](https://github.com/yairm210/Unciv-mod-example) — 101 stars — Unciv mod template for a new civilization
-  - [yairm210/Purity](https://github.com/yairm210/Purity) — 46 stars —  Kotlin Compiler Plugin for validating Pure and Readonly functions
-
-### 8. [Ikalus1988](https://github.com/Ikalus1988)
+### 1. [Ikalus1988](https://github.com/Ikalus1988)
 
 - **Name:** Ikalus1988
 - **Featured repo:** https://github.com/Ikalus1988/MisakaNet
 - **Top recent repos:**
-  - [Ikalus1988/MisakaNet](https://github.com/Ikalus1988/MisakaNet) — 520 stars — 📚 A zero-dependency, git-backed micro-lesson library for AI Agents to asynchronously share and search verified debugging experience. | https://misakanet.org
+  - [Ikalus1988/MisakaNet](https://github.com/Ikalus1988/MisakaNet) — 521 stars — 📚 A zero-dependency, git-backed micro-lesson library for AI Agents to asynchronously share and search verified debugging experience. | https://misakanet.org
   - [Ikalus1988/pre-commit-dco](https://github.com/Ikalus1988/pre-commit-dco) — 1 stars — 43-line Python hook that verifies DCO sign-off. Beat pre-commit's core team at their own game.
   - [Ikalus1988/pensieve](https://github.com/Ikalus1988/pensieve) — 1 stars — -
 
-### 9. [assafelovic](https://github.com/assafelovic)
+### 2. [rynfar](https://github.com/rynfar)
 
-- **Name:** Assaf Elovic
-- **Featured repo:** https://github.com/assafelovic/gpt-researcher
+- **Name:** Trevor Walker
+- **Featured repo:** https://github.com/rynfar/meridian
 - **Top recent repos:**
-  - [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) — 29881 stars — An autonomous agent that conducts deep research on any data using any LLM providers
-  - [assafelovic/gptr-mcp](https://github.com/assafelovic/gptr-mcp) — 371 stars — MCP server for enabling LLM applications to perform deep research via the MCP protocol
-  - [assafelovic/skyll](https://github.com/assafelovic/skyll) — 246 stars — A tool for autonomous agents like OpenClaw to discover and learn skills autonomously
+  - [rynfar/meridian](https://github.com/rynfar/meridian) — 2089 stars — Use Claude and Antigravity with Pi, OpenCode and other coding clients. Local API bridge, usage dashboard and Mac app. Antigravity preview available in 1.74.0.
+  - [rynfar/meridian-plugin-opencode-scrub](https://github.com/rynfar/meridian-plugin-opencode-scrub) — 28 stars — Meridian plugin: strip OpenCode identifying fingerprints from the system prompt
+  - [rynfar/meridian-plugin-pi-scrub](https://github.com/rynfar/meridian-plugin-pi-scrub) — 13 stars — Meridian plugin: strip pi-coding-agent identity fingerprints from the system prompt before it reaches Claude
 
-### 10. [bdraco](https://github.com/bdraco)
+### 3. [mpfaffenberger](https://github.com/mpfaffenberger)
 
-- **Name:** J. Nick Koston
-- **Featured repo:** https://github.com/bdraco/python-isal
+- **Name:** Mike Pfaffenberger
+- **Featured repo:** https://github.com/mpfaffenberger/code_puppy
 - **Top recent repos:**
-  - [bdraco/freenub](https://github.com/bdraco/freenub) — 3 stars — This is a fork of pubnub when it still had an MIT license
+  - [mpfaffenberger/code_puppy](https://github.com/mpfaffenberger/code_puppy) — 842 stars — Agentic AI for writing code
+  - [mpfaffenberger/orthorectification](https://github.com/mpfaffenberger/orthorectification) — 45 stars — Orthorectification in Python
+  - [mpfaffenberger/termflow](https://github.com/mpfaffenberger/termflow) — 7 stars — Streaming markdown renderer for Python CLIs
+
+### 4. [MakazhanAlpamys](https://github.com/MakazhanAlpamys)
+
+- **Name:** Alpamys Makazhan
+- **Featured repo:** https://github.com/MakazhanAlpamys/Soup
+- **Top recent repos:**
+  - [MakazhanAlpamys/Soup](https://github.com/MakazhanAlpamys/Soup) — 8082 stars — Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.
+  - [MakazhanAlpamys/soup-wall](https://github.com/MakazhanAlpamys/soup-wall) — 16 stars — Soup Wall: open-source security for AI agents and model traffic. Local Agent, Gateway, self-hosted Console. Apache-2.0.
+  - [MakazhanAlpamys/MakazhanAlpamys](https://github.com/MakazhanAlpamys/MakazhanAlpamys) — 10 stars — -
+
+### 5. [abrignoni](https://github.com/abrignoni)
+
+- **Name:** Brigs
+- **Featured repo:** https://github.com/abrignoni/iLEAPP
+- **Top recent repos:**
+  - [abrignoni/iLEAPP](https://github.com/abrignoni/iLEAPP) — 1346 stars — iOS Logs, Events, And Plist Parser
+  - [abrignoni/ALEAPP](https://github.com/abrignoni/ALEAPP) — 946 stars — Android Logs Events And Protobuf Parser
+  - [abrignoni/RLEAPP](https://github.com/abrignoni/RLEAPP) — 145 stars — Returns Logs Events And Properties Parser
+
+### 6. [maurodesouza](https://github.com/maurodesouza)
+
+- **Name:** Mauro de Souza
+- **Featured repo:** https://github.com/maurodesouza/profile-readme-generator
+- **Top recent repos:**
+  - [maurodesouza/profile-readme-generator](https://github.com/maurodesouza/profile-readme-generator) — 4546 stars — 🎨 Enhance your GitHub profile with this amazing tool, which allows you to create a personalized README quickly and easily. This profile README generator is the best you'll find 🚀
+  - [maurodesouza/vscode-my-templates](https://github.com/maurodesouza/vscode-my-templates) — 35 stars — 🗃 Custom Templates for Visual Studio Code ❤
+  - [maurodesouza/github-readme-activity-graph-action](https://github.com/maurodesouza/github-readme-activity-graph-action) — 17 stars — 📈 Generate beautiful and fully customizable GitHub activity graphs directly from GitHub Actions, automatically publishing SVG cards ready to showcase your coding journey in any README 🚀
+
+### 7. [jarrodwatts](https://github.com/jarrodwatts)
+
+- **Name:** Jarrod Watts
+- **Featured repo:** https://github.com/jarrodwatts/jev-trader
+- **Top recent repos:**
+  - [jarrodwatts/claude-hud](https://github.com/jarrodwatts/claude-hud) — 28291 stars — A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress
+  - [jarrodwatts/jev-trader](https://github.com/jarrodwatts/jev-trader) — 2773 stars — One AI trade decision every Monad block. Jev on Kuru MON-USDC.
+  - [jarrodwatts/claude-code-config](https://github.com/jarrodwatts/claude-code-config) — 1062 stars — My personal Claude Code configuration - rules, hooks, agents, skills, and commands
+
+### 8. [mvschwarz](https://github.com/mvschwarz)
+
+- **Name:** Mike Schwarz
+- **Featured repo:** https://github.com/mvschwarz/openrig
+- **Top recent repos:**
+  - [mvschwarz/openrig](https://github.com/mvschwarz/openrig) — 4760 stars — Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.
+  - [mvschwarz/openrig-studio](https://github.com/mvschwarz/openrig-studio) — 9 stars — Official OpenRig Studio SDK (@openrig/studio)
+  - [mvschwarz/openrig-world](https://github.com/mvschwarz/openrig-world) — 6 stars — Project world for building OpenRig with coding agents: a context pack and a small contributor rig.
+
+### 9. [weblate](https://github.com/weblate)
+
+- **Name:** Weblate (bot)
+- **Featured repo:** https://github.com/weblate/myna
+
+### 10. [yairm210](https://github.com/yairm210)
+
+- **Name:** Yair Morgenstern
+- **Featured repo:** https://github.com/yairm210/Unciv
+- **Top recent repos:**
+  - [yairm210/Unciv](https://github.com/yairm210/Unciv) — 11390 stars — Open-source Android/Desktop remake of Civ V
+  - [yairm210/Unciv-mod-example](https://github.com/yairm210/Unciv-mod-example) — 101 stars — Unciv mod template for a new civilization
+  - [yairm210/Purity](https://github.com/yairm210/Purity) — 46 stars —  Kotlin Compiler Plugin for validating Pure and Readonly functions
 
 
 ## Repo details with README excerpts
 
 ### 1. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
 
-- **Score:** 6787.48
+- **Score:** 6803.7
 - **Sources:** GitHub Trending – daily, GitHub Search API
-- **Stars:** 152062
-- **Forks:** 8158
+- **Stars:** 153796
+- **Forks:** 8268
 - **Language:** JavaScript
 - **Topics:** agent-skills, ai-agents, claude, claude-code, claude-code-plugin, cursor-rules, developer-tools, llm, prompt-engineering, yagni
 - **Created:** 2026-06-12T00:52:37Z
-- **Updated:** 2026-10-03T06:34:50Z
+- **Updated:** 2026-10-04T06:58:19Z
 - **Pushed:** 2026-10-03T05:12:55Z
 - **Homepage:** https://ponytail.dev
 
@@ -246,125 +248,76 @@ These are stored separately from repos. Use them as people/projects to watch, no
   <a href="https://trendshift.io/
 ```
 
-### 2. [mattpocock/skills](https://github.com/mattpocock/skills)
+### 2. [affaan-m/ECC](https://github.com/affaan-m/ECC)
 
-- **Score:** 5759.6
+- **Score:** 5331.43
 - **Sources:** GitHub Trending – daily, GitHub Search API
-- **Stars:** 274854
-- **Forks:** 23068
-- **Language:** Shell
-- **Topics:** -
-- **Created:** 2026-02-03T11:15:53Z
-- **Updated:** 2026-10-03T06:33:08Z
-- **Pushed:** 2026-09-29T12:38:37Z
-- **Homepage:** https://aihero.dev/skills
+- **Stars:** 272424
+- **Forks:** 40678
+- **Language:** JavaScript
+- **Topics:** ai-agents, anthropic, claude, claude-code, developer-tools, llm, mcp, productivity
+- **Created:** 2026-01-18T00:51:51Z
+- **Updated:** 2026-10-04T06:54:07Z
+- **Pushed:** 2026-10-02T02:01:14Z
+- **Homepage:** https://ecc.tools
 
-**Description:** Skills for Real Engineers. Straight from my .agents directory.
+**Description:** The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
 
 **README excerpt:**
 
 ```md
-<p>
-  <a href="https://www.aihero.dev/s/skills-newsletter">
+<p align="center">
+  <img src="assets/hero.png" alt="ECC - the agent harness operating system" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://www.star-history.com/affaan-m/ecc">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png">
-      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png">
-      <img alt="Skills" src="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png" width="369">
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending&theme=dark" />
+      <img src="https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending" alt="GitHub Trending Repository of the Day" height="46" />
+    </picture>
+  </a>
+  <a href="https://www.star-history.com/affaan-m/ecc">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank&theme=dark" />
+      <img src="https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank" alt="Star History Global Rank" height="46" />
     </picture>
   </a>
 </p>
 
-# Skills For Real Engineers
+<p align="center">
+  <strong>Language:</strong>
+  <a href="README.md">English</a> |
+  <a href="docs/pt-BR/README.md">Português (Brasil)</a> |
+  <a href="README.zh-CN.md">简体中文</a> |
+  <a href="docs/zh-TW/README.md">繁體中文</a> |
+  <a href="docs/ja-JP/README.md">日本語</a> |
+  <a href="docs/ko-KR/README.md">한국어</a> |
+  <a href="docs/tr/README.md">Türkçe</a> |
+  <a href="docs/ru/README.md">Русский</a> |
+  <a href="docs/vi-VN/README.md">Tiếng Việt</a> |
+  <a href="docs/th/README.md">ไทย</a> |
+  <a href="docs/de-DE/README.md">Deutsch</a> |
+  <a href="docs/es/README.md">Español</a> |
+  <a href="docs/uk-UA/README.md">Українська</a> |
+  <a href="docs/pl/README.md">Polski</a>
+</p>
 
-[![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
-
-My agent skills that I use every day to do real engineering - not vibe coding.
-
-Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve.
-
-These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy.
-
-If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter:
-
-[Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
-
-## Installation (30-second setup)
-
-Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather t
+<p align="center">
+  <a href="https://discord.gg/36yG
 ```
 
-### 3. [obra/superpowers](https://github.com/obra/superpowers)
+### 3. [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
 
-- **Score:** 4184.71
-- **Sources:** GitHub Trending – daily, GitHub Search API
-- **Stars:** 294562
-- **Forks:** 26330
-- **Language:** Shell
-- **Topics:** ai, brainstorming, coding, obra, sdlc, skills, subagent-driven-development, superpowers
-- **Created:** 2025-10-09T19:45:18Z
-- **Updated:** 2026-10-03T06:30:23Z
-- **Pushed:** 2026-09-27T02:37:47Z
-
-**Description:** An agentic skills framework & software development methodology that works.
-
-**README excerpt:**
-
-```md
-# Superpowers
-
-Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
-
-## Table of Contents
-
-- [How it works](#how-it-works)
-- [Commercial Services](#commercial-services)
-- [Getting Started](#installation)
-  - [Claude Code](#claude-code)
-  - [Antigravity](#antigravity)
-  - [Codex App](#codex-app)
-  - [Codex CLI](#codex-cli)
-  - [Cursor](#cursor)
-  - [Devin CLI](#devin-cli)
-  - [Factory Droid](#factory-droid)
-  - [Gemini CLI](#gemini-cli)
-  - [GitHub Copilot CLI](#github-copilot-cli)
-  - [Grok Build CLI](#grok-build-cli)
-  - [Kimi Code](#kimi-code)
-  - [OpenCode](#opencode)
-  - [Pi](#pi)
-  - [Qwen Code](#qwen-code)
-  - [Hermes Agent](#hermes-agent)
-  - [Muse](#muse)
-- [The Basic Workflow](#the-basic-workflow)
-- [When Something Goes Wrong](#when-something-goes-wrong)
-- [Community](#community)
-- [What's Inside](#whats-inside)
-- [Philosophy](#philosophy)
-- [Contributing](#contributing)
-- [Updating](#updating)
-- [License](#license)
-- [Visual companion telemetry](#visual-companion-telemetry)
-
-## How it works
-
-It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. 
-
-Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. 
-
-After you've signed off on the design, your agent puts together an implementation plan that'
-```
-
-### 4. [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
-
-- **Score:** 3074.02
+- **Score:** 3068.84
 - **Sources:** GitHub Trending – daily
-- **Stars:** 109207
-- **Forks:** 6320
+- **Stars:** 109627
+- **Forks:** 6341
 - **Language:** Go
 - **Topics:** ai, anthropic, caveman, claude, claude-code, llm, meme, prompt-engineering, skill, tokens
 - **Created:** 2026-04-04T10:03:00Z
-- **Updated:** 2026-10-03T06:28:48Z
-- **Pushed:** 2026-10-03T05:26:35Z
+- **Updated:** 2026-10-04T06:56:54Z
+- **Pushed:** 2026-10-04T05:34:43Z
 - **Homepage:** https://docs.caveman.so/docs/quickstart
 
 **Description:** 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
@@ -376,34 +329,88 @@ After you've signed off on the design, your agent puts together an implementatio
 
 <img src="docs/assets/caveman-logo-banner.png" alt="Caveman" width="720">
 
-# why use many token when few do trick
+# why many token when few do trick
 
-**Your AI coding agent bills by the word and writes like it knows that. Caveman make it stop.**
-
-<a href="https://www.youtube.com/watch?v=L29q2LRiMRc">
-  <img src="https://img.youtube.com/vi/L29q2LRiMRc/hqdefault.jpg" alt="ThePrimeagen reacts to Caveman: No way this actually works" width="360">
-</a>
-
-▶️ **[ThePrimeagen reacts: "No way this actually works"](https://www.youtube.com/watch?v=L29q2LRiMRc)**
+**Caveman make your AI agent say less and read less. Code stay exact. Brain still big.**
 
 <a href="https://github.com/JuliusBrussee/caveman/stargazers"><img src="https://img.shields.io/github/stars/JuliusBrussee/caveman?style=flat-square&color=F0A63C&label=stars" alt="GitHub stars"></a>
 <a href="https://www.npmjs.com/package/@caveman-ai/cli"><img src="https://img.shields.io/npm/dm/@caveman-ai/cli?style=flat-square&color=F0A63C&label=cli%20downloads" alt="npm downloads"></a>
-<a href="https://www.npmjs.com/package/@caveman-ai/middleware"><img src="https://img.shields.io/npm/v/@caveman-ai/middleware?style=flat-square&color=F0A63C&label=middleware%20npm" alt="middleware on npm"></a>
-<a href="https://pypi.org/project/caveman-middleware/"><img src="https://img.shields.io/pypi/v/caveman-middleware?style=flat-square&color=F0A63C&label=middleware%20pypi" alt="middleware on PyPI"></a>
 <a href="./INSTALL.md"><img src="https://img.shields.io/badge/works_with-30%2B_agents-orange?style=flat-square" alt="30+ agents"></a>
-<a href="#wrap-any-agent"><img src="https://img.shields.io/badge/wraps-10_agents_natively-blue?style=flat-square" alt="10 na
+<a href="#license"><img src="https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square" alt="License"></a>
+
+<table>
+<tr>
+<td align="center" width="33%"><h3>33.2% fewer</h3>input tokens through <a href="#the-proxy-332-fewer-input-tokens">the proxy</a><br><sub>54 Claude Code runs, 18 of 18 answers right</sub></td>
+<td align="center" width="33%"><h3>129.8× smaller</h3>web pages for the agent<br><sub><a href="./browse/BENCHMARK.md"><code>caveman browse</code></a> vs a Playwright snapshot</sub></td>
+<td align="center" width="33%"><h3>1.4 to 2.4× cheaper</h3>with caveman-style output<br><sub><a href="https://arxiv.org/abs/2606.24083">Adobe Research</a>, eight models</sub></td>
+</tr>
+</table>
+
+Cited by **[Adobe Research](https://arxiv.org/abs/2606.24083)** · A/B tested by **[JetBrains](https://blog.jetbrains.com/ai/2026/07/speak-to-ai
+```
+
+### 4. [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
+
+- **Score:** 2261.48
+- **Sources:** GitHub Trending – daily
+- **Stars:** 100920
+- **Forks:** 10603
+- **Language:** JavaScript
+- **Topics:** agent-skills, antigravity, claude-code, codex, cursor, skills
+- **Created:** 2026-02-15T20:20:26Z
+- **Updated:** 2026-10-04T06:51:39Z
+- **Pushed:** 2026-10-03T18:21:11Z
+- **Homepage:** https://skills.addy.ie
+
+**Description:** Production-grade engineering skills for AI coding agents.
+
+**README excerpt:**
+
+```md
+# Agent Skills
+
+**Production-grade engineering skills for AI coding agents.**
+
+Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development.
+
+<a href="https://trendshift.io/repositories/25200" target="_blank"><img src="https://trendshift.io/api/badge/repositories/25200" alt="addyosmani%2Fagent-skills | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg)
+
+```
+  DEFINE          PLAN           BUILD          VERIFY         REVIEW          SHIP
+ ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐
+ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │  QA  │ ───▶ │  Go  │
+ │Refine│      │  PRD │      │ Impl │      │Debug │      │ Gate │      │ Live │
+ └──────┘      └──────┘      └──────┘      └──────┘      └──────┘      └──────┘
+  /spec          /plan          /build        /test         /review       /ship
+```
+
+---
+
+## Commands
+
+9 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
+
+| What you're doing | Command | Key principle |
+|-------------------|---------|---------------|
+| Define what to build | `/spec` | Spec before code |
+| Plan how to build it | `/plan` | Small, atomic tasks |
+| Build incrementally | `/build` | One slice at a time |
+| Prove it works | `/test` | Tests are proof |
+| Set the quality bar | `/constraints` | Decide it onc
 ```
 
 ### 5. [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach)
 
-- **Score:** 2076.89
+- **Score:** 2091.41
 - **Sources:** GitHub Trending – daily
-- **Stars:** 88986
-- **Forks:** 7837
+- **Stars:** 90052
+- **Forks:** 7923
 - **Language:** Python
 - **Topics:** agent-infrastructure, ai-agent, ai-search, automation, bilibili, claude-code, cli, cursor, free-api, llm-tools, mcp, python, reddit-scraper, twitter-scraper, web-scraper, xiaohongshu, youtube-transcript
 - **Created:** 2026-02-24T02:10:24Z
-- **Updated:** 2026-10-03T06:33:30Z
+- **Updated:** 2026-10-04T06:56:52Z
 - **Pushed:** 2026-09-15T16:16:24Z
 
 **Description:** Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.
@@ -451,65 +458,72 @@ After you've signed off on the design, your agent puts together an implementatio
 <td><a href="https://www.browseract.ai
 ```
 
-### 6. [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
+### 6. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem)
 
-- **Score:** 1419.62
-- **Sources:** GitHub Trending – daily, GitHub Trending – weekly
-- **Stars:** 56000
-- **Forks:** 5041
+- **Score:** 1272.53
+- **Sources:** GitHub Trending – daily
+- **Stars:** 95723
+- **Forks:** 8467
 - **Language:** TypeScript
-- **Topics:** ai, animation, ffmpeg, framework, gsap, html, mcp, puppeteer, rendering, typescript, video
-- **Created:** 2026-03-10T01:51:06Z
-- **Updated:** 2026-10-03T06:33:03Z
-- **Pushed:** 2026-10-03T06:35:18Z
+- **Topics:** ai, ai-agents, ai-memory, anthropic, artificial-intelligence, chromadb, claude, claude-agent-sdk, claude-agents, claude-code, claude-code-plugin, claude-skills, embeddings, long-term-memory, mem0, memory-engine, openmemory, rag, sqlite, supermemory
+- **Created:** 2025-08-31T20:50:03Z
+- **Updated:** 2026-10-04T06:57:53Z
+- **Pushed:** 2026-10-04T06:07:13Z
+- **Homepage:** https://claude-mem.ai
 
-**Description:** Write HTML. Render video. Built for agents.
+**Description:** Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More
 
 **README excerpt:**
 
 ```md
+<h1 align="center">
+  <br>
+  <a href="https://github.com/thedotmack/claude-mem">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/public/claude-mem-logo-for-dark-mode.webp">
+      <source media="(prefers-color-scheme: light)" srcset="docs/public/claude-mem-logo-for-light-mode.webp">
+      <img src="docs/public/claude-mem-logo-for-light-mode.webp" alt="Claude-Mem" width="400">
+    </picture>
+  </a>
+</h1>
+
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/logo/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/logo/light.svg">
-    <img alt="HyperFrames" src="docs/logo/light.svg" width="300">
-  </picture>
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg" height="24" />
+  &nbsp;&nbsp;&nbsp;
+  <img alt="Greptile" src="docs/public/greptile-wordmark-green.svg" height="24" />
+  &nbsp;&nbsp;&nbsp;
+  <img alt="SerpApi" src="docs/public/serpapi-logo-with-wordmark-gradient.svg" height="24" />
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/hyperframes"><img src="https://img.shields.io/npm/v/hyperframes.svg?style=flat" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/hyperframes"><img src="https://img.shields.io/npm/dm/hyperframes.svg?style=flat" alt="npm downloads"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
-  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D22-brightgreen" alt="Node.js"></a>
-  <a href="https://discord.gg/EbK98HBPdk"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
-</p>
-
-<p align="center"><b>Write HTML. Render video. Built for agents.</b></p>
-
-<p align="center">
-  <a href="https://hyperframes.heygen.com/quickstart">Quickstart</a> |
-  <a href="https://hyperframes.heygen.com/showcase">Showcase</a> |
-  <a href="https://www.hyperframes.dev/">Playground</a> |
-  <a href="https://hyperframes.heygen.com/catalog/blocks/data-chart">Catalog</a> |
-  <a href="https://hyperframes.heygen.com/introduction">Docs</a> |
-  <a href="https://discord.gg/EbK98HBPdk">Discord</a>
-</p>
-
-<p align="center">
-  <img src="docs/public/images/hyperframes-logo-motion-1280-trimmed.webp" alt="HyperFrames demo: HTML code on the lef
+  <a href="docs/i18n/README.zh.md">🇨🇳 中文</a> •
+  <a href="docs/i18n/README.zh-tw.md">🇹🇼 繁體中文</a> •
+  <a href="docs/i18n/README.ja.md">🇯🇵 日本語</a> •
+  <a href="docs/i18n/README.pt.md">🇵🇹 Português</a> •
+  <a href="docs/i18n/README.pt-br.md">🇧🇷 Português</a> •
+  <a href="docs/i18n/README.ko.md">🇰🇷 한국어</a> •
+  <a href="docs/i18n/README.es.md">🇪🇸 Español</a> •
+  <a href="docs/i18n/README.de.md">🇩🇪 Deutsch</a> •
+  <a href="docs/i18n/README.fr.md">🇫🇷 Français</a> •
+  <a href="docs/i18n/README.he.md">🇮🇱 עברית</a> •
+  <a href="docs/i18n/README.ar.md">🇸🇦 العربية</a> •
+  <a href="docs/i18n/README.ru.md">🇷🇺 Русский</a> •
+  <a href="docs/i18n/README.pl.md">🇵🇱 Polski</a> •
+  <a href="docs/i18n/README.cs.md">🇨🇿 Čeština</a> •
+  <a href="docs/i18n/README.nl.md">🇳🇱 Nederlands</a
 ```
 
 ### 7. [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
 
-- **Score:** 1228.82
+- **Score:** 1241.86
 - **Sources:** GitHub Trending – daily, GitHub Trending – weekly
-- **Stars:** 74484
-- **Forks:** 4489
+- **Stars:** 75555
+- **Forks:** 4527
 - **Language:** JavaScript
 - **Topics:** -
 - **Created:** 2025-11-16T01:52:04Z
-- **Updated:** 2026-10-03T06:35:00Z
-- **Pushed:** 2026-10-03T05:22:53Z
+- **Updated:** 2026-10-04T06:57:47Z
+- **Pushed:** 2026-10-03T07:35:50Z
 - **Homepage:** https://impeccable.style
 
 **Description:** The design language that makes your AI harness better at design.
@@ -553,124 +567,150 @@ Start every new project with:
 `ini
 ```
 
-### 8. [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+### 8. [pingdotgg/t3code](https://github.com/pingdotgg/t3code)
 
-- **Score:** 1076.35
+- **Score:** 587.91
 - **Sources:** GitHub Trending – daily
-- **Stars:** 52496
-- **Forks:** 7885
-- **Language:** JavaScript
-- **Topics:** claude, codex, marketing
-- **Created:** 2026-01-15T19:45:23Z
-- **Updated:** 2026-10-03T06:34:56Z
-- **Pushed:** 2026-10-03T01:51:50Z
-- **Homepage:** https://marketing-skills.com
-
-**Description:** Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.
-
-**README excerpt:**
-
-```md
-# Marketing Skills for AI Agents
-
-A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
-
-Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
-
-New to the terminal and coding agents? Check out the companion guide [Coding for Marketers](https://codingformarketers.com?ref=marketingskills).
-
-**Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
-
-Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help.
-
-## Partners
-
-The library is free and MIT-licensed. [Verified Partners](tools/REGISTRY.md#verified-partners) fund the work — vetted, disclosed tool integration
-```
-
-### 9. [mksglu/context-mode](https://github.com/mksglu/context-mode)
-
-- **Score:** 628.61
-- **Sources:** GitHub Trending – daily
-- **Stars:** 25097
-- **Forks:** 1801
+- **Stars:** 24815
+- **Forks:** 6459
 - **Language:** TypeScript
-- **Topics:** antigravity, claude, claude-code, claude-code-hooks, claude-code-plugins, claude-code-skill, codex, codex-cli, context-mode, copilot, cursor-plugin, kiro, mcp, mcp-server, mcp-tools, openclaw, opencode, pi-agent, skills, zed-extension
-- **Created:** 2026-02-23T05:56:28Z
-- **Updated:** 2026-10-03T06:28:05Z
-- **Pushed:** 2026-10-03T00:12:31Z
-- **Homepage:** https://context-mode.com
+- **Topics:** -
+- **Created:** 2026-02-08T23:46:22Z
+- **Updated:** 2026-10-04T06:58:11Z
+- **Pushed:** 2026-10-04T06:41:02Z
+- **Homepage:** https://t3.codes
 
-**Description:** Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.
+**Description:** -
 
 **README excerpt:**
 
 ```md
-# Context Mode
+# T3 Code
 
-**The other half of the context problem.**
+T3 Code is an "agent harness control surface". It enables control of the agents on your machine with a best-in-class mobile app ([iOS](https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824), [Android](https://play.google.com/store/apps/details?id=com.t3tools.t3code)), [web app](https://app.t3.codes) and [Electron-based desktop app](https://t3.codes).
 
-[![users](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.message&label=users&color=brightgreen)](https://www.npmjs.com/package/context-mode) [![npm](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.npm&label=npm&color=blue)](https://www.npmjs.com/package/context-mode) [![marketplace](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.marketplace&label=marketplace&color=blue)](https://github.com/mksglu/context-mode) [![GitHub stars](https://img.shields.io/github/stars/mksglu/context-mode?style=flat&color=yellow)](https://github.com/mksglu/context-mode/stargazers) [![GitHub forks](https://img.shields.io/github/forks/mksglu/context-mode?style=flat&color=blue)](https://github.com/mksglu/context-mode/network/members) [![Last commit](https://img.shields.io/github/last-commit/mksglu/context-mode?color=green)](https://github.com/mksglu/context-mode/commits) [![License: ELv2](https://img.shields.io/badge/License-ELv2-blue.svg)](LICENSE)
-[![Discord](https://img.shields.io/discord/1478479412700909750?label=Discord&logo=discord&color=5865f2)](https://discord.gg/DCN9jUgN5v)
-[![Hacker News #1](https://img.shields.io/badge/Hacker%20News-%231%20%E2%80%A2%20570%2B%20points-ff6600?logo=ycombinator&logoColor=white)](https://news.ycombinator.com/item?id=47193064)
+Works with your subscriptions on Claude Code, Codex, Cursor, Grok Build, OpenCode, and Google Antigravity. If they're set up on your computer, T3 Code can control them.
 
-<p align="cent
+## "Wait, what are you selling me?"
+
+Nothing. We built T3 Code because we wanted the best possible development experience with agents. We were inspired by existing solutions like the Codex desktop app, Conductor, Claude Desktop and Cursor Glass, but none met our bar.
+
+We wanted something performant, remote-ready, and truly open. If we ever go the wrong direction, we want you to have everything you need to fork and build the editor that you want.
+
+## Installation
+
+> [!WARNING]
+> T3 Code currently supports Codex, Claude, Cursor, Grok Build, OpenCode, and Antigravity. Install and authenticate at least one provider before use:
+>
+> - Codex: install [Codex CLI](https://developers.openai.com/codex/cli) and run `codex login`
+> - Claude: install [Claude Code](https://claude.com/product/claude-code) and run `claude auth login`
+> - Cursor: install [Cursor CLI](https://cursor.com/cli) and run `agent login`
+> - Grok Build: install [Grok Build CLI](https://x.ai/cli) and run `grok login`
+> - OpenCode: install [OpenCode](https://opencode.ai) and run
 ```
 
-### 10. [NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell)
+### 9. [cloudflare/cloudflare-os](https://github.com/cloudflare/cloudflare-os)
 
-- **Score:** 390.31
+- **Score:** 369.93
 - **Sources:** GitHub Trending – daily
-- **Stars:** 14513
-- **Forks:** 1666
-- **Language:** Rust
+- **Stars:** 10647
+- **Forks:** 1287
+- **Language:** TypeScript
 - **Topics:** -
-- **Created:** 2026-02-24T22:52:22Z
-- **Updated:** 2026-10-03T06:33:05Z
-- **Pushed:** 2026-10-03T06:22:29Z
-- **Homepage:** https://docs.nvidia.com/openshell/latest/
+- **Created:** 2026-04-15T22:22:53Z
+- **Updated:** 2026-10-04T06:57:02Z
+- **Pushed:** 2026-10-04T00:17:29Z
+- **Homepage:** https://os.cloudflare.app
 
-**Description:** OpenShell is the safe, private runtime for autonomous AI agents.
+**Description:** Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.
 
 **README excerpt:**
 
 ```md
-<!-- markdownlint-disable MD033 MD041 -->
+# Cloudflare OS: An AI productivity environment
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/assets/openshell-banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="docs/brand/assets/openshell-banner-light.png">
-  <img alt="OpenShell" src="docs/brand/assets/openshell-banner-light.png" width="430">
-</picture>
+Cloudflare OS is an "operating system" for AI productivity originally developed for use inside Cloudflare. A large portion of Cloudflare's workforce -- from engineering to sales and everything in between -- uses Cloudflare OS every day to help them do their jobs.
 
-<!-- markdownlint-enable MD033 MD041 -->
+![A Q3 planning workspace in Cloudflare OS, with an AI-generated slide deck](docs/images/q3-planning-workspace.png)
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](https://github.com/NVIDIA/OpenShell/blob/main/LICENSE)
-[![PyPI](https://img.shields.io/badge/PyPI-openshell-orange?logo=pypi)](https://pypi.org/project/openshell/)
-[![Security Policy](https://img.shields.io/badge/Security-Report%20a%20Vulnerability-red)](SECURITY.md)
-[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen)](https://docs.nvidia.com/openshell/latest/index.html)
+This is not a traditional computer operating system. We use the term "operating system" in two senses:
 
-> [!IMPORTANT]
-> **New in OpenShell 0.1.x:** a stable release cadence, new isolation primitives, an expanded extension surface, and new APIs. [Read the 0.1.0 upgrade guide](https://docs.nvidia.com/openshell/latest/upgrade/0-1-0).
+* An operating system for *the company* to be productive with AI, in a way that is safe, so that the security team can sleep at night.
+* An operating system for AI workloads, analogous to the sense in which a traditional operating system manages compute workloads.
 
-OpenShell is the safe, private runtime for fleets of autonomous AI agents. Agents are most useful when they can read files, install packages, call APIs, and use credentials. OpenShell gives them that capability without giving them unrestricted access to your data, secrets, or network. You declare what each agent can touch in a policy, and OpenShell enforces it.
+Cloudflare OS provides three things in particular:
 
-## How It Works
+1. An agent chat UI where you can ask agents to do tasks, preloaded with knowledge about how your company operates.
+2. Sandboxed application development, so that you can ask agents to build "gadgets" (small personal apps) and safely share what you've built with others.
+3. A security framework, called Gatekeepers, that applies guardrails to both agents and apps such that non-technical users can safely "go nuts" and nothing bad will happen.
 
-OpenShell governs what agents can do in two ways: it instruments the kernel to enforce policy on every file access, system call
+We are making Cloudflare OS open source so that others can copy it and customize it for their own company. The idea is not that your company uses Cloudflare OS, but rather that you make it "*Your Company* OS".
+
+## Quick Start
+
+To quickly run Cloudflare OS locally, [install pnpm](https://pnpm.io/), then
+```
+
+### 10. [Effect-TS/effect](https://github.com/Effect-TS/effect)
+
+- **Score:** 94.21
+- **Sources:** GitHub Trending – daily, GitHub Trending – weekly
+- **Stars:** 16881
+- **Forks:** 816
+- **Language:** TypeScript
+- **Topics:** cli, clustering, concurrency, dependency-injection, effect, error-handling, javascript, observability, opentelemetry, platform, schema, typescript, workflows
+- **Created:** 2019-11-13T12:49:21Z
+- **Updated:** 2026-10-04T06:45:22Z
+- **Pushed:** 2026-10-04T06:57:04Z
+- **Homepage:** https://effect.website
+
+**Description:** Build production-ready applications in TypeScript
+
+**README excerpt:**
+
+```md
+<!-- Use a static Shields badge because pkg.pr.new's dynamic badge times out while counting this repository's releases. -->
+
+[![pkg.pr.new](https://img.shields.io/badge/pkg.pr.new-Effect--TS%2Feffect-black)](https://pkg.pr.new/~/Effect-TS/effect)
+
+# Effect
+
+Effect is a library for building robust, maintainable, type-safe, and production grade applications in TypeScript. It helps you handle the hard problems at scale: typed errors, dependency injection, structured concurrency, scheduling, tracing, and unified schema validation.
+
+> **Effect 4.x is a long-term support (LTS) release.** If you are upgrading from Effect 3.x, follow the [migration guide](MIGRATION.md).
+
+## Installation
+
+```sh
+npm install effect
+```
+
+## Requirements
+
+- **TypeScript 5.9 or newer.** TypeScript 7 is recommended for the best performance and compatibility with [Effect's TypeScript tooling](https://github.com/Effect-TS/tsgo#installation).
+- **Node.js 18 or newer** is the general minimum for running Effect on Node.js. Some integration packages require newer runtimes; for example, `@effect/sql-sqlite-node` requires Node.js 22.16 or newer.
+- **Strict type-checking:** the `strict` flag must be enabled in your `tsconfig.json`.
+
+## Links
+
+- [Website](https://effect.website): documentation, guides, and news
+- [Discord](https://discord.gg/effect-ts): ask questions, share what you're building, and talk to the core team
+- [Community](https://effect.website/community-hub): meetups and events, or bring Effect to your own
+- [Issues](https://github.com/Effect-TS/effect/issues): bug reports and feature requests
+- [Jobs
 ```
 
 ### 11. [paperclipai/paperclip](https://github.com/paperclipai/paperclip)
 
-- **Score:** 2317.8
+- **Score:** 2317.47
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 96405
-- **Forks:** 16325
+- **Stars:** 96846
+- **Forks:** 16393
 - **Language:** TypeScript
 - **Topics:** -
 - **Created:** 2026-03-02T15:01:51Z
-- **Updated:** 2026-10-03T06:34:52Z
-- **Pushed:** 2026-10-03T06:35:07Z
+- **Updated:** 2026-10-04T06:57:12Z
+- **Pushed:** 2026-10-04T06:55:12Z
 - **Homepage:** https://paperclip.ing
 
 **Description:** The open-source app everyone uses to manage agents at work
@@ -715,14 +755,14 @@ OpenShell governs what agents can do in two ways: it instruments the kernel to e
 
 ### 12. [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
 
-- **Score:** 1650.21
+- **Score:** 1656.11
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 62745
-- **Forks:** 10725
+- **Stars:** 63313
+- **Forks:** 10827
 - **Language:** Python
 - **Topics:** agents, ai, ai-agents, ai-engineering, computer-vision, course, deep-learning, from-scratch, generative-ai, llm, machine-learning, mcp, nlp, python, reinforcement-learning, rust, swarm-intelligence, transformers, tutorial, typescript
 - **Created:** 2026-03-18T18:38:02Z
-- **Updated:** 2026-10-03T06:23:42Z
+- **Updated:** 2026-10-04T06:58:01Z
 - **Pushed:** 2026-10-02T05:37:24Z
 - **Homepage:** https://aiengineeringfromscratch.com
 
@@ -762,15 +802,15 @@ OpenShell governs what agents can do in two ways: it instruments the kernel to e
 
 ### 13. [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)
 
-- **Score:** 1544.07
+- **Score:** 1555.05
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 52063
-- **Forks:** 5800
+- **Stars:** 52750
+- **Forks:** 5877
 - **Language:** Python
 - **Topics:** ai, audiobook, cuda, dubbing, elevenlabs-alternative, huggingface, local-first, mlx, omnivoice-studio, speech-to-text, tauri, text-to-speech, transcription, translate, tts, voice-ai, voice-cloning, voice-generation, voicestudio, workflow
 - **Created:** 2026-04-09T21:40:26Z
-- **Updated:** 2026-10-03T06:34:55Z
-- **Pushed:** 2026-10-03T05:18:43Z
+- **Updated:** 2026-10-04T06:56:41Z
+- **Pushed:** 2026-10-04T05:04:47Z
 - **Homepage:** https://voicestudio.sh
 
 **Description:** VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.
@@ -804,16 +844,64 @@ OpenShell governs what agents can do in two ways: it instruments the kernel to e
 ![A tour of the Electron app: voice cloning, voice design, dubbing, and model management](doc
 ```
 
-### 14. [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)
+### 14. [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
 
-- **Score:** 730.73
+- **Score:** 1422.26
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 44806
-- **Forks:** 5872
+- **Stars:** 56383
+- **Forks:** 5067
+- **Language:** TypeScript
+- **Topics:** ai, animation, ffmpeg, framework, gsap, html, mcp, puppeteer, rendering, typescript, video
+- **Created:** 2026-03-10T01:51:06Z
+- **Updated:** 2026-10-04T06:56:23Z
+- **Pushed:** 2026-10-04T06:56:55Z
+
+**Description:** Write HTML. Render video. Built for agents.
+
+**README excerpt:**
+
+```md
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/logo/light.svg">
+    <img alt="HyperFrames" src="docs/logo/light.svg" width="300">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/hyperframes"><img src="https://img.shields.io/npm/v/hyperframes.svg?style=flat" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/hyperframes"><img src="https://img.shields.io/npm/dm/hyperframes.svg?style=flat" alt="npm downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D22-brightgreen" alt="Node.js"></a>
+  <a href="https://discord.gg/EbK98HBPdk"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
+</p>
+
+<p align="center"><b>Write HTML. Render video. Built for agents.</b></p>
+
+<p align="center">
+  <a href="https://hyperframes.heygen.com/quickstart">Quickstart</a> |
+  <a href="https://hyperframes.heygen.com/showcase">Showcase</a> |
+  <a href="https://www.hyperframes.dev/">Playground</a> |
+  <a href="https://hyperframes.heygen.com/catalog/blocks/data-chart">Catalog</a> |
+  <a href="https://hyperframes.heygen.com/introduction">Docs</a> |
+  <a href="https://discord.gg/EbK98HBPdk">Discord</a>
+</p>
+
+<p align="center">
+  <img src="docs/public/images/hyperframes-logo-motion-1280-trimmed.webp" alt="HyperFrames demo: HTML code on the lef
+```
+
+### 15. [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)
+
+- **Score:** 734.41
+- **Sources:** GitHub Trending – weekly
+- **Stars:** 45200
+- **Forks:** 5899
 - **Language:** Python
 - **Topics:** agentic-ai, agents, ai-memory, memory
 - **Created:** 2025-10-30T11:49:48Z
-- **Updated:** 2026-10-03T06:32:54Z
+- **Updated:** 2026-10-04T06:58:28Z
 - **Pushed:** 2026-10-02T17:43:57Z
 - **Homepage:** https://hindsight.vectorize.io/
 
@@ -839,16 +927,16 @@ OpenShell governs what agents can do in two ways: it instruments the kernel to e
  <a href="https://www.star-history.com/vectorize-io/hindsight"><img src="https://api.star-history.com/badge?repo=vectorize-io/hindsight&type=rank" alt="Star History Rank" /> <img src="https://api.star-history.com/badge?repo=vectorize-io/hindsight&ty
 ```
 
-### 15. [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)
+### 16. [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)
 
-- **Score:** 446.97
+- **Score:** 448.2
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 27359
-- **Forks:** 3856
+- **Stars:** 27522
+- **Forks:** 3876
 - **Language:** Python
 - **Topics:** agent-plugins, agent-skills, agentic-ai, ai-coding-agent, anthropic-claude, claude-ai, claude-code, claude-code-plugins, claude-code-skills, claude-skills, codex-skills, coding-agent-plugins, cursor-skills, developer-tools, gemini-cli-skills, openai-codex, openclaw, openclaw-plugins, openclaw-skills, prompt-engineering
 - **Created:** 2025-10-19T04:04:05Z
-- **Updated:** 2026-10-03T06:28:56Z
+- **Updated:** 2026-10-04T06:55:06Z
 - **Pushed:** 2026-08-30T09:46:16Z
 - **Homepage:** https://alirezarezvani.medium.com/
 
@@ -869,58 +957,16 @@ The most comprehensive open-source library of Claude Code skills and agent plugi
 [^vibe]: Mistral Vibe is also **BYO-sync tier**: the repo ships a pre-generated `.vibe/skills/claude-skills/` tree, run `./scripts/vibe-install.sh` once locally to install into `~/.vibe/skills/`. Same a
 ```
 
-### 16. [TencentCloud/Octop](https://github.com/TencentCloud/Octop)
-
-- **Score:** 427.64
-- **Sources:** GitHub Trending – weekly
-- **Stars:** 6439
-- **Forks:** 794
-- **Language:** Python
-- **Topics:** agent, agentic-ai, ai, ai-agent, ai-agents, local-first, long-term-memory
-- **Created:** 2026-07-08T12:54:20Z
-- **Updated:** 2026-10-03T06:22:26Z
-- **Pushed:** 2026-10-03T02:37:53Z
-- **Homepage:** https://octop.cloud
-
-**Description:** A smarter, self-hosted AI assistant — multi-user, multi-agent.
-
-**README excerpt:**
-
-```md
-<p align="center">
-  <img src="docs/assets/readme-banner.png" alt="Octop Banner" width="600" />
-</p>
-
-<p align="center">
-  <strong>A smarter, self-hosted AI assistant — multi-user, multi-agent.</strong>
-</p>
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/95504?utm_source=repository-badge&utm_medium=badge&utm_campaign=badge-repository-95504" target="_blank" rel="noopener noreferrer">
-    <img src="https://trendshift.io/api/badge/repositories/95504" alt="TencentCloud/Octop | Trendshift" width="250" height="55" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.python.org/downloads/"><img alt="Python 3.12+" src="https://img.shields.io/badge/python-3.12%2B-blue?logo=python&logoColor=white" /></a>
-  <a href="https://github.com/TencentCloud/Octop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green" /></a>
-  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.0.2b5-orange" /></a>
-  <a href="https://pypi.org/project/octop/"><img src="https://img.shields.io/pypi/v/octop" alt="PyPI" /></a>
-  <a href="https://github.com/astral-sh/ruff"><img alt="Code Style: Ruff" src="https://img.shields.io/badge/code%20style-ruff-000000?logo=ruff&logoColor=white" /></a>
-  <a href="https://github.com/TencentCloud/Octop"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TencentCloud/Octop?style=social" /></a>
-  <a href="https://github.com/TencentCloud/Octop/fork"><img alt="GitHub forks" src="https://img.shields.io/github/forks/TencentCloud/Octop?style=s
-```
-
 ### 17. [flutter/flutter](https://github.com/flutter/flutter)
 
-- **Score:** 287.74
+- **Score:** 287.75
 - **Sources:** GitHub Trending – weekly
-- **Stars:** 179270
-- **Forks:** 32866
+- **Stars:** 179320
+- **Forks:** 32967
 - **Language:** Dart
 - **Topics:** android, app-framework, cross-platform, dart, dart-platform, desktop, flutter, flutter-package, fuchsia, ios, linux-desktop, macos, material-design, mobile, mobile-development, skia, web, web-framework, windows
 - **Created:** 2015-03-06T22:54:58Z
-- **Updated:** 2026-10-03T06:28:40Z
+- **Updated:** 2026-10-04T06:12:02Z
 - **Pushed:** 2026-10-03T06:28:42Z
 - **Homepage:** https://flutter.dev
 
@@ -966,15 +1012,15 @@ changes]
 
 ### 18. [vercel/next.js](https://github.com/vercel/next.js)
 
-- **Score:** 270.76
+- **Score:** 270.83
 - **Sources:** GitHub Trending – weekly, GitHub Search API
-- **Stars:** 143023
-- **Forks:** 33713
+- **Stars:** 143106
+- **Forks:** 33828
 - **Language:** JavaScript
 - **Topics:** blog, browser, compiler, components, hybrid, nextjs, node, react, server-rendering, ssg, static, static-site-generator, universal, vercel
 - **Created:** 2016-10-05T23:32:51Z
-- **Updated:** 2026-10-03T06:23:31Z
-- **Pushed:** 2026-10-03T06:32:39Z
+- **Updated:** 2026-10-04T06:56:16Z
+- **Pushed:** 2026-10-04T01:50:15Z
 - **Homepage:** https://nextjs.org
 
 **Description:** The React Framework
@@ -1012,15 +1058,15 @@ Visit [https://ne
 
 ### 19. [openclaw/openclaw](https://github.com/openclaw/openclaw)
 
-- **Score:** 6332.59
+- **Score:** 6313.27
 - **Sources:** GitHub Search API
-- **Stars:** 391199
-- **Forks:** 82231
+- **Stars:** 391257
+- **Forks:** 82250
 - **Language:** TypeScript
 - **Topics:** ai, assistant, crustacean, molty, openclaw, own-your-data, personal
 - **Created:** 2025-11-24T10:16:47Z
-- **Updated:** 2026-10-03T06:33:53Z
-- **Pushed:** 2026-10-03T06:35:04Z
+- **Updated:** 2026-10-04T06:48:50Z
+- **Pushed:** 2026-10-04T06:57:15Z
 - **Homepage:** https://openclaw.ai
 
 **Description:** The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 
@@ -1048,17 +1094,64 @@ Visit [https://ne
 OpenClaw is an open-source AI assistant that runs on your own computer and meets you in the channels you already use: Discord, iMessage, Slack, Teams, Telegram, WhatsApp, and 20+ more, plus native apps for macOS, iOS, Android, Windows, and Linux. One Gateway runs it as a personal assistant on a 
 ```
 
-### 20. [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT)
+### 20. [mattpocock/skills](https://github.com/mattpocock/skills)
 
-- **Score:** 5904.17
+- **Score:** 5749.15
 - **Sources:** GitHub Search API
-- **Stars:** 5016
-- **Forks:** 1366
+- **Stars:** 275517
+- **Forks:** 23114
+- **Language:** Shell
+- **Topics:** -
+- **Created:** 2026-02-03T11:15:53Z
+- **Updated:** 2026-10-04T06:58:24Z
+- **Pushed:** 2026-09-29T12:38:37Z
+- **Homepage:** https://aihero.dev/skills
+
+**Description:** Skills for Real Engineers. Straight from my .agents directory.
+
+**README excerpt:**
+
+```md
+<p>
+  <a href="https://www.aihero.dev/s/skills-newsletter">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png">
+      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png">
+      <img alt="Skills" src="https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png" width="369">
+    </picture>
+  </a>
+</p>
+
+# Skills For Real Engineers
+
+[![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
+
+My agent skills that I use every day to do real engineering - not vibe coding.
+
+Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve.
+
+These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy.
+
+If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter:
+
+[Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
+
+## Installation (30-second setup)
+
+Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather t
+```
+
+### 21. [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT)
+
+- **Score:** 5270.92
+- **Sources:** GitHub Search API
+- **Stars:** 5532
+- **Forks:** 1446
 - **Language:** TypeScript
 - **Topics:** ai, content-curation, llm, mcp, news-aggregator, rss, self-hosted, typescript
 - **Created:** 2026-09-28T23:40:05Z
-- **Updated:** 2026-10-03T06:32:57Z
-- **Pushed:** 2026-10-02T07:06:47Z
+- **Updated:** 2026-10-04T06:57:51Z
+- **Pushed:** 2026-10-04T06:56:09Z
 - **Homepage:** https://aihot.news
 
 **Description:** 一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。
@@ -1115,76 +1208,122 @@ OpenClaw is an open-source AI assistant that runs on your own computer and meets
 ## 说在前面
 ```
 
-### 21. [affaan-m/ECC](https://github.com/affaan-m/ECC)
+### 22. [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder)
 
-- **Score:** 5335.07
+- **Score:** 3381.6
 - **Sources:** GitHub Search API
-- **Stars:** 271528
-- **Forks:** 40564
-- **Language:** JavaScript
-- **Topics:** ai-agents, anthropic, claude, claude-code, developer-tools, llm, mcp, productivity
-- **Created:** 2026-01-18T00:51:51Z
-- **Updated:** 2026-10-03T06:34:32Z
-- **Pushed:** 2026-10-02T02:01:14Z
-- **Homepage:** https://ecc.tools
+- **Stars:** 2719
+- **Forks:** 239
+- **Language:** Python
+- **Topics:** age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding, mcp, modding, reverse-engineering, tmodloader
+- **Created:** 2026-09-30T05:00:35Z
+- **Updated:** 2026-10-04T06:56:32Z
+- **Pushed:** 2026-10-04T01:56:38Z
 
-**Description:** The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.
+**Description:** Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.
 
 **README excerpt:**
 
 ```md
 <p align="center">
-  <img src="assets/hero.png" alt="ECC - the agent harness operating system" width="100%" />
+  <img src="docs/media/banner.png" alt="universal-modder" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://www.star-history.com/affaan-m/ecc">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending&theme=dark" />
-      <img src="https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending" alt="GitHub Trending Repository of the Day" height="46" />
-    </picture>
-  </a>
-  <a href="https://www.star-history.com/affaan-m/ecc">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank&theme=dark" />
-      <img src="https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank" alt="Star History Global Rank" height="46" />
-    </picture>
-  </a>
+  <b>Skills, tools and a shared knowledge base that let any AI coding agent mod almost any PC game you own.</b><br>
+  Works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, OpenCode, or anything that reads <code>AGENTS.md</code>.<br>
+  The agent finds the game, works out the engine and the route, reads the real code, builds the mod, makes art, 3D and sound
+  with <a href="https://fal.ai">fal</a>, tests it in the running game, cuts the video, and writes down what it learned for the next agent.
 </p>
 
 <p align="center">
-  <strong>Language:</strong>
-  <a href="README.md">English</a> |
-  <a href="docs/pt-BR/README.md">Português (Brasil)</a> |
-  <a href="README.zh-CN.md">简体中文</a> |
-  <a href="docs/zh-TW/README.md">繁體中文</a> |
-  <a href="docs/ja-JP/README.md">日本語</a> |
-  <a href="docs/ko-KR/README.md">한국어</a> |
-  <a href="docs/tr/README.md">Türkçe</a> |
-  <a href="docs/ru/README.md">Русский</a> |
-  <a href="docs/vi-VN/README.md">Tiếng Việt</a> |
-  <a href="docs/th/README.md">ไทย</a> |
-  <a href="docs/de-DE/README.md">Deutsch</a> |
-  <a href="docs/es/README.md">Español</a> |
-  <a href="docs/uk-UA/README.md">Українська</a> |
-  <a href="docs/pl/README.md">Polski</a>
+  <a href="#install"><img alt="any agent" src="https://img.shields.io/badge/agents-Claude%20Code%20·%20Codex%20·%20Cursor%20·%20Gemini%20·%20Copilot-B6FF3B?labelColor=0A0D12"></a>
+  <a href="knowledge/INDEX.md"><img alt="knowledge base" src="https://img.shields.io/badge/knowledge%20base-field%20notes-B6FF3B?labelColor=0A0D12"></a>
+  <a href="https://fal.ai"><img alt="assets by fal" src="https://img.shields.io/badge/assets-fal-B6FF3B?labelColor=0A0D12"></a>
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-B6FF3B?labelColor=0A0D12"></a>
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/36yG
+  <img src="docs/media/teaser.gif" alt="A tactical nuke in Terraria and robotaxis in Age of Empires II, both built with universal-modder" width="560">
+</p>
+
+## Install
+
+Pick your agent. Each gets the same skills (Agent Skills format), the fal MCP server, and the `um` CLI.
+
+| Agent | Install |
+|---|---|
+| **Claude Code** | `/plugin marketplace add re
 ```
 
-### 22. [feder-cr/dots](https://github.com/feder-cr/dots)
+### 23. [facebookincubator/muse-gadget-sdk](https://github.com/facebookincubator/muse-gadget-sdk)
 
-- **Score:** 3907.79
+- **Score:** 3165.51
 - **Sources:** GitHub Search API
-- **Stars:** 2555
-- **Forks:** 434
+- **Stars:** 952
+- **Forks:** 160
+- **Language:** C
+- **Topics:** -
+- **Created:** 2026-10-02T18:21:23Z
+- **Updated:** 2026-10-04T06:48:01Z
+- **Pushed:** 2026-10-04T06:11:16Z
+- **Homepage:** gadgets.muse.ai
+
+**Description:** Open source SDK to build Muse gadgets
+
+**README excerpt:**
+
+```md
+<!--
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+# Muse Gadgets
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/images/muse-gadgets-dark.png">
+    <img src=".github/images/muse-gadgets-light.png" width="900" alt="Muse gadgets: a Waveshare round AMOLED, an M5Stack StickS3, Muse Home Link, a Raspberry Pi and a Seeed reTerminal e-ink display">
+  </picture>
+</p>
+
+Muse gadgets are open source devices you build yourself. Program an
+off-the-shelf ESP32 board or set up a Raspberry Pi with our device SDKs, then
+connect Muse to your displays, buttons, sensors, actuators, and whatever else
+you've got lying on your workbench.
+
+We open sourced the SDKs and firmware here. It's built by hackers, for hackers,
+just for fun. Side effects of tinkering may include bricked boards, voided
+warranties, brownouts, or bankruptcies. Proceed at your own risk!
+
+| | |
+|---|---|
+| [**ESP32 Device SDK**](esp32) | Connect your ESP32 board to Muse through our open source SDK. Throw in a screen to show images, add audio in and out, o
+```
+
+### 24. [feder-cr/dots](https://github.com/feder-cr/dots)
+
+- **Score:** 3033.27
+- **Sources:** GitHub Search API
+- **Stars:** 2581
+- **Forks:** 436
 - **Language:** Python
 - **Topics:** ai-agent, ai-agents, ai-browser, anti-detect-browser, browser-agent, browser-automation, chatgpt, dotfiles, dots, firefox, llm-agent, mcp, open-source-alternative, openai, openai-dots, openrouter, playwright, stealth-browser, web-agent, web-automation
 - **Created:** 2026-09-29T23:06:00Z
-- **Updated:** 2026-10-03T06:31:49Z
-- **Pushed:** 2026-09-29T23:24:01Z
+- **Updated:** 2026-10-04T06:38:49Z
+- **Pushed:** 2026-10-03T15:21:24Z
 
 **Description:** Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.
 
@@ -1234,193 +1373,16 @@ So dots is built around one:
 - **A browser that remembers.** `--profile
 ```
 
-### 23. [rehan-remade/universal-modder](https://github.com/rehan-remade/universal-modder)
+### 25. [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots)
 
-- **Score:** 3712.23
+- **Score:** 3020.14
 - **Sources:** GitHub Search API
-- **Stars:** 2246
-- **Forks:** 175
-- **Language:** Python
-- **Topics:** age-of-empires, claude-code, claude-code-plugin, fal, game-assets, game-modding, mcp, modding, reverse-engineering, tmodloader
-- **Created:** 2026-09-30T05:00:35Z
-- **Updated:** 2026-10-03T06:28:31Z
-- **Pushed:** 2026-09-30T23:39:09Z
-
-**Description:** Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.
-
-**README excerpt:**
-
-```md
-<p align="center">
-  <img src="docs/media/banner.png" alt="universal-modder" width="100%">
-</p>
-
-<p align="center">
-  <b>Skills, tools and a shared knowledge base that let any AI coding agent mod almost any PC game you own.</b><br>
-  Works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, OpenCode, or anything that reads <code>AGENTS.md</code>.<br>
-  The agent finds the game, works out the engine and the route, reads the real code, builds the mod, makes art, 3D and sound
-  with <a href="https://fal.ai">fal</a>, tests it in the running game, cuts the video, and writes down what it learned for the next agent.
-</p>
-
-<p align="center">
-  <a href="#install"><img alt="any agent" src="https://img.shields.io/badge/agents-Claude%20Code%20·%20Codex%20·%20Cursor%20·%20Gemini%20·%20Copilot-B6FF3B?labelColor=0A0D12"></a>
-  <a href="knowledge/INDEX.md"><img alt="knowledge base" src="https://img.shields.io/badge/knowledge%20base-field%20notes-B6FF3B?labelColor=0A0D12"></a>
-  <a href="https://fal.ai"><img alt="assets by fal" src="https://img.shields.io/badge/assets-fal-B6FF3B?labelColor=0A0D12"></a>
-  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-B6FF3B?labelColor=0A0D12"></a>
-</p>
-
-<p align="center">
-  <img src="docs/media/teaser.gif" alt="A tactical nuke in Terraria and robotaxis in Age of Empires II, both built with universal-modder" width="560">
-</p>
-
-## Install
-
-Pick your agent. Each gets the same skills (Agent Skills format), the fal MCP server, and the `um` CLI.
-
-| Agent | Install |
-|---|---|
-| **Claude Code** | `/plugin marketplace add re
-```
-
-### 24. [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
-
-- **Score:** 2945.36
-- **Sources:** GitHub Search API
-- **Stars:** 250817
-- **Forks:** 53745
-- **Language:** Python
-- **Topics:** ai, ai-agent, ai-agents, anthropic, chatgpt, claude, claude-code, codex, hermes, hermes-agent, llm, nous-research, openai
-- **Created:** 2025-07-22T22:22:28Z
-- **Updated:** 2026-10-03T06:34:36Z
-- **Pushed:** 2026-10-03T05:20:55Z
-- **Homepage:** https://hermes-agent.nousresearch.com
-
-**Description:** The agent that grows with you
-
-**README excerpt:**
-
-```md
-<p align="center">
-  <img src="assets/banner.png" alt="Hermes Agent" width="100%">
-</p>
-
-# Hermes Agent ☤
-<p align="center">
-  <a href="https://hermes-agent.nousresearch.com/">Hermes Agent</a> | <a href="https://hermes-agent.nousresearch.com/">Hermes Desktop</a>
-</p>
-<p align="center">
-  <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentation"></a>
-  <a href="https://discord.gg/NousResearch"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
-  <a href="https://nousresearch.com"><img src="https://img.shields.io/badge/Built%20by-Nous%20Research-blueviolet?style=for-the-badge" alt="Built by Nous Research"></a>
-  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/Lang-中文-red?style=for-the-badge" alt="中文"></a>
-  <a href="README.ur-pk.md"><img src="https://img.shields.io/badge/Lang-اردو-green?style=for-the-badge" alt="اردو"></a>
-  <a href="README.es.md"><img src="https://img.shields.io/badge/Lang-Español-orange?style=for-the-badge" alt="Español"></a>
-</p>
-
-**The self-improving AI agent built by [Nous Research](https://nousresearch.com).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own pa
-```
-
-### 25. [Louis-CFM/coucou](https://github.com/Louis-CFM/coucou)
-
-- **Score:** 2887.21
-- **Sources:** GitHub Search API
-- **Stars:** 3040
-- **Forks:** 468
-- **Language:** Swift
-- **Topics:** ai-agents, anthropic, antigravity, claude, claude-code, codex, cursor, dynamic-island, gemini-cli, linux, macos, macos-app, menubar-app, notch, open-source, swift, swiftui, windows
-- **Created:** 2026-09-27T21:54:12Z
-- **Updated:** 2026-10-03T06:29:34Z
-- **Pushed:** 2026-10-03T02:11:41Z
-- **Homepage:** https://louis-cfm.github.io/coucou/
-
-**Description:** A tiny friend that lives in your notch (macOS) or at the top of your screen (Windows, Linux) and keeps an eye on your coding agents: Claude Code, Codex, Cursor, Gemini CLI, Antigravity and more.
-
-**README excerpt:**
-
-```md
-<div align="center">
-
-<img src="NotchBuddy/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="96" alt="Coucou icon">
-
-# Coucou
-
-**A tiny friend that lives in your Mac's notch — or at the top of your screen on Windows and Linux — and keeps an eye on your AI coding agent sessions.**
-
-Approve permissions, watch your agents work, drop a file, chat with Claude — all without leaving what you're doing.
-
-![macOS 15+](https://img.shields.io/badge/macOS-15%2B-black?logo=apple)
-![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11-0078D4?logo=windows&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-AppImage%20%7C%20deb%20%7C%20rpm-FCC624?logo=linux&logoColor=black)
-![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-native-0A84FF)
-![Tauri 2](https://img.shields.io/badge/Tauri-2-FFC131?logo=tauri&logoColor=black)
-![License: MIT](https://img.shields.io/badge/license-MIT-green)
-![GitHub stars](https://img.shields.io/github/stars/Louis-CFM/coucou?style=social)
-
-<img src="docs/media/demo.gif" width="760" alt="Coucou in action">
-
-</div>
-
----
-
-## Why
-
-Some studios showed off gorgeous notch companions… and never let anyone use them.
-**Coucou is the open version.** Every line of code, every animation, every sound — free to use, read, fork and remix.
-
-Meet **Mochi**: a soft little squircle with big eyes that pops out of your notch, waves hello, follows your cursor with its eyes, gets annoyed when you poke it (and dizzy if you insist), and tells you the moment Claude Code needs you.
-
-## Fe
-```
-
-### 26. [anthropics/skills](https://github.com/anthropics/skills)
-
-- **Score:** 2462.77
-- **Sources:** GitHub Search API
-- **Stars:** 179441
-- **Forks:** 21211
-- **Language:** Python
-- **Topics:** agent-skills
-- **Created:** 2025-09-22T15:53:31Z
-- **Updated:** 2026-10-03T06:34:40Z
-- **Pushed:** 2026-09-29T02:20:07Z
-
-**Description:** Public repository for Agent Skills
-
-**README excerpt:**
-
-```md
-> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see [agentskills.io](http://agentskills.io).
-
-[![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills)
-
-# Skills
-Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.
-
-For more information, check out:
-- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
-- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
-- [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
-- [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
-
-# About This Repository
-
-This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).
-
-Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspirat
-```
-
-### 27. [CopilotKit/OpenDots](https://github.com/CopilotKit/OpenDots)
-
-- **Score:** 2376.75
-- **Sources:** GitHub Search API
-- **Stars:** 1656
-- **Forks:** 200
+- **Stars:** 2715
+- **Forks:** 339
 - **Language:** TypeScript
 - **Topics:** -
 - **Created:** 2026-09-29T17:13:58Z
-- **Updated:** 2026-10-03T06:35:26Z
+- **Updated:** 2026-10-04T06:56:22Z
 - **Pushed:** 2026-10-02T21:16:45Z
 - **Homepage:** https://www.copilotkit.ai/opendots
 
@@ -1470,16 +1432,92 @@ OpenDots is a starting point for building your own agent workspace. Clone it, de
 **A template, not a hosted product.** You run the 
 ```
 
+### 26. [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
+
+- **Score:** 2941.1
+- **Sources:** GitHub Search API
+- **Stars:** 251025
+- **Forks:** 53847
+- **Language:** Python
+- **Topics:** ai, ai-agent, ai-agents, anthropic, chatgpt, claude, claude-code, codex, hermes, hermes-agent, llm, nous-research, openai
+- **Created:** 2025-07-22T22:22:28Z
+- **Updated:** 2026-10-04T06:44:33Z
+- **Pushed:** 2026-10-04T06:55:26Z
+- **Homepage:** https://hermes-agent.nousresearch.com
+
+**Description:** The agent that grows with you
+
+**README excerpt:**
+
+```md
+<p align="center">
+  <img src="assets/banner.png" alt="Hermes Agent" width="100%">
+</p>
+
+# Hermes Agent ☤
+<p align="center">
+  <a href="https://hermes-agent.nousresearch.com/">Hermes Agent</a> | <a href="https://hermes-agent.nousresearch.com/">Hermes Desktop</a>
+</p>
+<p align="center">
+  <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://discord.gg/NousResearch"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://nousresearch.com"><img src="https://img.shields.io/badge/Built%20by-Nous%20Research-blueviolet?style=for-the-badge" alt="Built by Nous Research"></a>
+  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/Lang-中文-red?style=for-the-badge" alt="中文"></a>
+  <a href="README.ur-pk.md"><img src="https://img.shields.io/badge/Lang-اردو-green?style=for-the-badge" alt="اردو"></a>
+  <a href="README.es.md"><img src="https://img.shields.io/badge/Lang-Español-orange?style=for-the-badge" alt="Español"></a>
+</p>
+
+**The self-improving AI agent built by [Nous Research](https://nousresearch.com).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own pa
+```
+
+### 27. [anthropics/skills](https://github.com/anthropics/skills)
+
+- **Score:** 2458.93
+- **Sources:** GitHub Search API
+- **Stars:** 179557
+- **Forks:** 21233
+- **Language:** Python
+- **Topics:** agent-skills
+- **Created:** 2025-09-22T15:53:31Z
+- **Updated:** 2026-10-04T06:51:42Z
+- **Pushed:** 2026-10-03T20:38:10Z
+
+**Description:** Public repository for Agent Skills
+
+**README excerpt:**
+
+```md
+> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see [agentskills.io](http://agentskills.io).
+
+[![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills)
+
+# Skills
+Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.
+
+For more information, check out:
+- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
+- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+- [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
+- [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+
+# About This Repository
+
+This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).
+
+Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspirat
+```
+
 ### 28. [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
 
-- **Score:** 2271.03
+- **Score:** 2268.17
 - **Sources:** GitHub Search API
-- **Stars:** 155841
-- **Forks:** 25140
+- **Stars:** 156107
+- **Forks:** 25187
 - **Language:** Shell
 - **Topics:** -
 - **Created:** 2025-10-13T12:12:29Z
-- **Updated:** 2026-10-03T06:30:14Z
+- **Updated:** 2026-10-04T06:57:51Z
 - **Pushed:** 2026-10-01T19:35:40Z
 
 **Description:** A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
@@ -1512,89 +1550,17 @@ Born from a Reddit thread and months of iteration, **The Agency** is a growing c
 - **🎯 
 ```
 
-### 29. [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu)
+### 29. [anomalyco/opencode](https://github.com/anomalyco/opencode)
 
-- **Score:** 2242.92
+- **Score:** 2105.82
 - **Sources:** GitHub Search API
-- **Stars:** 1223
-- **Forks:** 27
-- **Language:** Python
-- **Topics:** agent-skills, ai-writing, antigravity, claude-code, codex, cursor, gemini, japanese, linter, llm, nlp, writing, writing-assistant, writing-tool
-- **Created:** 2026-09-30T11:49:32Z
-- **Updated:** 2026-10-03T06:34:42Z
-- **Pushed:** 2026-10-02T15:10:08Z
-
-**Description:** AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese
-
-**README excerpt:**
-
-```md
-<p align="center">
-  <img src="./assets/yomiyasu_logo.jpeg" alt="yomiyasu logo" width="700">
-</p>
-
-# yomiyasu（よみやす）
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/nanaism/yomiyasu)](https://github.com/nanaism/yomiyasu/releases)
-
-## これは何？
-
-『yomiyasu（よみやす）』は、AIが生成した日本語の不自然さを解消し、人間が読みやすく情報密度の高い日本語へ推敲するためのスキルです。
-
-主に技術記事、設計書・仕様書、PR説明文、社内レポートなどの実務的な文章を対象として設計されています。
-
-Codex、Claude Code、CursorをはじめとするAIコーディング環境に読み込ませて使用してください。
-
-開発背景や言語学的病理の分析、複数のコーパスによる検証結果については、以下の解説記事で詳しく紹介しています。
-
-- **解説記事**: [AI臭い日本語を脱臭するAgent Skill『yomiyasu』を作った話（Zenn）](https://zenn.dev/algoartis/articles/0b1c731881b25c)
-
-*Built with curiosity at [ALGO ARTIS](https://www.algo-artis.com/)*
-
-[![ALGO ARTIS](./assets/algo-artis.png)](https://www.algo-artis.com/)
-
-<details>
-<summary>ALGO ARTISについて</summary>
-
-> 株式会社 ALGO ARTIS は、私たちが社会基盤の最適化に取り組んでいるスタートアップです。
-> 
-> 電力・海運・鉄道・化学プラントといった現場では、膨大な制約が絡み合う複雑な運用計画を、今なお熟練者が手作業で組み立てています。
-> 
-> 弊社では、そうした高度な現場業務を数理モデル化し、実用的なヒューリスティック最適化アルゴリズムと業務システムを一貫して自社開発しています。
-> 
-> 最適化技術を用いた社会インフラの変革に興味がある方は、[公式ウェブサイト](https://www.algo-artis.com/)や[採用情報](https://www.algo-artis.com/recruit)をご覧ください。
-</details>
-
----
-
-## 背景と課題
-
-AIによる文章生成は日常的な道具となりました。一方で、生成された文章には独特のクセが残りやすく、そのままでは実務や技術発信に使いにくい場面が多くあります。
-
-これまでに様々な文体調整プロンプトやスキルが試みられてきました。しかし、依然として「AI特有の読みにくさ」が残るケースが見られます。
-
-従来のアプローチが抱えていた限界は、主に次の4点でした。
-
-1. 禁止語の置き換えにとどまる対処  
-   `手触り`や`解像度`、`泥臭い`といった表層の単語を禁止しても、別の曖昧な語へ置き換わるだけで、不自然な文構造そのものは解消されませんでした。
-2. 編集ルールの過剰適用  
-   修辞規範を過度に与えると、モデルが指示を過剰に解釈し、かえって不自然な造語や大げさな文体を招いていました。
-3. 主述関係の曖昧さと非生物主語  
-   誰が何をどうするのかが省略された
-```
-
-### 30. [anomalyco/opencode](https://github.com/anomalyco/opencode)
-
-- **Score:** 2108.57
-- **Sources:** GitHub Search API
-- **Stars:** 211537
-- **Forks:** 28085
+- **Stars:** 211662
+- **Forks:** 28135
 - **Language:** TypeScript
 - **Topics:** -
 - **Created:** 2025-04-30T20:08:00Z
-- **Updated:** 2026-10-03T06:26:44Z
-- **Pushed:** 2026-10-03T06:09:38Z
+- **Updated:** 2026-10-04T06:55:12Z
+- **Pushed:** 2026-10-04T06:49:37Z
 - **Homepage:** https://opencode.ai
 
 **Description:** The open source coding agent.
@@ -1634,5 +1600,77 @@ AIによる文章生成は日常的な道具となりました。一方で、生
   <a href="README.bs.md">Bosanski</a> |
   <a href="README.ar.md">العربية</a> |
   <a href="README.no.md">Norsk</
+```
+
+### 30. [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu)
+
+- **Score:** 1812.07
+- **Sources:** GitHub Search API
+- **Stars:** 1342
+- **Forks:** 29
+- **Language:** Python
+- **Topics:** agent-skills, ai-writing, antigravity, claude-code, codex, cursor, gemini, japanese, linter, llm, nlp, writing, writing-assistant, writing-tool
+- **Created:** 2026-09-30T11:49:32Z
+- **Updated:** 2026-10-04T06:17:24Z
+- **Pushed:** 2026-10-04T06:17:21Z
+
+**Description:** AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese
+
+**README excerpt:**
+
+```md
+<p align="center">
+  <img src="./assets/yomiyasu_logo.jpeg" alt="yomiyasu logo" width="700">
+</p>
+
+# yomiyasu（よみやす）
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/nanaism/yomiyasu)](https://github.com/nanaism/yomiyasu/releases)
+
+## これは何？
+
+『yomiyasu（よみやす）』は、AIが生成した日本語の不自然さを解消し、人間が読みやすく情報密度の高い日本語へ推敲するためのスキルです。
+
+主に技術記事、設計書・仕様書、PR説明文、社内レポートなどの実務的な文章を対象として設計されています。
+
+Codex、Claude Code、CursorをはじめとするAIコーディング環境に読み込ませて使用してください。
+
+開発背景や言語学的病理の分析、複数のコーパスによる検証結果については、以下の解説記事で詳しく紹介しています。
+
+- **解説記事**: [AI臭い日本語を脱臭するAgent Skill『yomiyasu』を作った話（Zenn）](https://zenn.dev/algoartis/articles/0b1c731881b25c)
+
+*Built with curiosity at [ALGO ARTIS](https://www.algo-artis.com/)*
+
+[![ALGO ARTIS](./assets/algo-artis.png)](https://www.algo-artis.com/)
+
+<details>
+<summary>ALGO ARTISについて</summary>
+
+> 株式会社ALGO ARTISは、社会基盤の最適化に取り組むスタートアップです。
+> 
+> 電力・海運・化学プラントといった現場では、膨大な制約が絡み合う複雑な運用計画を、今なお熟練者が手作業で組み立てています。
+> 
+> そうした高度な現場業務を数理モデル化し、実用的なヒューリスティック最適化アルゴリズムと業務システムを一貫して開発しています。
+> 
+> 最適化技術を用いた社会インフラの変革に興味がある方は、[公式ウェブサイト](https://www.algo-artis.com/)や[採用情報](https://www.algo-artis.com/career/)をご覧ください。
+</details>
+
+---
+
+## 背景と課題
+
+AIによる文章生成は日常的な道具となりました。一方で、生成された文章には独特のクセが残りやすく、そのままでは実務や技術発信に使いにくい場面が多くあります。
+
+これまでに様々な文体調整プロンプトやスキルが試みられてきました。しかし、依然として「AI特有の読みにくさ」が残るケースが見られます。
+
+従来のアプローチが抱えていた限界は、主に次の4点でした。
+
+1. 禁止語の置き換えにとどまる対処  
+   `手触り`や`解像度`、`泥臭い`といった表層の単語を禁止しても、別の曖昧な語へ置き換わるだけで、不自然な文構造そのものは解消されませんでした。
+2. 編集ルールの過剰適用  
+   修辞規範を過度に与えると、モデルが指示を過剰に解釈し、かえって不自然な造語や大げさな文体を招いていました。
+3. 主述関係の曖昧さと非生物主語  
+   誰が何をどうするのかが省略されたまま、概念や道具が比喩的な動詞（`壊れ
 ```
 
