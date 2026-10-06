@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391406,
+      "stars": 391474,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 273128,
+      "stars": 273810,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1412,12 +1412,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 276399,
+      "stars": 277297,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1464,15 +1464,14 @@
       "confidence": 0.3,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 294562,
+      "stars": 295749,
       "language": "Shell",
       "score": 45,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1521,12 +1520,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 251279,
+      "stars": 251512,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1575,12 +1574,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 156846,
+      "stars": 157439,
       "language": "Shell",
       "score": 22,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1629,12 +1628,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 211786,
+      "stars": 211927,
       "language": "TypeScript",
       "score": 23,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -1749,7 +1748,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 91188,
+      "stars": 92157,
       "language": "Python",
       "score": 8,
       "action": "Arkiv",
@@ -1765,7 +1764,7 @@
         "testability"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-09-15",
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -4048,7 +4047,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 179687,
+      "stars": 179831,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
@@ -4063,7 +4062,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-08",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -4773,7 +4772,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 97296,
+      "stars": 97793,
       "language": "TypeScript",
       "score": 22,
       "action": "Arkiv",
@@ -4788,7 +4787,7 @@
         "testability"
       ],
       "first_seen": "2026-08-11",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-11",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10066,10 +10065,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily",
+        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 155225,
+      "stars": 156211,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10088,7 +10087,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10135,7 +10134,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 63388,
+      "stars": 64287,
       "language": "Python",
       "score": 58,
       "action": "Arkiv",
@@ -10154,7 +10153,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -12521,7 +12520,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 53319,
+      "stars": 53941,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12540,7 +12539,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14230,7 +14229,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 56904,
+      "stars": 57476,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14249,7 +14248,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14867,7 +14866,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 16998,
+      "stars": 17586,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -14886,7 +14885,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-10-05",
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -19194,10 +19193,9 @@
         "Inget bevisat samband med FAIV:s WooCommerce-konvertering eller SEO"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 76533,
+      "stars": 77211,
       "language": "JavaScript",
       "score": 41,
       "action": "Arkiv",
@@ -19211,7 +19209,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19255,7 +19253,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 45609,
+      "stars": 46069,
       "language": "Python",
       "score": 33,
       "action": "Arkiv",
@@ -19269,7 +19267,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19540,7 +19538,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3386,
+      "stars": 4002,
       "language": "Python",
       "score": 17,
       "action": "Arkiv",
@@ -19555,7 +19553,7 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -20030,7 +20028,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 95723,
+      "stars": 96754,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -20045,7 +20043,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20084,7 +20082,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 25302,
+      "stars": 25717,
       "language": "TypeScript",
       "score": 29,
       "action": "Arkiv",
@@ -20100,7 +20098,7 @@
         "testability"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20138,7 +20136,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 10647,
+      "stars": 11111,
       "language": "TypeScript",
       "score": 27,
       "action": "Arkiv",
@@ -20154,7 +20152,7 @@
         "testability"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20192,7 +20190,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 17000,
+      "stars": 17062,
       "language": "TypeScript",
       "score": 35,
       "action": "Arkiv",
@@ -20207,7 +20205,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20243,7 +20241,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1270,
+      "stars": 1470,
       "language": "C",
       "score": 4,
       "action": "Arkiv",
@@ -20258,7 +20256,7 @@
         "testability"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -20267,58 +20265,53 @@
     "tester-army/e2e": {
       "repo": "tester-army/e2e",
       "url": "https://github.com/tester-army/e2e",
-      "summary_sv": "Next generation e2e testing framework for web and mobile apps.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Next generation e2e testing framework for web and mobile apps, using natural language goals and AI agent.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 7.088136088700551,
-        "timing": 7
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 9,
+        "technical_fit": 8,
+        "repo_quality": 8,
+        "timing": 2
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Ingen direkt nytta för aktuella projekt, kan öka komplexitet"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.1,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "generisk-stack",
+      "concrete_use_case": "Kan användas som referens för att bygga egna testautomatiseringspipelines eller förstå AI-driven testförvaltning.",
+      "next_step": "Installera e2e CLI och köra ett enkelt test mot en demo-sida för att se syntax.",
+      "differentiator": "Natural language goal description, AI agent driver app, unified web+mobile testing.",
+      "evidence": [
+        "5227 stars, TypeScript framework for web and mobile e2e testing",
+        "Supports natural language goal description and AI agent",
+        "Open source, Apache-2.0 license"
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 3499,
+      "stars": 5227,
       "language": "TypeScript",
-      "score": 59.08813608870055,
+      "score": 27,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": "2026-10-05",
-      "last_analyzed": "2026-10-05",
+      "last_analyzed": "2026-10-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -20355,7 +20348,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 76690,
+      "stars": 77282,
       "language": "Go",
       "score": 53,
       "action": "Arkiv",
@@ -20374,7 +20367,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -20438,53 +20431,54 @@
     "kargulstudio/sales-crm": {
       "repo": "kargulstudio/sales-crm",
       "url": "https://github.com/kargulstudio/sales-crm",
-      "summary_sv": "Next.js 16 + React 19 + Tailwind CSS 4 boilerplate för att bygga sales-CRMs, med SEO, opengraph och designkonventioner.",
+      "summary_sv": "Next.js 16 + React 19 + Tailwind CSS 4 boilerplate för snabb utveckling av SaaS-startups, med strikta konventioner.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
-        "testability": 2,
-        "technical_fit": 3,
+        "testability": 5,
+        "technical_fit": 7,
         "repo_quality": 5,
-        "timing": 0
+        "timing": 2
       },
       "risks": [
-        "Boilerplate kan locka tekniskt utan affärsmässig nytta"
+        "Låg relevans för aktuella projekt, kan kräva anpassning till befintlig stack"
       ],
-      "confidence": 0.9,
+      "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "kort-stabil-kategori",
-      "concrete_use_case": "Inget namngivet projekt har ett konkret behov av en generell CRM-boilerplate; inget specifikt flöde i Golfkuponger, Företagslistor eller annat projekt kräver denna startpunkt.",
-      "next_step": "Inget praktiskt test mot ett namngivet projektbehov.",
-      "differentiator": "Ingen unik fördel jämfört med befintlig stack; Next.js/Tailwind-boilerplate löser inget specifikt blockerande problem i något projekt.",
+      "category": "generisk-stack",
+      "concrete_use_case": "Kan användas som startpunkt för att bygga en egen CRM eller säljplattform med väl definierade konventioner.",
+      "next_step": "Klona repot, köra npm install och npm run dev för att verifiera att utvecklingsmiljön fungerar.",
+      "differentiator": "Stränga konventioner, inbyggda verktyg för bilder, AVIF-konvertering, och tydlig spec för komponenter.",
       "evidence": [
-        "Beskrivs som en starter boilerplate, inte en färdig lösning",
-        "Ingen koppling till Shopify, WooCommerce, SCB-data, odds eller AI Radars pipeline",
-        "Stars och forks påverkar repo_quality men inte projektpassform"
+        "1511 stars, Next.js 16 boilerplate with Tailwind and strict conventions",
+        "Includes scripts for AVIF conversion, Rive rendering, and linting",
+        "Apache-2.0 license"
       ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1055,
+      "stars": 1511,
       "language": "TypeScript",
-      "score": 10,
+      "score": 19,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
+        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "first_recommended": null,
-      "last_analyzed": "2026-10-05",
+      "last_analyzed": "2026-10-06",
       "notified_at": null,
       "notified_score": null
     },
@@ -20540,7 +20534,226 @@
       "last_analyzed": "2026-10-05",
       "notified_at": null,
       "notified_score": null
+    },
+    "boykopovar/anyps5": {
+      "repo": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "summary_sv": "Verktyg för automatisk portning av PS5-exekverbara filer till Linux och Windows, med relinker och systemprx-bibliotek.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 6,
+        "technical_fit": 8,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Låg relevans för aktuella projekt, risk för distraktion"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk-stack",
+      "concrete_use_case": "Kan användas som referens för att bygga egna portningsverktyg eller förstå PS5 binary format.",
+      "next_step": "Klona repot, bygg en enkel portning av ett testspel och verifiera att det körs på Linux.",
+      "differentiator": "Avancerad automatisk portning med relinker och systemprx-bibliotek, ingen emulering.",
+      "evidence": [
+        "5170 stars, C++ project with automatic executable porting to Linux/Windows",
+        "Includes relinker and system prx libraries for dynamic linking",
+        "Supports SPIR-V shader recompiler"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 5170,
+      "language": "C++",
+      "score": 24,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "duartesantos8/opengym": {
+      "repo": "DuarteSantos8/openGym",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "summary_sv": "Self-hosted gym och body-weight tracker — planera träning, logga sets, se muskelbelastning, importera från FitNotes/Strong/Hevy, passkey-inloggning.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 7,
+        "technical_fit": 8,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Ingen direkt nytta för aktuella projekt, kan vara för omfattande för enkelt behov"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk-stack",
+      "concrete_use_case": "Kan användas som referens för att bygga egna fitness-tracking-appar med egen dataägande.",
+      "next_step": "Klona repot, starta containern och registrera ett test-pass för att verifiera UI och dataflöde.",
+      "differentiator": "Self-hosted, passkey-inloggning, multiplattformssync, import från populära fitness-appar.",
+      "evidence": [
+        "4587 stars, self-hosted fitness tracker with passkey login",
+        "Supports import from FitNotes, Strong, Hevy",
+        "Docker-based deployment with PWA support"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 4587,
+      "language": "JavaScript",
+      "score": 25,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "gaurav-gosain/tuios": {
+      "repo": "Gaurav-Gosain/tuios",
+      "url": "https://github.com/Gaurav-Gosain/tuios",
+      "summary_sv": "En terminalfönsterhanterare som känner till vad dina AI-agenter gör — mosaiklayout, arbetsytor, sessioner som överlever omstarter och en inkorg för varje kodningsagent.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 6,
+        "technical_fit": 8,
+        "repo_quality": 8,
+        "timing": 2
+      },
+      "risks": [
+        "Ingen direkt nytta för aktuella projekt, kan öka komplexitet utan uppenbar fördel"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "generisk-stack",
+      "concrete_use_case": "Kan användas som referens för att bygga terminalmultiplexer med AI-agentsynlighet.",
+      "next_step": "Installera tuios, starta det och skapa en mosaiklayout med flera terminalfönster.",
+      "differentiator": "Vim-liknande modal gränssnitt, BSP-mosaik, kitty-grafikprotokoll, daemon för sessionsöverlevnad.",
+      "evidence": [
+        "4894 stars, terminal multiplexer and window manager with AI agent tracking",
+        "Supports tiling, workspaces, session persistence, command palette",
+        "Built with Go, supports kitty graphics protocol"
+      ],
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 4894,
+      "language": "Go",
+      "score": 24,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-06",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "storytold/photocraft": {
+      "repo": "storytold/photocraft",
+      "url": "https://github.com/storytold/photocraft",
+      "summary_sv": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.724964949502349,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2303,
+      "language": "Rust",
+      "score": 46.72496494950235,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-06",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-10-05"
+  "updated_at": "2026-10-06"
 }

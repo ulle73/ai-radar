@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:06:21.936Z",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T07:36:30.518Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: Could not parse JSON from model response"
+    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)"
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 8,
-  "reused_today": 22,
-  "model_assessments": 3,
-  "fallback_assessments": 5,
+  "analyzed_today": 6,
+  "reused_today": 24,
+  "model_assessments": 5,
+  "fallback_assessments": 1,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,
