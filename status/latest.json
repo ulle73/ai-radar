@@ -1,18 +1,19 @@
 {
-  "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:25:34.002Z",
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T07:11:41.408Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "LoreanXavier/pt-pc: modellsvaret kunde inte valideras (missing assessment)."
+    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)",
+    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)"
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 11,
-  "reused_today": 19,
-  "model_assessments": 10,
-  "fallback_assessments": 1,
+  "analyzed_today": 10,
+  "reused_today": 20,
+  "model_assessments": 0,
+  "fallback_assessments": 10,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,
