@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391562,
+      "stars": 391658,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 276111,
+      "stars": 276673,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1414,12 +1414,12 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 283228,
+      "stars": 284925,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1468,12 +1468,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 296979,
+      "stars": 297333,
       "language": "Shell",
       "score": 45,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1522,12 +1522,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 252350,
+      "stars": 252613,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -5484,54 +5484,62 @@
     "hugohe3/ppt-master": {
       "repo": "hugohe3/ppt-master",
       "url": "https://github.com/hugohe3/ppt-master",
-      "summary_sv": "AI-genererar native PowerPoint-presentationer från dokument med animationer, tal och data-baserade diagram.",
-      "project_matches": [],
+      "summary_sv": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        },
+        {
+          "project": "Stock Signals",
+          "reason": "Kan vara transparent researchinspiration, inte beslutsmotor."
+        }
+      ],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 1,
-        "testability": 3,
-        "technical_fit": 2,
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 7,
         "repo_quality": 8,
-        "timing": 2
+        "timing": 7
       },
       "risks": [
-        "Låg relevans för aktuella projekt; kan vara överbyggt för nuvarande behov"
+        "Fallbackbedömning användes: missing assessment"
       ],
-      "confidence": 0.2,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-verktyg",
-      "concrete_use_case": "Inget direkt användningsfall i aktuella projekt; repot kan vara intressant att utforska för att generera presentationer eller dokumentation.",
-      "next_step": "Kör en demo av PPT Master för att generera en enkel presentation från ett kort dokument och bedöma output-kvaliteten.",
-      "differentiator": "Skapar native PowerPoint-filer med inbyggda former, övergångar, animationer och tal, samt stöder egna .pptx-mallar.",
-      "evidence": [
-        "AI genererar native PowerPoint från valfritt dokument",
-        "Stöder former, övergångar, animationer, data-baserade diagram och tal",
-        "45k+ GitHub-stjärnor indikerar hög popularitet"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 45818,
+      "stars": 59787,
       "language": "Python",
-      "score": 18,
+      "score": 57,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "testability"
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
-      "first_recommended": null,
-      "last_analyzed": "2026-08-13",
+      "last_seen": "2026-10-11",
+      "first_recommended": "2026-10-11",
+      "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
     },
@@ -5568,7 +5576,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 48222,
+      "stars": 49269,
       "language": "HTML",
       "score": 53,
       "action": "Arkiv",
@@ -5587,7 +5595,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -6524,7 +6532,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 10636,
+      "stars": 10793,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -6539,7 +6547,7 @@
         "testability"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-15",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -10071,7 +10079,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 159863,
+      "stars": 160640,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10090,7 +10098,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -13023,7 +13031,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 110815,
+      "stars": 110957,
       "language": "Go",
       "score": 8,
       "action": "Arkiv",
@@ -13039,7 +13047,7 @@
         "testability"
       ],
       "first_seen": "2026-09-04",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -14232,7 +14240,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 59960,
+      "stars": 60472,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14251,7 +14259,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14391,10 +14399,10 @@
         "testability": 8,
         "technical_fit": 10,
         "repo_quality": 8,
-        "timing": 5
+        "timing": 7
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Fallbackbedömning användes: missing assessment"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
@@ -14408,9 +14416,9 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 25097,
+      "stars": 26461,
       "language": "TypeScript",
-      "score": 58,
+      "score": 60,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -14427,9 +14435,9 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-09-08",
-      "last_analyzed": "2026-09-22",
+      "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
     },
@@ -14869,7 +14877,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 18838,
+      "stars": 19051,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -14888,7 +14896,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-10-05",
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -19080,7 +19088,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 6551,
+      "stars": 6784,
       "language": "TypeScript",
       "score": 57.492489743440395,
       "action": "Arkiv",
@@ -19099,7 +19107,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-10-07",
       "last_analyzed": "2026-10-07",
       "notified_at": null,
@@ -19360,9 +19368,9 @@
         "Ullebets technical_stack nämner Python men inte PyTorch; modeller är logistiska/regulariserade"
       ],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 103577,
+      "stars": 104207,
       "language": "Python",
       "score": 20,
       "action": "Arkiv",
@@ -19377,7 +19385,7 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19866,9 +19874,10 @@
         "Tekniskt imponerande men inte relevant för Jonas aktuella behov"
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 179320,
+      "stars": 179647,
       "language": "Dart",
       "score": 9,
       "action": "Arkiv",
@@ -19884,7 +19893,7 @@
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -20029,7 +20038,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 99046,
+      "stars": 99387,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -20044,7 +20053,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20082,7 +20091,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 26682,
+      "stars": 26857,
       "language": "TypeScript",
       "score": 29,
       "action": "Arkiv",
@@ -20098,7 +20107,7 @@
         "testability"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20578,7 +20587,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 23398,
+      "stars": 27589,
       "language": "C++",
       "score": 25,
       "action": "Arkiv",
@@ -20599,7 +20608,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -20778,58 +20787,54 @@
     "morluto/rea": {
       "repo": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "summary_sv": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "REA är ett verktyg som använder AI-agenter och MCP för att reverse-engineera binärfiler, appar och körningsbeteende.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 9,
+        "timing": 8
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Risk för juridiska begränsningar kring reverse engineering av proprietär mjukvara."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "reverse-engineering",
+      "concrete_use_case": "Jonas kan använda REA för att analysera proprietära binärer eller API:er för att förstå hur de fungerar, exempelvis för att undersöka konkurrenters verktyg eller interna system.",
+      "next_step": "Köra REA på ett enkelt öppen källkod-binär (t.ex. ett litet CLI-verktyg) och kontrollera om det genererar användbar struktur eller funktionsbeskrivning.",
+      "differentiator": "Kombinerar AI-agenter med MCP för att erbjuda en enhetlig reverse engineering-upplevelse över olika plattformar, vilket skiljer sig från traditionella verktyg som Ghidra eller Hopper som kräver manuell analys.",
+      "evidence": [
+        "One MCP for reverse engineering across binaries, applications, and runtime behavior.",
+        "MCP tool catalog",
+        "Node.js requirements"
+      ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 54450,
+      "stars": 79746,
       "language": "TypeScript",
-      "score": 60,
+      "score": 31,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": "2026-10-07",
-      "last_analyzed": "2026-10-10",
+      "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
     },
@@ -21087,7 +21092,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 13307,
+      "stars": 13793,
       "language": "Lean",
       "score": 20,
       "action": "Arkiv",
@@ -21108,7 +21113,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -21146,7 +21151,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3026,
+      "stars": 3277,
       "language": "JavaScript",
       "score": 20,
       "action": "Arkiv",
@@ -21162,7 +21167,7 @@
         "testability"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-09",
       "notified_at": null,
@@ -21263,7 +21268,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 8292,
+      "stars": 8346,
       "language": "C",
       "score": 52.80040642603379,
       "action": "Arkiv",
@@ -21282,7 +21287,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -21379,7 +21384,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 12254,
+      "stars": 15218,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -21398,7 +21403,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -21437,7 +21442,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2528,
+      "stars": 3004,
       "language": "Go",
       "score": 46.80589765868881,
       "action": "Arkiv",
@@ -21456,7 +21461,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -21495,7 +21500,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2041,
+      "stars": 2368,
       "language": "Rust",
       "score": 46.62011147550178,
       "action": "Arkiv",
@@ -21514,7 +21519,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -21590,11 +21595,11 @@
         "concrete_value": 9,
         "testability": 8,
         "technical_fit": 3,
-        "repo_quality": 6.679300315227368,
+        "repo_quality": 7.088632283494855,
         "timing": 2
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Fallbackbedömning användes: missing assessment"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
@@ -21608,9 +21613,9 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 2185,
+      "stars": 3501,
       "language": "Rust",
-      "score": 46.679300315227366,
+      "score": 47.08863228349485,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -21627,9 +21632,9 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
-      "last_analyzed": "2026-10-10",
+      "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
     },
@@ -21804,61 +21809,168 @@
     "zhongerxin/iphone-use": {
       "repo": "zhongerxin/iPhone-use",
       "url": "https://github.com/zhongerxin/iPhone-use",
-      "summary_sv": "让 Codex 通过 USB 操作真实 iPhone：引导安装、App 自动化、实时屏幕与截图回退。",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Låter Codex styra en riktig iPhone via USB genom WebDriverAgent: app-automation, skärmströmning och installationshjälp.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 7,
-        "repo_quality": 6.668505284668462,
+        "project_fit": 0,
+        "concrete_value": 1,
+        "testability": 3,
+        "technical_fit": 2,
+        "repo_quality": 6,
         "timing": 2
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Komplex setup (Xcode, signering, fysisk enhet) för osäker nytta",
+        "Ingen koppling till projektens web-baserade stackar eller behov"
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-mobile-automation",
+      "concrete_use_case": "Ingen konkret användning i de namngivna projekten; inget projekt har mobilapp-testning eller iPhone-automation som aktuellt behov.",
+      "next_step": "Ingen rekommenderas; verktyget riktar sig mot AI-agent-drivna mobilinteraktioner som inte matchar Jonas nuvarande arbetsflöden.",
+      "differentiator": "Unik integration mot Codex CLI med realtids-skärmswidget och WDA-baserad enhetskontroll, men kräver macOS, Xcode, Apple Developer-konto och fysisk enhet.",
+      "evidence": [
+        "Använder WebDriverAgent (WDA) 16.14.0 för enhetskommunikation",
+        "Inkluderar MCP-tjänst, installationsskript och setup-skills för Codex",
+        "Kräver full Xcode, Apple Developer Team, USB-iPhone med Developer Mode"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2714,
+      "language": "Python",
+      "score": 14,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-11",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "tensorflow/tensorflow": {
+      "repo": "tensorflow/tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "summary_sv": "An Open Source Machine Learning Framework for Everyone",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 3,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: missing assessment"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
+      "category": "uncategorized",
       "concrete_use_case": "",
       "next_step": "",
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Search API"
+        "GitHub Trending – daily"
       ],
-      "stars": 2158,
-      "language": "Python",
-      "score": 50.66850528466846,
+      "stars": 200796,
+      "language": "C++",
+      "score": 25,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
+        "testability",
         "concrete_use_case",
         "next_step",
         "differentiator",
         "evidence"
       ],
-      "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
       "first_recommended": null,
-      "last_analyzed": "2026-10-10",
+      "last_analyzed": "2026-10-11",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "noahdunnagan/fsearch": {
+      "repo": "noahdunnagan/fsearch",
+      "url": "https://github.com/noahdunnagan/fsearch",
+      "summary_sv": "Ett macOS-verktyg i Rust för helldiskssökning av filnamn och innehåll med fuzzy-matchning och typotolerans.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 2,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 8,
+        "timing": 3
+      },
+      "risks": [
+        "Endast macOS; ingen cross-platform-nytta",
+        "Löser inget identifierat behov i katalogens projekt"
+      ],
+      "confidence": 0.15,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "devtool-search",
+      "concrete_use_case": "Ingen direkt användning i något namngivet projekt; kan eventuellt påskynda lokal kodsökning vid utveckling men saknar koppling till projektets behov.",
+      "next_step": "Ingen rekommenderas; verktyget är generellt och löser inget specifikt problem i de aktiva projekten.",
+      "differentiator": "Extrem hastighet (~0,1 ms för filnamn, ~2 ms för innehåll över 8M filer) och Rust-baserad daemon, men ingen unik nytta för Jonas stack.",
+      "evidence": [
+        "README visar benchmarks mot 8,3M filer på M4 Max",
+        "Stödjer fuzzy-sökning, regex, filter (ext:, size:, mtime:) och innehållssökning",
+        "Kräver Full Disk Access på macOS"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1702,
+      "language": "Rust",
+      "score": 23,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-10-11"
 }
