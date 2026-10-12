@@ -1,21 +1,18 @@
 {
-  "date": "2026-10-11",
-  "generated_at": "2026-10-11T07:15:05.204Z",
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T07:24:30.262Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "hugohe3/ppt-master: modellsvaret kunde inte valideras (missing assessment).",
-    "mksglu/context-mode: modellsvaret kunde inte valideras (missing assessment).",
-    "tensorflow/tensorflow: modellsvaret kunde inte valideras (missing assessment).",
-    "storytold/wordcraft: modellsvaret kunde inte valideras (missing assessment)."
+    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)"
   ],
   "quality_warning_reasons": [],
   "project_context_version": 1,
   "candidates_today": 30,
-  "analyzed_today": 7,
-  "reused_today": 23,
-  "model_assessments": 3,
-  "fallback_assessments": 4,
+  "analyzed_today": 11,
+  "reused_today": 19,
+  "model_assessments": 6,
+  "fallback_assessments": 5,
   "exact_matches_today": 0,
   "eligible_before_diversity_cap": 0,
   "ranking_size": 0,

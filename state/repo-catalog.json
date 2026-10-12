@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391658,
+      "stars": 391727,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 276673,
+      "stars": 277405,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1410,16 +1410,15 @@
       "confidence": 0.35,
       "analysis_mode": "fallback",
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 284925,
+      "stars": 286779,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1468,12 +1467,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 297333,
+      "stars": 297874,
       "language": "Shell",
       "score": 45,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1522,12 +1521,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 252613,
+      "stars": 252893,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1936,54 +1935,58 @@
     "lyogavin/airllm": {
       "repo": "lyogavin/airllm",
       "url": "https://github.com/lyogavin/airllm",
-      "summary_sv": "Bibliotek för att köra stora språkmodeller som 70B och 405B på lågminnes-hårdvara med single 4GB GPU.",
-      "project_matches": [],
+      "summary_sv": "AirLLM 70B inference with single 4GB GPU",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 0,
-        "concrete_value": 0,
-        "testability": 2,
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
         "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 3
+        "repo_quality": 8,
+        "timing": 7
       },
       "risks": [
-        "Generisk LLM-inferensoptimering utan konkret projektnytta"
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
-      "confidence": 0.03,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "llm-inferens",
-      "concrete_use_case": "Ingen direkt användning i ett namngivet projekt; det är en generell LLM-inferensoptimering utan specifik koppling till Golfkuponger, Stock Signals, Ullebets eller andra aktiva projekt.",
-      "next_step": "Inget praktiskt test som kan kopplas till ett namngivet projekt.",
-      "differentiator": "Ingen unik fördel gentemot befintlig stack; Jonas använder OpenRouter för LLM-anrop och behöver inte lokal inferensoptimering för sina projekt.",
-      "evidence": [
-        "25 876 stars men är en generell LLM-inferenslösning",
-        "Ingen koppling till Jonas nio aktiva projekt eller deras specifika behov",
-        "Innehåller inget som direkt förbättrar en befintlig arbetsflöde eller tillväxtmotor"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 30604,
+      "stars": 36792,
       "language": "Jupyter Notebook",
-      "score": 14,
+      "score": 53,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "testability"
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
-      "last_analyzed": "2026-08-03",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -3625,58 +3628,55 @@
     "ultraworkers/claw-code": {
       "repo": "ultraworkers/claw-code",
       "url": "https://github.com/ultraworkers/claw-code",
-      "summary_sv": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Ett agent-drivet museumsexhibit byggt i Rust med Gajae-Code/LazyCodex, utvecklat och underhålls utan mänskligt ingripande.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 8,
-        "timing": 2
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 4,
+        "technical_fit": 6,
+        "repo_quality": 10,
+        "timing": 3
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Ingen specifik affärsmässig koppling till Jonas projekt",
+        "Kan vara för komplext för praktisk implementering"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.2,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "agent-drift-system",
+      "concrete_use_case": "Demonstrerar agentdrift utan mänsklig kontroll, men saknar specifik affärsmässig tillämpning i Jonas projekt",
+      "next_step": "Analysera hur agentdrift kan tillämpas i ett befintligt projekt, men kräver större omstrukturering",
+      "differentiator": "Komplett agentdrift med 194 968 stars, ett av de största agentrelaterade repos",
+      "evidence": [
+        "Beskrivning: 'agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex'",
+        "Utvecklat med 'no human intervention'",
+        "Har 194 968 stars - extremt populärt"
+      ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 195106,
+      "stars": 194968,
       "language": "Rust",
-      "score": 48,
+      "score": 26,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
-      "last_analyzed": "2026-08-21",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -5576,7 +5576,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 49269,
+      "stars": 51083,
       "language": "HTML",
       "score": 53,
       "action": "Arkiv",
@@ -5595,7 +5595,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -6532,7 +6532,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 10793,
+      "stars": 10961,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -6547,7 +6547,7 @@
         "testability"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-15",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -10079,7 +10079,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 160640,
+      "stars": 161334,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10098,7 +10098,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10650,7 +10650,7 @@
         "timing": 7
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
@@ -10662,9 +10662,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 39880,
+      "stars": 52250,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10683,9 +10683,9 @@
         "evidence"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-09-11",
-      "last_analyzed": "2026-09-11",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -14240,7 +14240,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 60472,
+      "stars": 61220,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14259,7 +14259,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14877,7 +14877,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 19051,
+      "stars": 19401,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -14896,7 +14896,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-10-05",
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -19088,7 +19088,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 6784,
+      "stars": 7054,
       "language": "TypeScript",
       "score": 57.492489743440395,
       "action": "Arkiv",
@@ -19107,7 +19107,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-10-07",
       "last_analyzed": "2026-10-07",
       "notified_at": null,
@@ -19370,7 +19370,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 104207,
+      "stars": 104649,
       "language": "Python",
       "score": 20,
       "action": "Arkiv",
@@ -19385,7 +19385,7 @@
         "testability"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -19874,10 +19874,9 @@
         "Tekniskt imponerande men inte relevant för Jonas aktuella behov"
       ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 179647,
+      "stars": 179849,
       "language": "Dart",
       "score": 9,
       "action": "Arkiv",
@@ -19893,7 +19892,7 @@
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -20038,7 +20037,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 99387,
+      "stars": 99845,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -20053,7 +20052,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20274,58 +20273,54 @@
     "tester-army/e2e": {
       "repo": "tester-army/e2e",
       "url": "https://github.com/tester-army/e2e",
-      "summary_sv": "Next generation e2e testing framework for web and mobile apps.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Ett open source E2E-testramverk där AI-agenten kan beskrivas i naturligt språk och sedan testar appen automatiskt.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 7.645120673885384,
-        "timing": 7
+        "project_fit": 5,
+        "concrete_value": 3,
+        "testability": 10,
+        "technical_fit": 8,
+        "repo_quality": 8,
+        "timing": 5
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Ingen specifik integration med befintliga projektstackar",
+        "Kan kräva ombyggnad för att vara användbart"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.3,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
-      "source_names": [
-        "GitHub Trending – daily"
+      "category": "testing-verktyg",
+      "concrete_use_case": "Kan inte direkt kopplas till ett specifikt behov i något av Jonas 9 aktiva projekt",
+      "next_step": "Testa om ramverket kan automatisera tester i något projekt, men det finns ingen tydlig behovsanalys",
+      "differentiator": "AI-driven testning med naturligt språk istället för manuell testskriptning",
+      "evidence": [
+        "Beskrivning: 'Describe a goal in natural language and an agent drives the app to reach it'",
+        "Använder Playwright och TypeScript",
+        "Har 9220 stars på GitHub"
       ],
-      "stars": 6645,
+      "source_names": [
+        "GitHub Trending – weekly"
+      ],
+      "stars": 9220,
       "language": "TypeScript",
-      "score": 59.64512067388539,
+      "score": 39,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "concrete_value"
       ],
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-10-05",
-      "last_analyzed": "2026-10-07",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -20587,7 +20582,7 @@
         "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 27589,
+      "stars": 30996,
       "language": "C++",
       "score": 25,
       "action": "Arkiv",
@@ -20608,7 +20603,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -20787,54 +20782,58 @@
     "morluto/rea": {
       "repo": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "summary_sv": "REA är ett verktyg som använder AI-agenter och MCP för att reverse-engineera binärfiler, appar och körningsbeteende.",
-      "project_matches": [],
+      "summary_sv": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
       "dimensions": {
-        "project_fit": 2,
-        "concrete_value": 2,
-        "testability": 5,
-        "technical_fit": 5,
-        "repo_quality": 9,
-        "timing": 8
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 10,
+        "repo_quality": 8,
+        "timing": 7
       },
       "risks": [
-        "Risk för juridiska begränsningar kring reverse engineering av proprietär mjukvara."
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
-      "confidence": 0.2,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "reverse-engineering",
-      "concrete_use_case": "Jonas kan använda REA för att analysera proprietära binärer eller API:er för att förstå hur de fungerar, exempelvis för att undersöka konkurrenters verktyg eller interna system.",
-      "next_step": "Köra REA på ett enkelt öppen källkod-binär (t.ex. ett litet CLI-verktyg) och kontrollera om det genererar användbar struktur eller funktionsbeskrivning.",
-      "differentiator": "Kombinerar AI-agenter med MCP för att erbjuda en enhetlig reverse engineering-upplevelse över olika plattformar, vilket skiljer sig från traditionella verktyg som Ghidra eller Hopper som kräver manuell analys.",
-      "evidence": [
-        "One MCP for reverse engineering across binaries, applications, and runtime behavior.",
-        "MCP tool catalog",
-        "Node.js requirements"
-      ],
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 79746,
+      "stars": 120681,
       "language": "TypeScript",
-      "score": 31,
+      "score": 60,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "testability"
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": "2026-10-07",
-      "last_analyzed": "2026-10-11",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -21092,7 +21091,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 13793,
+      "stars": 14201,
       "language": "Lean",
       "score": 20,
       "action": "Arkiv",
@@ -21113,7 +21112,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -21151,7 +21150,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3277,
+      "stars": 3469,
       "language": "JavaScript",
       "score": 20,
       "action": "Arkiv",
@@ -21167,7 +21166,7 @@
         "testability"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-09",
       "notified_at": null,
@@ -21268,7 +21267,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 8346,
+      "stars": 8416,
       "language": "C",
       "score": 52.80040642603379,
       "action": "Arkiv",
@@ -21287,7 +21286,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -21384,7 +21383,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 15218,
+      "stars": 19110,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -21403,9 +21402,9 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
-      "last_analyzed": "2026-10-10",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -21442,7 +21441,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3004,
+      "stars": 3361,
       "language": "Go",
       "score": 46.80589765868881,
       "action": "Arkiv",
@@ -21461,7 +21460,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -21583,58 +21582,55 @@
     "storytold/wordcraft": {
       "repo": "storytold/wordcraft",
       "url": "https://github.com/storytold/wordcraft",
-      "summary_sv": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "En open source ombyggnad av Microsoft Word i Rust som kör på macOS, Windows, Linux och webbläsare via WebAssembly.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 3,
-        "repo_quality": 7.088632283494855,
-        "timing": 2
+        "project_fit": 3,
+        "concrete_value": 2,
+        "testability": 5,
+        "technical_fit": 7,
+        "repo_quality": 9,
+        "timing": 4
       },
       "risks": [
-        "Fallbackbedömning användes: missing assessment"
+        "Ingen direkt affärsmässig koppling till något projekt",
+        "Svårt att se hur det ökar intäkt eller minskar arbete"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.25,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "dokument-redigering",
+      "concrete_use_case": "Kan inte direkt kopplas till något av Jonas projekt utan tydlig affärsmässig nytta",
+      "next_step": "Researcha om WordCraft kan ersätta eller komplettera någon befintlig dokumentgenerering i ett projekt",
+      "differentiator": "Ren implementering i Rust med WebAssembly-stöd, inga Microsoft-berättigade komponenter",
+      "evidence": [
+        "Beskrivning: 'clean-room reimplementation of Microsoft Word in pure Rust'",
+        "Kör på WebAssembly och native",
+        "Har 6927 stars"
+      ],
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3501,
+      "stars": 6927,
       "language": "Rust",
-      "score": 47.08863228349485,
+      "score": 30,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "first_recommended": null,
-      "last_analyzed": "2026-10-11",
+      "last_analyzed": "2026-10-12",
       "notified_at": null,
       "notified_score": null
     },
@@ -21970,7 +21966,228 @@
       "last_analyzed": "2026-10-11",
       "notified_at": null,
       "notified_score": null
+    },
+    "chrislgarry/apollo-11": {
+      "repo": "chrislgarry/Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "summary_sv": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 3,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 7
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "uncategorized",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 74432,
+      "language": "Assembly",
+      "score": 25,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-12",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "wheresryan22/anatomy": {
+      "repo": "wheresryan22/anatomy",
+      "url": "https://github.com/wheresryan22/anatomy",
+      "summary_sv": "Ett Claude-agent-skill som genererar detaljerade, interaktiva isometriska illustrationer av maskiner och komplexa system i SVG och WebGL.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 4,
+        "concrete_value": 3,
+        "testability": 6,
+        "technical_fit": 5,
+        "repo_quality": 7,
+        "timing": 4
+      },
+      "risks": [
+        "Ingen specifik affärsmässig användning i något projekt",
+        "Svårt att mäta ekonomisk nytta"
+      ],
+      "confidence": 0.3,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "visualisering-agent",
+      "concrete_use_case": "Kan inte direkt kopplas till ett specifikt behov i Jonas projekt",
+      "next_step": "Testa om illustrationer kan förbättra någon contentproduktion, men det saknar tydlig affärsmässig koppling",
+      "differentiator": "Genererar interaktiva 3D-illustrationer direkt via AI-agentspråk",
+      "evidence": [
+        "Beskrivning: 'A Claude skill that explains an idea by building it as a real, working object'",
+        "Stöder SVG, WebGL och 3D-effekter",
+        "Har 4136 stars"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 4136,
+      "language": "JavaScript",
+      "score": 29,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-12",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "storytold/gridcraft": {
+      "repo": "storytold/gridcraft",
+      "url": "https://github.com/storytold/gridcraft",
+      "summary_sv": "En open source kalkylbladsmotorer i Rust som liknar Microsoft Excel, kör på native och webbläsare via WebAssembly.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 3,
+        "concrete_value": 2,
+        "testability": 5,
+        "technical_fit": 6,
+        "repo_quality": 8,
+        "timing": 4
+      },
+      "risks": [
+        "Ingen direkt affärsmässig koppling till något projekt",
+        "Svårt att se hur det ökar intäkt eller minskar arbete"
+      ],
+      "confidence": 0.25,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "kalkylblad",
+      "concrete_use_case": "Kan inte direkt kopplas till ett specifikt behov i Jonas projekt utan tydlig affärsmässig nytta",
+      "next_step": "Researcha om kalkylblad kan förbättra något befintligt arbetsflöde, men det finns ingen specifik behovsanalys",
+      "differentiator": "Ren Rust-implementering med WebAssembly-stöd, som Excel utan Microsoft-berättigelser",
+      "evidence": [
+        "Beskrivning: 'open-source, clean-room reimplementation of Microsoft Excel, rebuilt in pure Rust'",
+        "Kör på WebAssembly och native",
+        "Har 3194 stars"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 3194,
+      "language": "Rust",
+      "score": 28,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-12",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "storytold/cadcraft": {
+      "repo": "storytold/cadcraft",
+      "url": "https://github.com/storytold/cadcraft",
+      "summary_sv": "CADCraft är en öppen källa CAD-app skriven i Ren Rust, med AutoCAD-liknande kommandolinje, lager, dimensioner, DXF-stöd och MCP-gränssnitt för agentdrivna arbetsflöden.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 6,
+        "technical_fit": 5,
+        "repo_quality": 7,
+        "timing": 4
+      },
+      "risks": [
+        "Early development, kan sakna stabilitet och avancerade funktioner",
+        "Ingen direkt koppling till Jonasprojekt, hög investering för osäker vinst",
+        "MCP-stöd är ännu tidigt och kan kräva anpassning"
+      ],
+      "confidence": 0.15,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "cad-designverktyg",
+      "concrete_use_case": "Jonas kan använda det för att skapa eller redigera tekniska ritningar, men det finns inget direkt behov inom de aktiva projekten (Golfkuponger, Stock Signals, Ullebets, Nyabolaget, FAIV, AI Radar, Sankdig, Res-kungen, Apify Scraper).",
+      "next_step": "Testa grundläggande ritningsfunktioner och MCP-stödet för att se om det kan integreras i något av projekten, t.ex. för att generera illustrationsfiler till content, men förvänta ingen omedelbar affärseffekt.",
+      "differentiator": "Ren implementering i Rust med MCP-stöd gör det potentiellt lätt att integrera med AI-agenter, men det erbjuder ingen unik nytta gentemö vanliga CAD-verktyg som redan finns i branschen.",
+      "evidence": [
+        "README anger att det är en clean-room reimplementation av AutoCAD i pure Rust",
+        "Stöd för MCP (Model Context Protocol) för agentdrivning",
+        "Stöd för DXF, flera plattformar (macOS, Windows, Linux, BSD, Web)"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2885,
+      "language": "Rust",
+      "score": 26,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-12",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-10-11"
+  "updated_at": "2026-10-12"
 }
