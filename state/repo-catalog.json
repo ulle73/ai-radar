@@ -1142,12 +1142,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 391825,
+      "stars": 391933,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1355,12 +1355,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 278114,
+      "stars": 278731,
       "language": "JavaScript",
       "score": 18,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1413,12 +1413,12 @@
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 288470,
+      "stars": 290044,
       "language": "Shell",
       "score": 53,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1467,12 +1467,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 298347,
+      "stars": 298780,
       "language": "Shell",
       "score": 45,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1521,12 +1521,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 253252,
+      "stars": 253564,
       "language": "Python",
       "score": 43,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -1965,7 +1965,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 37800,
+      "stars": 38465,
       "language": "Jupyter Notebook",
       "score": 53,
       "action": "Arkiv",
@@ -1984,7 +1984,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-03",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -3658,7 +3658,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 194932,
+      "stars": 194900,
       "language": "Rust",
       "score": 26,
       "action": "Arkiv",
@@ -3674,7 +3674,7 @@
         "testability"
       ],
       "first_seen": "2026-08-07",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -5574,9 +5574,10 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – daily",
+        "GitHub Trending – weekly"
       ],
-      "stars": 53115,
+      "stars": 54561,
       "language": "HTML",
       "score": 53,
       "action": "Arkiv",
@@ -5595,7 +5596,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -6532,7 +6533,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 11118,
+      "stars": 11255,
       "language": "TypeScript",
       "score": 14,
       "action": "Arkiv",
@@ -6547,7 +6548,7 @@
         "testability"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-15",
       "last_analyzed": "2026-10-02",
       "notified_at": null,
@@ -10085,7 +10086,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 162095,
+      "stars": 162946,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10104,7 +10105,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -10670,7 +10671,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 54228,
+      "stars": 55791,
       "language": "JavaScript",
       "score": 60,
       "action": "Arkiv",
@@ -10689,7 +10690,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-09-11",
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -12535,9 +12536,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 53941,
+      "stars": 64082,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12556,7 +12557,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-06",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14246,7 +14247,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 62053,
+      "stars": 63020,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14265,7 +14266,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-01",
       "notified_at": null,
@@ -14422,7 +14423,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 27584,
+      "stars": 28454,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14441,7 +14442,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-11",
       "notified_at": null,
@@ -14883,7 +14884,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 19751,
+      "stars": 20076,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -14902,7 +14903,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-10-05",
       "last_analyzed": "2026-10-05",
       "notified_at": null,
@@ -19882,7 +19883,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 180013,
+      "stars": 180133,
       "language": "Dart",
       "score": 9,
       "action": "Arkiv",
@@ -19898,7 +19899,7 @@
         "testability"
       ],
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-03",
       "notified_at": null,
@@ -20043,7 +20044,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 100202,
+      "stars": 100517,
       "language": "TypeScript",
       "score": 33,
       "action": "Arkiv",
@@ -20058,7 +20059,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-04",
       "notified_at": null,
@@ -20309,7 +20310,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 9752,
+      "stars": 10208,
       "language": "TypeScript",
       "score": 39,
       "action": "Arkiv",
@@ -20324,7 +20325,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-10-05",
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -20587,7 +20588,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 33482,
+      "stars": 35739,
       "language": "C++",
       "score": 25,
       "action": "Arkiv",
@@ -20608,7 +20609,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -20816,10 +20817,9 @@
       "evidence": [],
       "source_names": [
         "GitHub Trending – daily",
-        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 176095,
+      "stars": 217043,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -20838,7 +20838,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": "2026-10-07",
       "last_analyzed": "2026-10-13",
       "notified_at": null,
@@ -21274,7 +21274,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 8416,
+      "stars": 8494,
       "language": "C",
       "score": 52.80040642603379,
       "action": "Arkiv",
@@ -21293,7 +21293,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -21390,7 +21390,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 23250,
+      "stars": 26331,
       "language": "Rust",
       "score": 53,
       "action": "Arkiv",
@@ -21409,7 +21409,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -21448,7 +21448,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 3723,
+      "stars": 3952,
       "language": "Go",
       "score": 46.80589765868881,
       "action": "Arkiv",
@@ -21467,7 +21467,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -22059,7 +22059,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 6917,
+      "stars": 8616,
       "language": "JavaScript",
       "score": 25,
       "action": "Arkiv",
@@ -22074,7 +22074,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "first_recommended": null,
       "last_analyzed": "2026-10-13",
       "notified_at": null,
@@ -22360,7 +22360,328 @@
       "last_analyzed": "2026-10-13",
       "notified_at": null,
       "notified_score": null
+    },
+    "vercel-labs/skills": {
+      "repo": "vercel-labs/skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "summary_sv": "Ett CLI-verktyg som hanterar öppna AI-agentfärdigheter och låter installera och använda olika kodningsagenters färdigheter.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 1,
+        "testability": 7,
+        "technical_fit": 6,
+        "repo_quality": 9,
+        "timing": 5
+      },
+      "risks": [
+        "Låg relevans för de aktuella projekten; troligen bara en generisk developer tool."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "developer-tools",
+      "concrete_use_case": "Inspiration eller research; inte direkt användbar i de aktuella projekten.",
+      "next_step": "Läs README för att se om någon av de listade agenterna kan användas i AI Radar eller annan intern pipeline.",
+      "differentiator": "Stöder över 75 olika kodningsagenter via ett enda CLI-gränssnitt.",
+      "evidence": [
+        "CLI för det öppna agentfärdighetsekosystemet som stöder OpenCode, Claude Code, Codex, Cursor och fler.",
+        "Npm-nedladdningar per månad: hög (visas i README).",
+        "MIT-licens och aktiv utveckling."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 34692,
+      "language": "TypeScript",
+      "score": 30,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "xtool-org/xtool": {
+      "repo": "xtool-org/xtool",
+      "url": "https://github.com/xtool-org/xtool",
+      "summary_sv": "Ett verktyg som ersätter Xcode och låter bygga och distribuera iOS-appar på Linux, Windows och macOS med Swift Package Manager.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 1,
+        "concrete_value": 0,
+        "testability": 6,
+        "technical_fit": 7,
+        "repo_quality": 8,
+        "timing": 5
+      },
+      "risks": [
+        "Ingen direkt nytta för de aktuella projekten; iOS-specifikt och utanför den nuvarande produktstacken."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "mobile-dev",
+      "concrete_use_case": "Inspiration eller research; inte direkt användbar i de aktuella projekten.",
+      "next_step": "Försök bygga en enkel SwiftPM-app med xtool för att se om det kan användas för iOS-utveckling utanför macOS.",
+      "differentiator": "Gör iOS-utveckling tillgänglig på icke-Apple-operativsystem utan behov av Xcode.",
+      "evidence": [
+        "Cross-platform Xcode replacement för iOS-utveckling på Linux/Windows/macOS.",
+        "Stödjer signering, installation och interaktion med Apple Developer Services.",
+        "Nära 10k stjärnor på GitHub."
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 9725,
+      "language": "Swift",
+      "score": 27,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "onehumanbeing/esp32-iphone-agent": {
+      "repo": "onehumanbeing/esp32-iphone-agent",
+      "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+      "summary_sv": "Låter en AI-modell använda en riktig iPhone via en billig ESP32-bräda för skärmvisning och pekanvändning utan Mac eller jailbreak.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 1,
+        "concrete_value": 0,
+        "testability": 5,
+        "technical_fit": 6,
+        "repo_quality": 6,
+        "timing": 4
+      },
+      "risks": [
+        "Hög hårdvaru- och mjukvarukomplexitet; troligen inte direkt användbar för de aktuella projekten."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "ai-automation",
+      "concrete_use_case": "Inspiration eller research; inte direkt användbar i de aktuella projekten.",
+      "next_step": "Testa AirPlay- och USB HID-gränssnittet på en iPhone för att se om det kan användas för automatisering av mobilinteraktioner.",
+      "differentiator": "Gör det möjligt att kontrollera en iPhone med enbart en $7 ESP32-bräda och vilken LLM som helst.",
+      "evidence": [
+        "ESP32 iPhone Agent som använder AirPlay screen mirroring och USB HID för att styra iPhone.",
+        "Stöder OpenAI-kompatibla vision-modeller.",
+        "Cirka 1,7k stjärnor och aktiv CI."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1730,
+      "language": "Python",
+      "score": 22,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "jhaizhou-ops/d2r-mobile": {
+      "repo": "jhaizhou-ops/d2r-mobile",
+      "url": "https://github.com/jhaizhou-ops/d2r-mobile",
+      "summary_sv": "En open-source kompatibilitetslag för Diablo II: Resurrected som kör Nintendo Switch-versionen nativt på iPhone, iPad och Mac med 60 fps.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 1,
+        "concrete_value": 0,
+        "testability": 5,
+        "technical_fit": 5,
+        "repo_quality": 5,
+        "timing": 4
+      },
+      "risks": [
+        "Nischad spelport; ingen tydlig koppling till de aktuella projekten."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "gaming",
+      "concrete_use_case": "Inspiration eller research; inte direkt användbar i de aktuella projekten.",
+      "next_step": "Klona och bygg spelet på en iPhone för att se om det kan användas som referens för mobilspelportteknik.",
+      "differentiator": "Gör en fullständig, presterande version av Diablo II tillgänglig på mobila enheter utan konsol.",
+      "evidence": [
+        "iOS/macOS-kompatibilitetslag för Diablo II: Resurrected med 60 fps och touch-kontroller.",
+        "Stöder Reign of the Warlock-expansionen.",
+        "Nära 1,3k stjärnor och aktiv utveckling."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1299,
+      "language": "C",
+      "score": 20,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "liseami/ccbaga": {
+      "repo": "liseami/CCBaga",
+      "url": "https://github.com/liseami/CCBaga",
+      "summary_sv": "Ett native toolkit för macOS, Linux och Windows som ger en renare arbetsyta och en verifierbar miljö med identitets- och nätverksövervakning.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 1,
+        "concrete_value": 0,
+        "testability": 6,
+        "technical_fit": 6,
+        "repo_quality": 7,
+        "timing": 5
+      },
+      "risks": [
+        "Hög hårdvaru- och mjukvarukomplexitet; troligen inte direkt användbar för de aktuella projekten."
+      ],
+      "confidence": 0.1,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "productivity",
+      "concrete_use_case": "Inspiration eller research; inte direkt användbar i de aktuella projekten.",
+      "next_step": "Installera CCBaga på en maskin och testa dess identitets- och nätverksövervakning för att se om det kan användas för utvecklingsmiljöer.",
+      "differentiator": "Ger en enhetlig, verifierbar arbetsyta över tre operativsystem med fokus på observability.",
+      "evidence": [
+        "Native cross-platform toolkit för macOS, Linux och Windows.",
+        "Inkluderar Claude-identiteter, browser fingerprints, system settings och network skill.",
+        "Nära 2,1k stjärnor och MIT-licens."
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2119,
+      "language": "Rust",
+      "score": 25,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "storytold/craft-launcher": {
+      "repo": "storytold/craft-launcher",
+      "url": "https://github.com/storytold/craft-launcher",
+      "summary_sv": "En Rust-app-lanserare för ArtCraft-svits verktyg som fungerar på macOS, Windows, Linux och webben",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 0
+      },
+      "risks": [
+        "Ingen koppling till aktuella behov, risk för att prioriseras fel"
+      ],
+      "confidence": 0,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "allmän-app-lanserare",
+      "concrete_use_case": "Ingen direkt koppling till Jonas namngivna projekt",
+      "next_step": "Ingen test kan kopplas till ett specifikt projekt just now",
+      "differentiator": "Rebuilt i ren Rust jämfört med Electron-baserade lanchers, men saknar integration med Jonas projekt",
+      "evidence": [
+        "2391 stars, 804 forks, cross-platform stöd, tidig alpha-status"
+      ],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2391,
+      "language": "Rust",
+      "score": 5,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-14",
+      "notified_at": null,
+      "notified_score": null
     }
   },
-  "updated_at": "2026-10-13"
+  "updated_at": "2026-10-14"
 }
