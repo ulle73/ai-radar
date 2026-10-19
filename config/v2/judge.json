@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "note": "Lokal domare (docs/V2-SPEC.md avsnitt 5). Codex körs med --ignore-user-config så att domaren inte får Jonas MCP-servrar, i read-only-sandlåda utan nätverk.",
+  "max_jobs_per_run": 4,
+  "queue_limit": 200,
+  "timeout_seconds": 420,
+  "model": "gpt-5.6-luna",
+  "model_note": "Vald av Jonas 2026-10-19: billigaste Codex-modellen på ChatGPT-planen, inga reserver till dyrare modeller. Domaren kör aldrig mot en betald API-nyckel (spärr i scripts/lib/v2/judge/codex.mjs). gpt-6.1-sol i ~/.codex/config.toml stöds inte av kontot.",
+  "judge_reasoning_effort": "low",
+  "skeptic_reasoning_effort": "low",
+  "codex_paths": [
+    "%LOCALAPPDATA%\\Programs\\OpenAI\\Codex\\bin\\codex.exe"
+  ],
+  "max_observations_per_job": 10,
+  "max_observation_chars": 2500,
+  "fallback_models": [],
+  "require_chatgpt_login": true
+}

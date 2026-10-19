@@ -256,16 +256,19 @@ function checkBudget(budget) {
   return gate('G8', 'Budget', true, `${spent} av ${cap} kr använt`);
 }
 
+// En skanning som ännu inte körts gör kortet overifierat (det kan aldrig nå brevet);
+// fynd i skanningen, fel licens eller saknade klienter efter en körd skanning ger avslag.
 function checkSecurity(card) {
   const security = card.security;
-  if (!security) return 'säkerhetsuppgifter saknas';
-  if (security.static_scan !== 'clean') return `statisk skanning: ${security.static_scan}`;
-  if (!ALLOWED_LICENSES.includes(norm(security.license))) return `licensen är inte godkänd: ${security.license ?? 'okänd'}`;
+  if (!security) return { problem: 'säkerhetsuppgifter saknas' };
+  if (security.static_scan === 'findings') return { problem: 'statisk skanning hittade problem' };
+  if (security.static_scan === 'not_run') return { pending: true };
+  if (!ALLOWED_LICENSES.includes(norm(security.license))) return { problem: `licensen är inte godkänd: ${security.license ?? 'okänd'}` };
   const bothClients = ['claude', 'codex'].every((client) => security.clients.includes(client));
   if (!bothClients && !String(security.client_note || '').trim()) {
-    return 'fungerar inte i båda klienterna och saknar förklaring';
+    return { problem: 'fungerar inte i båda klienterna och saknar förklaring' };
   }
-  return null;
+  return {};
 }
 
 function testStatus(card) {
@@ -282,25 +285,28 @@ function checkType(card, inventory, nowMs) {
 
   if (card.type === 'NY' || card.type === 'ERSATT') {
     if (!HUB_KINDS.includes(card.target.kind)) return fail(`fel måltyp för ${card.type}: ${card.target.kind}`);
-    const securityProblem = checkSecurity(card);
-    if (securityProblem) return fail(securityProblem);
+    const security = checkSecurity(card);
+    if (security.problem) return fail(security.problem);
 
     if (card.type === 'NY') {
       if (card.test.kind !== 'smoke') return fail('NY kräver smoke-test');
       const status = testStatus(card);
       if (status.failed) return fail(status.failed);
-      return pass('smoke-test, skanning och licens godkända', status.unverified);
+      const unverified = status.unverified || Boolean(security.pending);
+      return pass(unverified ? 'smoke-test eller skanning återstår' : 'smoke-test, skanning och licens godkända', unverified);
     }
 
     if (!card.replaces) return fail('ERSÄTT anger inte vad som ersätts');
     if (!findHubEntity(inventory, card.replaces)) return fail(`det som ersätts finns inte i hubben: ${card.replaces}`);
-    if (card.test.kind !== 'ab' || !card.test.ab) return fail('ERSÄTT kräver A/B-test med båda utdata');
+    if (card.test.kind !== 'ab') return fail('ERSÄTT kräver A/B-test med båda utdata');
+    const status = testStatus(card);
+    if (status.failed) return fail(status.failed);
+    if (card.test.outcome === 'not_run') return pass('A/B-test återstår', true);
+    if (!card.test.ab) return fail('ERSÄTT kräver A/B-test med båda utdata');
     const winners = card.test.ab.criteria.map((criterion) => criterion.winner);
     if (winners.includes('old')) return fail('den gamla vinner på minst ett kriterium');
     if (!winners.includes('new')) return fail('den nya vinner inte på något kriterium');
-    const status = testStatus(card);
-    if (status.failed) return fail(status.failed);
-    return pass('A/B visar att den nya vinner utan att förlora', status.unverified);
+    return pass('A/B visar att den nya vinner utan att förlora', status.unverified || Boolean(security.pending));
   }
 
   if (card.type === 'PROJEKT') {

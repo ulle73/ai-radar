@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision", "decision_reason", "type", "area", "title", "recommendation", "because",
+    "anchors", "target_kind", "target_ref", "target_branch", "replaces", "action_on_ok",
+    "effort_hours", "monthly_cost_sek", "risk", "confidence", "rule_text",
+    "measure_metric", "measure_baseline", "measure_days", "urgency_trigger", "urgency_reason", "test_task"
+  ],
+  "properties": {
+    "decision": { "type": "string", "enum": ["CARD", "NONE"] },
+    "decision_reason": { "type": "string" },
+    "type": { "type": "string", "enum": ["NY", "ERSATT", "PROJEKT", "ANVAND", "LARM", "NONE"] },
+    "area": { "type": "string", "enum": ["tools_hub", "social", "sales", "projects"] },
+    "title": { "type": "string" },
+    "recommendation": { "type": "string" },
+    "because": { "type": "string" },
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "ref"],
+        "properties": {
+          "kind": { "type": "string", "enum": ["skill", "tool", "mcp", "repo", "workflow", "notion", "metric", "agents_rule"] },
+          "ref": { "type": "string" }
+        }
+      }
+    },
+    "target_kind": { "type": "string", "enum": ["skill", "tool", "mcp", "repo", "workflow", "notion", "metric", "agents_rule", "none"] },
+    "target_ref": { "type": "string" },
+    "target_branch": { "type": ["string", "null"] },
+    "replaces": { "type": ["string", "null"] },
+    "action_on_ok": { "type": "string" },
+    "effort_hours": { "type": "number" },
+    "monthly_cost_sek": { "type": "number" },
+    "risk": { "type": "string" },
+    "confidence": { "type": "number" },
+    "rule_text": { "type": ["string", "null"] },
+    "measure_metric": { "type": ["string", "null"] },
+    "measure_baseline": { "type": ["string", "null"] },
+    "measure_days": { "type": ["integer", "null"] },
+    "urgency_trigger": {
+      "type": ["string", "null"],
+      "enum": ["competitor_campaign_live", "sales_deviation", "platform_breaking_change", "security_advisory", null]
+    },
+    "urgency_reason": { "type": ["string", "null"] },
+    "test_task": { "type": ["string", "null"] }
+  }
+}

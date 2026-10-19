@@ -301,6 +301,23 @@ Beslut: Codex inbyggda sandlåda (`workspace-write`, nätverk av) på Windows 11
 
 Codex-versionen och den aktuella dokumentationen kontrolleras i fas 0, eftersom Windows-stödet ändras ofta.
 
+**Verifierat 2026-10-19 (codex-cli 0.146.1, Windows-sandlåda `elevated`), mot en kontroll utan sandlåda:**
+
+| | Utan sandlåda | `codex sandbox`, workspace-write |
+|---|---|---|
+| Skriva i arbetsmappen | tillåtet | tillåtet |
+| Skriva utanför arbetsmappen | tillåtet | **nekat** |
+| Nätverk (api.github.com) | 200 | **blockerat** (EACCES), även i read-only |
+
+**Så körs domaren** (`scripts/lib/v2/judge/codex.mjs`):
+
+- `codex exec --ignore-user-config`, så att domaren inte får Jonas MCP-servrar eller annan konfiguration.
+- `--sandbox read-only` i en tom temporär arbetsmapp, `--ephemeral` (inga sparade sessioner) och `--output-schema`. Svaret valideras dessutom mot schemat i koden.
+- `--disable` för allt domaren inte behöver: `apps`, `browser_use*`, `computer_use`, `plugins`, `hooks`, `memories`, `multi_agent`, `image_generation`, `skill_search` och, viktigast, **`shell_tool`**. Flera av dessa är påslagna även med `--ignore-user-config`, och `apps`, `browser_use` och `computer_use` går inte genom sandlådan. Utan skal kan domaren bara läsa prompten och svara.
+- **Inga fakturerade anrop:** Codex startas utan `OPENAI_API_KEY`, `OPENROUTER_API_KEY` med flera i miljön, och domaren vägrar köra om `codex login status` inte visar inloggning med ChatGPT-kontot.
+
+**Modell (beslut Jonas 2026-10-19):** `gpt-5.6-luna` med lågt resonemang för både domare och skeptiker. Det är den billigaste modellen på ChatGPT-planen, och ingen reserv till dyrare modeller används. Kontot har bara `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna` och `gpt-reserve` (`codex debug models`). GPT-6-modellerna, inklusive `gpt-6.1-sol` som står i `~/.codex/config.toml`, avvisas med *"not supported when using Codex with a ChatGPT account"*. OpenRouter används inte av v2. Tillfälliga fel som *"Selected model is at capacity"* ger status `RETRY` lokalt, och observationerna står då kvar som `NEW` till nästa körning.
+
 ### 9.2 Osäkert innehåll
 
 Allt från källor (README, SKILL.md, videotranskript, konkurrentsidor, REA-utdata) är **data, inte instruktioner**. Prompterna ska säga det uttryckligen. Kandidattext som försöker styra agenten ("ignore previous", "run this", "install") flaggas och sänker kortet till avslag.
@@ -341,7 +358,7 @@ Faserna anger byggordning. Alla fyra områden går live samtidigt i fas 2.
 
 - [x] ~~**Jonas:** lös GitHub-faktureringen~~. Löst genom att repot gjordes publikt 2026-10-19, så Actions kör gratis och testerna körs på varje PR.
 - [ ] Discord-kanal `#radar` och bot-behörigheter (återanvänd AI Radar-boten).
-- [ ] Kontrollera Codex-version och sandlåda: `codex sandbox windows` passerar.
+- [x] Kontrollera Codex-version och sandlåda: 0.146.1 är verifierad mot kontroll (avsnitt 9.1).
 - [ ] Skrivskyddad databasroll mot content-engines Postgres.
 - [x] Bestäm hur jobbkön nås från datorn: HMAC-signerade n8n-webhooks med bara utgående anrop från datorn (se avsnitt 3).
 
@@ -354,7 +371,9 @@ Klart när: alla punkter är bockade och verifierade.
 - [x] Inventeringsexport från hubben (`scripts/v2/build-inventory.mjs`) plus lokal statisk del för repon, n8n, Notion och mått.
 - [x] n8n: observationstabell (`GK_R2_OBSERVATIONS`), ingest och data feed, konfiguration och kostnadslogg. Heartbeat körs i Actions och lokalt (avsnitt 3).
 - [ ] Budgetvakt som läser `GK_R2_COSTS` (behövs först när domaren gör betalda anrop).
-- [ ] Lokal domare: Windows-aktivitet, hämtning av jobb, Codex headless, karantän, statisk skanning, retur av kort.
+- [x] Lokal domare (`scripts/v2/judge.mjs`): hämtar jobb via `R2 – Judge Queue`, grupperar (releaser per verktyg, röd CI per repo), kör domare och skeptiker i Codex, bygger kortet i kod, kör grindarna och skickar tillbaka kortet (`GK_R2_CARDS`, status `SHADOW`) och observationernas status (`JUDGED`, `DISMISSED`, `DIGEST`, `FAILED`). Verifierat end-to-end 2026-10-19.
+- [ ] Windows-schemalagd aktivitet för `heartbeat --mode private` och `judge` (kräver Jonas OK, eftersom det är en bestående inställning på datorn).
+- [ ] Provkörning av NY- och ERSÄTT-kandidater i karantän med statisk skanning (fas 3; tills dess blir sådana kort overifierade och når aldrig brevet).
 - [x] Minst en detektor per område som ren kod (`scripts/lib/v2/detectors/`): releaser och YouTube (verktyg & hubb), kampanjer och avvikande inlägg (sociala), 7-dagarstrend (försäljning), röd CI och Notion Log som stått stilla (projekt). Alla har tester, och releaser, YouTube och CI är provkörda mot riktig data.
 - [x] Koppla detektorerna till riktiga indata: GitHub-releaser och CI, YouTube-RSS, `GK_DAILY_ORDER_REPORTS` och Notion Log. Verifierat end-to-end 2026-10-19 med 104 observationer i `GK_R2_OBSERVATIONS` och 0 dubbletter vid omkörning.
 - [ ] content-engine som källa för sociala signaler (kräver skrivskyddad databasroll, fas 0).
@@ -411,6 +430,8 @@ Om målen inte nås justeras källor, detektorer och grindar innan något nytt l
 
 - GitHub-faktureringen är inte längre ett hinder, eftersom repot är publikt sedan 2026-10-19 och Actions därmed är gratis.
 - Claude Code CLI finns inte i PATH på datorn, så domaren är Codex. En korskontroll med Claude kan läggas till senare om CLI installeras.
+- `~/.codex/config.toml` har `model = "gpt-6.1-sol"`, som ChatGPT-kontot inte stöder. Domaren påverkas inte eftersom modellen är låst i `config/v2/judge.json`, men Jonas vanliga `codex exec` fallerar sannolikt av samma skäl. Det är en klientinställning utanför hubben och ändras inte av Radar.
+- `DIGEST`-observationer (saker som stått stilla utan eget kort) ska samlas i fredagssammanfattningen (fas 2).
 - Tabellnamn i content-engines databas verifieras i fas 1 (YouTube-kanalernas ID är verifierade).
 - Shopify Analytics nås via Shopify-anslutningen. Om n8n behöver egen åtkomst krävs en skrivskyddad app eller token (fas 1).
 - Discord-komponenternas gränser kontrolleras mot aktuell dokumentation innan kortlayouten fastställs. `37 AI – Discord Interactions v2` hanterar redan 1–10.
