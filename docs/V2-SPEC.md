@@ -89,10 +89,10 @@ Målet är att Claude och Codex blir bättre, och att båda använder exakt samm
 | GitHub Trending (daglig, veckovis) | HTML-hämtning med en parser som testas mot en sparad fixture | Dagens parser i n8n ger 0 poster och måste skrivas om och få tester. |
 | GitHub Search API | Ämnena `agent-skills`, `claude-code`, `codex`, `mcp-server`, `n8n`, `remotion`, `hyperframes`, sorterade på stjärntillväxt | `gh`/token. Mät stjärnor per dag, inte totalt. |
 | Skill-register | Commits och nya mappar i `anthropics/skills`, `openai/plugins`, `anthropics/claude-plugins-official` och skills.sh | Finns delvis i `GK_AI_RADAR_SOURCES`. |
-| YouTube (16 kanaler) | Kanalens officiella RSS-flöde `https://www.youtube.com/feeds/videos.xml?channel_id=…` → förfilter på titel och beskrivning → transkript via Apify bara för de som passerar → extrahera repon, skills och tips | Kanal-ID verifieras i fas 1. Djupgenomgång vid behov via `youtube-systems-library`. |
+| YouTube (16 kanaler) | Kanalens officiella RSS-flöde `https://www.youtube.com/feeds/videos.xml?channel_id=…` → förfilter på titel och beskrivning → transkript via Apify bara för de som passerar → extrahera repon, skills och tips | Kanal-ID och flöden verifierade 2026-10-19 (`config/v2/sources.json`). Förfiltret har starka och svaga ord: ett starkt ord i titeln, eller ett starkt plus ett svagt, krävs. Breda ord som "video" och "claude" släppte igenom 26 videor på 3 dygn, och med de nuvarande listorna passerar 11, alla relevanta. Djupgenomgång vid behov via `youtube-systems-library`. |
 | Plattformsnyheter (primärkällor) | Claude Platform release notes, Claude Code-releaser och CHANGELOG, Codex-releaser, OpenAI changelog och What's New, Gemini API changelog, Gemini CLI-releaser, n8n-releaser, Shopify dev changelog | Bara primärkällor kan bära ett kort. |
 | Plattformsnyheter (upptäckt) | agentnative.inc/updates och liknande aggregatorer | Har inget flöde. Används bara för att upptäcka nyheter, som sedan måste bekräftas av en primärkälla. **Rykten skickas aldrig.** |
-| Hubbens innehåll | Export från `hub.py` (nytt kommando, t.ex. `hub.py inventory --json`): skills med beskrivningar, verktyg, MCP, AGENTS.md-regler | Skickas skrivskyddat till domaren så att den kan svara på om något är bättre än det vi redan har. |
+| Hubbens innehåll | `node scripts/v2/build-inventory.mjs` läser `~/.agents` skrivskyddat (skills, verktyg, MCP, AGENTS.md och Codex-only-undantag) och slår ihop det med den lokala `config/v2/inventory.static.json` (repon, n8n-flöden, Notion, mått). Resultatet skrivs till `~/.ai-radar/inventory.json`. | Byggs i repot i stället för som `hub.py`-kommando, så att den delade hubben inte ändras och koden kan testas. Den statiska filen är gitignorerad eftersom repot är publikt. |
 | Egen användning | Lokal läsning av Claude- och Codex-transkript | Bara rensade mönster lämnar datorn, se 9.3. |
 
 YouTube-kanaler (valda 2026-10-19): IndyDevDan, Cole Medin, Matt Pocock, AI Jason, Nick Saraev, Simon Scrapes, Nate Herk, Leon van Zyl, Developers Digest, All About AI, Eric Tech, Tech With Tim, Anthropic, OpenAI, n8n, Greg Isenberg. Greg Isenberg väger tyngst för affärsidéer, inte för hubben.
@@ -196,7 +196,7 @@ Ett kort vars test inte kunde verifieras får märkningen **overifierad** och ka
 Bara när väntan till nästa morgonbrev minskar värdet:
 
 - en konkurrent eller ett inspirationskonto kör en tävling eller kampanj **just nu** som rör friskvårdsbidrag eller golf,
-- daglig försäljning avviker kraftigt mot samma datum förra året (tröskel kalibreras i fas 2, startvärde ±40 % två dagar i rad),
+- försäljningen ligger klart under förra året: rullande 7 dagar minst 30 % under samma dagar förra året, två fönster i rad, och med minst 20 000 kr i jämförelsefönstret. Daglig volym (2–20 order) svänger för mycket för dagsjämförelser: −60 % till +600 % under oktober 2026. En stor uppgång ger en vanlig observation, aldrig ett larm,
 - en plattformsnyhet i primärkälla bryter eller förändrar något vi kör (till exempel en ändring i Claude Code eller Codex som påverkar hubben eller sync),
 - en säkerhetsvarning för något som är installerat i hubben.
 
@@ -341,11 +341,12 @@ Klart när: alla punkter är bockade och verifierade.
 
 - [x] Kortkontraktet som JSON Schema plus validering och tester.
 - [x] Grindarna G1–G8 och typgrindarna som kod med tester, inklusive negativa fall (generisk text, okänt mål, reserv).
-- [ ] Inventeringsexport från hubben (`hub.py inventory --json`) och projektkatalogen med `main_repos`.
+- [x] Inventeringsexport från hubben (`scripts/v2/build-inventory.mjs`) plus lokal statisk del för repon, n8n, Notion och mått.
 - [ ] n8n: observationstabell, kö, budgetvakt och heartbeat-flöde.
 - [ ] Lokal domare: Windows-aktivitet, hämtning av jobb, Codex headless, karantän, statisk skanning, retur av kort.
-- [ ] Minst en detektor per område end-to-end (till exempel en ny release i primärkälla, en konkurrentsignal från content-engine, en avvikelse i `GK_DAILY_ORDER_REPORTS` och en Notion Log-post som stått stilla).
-- [ ] Verifiera YouTube-kanal-ID för alla 16 kanaler.
+- [x] Minst en detektor per område som ren kod (`scripts/lib/v2/detectors/`): releaser och YouTube (verktyg & hubb), kampanjer och avvikande inlägg (sociala), 7-dagarstrend (försäljning), röd CI och Notion Log som stått stilla (projekt). Alla har tester, och releaser, YouTube och CI är provkörda mot riktig data.
+- [ ] Koppla detektorerna till riktiga indata i n8n (GitHub, RSS, `GK_DAILY_ORDER_REPORTS`, content-engine, Notion Log).
+- [x] Verifiera YouTube-kanal-ID för alla 16 kanaler.
 
 Klart när: varje område har producerat minst ett kort i skuggläge som klarar grindarna, och Jonas har läst dem i en testkanal.
 
@@ -398,6 +399,6 @@ Om målen inte nås justeras källor, detektorer och grindar innan något nytt l
 
 - GitHub-fakturering (fas 0) måste lösas av Jonas.
 - Claude Code CLI finns inte i PATH på datorn, så domaren är Codex. En korskontroll med Claude kan läggas till senare om CLI installeras.
-- Tabellnamn i content-engines databas och exakta kanal-ID för YouTube verifieras i fas 1.
+- Tabellnamn i content-engines databas verifieras i fas 1 (YouTube-kanalernas ID är verifierade).
 - Shopify Analytics nås via Shopify-anslutningen. Om n8n behöver egen åtkomst krävs en skrivskyddad app eller token (fas 1).
 - Discord-komponenternas gränser kontrolleras mot aktuell dokumentation innan kortlayouten fastställs. `37 AI – Discord Interactions v2` hanterar redan 1–10.
