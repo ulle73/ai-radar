@@ -1,0 +1,19 @@
+{
+  "_comment": "Kopiera till inventory.static.json (gitignorerad) och fyll i riktiga värden. Repot är publikt – lägg aldrig webhook-URL:er, tokens eller personuppgifter här.",
+  "repos": [
+    { "name": "ulle73/content-engine", "aliases": ["content-engine"], "default_branch": "main" },
+    { "name": "ulle73/golfkuponger-app", "aliases": ["golfkuponger-app"], "default_branch": "main", "protected_refs": ["redesign/app-v2"] },
+    { "name": "ulle73/ai-radar", "aliases": ["ai-radar"], "default_branch": "main" }
+  ],
+  "workflows": [
+    { "id": "N8N_WORKFLOW_ID", "name": "43 OPS – Daily Orders Summary" }
+  ],
+  "notion": [
+    { "id": "NOTION_PAGE_ID", "title": "Golfkuponger – Log" }
+  ],
+  "metrics": [
+    { "id": "GK_DAILY_ORDER_REPORTS.order_total", "aliases": ["daglig försäljning"] },
+    { "id": "GK_DAILY_ORDER_REPORTS.development_pct", "aliases": ["utveckling mot förra året"] }
+  ],
+  "shopify_themes": []
+}

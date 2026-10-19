@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "verified_at": "2026-10-19",
+  "youtube": {
+    "feed_url_template": "https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}",
+    "note": "Kanal-ID hämtade från youtube.com/@handle och verifierade mot kanalens RSS-flöde 2026-10-19.",
+    "channels": [
+      { "name": "IndyDevDan", "handle": "indydevdan", "channel_id": "UC_x36zCEGilGpB1m-V4gmjg", "focus": "tools_hub" },
+      { "name": "Cole Medin", "handle": "ColeMedin", "channel_id": "UCMwVTLZIRRUyyVrkjDpn4pA", "focus": "tools_hub" },
+      { "name": "Matt Pocock", "handle": "mattpocockuk", "channel_id": "UCswG6FSbgZjbWtdf_hMLaow", "focus": "tools_hub" },
+      { "name": "AI Jason", "handle": "AIJasonZ", "channel_id": "UCrXSVX9a1mj8l0CMLwKgMVw", "focus": "tools_hub" },
+      { "name": "Nick Saraev", "handle": "nicksaraev", "channel_id": "UCbo-KbSjJDG6JWQ_MTZ_rNA", "focus": "tools_hub" },
+      { "name": "Simon Scrapes", "handle": "simonscrapes", "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA", "focus": "tools_hub" },
+      { "name": "Nate Herk", "handle": "nateherk", "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA", "focus": "tools_hub" },
+      { "name": "Leon van Zyl", "handle": "leonvanzyl", "channel_id": "UCtevzRsHEKhs-RK8pAqwSyQ", "focus": "tools_hub" },
+      { "name": "Developers Digest", "handle": "DevelopersDigest", "channel_id": "UCuE6iwZKgGz8s6kznBRI9LQ", "focus": "tools_hub" },
+      { "name": "All About AI", "handle": "AllAboutAI", "channel_id": "UCR9j1jqqB5Rse69wjUnbYwA", "focus": "tools_hub" },
+      { "name": "Eric Tech", "handle": "EricWTech", "channel_id": "UCOXRjenlq9PmlTqd_JhAbMQ", "focus": "tools_hub" },
+      { "name": "Tech With Tim", "handle": "TechWithTim", "channel_id": "UC4JX40jDee_tINbkjycV4Sg", "focus": "tools_hub" },
+      { "name": "Anthropic", "handle": "anthropic-ai", "channel_id": "UCrDwWp7EBBv4NwvScIpBDOA", "focus": "tools_hub", "official": true },
+      { "name": "OpenAI", "handle": "OpenAI", "channel_id": "UCXZCJLdBC09xxGZ6gcdrc6A", "focus": "tools_hub", "official": true },
+      { "name": "n8n", "handle": "n8n-io", "channel_id": "UCiHVTkJtWSdc9N3h0nUGWLg", "focus": "tools_hub", "official": true },
+      { "name": "Greg Isenberg", "handle": "GregIsenberg", "channel_id": "UCPjNBjflYl0-HQtUvOx0Ibw", "focus": "sales" }
+    ],
+    "prefilter": {
+      "note": "Passerar om ett starkt ord finns i titeln, eller ett starkt plus ett svagt i titel och beskrivning. Breda ord som 'video' användes först men släppte igenom 26 videor på 3 dygn (2026-10-19).",
+      "strong": [
+        "claude code", "codex", "skill", "skills", "mcp", "subagent", "subagents", "hook", "hooks",
+        "n8n", "remotion", "hyperframes", "gemini cli", "plugin", "plugins", "cursor"
+      ],
+      "weak": [
+        "agent", "agents", "agentic", "workflow", "workflows", "automation", "repo", "github",
+        "open source", "prompt", "context", "memory", "coding"
+      ]
+    }
+  },
+  "releases": {
+    "note": "Primärkällor för plattformsnyheter. Bara dessa kan bära ett kort med platform_news = true.",
+    "github": [
+      { "name": "Claude Code", "repo": "anthropics/claude-code", "anchors": [{ "kind": "skill", "ref": "agent-hub" }] },
+      { "name": "Codex CLI", "repo": "openai/codex", "anchors": [{ "kind": "skill", "ref": "agent-hub" }] },
+      { "name": "Gemini CLI", "repo": "google-gemini/gemini-cli", "anchors": [] },
+      { "name": "n8n", "repo": "n8n-io/n8n", "anchors": [] }
+    ],
+    "pages": [
+      { "name": "Claude Platform release notes", "url": "https://platform.claude.com/docs/en/release-notes/overview" },
+      { "name": "OpenAI API changelog", "url": "https://developers.openai.com/api/docs/changelog" },
+      { "name": "Gemini API changelog", "url": "https://ai.google.dev/gemini-api/docs/changelog" },
+      { "name": "Shopify developer changelog", "url": "https://shopify.dev/changelog" }
+    ],
+    "discovery_only": [
+      { "name": "Agent Native updates", "url": "https://agentnative.inc/updates" }
+    ]
+  }
+}
