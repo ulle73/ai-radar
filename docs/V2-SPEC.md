@@ -202,32 +202,40 @@ Bara när väntan till nästa morgonbrev minskar värdet:
 
 ## 7. Kortkontrakt och format
 
-### 7.1 JSON-kontrakt (förenklat, fastställs som JSON Schema i fas 1)
+### 7.1 JSON-kontrakt
 
-```json
-{
-  "contract_version": 1,
-  "card_id": "R2-…",
-  "area": "tools_hub | social | sales | projects",
-  "type": "NY | ERSATT | PROJEKT | ANVAND | LARM",
-  "title": "kort rubrik",
-  "recommendation": "en mening: vad Jonas bör göra",
-  "because": "för att … (konkret, med namngiven entitet och konsekvens)",
-  "observations": [{ "source": "url eller tabell", "observed_at": "ISO", "value": "…", "verified": true }],
-  "target": { "kind": "skill | tool | repo | workflow | notion | metric", "ref": "exakt referens" },
-  "replaces": "namn i inventeringen eller null",
-  "test": { "kind": "smoke | ab | none", "task": "…", "result": "…", "verified": true, "artifacts": ["…"] },
-  "skeptic": { "verdict": "PASS | DOWNGRADE | REJECT", "reason": "…" },
-  "action_on_ok": "exakt vad som händer vid OK",
-  "effort_hours": 0.5,
-  "monthly_cost_sek": 0,
-  "risk": "…",
-  "measure": { "metric": "…", "baseline": "…", "check_after_days": 14 },
-  "confidence": 0.0,
-  "dedupe_key": "…",
-  "expires_at": "ISO"
-}
-```
+Källan är [`schemas/card.v1.schema.json`](../schemas/card.v1.schema.json) (JSON Schema 2020-12). Den valideras av `scripts/lib/v2/card-contract.mjs`, som använder en egen validator utan beroenden för exakt den delmängd av JSON Schema som schemat använder. Okända nyckelord ger fel i stället för att tyst ignoreras.
+
+Fält utöver skissen i den första versionen av specen, fastställda i fas 1:
+
+| Fält | Varför |
+|---|---|
+| `analysis_mode` (`model` eller `fallback`) | Gör reservbedömningar synliga, så att G6 kan avvisa dem. |
+| `platform_news` | Avgör om G1 kräver en primärkälla på leverantörens egen domän. |
+| `observations[].source_kind` | `primary`, `aggregator`, `data`, `social`, `repo`, `video` eller `transcript`. Aggregatorer kan aldrig ensamma bära ett kort. |
+| `anchors[]` | De befintliga entiteter i vår stack som kortet bygger på. För NY och ERSÄTT finns målet ännu inte, så kopplingen till stacken bärs av ankarna. |
+| `test.outcome` (`pass`, `fail`, `not_run`) och `test.ab` | Skiljer ett misslyckat test (avvisas) från ett som inte är verifierat (overifierad). A/B anger vinnare per kriterium. |
+| `security` | Statisk skanning, licens och vilka klienter som stöds. Krävs för NY och ERSÄTT. |
+| `rule_text` | Regeltexten för ANVÄND. |
+| `urgency` | Utlösare och giltighetstid för LARM. |
+| `target.branch` | Branch för PROJEKT. |
+
+**Inventeringen** som grindarna jämför mot är JSON med listorna `skills`, `tools`, `mcp`, `repos`, `workflows`, `notion`, `metrics`, `agents_rules` och `shopify_themes`. Varje post identifieras av `id`, `name`, `title` eller `aliases`. Repon kan ange `default_branch` och `protected_refs`. Exempel finns i `tests/helpers/v2-fixtures.mjs`. Exporten från hubben och n8n byggs senare i fas 1.
+
+### 7.1.1 Grindarna i kod
+
+`scripts/lib/v2/gates.mjs`:
+
+- `evaluateCard(card, { inventory, decisions, budget, now })` kör G1–G6, G8 och typgrinden och returnerar `publishable`, `unverified`, `rank_score` och skälet per grind. Är kontraktet ogiltigt (G6) körs inget annat.
+- `selectForBrief(evaluations)` är G7: högst 3 kort, högst 2 per område, larm separat och overifierade kort hålls utanför brevet.
+
+Förtydliganden som fastställdes när grindarna byggdes:
+
+- **G2:** alla ankare måste finnas i inventeringen. Målet måste finnas, utom för NY och ERSÄTT.
+- **G3:** NY avvisas om namnet redan finns i hubben (också med `tool-`-prefix). Samma `dedupe_key` som beslutats inom 90 dagar avvisas. Ett äldre Nej kräver en observation efter beslutet.
+- **G4:** motiveringen måste alltid nämna en namngiven entitet (ankare, mål eller det som ersätts) och vara minst 40 tecken. En generisk fras utan siffra avvisas även om en entitet nämns.
+- **G8:** saknad budgetstatus räknas som underkänt (fail closed).
+- **PROJEKT:** branchen måste börja med `radar/` och får inte vara `main`, `master`, repots standardbranch eller en skyddad ref. Ordet Fabric i rubrik, rekommendation, åtgärd, mål eller branch ger avslag.
 
 ### 7.2 Hur korten ser ut i Discord
 
@@ -331,8 +339,8 @@ Klart när: alla punkter är bockade och verifierade.
 
 ### Fas 1 – ryggrad (skuggläge, inget publiceras)
 
-- [ ] Kortkontraktet som JSON Schema plus validering och tester.
-- [ ] Grindarna G1–G8 och typgrindarna som kod med tester, inklusive negativa fall (generisk text, okänt mål, reserv).
+- [x] Kortkontraktet som JSON Schema plus validering och tester.
+- [x] Grindarna G1–G8 och typgrindarna som kod med tester, inklusive negativa fall (generisk text, okänt mål, reserv).
 - [ ] Inventeringsexport från hubben (`hub.py inventory --json`) och projektkatalogen med `main_repos`.
 - [ ] n8n: observationstabell, kö, budgetvakt och heartbeat-flöde.
 - [ ] Lokal domare: Windows-aktivitet, hämtning av jobb, Codex headless, karantän, statisk skanning, retur av kort.
