@@ -249,3 +249,20 @@ test('G7 caps the brief at 3 cards and 2 per area, keeps alerts apart and holds 
 test('an empty day produces an empty brief', () => {
   assert.deepEqual(selectForBrief([]), { brief: [], alerts: [], held: [] });
 });
+
+test('a scan or test that has not run yet makes NY and ERSATT unverified, never rejected or briefed', () => {
+  const notScanned = evaluate(nyCard({ security: { static_scan: 'not_run', license: null, clients: [] } }));
+  assert.deepEqual(failed(notScanned), []);
+  assert.equal(notScanned.unverified, true);
+
+  const abPending = evaluate(ersattCard({ test: { kind: 'ab', outcome: 'not_run', verified: false } }));
+  assert.deepEqual(failed(abPending), []);
+  assert.equal(abPending.unverified, true);
+
+  const abPassedWithoutData = evaluate(ersattCard({ test: { kind: 'ab', outcome: 'pass', verified: true } }));
+  assert.deepEqual(failed(abPassedWithoutData), ['TYP']);
+
+  const { brief, held } = selectForBrief([notScanned, abPending]);
+  assert.deepEqual(brief, []);
+  assert.equal(held.length, 2);
+});

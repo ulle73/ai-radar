@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "reason", "already_known", "generic", "facts_supported"],
+  "properties": {
+    "verdict": { "type": "string", "enum": ["PASS", "DOWNGRADE", "REJECT"] },
+    "reason": { "type": "string" },
+    "already_known": { "type": "boolean" },
+    "generic": { "type": "boolean" },
+    "facts_supported": { "type": "boolean" }
+  }
+}
