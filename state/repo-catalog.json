@@ -1137,12 +1137,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 392049,
+      "stars": 392434,
       "language": "TypeScript",
       "score": 36,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-02",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -1350,12 +1350,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 279616,
+      "stars": 283557,
       "language": "JavaScript",
       "score": 31,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -1402,15 +1402,14 @@
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
-        "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 291616,
+      "stars": 296716,
       "language": "Shell",
       "score": 10,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-01",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -1517,12 +1516,12 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 253864,
+      "stars": 255072,
       "language": "Python",
       "score": 52,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -1552,99 +1551,111 @@
     "msitarzewski/agency-agents": {
       "repo": "msitarzewski/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents",
-      "summary_sv": "En samling AI-agent-personligheter (frontend, Reddit, reality-check m.m.) med en native app som installerar dem i Claude Code, Cursor, Codex med ett klick.",
-      "project_matches": [],
+      "summary_sv": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "project_matches": [
+        {
+          "project": "FAIV",
+          "reason": "Kan stödja e-handel, produktinnehåll eller kampanjproduktion."
+        },
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        },
+        {
+          "project": "Nyabolaget-ekosystemet",
+          "reason": "Kan stödja datainsamling, företagsdata eller automatisering."
+        }
+      ],
       "dimensions": {
-        "project_fit": 1,
-        "concrete_value": 2,
+        "project_fit": 20,
+        "concrete_value": 11,
         "testability": 8,
         "technical_fit": 3,
-        "repo_quality": 6,
+        "repo_quality": 8,
         "timing": 2
       },
       "risks": [
-        "Hype-driven, många stars skapar falsk precision-känsla",
-        "Agent-personligheter löser inget specifikt projektproblem"
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
       ],
-      "confidence": 0.1,
-      "analysis_mode": "model",
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 158396,
+      "stars": 161378,
       "language": "Shell",
-      "score": 22,
+      "score": 52,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-02",
-      "last_analyzed": "2026-10-02",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-collection-generic",
-      "concrete_use_case": "Inget namngivet projekt får en konkret användning. Agent-personligheter är inte kopplade till Golfkuponger, Stock Signals, Ullebets eller något annat projekts befintliga behov.",
-      "next_step": "Installera appen och testa en agent i en befintlig projektpipeline; mät om outputkvaliteten överträffar nuvarande LLM-användning.",
-      "differentiator": "Stort agent-register med native installeringsapp, men generiskt - inget unikt värde för Jonas specifika projekt eller deras arbetsflöden.",
-      "evidence": [
-        "155 680 stars, 25 141 forks",
-        "Native app för macOS/Linux/Windows",
-        "Installerar agenter i Claude Code, Cursor, Codex, Gemini"
-      ],
+      "category": "ecommerce-content",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
       "quality_tier": "archive",
       "failed_quality_gates": [
+        "model_analysis",
         "exact_match",
-        "project_match",
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
       ],
       "project_context_version": 1
     },
     "anomalyco/opencode": {
       "repo": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
-      "summary_sv": "En open-source AI-coding-agent (typ Codex/Claude Code) byggd i TypeScript med Discord, npm-paket och multi-plattform-support.",
+      "summary_sv": "OpenCode är en open source AI-kodningsagentkonsol som låter utvecklare interagera med AI för att skriva och redigera kod direkt i terminalen.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 1,
-        "concrete_value": 2,
-        "testability": 8,
-        "technical_fit": 4,
-        "repo_quality": 6,
-        "timing": 2
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 3,
+        "repo_quality": 9,
+        "timing": 1
       },
       "risks": [
-        "Generisk coding-agent, inte kopplad till något projekts konkret behov",
-        "Stora stars skapar förväntningar som inte möter verklig projektnytta"
+        "Potentiell låsning till en specifik AI-leverantörs gränssnitt; begränsad anpassning för projektens verkliga stack."
       ],
       "confidence": 0.1,
       "analysis_mode": "model",
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Search API"
       ],
-      "stars": 212263,
+      "stars": 217037,
       "language": "TypeScript",
-      "score": 23,
+      "score": 15,
       "action": "Arkiv",
       "first_seen": "2026-08-01",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-01",
-      "last_analyzed": "2026-10-02",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null,
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-generic",
-      "concrete_use_case": "Inget namngivet projekt får en konkret användning. Jonas har redan OpenRouter/LLM-flöden i AI Radar och andra projekt; en generell coding-agent ersätter inget specifikt behov.",
-      "next_step": "Kör opencode mot ett litet repo och jämför output med nuvarande LLM-användning i AI Radars pipeline.",
-      "differentiator": "Open-source alternative till Codex/Claude Code, men generiskt - inget unikt värde för Jonas projekts specifika problem eller arbetsflöden.",
+      "category": "ai-agent-ramverk",
+      "concrete_use_case": "Ingen konkret användning i något av de nio projekten.",
+      "next_step": "Installera opencode CLI och testa en enkel kodgenereringsuppgift för att utvärdera dess integration med befintliga utvecklingsflöden.",
+      "differentiator": "Ger en dedikerad terminalbaserad UI för AI-kodningsagenter, vilket förenklar interaktionen med flera AI-modeller.",
       "evidence": [
-        "211 381 stars, 28 034 forks",
-        "TypeScript, npm-paket, Discord-community",
-        "Aktivt under utveckling"
+        "Beskrivning: 'The open source AI coding agent.'",
+        "Stars: 217 037 (mycket populär).",
+        "Npm-paket: @opencode/cli med regelbunden versionering."
       ],
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -1654,7 +1665,8 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "testability"
       ]
     },
     "trycompai/crm": {
@@ -3654,7 +3666,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 194901,
+      "stars": 194912,
       "language": "Rust",
       "score": 26,
       "action": "Arkiv",
@@ -3670,7 +3682,7 @@
         "testability"
       ],
       "first_seen": "2026-08-07",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
       "last_analyzed": "2026-10-12",
       "notified_at": null,
@@ -5092,39 +5104,38 @@
     "stablyai/orca": {
       "repo": "stablyai/orca",
       "url": "https://github.com/stablyai/orca",
-      "summary_sv": "AI-orchestrator för att köra flera kodningsagenter som Codex, ClaudeCode, OpenCode och Pi parallellt i separata worktrees.",
+      "summary_sv": "Orca är en AI-agent-orchestreringsplattform som låter dig köra flera kodningsagenter (t.ex. Grok Bot, Claude Code) i separata worktrees och övervaka dem från en enhetlig gränssnitt.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 5,
-        "testability": 5,
-        "technical_fit": 8,
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 3,
         "repo_quality": 8,
-        "timing": 3
+        "timing": 1
       },
       "risks": [
-        "Generisk agent-orchestrator utan specifik koppling till AI Radars pipeline",
-        "Fokuserar på kodningsagenter, inte dataanalys"
+        "Hög beroendighet av externa AI-modeller; begränsad nytta för specifika projektbehov."
       ],
       "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "ai-agent-orchestrering",
-      "concrete_use_case": "Kan teoretiskt hjälpa med parallell analys i AI Radars pipeline, men är specifikt designat för kodningsagenter, inte för datainsamling- och analyspipelines.",
-      "next_step": "Ingen direkt testbar koppling till AI Radars befintliga pipeline.",
-      "differentiator": "Fokuserar på parallell körning av kodningsagenter i worktrees, vilket skiljer sig från AI Radars behov av batchanalys av GitHub-repos.",
+      "category": "ai-agent-ramverk",
+      "concrete_use_case": "Ingen konkret användning i något av de nio projekten.",
+      "next_step": "Klona repot lokalt och kör en demo för att se om det kan automatisera en specifik arbetsuppgift (t.ex. generera en checklista eller datahämtning).",
+      "differentiator": "Tillhandahåller en enhetlig plattform för att köra flera AI-agenter i parallella worktrees, vilket är mer organiserat än att använda separata CLI-verktyg.",
       "evidence": [
-        "74914 stars",
-        "Stödjer Codex, ClaudeCode, OpenCode, Pi",
-        "TypeScript-baserat"
+        "Beskrivning: 'Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code).'",
+        "Stars: 97 320 (hög aktivitet).",
+        "Topics: agent-ide, ai-agents, automation, bot, claude-code, ghostty, etc."
       ],
       "source_names": [
-        "GitHub Trending – weekly"
+        "GitHub Trending – daily"
       ],
-      "stars": 74914,
+      "stars": 97320,
       "language": "TypeScript",
-      "score": 34,
+      "score": 14,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -5138,9 +5149,9 @@
         "testability"
       ],
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-12",
-      "last_analyzed": "2026-09-22",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -5568,7 +5579,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 55476,
+      "stars": 58022,
       "language": "HTML",
       "score": 53,
       "action": "Arkiv",
@@ -5587,7 +5598,7 @@
         "evidence"
       ],
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
       "last_analyzed": "2026-10-08",
       "notified_at": null,
@@ -6496,37 +6507,38 @@
     "cursor/plugins": {
       "repo": "cursor/plugins",
       "url": "https://github.com/cursor/plugins",
-      "summary_sv": "Officiella Cursor-plugins för utvecklarverktyg, bland annat continual-learning för inkrementella minnesuppdateringar till AGENTS.md.",
+      "summary_sv": "Officiella Cursor-plugins för utvecklarverktyg, frameworks och SaaS-produkter med egen manifest-specifikation.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
-        "testability": 3,
-        "technical_fit": 3,
-        "repo_quality": 6,
-        "timing": 2
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 7,
+        "timing": 0
       },
       "risks": [
-        "Låst till Cursor-editorn; ger ingen värde för AI Radars server-side analyspipeline eller Telegram-leverans"
+        "Vendor-lock-in till Cursor; ingen portabilitet till Jonas verktygskedja"
       ],
       "confidence": 0.95,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
       "category": "editor-plugins",
-      "concrete_use_case": "Ingen direkt koppling till något aktivt projekt; Jonas använder Cursor men plugins är inuti Cursor-ekosystemet.",
-      "next_step": "Ingen åtgärd; om Jonas vill ha minnesuppdateringar för AI Radar, bygg det i radarns egen pipeline.",
-      "differentiator": "Plugin-specifikation och marketplace för Cursor; inte portabla till andra verktyg eller pipelines.",
+      "concrete_use_case": "Ingen direkt användning; Jonas använder inte Cursor som primär miljö och inget projekt har behov av Cursor-specifika plugins.",
+      "next_step": "Ingen åtgärd.",
+      "differentiator": "Endast relevant för Cursor-användare; ingen nytta för Jonas stack (Next.js, Shopify, WooCommerce, Python, Supabase, GitHub Actions).",
       "evidence": [
-        "Repo innehåller plugin-manifest och katalog med plugins som teaching, continual-learning, thermos, agent-compatibility",
-        "continual-learning beskrivs som 'Incremental transcript-driven memory updates for AGENTS.md'"
+        "Repo innehåller plugins som 'Teaching', 'Continual Learning', 'Thermos', 'Cursor Team Kit'",
+        "Alla plugins är Cursor-specifika och kräver Cursor IDE"
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 11255,
+      "stars": 12904,
       "language": "TypeScript",
-      "score": 14,
+      "score": 7,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -6539,9 +6551,9 @@
         "testability"
       ],
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-15",
-      "last_analyzed": "2026-10-02",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -7575,54 +7587,53 @@
     "akitaonrails/ai-memory": {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "summary_sv": "Rust-baserat verktyg för långsiktig minneslagring och handoff mellan AI-kodningsagenter som Claude Code, Codex och Cursor.",
+      "summary_sv": "Långsiktigt minne för AI-kodningsagenter som fungerar över flera agenter (Claude Code, Codex, Cursor, mm.) via en delad handoff-protokoll.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 5,
+        "project_fit": 0,
+        "concrete_value": 0,
         "testability": 5,
         "technical_fit": 5,
-        "repo_quality": 7,
-        "timing": 3
+        "repo_quality": 8,
+        "timing": 0
       },
       "risks": [
-        "Generiskt agentminne utan tydlig koppling till AI Radars specifika pipeline"
+        "Generiskt agent-ramverk utan integration med AI Radars specifika behov (discovery, scoring, delivery)"
       ],
-      "confidence": 0.1,
+      "confidence": 0.9,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "generellt-ai-verktyg",
-      "concrete_use_case": "Kan teoretiskt hjälpa AI Radars minnes- och feedbacksystem, men är ett generiskt verktyg för kodningsagenter utan specifik koppling till AI Radars pipeline.",
-      "next_step": "Ingen direkt testbar koppling till AI Radars befintliga projekt.",
-      "differentiator": "Fokuserar på handoff mellan olika AI-kodningsagenter via en delad minneslagring, vilket skiljer sig från AI Radars behov av minne för rekommendationsförbättring.",
+      "category": "agent-minne",
+      "concrete_use_case": "Ingen konkret use case i Jonas projekt; AI Radar behöver minne för repo-rekommendationer, inte för kodningsagent-handoff.",
+      "next_step": "Ingen rekommenderad åtgärd; verktyget löser inte AI Radars behov av strukturad LLM-output, evidence gates eller projektkontext.",
+      "differentiator": "Unikt i att det delar minne över 20+ agent-harnessar, men det är ett generiskt agent-ramverk utan koppling till Jonas specifika pipeline.",
       "evidence": [
-        "7828 stars",
-        "Rust-baserat",
-        "Stödjer 20+ agenter inklusive Claude Code, Codex, Cursor"
+        "README: 'Long-term memory for AI coding agents... across agents'",
+        "Stöder 20+ harnessar (Claude Code, Codex, Cursor, Gemini CLI, osv.)",
+        "AI Radar-katalogen listar 'Generiska agent- eller MCP-ramverk' som negative_matches"
       ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 7828,
+      "stars": 10779,
       "language": "Rust",
-      "score": 30,
+      "score": 18,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
-        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-18",
-      "last_analyzed": "2026-09-22",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -9610,39 +9621,39 @@
     "madslorentzen/ai-job-search": {
       "repo": "MadsLorentzen/ai-job-search",
       "url": "https://github.com/MadsLorentzen/ai-job-search",
-      "summary_sv": "AI-drivet jobbansökningsframework som utvärderar annonser, anpassar CV, skriver täckbrev och förbereder intervjuer lokalt.",
+      "summary_sv": "AI Job Search är ett CLI-verktyg som automatiserar jobbansökansprocessen genom att utvärdera annonser, skräddarsy CV:n, skriva täckbrev och förbereda intervjuer med hjälp av Claude Code.",
       "project_matches": [],
       "dimensions": {
-        "project_fit": 5,
-        "concrete_value": 6,
-        "testability": 7,
-        "technical_fit": 6,
-        "repo_quality": 5,
-        "timing": 3
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 3,
+        "repo_quality": 8,
+        "timing": 1
       },
       "risks": [
-        "Kan bli föråldrat när jobbportaler ändras.",
-        "Beroende av Claude Code som kan förändras."
+        "Beroendighet av Claude Code API; begränsad nytta om projektens stack inte använder Claude."
       ],
-      "confidence": 0.4,
+      "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "job-search-automation",
-      "concrete_use_case": "Kör frameworket med en profil för att simulera en jobbansökan.",
-      "next_step": "Initiera repo, fyll i din profil och kör '/apply'-arbetsflödet för en testannons.",
-      "differentiator": "Helhetssolution för hela jobbansökningsprocessen på en enda maskin.",
+      "category": "ai-agent-ramverk",
+      "concrete_use_case": "Ingen konkret användning i något av de nio projekten.",
+      "next_step": "Köra verktyget lokalt med en testprofil för att se om det kan automatisera jobbansökningsflöden som kan vara relevanta för rekrytering i projektens verksamheter.",
+      "differentiator": "Integrerar flera karriärautomationssteg (CV-anpassning, täckbrevsgenerering, intervjuförberedelse) i ett enda CLI-verktyg.",
       "evidence": [
-        "README visar Pip-mascot och CI-badge.",
-        "Stöd för CV, täckbrev, intervjuförberedelse.",
-        "Använder Claude Code för automation."
+        "Beskrivning: 'The job search that runs on your machine. AI job application framework built on Claude Code.'",
+        "Stars: 54 758 (aktiv gemenskap).",
+        "Topics: ai, ai-agents, career, claude-code, cover-letter, cv, interview-preparation."
       ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 39275,
+      "stars": 54758,
       "language": "Python",
-      "score": 32,
+      "score": 14,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -9652,12 +9663,13 @@
         "confidence",
         "score",
         "project_fit",
-        "concrete_value"
+        "concrete_value",
+        "testability"
       ],
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
-      "last_analyzed": "2026-08-25",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -10076,7 +10088,7 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 163778,
+      "stars": 167396,
       "language": "JavaScript",
       "score": 33,
       "action": "Arkiv",
@@ -10091,7 +10103,7 @@
         "concrete_value"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-27",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -10218,58 +10230,55 @@
     "anthropics/claude-plugins-official": {
       "repo": "anthropics/claude-plugins-official",
       "url": "https://github.com/anthropics/claude-plugins-official",
-      "summary_sv": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Claude Plugins Official är en katalog över högkvalitativa, officiellt underhållna plugins för Claude Code, som utökar dess funktionalitet via MCP-serverintegreringar.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 7,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 3,
+        "repo_quality": 7,
+        "timing": 1
       },
       "risks": [
-        "Fallbackbedömning användes: Could not parse JSON from model response"
+        "Plugin-säkerhet och tillförlitlighet varierar; kan introducera okända beroenden."
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.1,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "ai-agent-ramverk",
+      "concrete_use_case": "Ingen konkret användning i något av de nio projekten.",
+      "next_step": "Installera en plugin från katalogen i Claude Code och testa en enkel funktion (t.ex. filhantering) för att utvärdera dess nytta.",
+      "differentiator": "Ger en kuraterad, officiellt stödd katalog över plugins som utöker Claude Codes funktionalitet via MCP.",
+      "evidence": [
+        "Beskrivning: 'Official, Anthropic-managed directory of high quality Claude Code Plugins.'",
+        "Stars: 42 977 (aktiv).",
+        "Struktur: plugin.json, MCP-konfiguration, slash-kommandon."
+      ],
       "source_names": [
+        "GitHub Trending – daily",
         "GitHub Trending – weekly"
       ],
-      "stars": 35761,
+      "stars": 42977,
       "language": "Python",
-      "score": 57,
+      "score": 13,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
+        "project_match",
         "confidence",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-08-27",
-      "last_analyzed": "2026-08-27",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -12524,7 +12533,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 67043,
+      "stars": 76388,
       "language": "Python",
       "score": 57,
       "action": "Arkiv",
@@ -12543,7 +12552,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-09-03",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -13586,39 +13595,38 @@
     "ruvnet/ruflo": {
       "repo": "ruvnet/ruflo",
       "url": "https://github.com/ruvnet/ruflo",
-      "summary_sv": "Generisk agent-meta-harness för multi-player swarms, koordinering av autonoma arbetsflöden och konversations-AI med adaptiv minne, RAG och integration mot Claude Code, Codex och Hermes.",
+      "summary_sv": "Ruflo är en agentharness som möjliggör distribuering av multi-player swarms, koordination av autonoma arbetsflöden och byggande av konversational AI-system med inbyggda Claude Code- och Codex-integrationer.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
-        "concrete_value": 2,
-        "testability": 4,
-        "technical_fit": 2,
-        "repo_quality": 6,
-        "timing": 2
+        "concrete_value": 0,
+        "testability": 2,
+        "technical_fit": 4,
+        "repo_quality": 8,
+        "timing": 1
       },
       "risks": [
-        "Enterprise-nivå komplexitet utan visat projektsamband",
-        "Hype-driven adoption utan konkret arbetsflödesnytta"
+        "Komplext system som kan vara överkraftigt för enkla automatiseringsbehov i projektens verkliga stack."
       ],
       "confidence": 0.1,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-framework",
-      "concrete_use_case": "Ej relevant för något av Jonas nio projekt. Repot är en omfattande agentplattform utan specifik produkt-, intäkts- eller arbetsflödesmatch.",
-      "next_step": "Ingen konkret test planerad. Massive swarm/agent-hype utan konkret problem i Jonas stack.",
-      "differentiator": "Större och mer komplex än något Jonas behöver idag. Ingen specifik integration mot Shopify, WooCommerce, Stock Signals, Ullebets eller någon annan projektarkitektur.",
+      "category": "ai-agent-ramverk",
+      "concrete_use_case": "Ingen konkret användning i något av de nio projekten.",
+      "next_step": "Klona och kör en demo av Ruflo för att se om det kan orkestrera flera AI-agenter för en enkel uppgift som content-generering eller dataanalys.",
+      "differentiator": "Tillhandahåller en omfattande orkestreringsmotor för multi-agent-swarms med inbyggda integrationer för Claude Code, Codex och Hermes.",
       "evidence": [
-        "70 745 stars – populär men generisk agentplattform",
-        "Inkluderar Goal Planner, Live Agents, RuVector Agentic DB",
-        "MIT-licens, TypeScript/npm-paket"
+        "Beskrivning: 'The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows.'",
+        "Stars: 76 777 (hög aktivitet).",
+        "Topics: agentic-ai, agentic-framework, agentic-workflow, agents, ai-agents, autonomous-agents, claude, codex."
       ],
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 71095,
+      "stars": 76777,
       "language": "TypeScript",
-      "score": 16,
+      "score": 15,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -13632,9 +13640,9 @@
         "testability"
       ],
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
-      "last_analyzed": "2026-09-06",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -14232,7 +14240,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 63883,
+      "stars": 67098,
       "language": "TypeScript",
       "score": 10,
       "action": "Arkiv",
@@ -14248,7 +14256,7 @@
         "testability"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -14403,9 +14411,9 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 29327,
+      "stars": 30886,
       "language": "TypeScript",
       "score": 60,
       "action": "Arkiv",
@@ -14424,7 +14432,7 @@
         "evidence"
       ],
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-09-08",
       "last_analyzed": "2026-10-11",
       "notified_at": null,
@@ -16606,54 +16614,53 @@
     "nationalsecurityagency/ghidra": {
       "repo": "NationalSecurityAgency/ghidra",
       "url": "https://github.com/NationalSecurityAgency/ghidra",
-      "summary_sv": "En SRE-ramverk för mjukvarureversering och analys av kompilerat kod från NSA.",
+      "summary_sv": "NSA:s öppen reverse engineering-ramverk för disassembly, dekompilering och programanalys över flera plattformar.",
       "project_matches": [],
       "dimensions": {
         "project_fit": 0,
         "concrete_value": 0,
         "testability": 0,
         "technical_fit": 0,
-        "repo_quality": 7,
+        "repo_quality": 10,
         "timing": 0
       },
       "risks": [
-        "Helt irrelevant för Jonas projekt."
+        "Stort, komplext verktyg utan någon tillämpning i Jonas verksamhet"
       ],
-      "confidence": 0.01,
+      "confidence": 0.99,
       "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "security-tooling",
-      "concrete_use_case": "Ingen koppling till ett av Jonas namngivna projekt.",
-      "next_step": "Inget test – avbryt.",
-      "differentiator": "Helt fristående säkerhetsverktyg utan någon koppling till Jonas projekt.",
+      "category": "reverse-engineering",
+      "concrete_use_case": "Ingen användning i Jonas projekt; verktyget är för säkerhetsforskning och binäranalys, inte för data, content, e-handel eller betting.",
+      "next_step": "Ingen åtgärd.",
+      "differentiator": "Branschstandard för SRE men helt irrelevanta för Jonas nuvarande behov och tillväxtmotorer.",
       "evidence": [
-        "Java-baserat SRE-verktyg från NSA – ingen koppling till e-handel, golf, finans, betting eller content.",
-        "Ingen dokumentation eller integration som påverkar något av Jonas projekt.",
-        "Relevant endast för cybersäkerhetsanalys."
+        "README: 'Ghidra is a software reverse engineering (SRE) framework created and maintained by the NSA'",
+        "Fokus på malware-analys, vulnerability research, cybersecurity",
+        "Ingen koppling till någon av de 9 projektens technical_stack eller high_value_matches"
       ],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 78646,
+      "stars": 91173,
       "language": "Java",
-      "score": 7,
+      "score": 10,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
         "exact_match",
         "project_match",
-        "confidence",
         "score",
         "project_fit",
         "concrete_value",
         "testability"
       ],
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
-      "last_analyzed": "2026-09-16",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -19143,7 +19150,7 @@
       "source_names": [
         "GitHub Trending – daily"
       ],
-      "stars": 52695,
+      "stars": 54869,
       "language": "Python",
       "score": 58,
       "action": "Arkiv",
@@ -19162,7 +19169,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-10-15",
       "last_analyzed": "2026-10-15",
       "notified_at": null,
@@ -20583,7 +20590,7 @@
       "source_names": [
         "GitHub Trending – weekly"
       ],
-      "stars": 37439,
+      "stars": 43640,
       "language": "C++",
       "score": 25,
       "action": "Arkiv",
@@ -20604,7 +20611,7 @@
         "evidence"
       ],
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
       "last_analyzed": "2026-10-10",
       "notified_at": null,
@@ -20783,60 +20790,54 @@
     "morluto/rea": {
       "repo": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "summary_sv": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "project_matches": [
-        {
-          "project": "AI Radar",
-          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
-        }
-      ],
+      "summary_sv": "Agent-baserat reverse engineering-verktyg som via MCP kan analysera allt från app-beteende till native binaries med Ghidra/Hopper.",
+      "project_matches": [],
       "dimensions": {
-        "project_fit": 18,
-        "concrete_value": 9,
-        "testability": 8,
-        "technical_fit": 10,
-        "repo_quality": 8,
-        "timing": 7
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 9,
+        "timing": 0
       },
       "risks": [
-        "Fallbackbedömning användes: missing assessment"
+        "Mycket specialiserat på säkerhet/RE; noll relevans för Jonas affärsmål"
       ],
-      "confidence": 0.35,
-      "analysis_mode": "fallback",
+      "confidence": 0.98,
+      "analysis_mode": "model",
       "assessment_version": 2,
       "match_type": "generic",
-      "category": "agent-workflow",
-      "concrete_use_case": "",
-      "next_step": "",
-      "differentiator": "",
-      "evidence": [],
+      "category": "reverse-engineering",
+      "concrete_use_case": "Ingen användning i Jonas projekt; inget projekt innebär binäranalys, dekompilering eller säkerhetsgranskning.",
+      "next_step": "Ingen åtgärd.",
+      "differentiator": "Kombinerar LLM-agenter med klassiska RE-verktyg (Ghidra, Hopper) via MCP, men helt utanför Jonas domäner (golf, aktier, betting, företagsdata, e-handel, resor, scraping).",
+      "evidence": [
+        "README: 'Reverse engineer anything with agents, from app behavior down to native binaries'",
+        "Använder MCP, Ghidra, Hopper, decompilers",
+        "Ingen överlapp med projektkatalogens discovery_keywords eller high_value_matches"
+      ],
       "source_names": [
-        "GitHub Trending – daily",
         "GitHub Trending – weekly",
         "GitHub Search API"
       ],
-      "stars": 249716,
+      "stars": 328558,
       "language": "TypeScript",
-      "score": 60,
+      "score": 9,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
       "failed_quality_gates": [
-        "model_analysis",
         "exact_match",
-        "confidence",
+        "project_match",
         "score",
         "project_fit",
         "concrete_value",
-        "concrete_use_case",
-        "next_step",
-        "differentiator",
-        "evidence"
+        "testability"
       ],
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
       "first_recommended": "2026-10-07",
-      "last_analyzed": "2026-10-13",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -21369,10 +21370,10 @@
         "testability": 8,
         "technical_fit": 3,
         "repo_quality": 8,
-        "timing": 7
+        "timing": 5
       },
       "risks": [
-        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+        "Fallbackbedömning användes: risks must be an array, concrete_use_case is required"
       ],
       "confidence": 0.35,
       "analysis_mode": "fallback",
@@ -21384,11 +21385,11 @@
       "differentiator": "",
       "evidence": [],
       "source_names": [
-        "GitHub Trending – daily"
+        "GitHub Trending – weekly"
       ],
-      "stars": 26331,
+      "stars": 33150,
       "language": "Rust",
-      "score": 53,
+      "score": 51,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -21405,9 +21406,9 @@
         "evidence"
       ],
       "first_seen": "2026-10-09",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
-      "last_analyzed": "2026-10-12",
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     },
@@ -22863,7 +22864,296 @@
         "concrete_value": 9,
         "testability": 8,
         "technical_fit": 7,
-        "repo_quality": 6.314308879812563,
+        "repo_quality": 7.018673916035288,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: missing assessment"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 3230,
+      "language": "Python",
+      "score": 51.01867391603529,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "yujunzhixue/dsh-purge": {
+      "repo": "YuJunZhiXue/dsh-purge",
+      "url": "https://github.com/YuJunZhiXue/dsh-purge",
+      "summary_sv": "Ett DeepSeek Harness-plugin för att jailbreaka LLM:er genom att byta prompts per modell.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 0,
+        "concrete_value": 0,
+        "testability": 0,
+        "technical_fit": 0,
+        "repo_quality": 5,
+        "timing": 0
+      },
+      "risks": [
+        "Projektet är pausat och saknar aktiv underhåll"
+      ],
+      "confidence": 0.95,
+      "analysis_mode": "model",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "llm-säkerhet",
+      "concrete_use_case": "Ingen direkt användning i något av Jonas namngivna projekt; verktyget riktar sig mot modell-säkerhetstestning och red-teaming.",
+      "next_step": "Ingen rekommenderad åtgärd för Jonas projekt.",
+      "differentiator": "Fokus på DeepSeek Harness-ekosystemet och modell-specifika jailbreak-prompts; ingen nytta för Jonas datapipelines, ranking eller contentarbeten.",
+      "evidence": [
+        "README beskriver 'Jailbreak for every model — swap prompts per model'",
+        "Projektet är pausat ('暂时停更') och underhålls inte aktivt",
+        "Ingen koppling till Shopify, betting, företagsdata, WooCommerce, SEO, scraping eller AI Radar-pipeline"
+      ],
+      "source_names": [
+        "GitHub Trending – daily"
+      ],
+      "stars": 7410,
+      "language": "JavaScript",
+      "score": 5,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "exact_match",
+        "project_match",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability"
+      ],
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "gathin23/tv-vibehack": {
+      "repo": "Gathin23/tv-vibehack",
+      "url": "https://github.com/Gathin23/tv-vibehack",
+      "summary_sv": "Your TV, minus the ads. Debloat any Android TV or Google TV over Wi-Fi and swap the ad-filled home screen for a clean Apple TV-style launcher. No root, fully reversible.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        },
+        {
+          "project": "Stock Signals",
+          "reason": "Kan vara transparent researchinspiration, inte beslutsmotor."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.953373485891289,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: risks must be an array, concrete_use_case is required"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2996,
+      "language": "Java",
+      "score": 46.95337348589129,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ly05010419/macnativegames": {
+      "repo": "ly05010419/MacNativeGames",
+      "url": "https://github.com/ly05010419/MacNativeGames",
+      "summary_sv": "Repo ly05010419/MacNativeGames saknar tydlig beskrivning.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.1720074112367636,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: risks must be an array, concrete_use_case is required"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1218,
+      "language": "C",
+      "score": 46.17200741123676,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "feder-cr/git-ai": {
+      "repo": "feder-cr/git-ai",
+      "url": "https://github.com/feder-cr/git-ai",
+      "summary_sv": "Git designed for AI agents.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.741026179197185,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: risks must be an array, concrete_use_case is required"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "agent-workflow",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 2346,
+      "language": "Go",
+      "score": 46.741026179197185,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "ahwootech/brutal": {
+      "repo": "ahwootech/BRUTAL",
+      "url": "https://github.com/ahwootech/BRUTAL",
+      "summary_sv": "A free, open source C# framework for making games, or your own game engine. Direct access to native APIs and Vulkan, with the low-level libraries around them. The foundation under Kitten Space Agency and RimWorld's Waylith engine.",
+      "project_matches": [
+        {
+          "project": "AI Radar",
+          "reason": "Kan förbättra agent-, analys- eller utvecklarflöden i radarn."
+        }
+      ],
+      "dimensions": {
+        "project_fit": 18,
+        "concrete_value": 9,
+        "testability": 8,
+        "technical_fit": 3,
+        "repo_quality": 6.574707545429493,
         "timing": 2
       },
       "risks": [
@@ -22881,9 +23171,9 @@
       "source_names": [
         "GitHub Search API"
       ],
-      "stars": 1435,
-      "language": "Python",
-      "score": 50.314308879812565,
+      "stars": 1937,
+      "language": "C#",
+      "score": 46.57470754542949,
       "action": "Arkiv",
       "project_context_version": 1,
       "quality_tier": "archive",
@@ -22899,13 +23189,68 @@
         "differentiator",
         "evidence"
       ],
-      "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
       "first_recommended": null,
-      "last_analyzed": "2026-10-15",
+      "last_analyzed": "2026-10-19",
+      "notified_at": null,
+      "notified_score": null
+    },
+    "chenglou/handwired": {
+      "repo": "chenglou/handwired",
+      "url": "https://github.com/chenglou/handwired",
+      "summary_sv": "Turn your regular JavaScript code into a neural net.",
+      "project_matches": [],
+      "dimensions": {
+        "project_fit": 2,
+        "concrete_value": 2,
+        "testability": 3,
+        "technical_fit": 10,
+        "repo_quality": 6.4910253356283,
+        "timing": 2
+      },
+      "risks": [
+        "Fallbackbedömning användes: OpenRouter returned no content (finish_reason=length)"
+      ],
+      "confidence": 0.35,
+      "analysis_mode": "fallback",
+      "assessment_version": 2,
+      "match_type": "generic",
+      "category": "uncategorized",
+      "concrete_use_case": "",
+      "next_step": "",
+      "differentiator": "",
+      "evidence": [],
+      "source_names": [
+        "GitHub Search API"
+      ],
+      "stars": 1759,
+      "language": "TypeScript",
+      "score": 25.4910253356283,
+      "action": "Arkiv",
+      "project_context_version": 1,
+      "quality_tier": "archive",
+      "failed_quality_gates": [
+        "model_analysis",
+        "exact_match",
+        "project_match",
+        "confidence",
+        "score",
+        "project_fit",
+        "concrete_value",
+        "testability",
+        "concrete_use_case",
+        "next_step",
+        "differentiator",
+        "evidence"
+      ],
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "first_recommended": null,
+      "last_analyzed": "2026-10-19",
       "notified_at": null,
       "notified_score": null
     }
   },
-  "updated_at": "2026-10-15"
+  "updated_at": "2026-10-19"
 }

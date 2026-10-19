@@ -1,10 +1,14 @@
 {
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:55:48.936Z",
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T09:12:23.190Z",
   "status": "degraded",
   "quality_status": "healthy",
   "reasons": [
-    "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)",
+    "storytold/artcraft: modellsvaret kunde inte valideras (risks must be an array, concrete_use_case is required).",
+    "Gathin23/tv-vibehack: modellsvaret kunde inte valideras (risks must be an array, concrete_use_case is required).",
+    "ly05010419/MacNativeGames: modellsvaret kunde inte valideras (risks must be an array, concrete_use_case is required).",
+    "feder-cr/git-ai: modellsvaret kunde inte valideras (risks must be an array, concrete_use_case is required).",
+    "Arekejoker/qwen21-nsfw-pose-skill: modellsvaret kunde inte valideras (missing assessment).",
     "OpenRouter-batch misslyckades: OpenRouter returned no content (finish_reason=length)"
   ],
   "quality_warning_reasons": [],
