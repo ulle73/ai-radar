@@ -66,11 +66,21 @@ Det som är bra och återanvänds:
 | **Lokal domare** | Djup bedömning som kräver hela hubben, transkript eller provkörning. Utför godkända åtgärder (hubbinstallation, branch och PR). | Bara datorn ser `~/.agents`, transkripten och lokala repon. Körs på prenumerationen, inte API-budgeten. |
 | **Notion** | Beslut, tester, resultat och lärdomar som både Jonas, ChatGPT, Claude och Codex läser. | Redan source of truth för Golfkuponger Growth System. |
 
-**Actions-beroende:** Repot är privat och Actions är blockerat av fakturering (se fas 0). Därför gäller att **inget i produktionsflödet kräver GitHub Actions**. Actions används bara för tester vid PR när faktureringen är löst. Nattliga körningar flyttas till n8n och den lokala domaren.
+**Actions och integritet (ändrat 2026-10-19):** Repot gjordes publikt, så Actions är gratis och används för heartbeat mot **publika** källor. Detektorerna körs alltså där koden finns (Node i repot) och inte som kopior i n8n-noder. Data som bara finns hos oss (försäljning, Notion Log, lokala installationer, privata repon) läses i stället av den **lokala** körningen. Actions-loggar är publika, så körningen skriver bara ut antal och källstatus, aldrig innehåll.
+
+| Del | Var | Vad |
+|---|---|---|
+| `scripts/v2/heartbeat.mjs --mode public` | GitHub Actions `v2 Heartbeat (public)`, var 30:e minut | Releaser, YouTube och CI för publika repon |
+| `scripts/v2/heartbeat.mjs --mode private` | Jonas dator (schemalagd aktivitet, tillsammans med domaren) | Försäljning och Notion Log via `R2 – Data Feed`, installerade versioner och CI för privata repon |
+| `R2 – Observation Ingest` (n8n, `/webhook/r2-observations`) | n8n | Tar emot signerade batchar (högst 200), validerar, deduplicerar på `dedupe_key` och skriver till `GK_R2_OBSERVATIONS` med status `NEW` |
+| `R2 – Data Feed` (n8n, `/webhook/r2-data-feed`) | n8n | Signerad läsning: `GK_DAILY_ORDER_REPORTS` (aggregat) och hela Notion Log |
+| `GK_R2_CONFIG`, `GK_R2_COSTS` | n8n-tabeller | Signeringshemlighet, budgettak och kostnadslogg |
+
+Signatur: `x-r2-timestamp` (unix-sekunder) och `x-r2-signature` = hex(HMAC-SHA256(hemlighet, `"<timestamp>.<rå body>"`)). Anrop äldre än 5 minuter avvisas. Hemligheten finns i `GK_R2_CONFIG`, som GitHub-hemligheten `R2_SIGNING_SECRET` och lokalt i `~/.ai-radar/secrets.json` (läsbar bara för Jonas). Flödenas källkod ligger i `n8n/`.
 
 ### Heartbeat
 
-- **n8n var 15:e minut:** detektorerna körs mot källorna. De använder ingen AI och kostar nästan inget. Bara nya observationer går vidare till kön.
+- **Var 30:e minut:** detektorerna körs mot källorna (publika i Actions, privata lokalt). De använder ingen AI och kostar nästan inget. Bara nya observationer, dedupliceras på `dedupe_key`, hamnar i kön.
 - **Lokal domare var 30:e minut** (Windows schemalagd aktivitet, bara när datorn är på): hämtar högst N jobb, med en tidsgräns per jobb. Är datorn avstängd ligger jobben kvar i kön.
 - **Morgonbrev vardagar 07:30:** n8n väljer de 3 bästa färdiga korten över alla områden. Finns inget som klarar grindarna skickas inget brev.
 - **Direktlarm:** bara för tidskritiska observationer (se 6.3).
@@ -329,11 +339,11 @@ Faserna anger byggordning. Alla fyra områden går live samtidigt i fas 2.
 
 ### Fas 0 – förutsättningar
 
-- [ ] **Jonas:** lös GitHub-faktureringen (betalning eller spending limit) så att Actions kan köra tester vid PR.
+- [x] ~~**Jonas:** lös GitHub-faktureringen~~. Löst genom att repot gjordes publikt 2026-10-19, så Actions kör gratis och testerna körs på varje PR.
 - [ ] Discord-kanal `#radar` och bot-behörigheter (återanvänd AI Radar-boten).
 - [ ] Kontrollera Codex-version och sandlåda: `codex sandbox windows` passerar.
 - [ ] Skrivskyddad databasroll mot content-engines Postgres.
-- [ ] Bestäm hur jobbkön nås från datorn (n8n-webhook med header-hemlighet, bara utgående anrop från datorn).
+- [x] Bestäm hur jobbkön nås från datorn: HMAC-signerade n8n-webhooks med bara utgående anrop från datorn (se avsnitt 3).
 
 Klart när: alla punkter är bockade och verifierade.
 
@@ -342,10 +352,12 @@ Klart när: alla punkter är bockade och verifierade.
 - [x] Kortkontraktet som JSON Schema plus validering och tester.
 - [x] Grindarna G1–G8 och typgrindarna som kod med tester, inklusive negativa fall (generisk text, okänt mål, reserv).
 - [x] Inventeringsexport från hubben (`scripts/v2/build-inventory.mjs`) plus lokal statisk del för repon, n8n, Notion och mått.
-- [ ] n8n: observationstabell, kö, budgetvakt och heartbeat-flöde.
+- [x] n8n: observationstabell (`GK_R2_OBSERVATIONS`), ingest och data feed, konfiguration och kostnadslogg. Heartbeat körs i Actions och lokalt (avsnitt 3).
+- [ ] Budgetvakt som läser `GK_R2_COSTS` (behövs först när domaren gör betalda anrop).
 - [ ] Lokal domare: Windows-aktivitet, hämtning av jobb, Codex headless, karantän, statisk skanning, retur av kort.
 - [x] Minst en detektor per område som ren kod (`scripts/lib/v2/detectors/`): releaser och YouTube (verktyg & hubb), kampanjer och avvikande inlägg (sociala), 7-dagarstrend (försäljning), röd CI och Notion Log som stått stilla (projekt). Alla har tester, och releaser, YouTube och CI är provkörda mot riktig data.
-- [ ] Koppla detektorerna till riktiga indata i n8n (GitHub, RSS, `GK_DAILY_ORDER_REPORTS`, content-engine, Notion Log).
+- [x] Koppla detektorerna till riktiga indata: GitHub-releaser och CI, YouTube-RSS, `GK_DAILY_ORDER_REPORTS` och Notion Log. Verifierat end-to-end 2026-10-19 med 104 observationer i `GK_R2_OBSERVATIONS` och 0 dubbletter vid omkörning.
+- [ ] content-engine som källa för sociala signaler (kräver skrivskyddad databasroll, fas 0).
 - [x] Verifiera YouTube-kanal-ID för alla 16 kanaler.
 
 Klart när: varje område har producerat minst ett kort i skuggläge som klarar grindarna, och Jonas har läst dem i en testkanal.
@@ -397,7 +409,7 @@ Om målen inte nås justeras källor, detektorer och grindar innan något nytt l
 
 ## 15. Beroenden och öppna punkter
 
-- GitHub-fakturering (fas 0) måste lösas av Jonas.
+- GitHub-faktureringen är inte längre ett hinder, eftersom repot är publikt sedan 2026-10-19 och Actions därmed är gratis.
 - Claude Code CLI finns inte i PATH på datorn, så domaren är Codex. En korskontroll med Claude kan läggas till senare om CLI installeras.
 - Tabellnamn i content-engines databas verifieras i fas 1 (YouTube-kanalernas ID är verifierade).
 - Shopify Analytics nås via Shopify-anslutningen. Om n8n behöver egen åtkomst krävs en skrivskyddad app eller token (fas 1).

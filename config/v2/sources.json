@@ -51,5 +51,19 @@
     "discovery_only": [
       { "name": "Agent Native updates", "url": "https://agentnative.inc/updates" }
     ]
+  },
+  "installed": {
+    "note": "Lokala installationer som jämförs mot senaste stabila release (bara i private-läget, eftersom de finns på Jonas dator).",
+    "tools": [
+      { "repo": "openai/codex", "command": "codex --version" }
+    ]
+  },
+  "ci": {
+    "note": "public-läget (GitHub Actions) kontrollerar bara publika repon; private-läget kontrollerar alla med lokal gh-token.",
+    "repos": [
+      { "repo": "ulle73/ai-radar", "public": true },
+      { "repo": "ulle73/content-engine", "public": true },
+      { "repo": "ulle73/golfkuponger-app", "public": false }
+    ]
   }
 }
