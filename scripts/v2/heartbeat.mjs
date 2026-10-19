@@ -24,16 +24,21 @@ const mode = argument('mode', 'public');
 const dryRun = process.argv.includes('--dry-run');
 const runner = argument('runner', process.env.GITHUB_ACTIONS ? 'actions' : 'local');
 const sources = JSON.parse(await readFile(new URL('../../config/v2/sources.json', import.meta.url), 'utf8'));
+// Utan token svarar GitHub 404 för privata repon, så två försök och en tydlig varning om det ändå saknas.
 async function localGhToken() {
-  try {
-    const { stdout } = await run('gh auth token', { timeout: 10000 });
-    return stdout.trim();
-  } catch {
-    return '';
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const { stdout } = await run('gh auth token', { timeout: 20000 });
+      if (stdout.trim()) return stdout.trim();
+    } catch {
+      // nytt försök
+    }
   }
+  return '';
 }
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || (mode === 'public' ? '' : await localGhToken());
+if (!token && mode !== 'public') console.log('varning: ingen GitHub-token (gh auth token misslyckades); privata repon kan inte kontrolleras');
 
 async function fetchJson(url) {
   const headers = { accept: 'application/vnd.github+json', 'user-agent': 'ai-radar-v2' };
