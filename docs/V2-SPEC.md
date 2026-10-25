@@ -417,7 +417,8 @@ Klart när: två veckor i drift utan tekniska fel, och gamla system körs parall
 
 Efter två veckor med godkänt resultat (avsnitt 14):
 
-- [ ] Inaktivera n8n 30–35 (AI Radar) och 50–62 (Opportunity OS). Behåll Deploy Controller och worker om de används i fas 3.
+- [x] Inaktivera n8n 30–35 (AI Radar). Gjort 2026-10-26 på Jonas begäran, tidigare än planerat: 31 och 31B fick avslag från OpenRouter ("Authorization failed") var 15:e minut och varje fel gav ett larm. 30, 31, 31B, 32, 34 och 35 är avpublicerade (33 och 36 var redan av). `37 AI – Discord Interactions v2` är kvar, eftersom v2:s knappar går genom det.
+- [ ] Inaktivera n8n 50–62 (Opportunity OS). Behåll Deploy Controller och worker om de används i fas 3.
 - [ ] Ta bort Telegram-leveransen i detta repo och arkivera v1-flödet.
 - [ ] Rensa firehose-källor ur `GK_AI_RADAR_SOURCES`.
 
