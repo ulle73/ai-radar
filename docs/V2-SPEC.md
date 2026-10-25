@@ -392,7 +392,7 @@ Klart när: varje område har producerat minst ett kort i skuggläge som klarar 
 
 ### Fas 2 – live, alla fyra områden
 
-- [ ] Morgonbrev 07:30 (max 3), direktlarm och fredagssammanfattning. **Byggt 2026-10-25** (`R2 – Discord Publisher`, logik och tester i `scripts/lib/v2/brief.mjs`). Provkört mot riktiga kort och observationer med Discord-posten och alla skrivningar pinnade. Flödet publiceras först när Jonas godkänt det första riktiga inlägget.
+- [ ] Morgonbrev 07:30 (max 3), direktlarm och fredagssammanfattning. **Byggt 2026-10-25** (`R2 – Discord Publisher`, logik och tester i `scripts/lib/v2/brief.mjs`). Provkört mot riktiga kort och observationer med Discord-posten och alla skrivningar pinnade. Publicerat 2026-10-25 efter Jonas godkännande. Första morgonbrevet går måndag 2026-10-26 07:30 och den första fredagssammanfattningen 2026-10-30 15:00. Återstår: kontrollera det första riktiga brevet och sammanfattningen.
 - [ ] Discord-knappar för OK, Nej, Inte nu, Mer info, 1–10 och orsak. **Byggt 2026-10-25:** kortmeddelanden (`scripts/lib/v2/discord.mjs`, `discord_json` i `GK_R2_CARDS`), `R2 – Card Feedback` och `r2:`-routningen i workflow 37 är publicerade. Provkört: Mer info på riktigt kort, avvisning av annan användare och okänt kort. Återstår: ett riktigt knapptryck i Discord.
 - [ ] Alla källor i avsnitt 4 inkopplade, med GitHub Trending-parsern omskriven och testad.
 - [ ] Notion-skrivning av kort som fått OK eller Nej.
