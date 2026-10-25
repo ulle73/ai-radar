@@ -75,6 +75,9 @@ Det som är bra och återanvänds:
 | `R2 – Observation Ingest` (n8n, `/webhook/r2-observations`) | n8n | Tar emot signerade batchar (högst 200), validerar, deduplicerar på `dedupe_key` och skriver till `GK_R2_OBSERVATIONS` med status `NEW` |
 | `R2 – Data Feed` (n8n, `/webhook/r2-data-feed`) | n8n | Signerad läsning: `GK_DAILY_ORDER_REPORTS` (aggregat) och hela Notion Log |
 | `GK_R2_CONFIG`, `GK_R2_COSTS` | n8n-tabeller | Signeringshemlighet, budgettak och kostnadslogg |
+| `R2 – Judge Queue` (n8n, `/webhook/r2-judge`) | n8n | Signerad kö för den lokala domaren: `list_new`, `complete`, `set_discord` och `list_cards` |
+| `R2 – Discord Publisher` (n8n) | n8n | Morgonbrev vardagar 07:30, direktlarm var 15:e minut och fredagssammanfattning 15:00 till `#ai-radar`. Urval och sammanfattning är en ordagrann kopia av `scripts/lib/v2/brief.mjs` (genereras med `scripts/v2/build-publisher-workflow.mjs`, kontrolleras i testerna) |
+| `37 AI – Discord Interactions v2` → `R2 – Card Feedback` (n8n) | n8n | Discords enda interaktionsadress (ed25519-verifierad). Knappar som börjar med `r2:` går till route 10 och vidare till `R2 – Card Feedback`, som bara tar emot Jonas tryck och sparar beslut, betyg och orsak i `GK_R2_CARDS` |
 
 Signatur: `x-r2-timestamp` (unix-sekunder) och `x-r2-signature` = hex(HMAC-SHA256(hemlighet, `"<timestamp>.<rå body>"`)). Anrop äldre än 5 minuter avvisas. Hemligheten finns i `GK_R2_CONFIG`, som GitHub-hemligheten `R2_SIGNING_SECRET` och lokalt i `~/.ai-radar/secrets.json` (läsbar bara för Jonas). Flödenas källkod ligger i `n8n/`.
 
@@ -267,11 +270,17 @@ Fyra mallar, efter Jonas egna formuleringar:
 > **Det här bör ni använda: X**, för att *[observation]*.
 > Vid OK: regeln läggs i den delade hubben, eller ett test startas och loggas i Notion.
 
-Knappar på varje kort:
+Knappar på varje kort (byggda i `scripts/lib/v2/discord.mjs`, fyra rader):
 
-- **OK** · **Nej** · **Mer info**
-- **1–10** (bara Jonas Discord-ID får betygsätta, som i dag)
-- Orsak (valfri, ett tryck): **Visste redan** · **För generiskt** · **Fel fakta** · **Bra men inte nu** · **Bygg detta!**
+- **OK** · **Nej** · **Inte nu** · **Mer info**
+- **1–10** på två rader (bara Jonas Discord-ID får besluta och betygsätta)
+- Orsak (valfri, ett tryck): **Visste redan** · **För generiskt** · **Fel fakta** · **Bygg detta!**
+
+"Bra men inte nu" från första versionen blev beslutet **Inte nu** (samma 90 dagars spärr som Nej, men utan krav på ny evidens efteråt). Knapparnas `custom_id` är `r2:<ok|no|later|more>:<kort-id>`, `r2:rate:<1–10>:<kort-id>` och `r2:why:<known|generic|wrong|build>:<kort-id>`. Mer info visar ett privat meddelande med grindarna, skeptikerns motivering, all evidens, återstående test och risk.
+
+Urvalet till morgonbrevet (`scripts/lib/v2/brief.mjs`): bara kort med status `SHADOW`, `publishable`, inte overifierade, inte utgångna och aldrig postade. Ett kort per `dedupe_key` (högst rang, sedan nyast), högst 3 per brev och högst 2 per område. En `dedupe_key` lyfts inte igen medan ett publicerat kort med samma nyckel väntar på beslut, eller inom 90 dagar efter ett beslut. Postade kort får status `PUBLISHED` med `discord_message_id` och `posted_at`. Ett kort som inte kunde postas står kvar som `SHADOW` och provas igen, och felet går till felflödet. LARM-kort går bara som direktlarm.
+
+Fredagssammanfattningen visar veckans siffror mot framgångsmåtten (avsnitt 14), månadens kostnad, kort som fått OK, kort som väntar på beslut och `DIGEST`-observationerna en rad var. Bara de nyheter som ryms i meddelandet markeras `DIGESTED`, resten väntar till nästa vecka.
 
 ## 8. Utförande efter OK
 
@@ -383,8 +392,8 @@ Klart när: varje område har producerat minst ett kort i skuggläge som klarar 
 
 ### Fas 2 – live, alla fyra områden
 
-- [ ] Morgonbrev 07:30 (max 3), direktlarm och fredagssammanfattning.
-- [ ] Discord-knappar för OK, Nej, Mer info, 1–10 och orsak.
+- [ ] Morgonbrev 07:30 (max 3), direktlarm och fredagssammanfattning. **Byggt 2026-10-25** (`R2 – Discord Publisher`, logik och tester i `scripts/lib/v2/brief.mjs`). Provkört mot riktiga kort och observationer med Discord-posten och alla skrivningar pinnade. Publicerat 2026-10-25 efter Jonas godkännande. Första morgonbrevet går måndag 2026-10-26 07:30 och den första fredagssammanfattningen 2026-10-30 15:00. Återstår: kontrollera det första riktiga brevet och sammanfattningen.
+- [ ] Discord-knappar för OK, Nej, Inte nu, Mer info, 1–10 och orsak. **Byggt 2026-10-25:** kortmeddelanden (`scripts/lib/v2/discord.mjs`, `discord_json` i `GK_R2_CARDS`), `R2 – Card Feedback` och `r2:`-routningen i workflow 37 är publicerade. Provkört: Mer info på riktigt kort, avvisning av annan användare och okänt kort. Återstår: ett riktigt knapptryck i Discord.
 - [ ] Alla källor i avsnitt 4 inkopplade, med GitHub Trending-parsern omskriven och testad.
 - [ ] Notion-skrivning av kort som fått OK eller Nej.
 
@@ -431,7 +440,7 @@ Om målen inte nås justeras källor, detektorer och grindar innan något nytt l
 - GitHub-faktureringen är inte längre ett hinder, eftersom repot är publikt sedan 2026-10-19 och Actions därmed är gratis.
 - Claude Code CLI finns inte i PATH på datorn, så domaren är Codex. En korskontroll med Claude kan läggas till senare om CLI installeras.
 - `~/.codex/config.toml` har `model = "gpt-6.1-sol"`, som ChatGPT-kontot inte stöder. Domaren påverkas inte eftersom modellen är låst i `config/v2/judge.json`, men Jonas vanliga `codex exec` fallerar sannolikt av samma skäl. Det är en klientinställning utanför hubben och ändras inte av Radar.
-- `DIGEST`-observationer (saker som stått stilla utan eget kort) ska samlas i fredagssammanfattningen (fas 2).
 - Tabellnamn i content-engines databas verifieras i fas 1 (YouTube-kanalernas ID är verifierade).
 - Shopify Analytics nås via Shopify-anslutningen. Om n8n behöver egen åtkomst krävs en skrivskyddad app eller token (fas 1).
-- Discord-komponenternas gränser kontrolleras mot aktuell dokumentation innan kortlayouten fastställs. `37 AI – Discord Interactions v2` hanterar redan 1–10.
+- Discord-komponenternas gränser är kontrollerade mot dokumentationen (2026-10-19): högst 5 knappar per rad och 5 rader, `custom_id` 1–100 tecken, etikett högst 80 tecken, embed-beskrivning högst 4096 tecken. Testerna i `tests/v2-discord.test.mjs` håller korten inom gränserna.
+- `37 AI – Discord Interactions v2` saknar källfil i repot (äldre flöde). Ändringen för v2 är bara tillägget av `r2:`-grenen (route 10) och två noder. Versionen före ändringen är `cc887831-86d3-4cb7-9ef4-9dc276c87b3e`.
