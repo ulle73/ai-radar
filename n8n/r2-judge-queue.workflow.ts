@@ -109,6 +109,18 @@ if (body.action === 'list_new') {
   const limit = Math.max(1, Math.min(200, Number(body.limit) || 100));
   return [{ json: { route: 1, limit } }];
 }
+if (body.action === 'list_cards') return [{ json: { route: 4 } }];
+if (body.action === 'set_discord') {
+  const updates = Array.isArray(body.items) ? body.items : null;
+  if (!updates || !updates.length || updates.length > 100) return reject('invalid_items');
+  const rows = [];
+  for (const update of updates) {
+    const u = update || {};
+    if (!/^R2-[A-Za-z0-9-]{4,}$/.test(String(u.card_id || '')) || typeof u.discord_json !== 'string' || u.discord_json.length > 12000) return reject('invalid_item');
+    rows.push({ json: { route: 3, results: updates.length, card_id: u.card_id, discord_json: u.discord_json } });
+  }
+  return rows;
+}
 if (body.action !== 'complete') return reject('unknown_action');
 
 const results = Array.isArray(body.results) ? body.results : null;
@@ -139,6 +151,7 @@ for (const result of results) {
       card_json: text(c.card_json, 20000),
       observation_ids_json: JSON.stringify(ids),
       judge_model: text(c.judge_model, 80),
+      discord_json: text(c.discord_json, 12000),
       judged_at: new Date().toISOString()
     });
   }
@@ -154,7 +167,7 @@ const routeRequest = switchCase({
   version: 3.4,
   config: {
     name: 'Route Request',
-    parameters: { mode: 'expression', numberOutputs: 3, output: expr('{{ $json.route }}') },
+    parameters: { mode: 'expression', numberOutputs: 5, output: expr('{{ $json.route }}') },
     position: [880, 400]
   }
 });
@@ -341,7 +354,8 @@ const insertCard = node({
           card_json: expr('{{ $json.card_json }}'),
           observation_ids_json: expr('{{ $json.observation_ids_json }}'),
           judge_model: expr('{{ $json.judge_model }}'),
-          judged_at: expr('{{ $json.judged_at }}')
+          judged_at: expr('{{ $json.judged_at }}'),
+          discord_json: expr('{{ $json.discord_json }}')
         },
         schema: [
           { id: 'card_id', displayName: 'card_id', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
@@ -357,7 +371,8 @@ const insertCard = node({
           { id: 'card_json', displayName: 'card_json', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
           { id: 'observation_ids_json', displayName: 'observation_ids_json', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
           { id: 'judge_model', displayName: 'judge_model', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
-          { id: 'judged_at', displayName: 'judged_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }
+          { id: 'judged_at', displayName: 'judged_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true },
+          { id: 'discord_json', displayName: 'discord_json', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }
         ]
       }
     },
@@ -390,6 +405,99 @@ const updateObservation = node({
   output: [{ id: 1 }]
 });
 
+const acceptDiscord = node({
+  type: 'n8n-nodes-base.respondToWebhook',
+  version: 1.5,
+  config: {
+    name: 'Accept Discord Updates',
+    parameters: {
+      respondWith: 'json',
+      responseBody: expr('{{ JSON.stringify({ ok: true, results: $json.results }) }}'),
+      options: { responseCode: 202 }
+    },
+    position: [1100, 900]
+  },
+  output: [{ route: 3, results: 1, card_id: 'R2-20261019-948277ff', discord_json: '{}' }]
+});
+
+const setDiscord = node({
+  type: 'n8n-nodes-base.dataTable',
+  version: 1.1,
+  config: {
+    name: 'Set Card Discord Message',
+    parameters: {
+      resource: 'row',
+      operation: 'update',
+      dataTableId: { __rl: true, mode: 'id', value: '3ryY9Vp6VumxOHPP', cachedResultName: 'GK_R2_CARDS' },
+      matchType: 'allConditions',
+      filters: { conditions: [{ keyName: 'card_id', condition: 'eq', keyValue: expr('{{ $json.card_id }}') }] },
+      columns: {
+        mappingMode: 'defineBelow',
+        value: { discord_json: expr('{{ $json.discord_json }}') },
+        schema: [
+          { id: 'discord_json', displayName: 'discord_json', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }
+        ]
+      }
+    },
+    position: [1320, 900]
+  },
+  output: [{ id: 1 }]
+});
+
+// list_cards: underlag för scripts/v2/render-discord.mjs, som bygger om discord_json när kortformatet ändras.
+const getCardsForRender = node({
+  type: 'n8n-nodes-base.dataTable',
+  version: 1.1,
+  config: {
+    name: 'Get Cards For Render',
+    parameters: {
+      resource: 'row',
+      operation: 'get',
+      dataTableId: { __rl: true, mode: 'id', value: '3ryY9Vp6VumxOHPP', cachedResultName: 'GK_R2_CARDS' },
+      returnAll: false,
+      limit: 200,
+      orderBy: true,
+      orderByColumn: 'createdAt',
+      orderByDirection: 'DESC'
+    },
+    position: [1100, 1100]
+  },
+  output: [{ card_id: 'R2-20261019-948277ff', card_json: '{}', rank_score: 99, discord_json: null }]
+});
+
+const buildCards = node({
+  type: 'n8n-nodes-base.code',
+  version: 2,
+  config: {
+    name: 'Build Cards Response',
+    parameters: {
+      mode: 'runOnceForAllItems',
+      language: 'javaScript',
+      jsCode: `const cards = $('Get Cards For Render').all()
+  .map((item) => item.json)
+  .filter((row) => row && row.card_id)
+  .map((row) => ({ card_id: row.card_id, card_json: row.card_json, rank_score: row.rank_score, has_discord: Boolean(row.discord_json) }));
+return [{ json: { ok: true, cards } }];`
+    },
+    position: [1320, 1100]
+  },
+  output: [{ ok: true, cards: [] }]
+});
+
+const respondCards = node({
+  type: 'n8n-nodes-base.respondToWebhook',
+  version: 1.5,
+  config: {
+    name: 'Respond With Cards',
+    parameters: {
+      respondWith: 'json',
+      responseBody: expr('{{ JSON.stringify($json) }}'),
+      options: { responseCode: 200 }
+    },
+    position: [1540, 1100]
+  }
+});
+
 export default workflow('r2-judge-queue', 'R2 – Judge Queue')
   .add(queueWebhook)
   .to(extractRaw)
@@ -400,4 +508,6 @@ export default workflow('r2-judge-queue', 'R2 – Judge Queue')
     .onCase(1, getNew.to(getDecided.to(getCosts.to(buildQueue.to(respondQueue)))))
     .onCase(2, acceptResults.to(routeItem
       .onCase(0, insertCard)
-      .onCase(1, updateObservation))));
+      .onCase(1, updateObservation)))
+    .onCase(3, acceptDiscord.to(setDiscord))
+    .onCase(4, getCardsForRender.to(buildCards.to(respondCards))));

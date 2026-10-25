@@ -7,6 +7,7 @@ import { evaluateCard } from '../gates.mjs';
 import { buildCard } from './card-builder.mjs';
 import { buildJudgePrompt, buildSkepticPrompt } from './prompt.mjs';
 import { isTransient } from './codex.mjs';
+import { formatCardMessage } from '../discord.mjs';
 
 const JUDGE_SCHEMA = JSON.parse(readFileSync(new URL('../../../../schemas/judge-output.v1.schema.json', import.meta.url), 'utf8'));
 const SKEPTIC_SCHEMA = JSON.parse(readFileSync(new URL('../../../../schemas/skeptic-output.v1.schema.json', import.meta.url), 'utf8'));
