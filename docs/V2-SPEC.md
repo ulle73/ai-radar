@@ -225,7 +225,10 @@ Fält utöver skissen i den första versionen av specen, fastställda i fas 1:
 |---|---|
 | `analysis_mode` (`model` eller `fallback`) | Gör reservbedömningar synliga, så att G6 kan avvisa dem. |
 | `platform_news` | Avgör om G1 kräver en primärkälla på leverantörens egen domän. |
-| `observations[].source_kind` | `primary`, `aggregator`, `data`, `social`, `repo`, `video` eller `transcript`. Aggregatorer kan aldrig ensamma bära ett kort. |
+| `observations[].source_kind` | `primary`, `aggregator`, `data`, `social`, `repo`, `video`, `transcript`, `session_transcript`, `notion_lesson`, `eval`, `n8n_error`, `hub_health`, `probe`, `receipt` eller `metric`. Aggregatorer kan aldrig ensamma bära ett kort. De åtta sista kommer från förbättringsmotorn (harness, se nedan); CI använder `repo`. |
+| `urgency.trigger` (och observationens `alert_trigger`) | `competitor_campaign_live`, `sales_deviation`, `platform_breaking_change`, `security_advisory`, `hub_regression`, `probe_failed`, `liveness_lost` eller `hub_health_failure`. De fyra sista går direkt från Observation Ingest till Discord med status `ALERTED`, utan domaren. |
+| `security.clients` | `claude`, `codex`, `claude_ai` eller `chatgpt`. |
+| `mistake_ref` | Valfritt. Lärdomsnyckeln (`^[a-z0-9-]{3,48}$`) som ett harness-kort (typ ANVAND) åtgärdar. Sätts av koden. |
 | `anchors[]` | De befintliga entiteter i vår stack som kortet bygger på. För NY och ERSÄTT finns målet ännu inte, så kopplingen till stacken bärs av ankarna. |
 | `test.outcome` (`pass`, `fail`, `not_run`) och `test.ab` | Skiljer ett misslyckat test (avvisas) från ett som inte är verifierat (overifierad). A/B anger vinnare per kriterium. |
 | `security` | Statisk skanning, licens och vilka klienter som stöds. Krävs för NY och ERSÄTT. |
@@ -233,7 +236,11 @@ Fält utöver skissen i den första versionen av specen, fastställda i fas 1:
 | `urgency` | Utlösare och giltighetstid för LARM. |
 | `target.branch` | Branch för PROJEKT. |
 
-**Inventeringen** som grindarna jämför mot är JSON med listorna `skills`, `tools`, `mcp`, `repos`, `workflows`, `notion`, `metrics`, `agents_rules` och `shopify_themes`. Varje post identifieras av `id`, `name`, `title` eller `aliases`. Repon kan ange `default_branch` och `protected_refs`. Exempel finns i `tests/helpers/v2-fixtures.mjs`. Exporten från hubben och n8n byggs senare i fas 1.
+**Inventeringen** som grindarna jämför mot är JSON med listorna `skills`, `tools`, `mcp`, `repos`, `workflows`, `notion`, `metrics`, `agents_rules` och `shopify_themes`. Varje post identifieras av `id`, `name`, `title` eller `aliases`. Repon kan ange `default_branch` och `protected_refs`. Exempel finns i `tests/helpers/v2-fixtures.mjs`. Exporten från hubben och n8n byggs senare i fas 1. Hubbdelen läser både `skills/` och `plugins/*/skills/*` (pluginen `gk-karna`); plugin-skills får `plugin` och `path` (sökvägen till SKILL.md i hubbrepot).
+
+**Gemensamma listor.** `source_kind`, `alert_trigger` och `security.clients` finns på fem ställen som ändras tillsammans: `scripts/lib/v2/observation.mjs`, `n8n/r2-observation-ingest.workflow.ts`, `schemas/card.v1.schema.json`, `schemas/judge-output.v1.schema.json` och tabellen ovan. `tests/v2-observation-enums.test.mjs` kontrollerar att de stämmer överens.
+
+**Förbättringsmotorn (harness).** Från 2026-11-01 byggs R2 ut till hubbens förbättringsmotor enligt designen *Självförbättrande hubb* (`docs/ai-system/harness/sjalvforbattrande-hubb.md` i hubbrepot `ulle73/gk-agents`, godkänd av Jonas 2026-11-01). Den ersätter §8 och §9.1. Koden ligger i `scripts/lib/v2/harness/`, `scripts/v2/harness-night.mjs` och `n8n/r2-harness-state.workflow.ts`.
 
 ### 7.1.1 Grindarna i kod
 

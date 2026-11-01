@@ -114,8 +114,10 @@ if (!list) return reject('missing_observations');
 if (list.length > maxObservations) return reject('too_many_observations');
 
 const AREAS = ['tools_hub', 'social', 'sales', 'projects'];
-const KINDS = ['primary', 'aggregator', 'data', 'social', 'repo', 'video', 'transcript'];
-const TRIGGERS = ['competitor_campaign_live', 'sales_deviation', 'platform_breaking_change', 'security_advisory'];
+const KINDS = ['primary', 'aggregator', 'data', 'social', 'repo', 'video', 'transcript', 'session_transcript', 'notion_lesson', 'eval', 'n8n_error', 'hub_health', 'probe', 'receipt', 'metric'];
+const TRIGGERS = ['competitor_campaign_live', 'sales_deviation', 'platform_breaking_change', 'security_advisory', 'hub_regression', 'probe_failed', 'liveness_lost', 'hub_health_failure'];
+// Larmutlösare som går direkt till Discord utan domaren (C1): status ALERTED.
+const DIRECT = ['hub_regression', 'probe_failed', 'liveness_lost', 'hub_health_failure'];
 const text = (value, max) => (typeof value === 'string' ? value.trim().slice(0, max) : '');
 const runner = text(body.runner, 40) || 'unknown';
 const receivedAt = new Date().toISOString();
@@ -148,7 +150,7 @@ for (const observation of list) {
     anchors_json: JSON.stringify(Array.isArray(o.anchors) ? o.anchors.slice(0, 10) : []).slice(0, 2000),
     alert_trigger: o.alert_trigger || '',
     data_json: JSON.stringify(o.data && typeof o.data === 'object' ? o.data : {}).slice(0, 8000),
-    status: 'NEW',
+    status: DIRECT.includes(o.alert_trigger) ? 'ALERTED' : 'NEW',
     runner,
     received_at: receivedAt
   });
@@ -286,6 +288,56 @@ const insertObservation = node({
   output: [{ id: 1 }]
 });
 
+// Direktvägen för hubblarm: nya observationer med status ALERTED postas till #ai-radar utan domaren.
+const buildAlerts = node({
+  type: 'n8n-nodes-base.code',
+  version: 2,
+  config: {
+    name: 'Build Direct Alerts',
+    parameters: {
+      mode: 'runOnceForAllItems',
+      language: 'javaScript',
+      jsCode: `const cut = (text, max) => { const t = String(text || ''); return t.length <= max ? t : t.slice(0, max - 1) + '…'; };
+const label = { hub_regression: 'Hubben har gått bakåt', probe_failed: 'Probe underkänd två gånger i rad', liveness_lost: 'Motorns livstecken saknas', hub_health_failure: 'Hubbens hälsa' };
+const alerts = $('Keep Only New Observations').all().map((item) => item.json).filter((row) => row.status === 'ALERTED');
+return alerts.map((row) => ({ json: { message: {
+  content: '🚨 **' + (label[row.alert_trigger] || row.alert_trigger) + '** · AI Radar v2 (harness)',
+  embeds: [{ title: cut(row.value, 256), description: cut([
+    '**Källa:** ' + row.source + ' · ' + String(row.observed_at || '').slice(0, 16).replace('T', ' '),
+    '**Utlösare:** ' + row.alert_trigger + ' · ' + row.observation_id,
+    row.url ? '**Länk:** ' + row.url : ''
+  ].filter(Boolean).join('\\n'), 4000) }],
+  allowed_mentions: { parse: [] }
+} } }));`
+    },
+    position: [1760, 300]
+  },
+  output: [{ message: { content: '🚨', embeds: [] } }]
+});
+
+const postAlert = node({
+  type: 'n8n-nodes-base.httpRequest',
+  version: 4.2,
+  config: {
+    name: 'Post Alert to #ai-radar',
+    onError: 'continueRegularOutput',
+    parameters: {
+      method: 'POST',
+      url: 'https://discord.com/api/v10/channels/1550641582208712806/messages',
+      authentication: 'predefinedCredentialType',
+      nodeCredentialType: 'discordBotApi',
+      sendBody: true,
+      contentType: 'json',
+      specifyBody: 'json',
+      jsonBody: expr('{{ JSON.stringify($json.message) }}'),
+      options: { timeout: 10000, batching: { batch: { batchSize: 1, batchInterval: 1500 } } }
+    },
+    credentials: { discordBotApi: { id: '2Pwo6eNhWtKkqI7C', name: 'AI Radar Discord Bot' } },
+    position: [1980, 300]
+  },
+  output: [{ id: '1430000000000000000', channel_id: '1550641582208712806' }]
+});
+
 export default workflow('r2-observation-ingest', 'R2 – Observation Ingest')
   .add(ingestWebhook)
   .to(extractRaw)
@@ -293,5 +345,5 @@ export default workflow('r2-observation-ingest', 'R2 – Observation Ingest')
   .to(verifyBatch)
   .to(routeBatch
     .onCase(0, rejectBatch)
-    .onCase(1, acceptBatch.to(onlyNew.to(insertObservation)))
+    .onCase(1, acceptBatch.to(onlyNew.to(insertObservation.to(buildAlerts.to(postAlert)))))
     .onCase(2, acceptEmpty));

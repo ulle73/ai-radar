@@ -4,10 +4,18 @@
 import { createHash } from 'node:crypto';
 
 const AREAS = Object.freeze(['tools_hub', 'social', 'sales', 'projects']);
-const SOURCE_KINDS = Object.freeze(['primary', 'aggregator', 'data', 'social', 'repo', 'video', 'transcript']);
-const ALERT_TRIGGERS = Object.freeze([
-  'competitor_campaign_live', 'sales_deviation', 'platform_breaking_change', 'security_advisory'
+// Ändras tillsammans med n8n/r2-observation-ingest.workflow.ts, schemas/card.v1.schema.json,
+// schemas/judge-output.v1.schema.json och V2-SPEC §7 (tests/v2-observation-enums.test.mjs kontrollerar det).
+const SOURCE_KINDS = Object.freeze([
+  'primary', 'aggregator', 'data', 'social', 'repo', 'video', 'transcript',
+  'session_transcript', 'notion_lesson', 'eval', 'n8n_error', 'hub_health', 'probe', 'receipt', 'metric'
 ]);
+const ALERT_TRIGGERS = Object.freeze([
+  'competitor_campaign_live', 'sales_deviation', 'platform_breaking_change', 'security_advisory',
+  'hub_regression', 'probe_failed', 'liveness_lost', 'hub_health_failure'
+]);
+// Larmutlösare som går direkt från Observation Ingest till Discord, utan domaren (C1).
+const DIRECT_ALERTS = Object.freeze(['hub_regression', 'probe_failed', 'liveness_lost', 'hub_health_failure']);
 
 function requireText(value, field) {
   if (typeof value !== 'string' || !value.trim()) throw new Error(`observation: ${field} saknas`);
@@ -85,4 +93,4 @@ export function dedupeObservations(observations, seenKeys = []) {
   return result;
 }
 
-export { ALERT_TRIGGERS, AREAS, SOURCE_KINDS };
+export { ALERT_TRIGGERS, AREAS, DIRECT_ALERTS, SOURCE_KINDS };
