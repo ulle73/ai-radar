@@ -12,10 +12,27 @@ function groupKey(observation) {
   if (observation.dedupe_key.startsWith('red_ci:') && observation.data?.repo) {
     return `red_ci:${observation.data.repo}`;
   }
+  // Lärdomsrader med samma nyckel är ett mönster (harness-designen C2): ett jobb per nyckel.
+  if (observation.source_kind === 'notion_lesson' && observation.data?.key) {
+    return `lesson:${observation.data.key}`;
+  }
   return observation.dedupe_key;
 }
 
-export function groupObservations(observations, { maxObservationsPerJob = 10 } = {}) {
+const DAY_MS = 86400000;
+const LESSON_THRESHOLD = Object.freeze({ rows: 3, days: 14 });
+
+// Etapp 1a: en lärdomsnyckel med minst 3 rader på 14 dagar blir ett jobb (ett harness-kort).
+// Färre rader: inget jobb, observationerna står kvar som NEW tills fler rader kommer.
+export function lessonRowsInWindow(list, now = new Date(), threshold = LESSON_THRESHOLD) {
+  const nowMs = new Date(now).getTime();
+  return list.filter((item) => {
+    const at = Date.parse(item.data?.date || item.observed_at);
+    return Number.isFinite(at) && nowMs - at <= threshold.days * DAY_MS && at <= nowMs + DAY_MS;
+  });
+}
+
+export function groupObservations(observations, { maxObservationsPerJob = 10, now = new Date(), lessonThreshold = LESSON_THRESHOLD } = {}) {
   const groups = new Map();
   for (const observation of observations) {
     const key = groupKey(observation);
@@ -23,9 +40,10 @@ export function groupObservations(observations, { maxObservationsPerJob = 10 } =
     groups.get(key).push(observation);
   }
 
-  const jobs = [...groups.entries()].map(([key, list]) => {
+  const jobs = [];
+  for (const [key, list] of groups.entries()) {
     const sorted = [...list].sort((a, b) => Date.parse(b.observed_at) - Date.parse(a.observed_at));
-    return {
+    const job = {
       key,
       detector: sorted[0].detector,
       area: sorted[0].area,
@@ -35,7 +53,13 @@ export function groupObservations(observations, { maxObservationsPerJob = 10 } =
       all_observation_ids: sorted.map((item) => item.observation_id),
       oldest: Math.min(...sorted.map((item) => Date.parse(item.observed_at)))
     };
-  });
+    if (key.startsWith('lesson:')) {
+      const recent = lessonRowsInWindow(sorted, now, lessonThreshold);
+      if (recent.length < lessonThreshold.rows) continue;
+      job.harness = { mistake_ref: key.slice('lesson:'.length), rows: recent.length, days: lessonThreshold.days };
+    }
+    jobs.push(job);
+  }
 
   return jobs.sort((a, b) =>
     Number(b.alert) - Number(a.alert)

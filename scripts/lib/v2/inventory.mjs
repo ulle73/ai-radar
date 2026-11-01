@@ -82,6 +82,27 @@ export async function buildHubInventory(agentsDir) {
     }
   }
 
+  // Plugin-skills (plugins/<plugin>/skills/<skill>/SKILL.md) når alla fyra ytor via marknadsplatsen.
+  // path är sökvägen i hubbrepot; harness-kort pekar på den (C2, grind G2).
+  const pluginsDir = path.join(agentsDir, 'plugins');
+  const plugins = existsSync(pluginsDir) ? await readdir(pluginsDir, { withFileTypes: true }) : [];
+  for (const plugin of plugins.filter((entry) => entry.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+    const pluginSkills = path.join(pluginsDir, plugin.name, 'skills');
+    const entries = existsSync(pluginSkills) ? await readdir(pluginSkills, { withFileTypes: true }) : [];
+    for (const folder of entries.filter((entry) => entry.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
+      const skillFile = path.join(pluginSkills, folder.name, 'SKILL.md');
+      if (!existsSync(skillFile)) continue;
+      const meta = parseFrontmatter(await readFile(skillFile, 'utf8'));
+      skills.push({
+        name: meta.name || folder.name,
+        description: String(meta.description || '').slice(0, 600),
+        clients: ['claude', 'codex', 'claude_ai', 'chatgpt'],
+        plugin: plugin.name,
+        path: `plugins/${plugin.name}/skills/${folder.name}/SKILL.md`
+      });
+    }
+  }
+
   const servers = (await readJson(path.join(agentsDir, 'mcp', 'servers.json'), {}))?.servers || {};
   const mcp = Object.entries(servers)
     .filter(([name]) => !name.startsWith('_'))
