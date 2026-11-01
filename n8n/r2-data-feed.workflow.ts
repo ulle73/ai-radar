@@ -82,7 +82,9 @@ const expected = crypto.createHmac('sha256', secret).update(timestamp + '.' + re
 if (!/^[0-9a-f]{64}$/.test(signature) || !crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(expected, 'hex'))) return reject('bad_signature');
 let body;
 try { body = JSON.parse(request.raw); } catch (error) { return reject('invalid_json'); }
-return [{ json: { route: 1, runner: String((body && body.runner) || 'unknown').slice(0, 40) } }];`
+const want = Array.isArray(body && body.want) ? body.want : [];
+return [{ json: { route: 1, runner: String((body && body.runner) || 'unknown').slice(0, 40), want_lessons: want.includes('lessons'),
+  lessons_since: new Date(Date.now() - 8 * 86400000).toISOString() } }];`
     },
     position: [660, 300]
   },
@@ -156,6 +158,111 @@ const getLog = node({
   output: [{ id: 'page-id', name: 'Händelse', url: 'https://www.notion.so/page', property_typ: 'Idé', property_datum: { start: '2026-10-16' } }]
 });
 
+// Lärdomsrader (harness-designen C1.2): sidor i Company Knowledge och Growth Log som ändrats inom 8 dagar,
+// lästa som markdown (V12). Bara när heartbeat ber om want: ['lessons'] (en gång per dygn).
+const routeLessons = switchCase({
+  version: 3.4,
+  config: {
+    name: 'Route Lessons',
+    parameters: { mode: 'expression', numberOutputs: 2, output: expr("{{ $('Verify Request').first().json.want_lessons ? 1 : 0 }}") },
+    position: [1540, 400]
+  }
+});
+
+const recentFilter = expr("{{ JSON.stringify({ timestamp: 'last_edited_time', last_edited_time: { on_or_after: $('Verify Request').first().json.lessons_since } }) }}");
+
+const getKnowledge = node({
+  type: 'n8n-nodes-base.notion',
+  version: 3,
+  config: {
+    name: 'Get Recent Knowledge Nodes',
+    executeOnce: true,
+    alwaysOutputData: true,
+    parameters: {
+      resource: 'databasePage',
+      operation: 'getAll',
+      dataSourceId: { __rl: true, mode: 'id', value: 'd36f482c-c4b0-4293-8996-9280e6154f47', cachedResultName: 'Golfkuponger – Company Knowledge' },
+      returnAll: true,
+      filterType: 'json',
+      filterJson: recentFilter,
+      simple: true
+    },
+    credentials: { notionApi: { id: '40eV72ZWKVMH8Nn3', name: 'Notion account' } },
+    position: [1760, 550]
+  },
+  output: [{ id: 'page-id', name: 'Gemensamt AI-system', url: 'https://www.notion.so/page' }]
+});
+
+const getGrowthLog = node({
+  type: 'n8n-nodes-base.notion',
+  version: 3,
+  config: {
+    name: 'Get Recent Growth Log',
+    executeOnce: true,
+    alwaysOutputData: true,
+    parameters: {
+      resource: 'databasePage',
+      operation: 'getAll',
+      dataSourceId: { __rl: true, mode: 'id', value: 'dce052a0-62a7-48de-963d-7ae6c88184d8', cachedResultName: 'Golfkuponger – Log' },
+      returnAll: true,
+      filterType: 'json',
+      filterJson: recentFilter,
+      simple: true
+    },
+    credentials: { notionApi: { id: '40eV72ZWKVMH8Nn3', name: 'Notion account' } },
+    position: [1980, 550]
+  },
+  output: [{ id: 'page-id', name: 'Händelse', url: 'https://www.notion.so/page' }]
+});
+
+const collectPages = node({
+  type: 'n8n-nodes-base.code',
+  version: 2,
+  config: {
+    name: 'Collect Lesson Pages',
+    alwaysOutputData: true,
+    parameters: {
+      mode: 'runOnceForAllItems',
+      language: 'javaScript',
+      jsCode: `const pages = [];
+const seen = {};
+for (const [name, source] of [['Get Recent Knowledge Nodes', 'knowledge'], ['Get Recent Growth Log', 'growth_log']]) {
+  for (const item of $(name).all()) {
+    const page = item.json || {};
+    if (!page.id || seen[page.id]) continue;
+    seen[page.id] = true;
+    pages.push({ json: { page_id: String(page.id), title: String(page.name || ''), source } });
+  }
+}
+return pages.slice(0, 80);`
+    },
+    position: [2200, 550]
+  },
+  output: [{ page_id: 'page-id', title: 'Gemensamt AI-system', source: 'knowledge' }]
+});
+
+// Notion tillåter cirka 3 anrop per sekund; omförsök med paus vid 429.
+const getMarkdown = node({
+  type: 'n8n-nodes-base.notion',
+  version: 3,
+  config: {
+    name: 'Get Lesson Markdown',
+    alwaysOutputData: true,
+    retryOnFail: true,
+    maxTries: 3,
+    waitBetweenTries: 1500,
+    onError: 'continueRegularOutput',
+    parameters: {
+      resource: 'page',
+      operation: 'getMarkdown',
+      pageId: { __rl: true, mode: 'id', value: expr('{{ $json.page_id }}') }
+    },
+    credentials: { notionApi: { id: '40eV72ZWKVMH8Nn3', name: 'Notion account' } },
+    position: [2420, 550]
+  },
+  output: [{ id: 'page-id', markdown: '## Logg\n- Lärdom [notion-las-forst]: Läs först. (2026-11-02, ChatGPT, chatt)', truncated: false }]
+});
+
 const buildFeed = node({
   type: 'n8n-nodes-base.code',
   version: 2,
@@ -201,9 +308,26 @@ const log = $('Get Notion Log').all()
   }))
   .filter((entry) => entry.title && entry.type && entry.date);
 
-return [{ json: { ok: true, generated_at: new Date().toISOString(), sales_rows: sales, log_entries: log } }];`
+// Lärdomssidor finns bara när grenen kördes (want: ['lessons']).
+let lessonPages = null;
+if ($('Verify Request').first().json.want_lessons) {
+  const meta = {};
+  try { for (const item of $('Collect Lesson Pages').all()) meta[item.json.page_id] = item.json; } catch (error) { /* inga sidor */ }
+  lessonPages = [];
+  try {
+    for (const item of $('Get Lesson Markdown').all()) {
+      const page = item.json || {};
+      if (!page.id || typeof page.markdown !== 'string') continue;
+      const info = meta[page.id] || meta[String(page.id).replace(/-/g, '')] || {};
+      lessonPages.push({ page_id: String(page.id), title: String(info.title || ''), source: String(info.source || ''),
+        truncated: page.truncated === true, markdown: page.markdown.slice(0, 60000) });
+    }
+  } catch (error) { /* grenen gav inget */ }
+}
+
+return [{ json: { ok: true, generated_at: new Date().toISOString(), sales_rows: sales, log_entries: log, ...(lessonPages ? { lesson_pages: lessonPages } : {}) } }];`
     },
-    position: [1540, 400]
+    position: [2640, 400]
   },
   output: [{ ok: true, generated_at: '2026-10-19T00:00:00.000Z', sales_rows: [], log_entries: [] }]
 });
@@ -218,9 +342,11 @@ const respondFeed = node({
       responseBody: expr('{{ JSON.stringify($json) }}'),
       options: { responseCode: 200 }
     },
-    position: [1760, 400]
+    position: [2860, 400]
   }
 });
+
+const feedTail = buildFeed.to(respondFeed);
 
 export default workflow('r2-data-feed', 'R2 – Data Feed')
   .add(feedWebhook)
@@ -229,4 +355,6 @@ export default workflow('r2-data-feed', 'R2 – Data Feed')
   .to(verifyRequest)
   .to(routeRequest
     .onCase(0, rejectRequest)
-    .onCase(1, getSales.to(getLog.to(buildFeed.to(respondFeed)))));
+    .onCase(1, getSales.to(getLog.to(routeLessons
+      .onCase(0, feedTail)
+      .onCase(1, getKnowledge.to(getGrowthLog.to(collectPages.to(getMarkdown.to(feedTail))))))))));

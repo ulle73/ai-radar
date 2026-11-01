@@ -7,7 +7,10 @@
 // aldrig observationernas innehåll.
 
 import { exec } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 import { promisify } from 'node:util';
 import { collectObservations } from '../lib/v2/heartbeat.mjs';
 import { fetchDataFeed, loadSecrets, sendObservations } from '../lib/v2/n8n-client.mjs';
@@ -60,15 +63,26 @@ async function readInstalled(tool) {
 }
 
 const secrets = dryRun && mode === 'public' ? null : loadSecrets();
+
+// Lärdomsrader läses en gång per dygn (harness C1.2): första privata körningen efter 20 timmar.
+const lessonsStamp = path.join(os.homedir(), '.ai-radar', 'lessons-last.json');
+let lastLessons = 0;
+try { lastLessons = Date.parse(JSON.parse(readFileSync(lessonsStamp, 'utf8')).at) || 0; } catch { lastLessons = 0; }
+const wantLessons = mode !== 'public' && (process.argv.includes('--lessons') || Date.now() - lastLessons > 20 * 3600000);
 const { observations, stats } = await collectObservations({
   mode,
   sources,
   fetchJson,
   fetchText,
-  dataFeed: mode === 'public' ? null : () => fetchDataFeed({ runner, secrets }),
+  dataFeed: mode === 'public' ? null : () => fetchDataFeed({ runner, secrets, lessons: wantLessons }),
   readInstalled: mode === 'public' ? null : readInstalled,
   now: new Date()
 });
+
+if (wantLessons && !dryRun && stats.some((item) => item.source === 'lessons' && item.ok)) {
+  await mkdir(path.dirname(lessonsStamp), { recursive: true });
+  await writeFile(lessonsStamp, JSON.stringify({ at: new Date().toISOString() }));
+}
 
 const failed = stats.filter((item) => !item.ok);
 const byDetector = {};

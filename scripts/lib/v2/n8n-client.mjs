@@ -69,8 +69,9 @@ export async function sendObservations({ observations, runner, secrets, fetchImp
   }), { received: 0, valid: 0, invalid: 0 });
 }
 
-export async function fetchDataFeed({ runner, secrets, fetchImpl = fetch }) {
-  const result = await postSigned({ ...secrets, path: 'r2-data-feed', payload: { runner, want: ['sales', 'log'] }, fetchImpl, timeoutMs: 60000 });
+export async function fetchDataFeed({ runner, secrets, fetchImpl = fetch, lessons = false }) {
+  const want = lessons ? ['sales', 'log', 'lessons'] : ['sales', 'log'];
+  const result = await postSigned({ ...secrets, path: 'r2-data-feed', payload: { runner, want }, fetchImpl, timeoutMs: lessons ? 180000 : 60000 });
   if (result.status !== 200 || !result.body?.ok) {
     throw new Error(`data feed svarade ${result.status}: ${result.body?.error || 'okänt fel'}`);
   }
