@@ -104,14 +104,17 @@ export function mayStart({ now = new Date(), idle, inWindow, minIdleMinutes = 30
   return { go: true, reason: 'ok' };
 }
 
-// Ett harness-kort i kö: mistake_ref, ej utfört, ej avvisat. Bundet OK (decision OK och approved_diff_sha256) körs igen.
+// Ett harness-kort i kö: mistake_ref, klarade grindarna G1–G8 (publishable), ej utfört och ej avvisat.
+// KRÄVER_OK körs igen först efter Jonas OK: vid C3a utan sha (OK att ta fram diffen), vid C3b bundet till
+// approved_diff_sha256 (C3b jämför shan).
 export function pendingHarnessCards(rows) {
   return rows.map((row) => {
     let card = null;
     try { card = JSON.parse(row.card_json || 'null'); } catch { card = null; }
     return { row, card };
   }).filter(({ row, card }) => card?.mistake_ref
+    && (row.publishable === true || row.publishable === 'true')
     && !row.published_version && !row.rolled_back_at && row.decision !== 'NEJ'
     && !['AVVISAD', 'needs_eval', 'injection_suspected'].includes(row.autonomy)
-    && (row.autonomy !== 'KRAVER_OK' || (row.decision === 'OK' && row.approved_diff_sha256)));
+    && (row.autonomy !== 'KRAVER_OK' || row.decision === 'OK'));
 }

@@ -98,8 +98,8 @@ test('hash över skyddsräckespaketet ändras bara när harness/, hub/ eller eva
   }
 });
 
-test('kö: bara harness-kort som inte är klara; KRÄVER_OK kräver OK', () => {
-  const card = (id, extra = {}) => ({ card_id: id, card_json: JSON.stringify({ card_id: id, mistake_ref: 'notion-las-forst' }), ...extra });
+test('kö: bara harness-kort som klarade grindarna och inte är klara; KRÄVER_OK kräver OK', () => {
+  const card = (id, extra = {}) => ({ card_id: id, publishable: true, card_json: JSON.stringify({ card_id: id, mistake_ref: 'notion-las-forst' }), ...extra });
   const rows = [
     card('R2-a-0001'),
     card('R2-a-0002', { published_version: '1.0.4' }),
@@ -107,9 +107,13 @@ test('kö: bara harness-kort som inte är klara; KRÄVER_OK kräver OK', () => {
     card('R2-a-0004', { autonomy: 'KRAVER_OK', decision: 'OK', approved_diff_sha256: 'a'.repeat(64) }),
     card('R2-a-0005', { decision: 'NEJ' }),
     card('R2-a-0006', { autonomy: 'AVVISAD' }),
-    { card_id: 'R2-a-0007', card_json: '{"card_id":"R2-a-0007"}' }
+    { card_id: 'R2-a-0007', publishable: true, card_json: '{"card_id":"R2-a-0007"}' },
+    card('R2-a-0008', { publishable: false }),
+    card('R2-a-0009', { autonomy: 'KRAVER_OK', decision: 'OK', approved_diff_sha256: '' }),
+    card('R2-a-0010', { publishable: 'true' })
   ];
-  assert.deepEqual(pendingHarnessCards(rows).map(({ card: c }) => c.card_id), ['R2-a-0001', 'R2-a-0004']);
+  // 0008: stoppad av grindarna (t.ex. skeptikern, G5). 0009: OK vid C3a utan sha får ta fram diffen.
+  assert.deepEqual(pendingHarnessCards(rows).map(({ card: c }) => c.card_id), ['R2-a-0001', 'R2-a-0004', 'R2-a-0009', 'R2-a-0010']);
 });
 
 test('withTimeout avbryter ett steg som tar för lång tid', async () => {
