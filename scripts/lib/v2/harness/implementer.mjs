@@ -26,7 +26,8 @@ export function buildExcerpt(lines, { workflowNames = [] } = {}) {
 }
 
 export function fillPrompt(template, fields) {
-  const body = String(template).split(/^---\s*$/m).slice(-1)[0].trim();
+  // Radslut normaliseras: mallen kan vara utcheckad med CRLF (core.autocrlf på Windows).
+  const body = String(template).replace(/\r\n/g, '\n').split(/^---\s*$/m).slice(-1)[0].trim();
   return body.replace(/\{\{(\w+)\}\}/g, (match, key) => (key in fields ? String(fields[key]) : match));
 }
 
