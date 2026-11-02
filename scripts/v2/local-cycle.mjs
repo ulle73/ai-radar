@@ -1,5 +1,5 @@
 // En lokal cykel: heartbeat --mode private, sedan domaren. Körs av den schemalagda aktiviteten
-// "AI Radar v2 – lokal cykel" (scripts/v2/install-local-schedule.ps1) var 30:e minut.
+// "AI Radar v2 – lokal cykel" (scripts/v2/install-local-schedule.ps1) varje timme (harness-designen C0: livstecknet larmar efter 3 timmar).
 // Loggar till ~/.ai-radar/logs/cycle-YYYY-MM-DD.log och tar bort loggar äldre än 14 dagar.
 
 import { spawn } from 'node:child_process';

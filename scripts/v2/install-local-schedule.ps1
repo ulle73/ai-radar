@@ -1,4 +1,4 @@
-﻿# Skapar (eller tar bort) den schemalagda aktiviteten som kör AI Radar v2:s lokala cykel var 30:e minut.
+﻿# Skapar (eller tar bort) den schemalagda aktiviteten som kör AI Radar v2:s lokala cykel varje timme (standard; ändra med -Minutes).
 #
 #   powershell -ExecutionPolicy Bypass -File scripts\v2\install-local-schedule.ps1            # skapa/uppdatera
 #   powershell -ExecutionPolicy Bypass -File scripts\v2\install-local-schedule.ps1 -Remove    # ta bort
@@ -6,7 +6,7 @@
 # Körs som inloggad användare (inget sparat lösenord), bara när användaren är inloggad, dolt via wscript,
 # aldrig flera instanser samtidigt och med 45 minuters tidsgräns.
 
-param([switch]$Remove)
+param([switch]$Remove, [ValidateRange(15, 180)][int]$Minutes = 60)
 
 $ErrorActionPreference = 'Stop'
 $TaskName = 'AI Radar v2 - lokal cykel'
@@ -35,7 +35,7 @@ shell.Run "node ""$Cycle""", 0, False
 Set-Content -Path $Launcher -Value $vbs -Encoding ASCII
 
 $action = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "`"$Launcher`""
-$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 30)
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes $Minutes)
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
   -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Minutes 45)
 $principal = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited

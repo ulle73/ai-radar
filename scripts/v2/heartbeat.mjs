@@ -31,7 +31,7 @@ const sources = JSON.parse(await readFile(new URL('../../config/v2/sources.json'
 async function localGhToken() {
   for (let attempt = 1; attempt <= 2; attempt += 1) {
     try {
-      const { stdout } = await run('gh auth token', { timeout: 20000 });
+      const { stdout } = await run('gh auth token', { timeout: 20000, windowsHide: true });
       if (stdout.trim()) return stdout.trim();
     } catch {
       // nytt försök
@@ -58,7 +58,7 @@ async function fetchText(url) {
 }
 
 async function readInstalled(tool) {
-  const { stdout } = await run(tool.command, { timeout: 20000 });
+  const { stdout } = await run(tool.command, { timeout: 20000, windowsHide: true });
   return stdout.trim();
 }
 
