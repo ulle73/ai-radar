@@ -16,11 +16,39 @@ function groupKey(observation) {
   if (observation.source_kind === 'notion_lesson' && observation.data?.key) {
     return `lesson:${observation.data.key}`;
   }
+  if (isMemoryWindow(observation)) return 'memory:usage';
   return observation.dedupe_key;
+}
+
+const isMemoryWindow = (observation) => observation.source_kind === 'metric' && observation.data?.name === 'memory_usage_7d';
+
+// Mätdata (C10) och kvitton bedöms aldrig av domaren: de markeras DIGEST utan modellanrop. Probsvar lämnas
+// helt åt probes.mjs, som bedömer dem lokalt (C7). Minnesmåttet för tröskel (b) blir ett jobb (se nedan).
+export function splitMeasurements(observations) {
+  const measurements = [];
+  const judgeable = [];
+  for (const observation of observations) {
+    if (observation.source_kind === 'probe') continue;
+    if (['session_transcript', 'receipt'].includes(observation.source_kind)
+      || (observation.source_kind === 'metric' && !isMemoryWindow(observation))) measurements.push(observation);
+    else judgeable.push(observation);
+  }
+  return { measurements, judgeable };
 }
 
 const DAY_MS = 86400000;
 const LESSON_THRESHOLD = Object.freeze({ rows: 3, days: 14 });
+// Etapp 1b, tröskel (b): andelen Golfkuponger-sessioner med Notion-anrop de senaste 7 dagarna ligger minst
+// 20 procentenheter under baslinjen, med minst 5 sessioner i fönstret (config/v2/metrics.json memory_threshold).
+const MEMORY_THRESHOLD = Object.freeze({ drop: 0.2, window_days: 7, min_sessions: 5, mistake_ref: 'notion-anvands-inte' });
+
+export function memoryBreach(observation, threshold = MEMORY_THRESHOLD) {
+  const data = observation?.data || {};
+  const value = Number(data.value);
+  const baseline = Number(data.baseline);
+  if (!Number.isFinite(value) || !Number.isFinite(baseline)) return false;
+  return Number(data.gk_sessions) >= threshold.min_sessions && baseline - value >= threshold.drop - 1e-9;
+}
 
 // Etapp 1a: en lärdomsnyckel med minst 3 rader på 14 dagar blir ett jobb (ett harness-kort).
 // Färre rader: inget jobb, observationerna står kvar som NEW tills fler rader kommer.
@@ -32,7 +60,9 @@ export function lessonRowsInWindow(list, now = new Date(), threshold = LESSON_TH
   });
 }
 
-export function groupObservations(observations, { maxObservationsPerJob = 10, now = new Date(), lessonThreshold = LESSON_THRESHOLD } = {}) {
+export { MEMORY_THRESHOLD };
+
+export function groupObservations(observations, { maxObservationsPerJob = 10, now = new Date(), lessonThreshold = LESSON_THRESHOLD, memoryThreshold = MEMORY_THRESHOLD } = {}) {
   const groups = new Map();
   for (const observation of observations) {
     const key = groupKey(observation);
@@ -56,7 +86,20 @@ export function groupObservations(observations, { maxObservationsPerJob = 10, no
     if (key.startsWith('lesson:')) {
       const recent = lessonRowsInWindow(sorted, now, lessonThreshold);
       if (recent.length < lessonThreshold.rows) continue;
-      job.harness = { mistake_ref: key.slice('lesson:'.length), rows: recent.length, days: lessonThreshold.days };
+      job.harness = { kind: 'lesson', mistake_ref: key.slice('lesson:'.length), rows: recent.length, days: lessonThreshold.days };
+    }
+    if (key === 'memory:usage') {
+      // Bara det senaste dygnets mått räknas; äldre följer med som belägg och markeras bedömda.
+      const latest = sorted[0];
+      if (!memoryBreach(latest, memoryThreshold)) continue;
+      job.harness = {
+        kind: 'memory',
+        mistake_ref: memoryThreshold.mistake_ref,
+        value: Number(latest.data.value),
+        baseline: Number(latest.data.baseline),
+        rows: Number(latest.data.gk_sessions),
+        days: memoryThreshold.window_days
+      };
     }
     jobs.push(job);
   }
