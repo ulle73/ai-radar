@@ -27,6 +27,7 @@ import { verifyCandidate } from '../lib/v2/harness/verifier.mjs';
 import { checkWorkspaceIntact, commitCandidate, publishCard, rollbackCard, stagedDiff, syncLocal } from '../lib/v2/harness/publisher.mjs';
 import { afterPublish, breakerTripped, parseFacitPatterns, PROBES, runLocalProbe } from '../lib/v2/harness/monitor.mjs';
 import { git } from '../lib/v2/harness/git.mjs';
+import { changeEntry, dueForOutcome, growthLogRow, learnerClient, measureReached, OUTCOME, outcomeFor } from '../lib/v2/harness/learner.mjs';
 
 const MIN = 60000;
 const TIMEOUTS = Object.freeze({ implementer: 15 * MIN, verifier: 40 * MIN, publisher: 10 * MIN, probe: 15 * MIN, total: 300 * MIN });
@@ -52,6 +53,7 @@ const readJson = (file, fallback) => { try { return JSON.parse(readFileSync(file
 // ---------------------------------------------------------------- tillstånd och livstecken
 
 let client = null;
+let learner = null;
 let lastState = null;
 let stateError = null;
 async function readState() {
@@ -244,15 +246,49 @@ async function processCard({ row, card }, ctx) {
     }), TIMEOUTS.probe, 'probe');
     if (monitored.verified) {
       await update({ verified_local_at: new Date().toISOString() });
+      await learn(() => learner.log(changeEntry({ card, kind: 'published', version: published.version, detail: 'Lokal P2/P3 godkänd.' })));
       return { card: id, outcome: 'publicerad och lokalt verifierad', version: published.version };
     }
     await update({ rolled_back_at: monitored.rolled_back ? new Date().toISOString() : null, fail_reason: monitored.results.filter((r) => !r.pass).map((r) => `${r.probe}: ${r.reason}`).join('; ').slice(0, 300) });
     await alert('Återställning efter underkänd probe', `${id}: ${monitored.results.map((r) => `${r.probe} ${r.pass ? 'ok' : 'FEL'} (${r.reason})`).join(', ')}. Återställd: ${monitored.rolled_back ? 'ja' : 'NEJ – ' + (monitored.rollback?.reason || '')}`);
     if (monitored.rollback?.conflict) await client.write({ 'breaker:skill_text': 'on' }).catch(() => {});
+    const failedProbes = monitored.results.filter((r) => !r.pass).map((r) => r.probe).join(' och ');
+    await learn(() => learner.log(changeEntry({ card, kind: 'rolled_back', detail: `Underkänd lokal probe: ${failedProbes}.` })));
+    await learn(() => learner.growth(growthLogRow({ kind: 'regression', title: `Förbättringsmotorn återställde kort ${id} (${card.target?.ref || 'skill'})`, summary: `Lokal ${failedProbes} underkändes efter publiceringen; ändringen återställdes med en revert-commit (C6).`, why: 'Mål 4: en dålig ändring återställs i samma nattfas.' })));
     return { card: id, outcome: monitored.rolled_back ? 'återställd' : 'återställning misslyckades', reason: monitored.results };
   } finally {
     await removeWorkspace({ clone: engine.clone, dir: workspace.dir, branch: workspace.branch }).catch(() => {});
   }
+}
+
+// C9: lärandet skrivs i Notion via R2 – Learner. Ett fel där stoppar aldrig nattfasen; det loggas.
+async function learn(work) {
+  if (dryRun || !learner) return;
+  try { await work(); } catch (error) { await log(`learner: ${String(error?.message || error).slice(0, 200)}`); }
+}
+
+// C9: uppföljning efter measure.check_after_days (14 dagar). Ej nått första gången: kortet öppnas igen
+// (domaren gör ett nytt kort om mönstret återkommer). Andra gången: beslutspunkt.
+async function followUpOutcomes(rows) {
+  const lessons = readJson(path.join(engine.state, 'lessons-ledger.json'), { rows: [] }).rows;
+  const memory = readJson(path.join(engine.state, 'memory-7d.json'), null);
+  const results = [];
+  for (const row of dueForOutcome(rows)) {
+    let card;
+    try { card = JSON.parse(row.card_json || '{}'); } catch { continue; }
+    if (!card.card_id) continue;
+    const measured = measureReached({ card, publishedAt: row.published_at, lessons, memory });
+    const outcome = outcomeFor({ result: measured, card, rows });
+    if (!outcome) { results.push({ card: card.card_id, outcome: 'uppföljning väntar', reason: measured.reason }); continue; }
+    if (!dryRun) await client.cardUpdate(card.card_id, { outcome });
+    await learn(() => learner.log(changeEntry({ card, kind: 'outcome', detail: `${measured.detail}. Utfall: ${outcome}.` })));
+    if (outcome === OUTCOME.DECISION) {
+      if (!dryRun) await client.decision(card.card_id, formatDecisionMessage(card, { reason: `Måttet nåddes inte efter två försök (${measured.detail})`, validUntil: new Date(Date.now() + 30 * 86400000).toISOString() })).catch(() => {});
+      await learn(() => learner.growth(growthLogRow({ kind: 'decision', title: `Beslutspunkt: ${card.mistake_ref || card.card_id} förbättrades inte efter två försök`, summary: measured.detail, why: 'C9: andra gången måttet inte nås avgör Jonas nästa steg.' })));
+    }
+    results.push({ card: card.card_id, outcome });
+  }
+  return results;
 }
 
 // ---------------------------------------------------------------- huvudflödet
@@ -263,6 +299,7 @@ try {
   await mkdir(engine.tmp, { recursive: true });
   const secrets = loadSecrets();
   client = stateClient((payload) => postSigned({ ...secrets, path: 'r2-harness-state', payload, timeoutMs: 60000 }));
+  learner = learnerClient((payload) => postSigned({ ...secrets, path: 'r2-learner', payload, timeoutMs: 120000 }));
 
   const claude = resolveClaude(readJson(path.join(repoRoot, 'config', 'v2', 'judge.json'), {}).claude_paths || []);
   const env = engineEnv({ token: readDpapiSecret(engine.oauthToken), configDir: engine.configDir });
@@ -334,7 +371,9 @@ try {
     }
     await writeFile(nightFile, JSON.stringify(night));
   }
-  await writeFile(path.join(engine.state, 'last-night.json'), JSON.stringify({ at: new Date().toISOString(), dryRun, results }, null, 2));
+  const outcomes = await followUpOutcomes(rows).catch(async (error) => { await log(`uppföljning: ${error.message}`); return []; });
+  if (outcomes.length) await log(`uppföljning: ${outcomes.map((o) => `${o.card} ${o.outcome}`).join(', ')}`);
+  await writeFile(path.join(engine.state, 'last-night.json'), JSON.stringify({ at: new Date().toISOString(), dryRun, results, outcomes }, null, 2));
   await liveness(`nattfas klar: ${results.length} kort (${results.map((r) => r.outcome).join(', ') || 'inga'})`);
 } catch (error) {
   exitCode = 1;

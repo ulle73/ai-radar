@@ -30,7 +30,7 @@ export function splitMeasurements(observations) {
   for (const observation of observations) {
     if (observation.source_kind === 'probe') continue;
     if (['session_transcript', 'receipt'].includes(observation.source_kind)
-      || (observation.source_kind === 'metric' && !isMemoryWindow(observation))) measurements.push(observation);
+      || (observation.source_kind === 'metric' && !(isMemoryWindow(observation) && memoryBreach(observation)))) measurements.push(observation);
     else judgeable.push(observation);
   }
   return { measurements, judgeable };

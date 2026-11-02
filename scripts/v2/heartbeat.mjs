@@ -18,6 +18,8 @@ import { healthChecks, gatherHealthSources } from '../lib/v2/detectors/hub-healt
 import { buildOptions, scanTranscripts } from '../lib/v2/detectors/session-transcripts.mjs';
 import { enginePaths } from '../lib/v2/judge/claude.mjs';
 import { codexMcpList, engineTokenInfo, findCodex, gitAheadBehind, hubCheckJson, readHubState, readJsonFile } from '../lib/v2/local-sources.mjs';
+import { summarize } from '../lib/v2/harness/metrics.mjs';
+import { mergeLessonLedger } from '../lib/v2/harness/learner.mjs';
 
 // Fasta kommandon från config/v2/sources.json och gh; inga argument kommer utifrån.
 const run = promisify(exec);
@@ -105,6 +107,12 @@ async function transcripts() {
     minMtime: since.getTime()
   });
   const baseline = (await readJsonFile(path.join(engine.state, 'metrics-baseline.json'), null))?.baseline || null;
+  // Minnesmåttet för 7 dagar sparas lokalt för uppföljningen i C9 (learner.mjs measureReached).
+  const week = summarize(sessions.filter((session) => Date.now() - Date.parse(session.started_at) <= 7 * 86400000));
+  if (!dryRun) {
+    await mkdir(engine.state, { recursive: true });
+    await writeFile(path.join(engine.state, 'memory-7d.json'), JSON.stringify({ at: new Date().toISOString(), value: week.memory_usage, gk_sessions: week.gk_sessions }));
+  }
   return { sessions, baseline };
 }
 
@@ -123,6 +131,14 @@ const { observations, stats } = await collectObservations({
 if (wantTranscripts && !dryRun && stats.some((item) => item.source === 'session_transcripts' && item.ok)) {
   await mkdir(path.dirname(transcriptsStamp), { recursive: true });
   await writeFile(transcriptsStamp, JSON.stringify({ at: new Date().toISOString() }));
+}
+
+// Lärdomsraderna sparas också i en lokal reskontra för uppföljningen i C9 (antal rader per nyckel efter publicering).
+if (!dryRun && observations.some((item) => item.source_kind === 'notion_lesson')) {
+  const ledgerFile = path.join(engine.state, 'lessons-ledger.json');
+  const ledger = mergeLessonLedger(await readJsonFile(ledgerFile, { rows: [] }), observations);
+  await mkdir(engine.state, { recursive: true });
+  await writeFile(ledgerFile, JSON.stringify(ledger));
 }
 
 if (wantLessons && !dryRun && stats.some((item) => item.source === 'lessons' && item.ok)) {

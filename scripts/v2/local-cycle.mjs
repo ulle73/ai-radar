@@ -46,7 +46,7 @@ const heartbeat = await runStep('heartbeat', 'scripts/v2/heartbeat.mjs', ['--mod
 // Domaren körs även om heartbeat misslyckades: kön kan ha observationer från Actions-körningen.
 const judge = await runStep('judge', 'scripts/v2/judge.mjs', []);
 // Måtten (C10): förra veckans ögonblicksbild skickas en gång, första cykeln efter måndag 00:00 UTC.
-await runStep('metrics', 'scripts/v2/metrics.mjs', ['snapshot', '--send', '--if-missing']);
+await runStep('metrics', 'scripts/v2/metrics.mjs', ['snapshot', '--send', '--learner', '--if-missing']);
 await pruneLogs();
 // Livstecken för förbättringsmotorn (harness C0): n8n larmar om liveness_at är äldre än 3 timmar.
 try {

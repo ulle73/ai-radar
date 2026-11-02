@@ -1,7 +1,7 @@
 // Mått (harness-designen C10).
 //
 //   node scripts/v2/metrics.mjs freeze --source ~/gk-baseline/2026-11-01 [--out fil] [--to 2026-11-02]
-//   node scripts/v2/metrics.mjs snapshot [--week 2026-W45] [--send]
+//   node scripts/v2/metrics.mjs snapshot [--week 2026-W45] [--send] [--learner] [--if-missing]
 //
 // freeze läser baslinjekopian (claude-projects/ och codex-sessions/) och skriver ett fruset, deterministiskt
 // resultat till ~/gk-engine/state/metrics-baseline.json (T13: två körningar ger samma digest och
@@ -15,7 +15,8 @@ import path from 'node:path';
 import { buildOptions, scanTranscripts } from '../lib/v2/detectors/session-transcripts.mjs';
 import { enginePaths } from '../lib/v2/judge/claude.mjs';
 import { freezeResult, isoWeek, snapshotObservations, summarize, weekStart } from '../lib/v2/harness/metrics.mjs';
-import { loadSecrets, sendObservations } from '../lib/v2/n8n-client.mjs';
+import { loadSecrets, postSigned, sendObservations } from '../lib/v2/n8n-client.mjs';
+import { learnerClient, weeklySummary } from '../lib/v2/harness/learner.mjs';
 
 const DAY_MS = 86400000;
 const argument = (name, fallback = null) => {
@@ -85,6 +86,15 @@ if (command === 'freeze') {
     const observations = snapshotObservations({ week, summary, baseline });
     const result = await sendObservations({ observations, runner: 'local', secrets: loadSecrets() });
     console.log(`ingest: mottagna ${result.received}, giltiga ${result.valid}, ogiltiga ${result.invalid}`);
+  }
+  // --learner: veckans rad i Growth Log och nodens aktuella bild (C9), via R2 – Learner med läsning tillbaka.
+  if (process.argv.includes('--learner')) {
+    const secrets = loadSecrets();
+    const cards = await postSigned({ ...secrets, path: 'r2-harness-state', payload: { action: 'cards' }, timeoutMs: 60000 });
+    const rows = cards.status === 200 && cards.body?.ok ? cards.body.cards || [] : [];
+    const learner = learnerClient((payload) => postSigned({ ...secrets, path: 'r2-learner', payload, timeoutMs: 120000 }));
+    const written = await learner.weekly(weeklySummary({ week, summary, baseline, cards: rows, from, to }));
+    console.log(`learner: veckan ${week} skriven och läst tillbaka (Growth Log ${written.row ? 'ok' : '–'}, aktuell bild ${written.current ? 'ok' : '–'})`);
   }
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, `${week}.json`), `${JSON.stringify({ week, from, to, stats, summary, baseline }, null, 2)}\n`);
