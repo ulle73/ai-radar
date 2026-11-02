@@ -68,7 +68,23 @@ export function codexArgs({ workDir, schemaFile, outFile, model, effort }) {
 
 // Domaren får aldrig fakturera per anrop: API-nycklar tas bort ur miljön, så att Codex bara kan
 // använda inloggningen med ChatGPT-kontot (planens kvot). Se också assertChatGptLogin.
-const BILLABLE_KEYS = Object.freeze(['OPENAI_API_KEY', 'CODEX_API_KEY', 'OPENROUTER_API_KEY', 'AZURE_OPENAI_API_KEY', 'ANTHROPIC_API_KEY']);
+// Claude-variablerna följer V13 (prioritetsordningen för debitering i Claude Code, kontrollerad 2026-11-01):
+// Bedrock/Vertex/Foundry, ANTHROPIC_AUTH_TOKEN, ANTHROPIC_API_KEY, profiler och AWS/Mantle går före
+// CLAUDE_CODE_OAUTH_TOKEN och tas därför bort (apiKeyHelper kan bara komma från settings, som motorn styr).
+const BILLABLE_KEYS = Object.freeze([
+  'OPENAI_API_KEY', 'CODEX_API_KEY', 'OPENROUTER_API_KEY', 'AZURE_OPENAI_API_KEY',
+  'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN', 'ANTHROPIC_PROFILE',
+  'CLAUDE_CODE_USE_BEDROCK', 'CLAUDE_CODE_USE_VERTEX', 'CLAUDE_CODE_USE_FOUNDRY',
+  'CLAUDE_CODE_USE_ANTHROPIC_AWS', 'CLAUDE_CODE_USE_MANTLE'
+]);
+
+// Kvot- och kreditfel (Codex saknar krediter, planens gräns nådd). Ger RETRY med cause 'quota'
+// och ett nytt försök med den backenden först efter ett dygn.
+const QUOTA = /usage limit|quota|insufficient|out of credits|no credits|purchase more|credit balance|hit your .{0,20}limit|limit reached|resets \d/i;
+
+export function quotaCause(text) {
+  return QUOTA.test(String(text || '')) ? 'quota' : null;
+}
 
 export function judgeEnv(env = process.env) {
   const clean = { ...env };
@@ -92,7 +108,10 @@ export function runProcess({ command, shell }, args, input, timeoutMs, env = jud
       if (code === 0) return resolve();
       const errorLines = stderr.split('\n').filter((row) => /^ERROR/.test(row));
       const summary = (errorLines.length ? errorLines : stderr.split('\n').filter(Boolean)).slice(-2).join(' | ');
-      reject(Object.assign(new Error(`codex avslutades med kod ${code}: ${summary.slice(0, 400)}`), { transient: TRANSIENT.test(stderr) }));
+      const cause = quotaCause(stderr);
+      reject(Object.assign(new Error(`codex avslutades med kod ${code}: ${summary.slice(0, 400)}`), {
+        transient: !cause && TRANSIENT.test(stderr), ...(cause ? { cause } : {})
+      }));
     });
     child.stdin.end(input);
   });
@@ -142,6 +161,6 @@ export async function runCodexJson({ prompt, schemaPath, codex, model, effort, t
     const raw = await readFile(outFile, 'utf8');
     return JSON.parse(raw);
   } finally {
-    await rm(workDir, { recursive: true, force: true });
+    await rm(workDir, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }
 }

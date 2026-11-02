@@ -61,3 +61,55 @@ test('malformed or foreign button ids are rejected', () => {
     assert.equal(parseCardCustomId(id), null, id);
   }
 });
+
+// ---------------------------------------------------------------- förbättringsmotorn (harness, etapp 1a)
+import { readFileSync } from 'node:fs';
+import { JONAS_DISCORD_ID, decisionComponents, formatDecisionMessage, harnessControlComponents, isJonas } from '../scripts/lib/v2/discord.mjs';
+
+const SHA = 'ab'.repeat(32);
+
+test('nya knappar: nödbroms, godkänt skyddsräckespaket och OK bundet till diffens sha256', () => {
+  assert.deepEqual(parseCardCustomId('r2:brake:on'), { kind: 'brake', value: 'on' });
+  assert.deepEqual(parseCardCustomId('r2:brake:off'), { kind: 'brake', value: 'off' });
+  assert.equal(parseCardCustomId('r2:brake:maybe'), null);
+  assert.deepEqual(parseCardCustomId(`r2:policy:approve:${SHA}`), { kind: 'policy_approve', hash: SHA });
+  assert.equal(parseCardCustomId('r2:policy:approve:kort'), null);
+  assert.deepEqual(parseCardCustomId(`r2:ok:R2-20261102-abcd1234:${SHA}`), { kind: 'decision', decision: 'OK', card_id: 'R2-20261102-abcd1234', diff_sha256: SHA });
+  assert.equal(parseCardCustomId(`r2:no:R2-20261102-abcd1234:${SHA}`), null);
+  assert.deepEqual(parseCardCustomId('r2:ok:R2-20261102-abcd1234'), { kind: 'decision', decision: 'OK', card_id: 'R2-20261102-abcd1234' });
+});
+
+test('knapparnas custom_id håller sig inom 100 tecken och tolkas tillbaka', () => {
+  const ids = [
+    ...decisionComponents('R2-20261102-abcd1234', SHA)[0].components.map((b) => b.custom_id),
+    ...harnessControlComponents({ guardrailHash: SHA })[0].components.map((b) => b.custom_id),
+    ...harnessControlComponents({ brake: 'on' })[0].components.map((b) => b.custom_id)
+  ];
+  for (const id of ids) {
+    assert.ok(id.length <= 100, id);
+    assert.ok(parseCardCustomId(id), id);
+  }
+});
+
+test('bara Jonas Discord-ID godtas, och n8n-tolken speglar de nya knapparna', () => {
+  assert.ok(isJonas(JONAS_DISCORD_ID));
+  assert.ok(!isJonas('123'));
+  const flow = readFileSync(new URL('../n8n/r2-card-feedback.workflow.ts', import.meta.url), 'utf8');
+  assert.match(flow, new RegExp(`JONAS_ID = '${JONAS_DISCORD_ID}'`));
+  assert.match(flow, /kind === 'brake'/);
+  assert.match(flow, /kind === 'policy'/);
+  assert.match(flow, /numberOutputs: 6/);
+  assert.match(flow, /\.onCase\(5, saveHarnessState/);
+});
+
+test('beslutspunkten visar diffen, sha256, standardutfall och knapparna OK/Nej', () => {
+  const card = { card_id: 'R2-20261102-abcd1234', title: 'Ändring i golfkuponger-outlook-drafts', recommendation: 'Förtydliga signaturen.', because: 'Tre lärdomar.', mistake_ref: 'signatur', target: { ref: 'golfkuponger-outlook-drafts' } };
+  const message = formatDecisionMessage(card, { reason: 'skill med hög konsekvens', diff: '+ny rad', diffSha256: SHA });
+  assert.match(message.embeds[0].description, /avvisas om inget svar på 30 dagar/);
+  assert.match(message.embeds[0].description, new RegExp(SHA));
+  assert.match(message.embeds[0].description, /```diff/);
+  const ids = message.components[0].components.map((b) => b.custom_id);
+  assert.ok(ids.includes(`r2:ok:R2-20261102-abcd1234:${SHA}`));
+  assert.ok(ids.includes('r2:no:R2-20261102-abcd1234'));
+  assert.ok(message.embeds[0].description.length <= 4096);
+});

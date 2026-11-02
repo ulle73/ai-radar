@@ -1,6 +1,8 @@
 # AI Radar v2 – den självgående analytikern
 
-Status: **beslutad design, inget byggt**. Beslut tagna av Jonas 2026-10-19 (grill-me-session med Claude). Ändra inte ett beslut i denna fil utan att Jonas godkänt det.
+Status: **beslutad design, fas 1–2 byggda**. Beslut tagna av Jonas 2026-10-19 (grill-me-session med Claude). Ändra inte ett beslut i denna fil utan att Jonas godkänt det.
+
+> **Förbättringsmotorn (2026-11-01).** R2 byggs ut till hubbens förbättringsmotor enligt designen *Självförbättrande hubb* (revision 3, godkänd av Jonas 2026-11-01): `docs/ai-system/harness/sjalvforbattrande-hubb.md` i hubbrepot `ulle73/gk-agents`. §8 och §9.1 nedan är ersatta av designens C3–C6; §7 har de nya listorna; §13 och §15 är rättade.
 
 ## 1. Mål
 
@@ -225,7 +227,10 @@ Fält utöver skissen i den första versionen av specen, fastställda i fas 1:
 |---|---|
 | `analysis_mode` (`model` eller `fallback`) | Gör reservbedömningar synliga, så att G6 kan avvisa dem. |
 | `platform_news` | Avgör om G1 kräver en primärkälla på leverantörens egen domän. |
-| `observations[].source_kind` | `primary`, `aggregator`, `data`, `social`, `repo`, `video` eller `transcript`. Aggregatorer kan aldrig ensamma bära ett kort. |
+| `observations[].source_kind` | `primary`, `aggregator`, `data`, `social`, `repo`, `video`, `transcript`, `session_transcript`, `notion_lesson`, `eval`, `n8n_error`, `hub_health`, `probe`, `receipt` eller `metric`. Aggregatorer kan aldrig ensamma bära ett kort. De åtta sista kommer från förbättringsmotorn (harness, se nedan); CI använder `repo`. |
+| `urgency.trigger` (och observationens `alert_trigger`) | `competitor_campaign_live`, `sales_deviation`, `platform_breaking_change`, `security_advisory`, `hub_regression`, `probe_failed`, `liveness_lost` eller `hub_health_failure`. De fyra sista går direkt från Observation Ingest till Discord med status `ALERTED`, utan domaren. |
+| `security.clients` | `claude`, `codex`, `claude_ai` eller `chatgpt`. |
+| `mistake_ref` | Valfritt. Lärdomsnyckeln (`^[a-z0-9-]{3,48}$`) som ett harness-kort (typ ANVAND) åtgärdar. Sätts av koden. |
 | `anchors[]` | De befintliga entiteter i vår stack som kortet bygger på. För NY och ERSÄTT finns målet ännu inte, så kopplingen till stacken bärs av ankarna. |
 | `test.outcome` (`pass`, `fail`, `not_run`) och `test.ab` | Skiljer ett misslyckat test (avvisas) från ett som inte är verifierat (overifierad). A/B anger vinnare per kriterium. |
 | `security` | Statisk skanning, licens och vilka klienter som stöds. Krävs för NY och ERSÄTT. |
@@ -233,7 +238,11 @@ Fält utöver skissen i den första versionen av specen, fastställda i fas 1:
 | `urgency` | Utlösare och giltighetstid för LARM. |
 | `target.branch` | Branch för PROJEKT. |
 
-**Inventeringen** som grindarna jämför mot är JSON med listorna `skills`, `tools`, `mcp`, `repos`, `workflows`, `notion`, `metrics`, `agents_rules` och `shopify_themes`. Varje post identifieras av `id`, `name`, `title` eller `aliases`. Repon kan ange `default_branch` och `protected_refs`. Exempel finns i `tests/helpers/v2-fixtures.mjs`. Exporten från hubben och n8n byggs senare i fas 1.
+**Inventeringen** som grindarna jämför mot är JSON med listorna `skills`, `tools`, `mcp`, `repos`, `workflows`, `notion`, `metrics`, `agents_rules` och `shopify_themes`. Varje post identifieras av `id`, `name`, `title` eller `aliases`. Repon kan ange `default_branch` och `protected_refs`. Exempel finns i `tests/helpers/v2-fixtures.mjs`. Exporten från hubben och n8n byggs senare i fas 1. Hubbdelen läser både `skills/` och `plugins/*/skills/*` (pluginen `gk-karna`); plugin-skills får `plugin` och `path` (sökvägen till SKILL.md i hubbrepot).
+
+**Gemensamma listor.** `source_kind`, `alert_trigger` och `security.clients` finns på fem ställen som ändras tillsammans: `scripts/lib/v2/observation.mjs`, `n8n/r2-observation-ingest.workflow.ts`, `schemas/card.v1.schema.json`, `schemas/judge-output.v1.schema.json` och tabellen ovan. `tests/v2-observation-enums.test.mjs` kontrollerar att de stämmer överens.
+
+**Förbättringsmotorn (harness).** Från 2026-11-01 byggs R2 ut till hubbens förbättringsmotor enligt designen *Självförbättrande hubb* (`docs/ai-system/harness/sjalvforbattrande-hubb.md` i hubbrepot `ulle73/gk-agents`, godkänd av Jonas 2026-11-01). Den ersätter §8 och §9.1. Koden ligger i `scripts/lib/v2/harness/`, `scripts/v2/harness-night.mjs` och `n8n/r2-harness-state.workflow.ts`.
 
 ### 7.1.1 Grindarna i kod
 
@@ -284,6 +293,8 @@ Fredagssammanfattningen visar veckans siffror mot framgångsmåtten (avsnitt 14)
 
 ## 8. Utförande efter OK
 
+> **Ersatt 2026-11-01** av autonomipolicyn (harness-designen C3, beslut av Jonas 2026-11-01, tillägg B). Harness-kort (typ ANVAND med `mistake_ref`) mot `gk-arbetssatt` och `notion-dokumentation` genomförs utan OK när kvaliteten är verifierad; allt annat blir en beslutspunkt med `r2:ok`/`r2:no`, där OK är bundet till diffens sha256. Tabellen nedan gäller fortfarande som beskrivning av övriga korttyper, som inte utförs automatiskt i v1.
+
 Inget utförs utan Jonas OK på just det kortet. Ett OK gäller bara det kortet.
 
 | Typ | Utförande |
@@ -299,6 +310,8 @@ Efter varje utförande skrivs en post i Notion Log, och utfallet mäts enligt `m
 ## 9. Säkerhet
 
 ### 9.1 Provkörning (lokal domare)
+
+> **Ersatt 2026-11-01** av harness-designen C4 och C5: Claude är huvudbackend med motorns egen konfiguration (setup-token, `--restricted`, inga verktyg för domaren, bara Read och Edit på en fil för utföraren, hooken `guard-paths` och deny-regler), CHK-NO-EXEC och CHK-SECRETS i `hub.py check`, och AUTO enligt C3. Windows saknar sandlåda, så skyddet ligger i verktygsgränser och kodspärrar. Codex-avsnittet nedan gäller Codex som reservbackend.
 
 Beslut: Codex inbyggda sandlåda (`workspace-write`, nätverk av) på Windows 11 Home. WSL, Docker och Windows Sandbox finns inte. Codex dokumentation anger att nätverket är avstängt som standard i `workspace-write`, och att `codex sandbox windows` kan användas som självtest. Det finns öppna rapporter om Windows-specifika hål, så sandlådan är ett **extra skyddslager** och aldrig det enda:
 
@@ -401,6 +414,8 @@ Klart när: två veckor i drift utan tekniska fel, och gamla system körs parall
 
 ### Fas 3 – utförande
 
+> **Rättat 2026-11-02:** fas 3 och framåt drivs nu av harness-designens etapper (1a kärnloopen, 1b mått och hälsa, 2 webbspåret, 3 rapport, 4 utvidgning). Etapp 1a (ANVÄND-kort mot `gk-arbetssatt` och `notion-dokumentation`, verifiering, publicering och lokal återställning) är byggd på grenen `harness/etapp-1a`. Punkterna nedan som inte ingår i etapperna utförs inte i v1.
+
 - [ ] NY och ERSÄTT via `hub.py`, med A/B-artefakter sparade.
 - [ ] PROJEKT som branch plus PR.
 - [ ] ANVÄND till `AGENTS.md` eller ett test i Notion.
@@ -439,7 +454,7 @@ Om målen inte nås justeras källor, detektorer och grindar innan något nytt l
 ## 15. Beroenden och öppna punkter
 
 - GitHub-faktureringen är inte längre ett hinder, eftersom repot är publikt sedan 2026-10-19 och Actions därmed är gratis.
-- Claude Code CLI finns inte i PATH på datorn, så domaren är Codex. En korskontroll med Claude kan läggas till senare om CLI installeras.
+- ~~Claude Code CLI finns inte i PATH på datorn, så domaren är Codex.~~ Rättat 2026-11-02: Claude Code CLI 2.1.316 finns, och domaren kör Claude (motorns setup-token) först och Codex som reserv (`config/v2/judge.json` → `backends`).
 - `~/.codex/config.toml` har `model = "gpt-6.1-sol"`, som ChatGPT-kontot inte stöder. Domaren påverkas inte eftersom modellen är låst i `config/v2/judge.json`, men Jonas vanliga `codex exec` fallerar sannolikt av samma skäl. Det är en klientinställning utanför hubben och ändras inte av Radar.
 - Tabellnamn i content-engines databas verifieras i fas 1 (YouTube-kanalernas ID är verifierade).
 - Shopify Analytics nås via Shopify-anslutningen. Om n8n behöver egen åtkomst krävs en skrivskyddad app eller token (fas 1).

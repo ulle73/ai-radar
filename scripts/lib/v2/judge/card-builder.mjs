@@ -29,8 +29,31 @@ function testFor(type, task) {
   return { kind: 'none', ...base };
 }
 
+// Harness-kort (C2): typ ANVAND mot en skill, mistake_ref från lärdomsnyckeln (koden, inte modellen) och
+// en dedupe-nyckel med målfilens blob-sha på origin/main, så att 90-dagarsspärren (G3) inte hindrar ett
+// misstag som återkommer efter att filen har ändrats. job.harness.blob_sha sätts av anroparen per mål.
+export function harnessDedupeKey(mistakeRef, target, blobSha) {
+  return `card:harness:${mistakeRef}:${target}:${blobSha || 'okand'}`;
+}
+
+function applyHarness(card, job, draft) {
+  const ref = card.target.ref;
+  card.mistake_ref = job.harness.mistake_ref;
+  card.dedupe_key = harnessDedupeKey(job.harness.mistake_ref, ref, job.harness.blob_shas?.[ref] || null);
+  if (!card.measure) {
+    card.measure = {
+      metric: `lärdomsnyckeln ${job.harness.mistake_ref} per 14 dagar`,
+      baseline: `${job.harness.rows} rader på ${job.harness.days} dagar`,
+      check_after_days: 14
+    };
+  }
+  if (!card.rule_text && draft.recommendation) card.rule_text = text(draft.recommendation, 400);
+}
+
 export function buildCard({ job, draft, skeptic, now = new Date(), expiresDays = 14 }) {
   if (!draft || draft.decision !== 'CARD' || draft.type === 'NONE' || draft.target_kind === 'none') return null;
+  // Ett harness-jobb får bara bli ett ANVAND-kort mot en skill.
+  if (job.harness && (draft.type !== 'ANVAND' || draft.target_kind !== 'skill')) return null;
   const nowMs = new Date(now).getTime();
   const type = draft.type;
 
@@ -73,6 +96,7 @@ export function buildCard({ job, draft, skeptic, now = new Date(), expiresDays =
   if (type === 'NY' || type === 'ERSATT') {
     card.security = { static_scan: 'not_run', license: null, clients: [] };
   }
+  if (job.harness) applyHarness(card, job, draft);
   if (type === 'LARM' && draft.urgency_trigger) {
     card.urgency = {
       trigger: draft.urgency_trigger,

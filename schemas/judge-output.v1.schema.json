@@ -42,7 +42,7 @@
     "measure_days": { "type": ["integer", "null"] },
     "urgency_trigger": {
       "type": ["string", "null"],
-      "enum": ["competitor_campaign_live", "sales_deviation", "platform_breaking_change", "security_advisory", null]
+      "enum": ["competitor_campaign_live", "sales_deviation", "platform_breaking_change", "security_advisory", "hub_regression", "probe_failed", "liveness_lost", "hub_health_failure", null]
     },
     "urgency_reason": { "type": ["string", "null"] },
     "test_task": { "type": ["string", "null"] }

@@ -36,12 +36,17 @@ if (String(input.user_id || '') !== JONAS_ID) return reply('Endast Jonas kan bes
 
 const parts = String(input.custom_id || '').split(':');
 const cardPattern = /^R2-[A-Za-z0-9-]{4,}$/;
+const sha256 = /^[0-9a-f]{64}$/;
 const decisions = { ok: 'OK', no: 'NEJ', later: 'INTE_NU' };
 const reasons = ['known', 'generic', 'wrong', 'build'];
 let parsed = null;
 if (parts[0] === 'r2') {
   const kind = parts[1];
-  if (decisions[kind] && parts.length === 3 && cardPattern.test(parts[2])) parsed = { kind: 'decision', decision: decisions[kind], card_id: parts[2] };
+  // Förbättringsmotorn (harness): nödbroms, godkänt skyddsräckespaket och OK bundet till diffens sha256.
+  if (kind === 'brake' && parts.length === 3 && ['on', 'off'].includes(parts[2])) parsed = { kind: 'brake', value: parts[2] };
+  else if (kind === 'policy' && parts.length === 4 && parts[2] === 'approve' && sha256.test(parts[3])) parsed = { kind: 'policy_approve', hash: parts[3] };
+  else if (kind === 'ok' && parts.length === 4 && cardPattern.test(parts[2]) && sha256.test(parts[3])) parsed = { kind: 'decision', decision: 'OK', card_id: parts[2], diff_sha256: parts[3] };
+  else if (decisions[kind] && parts.length === 3 && cardPattern.test(parts[2])) parsed = { kind: 'decision', decision: decisions[kind], card_id: parts[2] };
   else if (kind === 'more' && parts.length === 3 && cardPattern.test(parts[2])) parsed = { kind: 'more', card_id: parts[2] };
   else if (kind === 'rate' && parts.length === 4 && cardPattern.test(parts[3])) {
     const rating = Number(parts[2]);
@@ -51,10 +56,14 @@ if (parts[0] === 'r2') {
   }
 }
 if (!parsed) return reply('Knappen kunde inte hanteras.');
-const routes = { more: 1, decision: 2, rate: 3, why: 4 };
+const routes = { more: 1, decision: 2, rate: 3, why: 4, brake: 5, policy_approve: 5 };
+const stateUpdate = parsed.kind === 'brake' ? { state_key: 'brake', state_value: parsed.value }
+  : parsed.kind === 'policy_approve' ? { state_key: 'approved_guardrail_hash', state_value: parsed.hash } : {};
 return [{ json: {
   route: routes[parsed.kind],
+  diff_sha256: '',
   ...parsed,
+  ...stateUpdate,
   user_id: String(input.user_id),
   message_id: String(input.message_id || ''),
   interaction_id: String(input.interaction_id || ''),
@@ -70,7 +79,7 @@ const routeButton = switchCase({
   version: 3.4,
   config: {
     name: 'Route Card Button',
-    parameters: { mode: 'expression', numberOutputs: 5, output: expr('{{ $json.route }}') },
+    parameters: { mode: 'expression', numberOutputs: 6, output: expr('{{ $json.route }}') },
     position: [440, 400]
   }
 });
@@ -154,10 +163,20 @@ const saveDecision = node({
       filters: { conditions: [{ keyName: 'card_id', condition: 'eq', keyValue: expr('{{ $json.card_id }}') }] },
       columns: {
         mappingMode: 'defineBelow',
-        value: { decision: expr('{{ $json.decision }}'), decided_at: expr('{{ $json.at }}') },
+        // OK på en beslutspunkt binds till diffens sha256 (harness C3); approved_* skrivs bara vid OK.
+        value: {
+          decision: expr('{{ $json.decision }}'),
+          decided_at: expr('{{ $json.at }}'),
+          approved_diff_sha256: expr("{{ $json.decision === 'OK' ? ($json.diff_sha256 || '') : '' }}"),
+          approved_by: expr("{{ $json.decision === 'OK' ? $json.user_id : '' }}"),
+          approved_at: expr("{{ $json.decision === 'OK' ? $json.at : null }}")
+        },
         schema: [
           { id: 'decision', displayName: 'decision', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
-          { id: 'decided_at', displayName: 'decided_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }
+          { id: 'decided_at', displayName: 'decided_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true },
+          { id: 'approved_diff_sha256', displayName: 'approved_diff_sha256', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'approved_by', displayName: 'approved_by', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'approved_at', displayName: 'approved_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }
         ]
       }
     },
@@ -235,12 +254,44 @@ const decisionText = {
 const reasonText = { known: 'Visste redan', generic: 'För generiskt', wrong: 'Fel fakta', build: 'Bygg detta!' };
 let content = 'Sparat.';
 if (p.kind === 'decision') content = decisionText[p.decision] || 'Beslut sparat.';
+if (p.kind === 'decision' && p.diff_sha256) content = '**OK** sparat för diffen ' + p.diff_sha256.slice(0, 12) + '…. Motorn genomför den i nattfasen om diffen är oförändrad; annars blir det en ny beslutspunkt.';
+if (p.kind === 'brake') content = p.value === 'on' ? '🛑 **Nödbromsen är aktiv.** Motorn stannar före nästa steg (återställning och larm körs ändå).' : '▶️ **Nödbromsen är släppt.**';
+if (p.kind === 'policy_approve') content = '✅ Skyddsräckespaketet **' + p.hash.slice(0, 12) + '…** är godkänt.';
 if (p.kind === 'rate') content = 'Betyg **' + p.rating + '/10** sparat.';
 if (p.kind === 'why') content = 'Orsak sparad: **' + (reasonText[p.reason] || p.reason) + '**.';
 return [{ json: { type: 4, data: { flags: 64, content } } }];`
     },
     position: [880, 550]
   }
+});
+
+// Nödbromsen och godkännandet av skyddsräckespaketet skrivs bara här, efter kontrollen av Jonas Discord-ID
+// i Parse Card Button (skrivreglerna i harness-designen C0). Motorns signerade anrop kan inte skriva dem.
+const saveHarnessState = node({
+  type: 'n8n-nodes-base.dataTable',
+  version: 1.1,
+  config: {
+    name: 'Save Harness State',
+    alwaysOutputData: true,
+    parameters: {
+      resource: 'row',
+      operation: 'upsert',
+      dataTableId: { __rl: true, mode: 'id', value: '2Dd7EJkbBbpqGxNn', cachedResultName: 'GK_R2_HARNESS_STATE' },
+      matchType: 'allConditions',
+      filters: { conditions: [{ keyName: 'state_key', condition: 'eq', keyValue: expr('{{ $json.state_key }}') }] },
+      columns: {
+        mappingMode: 'defineBelow',
+        value: { state_key: expr('{{ $json.state_key }}'), state_value: expr('{{ $json.state_value }}'), updated_at: expr('{{ $json.at }}') },
+        schema: [
+          { id: 'state_key', displayName: 'state_key', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'state_value', displayName: 'state_value', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'updated_at', displayName: 'updated_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }
+        ]
+      }
+    },
+    position: [660, 850]
+  },
+  output: [{ id: 1 }]
 });
 
 export default workflow('r2-card-feedback', 'R2 – Card Feedback')
@@ -251,4 +302,5 @@ export default workflow('r2-card-feedback', 'R2 – Card Feedback')
     .onCase(1, getCard.to(formatMore))
     .onCase(2, saveDecision.to(replySaved))
     .onCase(3, saveRating.to(replySaved))
-    .onCase(4, saveReason.to(replySaved)));
+    .onCase(4, saveReason.to(replySaved))
+    .onCase(5, saveHarnessState.to(replySaved)));

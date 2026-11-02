@@ -166,7 +166,13 @@ function checkTarget(card, inventory) {
   return gate('G2', 'Konkret mål', true, 'ankare och mål finns i inventeringen');
 }
 
+const HARNESS_DEDUPE = /^card:harness:[a-z0-9-]{3,48}:[^:]+:[0-9a-f]{40}$/;
+
 function checkNovelty(card, inventory, decisions, nowMs) {
+  // Harness-kort: nyckeln måste bära målfilens blob-sha på origin/main (ny fil = ny nyckel).
+  if (card.mistake_ref && !HARNESS_DEDUPE.test(card.dedupe_key)) {
+    return gate('G3', 'Nytt för oss', false, 'harness-kortets dedupe-nyckel saknar målfilens blob-sha');
+  }
   if (card.type === 'NY') {
     const existing = findHubEntity(inventory, card.target.ref);
     if (existing) {
@@ -246,7 +252,19 @@ function checkContract(card, nowMs) {
   return gate('G6', 'Giltigt kontrakt', true, 'kontrakt v1 giltigt');
 }
 
-function checkBudget(budget) {
+// Harness-kort räknas i körningar mot policy.json.max_candidates_per_night, inte i kronor (designen C2, G8).
+function checkHarnessBudget(budget) {
+  const used = Number(budget?.harness?.candidates_tonight);
+  const max = Number(budget?.harness?.max_candidates_per_night);
+  if (!Number.isFinite(used) || !Number.isFinite(max) || max <= 0) {
+    return gate('G8', 'Budget', false, 'harness-budget saknas (max_candidates_per_night)');
+  }
+  if (used >= max) return gate('G8', 'Budget', false, `nattens tak för kandidater är nått (${used} av ${max})`);
+  return gate('G8', 'Budget', true, `${used} av ${max} kandidater i natt`);
+}
+
+function checkBudget(budget, card = null) {
+  if (card?.mistake_ref) return checkHarnessBudget(budget);
   const spent = Number(budget?.spent_sek);
   const cap = Number(budget?.cap_sek);
   if (!Number.isFinite(spent) || !Number.isFinite(cap) || cap <= 0) {
@@ -367,7 +385,7 @@ export function evaluateCard(card, { inventory, decisions = [], budget = null, n
       publishable: false,
       unverified: false,
       rank_score: 0,
-      gates: [contractGate, checkBudget(budget)]
+      gates: [contractGate, checkBudget(budget, card)]
     };
   }
 
@@ -379,7 +397,7 @@ export function evaluateCard(card, { inventory, decisions = [], budget = null, n
     checkBecause(card, inventory),
     checkSkeptic(card),
     contractGate,
-    checkBudget(budget),
+    checkBudget(budget, card),
     typeResult.gate
   ];
   const publishable = gates.every((result) => result.pass);

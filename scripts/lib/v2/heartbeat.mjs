@@ -11,6 +11,7 @@ import { detectReleases } from './detectors/releases.mjs';
 import { detectRelevantVideos, parseYoutubeFeed } from './detectors/youtube.mjs';
 import { detectSalesTrend } from './detectors/sales-trend.mjs';
 import { detectRedCi, detectStalledLog } from './detectors/project-health.mjs';
+import { detectLessons } from './detectors/lessons.mjs';
 
 const MODES = Object.freeze(['public', 'private', 'all']);
 
@@ -94,6 +95,10 @@ export async function collectObservations({
       if (payload) {
         observations.push(...await guarded(stats, 'sales_trend', async () => detectSalesTrend({ rows: payload.sales_rows || [], now })));
         observations.push(...await guarded(stats, 'stalled_log', async () => detectStalledLog({ entries: payload.log_entries || [], now })));
+        // Lärdomsrader finns bara när datafeeden ombetts läsa dem (en gång per dygn, harness C1.2).
+        if (Array.isArray(payload.lesson_pages)) {
+          observations.push(...await guarded(stats, 'lessons', async () => detectLessons({ pages: payload.lesson_pages, now })));
+        }
       }
     }
   }

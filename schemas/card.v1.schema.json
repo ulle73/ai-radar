@@ -47,7 +47,7 @@
         "required": ["source", "source_kind", "observed_at", "value", "verified"],
         "properties": {
           "source": { "type": "string", "minLength": 1 },
-          "source_kind": { "enum": ["primary", "aggregator", "data", "social", "repo", "video", "transcript"] },
+          "source_kind": { "enum": ["primary", "aggregator", "data", "social", "repo", "video", "transcript", "session_transcript", "notion_lesson", "eval", "n8n_error", "hub_health", "probe", "receipt", "metric"] },
           "url": { "type": "string", "format": "uri" },
           "observed_at": { "type": "string", "format": "date-time" },
           "value": { "type": "string", "minLength": 1 },
@@ -116,7 +116,7 @@
         "license": { "type": ["string", "null"] },
         "clients": {
           "type": "array",
-          "items": { "enum": ["claude", "codex"] }
+          "items": { "enum": ["claude", "codex", "claude_ai", "chatgpt"] }
         },
         "client_note": { "type": "string" }
       }
@@ -131,13 +131,14 @@
       }
     },
     "rule_text": { "type": ["string", "null"] },
+    "mistake_ref": { "type": ["string", "null"], "pattern": "^[a-z0-9-]{3,48}$", "description": "Lärdomsnyckeln som ett harness-kort (ANVAND) åtgärdar. Sätts av koden, inte av modellen." },
     "urgency": {
       "type": "object",
       "additionalProperties": false,
       "required": ["trigger", "reason", "expires_at"],
       "properties": {
         "trigger": {
-          "enum": ["competitor_campaign_live", "sales_deviation", "platform_breaking_change", "security_advisory"]
+          "enum": ["competitor_campaign_live", "sales_deviation", "platform_breaking_change", "security_advisory", "hub_regression", "probe_failed", "liveness_lost", "hub_health_failure"]
         },
         "reason": { "type": "string", "minLength": 3 },
         "expires_at": { "type": "string", "format": "date-time" }

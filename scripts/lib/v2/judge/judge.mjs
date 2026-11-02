@@ -44,10 +44,17 @@ export async function judgeJob({ job, inventory, catalog, decisions = [], budget
     const evaluation = evaluateCard(card, { inventory, decisions, budget, now });
     return { ...base, status: 'JUDGED', reason: skeptic.reason, card, evaluation };
   } catch (error) {
-    // Tillfälliga fel (kapacitet, timeout) skickas inte tillbaka: observationerna står kvar som NEW.
-    const status = isTransient(error) ? 'RETRY' : 'FAILED';
-    return { ...base, status, reason: String(error?.message || error).slice(0, 300), card: null, evaluation: null };
+    // Tillfälliga fel (kapacitet, timeout) och kvot- eller gränsfel skickas inte tillbaka:
+    // observationerna står kvar som NEW. Ett kvotfel bär cause, så att backenden vilar ett dygn.
+    const quota = isQuotaError(error);
+    const status = quota || isTransient(error) ? 'RETRY' : 'FAILED';
+    const reason = String(error?.message || error).slice(0, 300) || 'okänt fel';
+    return { ...base, status, reason, ...(quota ? { cause: error.cause } : {}), card: null, evaluation: null };
   }
+}
+
+export function isQuotaError(error) {
+  return ['quota', 'limit_or_unknown'].includes(error?.cause);
 }
 
 // Formen som R2 – Judge Queue (action complete) tar emot.
@@ -67,7 +74,15 @@ export function toQueueResult(result, judgeModel) {
       judge_model: judgeModel || ''
     }
     : null;
-  return { observation_ids: result.observation_ids, status: result.status, card };
+  // reason behålls; FAILED skickas alltid med fail_reason (högst 300 tecken), så att orsaken syns i GK_R2_OBSERVATIONS.
+  const failReason = result.status === 'FAILED' ? String(result.reason || 'okänt fel').slice(0, 300) : '';
+  return {
+    observation_ids: result.observation_ids,
+    status: result.status,
+    reason: String(result.reason || '').slice(0, 300),
+    ...(failReason ? { fail_reason: failReason } : {}),
+    card
+  };
 }
 
 export { JUDGE_SCHEMA, SKEPTIC_SCHEMA };

@@ -132,7 +132,10 @@ for (const result of results) {
   if (!['JUDGED', 'DISMISSED', 'DIGEST', 'FAILED'].includes(r.status)) return reject('invalid_status');
   const ids = Array.isArray(r.observation_ids) ? r.observation_ids.filter((id) => /^OB-[0-9a-f]{12}$/.test(String(id))) : [];
   if (!ids.length) return reject('missing_observation_ids');
-  for (const id of ids) items.push({ kind: 'obs', observation_id: id, obs_status: r.status });
+  // FAILED utan orsak avvisas (spärr T14: 0 FAILED utan fail_reason).
+  const failReason = text(r.fail_reason, 300);
+  if (r.status === 'FAILED' && !failReason.trim()) return reject('missing_fail_reason');
+  for (const id of ids) items.push({ kind: 'obs', observation_id: id, obs_status: r.status, fail_reason: r.status === 'FAILED' ? failReason : '' });
   const c = r.card;
   if (c) {
     if (!/^R2-[A-Za-z0-9-]{4,}$/.test(String(c.card_id || ''))) return reject('invalid_card_id');
@@ -394,9 +397,10 @@ const updateObservation = node({
       filters: { conditions: [{ keyName: 'observation_id', condition: 'eq', keyValue: expr('{{ $json.observation_id }}') }] },
       columns: {
         mappingMode: 'defineBelow',
-        value: { status: expr('{{ $json.obs_status }}') },
+        value: { status: expr('{{ $json.obs_status }}'), fail_reason: expr('{{ $json.fail_reason }}') },
         schema: [
-          { id: 'status', displayName: 'status', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }
+          { id: 'status', displayName: 'status', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'fail_reason', displayName: 'fail_reason', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }
         ]
       }
     },
