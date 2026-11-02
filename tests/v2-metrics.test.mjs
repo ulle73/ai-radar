@@ -120,9 +120,12 @@ test('tröskel (b): kort och prompt för minnesjobb', () => {
 test('mätdata bedöms inte av domaren; probsvar lämnas åt probes.mjs', () => {
   const obs = (source_kind, data = {}) => ({ observation_id: `OB-${source_kind}`, source_kind, data, dedupe_key: source_kind, observed_at: '2026-11-02T00:00:00Z', area: 'tools_hub', detector: 'x' });
   const { measurements, judgeable } = splitMeasurements([
-    obs('session_transcript'), obs('metric', { name: 'memory_usage' }), obs('metric', { name: 'memory_usage_7d' }),
+    obs('session_transcript'), obs('metric', { name: 'memory_usage' }),
+    obs('metric', { name: 'memory_usage_7d', value: 0.1, baseline: 0.5, gk_sessions: 8 }),
+    obs('metric', { name: 'memory_usage_7d', value: 0.45, baseline: 0.5, gk_sessions: 8 }),
     obs('receipt'), obs('probe'), obs('notion_lesson', { key: 'a' }), obs('primary')
   ]);
-  assert.deepEqual(measurements.map((item) => item.source_kind), ['session_transcript', 'metric', 'receipt']);
-  assert.deepEqual(judgeable.map((item) => item.source_kind), ['metric', 'notion_lesson', 'primary']);
+  // Ett minnesmått utan tröskelbrott är mätdata; bara brottet blir ett domarjobb (tröskel b).
+  assert.deepEqual(measurements.map((item) => [item.source_kind, item.data.value ?? null]), [['session_transcript', null], ['metric', null], ['metric', 0.45], ['receipt', null]]);
+  assert.deepEqual(judgeable.map((item) => [item.source_kind, item.data.value ?? null]), [['metric', 0.1], ['notion_lesson', null], ['primary', null]]);
 });
