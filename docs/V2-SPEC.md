@@ -86,7 +86,7 @@ Signatur: `x-r2-timestamp` (unix-sekunder) och `x-r2-signature` = hex(HMAC-SHA25
 ### Heartbeat
 
 - **Var 30:e minut:** detektorerna körs mot källorna (publika i Actions, privata lokalt). De använder ingen AI och kostar nästan inget. Bara nya observationer, dedupliceras på `dedupe_key`, hamnar i kön.
-- **Lokal domare var 30:e minut** (Windows schemalagd aktivitet, bara när datorn är på): hämtar högst N jobb, med en tidsgräns per jobb. Är datorn avstängd ligger jobben kvar i kön.
+- **Lokal domare i den lokala cykeln** (Windows schemalagd aktivitet varje timme, bara när datorn är på; sedan 2026-11-02 bedömer den bara i nattfönstret 23:30–05:00, harness-designen C0): hämtar högst N jobb, med en tidsgräns per jobb. Är datorn avstängd ligger jobben kvar i kön.
 - **Morgonbrev vardagar 07:30:** n8n väljer de 3 bästa färdiga korten över alla områden. Finns inget som klarar grindarna skickas inget brev.
 - **Direktlarm:** bara för tidskritiska observationer (se 6.3).
 - **Fredag 15:00:** sammanfattning med vad som genomfördes, uppmätt effekt, kort som väntar på beslut och mindre nyheter i en rad var.
@@ -394,7 +394,7 @@ Klart när: alla punkter är bockade och verifierade.
 - [x] n8n: observationstabell (`GK_R2_OBSERVATIONS`), ingest och data feed, konfiguration och kostnadslogg. Heartbeat körs i Actions och lokalt (avsnitt 3).
 - [ ] Budgetvakt som läser `GK_R2_COSTS` (behövs först när domaren gör betalda anrop).
 - [x] Lokal domare (`scripts/v2/judge.mjs`): hämtar jobb via `R2 – Judge Queue`, grupperar (releaser per verktyg, röd CI per repo), kör domare och skeptiker i Codex, bygger kortet i kod, kör grindarna och skickar tillbaka kortet (`GK_R2_CARDS`, status `SHADOW`) och observationernas status (`JUDGED`, `DISMISSED`, `DIGEST`, `FAILED`). Verifierat end-to-end 2026-10-19.
-- [x] Windows-schemalagd aktivitet **"AI Radar v2 - lokal cykel"** var 30:e minut (godkänd av Jonas 2026-10-19). Den kör `scripts/v2/local-cycle.mjs`, som tar `heartbeat --mode private` och sedan `judge` (högst 4 jobb per körning). Den startas dolt via `~/.ai-radar/run-cycle.vbs`, körs som Jonas och bara när han är inloggad (inget sparat lösenord), med 45 minuters tidsgräns. Loggar finns i `~/.ai-radar/logs/` och sparas i 14 dagar. Skapa om eller ta bort med `scripts/v2/install-local-schedule.ps1 [-Remove]`.
+- [x] Windows-schemalagd aktivitet **"AI Radar v2 - lokal cykel"** varje timme (var 30:e minut från 2026-10-19; ändrat till 60 minuter av Jonas 2026-11-02). Den kör `scripts/v2/local-cycle.mjs`, som tar `heartbeat --mode private` och sedan `judge` (högst 4 jobb per körning). Den startas dolt via `~/.ai-radar/run-cycle.vbs`, körs som Jonas och bara när han är inloggad (inget sparat lösenord), med 45 minuters tidsgräns. Loggar finns i `~/.ai-radar/logs/` och sparas i 14 dagar. Skapa om eller ta bort med `scripts/v2/install-local-schedule.ps1 [-Remove]`.
 - [ ] Provkörning av NY- och ERSÄTT-kandidater i karantän med statisk skanning (fas 3; tills dess blir sådana kort overifierade och når aldrig brevet).
 - [x] Minst en detektor per område som ren kod (`scripts/lib/v2/detectors/`): releaser och YouTube (verktyg & hubb), kampanjer och avvikande inlägg (sociala), 7-dagarstrend (försäljning), röd CI och Notion Log som stått stilla (projekt). Alla har tester, och releaser, YouTube och CI är provkörda mot riktig data.
 - [x] Koppla detektorerna till riktiga indata: GitHub-releaser och CI, YouTube-RSS, `GK_DAILY_ORDER_REPORTS` och Notion Log. Verifierat end-to-end 2026-10-19 med 104 observationer i `GK_R2_OBSERVATIONS` och 0 dubbletter vid omkörning.
