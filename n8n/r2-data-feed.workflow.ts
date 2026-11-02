@@ -357,4 +357,4 @@ export default workflow('r2-data-feed', 'R2 – Data Feed')
     .onCase(0, rejectRequest)
     .onCase(1, getSales.to(getLog.to(routeLessons
       .onCase(0, feedTail)
-      .onCase(1, getKnowledge.to(getGrowthLog.to(collectPages.to(getMarkdown.to(feedTail))))))))));
+      .onCase(1, getKnowledge.to(getGrowthLog.to(collectPages.to(getMarkdown.to(feedTail)))))))));

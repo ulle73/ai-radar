@@ -13,8 +13,6 @@ const CARDS_TABLE = { __rl: true, mode: 'id', value: '3ryY9Vp6VumxOHPP', cachedR
 const CHANNEL_URL = 'https://discord.com/api/v10/channels/1550641582208712806/messages';
 const DISCORD_CREDENTIALS = { discordBotApi: { id: '2Pwo6eNhWtKkqI7C', name: 'AI Radar Discord Bot' } };
 
-const stringColumn = (id) => ({ id, displayName: id, required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true });
-const dateColumn = (id) => ({ id, displayName: id, required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true });
 
 const stateWebhook = trigger({
   type: 'n8n-nodes-base.webhook',
@@ -198,7 +196,7 @@ const upsertState = node({
       columns: {
         mappingMode: 'defineBelow',
         value: { state_key: expr('{{ $json.state_key }}'), state_value: expr('{{ $json.state_value }}'), updated_at: expr('{{ $json.updated_at }}') },
-        schema: [stringColumn('state_key'), stringColumn('state_value'), dateColumn('updated_at')]
+        schema: [{ id: 'state_key', displayName: 'state_key', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'state_value', displayName: 'state_value', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'updated_at', displayName: 'updated_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }]
       }
     },
     position: [1320, 300]
@@ -298,7 +296,7 @@ return [{ json: merged }];`
     },
     position: [1540, 600]
   },
-  output: [{ card_id: 'R2-20261102-abcd1234' }]
+  output: [{ card_id: 'R2-20261102-abcd1234', change_class: 'skill_text', autonomy: 'AUTO', autonomy_reason: '', commit_sha: '', published_version: '', published_at: null, verified_local_at: null, web_verified_at: null, rolled_back_at: null, outcome_due: null, outcome: '', fail_reason: '' }]
 });
 
 const updateCard = node({
@@ -330,9 +328,9 @@ const updateCard = node({
           fail_reason: expr('{{ $json.fail_reason }}')
         },
         schema: [
-          stringColumn('change_class'), stringColumn('autonomy'), stringColumn('autonomy_reason'), stringColumn('commit_sha'),
-          stringColumn('published_version'), dateColumn('published_at'), dateColumn('verified_local_at'), dateColumn('web_verified_at'),
-          dateColumn('rolled_back_at'), dateColumn('outcome_due'), stringColumn('outcome'), stringColumn('fail_reason')
+          { id: 'change_class', displayName: 'change_class', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'autonomy', displayName: 'autonomy', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'autonomy_reason', displayName: 'autonomy_reason', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'commit_sha', displayName: 'commit_sha', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true },
+          { id: 'published_version', displayName: 'published_version', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'published_at', displayName: 'published_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }, { id: 'verified_local_at', displayName: 'verified_local_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }, { id: 'web_verified_at', displayName: 'web_verified_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true },
+          { id: 'rolled_back_at', displayName: 'rolled_back_at', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }, { id: 'outcome_due', displayName: 'outcome_due', required: false, defaultMatch: false, display: true, type: 'dateTime', canBeUsedToMatch: true }, { id: 'outcome', displayName: 'outcome', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }, { id: 'fail_reason', displayName: 'fail_reason', required: false, defaultMatch: false, display: true, type: 'string', canBeUsedToMatch: true }
         ]
       }
     },
