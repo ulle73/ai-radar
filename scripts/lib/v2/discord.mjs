@@ -102,12 +102,72 @@ export function formatCardMessage(card, evaluation = {}) {
   };
 }
 
+// ---------------------------------------------------------------- förbättringsmotorn (harness, etapp 1a)
+// Beslutspunkter använder r2:ok/r2:no; OK är bundet till diffens sha256 (r2:ok:<kort>:<sha256>).
+// Nödbromsen (r2:brake:on|off) och godkännandet av skyddsräckespaketet (r2:policy:approve:<sha256>)
+// godtas bara från Jonas Discord-ID; kontrollen görs i n8n (R2 – Card Feedback) och speglas här.
+
+export const JONAS_DISCORD_ID = '388380559606546432';
+const SHA256 = /^[0-9a-f]{64}$/;
+
+export function isJonas(userId) {
+  return String(userId || '') === JONAS_DISCORD_ID;
+}
+
+export function decisionComponents(cardId, diffSha256 = null) {
+  const id = String(cardId);
+  return [{
+    type: 1,
+    components: [
+      button('OK', diffSha256 ? `r2:ok:${id}:${diffSha256}` : `r2:ok:${id}`, STYLE.success),
+      button('Nej', `r2:no:${id}`, STYLE.danger),
+      button('Mer info', `r2:more:${id}`, STYLE.primary),
+      button('Nödbroms', 'r2:brake:on', STYLE.danger)
+    ]
+  }];
+}
+
+export function harnessControlComponents({ guardrailHash = null, brake = null } = {}) {
+  const buttons = [];
+  if (guardrailHash) buttons.push(button('Godkänn skyddsräckena', `r2:policy:approve:${guardrailHash}`, STYLE.success));
+  buttons.push(brake === 'on' ? button('Släpp nödbromsen', 'r2:brake:off', STYLE.secondary) : button('Nödbroms', 'r2:brake:on', STYLE.danger));
+  return [{ type: 1, components: buttons }];
+}
+
+// Beslutspunkt (CUJ 3): vad, varför, belägg, diffen och dess sha256, kostnad, hur det ångras, standardutfall.
+export function formatDecisionMessage(card, { reason, diff = '', diffSha256 = null, validUntil = null } = {}) {
+  const lines = [
+    `**Kräver ditt OK:** ${cut(reason, 300)}`,
+    `**Vad:** ${cut(card.recommendation || card.title, 300)}`,
+    `**Varför:** ${cut(card.because, 400)}`,
+    card.mistake_ref ? `**Belägg:** lärdomsnyckeln \`${card.mistake_ref}\`${card.measure ? ` (${cut(card.measure.baseline, 80)})` : ''}` : null,
+    '**Kostnad:** 0 kr (lokala körningar på abonnemanget)',
+    '**Ångra:** `hub.py rollback --card` publicerar en revert med högre version.',
+    `**Standardutfall:** avvisas om inget svar på 30 dagar${validUntil ? ` (giltigt till ${String(validUntil).slice(0, 10)})` : ''}.`,
+    diffSha256 ? `**Diffens sha256:** \`${diffSha256}\`` : '**Diff:** ännu ingen; ett OK låter utföraren ta fram den, och diffen kommer sedan som en egen beslutspunkt.'
+  ].filter(Boolean);
+  if (diff) lines.push('', '```diff', cut(diff, 2400).replace(/```/g, "'''"), '```');
+  return {
+    content: `🧭 **Beslutspunkt** · harness · ${card.card_id}`,
+    embeds: [{ title: cut(card.title, 256), description: cut(lines.join('\n'), 4000), footer: { text: cut(`${card.card_id} · ${card.target?.ref || ''}`, 2048) } }],
+    components: decisionComponents(card.card_id, diffSha256),
+    allowed_mentions: { parse: [] }
+  };
+}
+
 // Tolkar custom_id från knapparna ovan. Okända eller felaktiga id ger null.
 export function parseCardCustomId(customId) {
   const parts = String(customId || '').split(':');
   if (parts[0] !== 'r2') return null;
   const cardPattern = /^R2-[A-Za-z0-9-]{4,}$/;
   const [, kind] = parts;
+  if (kind === 'brake' && parts.length === 3 && ['on', 'off'].includes(parts[2])) return { kind: 'brake', value: parts[2] };
+  if (kind === 'policy' && parts.length === 4 && parts[2] === 'approve' && SHA256.test(parts[3])) {
+    return { kind: 'policy_approve', hash: parts[3] };
+  }
+  if (kind === 'ok' && parts.length === 4 && cardPattern.test(parts[2]) && SHA256.test(parts[3])) {
+    return { kind: 'decision', decision: 'OK', card_id: parts[2], diff_sha256: parts[3] };
+  }
   if (kind in DECISIONS && parts.length === 3 && cardPattern.test(parts[2])) {
     return { kind: 'decision', decision: DECISIONS[kind], card_id: parts[2] };
   }

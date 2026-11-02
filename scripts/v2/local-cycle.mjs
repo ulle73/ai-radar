@@ -7,6 +7,7 @@ import { appendFile, mkdir, readdir, rm, stat } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadSecrets, postSigned } from '../lib/v2/n8n-client.mjs';
 
 const repoRoot = fileURLToPath(new URL('../../', import.meta.url));
 const logDir = path.join(os.homedir(), '.ai-radar', 'logs');
@@ -45,5 +46,12 @@ const heartbeat = await runStep('heartbeat', 'scripts/v2/heartbeat.mjs', ['--mod
 // Domaren körs även om heartbeat misslyckades: kön kan ha observationer från Actions-körningen.
 const judge = await runStep('judge', 'scripts/v2/judge.mjs', []);
 await pruneLogs();
+// Livstecken för förbättringsmotorn (harness C0): n8n larmar om liveness_at är äldre än 3 timmar.
+try {
+  const response = await postSigned({ ...loadSecrets(), path: 'r2-harness-state', payload: { action: 'write', updates: { liveness_at: new Date().toISOString() } }, timeoutMs: 30000 });
+  if (!response.body?.ok) await log(`[liveness] svarade ${response.status}: ${response.body?.error || ''}`);
+} catch (error) {
+  await log(`[liveness] ${String(error?.message || error).slice(0, 200)}`);
+}
 await log(`cykel klar (heartbeat ${heartbeat}, judge ${judge})`);
 process.exitCode = heartbeat || judge ? 1 : 0;
