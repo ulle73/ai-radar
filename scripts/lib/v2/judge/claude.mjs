@@ -170,6 +170,6 @@ export async function runClaudeJson({ prompt, schemaPath, claude, model, setting
       throw new Error('claude gav inget JSON-svar enligt schemat');
     }
   } finally {
-    await rm(workDir, { recursive: true, force: true });
+    await rm(workDir, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }
 }

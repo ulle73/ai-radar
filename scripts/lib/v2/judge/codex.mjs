@@ -161,6 +161,6 @@ export async function runCodexJson({ prompt, schemaPath, codex, model, effort, t
     const raw = await readFile(outFile, 'utf8');
     return JSON.parse(raw);
   } finally {
-    await rm(workDir, { recursive: true, force: true });
+    await rm(workDir, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }
 }

@@ -50,7 +50,7 @@ export async function runLocalProbe({ question, claude, env = judgeEnv(process.e
     const result = parseClaudeResult(stdout);
     return { ok: code === 0 && result && !result.is_error, answer: String(result?.result || '').slice(0, 2000) };
   } finally {
-    await rm(cwd, { recursive: true, force: true });
+    await rm(cwd, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }
 }
 

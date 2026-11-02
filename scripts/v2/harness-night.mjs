@@ -134,7 +134,7 @@ async function selfTest(claude, env) {
     const result = parseClaudeResult(stdout);
     if (code !== 0 || !/motor-ok/i.test(String(result?.result || ''))) throw new Error(`självtestet gav inte motor-ok (kod ${code})`);
   } finally {
-    await rm(cwd, { recursive: true, force: true });
+    await rm(cwd, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }
   return method;
 }
