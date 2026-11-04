@@ -135,3 +135,16 @@ test('flödena: verktyget är fristående från motorns signerade väg och probf
   const doc = readFileSync(new URL('../scripts/lib/v2/harness/monitor.mjs', import.meta.url), 'utf8');
   assert.match(doc, /Läs noden \[TEST\] Kanariefakta i Notion och svara bara med koden\./);
 });
+
+test('lokala prober: Codex får domarens modell och Claude bara Notions läsverktyg', async () => {
+  assert.deepEqual(codexProbeArgs({ workDir: 'W', outFile: 'o', model: 'gpt-5.6-luna' }).slice(-3), ['-m', 'gpt-5.6-luna', '-']);
+  assert.ok(!codexProbeArgs({ workDir: 'W', outFile: 'o' }).includes('-m'));
+  const config = JSON.parse(readFileSync(new URL('../config/v2/probes.json', import.meta.url), 'utf8'));
+  assert.ok(config.claude_allowed_tools.length > 0);
+  for (const tool of config.claude_allowed_tools) assert.match(tool, /^mcp__claude_ai_Notion__notion-(search|fetch)$/, 'bara läsverktyg');
+  const { runLocalProbe } = await import('../scripts/lib/v2/harness/monitor.mjs');
+  let seen = null;
+  await runLocalProbe({ question: 'x', claude: {}, allowedTools: config.claude_allowed_tools, run: async (_c, args) => { seen = args; return { code: 0, stdout: '{"result":"ok"}' }; } });
+  assert.equal(seen[seen.indexOf('--allowedTools') + 1], config.claude_allowed_tools.join(','));
+  assert.ok(seen.includes('--no-session-persistence'));
+});

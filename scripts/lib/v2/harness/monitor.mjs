@@ -45,10 +45,12 @@ export function judgeP3(answer, patterns) {
 
 // Kör en probe i Claude Code med Jonas konfiguration (Notion-anslutningen behövs för P1 i etapp 2).
 // --no-session-persistence och markören [gk-probe-cc] håller proben utanför måtten (C10).
-export async function runLocalProbe({ question, claude, env = judgeEnv(process.env), run = runClaudeProcess, timeoutMs = 5 * 60000 }) {
+// allowedTools: Notions läsverktyg (config/v2/probes.json claude_allowed_tools); i -p-läge nekas annars MCP-anropen.
+export async function runLocalProbe({ question, claude, allowedTools = [], env = judgeEnv(process.env), run = runClaudeProcess, timeoutMs = 5 * 60000 }) {
   const cwd = await mkdtemp(path.join(os.tmpdir(), 'gk-probe-cc-'));
   try {
-    const args = ['-p', '--no-session-persistence', '--output-format', 'json', '--max-turns', '6'];
+    const args = ['-p', '--no-session-persistence', '--output-format', 'json', '--max-turns', '6',
+      ...(allowedTools.length ? ['--allowedTools', allowedTools.join(',')] : [])];
     const { code, stdout } = await run(claude, args, `${PROBE_MARKER} ${question}`, { timeoutMs, env, cwd });
     const result = parseClaudeResult(stdout);
     return { ok: code === 0 && result && !result.is_error, answer: String(result?.result || '').slice(0, 2000) };
@@ -60,16 +62,18 @@ export async function runLocalProbe({ question, claude, env = judgeEnv(process.e
 // Codex-proben (C7, etapp 2): codex exec med Jonas vanliga konfiguration (Notion och gk-karna behövs),
 // --ephemeral så att ingen session sparas, skrivskyddad sandlåda och en tom arbetsmapp. Markören
 // [gk-probe-codex] håller proben utanför måtten om en session ändå skulle skrivas.
-export function codexProbeArgs({ workDir, outFile }) {
+// model: samma Codex-modell som domaren (config/v2/judge.json); modellen i Jonas config.toml stöds inte
+// alltid av ChatGPT-kontot i CLI:t.
+export function codexProbeArgs({ workDir, outFile, model = null }) {
   return ['exec', '--skip-git-repo-check', '--ephemeral', '--sandbox', 'read-only', '--color', 'never',
-    '-C', workDir, '-o', outFile, '-c', 'approval_policy="never"', '-'];
+    '-C', workDir, '-o', outFile, '-c', 'approval_policy="never"', ...(model ? ['-m', model] : []), '-'];
 }
 
-export async function runCodexProbe({ question, codex, env = judgeEnv(process.env), run = runClaudeProcess, timeoutMs = 5 * 60000, read = readFile }) {
+export async function runCodexProbe({ question, codex, model = null, env = judgeEnv(process.env), run = runClaudeProcess, timeoutMs = 5 * 60000, read = readFile }) {
   const cwd = await mkdtemp(path.join(os.tmpdir(), 'gk-probe-codex-'));
   const outFile = path.join(cwd, 'svar.txt');
   try {
-    const { code } = await run(codex, codexProbeArgs({ workDir: cwd, outFile }), `${CODEX_PROBE_MARKER} ${question}`, { timeoutMs, env, cwd });
+    const { code } = await run(codex, codexProbeArgs({ workDir: cwd, outFile, model }), `${CODEX_PROBE_MARKER} ${question}`, { timeoutMs, env, cwd });
     const answer = await read(outFile, 'utf8').catch(() => '');
     return { ok: code === 0 && Boolean(String(answer).trim()), answer: String(answer).slice(0, 2000) };
   } finally {

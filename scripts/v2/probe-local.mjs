@@ -22,6 +22,8 @@ const args = process.argv.slice(2);
 const option = (name) => { const i = args.indexOf(`--${name}`); return i >= 0 ? args[i + 1] : null; };
 const config = (() => { try { return JSON.parse(readFileSync(new URL('../../config/v2/judge.json', import.meta.url), 'utf8')); } catch { return {}; } })();
 const claude = resolveClaude(config.claude_paths || []);
+const probeConfig = (() => { try { return JSON.parse(readFileSync(new URL('../../config/v2/probes.json', import.meta.url), 'utf8')); } catch { return {}; } })();
+const allowedTools = probeConfig.claude_allowed_tools || [];
 
 if (args.includes('--daily')) {
   const stamp = path.join(engine.state, 'probes-daily.json');
@@ -36,8 +38,8 @@ if (args.includes('--daily')) {
   }
   const codex = resolveCodex(config.codex_paths || []);
   const surfaces = [
-    { yta: 'claude_code', ask: (question) => runLocalProbe({ question, claude }) },
-    { yta: 'codex', ask: (question) => runCodexProbe({ question, codex }) }
+    { yta: 'claude_code', ask: (question) => runLocalProbe({ question, claude, allowedTools }) },
+    { yta: 'codex', ask: (question) => runCodexProbe({ question, codex, model: config.model || null }) }
   ];
   const secrets = args.includes('--send') ? loadSecrets() : null;
   let failures = 0;
