@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { zstdCompressSync } from 'node:zlib';
+import zlib from 'node:zlib';
 import { buildOptions, detectSessionTranscripts, readJsonl, scanTranscripts, sessionHash } from '../scripts/lib/v2/detectors/session-transcripts.mjs';
 
 const read = async (name) => JSON.parse(await readFile(new URL(`../config/v2/${name}`, import.meta.url), 'utf8'));
@@ -51,7 +51,7 @@ async function fixture() {
     { type: 'response_item', timestamp: '2026-10-20T10:00:03Z', payload: { type: 'custom_tool_call', name: 'exec', input: 'const r = await tools.mcp__codex_apps__notion_fetch({id:"x"}); await tools.exec_command({cmd:"Get-Content C:\\\\x\\\\skills\\\\gk-arbetssatt\\\\SKILL.md"})' } },
     { type: 'response_item', timestamp: '2026-10-20T10:00:04Z', payload: { type: 'message', role: 'user', content: [{ type: 'input_text', text: 'du missade budgeten' }] } }
   ];
-  await writeFile(path.join(codex, 'rollout-c1.jsonl.zst'), zstdCompressSync(Buffer.from(jsonl(codexMain))));
+  await writeFile(path.join(codex, 'rollout-c1.jsonl.zst'), zlib.zstdCompressSync(Buffer.from(jsonl(codexMain))));
   await writeFile(path.join(codex, 'rollout-c2.jsonl'), jsonl([
     { type: 'session_meta', timestamp: '2026-10-20T10:01:00Z', payload: { id: 'c2', cwd: 'C:\\x', source: { subagent: { thread_spawn: { parent_thread_id: 'c1', depth: 1 } } } } },
     { type: 'response_item', timestamp: '2026-10-20T10:01:01Z', payload: { type: 'message', role: 'user', content: [{ type: 'input_text', text: 'uppdrag till subagenten' }] } },

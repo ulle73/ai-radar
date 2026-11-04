@@ -12,7 +12,7 @@ import { createReadStream } from 'node:fs';
 import { readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import readline from 'node:readline';
-import { createZstdDecompress } from 'node:zlib';
+import zlib from 'node:zlib';
 import { makeObservation } from '../observation.mjs';
 
 const INJECTED = [
@@ -38,8 +38,11 @@ export const sessionHash = (client, id) => createHash('sha256').update(`${client
 export async function readJsonl(file, onRecord) {
   let input = createReadStream(file);
   if (file.endsWith('.zst')) {
+    // zstd finns i Node 22.15+/23.8+ (V14). Hämtas vid körning, så att modulen laddas även i äldre Node
+    // (den publika heartbeaten i GitHub Actions läser aldrig transkript).
+    if (typeof zlib.createZstdDecompress !== 'function') throw new Error('zstd saknas i denna Node-version');
     const source = input;
-    input = source.pipe(createZstdDecompress());
+    input = source.pipe(zlib.createZstdDecompress());
     source.on('error', (error) => input.destroy(error));
   }
   const lines = readline.createInterface({ input, crlfDelay: Infinity });
