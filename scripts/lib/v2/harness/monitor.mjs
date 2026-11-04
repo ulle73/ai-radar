@@ -2,7 +2,7 @@
 // konfiguration) i samma nattfas. Underkänns någon görs återställning direkt (hub.py rollback --card).
 // All bedömning görs här, deterministiskt; ytan lämnar bara svaret. Brytaren: 2 återställningar på 14 dagar.
 
-import { mkdtemp, rm } from 'node:fs/promises';
+import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { judgeEnv } from '../judge/codex.mjs';
@@ -10,7 +10,10 @@ import { parseClaudeResult, runClaudeProcess } from '../judge/claude.mjs';
 import { normalizeForGate } from './policy.mjs';
 
 export const PROBE_MARKER = '[gk-probe-cc]';
+export const CODEX_PROBE_MARKER = '[gk-probe-codex]';
+// Frågorna ordagrant enligt docs/ai-system/harness/probuppgift.md i hubbrepot.
 export const PROBES = Object.freeze({
+  P1: 'Vilken kanariekod gäller denna vecka? Läs noden [TEST] Kanariefakta i Notion och svara bara med koden.',
   P2: 'Vilken version har gk-probe? Svara bara med raden från skillen.',
   P3: 'Var och i vilket format ska lärdomen notion-las-forst sparas? Svara kort med plats och radformat.'
 });
@@ -49,6 +52,26 @@ export async function runLocalProbe({ question, claude, env = judgeEnv(process.e
     const { code, stdout } = await run(claude, args, `${PROBE_MARKER} ${question}`, { timeoutMs, env, cwd });
     const result = parseClaudeResult(stdout);
     return { ok: code === 0 && result && !result.is_error, answer: String(result?.result || '').slice(0, 2000) };
+  } finally {
+    await rm(cwd, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
+  }
+}
+
+// Codex-proben (C7, etapp 2): codex exec med Jonas vanliga konfiguration (Notion och gk-karna behövs),
+// --ephemeral så att ingen session sparas, skrivskyddad sandlåda och en tom arbetsmapp. Markören
+// [gk-probe-codex] håller proben utanför måtten om en session ändå skulle skrivas.
+export function codexProbeArgs({ workDir, outFile }) {
+  return ['exec', '--skip-git-repo-check', '--ephemeral', '--sandbox', 'read-only', '--color', 'never',
+    '-C', workDir, '-o', outFile, '-c', 'approval_policy="never"', '-'];
+}
+
+export async function runCodexProbe({ question, codex, env = judgeEnv(process.env), run = runClaudeProcess, timeoutMs = 5 * 60000, read = readFile }) {
+  const cwd = await mkdtemp(path.join(os.tmpdir(), 'gk-probe-codex-'));
+  const outFile = path.join(cwd, 'svar.txt');
+  try {
+    const { code } = await run(codex, codexProbeArgs({ workDir: cwd, outFile }), `${CODEX_PROBE_MARKER} ${question}`, { timeoutMs, env, cwd });
+    const answer = await read(outFile, 'utf8').catch(() => '');
+    return { ok: code === 0 && Boolean(String(answer).trim()), answer: String(answer).slice(0, 2000) };
   } finally {
     await rm(cwd, { recursive: true, force: true, maxRetries: 10, retryDelay: 500 }).catch(() => {});
   }

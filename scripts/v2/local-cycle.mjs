@@ -47,6 +47,11 @@ const heartbeat = await runStep('heartbeat', 'scripts/v2/heartbeat.mjs', ['--mod
 const judge = await runStep('judge', 'scripts/v2/judge.mjs', []);
 // Måtten (C10): förra veckans ögonblicksbild skickas en gång, första cykeln efter måndag 00:00 UTC.
 await runStep('metrics', 'scripts/v2/metrics.mjs', ['snapshot', '--send', '--learner', '--if-missing']);
+// Prober (C7, etapp 2): P1–P3 i Claude Code och Codex en gång per dag från kl. 05 (efter nattfasen), och
+// bedömning av alla ytors svar varje cykel.
+const stockholmHour = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Stockholm', hour: '2-digit', hourCycle: 'h23' }).format(new Date()));
+if (stockholmHour >= 5) await runStep('probes-daily', 'scripts/v2/probe-local.mjs', ['--daily', '--send', '--once-per-day']);
+await runStep('probes', 'scripts/v2/probes.mjs', []);
 await pruneLogs();
 // Livstecken för förbättringsmotorn (harness C0): n8n larmar om liveness_at är äldre än 3 timmar.
 try {

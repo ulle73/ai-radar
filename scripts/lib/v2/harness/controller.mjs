@@ -118,3 +118,13 @@ export function pendingHarnessCards(rows) {
     && !['AVVISAD', 'needs_eval', 'injection_suspected'].includes(row.autonomy)
     && (row.autonomy !== 'KRAVER_OK' || row.decision === 'OK'));
 }
+
+// C3/C7: en publicerad, inte återställd ändring utan web_verified_at blockerar nästa kandidat när
+// webbverifieringen krävs (från spärr 2). Efter max 7 dagar släpper spärren, så att en yta som inte svarar
+// inte stoppar motorn för alltid; larmet för saknade prober kommer från hälsodetektorn.
+export function awaitingWebVerification(rows, { required = false, now = new Date(), maxDays = 7 } = {}) {
+  if (!required) return null;
+  const nowMs = new Date(now).getTime();
+  return rows.find((row) => row.published_version && !row.rolled_back_at && !row.web_verified_at
+    && nowMs - Date.parse(row.published_at || 0) <= maxDays * 86400000) || null;
+}

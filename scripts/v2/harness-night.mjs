@@ -20,7 +20,7 @@ import {
   assertClaudeSubscription, claudeArgs, enginePaths, engineEnv, parseClaudeResult, readDpapiSecret, resolveClaude, runClaudeJson, runClaudeProcess
 } from '../lib/v2/judge/claude.mjs';
 import { formatDecisionMessage, harnessControlComponents } from '../lib/v2/discord.mjs';
-import { gate, guardrailHash, idleMinutes, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../lib/v2/harness/controller.mjs';
+import { awaitingWebVerification, gate, guardrailHash, idleMinutes, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../lib/v2/harness/controller.mjs';
 import { AUTO, AVVISAD, KRAVER_OK, autoPathFor, buildDiffSkepticPrompt, c3a, c3b } from '../lib/v2/harness/policy.mjs';
 import { buildExcerpt, prepareWorkspace, readTemplate, removeWorkspace, runImplementer } from '../lib/v2/harness/implementer.mjs';
 import { verifyCandidate } from '../lib/v2/harness/verifier.mjs';
@@ -358,7 +358,12 @@ try {
     lessonLines: (card) => (card.observations || []).map((observation) => observation.value).concat(lessonIndex.get(card.mistake_ref) || [])
   };
   const results = [];
-  const room = Math.max(0, (policy.max_candidates_per_night || 2) - night.candidates);
+  // C3: högst 1 ytpåverkande ändring i taget som väntar på verifiering. Från spärr 2 (config/v2/probes.json
+  // web_verification_required) räknas webbverifieringen; före dess räcker den lokala P2/P3.
+  const probeConfig = readJson(path.join(repoRoot, 'config', 'v2', 'probes.json'), {});
+  const waiting = awaitingWebVerification(rows, { required: probeConfig.web_verification_required === true });
+  if (waiting) await log(`${waiting.card_id} väntar på webbverifiering; inga nya kandidater i natt`);
+  const room = waiting ? 0 : Math.max(0, (policy.max_candidates_per_night || 2) - night.candidates);
   await log(`${candidates.length} harness-kort i kö, plats för ${room} kandidat(er) i natt`);
   for (const candidate of candidates.slice(0, room)) {
     try {
