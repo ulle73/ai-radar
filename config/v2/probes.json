@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "note": "Prober (harness C7). web_verification_required slås på efter spärr 2: då väntar nattfasen på att proberna på claude.ai och ChatGPT godkänt förra publiceringen innan nästa kandidat tas.",
+  "web_verification_required": false,
+  "claude_allowed_tools_note": "Bara läsverktyg. Notion-anslutningen i Jonas Claude-konto (claude.ai-connector, i CLI:t servern \"claude.ai Notion\"); utan dem nekas MCP-anropet i claude -p.",
+  "claude_allowed_tools": ["mcp__claude_ai_Notion__notion-search", "mcp__claude_ai_Notion__notion-fetch"]
+}

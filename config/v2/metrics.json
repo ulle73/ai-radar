@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "note": "Mått enligt harness-designen C10. gk_cwd_patterns avgör om arbetsmappen ligger under ett Golfkuponger-repo; gk_prompt_pattern om första prompten nämner Golfkuponger eller GK.",
+  "gk_cwd_patterns": ["golfkuponger", "[\\\\/]gk-", "[\\\\/]\\.agents([\\\\/]|$)", "[\\\\/]ai-radar", "content-engine"],
+  "gk_prompt_pattern": "\\b(golfkuponger|gk)\\b",
+  "verify_command_pattern": "\\b(npm (run )?test|node --test|pytest|unittest|vitest|jest|go test|cargo test|dotnet test|hub\\.py check|check|validate|verify|lint|tsc --noemit)\\b",
+  "probe_markers": ["[gk-probe-cc]", "[gk-probe-codex]", "[gk-probe-claude-ai]"],
+  "baseline_days": 28,
+  "memory_threshold": { "drop": 0.2, "window_days": 7, "min_sessions": 5, "mistake_ref": "notion-anvands-inte" }
+}

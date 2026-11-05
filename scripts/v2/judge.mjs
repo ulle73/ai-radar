@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { buildHubInventory, mergeInventory } from '../lib/v2/inventory.mjs';
 import { loadSecrets, postSigned } from '../lib/v2/n8n-client.mjs';
 import { selectForBrief } from '../lib/v2/gates.mjs';
-import { groupObservations } from '../lib/v2/judge/grouping.mjs';
+import { groupObservations, splitMeasurements } from '../lib/v2/judge/grouping.mjs';
 import { isQuotaError, judgeJob, toQueueResult } from '../lib/v2/judge/judge.mjs';
 import { assertChatGptLogin, defaultModel, resolveCodex, runCodexJson, runWithFallback } from '../lib/v2/judge/codex.mjs';
 import { assertClaudeSubscription, enginePaths, engineEnv, readDpapiSecret, resolveClaude, runClaudeJson } from '../lib/v2/judge/claude.mjs';
@@ -127,6 +127,9 @@ async function prepareBackends(names) {
   return runners;
 }
 
+// Historik för hälsodetektorn (C1.4): domarens lyckade körningar de senaste 24 timmarna. Sju dagar sparas.
+const runRecord = { at: new Date().toISOString(), ok: false, jobs: 0, judged: 0, failed: 0 };
+
 try {
   let state = readJson(stateFile, {});
   const budgetNight = jobsAllowed({ state, maxPerRun: maxJobs, maxPerNight: config.max_jobs_per_night });
@@ -144,7 +147,18 @@ try {
     if (queue.status !== 200 || !queue.body?.ok) throw new Error(`kön svarade ${queue.status}: ${queue.body?.error || 'okänt fel'}`);
     const { observations, decisions, budget } = queue.body;
 
-    const jobs = groupObservations(observations, { maxObservationsPerJob: config.max_observations_per_job }).slice(0, budgetNight.allowed);
+    // Mätdata (transkript, veckomått, kvitton) markeras DIGEST utan modellanrop; probsvar lämnas åt probes.mjs.
+    const { measurements, judgeable } = splitMeasurements(observations);
+    if (measurements.length && !dryRun) {
+      const marked = await postSigned({
+        ...secrets,
+        path: 'r2-judge',
+        payload: { action: 'complete', results: [{ observation_ids: measurements.map((item) => item.observation_id).slice(0, 500), status: 'DIGEST', reason: 'mätdata (harness C10), bedöms inte av domaren', card: null }] },
+        timeoutMs: 60000
+      });
+      console.log(`mätdata: ${measurements.length} observationer markerade DIGEST (${marked.status})`);
+    }
+    const jobs = groupObservations(judgeable, { maxObservationsPerJob: config.max_observations_per_job }).slice(0, budgetNight.allowed);
     console.log(`kö: ${observations.length} nya observationer, ${jobs.length} jobb i denna körning (${budgetNight.used} tidigare i natt)`);
     const blobs = Object.fromEntries(inventory.skills.filter((skill) => skill.path).map((skill) => [skill.name, blobSha(skill.path)]));
     for (const job of jobs.filter((item) => item.harness)) job.harness.blob_shas = blobs;
@@ -188,6 +202,9 @@ try {
       }
     }
 
+    runRecord.jobs = results.length;
+    runRecord.judged = results.filter((result) => result.status === 'JUDGED').length;
+    runRecord.failed = results.filter((result) => result.status === 'FAILED').length;
     state = recordJobs(state, { night: budgetNight.night, count: results.filter((result) => result.status !== 'RETRY').length });
     await writeFile(stateFile, JSON.stringify(state, null, 2));
 
@@ -212,6 +229,11 @@ try {
       console.log(`dry-run: inget skickat, se ${path.join(stateDir, 'last-judge-run.json')}`);
     }
   }
+  runRecord.ok = true;
 } finally {
   await rm(lockFile, { force: true });
+  const historyFile = path.join(stateDir, 'judge-history.json');
+  const cutoff = Date.now() - 7 * 86400000;
+  const history = readJson(historyFile, []).filter((run) => Date.parse(run.at) >= cutoff);
+  await writeFile(historyFile, JSON.stringify([...history, runRecord], null, 1)).catch(() => {});
 }

@@ -63,6 +63,16 @@ const RULES = `REGLER
 // Harness-kort (designen "Självförbättrande hubb", C2): ett upprepat misstag (samma lärdomsnyckel minst
 // 3 gånger på 14 dagar) ska bli en förtydligad regel i en skill. Koden sätter mistake_ref och dedupe-nyckeln.
 export function harnessRules(job) {
+  if (job.harness.kind === 'memory') {
+    const pct = (value) => `${Math.round(value * 100)} %`;
+    return `HARNESS-JOBB (minnet används inte)
+Observationerna är ett mått: andelen Golfkuponger-sessioner med minst ett Notion-anrop de senaste ${job.harness.days} dagarna är ${pct(job.harness.value)} mot baslinjen ${pct(job.harness.baseline)} (${job.harness.rows} sessioner). Agenterna läser och skriver alltså Notion mer sällan än förut.
+- Om en tydligare regel om att läsa Notion först och spara utan att bli ombedd kan höja andelen: decision CARD, type ANVAND, area tools_hub, target_kind skill, target_ref gk-arbetssatt eller notion-dokumentation (den skill i INVENTERINGEN där regeln hör hemma).
+- rule_text: en sammanfattning av regeln som ska förtydligas, högst 3 rader och 400 tecken. Utföraren skriver själva texten i skillen.
+- measure_metric "andel Golfkuponger-sessioner med Notion-anrop per 7 dagar", measure_baseline "${pct(job.harness.value)} (baslinje ${pct(job.harness.baseline)})", measure_days 14.
+- action_on_ok: vad som ändras i skillen. Ingen länk, e-postadress eller verktygsnamn i något textfält.
+- Om regeln redan står tydligt i skillen och inget kan förtydligas: decision NONE.`;
+  }
   return `HARNESS-JOBB
 Observationerna är lärdomsrader med nyckeln "${job.harness.mistake_ref}" (${job.harness.rows} rader på ${job.harness.days} dagar). Samma misstag upprepas av agenterna.
 - Om raderna beskriver ett och samma misstag som en tydligare regel i en skill kan förhindra: decision CARD, type ANVAND, area tools_hub, target_kind skill, target_ref = namnet på den skill i INVENTERINGEN (kind skill) där regeln hör hemma. Välj i första hand gk-arbetssatt (gemensamma arbetsregler) eller notion-dokumentation (hur Notion används).

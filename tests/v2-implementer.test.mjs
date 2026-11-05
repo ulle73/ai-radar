@@ -53,7 +53,8 @@ test('promptmallen fylls med fält och utdraget citeras som data', () => {
   assert.doesNotMatch(prompt, /Fylls av/);
 });
 
-test('inställningarna: hook med onFailure block, deny-regler och bara Read/Edit på målfilen', () => {
+// Sökvägarna är Windows-sökvägar (motorn körs på Jonas Windows-dator); på Linux tolkas C:\ som en relativ sökväg.
+test('inställningarna: hook med onFailure block, deny-regler och bara Read/Edit på målfilen', { skip: process.platform !== 'win32' && 'Windows-sökvägar' }, () => {
   const settings = implementerSettings({ baseSettings: { disableSkillShellExecution: true }, targetFile: 'C:\\e\\work\\k\\SKILL.md', nodePath: 'C:\\node.exe', guardScript: 'C:\\g.mjs' });
   const hook = settings.hooks.PreToolUse[0].hooks[0];
   assert.equal(hook.onFailure, 'block');

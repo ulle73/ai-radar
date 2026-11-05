@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "note": "correction-patterns.v1 (harness-designen C10). Ett användarmeddelande efter det första räknas som rättelse om något mönster matchar (skiftlägesokänsligt, efter NFKC). Ändras bara som ny version (v2) så att baslinjen förblir jämförbar.",
+  "patterns": [
+    "^\\s*(nej|nope|nä|nää|neej|nejnej|nej nej)\\b",
+    "^\\s*no[,.!\\s]",
+    "\\b(det|den|du|siffran|uppgiften) (stämmer|stämde) inte\\b",
+    "\\bdet (är|blev|var) fel\\b",
+    "\\bfel (fil|sida|nod|gren|branch|version|ställe|repo|tema|mapp|siffra|datum)\\b",
+    "\\bdu (glömde|missade|har glömt|har missat|läste inte|kollade inte|gjorde fel|tog fel)\\b",
+    "\\binte det (jag|vi) (bad|menade|ville|sa)\\b",
+    "\\bjag (sa ju|skrev ju|bad (dig|om)|har ju sagt)\\b",
+    "\\b(gör om|börja om|ångra det|backa|återställ det)\\b",
+    "\\b(blev|är|var) (pissdåligt|pissdålig|dåligt|sämre)\\b",
+    "\\bför dålig\\b",
+    "\\bvarför (har|gjorde|ändrade|tog|skrev) du\\b",
+    "\\banvänd inte\\b",
+    "\\b(that's|that is|this is) (wrong|not right|incorrect)\\b",
+    "\\byou (forgot|missed|ignored)\\b",
+    "\\bi (said|asked|told you)\\b"
+  ]
+}

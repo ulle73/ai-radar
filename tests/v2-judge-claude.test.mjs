@@ -150,7 +150,7 @@ test('lärdomströskeln: 3 rader på 14 dagar blir ett harness-jobb, 2 gör det 
   assert.equal(groupObservations([lesson(1, '2026-10-01'), lesson(2, '2026-10-05'), lesson(3, '2026-11-01')], { now: NOW }).length, 0);
   const [job] = groupObservations([lesson(1, '2026-10-25'), lesson(2, '2026-10-30'), lesson(3, '2026-11-01')], { now: NOW });
   assert.equal(job.key, 'lesson:notion-las-forst');
-  assert.deepEqual({ ...job.harness }, { mistake_ref: 'notion-las-forst', rows: 3, days: 14 });
+  assert.deepEqual({ ...job.harness }, { kind: 'lesson', mistake_ref: 'notion-las-forst', rows: 3, days: 14 });
   assert.equal(job.all_observation_ids.length, 3);
 });
 

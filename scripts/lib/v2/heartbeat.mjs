@@ -12,6 +12,9 @@ import { detectRelevantVideos, parseYoutubeFeed } from './detectors/youtube.mjs'
 import { detectSalesTrend } from './detectors/sales-trend.mjs';
 import { detectRedCi, detectStalledLog } from './detectors/project-health.mjs';
 import { detectLessons } from './detectors/lessons.mjs';
+import { detectHubHealth } from './detectors/hub-health.mjs';
+import { detectSessionTranscripts } from './detectors/session-transcripts.mjs';
+import { memoryWindowObservation } from './harness/metrics.mjs';
 
 const MODES = Object.freeze(['public', 'private', 'all']);
 
@@ -43,6 +46,8 @@ export async function collectObservations({
   fetchText,
   dataFeed = null,
   readInstalled = null,
+  hubHealth = null,
+  transcripts = null,
   now = new Date()
 }) {
   if (!MODES.includes(mode)) throw new Error(`okänt läge: ${mode}`);
@@ -100,6 +105,22 @@ export async function collectObservations({
           observations.push(...await guarded(stats, 'lessons', async () => detectLessons({ pages: payload.lesson_pages, now })));
         }
       }
+    }
+  }
+
+  if (includePrivate) {
+    // Hubbens hälsa (C1.4), varje körning: hubHealth() ger kontrollresultaten, bara underkända blir observationer.
+    if (hubHealth) {
+      observations.push(...await guarded(stats, 'hub_health', async () => detectHubHealth({ results: await hubHealth(), now })));
+    }
+    // Sessionstranskript (C1.1), en gång per dygn: transcripts() ger maskade sessioner och baslinjen.
+    // Minnesanvändningen de senaste 7 dagarna följer med som mått för tröskel (b) i C2.
+    if (transcripts) {
+      observations.push(...await guarded(stats, 'session_transcripts', async () => {
+        const { sessions, baseline } = await transcripts();
+        const memory = memoryWindowObservation({ sessions, baseline, now });
+        return [...detectSessionTranscripts({ sessions: sessions.filter((session) => Date.parse(session.ended_at || session.started_at) >= new Date(now).getTime() - 2 * 86400000), now }), ...(memory ? [memory] : [])];
+      }));
     }
   }
 

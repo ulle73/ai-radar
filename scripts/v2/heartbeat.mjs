@@ -14,6 +14,12 @@ import path from 'node:path';
 import { promisify } from 'node:util';
 import { collectObservations } from '../lib/v2/heartbeat.mjs';
 import { fetchDataFeed, loadSecrets, sendObservations } from '../lib/v2/n8n-client.mjs';
+import { healthChecks, gatherHealthSources } from '../lib/v2/detectors/hub-health.mjs';
+import { buildOptions, scanTranscripts } from '../lib/v2/detectors/session-transcripts.mjs';
+import { enginePaths } from '../lib/v2/judge/claude.mjs';
+import { codexMcpList, engineTokenInfo, findCodex, gitAheadBehind, hubCheckJson, readHubState, readJsonFile } from '../lib/v2/local-sources.mjs';
+import { summarize } from '../lib/v2/harness/metrics.mjs';
+import { mergeLessonLedger } from '../lib/v2/harness/learner.mjs';
 
 // Fasta kommandon från config/v2/sources.json och gh; inga argument kommer utifrån.
 const run = promisify(exec);
@@ -69,6 +75,47 @@ const lessonsStamp = path.join(os.homedir(), '.ai-radar', 'lessons-last.json');
 let lastLessons = 0;
 try { lastLessons = Date.parse(JSON.parse(readFileSync(lessonsStamp, 'utf8')).at) || 0; } catch { lastLessons = 0; }
 const wantLessons = mode !== 'public' && (process.argv.includes('--lessons') || Date.now() - lastLessons > 20 * 3600000);
+// Hubbens hälsa (C1.4) varje privat körning; sessionstranskript (C1.1) en gång per dygn.
+const engine = enginePaths();
+async function hubHealth() {
+  const { sources, errors } = await gatherHealthSources({
+    state: () => readHubState(),
+    git: () => gitAheadBehind(),
+    codexMcp: () => codexMcpList(findCodex()),
+    hubCheck: () => hubCheckJson({ trusted: engine.trusted }),
+    // Historiken finns först efter domarens första körning med 1b; utan fil hoppas kontrollen över.
+    judgeHistory: () => readJsonFile(path.join(os.homedir(), '.ai-radar', 'judge-history.json'), null),
+    token: () => engineTokenInfo(engine),
+    probes: () => readJsonFile(path.join(engine.state, 'probe-versions.json'), null)
+  });
+  return [...healthChecks(sources), ...errors];
+}
+
+const transcriptsStamp = path.join(os.homedir(), '.ai-radar', 'transcripts-last.json');
+let lastTranscripts = 0;
+try { lastTranscripts = Date.parse(JSON.parse(readFileSync(transcriptsStamp, 'utf8')).at) || 0; } catch { lastTranscripts = 0; }
+const wantTranscripts = mode !== 'public' && (process.argv.includes('--transcripts') || Date.now() - lastTranscripts > 20 * 3600000);
+async function transcripts() {
+  const readConfig = async (name) => JSON.parse(await readFile(new URL(`../../config/v2/${name}`, import.meta.url), 'utf8'));
+  const options = buildOptions({ corrections: await readConfig('correction-patterns.v1.json'), metrics: await readConfig('metrics.json') });
+  const since = new Date(Date.now() - 8 * 86400000);
+  const { sessions } = await scanTranscripts({
+    claudeRoot: path.join(os.homedir(), '.claude', 'projects'),
+    codexRoot: path.join(os.homedir(), '.codex', 'sessions'),
+    since: since.toISOString(),
+    options,
+    minMtime: since.getTime()
+  });
+  const baseline = (await readJsonFile(path.join(engine.state, 'metrics-baseline.json'), null))?.baseline || null;
+  // Minnesmåttet för 7 dagar sparas lokalt för uppföljningen i C9 (learner.mjs measureReached).
+  const week = summarize(sessions.filter((session) => Date.now() - Date.parse(session.started_at) <= 7 * 86400000));
+  if (!dryRun) {
+    await mkdir(engine.state, { recursive: true });
+    await writeFile(path.join(engine.state, 'memory-7d.json'), JSON.stringify({ at: new Date().toISOString(), value: week.memory_usage, gk_sessions: week.gk_sessions }));
+  }
+  return { sessions, baseline };
+}
+
 const { observations, stats } = await collectObservations({
   mode,
   sources,
@@ -76,8 +123,23 @@ const { observations, stats } = await collectObservations({
   fetchText,
   dataFeed: mode === 'public' ? null : () => fetchDataFeed({ runner, secrets, lessons: wantLessons }),
   readInstalled: mode === 'public' ? null : readInstalled,
+  hubHealth: mode === 'public' || process.argv.includes('--no-health') ? null : hubHealth,
+  transcripts: wantTranscripts ? transcripts : null,
   now: new Date()
 });
+
+if (wantTranscripts && !dryRun && stats.some((item) => item.source === 'session_transcripts' && item.ok)) {
+  await mkdir(path.dirname(transcriptsStamp), { recursive: true });
+  await writeFile(transcriptsStamp, JSON.stringify({ at: new Date().toISOString() }));
+}
+
+// Lärdomsraderna sparas också i en lokal reskontra för uppföljningen i C9 (antal rader per nyckel efter publicering).
+if (!dryRun && observations.some((item) => item.source_kind === 'notion_lesson')) {
+  const ledgerFile = path.join(engine.state, 'lessons-ledger.json');
+  const ledger = mergeLessonLedger(await readJsonFile(ledgerFile, { rows: [] }), observations);
+  await mkdir(engine.state, { recursive: true });
+  await writeFile(ledgerFile, JSON.stringify(ledger));
+}
 
 if (wantLessons && !dryRun && stats.some((item) => item.source === 'lessons' && item.ok)) {
   await mkdir(path.dirname(lessonsStamp), { recursive: true });

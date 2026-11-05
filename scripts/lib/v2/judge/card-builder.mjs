@@ -41,11 +41,17 @@ function applyHarness(card, job, draft) {
   card.mistake_ref = job.harness.mistake_ref;
   card.dedupe_key = harnessDedupeKey(job.harness.mistake_ref, ref, job.harness.blob_shas?.[ref] || null);
   if (!card.measure) {
-    card.measure = {
-      metric: `lärdomsnyckeln ${job.harness.mistake_ref} per 14 dagar`,
-      baseline: `${job.harness.rows} rader på ${job.harness.days} dagar`,
-      check_after_days: 14
-    };
+    card.measure = job.harness.kind === 'memory'
+      ? {
+        metric: 'andel Golfkuponger-sessioner med Notion-anrop per 7 dagar',
+        baseline: `${Math.round(job.harness.value * 100)} % (baslinje ${Math.round(job.harness.baseline * 100)} %)`,
+        check_after_days: 14
+      }
+      : {
+        metric: `lärdomsnyckeln ${job.harness.mistake_ref} per 14 dagar`,
+        baseline: `${job.harness.rows} rader på ${job.harness.days} dagar`,
+        check_after_days: 14
+      };
   }
   if (!card.rule_text && draft.recommendation) card.rule_text = text(draft.recommendation, 400);
 }
