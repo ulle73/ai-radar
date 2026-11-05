@@ -105,3 +105,13 @@ test('heartbeat: hälsodetektorn och transkripten körs i privat läge', async (
   const publicRun = await collectObservations({ mode: 'public', sources, fetchJson: async () => [], fetchText: async () => '', hubHealth: async () => [{ check: 'x', ok: false, detail: 'x' }], now: NOW });
   assert.equal(publicRun.observations.length, 0);
 });
+
+test('codex mcp list: ett tillfälligt fel ger ett nytt försök, två fel ger en kort orsak', async () => {
+  const { codexMcpList } = await import('../scripts/lib/v2/local-sources.mjs');
+  let calls = 0;
+  const flaky = async () => { calls += 1; if (calls === 1) throw Object.assign(new Error('Command failed'), { code: 1, stderr: '' }); return { stdout: '[{"name":"notion","auth_status":"o_auth"}]' }; };
+  assert.deepEqual(await codexMcpList('codex.exe', { exec: flaky, pauseMs: 0 }), [{ name: 'notion', auth_status: 'o_auth' }]);
+  assert.equal(calls, 2);
+  const broken = async () => { throw Object.assign(new Error('Command failed: C:\lång\sökväg\codex.exe mcp list --json'), { code: 1, stderr: 'Error: config\nmer' }); };
+  await assert.rejects(codexMcpList('codex.exe', { exec: broken, pauseMs: 0 }), /misslyckades två gånger: Error: config$/);
+});

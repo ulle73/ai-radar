@@ -28,10 +28,22 @@ export async function gitAheadBehind(home = os.homedir()) {
   return { ahead: ahead || 0, behind: behind || 0 };
 }
 
-export async function codexMcpList(codex) {
+// codex mcp list tar 15–20 s och kan misslyckas tillfälligt (2026-11-05: ett enstaka fel gav ett falskt larm).
+// Två försök med paus innan källan räknas som oläslig; felet får stderr:s första rad i stället för hela kommandot.
+export async function codexMcpList(codex, { attempts = 2, pauseMs = 10000, exec = run } = {}) {
   if (!codex) throw new Error('Codex CLI hittades inte');
-  const { stdout } = await run(codex, ['mcp', 'list', '--json'], { windowsHide: true, timeout: 60000, maxBuffer: 8 * 1024 * 1024 });
-  return JSON.parse(stdout);
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const { stdout } = await exec(codex, ['mcp', 'list', '--json'], { windowsHide: true, timeout: 90000, maxBuffer: 8 * 1024 * 1024 });
+      return JSON.parse(stdout);
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, pauseMs));
+    }
+  }
+  const detail = String(lastError?.stderr || '').trim().split(/\r?\n/)[0] || (lastError?.killed ? 'tidsgränsen nåddes' : `kod ${lastError?.code ?? 'okänd'}`);
+  throw new Error(`codex mcp list misslyckades två gånger: ${detail}`.slice(0, 200));
 }
 
 export function findCodex(env = process.env) {
