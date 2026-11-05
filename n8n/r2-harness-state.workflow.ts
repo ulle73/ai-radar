@@ -10,7 +10,7 @@ import { workflow, node, trigger, switchCase, expr } from '@n8n/workflow-sdk';
 
 const STATE_TABLE = { __rl: true, mode: 'id', value: '2Dd7EJkbBbpqGxNn', cachedResultName: 'GK_R2_HARNESS_STATE' };
 const CARDS_TABLE = { __rl: true, mode: 'id', value: '3ryY9Vp6VumxOHPP', cachedResultName: 'GK_R2_CARDS' };
-const CHANNEL_URL = 'https://discord.com/api/v10/channels/1550641582208712806/messages';
+const CHANNEL_URL = 'https://discord.com/api/v10/channels/1566721743790284922/messages';
 const DISCORD_CREDENTIALS = { discordBotApi: { id: '2Pwo6eNhWtKkqI7C', name: 'AI Radar Discord Bot' } };
 
 
