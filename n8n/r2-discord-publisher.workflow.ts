@@ -242,7 +242,7 @@ const postCard = node({
     onError: 'continueRegularOutput',
     parameters: {
       method: 'POST',
-      url: 'https://discord.com/api/v10/channels/1550641582208712806/messages',
+      url: 'https://discord.com/api/v10/channels/1566721743790284922/messages',
       authentication: 'predefinedCredentialType',
       nodeCredentialType: 'discordBotApi',
       sendBody: true,
@@ -254,7 +254,7 @@ const postCard = node({
     credentials: { discordBotApi: { id: '2Pwo6eNhWtKkqI7C', name: 'AI Radar Discord Bot' } },
     position: [960, 300]
   },
-  output: [{ id: '1430000000000000000', channel_id: '1550641582208712806' }]
+  output: [{ id: '1430000000000000000', channel_id: '1566721743790284922' }]
 });
 
 const keepPosted = node({
@@ -548,7 +548,7 @@ const postDigest = node({
     name: 'Post Digest to #ai-radar',
     parameters: {
       method: 'POST',
-      url: 'https://discord.com/api/v10/channels/1550641582208712806/messages',
+      url: 'https://discord.com/api/v10/channels/1566721743790284922/messages',
       authentication: 'predefinedCredentialType',
       nodeCredentialType: 'discordBotApi',
       sendBody: true,

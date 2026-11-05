@@ -323,7 +323,7 @@ const postAlert = node({
     onError: 'continueRegularOutput',
     parameters: {
       method: 'POST',
-      url: 'https://discord.com/api/v10/channels/1550641582208712806/messages',
+      url: 'https://discord.com/api/v10/channels/1566721743790284922/messages',
       authentication: 'predefinedCredentialType',
       nodeCredentialType: 'discordBotApi',
       sendBody: true,
@@ -335,7 +335,7 @@ const postAlert = node({
     credentials: { discordBotApi: { id: '2Pwo6eNhWtKkqI7C', name: 'AI Radar Discord Bot' } },
     position: [1980, 300]
   },
-  output: [{ id: '1430000000000000000', channel_id: '1550641582208712806' }]
+  output: [{ id: '1430000000000000000', channel_id: '1566721743790284922' }]
 });
 
 export default workflow('r2-observation-ingest', 'R2 – Observation Ingest')
