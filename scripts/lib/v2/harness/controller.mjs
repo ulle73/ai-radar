@@ -4,7 +4,7 @@
 // än approved_guardrail_hash. Undantag: återställning och larm körs alltid.
 
 import { createHash } from 'node:crypto';
-import { execFile } from 'node:child_process';
+import { execFile, spawn } from 'node:child_process';
 import path from 'node:path';
 import { git } from './git.mjs';
 
@@ -97,11 +97,34 @@ export function idleMinutes(run = execFile) {
   });
 }
 
-// Nattfasen får starta: inom fönstret och ingen inmatning på minst 30 minuter (T23).
-export function mayStart({ now = new Date(), idle, inWindow, minIdleMinutes = 30 }) {
-  if (!inWindow(now)) return { go: false, reason: 'utanför nattfönstret' };
+// Motorn får starta när ingen inmatning skett på minst 30 minuter (T23), och antingen inom nattfönstret eller
+// som reserv när ingen lyckad körning skett på fallbackHours timmar. Datorn går i Modern Standby när den
+// lämnas och väckningstimers är avstängda, så nattfönstret räcker inte ensamt (felsökning 2026-11-06).
+export function mayStart({ now = new Date(), idle, inWindow, minIdleMinutes = 30, lastRunAt = null, fallbackHours = 20 }) {
   if (!(idle >= minIdleMinutes)) return { go: false, reason: `datorn har använts de senaste ${minIdleMinutes} minuterna` };
-  return { go: true, reason: 'ok' };
+  if (inWindow(now)) return { go: true, reason: 'nattfönstret' };
+  const last = Date.parse(lastRunAt);
+  if (!Number.isFinite(last) || new Date(now) - last >= fallbackHours * 3600000) {
+    return { go: true, reason: `reserv: ingen lyckad körning på ${fallbackHours} timmar` };
+  }
+  return { go: false, reason: `utanför nattfönstret, senaste lyckade körning för mindre än ${fallbackHours} timmar sedan` };
+}
+
+// Håller datorn vaken medan en körning pågår: en dold hjälpprocess anropar SetThreadExecutionState
+// (ES_CONTINUOUS | ES_SYSTEM_REQUIRED) och väntar tills den anropande processen har avslutats.
+const AWAKE_SCRIPT = (pid) => [
+  'Add-Type @"',
+  'using System; using System.Runtime.InteropServices;',
+  'public static class GkAwake { [DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint f); }',
+  '"@',
+  '[void][GkAwake]::SetThreadExecutionState(0x80000001)',
+  `Wait-Process -Id ${Number(pid)} -ErrorAction SilentlyContinue`
+].join('\n');
+
+export function keepAwake(spawnImpl = spawn, pid = process.pid) {
+  const child = spawnImpl('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', AWAKE_SCRIPT(pid)], { windowsHide: true, stdio: 'ignore' });
+  child.on?.('error', () => {});
+  return () => { try { child.kill(); } catch { /* redan avslutad */ } };
 }
 
 // Ett harness-kort i kö: mistake_ref, klarade grindarna G1–G8 (publishable), ej utfört och ej avvisat.

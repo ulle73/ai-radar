@@ -15,8 +15,10 @@
   "judge_reasoning_effort": "low",
   "skeptic_reasoning_effort": "low",
   "codex_paths": [
+    "%LOCALAPPDATA%\\pnpm\\bin\\codex.cmd",
     "%LOCALAPPDATA%\\Programs\\OpenAI\\Codex\\bin\\codex.exe"
   ],
+  "codex_paths_note": "pnpm-installationen (0.166) går först: den följer skills.max_context_tokens så att gk-karnas skills får plats. Codex-appens binär (0.146) är reserv. Felsökning 2026-11-06.",
   "max_observations_per_job": 10,
   "max_observation_chars": 2500,
   "fallback_models": [],

@@ -123,9 +123,9 @@ export function classifyClaudeFailure({ code, stdout = '', stderr = '' }) {
   return { cause: null, message: `claude svarade med fel: ${message.trim().slice(0, 240)}` };
 }
 
-export function runClaudeProcess({ command, shell }, args, input, { timeoutMs = 420000, env, cwd } = {}) {
+export function runClaudeProcess({ command, shell, prefixArgs = [] }, args, input, { timeoutMs = 420000, env, cwd } = {}) {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, args, { shell, cwd, windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'], env });
+    const child = spawn(command, [...prefixArgs, ...args], { shell, cwd, windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'], env });
     let stdout = '';
     let stderr = '';
     const timer = setTimeout(() => {

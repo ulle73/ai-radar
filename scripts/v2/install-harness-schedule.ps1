@@ -4,8 +4,10 @@
 #   powershell -ExecutionPolicy Bypass -File scripts\v2\install-harness-schedule.ps1 -Disable   # inaktivera (återställning steg 2)
 #   powershell -ExecutionPolicy Bypass -File scripts\v2\install-harness-schedule.ps1 -Remove    # ta bort
 #
-# Startar 23:30 och försöker igen varje timme till 05:00. Inget ledighetsvillkor i Task Scheduler (föråldrat
-# enligt V18): harness-night.mjs kontrollerar själv nattfönstret och att ingen inmatning skett på 30 minuter.
+# Körs varje timme dygnet runt. Inget ledighetsvillkor i Task Scheduler (föråldrat enligt V18):
+# harness-night.mjs prövar själv startvillkoret (C0): ingen inmatning på 30 minuter, och nattfönstret
+# 23:30–05:00 eller, som reserv, 20 timmar sedan senaste lyckade körning. Datorn går i Modern Standby när
+# den lämnas och väckningstimers är avstängda, så nattfönstret räcker inte ensamt (felsökning 2026-11-06).
 # Körs som inloggad användare utan sparat lösenord, dolt via wscript, aldrig flera instanser, högst 5 timmar.
 # Kopierar också motorns grundinställningar till motorns CLAUDE_CONFIG_DIR, så att även evals körs med
 # disableSkillShellExecution och utan claude.ai-anslutningar.
@@ -53,8 +55,8 @@ shell.Run "node ""$Night""", 0, False
 Set-Content -Path $Launcher -Value $vbs -Encoding ASCII
 
 $action = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "`"$Launcher`""
-$trigger = New-ScheduledTaskTrigger -Daily -At '23:30'
-$trigger.Repetition = (New-ScheduledTaskTrigger -Once -At '23:30' -RepetitionInterval (New-TimeSpan -Hours 1) -RepetitionDuration (New-TimeSpan -Hours 5 -Minutes 30)).Repetition
+$trigger = New-ScheduledTaskTrigger -Daily -At '00:30'
+$trigger.Repetition = (New-ScheduledTaskTrigger -Once -At '00:30' -RepetitionInterval (New-TimeSpan -Hours 1) -RepetitionDuration (New-TimeSpan -Days 1)).Repetition
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
   -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Hours 5)
 $principal = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited

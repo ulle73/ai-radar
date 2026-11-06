@@ -4,7 +4,7 @@ import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { git } from '../scripts/lib/v2/harness/git.mjs';
-import { engineMayWrite, gate, guardrailHash, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../scripts/lib/v2/harness/controller.mjs';
+import { engineMayWrite, gate, guardrailHash, keepAwake, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../scripts/lib/v2/harness/controller.mjs';
 import { write } from './helpers/harness-repo.mjs';
 
 const OK_STATE = { brake: 'off', approved_guardrail_hash: 'h1', 'breaker:skill_text': 'off' };
@@ -64,8 +64,32 @@ test('nattfasen startar inte om datorn har använts de senaste 30 minuterna (T23
   const inWindow = () => true;
   assert.equal(mayStart({ idle: 5, inWindow }).go, false);
   assert.equal(mayStart({ idle: 45, inWindow }).go, true);
-  assert.equal(mayStart({ idle: 45, inWindow: () => false }).go, false);
   assert.equal(mayStart({ idle: Number.NaN, inWindow }).go, false);
+});
+
+test('utanför nattfönstret startar motorn bara som reserv efter 20 timmar utan lyckad körning', () => {
+  const now = new Date('2026-11-06T14:00:00');
+  const outside = () => false;
+  assert.equal(mayStart({ now, idle: 45, inWindow: outside, lastRunAt: '2026-11-06T02:00:00' }).go, false);
+  assert.equal(mayStart({ now, idle: 45, inWindow: outside, lastRunAt: '2026-11-05T17:00:00' }).go, true);
+  assert.equal(mayStart({ now, idle: 45, inWindow: outside }).go, true);
+  assert.equal(mayStart({ now, idle: 10, inWindow: outside }).go, false);
+  assert.match(mayStart({ now, idle: 45, inWindow: outside }).reason, /reserv/);
+});
+
+test('keepAwake startar en dold hjälpprocess som håller datorn vaken och kan avslutas', () => {
+  let started = null;
+  let killed = false;
+  const release = keepAwake((cmd, args, opts) => {
+    started = { cmd, script: args.at(-1), opts };
+    return { kill: () => { killed = true; }, on: () => {} };
+  }, 4242);
+  assert.equal(started.cmd, 'powershell.exe');
+  assert.match(started.script, /SetThreadExecutionState\(0x80000001\)/);
+  assert.match(started.script, /Wait-Process -Id 4242/);
+  assert.equal(started.opts.windowsHide, true);
+  release();
+  assert.equal(killed, true);
 });
 
 test('hash över skyddsräckespaketet ändras bara när harness/, hub/ eller evals/ ändras', async () => {

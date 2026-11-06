@@ -22,6 +22,7 @@ import { isQuotaError, judgeJob, toQueueResult } from '../lib/v2/judge/judge.mjs
 import { assertChatGptLogin, defaultModel, resolveCodex, runCodexJson, runWithFallback } from '../lib/v2/judge/codex.mjs';
 import { assertClaudeSubscription, enginePaths, engineEnv, readDpapiSecret, resolveClaude, runClaudeJson } from '../lib/v2/judge/claude.mjs';
 import { availableBackends, clearQuota, inNightWindow, jobsAllowed, markQuota, nightKey, recordJobs } from '../lib/v2/judge/backends.mjs';
+import { idleMinutes, mayStart } from '../lib/v2/harness/controller.mjs';
 
 function argument(name, fallback) {
   const index = process.argv.indexOf(`--${name}`);
@@ -43,9 +44,16 @@ const readJson = (file, fallback) => {
   try { return JSON.parse(readFileSync(file, 'utf8')); } catch { return fallback; }
 };
 
-if (!ignoreWindow && !inNightWindow(new Date(), config.night_window)) {
-  console.log(`utanför nattfönstret ${config.night_window.start}–${config.night_window.end}; domaren körs inte`);
-  process.exit(0);
+// Samma startvillkor som nattfasen (C0): ledig datorn och nattfönstret, eller reserv efter 20 timmar utan
+// lyckad domarkörning. Datorn sover oftast i nattfönstret (Modern Standby), så annars körs domaren aldrig.
+const lastRunFile = path.join(stateDir, 'judge-last-run.json');
+if (!ignoreWindow) {
+  const start = mayStart({ idle: await idleMinutes().catch(() => Number.NaN), inWindow: (now) => inNightWindow(now, config.night_window), lastRunAt: readJson(lastRunFile, {}).at });
+  if (!start.go) {
+    console.log(`domaren körs inte: ${start.reason}`);
+    process.exit(0);
+  }
+  console.log(`domaren startar: ${start.reason}`);
 }
 
 await mkdir(stateDir, { recursive: true });
@@ -230,6 +238,7 @@ try {
     }
   }
   runRecord.ok = true;
+  if (!dryRun) await writeFile(lastRunFile, JSON.stringify({ at: new Date().toISOString() }));
 } finally {
   await rm(lockFile, { force: true });
   const historyFile = path.join(stateDir, 'judge-history.json');
