@@ -20,7 +20,7 @@ import {
   assertClaudeSubscription, claudeArgs, enginePaths, engineEnv, parseClaudeResult, readDpapiSecret, resolveClaude, runClaudeJson, runClaudeProcess
 } from '../lib/v2/judge/claude.mjs';
 import { formatDecisionMessage, harnessControlComponents } from '../lib/v2/discord.mjs';
-import { awaitingWebVerification, gate, guardrailHash, idleMinutes, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../lib/v2/harness/controller.mjs';
+import { awaitingWebVerification, gate, guardrailHash, idleMinutes, keepAwake, mayStart, pendingHarnessCards, stateClient, withTimeout } from '../lib/v2/harness/controller.mjs';
 import { AUTO, AVVISAD, KRAVER_OK, autoPathFor, buildDiffSkepticPrompt, c3a, c3b } from '../lib/v2/harness/policy.mjs';
 import { buildExcerpt, prepareWorkspace, readTemplate, removeWorkspace, runImplementer } from '../lib/v2/harness/implementer.mjs';
 import { verifyCandidate } from '../lib/v2/harness/verifier.mjs';
@@ -294,6 +294,7 @@ async function followUpOutcomes(rows) {
 // ---------------------------------------------------------------- huvudflödet
 
 let exitCode = 0;
+let releaseAwake = null;
 try {
   await mkdir(engine.state, { recursive: true });
   await mkdir(engine.tmp, { recursive: true });
@@ -301,21 +302,25 @@ try {
   client = stateClient((payload) => postSigned({ ...secrets, path: 'r2-harness-state', payload, timeoutMs: 60000 }));
   learner = learnerClient((payload) => postSigned({ ...secrets, path: 'r2-learner', payload, timeoutMs: 120000 }));
 
+  // Startvillkoret prövas före självtestet, så att aktiviteten kan köras varje timme utan att belasta kvoten.
+  const lastRunFile = path.join(engine.state, 'last-run.json');
+  if (!flag('ignore-window') && !flag('selftest')) {
+    const start = mayStart({ idle: await idleMinutes(), inWindow: (now) => inNightWindow(now, { start: '23:30', end: '05:00' }), lastRunAt: readJson(lastRunFile, {}).at });
+    if (!start.go) {
+      if (inNightWindow(new Date(), { start: '23:30', end: '05:00' })) await liveness(`nattfasen hoppades över: ${start.reason}`);
+      await log(`hoppar över: ${start.reason}`);
+      process.exit(0);
+    }
+    await log(`startar: ${start.reason}`);
+  }
+  releaseAwake = keepAwake();
+
   const claude = resolveClaude(readJson(path.join(repoRoot, 'config', 'v2', 'judge.json'), {}).claude_paths || []);
   const env = engineEnv({ token: readDpapiSecret(engine.oauthToken), configDir: engine.configDir });
   await log(`självtest: ${await selfTest(claude, env)}`);
   if (flag('selftest')) {
     await liveness('självtest ok');
     process.exit(0);
-  }
-
-  if (!flag('ignore-window')) {
-    const start = mayStart({ idle: await idleMinutes(), inWindow: (now) => inNightWindow(now, { start: '23:30', end: '05:00' }) });
-    if (!start.go) {
-      await liveness(`nattfasen hoppades över: ${start.reason}`);
-      await log(`hoppar över: ${start.reason}`);
-      process.exit(0);
-    }
   }
 
   await ensureCheckouts();
@@ -379,10 +384,13 @@ try {
   const outcomes = await followUpOutcomes(rows).catch(async (error) => { await log(`uppföljning: ${error.message}`); return []; });
   if (outcomes.length) await log(`uppföljning: ${outcomes.map((o) => `${o.card} ${o.outcome}`).join(', ')}`);
   await writeFile(path.join(engine.state, 'last-night.json'), JSON.stringify({ at: new Date().toISOString(), dryRun, results, outcomes }, null, 2));
+  if (!dryRun) await writeFile(path.join(engine.state, 'last-run.json'), JSON.stringify({ at: new Date().toISOString() }));
   await liveness(`nattfas klar: ${results.length} kort (${results.map((r) => r.outcome).join(', ') || 'inga'})`);
 } catch (error) {
   exitCode = 1;
   await log(`FEL: ${error.stack || error.message}`);
   if (client) await liveness(`nattfasen avbröts: ${error.message}`);
+} finally {
+  releaseAwake?.();
 }
 process.exit(exitCode);

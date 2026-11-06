@@ -15,9 +15,24 @@ function expandEnv(value) {
 
 export { DISABLED_FEATURES };
 
-export function resolveCodex(paths = []) {
+// En pnpm-/npm-installation lägger en .cmd-fil som startar node med codex.js. Den körs direkt med node
+// (utan skal), så att argument med citattecken inte tolkas om av cmd.exe.
+export function codexJsFromCmd(cmdFile, read = readFileSync) {
+  let text;
+  try { text = read(cmdFile, 'utf8'); } catch { return null; }
+  const rel = text.match(/"%~dp0\\?([^"]*codex\.js)"/i)?.[1];
+  return rel ? path.resolve(path.dirname(cmdFile), rel.replace(/^\\/, '')) : null;
+}
+
+export function resolveCodex(paths = [], exists = existsSync) {
   for (const candidate of paths.map(expandEnv)) {
-    if (candidate && existsSync(candidate)) return { command: candidate, shell: false };
+    if (!candidate || !exists(candidate)) continue;
+    if (/\.cmd$/i.test(candidate)) {
+      const js = codexJsFromCmd(candidate);
+      if (js && exists(js)) return { command: process.execPath, prefixArgs: [js], shell: false };
+      continue;
+    }
+    return { command: candidate, shell: false };
   }
   return { command: 'codex', shell: process.platform === 'win32' };
 }
@@ -92,9 +107,9 @@ export function judgeEnv(env = process.env) {
   return clean;
 }
 
-export function runProcess({ command, shell }, args, input, timeoutMs, env = judgeEnv()) {
+export function runProcess({ command, shell, prefixArgs = [] }, args, input, timeoutMs, env = judgeEnv()) {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, args, { shell, windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'], env });
+    const child = spawn(command, [...prefixArgs, ...args], { shell, windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'], env });
     let stderr = '';
     const timer = setTimeout(() => {
       child.kill();
@@ -125,9 +140,9 @@ export async function assertChatGptLogin(codex, run = runStatus) {
   }
 }
 
-function runStatus({ command, shell }) {
+function runStatus({ command, shell, prefixArgs = [] }) {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, ['login', 'status'], { shell, windowsHide: true, env: judgeEnv() });
+    const child = spawn(command, [...prefixArgs, 'login', 'status'], { shell, windowsHide: true, env: judgeEnv() });
     let output = '';
     child.stdout.on('data', (chunk) => { output += chunk; });
     child.stderr.on('data', (chunk) => { output += chunk; });
