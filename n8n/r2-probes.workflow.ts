@@ -121,7 +121,7 @@ if (action === 'answer') {
   const asked = Date.parse(body.asked_at || '');
   const askedAt = Number.isFinite(asked) && Math.abs(now.getTime() - asked) < 36 * 3600000 ? new Date(asked).toISOString() : now.toISOString();
   return [{ json: { route: 1, yta, probe, day, like: 'probe:' + yta + ':' + day + ':%',
-    data: { yta, probe, asked_at: askedAt, answer_excerpt: answer.slice(0, 200), answer_hash: hash(answer).slice(0, 16), day } } }];
+    data: { yta, probe, asked_at: askedAt, answer_excerpt: answer.slice(0, probe === 'P3' ? 1500 : 200), answer_hash: hash(answer).slice(0, 16), day } } }];
 }
 if (action === 'list_pending') return [{ json: { route: 2 } }];
 if (action === 'grade') {

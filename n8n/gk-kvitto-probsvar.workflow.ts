@@ -59,7 +59,7 @@ if (body.kind === 'probsvar') {
   const asked = Date.parse(body.asked_at || '');
   const askedAt = Number.isFinite(asked) && Math.abs(now.getTime() - asked) < 36 * 3600000 ? new Date(asked).toISOString() : now.toISOString();
   return [{ json: { ok: true, kind: 'probe', yta, day, probe, like: 'probe:' + yta + ':' + day + ':%',
-    data: { yta, probe, asked_at: askedAt, answer_excerpt: answer.slice(0, 200), answer_hash: hash(answer).slice(0, 16), day },
+    data: { yta, probe, asked_at: askedAt, answer_excerpt: answer.slice(0, probe === 'P3' ? 1500 : 200), answer_hash: hash(answer).slice(0, 16), day },
     value: 'Probsvar ' + probe + ' från ' + yta } }];
 }
 return fail('kind ska vara kvitto eller probsvar');`
