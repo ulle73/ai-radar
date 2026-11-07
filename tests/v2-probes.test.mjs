@@ -148,3 +148,10 @@ test('lokala prober: Codex får domarens modell och Claude bara Notions läsverk
   assert.equal(seen[seen.indexOf('--allowedTools') + 1], config.claude_allowed_tools.join(','));
   assert.ok(seen.includes('--no-session-persistence'));
 });
+
+test('P3-svar sparas med upp till 1500 tecken i båda mottagarflödena (bedömningen sker på utdraget)', () => {
+  for (const file of ['n8n/r2-probes.workflow.ts', 'n8n/gk-kvitto-probsvar.workflow.ts']) {
+    const source = readFileSync(new URL(`../${file}`, import.meta.url), 'utf8');
+    assert.match(source, /answer_excerpt: answer\.slice\(0, probe === 'P3' \? 1500 : 200\)/, file);
+  }
+});
